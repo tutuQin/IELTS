@@ -1,0 +1,3208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 7 Test 2 听力错题原声切片与考点点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Player Sticky Bar */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .now-playing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        audio {
+            width: 100%;
+            height: 42px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            font-weight: bold;
+            border-color: var(--accent-blue);
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 11px 20px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+
+        /* Slice Card */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 24px;
+            transition: transform 0.2s, border-color 0.2s;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .slice-card.playing {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .tag-p1 { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .tag-p2 { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); }
+        .tag-p3 { background: rgba(251, 191, 36, 0.2); color: var(--accent-amber); }
+        .tag-p4 { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); }
+        .tag-full { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            border: none;
+            color: #ffffff;
+            padding: 9px 20px;
+            border-radius: 20px;
+            font-size: 0.96rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .play-card-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+        }
+
+        .record-card-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.2);
+            border-color: var(--accent-red);
+            color: #fca5a5;
+        }
+
+        .record-card-btn.recording {
+            background: var(--accent-red);
+            color: #fff;
+            animation: pulse-red 1.5s infinite;
+            border-color: var(--accent-red);
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(248, 113, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+        }
+
+        /* User Shadowing Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px dashed rgba(248, 113, 113, 0.4);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-red);
+            display: inline-block;
+        }
+
+        .rec-status-dot.recording {
+            animation: pulse-red 1s infinite;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: var(--accent-amber);
+            font-size: 0.85rem;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .rec-btn-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .rec-btn-pill:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .btn-play-user {
+            color: var(--accent-green);
+            border-color: rgba(52, 211, 153, 0.3);
+        }
+
+        .btn-play-user:hover {
+            background: rgba(52, 211, 153, 0.2);
+        }
+
+        .btn-compare {
+            color: var(--accent-blue);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-compare:hover {
+            background: rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-rerecord {
+            color: var(--accent-amber);
+            border-color: rgba(251, 191, 36, 0.3);
+        }
+
+        .btn-del {
+            color: var(--text-muted);
+        }
+
+        .btn-del:hover {
+            color: var(--accent-red);
+        }
+
+        /* Card Body */
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .transcript-box {
+            font-size: 1.15rem;
+            color: #f1f5f9;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-blue);
+            font-style: normal;
+            line-height: 1.8;
+        }
+
+        .ans-highlight {
+            color: #34d399;
+            font-weight: 700;
+            font-style: normal;
+            background: rgba(52, 211, 153, 0.15);
+            padding: 2px 8px;
+            border-radius: 5px;
+            border-bottom: 2px solid rgba(52, 211, 153, 0.5);
+        }
+
+        .trap-highlight {
+            color: #f87171;
+            font-weight: 700;
+            font-style: normal;
+            text-decoration: line-through;
+            background: rgba(248, 113, 113, 0.15);
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+
+        .signal-highlight {
+            color: #fbbf24;
+            font-weight: 700;
+            font-style: normal;
+            padding: 1px 4px;
+        }
+
+        .analysis-box {
+            font-size: 1.02rem;
+            color: #cbd5e1;
+            line-height: 1.65;
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+        }
+
+        .analysis-box strong {
+            color: var(--text-main);
+        }
+
+        /* Bilingual Details Section */
+        .bilingual-details {
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+
+        .toggle-icon {
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 18px 22px;
+            font-size: 1.12rem;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 12px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 3px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .spk-man { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-woman { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+        .spk-speaker { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); }
+        .spk-tutor { background: rgba(251, 191, 36, 0.2); color: var(--accent-amber); }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.12rem;
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 6px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 1.02rem;
+            line-height: 1.65;
+        }
+
+        /* Tips section */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 30px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tips-list strong {
+            color: var(--text-main);
+        }
+
+        .shadow-guide-box {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+            line-height: 1.5;
+        }
+
+        .shadow-guide-title {
+            font-weight: 700;
+            color: #f87171;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shadow-guide-tag {
+            font-size: 0.75rem;
+            background: rgba(248, 113, 113, 0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: #fecaca;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-back-bar">
+        <a href="../切片/index.html" class="nav-link">📂 返回切片总目录 (Index)</a>
+        <a href="../C7T1_错题音频切片/C7T1_错题切片点播台.html" class="nav-link">⬅ 前往 Test 1 切片</a>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 7 · Test 2 精听点播台</span>
+        <a href="../C7T3_错题音频切片/C7T3_错题切片点播台.html" class="nav-link">前往 Test 3 切片 ➔</a>
+    </div>
+
+    <header>
+        <h1>剑桥雅思 7 Test 2 错题切片与考点点播台</h1>
+        <p>🎯 靶向精听磨耳朵 · 答案句及前后两句极致切片 (28s~52s) · 原生影子跟读录音</p>
+    </header>
+
+    <!-- Sticky Audio Player -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="now-playing-text">
+                <span>🎵 请在下方选择要练习的题目切片</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="toggleLoop(this)" id="loop-btn" title="单曲循环当前切片">🔁 单曲循环: 关</button>
+            </div>
+        </div>
+        <audio id="main-audio" controls preload="auto"></audio>
+        <div class="player-controls">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">播放速度：</span>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="setSpeed(0.8, this)">0.8x 慢速</button>
+                <button class="pill-btn active" onclick="setSpeed(1.0, this)">1.0x 原速</button>
+                <button class="pill-btn" onclick="setSpeed(1.2, this)">1.2x 提速</button>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: auto;">
+                高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- 4-step Guide -->
+    <div class="tips-panel">
+        <div class="tips-title">💡 4 步靶向精听法（防坑肌肉记忆构建）</div>
+        <ol class="tips-list">
+            <li><strong>Step 1 先读看懂</strong>：展开查看本切片听力原文与翻译，画出同义替换词（如 <em>occasional = sometimes, not completely true = only partially, primary cause = mainly because</em>）。</li>
+            <li><strong>Step 2 出声朗读</strong>：大声朗读答案句 3 遍，打通发音肌肉记忆，熟悉连读、弱读与连贯语调。</li>
+            <li><strong>Step 3 闭眼盲听</strong>：合上原文折叠框，纯靠耳朵单曲循环 2~3 遍，直到大脑在听到信号词的瞬间本能反应出答案。</li>
+            <li><strong>Step 4 录音跟读</strong>：点击「🎙️ 录音跟读」录制自己的发音，回放试听比对原声，找出自己读不流畅卡壳之处！</li>
+        </ol>
+    </div>
+
+    <!-- Shadowing Feature Banner -->
+    <div class="shadow-guide-box">
+        <div class="shadow-guide-title">
+            <span>🎙️ <strong>「跟读录音与原声对比」系统已就绪</strong></span>
+            <span class="shadow-guide-tag">读不流畅一定听不流畅 · 影子跟读刻意训练</span>
+        </div>
+        1. 每一个切片卡片右上角均配备「<strong>🎙️ 录音跟读</strong>」专属按钮；<br>
+        2. 闭眼盲听熟悉后，点击「<strong>🎙️ 录音跟读</strong>」录制自己的发音（支持反复重录）；<br>
+        3. 录完点击「<strong>▶ 试听跟读</strong>」找出卡壳吞音处，再点击「<strong>👂 对比原声</strong>」比对语调与节奏。（前端内存暂存，刷新页面即可重置）。
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (31)</button>
+        <button class="tab-btn" onclick="filterCategory('part1', this)">Part 1 车辆保险 (7)</button>
+        <button class="tab-btn" onclick="filterCategory('part2', this)">Part 2 城市水陆旅游 (5)</button>
+        <button class="tab-btn" onclick="filterCategory('part3', this)">Part 3 新西兰南极中心 (8)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)">Part 4 运动偏侧手性 (7)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">4大 Section 完整音频 (4)</button>
+    </div>
+
+    <!-- Slice List -->
+    <div class="slice-list">
+        <!-- CARD: card_01 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q1</span>
+                    <h3 class="card-title">门牌街道名连贯听写 & 避免数字确认漏听街道</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('01_Q1_门牌街道名与地名确认.mp3', 'Q1: 门牌号与街道名称听写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_01" onclick="handleRecBtnClick('card_01')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_01" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_01"></span>
+                    <span class="rec-status-text" id="rec-status-card_01">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_01">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_01" onclick="playUserRecording('card_01')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_01')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_01')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_01')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "And your address? MAN: It's <span class="ans-highlight">27 Bank Road</span>. WOMAN: <span class="ans-highlight">27 Bank Road</span>. Is that in Greendale? MAN: Yes."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>①词音坑 + ③句意坑（地名意识盲区）</strong>：考生听到 <em>27</em> 后注意力全集中在"怎么写这个数字"，写完数字期间耳朵掉线，导致紧跟的街道名 <strong>Bank Road</strong> 完全错过。雅思听力门牌地址规范：<strong>门牌数字 + 街道名词</strong> 缺一不可（首字母需大写）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Hello... motor insurance department...</div>
+                            <div class="cn-line">您好……这里是汽车保险部……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Oh hello... I'd like to ask about insurance for my car.</div>
+                            <div class="cn-line">噢您好……我想咨询一下我的汽车保险。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Yes, of course. I'll just take a few details. What's your name?</div>
+                            <div class="cn-line">好的，当然可以。我先登记几个基本信息。请问您叫什么名字？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Patrick Jones.</div>
+                            <div class="cn-line">帕特里克·琼斯。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And your address?</div>
+                            <div class="cn-line">您的住址是？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It's 27 Bank Road.</div>
+                            <div class="cn-line">是河岸路27号（27 Bank Road）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> 27 Bank Road. Is that in Greendale?</div>
+                            <div class="cn-line">河岸路27号。是在格林戴尔吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_02 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q2</span>
+                    <h3 class="card-title">日间工作电话号码 & 区分家庭与工作号码</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('02_Q2_工作电话号码与职业听写.mp3', 'Q2: 日间工作电话号码听写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_02" onclick="handleRecBtnClick('card_02')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_02" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_02"></span>
+                    <span class="rec-status-text" id="rec-status-card_02">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_02">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_02" onclick="playUserRecording('card_02')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_02')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_02')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_02')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "And what's your daytime phone number? MAN: <span class="signal-highlight">My work number is</span> <span class="ans-highlight">730453</span>. WOMAN: And could I ask what your occupation is? MAN: Dentist."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>①词音坑（纯数字连报听觉抗干扰）</strong>：题干问 <em>daytime phone number</em>，男士回答 <em>My work number is 730453</em>。纯六位数字 <strong>730453</strong>（seven three zero/oh four five three）节奏紧凑，要求耳脑秒级同步，不能在听到 0/oh 时卡顿。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And what's your daytime phone number?</div>
+                            <div class="cn-line">那您的日间联系电话是多少？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> My work number is 730453.</div>
+                            <div class="cn-line">我的工作电话是 730453。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And could I ask what your occupation is?</div>
+                            <div class="cn-line">我可以问一下您的职业是什么吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Dentist.</div>
+                            <div class="cn-line">牙医。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK... now a few details about your car...</div>
+                            <div class="cn-line">好的……现在来登记一些关于您汽车的信息……</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_03 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q3</span>
+                    <h3 class="card-title">汽车型号发音干扰 & 拼写信号词捕捉</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('03_Q3_汽车型号发音纠正与拼写确认.mp3', 'Q3: 汽车型号与逐字母拼写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_03" onclick="handleRecBtnClick('card_03')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_03" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_03"></span>
+                    <span class="rec-status-text" id="rec-status-card_03">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_03">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_03" onclick="playUserRecording('card_03')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_03')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_03')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_03')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Thank you... and the make and model? MAN: It's a Hewton Sable. WOMAN: <span class="signal-highlight">Could you spell the model name please?</span> MAN: Yes... <span class="ans-highlight">S-A-B-L-E</span>. WOMAN: Ah yes... thanks. And when was it made? MAN: 1997."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>③句意坑 + T1修正陷阱</strong>：听到第一句 <em>Hewton Sable</em> 时考生急于落笔纠结发音与拼写，错过了关键信号 <em>Could you spell the model name please?</em>——这正是录音提示：前音不算，<strong>拼写出的部分才是答案</strong>。卷面已有 make 为 Hewton，故答案只填型号 <strong>Sable / SABLE</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> What size is the engine?</div>
+                            <div class="cn-line">发动机排量是多大？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It's 1200 ccs.</div>
+                            <div class="cn-line">是 1200cc。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Thank you... and the make and model?</div>
+                            <div class="cn-line">谢谢……那品牌和型号呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It's a Hewton Sable.</div>
+                            <div class="cn-line">是休顿·貂（Hewton Sable）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Could you spell the model name please?</div>
+                            <div class="cn-line">能请您拼写一下型号名称吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... S-A-B-L-E.</div>
+                            <div class="cn-line">好的……S-A-B-L-E。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Ah yes... thanks. And when was it made?</div>
+                            <div class="cn-line">啊好的……谢谢。那出厂年份是哪一年？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> 1997.</div>
+                            <div class="cn-line">1997年。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_04 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q4</span>
+                    <h3 class="card-title">既往出险理赔历史 & 核心动词被动形式</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('04_Q4_既往被盗理赔史与保险公司名称.mp3', 'Q4: 既往理赔原因 (被盗)')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_04" onclick="handleRecBtnClick('card_04')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_04" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_04"></span>
+                    <span class="rec-status-text" id="rec-status-card_04">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_04">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_04" onclick="playUserRecording('card_04')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_04')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_04')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_04')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Thank you, and have you made any insurance claims in the last five years? MAN: Yes... one in 1999. WOMAN: And what was the problem? MAN: <span class="signal-highlight">It was</span> <span class="ans-highlight">stolen</span>... but... WOMAN: That's fine, Mr Jones..."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>②拼写坑 + ③句意坑</strong>：题干问前次出险原因，男士说明 <em>It was stolen</em>。答案为过去分词 <strong>stolen</strong>（被偷盗）。易错点包括：误写为动词原形 <em>steal</em> 或误拼为 <em>stold</em>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Lovely... right... I presume you've had a previous insurer?</div>
+                            <div class="cn-line">很好……对……我推测您之前投过保？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right... we need to know the name of the company.</div>
+                            <div class="cn-line">好的……我们需要知道那家保险公司的名字。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... it was Northern Star.</div>
+                            <div class="cn-line">好的……之前是北极星保险（Northern Star）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Thank you, and have you made any insurance claims in the last five years?</div>
+                            <div class="cn-line">谢谢，那么在过去五年里您提出过任何保险理赔吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... one in 1999.</div>
+                            <div class="cn-line">是的……1999年有一次。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And what was the problem?</div>
+                            <div class="cn-line">请问当时是什么情况？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It was stolen... but...</div>
+                            <div class="cn-line">车被偷了……不过……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> That's fine, Mr Jones... that's all we need to know at the moment...</div>
+                            <div class="cn-line">好的琼斯先生……目前我们只需要了解这些信息……</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_05 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q5</span>
+                    <h3 class="card-title">共同驾驶人姓名拼写 & 复合亲属词拼写连字符</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('05_Q5_共同驾驶人姓名拼写与连襟亲属关系.mp3', 'Q5: 共同驾驶人亲属关系')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_05" onclick="handleRecBtnClick('card_05')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_05" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_05"></span>
+                    <span class="rec-status-text" id="rec-status-card_05">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_05">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_05" onclick="playUserRecording('card_05')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_05')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_05')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_05')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Could you spell the surname please? MAN: P-A-Y-N-T-E-R. WOMAN: OK thank you... And what relationship is he to you? MAN: He's my <span class="ans-highlight">brother-in-law</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>⑥格式坑 + ②拼写坑</strong>：Q5 考查亲属关系复合词 <strong>brother-in-law</strong>（姐夫/妹夫/连襟）。易错点：连字符遗漏写成 <em>brother in law</em> 或误听误写为 <em>brother in love / brother law</em>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And will there be any other named drivers?</div>
+                            <div class="cn-line">保单上还会有其他指定驾驶人吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Just the one...</div>
+                            <div class="cn-line">就一位……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And his name?</div>
+                            <div class="cn-line">他的姓名是？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Simon Paynter.</div>
+                            <div class="cn-line">西蒙·佩因特（Simon Paynter）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Could you spell the surname please?</div>
+                            <div class="cn-line">能请您拼写一下姓氏吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> P-A-Y-N-T-E-R.</div>
+                            <div class="cn-line">P-A-Y-N-T-E-R。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK thank you... And what relationship is he to you?</div>
+                            <div class="cn-line">好的谢谢……请问他和您是什么关系？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> He's my brother-in-law.</div>
+                            <div class="cn-line">他是我的姐夫/妹夫（brother-in-law）。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_06 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q6-Q7</span>
+                    <h3 class="card-title">通勤偶尔用途与月份序数词起保日期</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('06_Q6_Q7_工作通勤偶尔使用与保单生效起日.mp3', 'Q6-Q7: 通勤用途与生效日期')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_06" onclick="handleRecBtnClick('card_06')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_06" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_06"></span>
+                    <span class="rec-status-text" id="rec-status-card_06">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_06">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_06" onclick="playUserRecording('card_06')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_06')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_06')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_06')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Social use. Will you be using it to <span class="signal-highlight">travel to</span> <span class="ans-highlight">work</span>? MAN: Yes... sometimes... when would you like to start the insurance? MAN: I'll need it from the <span class="ans-highlight">31st of January</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>②拼写坑 + ⑥格式坑</strong>：Q6 题干为 <em>Uses of car: social and travel to ____</em>，录音明确问 <em>travel to work?</em> 答案填 <strong>work</strong>；Q7 生效日期 <strong>31st (of) January / 31 January</strong>，序数词末尾 <em>st</em> 与月份大写拼写 <em>January</em> 是必考经典。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And what will you or Mr Paynter be using the car for?</div>
+                            <div class="cn-line">那么您或佩因特先生用车主要作什么用途？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Well... mainly for social use...</div>
+                            <div class="cn-line">嗯……主要用于社交日常活动……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Social use. Will you be using it to travel to work?</div>
+                            <div class="cn-line">日常社交。那你们会开这辆车去上班通勤吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... sometimes.</div>
+                            <div class="cn-line">会的……有时候会开。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> ... Anything else?</div>
+                            <div class="cn-line">……还有其他用途吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> No. That's it...</div>
+                            <div class="cn-line">没有了，就这些……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And finally... when would you like to start the insurance?</div>
+                            <div class="cn-line">最后……您希望这份保险从什么时候开始生效？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> I'll need it from the 31st of January.</div>
+                            <div class="cn-line">我需要它从1月31日起生效。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_07 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q8-Q9</span>
+                    <h3 class="card-title">保险公司专有名词听辨 & 450元年费连环连击</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('07_Q8_Q9_红旗保险公司与450元年费纯数字听写.mp3', 'Q8-Q9: 保险公司与年费报价')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_07" onclick="handleRecBtnClick('card_07')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_07" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_07"></span>
+                    <span class="rec-status-text" id="rec-status-card_07">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_07">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_07" onclick="playUserRecording('card_07')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_07')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_07')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_07')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "the best bet looks like being with a company called <span class="ans-highlight">Red Flag</span>. MAN: Yeah. WOMAN: And that comes out at <span class="ans-highlight">$450</span> per year..."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>①词音坑（辅音结尾听辨） + 连环卡顿雪崩</strong>：Q8 <em>Red Flag</em> 中 <em>flag</em> 的辅音群 /flæɡ/ 常被误听为 <em>Log</em>；而 Q9 紧跟在确认之后报价 <strong>$450 / 450</strong>。若在 Q8 犹豫拼写，Q9 音频迅速播完极易导致双题连环失分！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right... Mr Jones... I'm getting a couple of quotes coming up on the computer now... and the best bet looks like being with a company called Red Flag.</div>
+                            <div class="cn-line">好的……琼斯先生……我的电脑上现在调出了几份报价……看起来最划算的选择是一家叫红旗（Red Flag）的公司。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yeah.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And that comes out at $450 per year...</div>
+                            <div class="cn-line">核算下来是每年 450 美元……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Well... that seems OK... it's quite a bit lower than I've been paying up to now...</div>
+                            <div class="cn-line">嗯……听起来挺不错……比我目前一直在交的保费要便宜相当多……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Great... so would you like me to go ahead with that?</div>
+                            <div class="cn-line">太好了……那您希望我就按这个方案帮您办理吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Sure... why not?</div>
+                            <div class="cn-line">当然……没问题。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_08 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q11-Q12</span>
+                    <h3 class="card-title">轮渡停靠站点名称 & 复合地名合写规则</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('08_Q11_Q12_轮渡停靠站点与新城地名合写.mp3', 'Q11-Q12: 轮渡停靠站与地名合写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_08" onclick="handleRecBtnClick('card_08')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_08" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_08"></span>
+                    <span class="rec-status-text" id="rec-status-card_08">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_08">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_08" onclick="playUserRecording('card_08')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_08')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_08')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_08')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "There are four main stopping points - from west to east: <span class="ans-highlight">stop A Green Banks</span>, stop B City Bridge, stop C Roman Landing and <span class="ans-highlight">stop D Newtown</span>. You can find the main booking office at stop A."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>⑥格式坑（专有名词合写） + 定位抢跑</strong>：Q11 <em>Green Banks</em> 两个单词首字母大写；Q12 <em>Newtown</em> 属于典型专有名词地名合写。考生常错写为分写的 <em>New Town</em>。雅思地名规则：如无明确连字符或明显语调停顿，带有 -town, -pool, -ford 的英联邦城镇名绝大多数合写。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Thank you for calling the Tourist Line. There are many different ways of getting round the city and we'd like to suggest some you may not have thought of.</div>
+                            <div class="cn-line">感谢您致电旅游热线。在市内有许多不同的出行游览方式，我们想向您推荐一些您可能还没想到的选择。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> How about a city trip by boat? There are four main stopping points - from west to east: stop A Green Banks, stop B City Bridge, stop C Roman Landing and stop D Newtown.</div>
+                            <div class="cn-line">来一场乘船城市游览怎么样？从西向东共有四个主要停靠站：A站绿岸（Green Banks）、B站城市大桥（City Bridge）、C站罗马登陆点（Roman Landing）和D站新城（Newtown）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> You can find the main booking office at stop A.</div>
+                            <div class="cn-line">您可以在A站找到主售票处。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_09 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q13-Q14</span>
+                    <h3 class="card-title">末班船时刻提取 & 16世纪国王宫殿庄园花园</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('09_Q13_Q14_末班船时刻与16世纪国王宫殿.mp3', 'Q13-Q14: 末班船时刻与宫殿花园')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_09" onclick="handleRecBtnClick('card_09')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_09" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_09"></span>
+                    <span class="rec-status-text" id="rec-status-card_09">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_09">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_09" onclick="playUserRecording('card_09')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_09')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_09')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_09')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "The first boat leaves at 8 a.m. and the <span class="signal-highlight">last one at</span> <span class="ans-highlight">6.30 p.m.</span> ...visit the fine 16th century palace here built for the king with its beautiful <span class="ans-highlight">formal gardens</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>②考点坑（干扰时刻排除） + ⑤同义改写</strong>：Q13 题干要求最后班船时刻，首班 <em>8 a.m.</em> 为干扰，答案为 <strong>6.30 p.m. / 18:30</strong>；Q14 考查国王宫殿旁的附属景点，录音 <em>with its beautiful formal gardens</em> 对应卷面，答案词为 <strong>formal gardens</strong>。注意 gardens 的复数形式。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> The first boat leaves at 8 a.m. and the last one at 6.30 p.m. There are also many attractions you can visit along the river.</div>
+                            <div class="cn-line">第一班船于上午8点发车，最后一班是下午6点半。沿着河岸您还可以参观许多著名景点。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> At Stop A, if you have time, you can visit the fine 16th century palace here built for the king with its beautiful formal gardens. It's very near the booking office. Now you can enjoy every corner of this superb residence.</div>
+                            <div class="cn-line">在A站，如果您有时间，可以参观这里为国王建造的精致的16世纪宫殿及其美丽的规整式花园（formal gardens）。它离售票处非常近。现在您可以尽情欣赏这处宏伟宅邸的每一个角落。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_10 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q15-Q16</span>
+                    <h3 class="card-title">观光塔餐厅特色 & views多义词与改写陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('10_Q15_Q16_观光塔餐厅与俯瞰商业金融全景.mp3', 'Q15-Q16: 观光塔餐厅与城市景观')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_10" onclick="handleRecBtnClick('card_10')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_10" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_10"></span>
+                    <span class="rec-status-text" id="rec-status-card_10">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_10">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_10" onclick="playUserRecording('card_10')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_10')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_10')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_10')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Stop B Why don't you visit <span class="ans-highlight">Tower Restaurant</span> with its wide range of refreshments? This is a place where you can sit and enjoy the wonderful <span class="ans-highlight">views</span> over the old commercial and banking centre of the city."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>③句意坑 + ⑤多义词改写</strong>：Q15 填写餐厅名字 <strong>Tower Restaurant</strong>；Q16 题干为 <em>enjoy the ____ of the city</em>，录音中 <em>views</em> 在此语境为"风景/视野景观"（scenic views），考生因习惯于"观点/看法"思维定式导致漏填或误写为 banking。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Stop B Why don't you visit Tower Restaurant with its wide range of refreshments?</div>
+                            <div class="cn-line">B站，何不光顾一下塔楼餐厅（Tower Restaurant）？那里提供各种茶点小吃。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This is a place where you can sit and enjoy the wonderful views over the old commercial and banking centre of the city.</div>
+                            <div class="cn-line">在这里您可以坐下来，尽情欣赏俯瞰老商业与金融中心的壮丽景观（wonderful views）。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_11 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q17-Q18</span>
+                    <h3 class="card-title">转折后核心信息收割 & 7厅影院数字复合词</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('11_Q17_Q18_罗马遗迹互动博物馆与7厅影院娱乐城.mp3', 'Q17-Q18: 历史书与7厅影院娱乐城')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_11" onclick="handleRecBtnClick('card_11')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_11" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_11"></span>
+                    <span class="rec-status-text" id="rec-status-card_11">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_11">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_11" onclick="playUserRecording('card_11')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_11')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_11')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_11')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "There's an interactive Museum to visit here with a large shop which has a good range of <span class="ans-highlight">local history books</span>... At the furthest point of the trip, stop D, the most exciting place to visit is the new Entertainment Complex with <span class="ans-highlight">seven-screen cinema</span>, bowling alley and video games arcade."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>④逻辑坑（转折后收割） + ⑥格式坑（复合词写法）</strong>：Q17 考生听到 <em>large shop</em> 提前收割，实际填空处为商店内售卖的商品 <strong>(local) history books</strong>；Q18 考查复合名词修饰语 <strong>7 / seven-screen</strong> cinema，官方答案接受写数字 7 或七厅全称 seven-screen。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Stop C is the area where, in the first century AD, invading soldiers crossed the river; this was much shallower than it is now. That's why this area is called Roman Landing.</div>
+                            <div class="cn-line">C站是公元一世纪侵略士兵渡河的地方；当时的河水比现在要浅得多。这就是为什么这个区域被称为罗马登陆点。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> There's an interactive Museum to visit here with a large shop which has a good range of local history books.</div>
+                            <div class="cn-line">这里有一座互动博物馆可供参观，馆内有一个大型商店，售卖各种当地历史书籍（history books）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> At the furthest point of the trip, stop D, the most exciting place to visit is the new Entertainment Complex with seven-screen cinema, bowling alley and video games arcade.</div>
+                            <div class="cn-line">在整个旅程的最远端D站，最令人兴奋的去处是新的综合娱乐中心，内设七厅影院（seven-screen cinema）、保龄球馆和电子游艺厅。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_12 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q19-Q20</span>
+                    <h3 class="card-title">发车频率短语听写 & 中央车站形容词词性区分</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('12_Q19_Q20_顶级巴士20分钟发车与中央车站首末班.mp3', 'Q19-Q20: 发车频率与中央车站起点')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_12" onclick="handleRecBtnClick('card_12')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_12" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_12"></span>
+                    <span class="rec-status-text" id="rec-status-card_12">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_12">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_12" onclick="playUserRecording('card_12')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_12')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_12')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_12')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "The Top Bus Company runs all its tours with a live commentary in English. Tours leave from 8.30 a.m. <span class="ans-highlight">every 20 minutes</span>. There are departures from Central Station... The Number One Sightseeing Tour is available with a commentary in eight languages. Buses depart from <span class="ans-highlight">Central Station</span> every five to six minutes..."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>③句意坑（频率预判） + ①词音与词性辨析</strong>：Q19 考查班次发车频率，考生听到 <em>8:30</em> 忙于写时间而漏听答案 <strong>every 20 minutes</strong>；Q20 填空发车地点，答案为 <strong>Central Station</strong>，考生常因名词/形容词混淆错写成 <em>centre station</em>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Besides the boat tours, there are city buses. Two companies offer special services:</div>
+                            <div class="cn-line">除了游船之外，还有城市观光巴士。有两家公司提供特色服务：</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> The Top Bus Company runs all its tours with a live commentary in English. Tours leave from 8.30 a.m. every 20 minutes. There are departures from Central Station, Castle Hill and Long Walk. This is a hop-on hop-off service and tickets are valid for 24 hours.</div>
+                            <div class="cn-line">顶级巴士公司（Top Bus）的所有行程均配有英语现场解说。观光车从早上8点半开始发车，每20分钟一班（every 20 minutes）。始发点设在中央车站（Central Station）、城堡山和长径漫步道。这是随上随下服务，车票24小时有效。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> For further details call Top Bus on 0208 9447810.</div>
+                            <div class="cn-line">欲了解更多详情，请致电顶级巴士：0208 9447810。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> The Number One Sightseeing Tour is available with a commentary in eight languages. Buses depart from Central Station every five to six minutes from about 9 a.m. with the last bus at around 7 p.m. There are also Number One services with an English-speaking...</div>
+                            <div class="cn-line">一号观光游览线提供八种语言的语音导览。巴士大约从早上9点起从中央车站（Central Station）发车，每五到六分钟一班，末班车大约在晚上7点。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_13 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q21</span>
+                    <h3 class="card-title">转折词actually锁定真因 & 选项原词陷阱排除</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('13_Q21_基督城选址真因与转折词定位.mp3', 'Q21: 基督城选址的真正原因')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_13" onclick="handleRecBtnClick('card_13')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_13" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_13"></span>
+                    <span class="rec-status-text" id="rec-status-card_13">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_13">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_13" onclick="playUserRecording('card_13')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_13')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_13')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_13')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Why Christchurch? Was it because of the climate? DOCTOR: <span class="signal-highlight">Well actually</span> New Zealand is the <span class="ans-highlight">second closest country to Antarctica</span> and Christchurch is often used on Antarctic expeditions."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P2逻辑词定位 + T3原词陷阱</strong>：提问者抛出 <em>climate</em> 是烟雾弹；医生用转折词 <strong>Well actually...</strong> 引出真正核心：新西兰是距离南极第二近的国家（<em>second closest country</em>），对应选项 <strong>B (geographical position)</strong>。听到 climate 或 treaty 原词直接选均为经典原词陷阱。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> We're pleased to welcome Dr Martin Merrywhether of the Antarctic Centre in Christchurch, New Zealand who has come along to talk to us today about the role of the Centre and the Antarctic Treaty.</div>
+                            <div class="cn-line">我们非常高兴地欢迎来自新西兰基督城南极中心的马丁·梅里韦瑟博士，他今天来到节目中，向我们介绍该中心的作用以及《南极条约》。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Now my first question is about the choice of location for the centre. Why Christchurch? Was it because of the climate?</div>
+                            <div class="cn-line">我的第一个问题是关于该中心的选址。为什么选择基督城？是因为气候原因吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well actually New Zealand is the second closest country to Antarctica and Christchurch is often used on Antarctic expeditions.</div>
+                            <div class="cn-line">嗯，实际上新西兰是距离南极洲第二近的国家，而且基督城经常被用作南极探险队的基地。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_14 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q22</span>
+                    <h3 class="card-title">具体举例向抽象概念归纳 & 科考极端防护装备</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('14_Q22_极地极端防护装备抽象归纳.mp3', 'Q22: 科考基地角色 (装备供给)')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_14" onclick="handleRecBtnClick('card_14')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_14" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_14"></span>
+                    <span class="rec-status-text" id="rec-status-card_14">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_14">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_14" onclick="playUserRecording('card_14')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_14')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_14')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_14')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Tell us something about the role as a scientific base. DOCTOR: We're able to provide information about what scientists should take with them... for example, the centre contains a <span class="ans-highlight">clothing warehouse</span> where expeditions are supplied with <span class="signal-highlight">suitable clothing for the extreme conditions</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P3改写定位 + 概念抽象归纳</strong>：提问 <em>scientific base</em>，录音用 <em>for example</em> 具体列举 <em>clothing warehouse, suitable clothing for extreme conditions</em>。选项 <strong>A (equipment / gear)</strong> 是对所有具体御寒服装物品的<strong>上位抽象词概括改写</strong>。考生若没有归纳意识易盲选住宿或医疗。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Right, so it's because of where we are... coupled with our historical role. So tell us - what is the main purpose of the centre?</div>
+                            <div class="cn-line">好的，所以是因为地理位置……加上我们的历史角色。那么请告诉我们——该中心的主要宗旨是什么？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well... we have two complementary roles. One is as a scientific base for expeditions and research and the other is as an information centre.</div>
+                            <div class="cn-line">嗯……我们有两个互补的角色。一是作为探险和科研的科学基地，另一个是作为信息咨询中心。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Tell us something about the role as a scientific base.</div>
+                            <div class="cn-line">能跟我们谈谈作为科学基地的角色吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> We're able to provide information about what scientists should take with them to the South Pole - for example, the centre contains a clothing warehouse where expeditions are supplied with suitable clothing for the extreme conditions.</div>
+                            <div class="cn-line">我们能够为科学家提供关于前往南极应携带哪些物品的信息——例如，中心内设有一个服装仓库，为探险队提供适合极端严酷环境的特制服装。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> I suppose you need a bit more than your normal winter coat! Yes, exactly...</div>
+                            <div class="cn-line">我想大家需要的肯定远不止一件普通的冬大衣！是的，确实如此……</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_15 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q23</span>
+                    <h3 class="card-title">整句同义改写 & 游客中心极地氛围身临其境模拟</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('15_Q23_游客中心极地氛围模拟体验.mp3', 'Q23: 游客中心宗旨 (模拟极地体验)')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_15" onclick="handleRecBtnClick('card_15')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_15" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_15"></span>
+                    <span class="rec-status-text" id="rec-status-card_15">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_15">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_15" onclick="playUserRecording('card_15')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_15')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_15')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_15')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "And what does the visitor's centre offer? DOCTOR: Well, since very few people will ever experience the Antarctic first hand, the visitors' centre aims to <span class="ans-highlight">recreate the atmosphere of Antarctica</span>. There's a mock camp site..."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>⑤整句语义改写 + 语感盲区</strong>：录音核心句 <em>aims to recreate the atmosphere of Antarctica</em>（重现南极氛围）被整句改写为选项 <strong>C (show people what Antarctica is like)</strong>。注意此处 <em>like</em> 为介词"像……一样"，而非动词"喜欢"。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Really? And what does the visitor's centre offer?</div>
+                            <div class="cn-line">真的吗？那游客中心提供哪些体验呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well, since very few people will ever experience the Antarctic first hand, the visitors' centre aims to recreate the atmosphere of Antarctica. There's a mock camp site where you can see inside an Antarctic tent and imagine yourself sleeping there.</div>
+                            <div class="cn-line">嗯，既然极少有人能够亲身踏上南极，游客中心的目标就是再现南极的真实氛围。这里有一个模拟营地，你可以看看南极帐篷的内部，并想象自己睡在里面的情景。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> And the centre also acts as a showcase for the unique international co-operation which exists in Antarctica today.</div>
+                            <div class="cn-line">此外，该中心还展示了当今南极洲独特的国际合作成果。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_16 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q24</span>
+                    <h3 class="card-title">名词转形容词词性改写 & 南极绝美景观震撼</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('16_Q24_南极点震撼美景与原词词性改写.mp3', 'Q24: 南极点真实面貌 (美不胜收)')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_16" onclick="handleRecBtnClick('card_16')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_16" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_16"></span>
+                    <span class="rec-status-text" id="rec-status-card_16">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_16">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_16" onclick="playUserRecording('card_16')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_16')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_16')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_16')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "What is it actually like at the South Pole? DOCTOR: Yes, I have and each time I'm <span class="signal-highlight">struck by the awesome</span> <span class="ans-highlight">beauty</span> of the place. It's magnificent but you can really only visit it in the summer months."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P1原词定位 + 词性同义改写</strong>：提问者问南极点感受，医生回答 <em>struck by the awesome beauty... magnificent</em>。选项 <strong>B (it is beautiful)</strong> 是对 <em>beauty / magnificent</em> 的词性转化改写。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> What is it actually like at the South Pole? I know you've been there on a number of occasions.</div>
+                            <div class="cn-line">南极点究竟是什么样子的？我知道您曾多次去过那里。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Yes, I have and each time I'm struck by the awesome beauty of the place. It's magnificent but you can really only visit it in the summer months.</div>
+                            <div class="cn-line">是的，我去过很多次，每次我都为那里惊心动魄的壮美（awesome beauty）所折服。那里的风景令人叹为观止，但你真的只能在夏季月份去访问。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_17 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q25</span>
+                    <h3 class="card-title">南极北极对象错配陷阱 & 穹顶形状与极寒成因</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('17_Q25_极寒成因与穹顶形状强对流.mp3', 'Q25: 南极严寒原因 (地形穹顶形状)')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_17" onclick="handleRecBtnClick('card_17')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_17" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_17"></span>
+                    <span class="rec-status-text" id="rec-status-card_17">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_17">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_17" onclick="playUserRecording('card_17')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_17')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_17')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_17')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Colder than the North Pole? Why's that? DOCTOR: Well, unlike the North Pole... Antarctica is a land mass <span class="ans-highlight">shaped like a dome</span>, with the result that the <span class="signal-highlight">winds blow down the slopes at speeds of up to 150 km an hour</span> and that's what makes it so cold."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>T8对象错配 + T3原词陷阱</strong>：提问南极比北极更冷的原因。录音先描述北极是冰海（B、C选项原词出现诱导盲选），随后转折阐明南极冷是因为 <em>shaped like a dome</em>（呈穹顶状），狂风顺斜坡呼啸下冲。正确选项为 <strong>A (its shape)</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Colder than the North Pole? Why's that?</div>
+                            <div class="cn-line">比北极还要冷？这是为什么呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well, unlike the North Pole, which is actually a frozen sea, Antarctica is a land mass shaped like a dome, with the result that the winds blow down the slopes at speeds of up to 150 km an hour and that's what makes it so cold.</div>
+                            <div class="cn-line">嗯，与实际上是冰冻海洋的北极不同，南极洲是一块呈穹顶状的大陆，导致寒风以高达每小时150公里的速度沿斜坡猛烈下吹，正是这一点造成了那里的极度严寒。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> And one other interesting thing is that Antarctica is the driest continent on earth, surprisingly, and so you have to drink large amounts of water when you're there.</div>
+                            <div class="cn-line">而且另一件有趣的事情是，令人惊讶的是南极洲是地球上最干燥的大陆，所以你在那里必须喝大量的水。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_18 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q26</span>
+                    <h3 class="card-title">岩石化石对应地质证据 & 非洲大陆原词干扰排除</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('18_Q26_冈瓦纳大陆漂移的地质化石证据.mp3', 'Q26: 大陆分离证据 (地质证据)')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_18" onclick="handleRecBtnClick('card_18')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_18" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_18"></span>
+                    <span class="rec-status-text" id="rec-status-card_18">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_18">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_18" onclick="playUserRecording('card_18')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_18')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_18')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_18')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "How can you be certain of this? DOCTOR: ...because <span class="ans-highlight">fossils and rocks</span> have been discovered in Antarctica which are the same as those found in places such as Africa and Australia."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P2逻辑词定位 + ⑤概括改写</strong>：因果逻辑词 <em>because</em> 后紧跟答案 <em>fossils and rocks</em>，选项 <strong>B (geological evidence)</strong> 是对岩石化石的学术上位改写。考生听到 <em>Africa</em> 原词抢答盲选 C 是典型陷阱。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> How old is Antarctica? We're pretty sure it was part of a larger land mass but it broke away from the rest of the continent 170 million years ago. How can you be certain of this?</div>
+                            <div class="cn-line">南极洲有多古老？我们非常确定它曾经是更大古陆的一部分，但在1.7亿年前与其他大陆分离。您如何能确定这一点？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> ...because fossils and rocks have been discovered in Antarctica which are the same as those found in places such as Africa and Australia.</div>
+                            <div class="cn-line">……因为在南极洲发现了化石和岩石，它们与在非洲和澳大利亚等地发现的完全相同。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Amazing... To think that it was once attached to Africa...</div>
+                            <div class="cn-line">太不可思议了……想想它曾经与非洲紧紧相连……</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_19 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q27-Q28</span>
+                    <h3 class="card-title">极地年代听辨 (1882 vs 1992) 与条约签署年份</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('19_Q27_Q28_国际极地年与南极条约签署年代.mp3', 'Q27-Q28: 极地年与条约签署年代')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_19" onclick="handleRecBtnClick('card_19')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_19" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_19"></span>
+                    <span class="rec-status-text" id="rec-status-card_19">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_19">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_19" onclick="playUserRecording('card_19')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_19')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_19')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_19')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "And that took place when exactly? DOCTOR: Over two years from <span class="ans-highlight">1882 to 1883</span>. But it wasn't until the 1950s that the idea of an international treaty was proposed. And in <span class="ans-highlight">1959</span> the <span class="signal-highlight">Treaty was actually</span> <span class="ans-highlight">signed</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>①词音坑（eighteen vs nineteen 连读） + 动词过去分词听写</strong>：Q27 极地年发生在 <strong>1882 to 1883</strong>，首音节 /eɪt/ 易被错听为 <em>1992-1993</em>；Q28 条约签署年份为 <strong>1959</strong>，对应动作 <strong>signed</strong>（注意 -ed 尾音发音）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Now let's just have a look at the Antarctic Treaty. How far back does the idea of an international treaty go?</div>
+                            <div class="cn-line">现在让我们来看一看《南极条约》。建立国际条约的构想最早可以追溯到什么时候？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well, as far back as the 19th century, when eleven nations organised an international event. In 1870. And it was called the Polar Research Meeting. And then, not long after that, they organised something called the First International Polar Year.</div>
+                            <div class="cn-line">嗯，最早可以追溯到19世纪，当时11个国家组织了一次国际活动。是在1870年，被称为极地研究会议。然后在那之后不久，他们组织了所谓的‘第一届国际极地年’。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> And that took place when exactly?</div>
+                            <div class="cn-line">那具体是在什么时候举行的？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Over two years from 1882 to 1883. But it wasn't until the 1950s that the idea of an international treaty was proposed. And in 1959 the Treaty was actually signed.</div>
+                            <div class="cn-line">历时两年，从1882年到1883年。但直到20世纪50年代才有人提出订立国际条约的构想。到了1959年，该条约正式签署生效。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_20 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q29-Q30</span>
+                    <h3 class="card-title">条约和平用途与核爆炸废料绝对禁止条款</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('20_Q29_Q30_条约和平用途与核活动绝对禁令.mp3', 'Q29-Q30: 条约和平利用与核禁令')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_20" onclick="handleRecBtnClick('card_20')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_20" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_20"></span>
+                    <span class="rec-status-text" id="rec-status-card_20">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_20">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_20" onclick="playUserRecording('card_20')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_20')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_20')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_20')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "DOCTOR: Well, firstly it means that the continent is <span class="ans-highlight">reserved for peaceful use</span>. INTERVIEWER: That's Article 1, isn't it? ... DOCTOR: Yes but not as important as Article 5, which <span class="ans-highlight">prohibits any nuclear explosions</span> or waste disposal."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P3改写定位 + 否定同义替换</strong>：双选考查《南极条约》核心条款。第一条 <em>reserved for peaceful use</em> 对应选项 <strong>A</strong>；第五条 <em>prohibits any nuclear explosions or waste disposal</em> 中 <em>prohibit = ban = no nuclear testing</em>，对应选项 <strong>D</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> What do you see as the main achievements of the treaty?</div>
+                            <div class="cn-line">您认为该条约的主要成就有哪些？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well, firstly it means that the continent is reserved for peaceful use.</div>
+                            <div class="cn-line">嗯，首先这意味着这片大陆专用于和平目的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> That's Article 1, isn't it?</div>
+                            <div class="cn-line">那是第一条款，对吧？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Yes...</div>
+                            <div class="cn-line">是的……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> That's important since the territory belongs to everyone.</div>
+                            <div class="cn-line">这非常重要，因为这片领土属于全人类。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Yes but not as important as Article 5, which prohibits any nuclear explosions or waste disposal.</div>
+                            <div class="cn-line">是的，但还不如第五条重要——第五条严禁任何核爆炸或放射性废料倾倒处理。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Which is marvellous. Well, I'm afraid we're going to have to stop there because I'm afraid we've run out of time. Thanks for coming along today and telling us all about the centre and its work.</div>
+                            <div class="cn-line">这真是太好了。好的，恐怕我们今天只能聊到这里了，因为我们的时间已经用完了。非常感谢您今天光临节目，向我们介绍该中心及其工作。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_21 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q31</span>
+                    <h3 class="card-title">转折词but后真相揭示 & 被海量观察数据震撼</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('21_Q31_被大量观察数据打动与说服.mp3', 'Q31: 研究产生兴趣的原因')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_21" onclick="handleRecBtnClick('card_21')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_21" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_21"></span>
+                    <span class="rec-status-text" id="rec-status-card_21">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_21">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_21" onclick="playUserRecording('card_21')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_21')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_21')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_21')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "He spent the first part of the article talking about handedness in music instead of sport... <span class="signal-highlight">But what I soon became struck by was</span> the <span class="ans-highlight">sheer volume of both observation and investigation</span> he had done in many different sports and I felt persuaded..."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>③句意坑 + T2转折陷阱</strong>：开篇主讲人谈到音乐话题差点劝退（排除前置干扰）；转折词 <em>But what I soon became struck by was...</em> 引出真因：被大量跨运动项目的观察与实调数据所震撼并被说服。对应选项 <strong>C (sheer volume of observations)</strong>。<em>struck by = deeply impressed</em> 是学术高频词。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> My topic is handedness - whether in different sports it is better to be left- or right-sided or whether a more balanced approach is more successful.</div>
+                            <div class="cn-line">我的演讲主题是身体利手/偏侧性——在不同的体育运动中，究竟是左利侧好、右利侧好，还是一种更为平衡的双手方式更具优势。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> I'm left-handed myself and I actually didn't see any relevance to my own life when I happened to start reading an article by a sports psychologist called Peter Matthews.</div>
+                            <div class="cn-line">我自己就是一个左撇子，当我偶然开始阅读一位名叫彼得·马修斯的运动心理学家写的一篇文章时，起初我其实并没觉得这与我的生活有什么关系。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> He spent the first part of the article talking about handedness in music instead of sport, which I have to say almost put me off from reading further.</div>
+                            <div class="cn-line">他在文章的前半部分谈论的是音乐领域的用手偏好而非体育，不得不说这几乎让我放弃继续往下读。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> But what I soon became struck by was the sheer volume of both observation and investigation he had done in many different sports and I felt persuaded that what he had to say would be of real interest.</div>
+                            <div class="cn-line">但我很快被他在众多不同体育项目中所做的大量观察与调查（sheer volume of observation and investigation）深深震撼，并确信他所阐述的内容具有极高的实际价值。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_22 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q32-Q33</span>
+                    <h3 class="card-title">比赛策略制定指导 & 教练保守犹豫短视态度</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('22_Q32_Q33_策略制定指导与教练短视犹豫.mp3', 'Q32-Q33: 比赛策略与教练犹豫')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_22" onclick="handleRecBtnClick('card_22')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_22" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_22"></span>
+                    <span class="rec-status-text" id="rec-status-card_22">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_22">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_22" onclick="playUserRecording('card_22')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_22')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_22')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_22')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "...more that they can help them <span class="ans-highlight">identify the most suitable strategies</span> to use in a given game. Although most trainers know how important handedness is, at present they are <span class="ans-highlight">rather reluctant to make use of the insights</span> scientists like Matthews can give..."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P3改写定位 + ⑤同义替换</strong>：Q32 题干 <em>beneficial to sportspeople</em> 对应录音 <em>help them identify the most suitable strategies</em>，正确选项 <strong>C (suitable strategies)</strong>；Q33 考查教练态度，录音 <em>rather reluctant to make use of... rather short-sighted</em> 对应选项 <strong>C (underestimate the value)</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> I think Matthews' findings will be beneficial, not so much in helping sportspeople to work on their weaker side, but more that they can help them identify the most suitable strategies to use in a given game.</div>
+                            <div class="cn-line">我认为马修斯的研究发现将大有裨益，与其说帮助运动员强化他们的劣势侧，不如说更能帮助他们在特定比赛中确定最适宜的比赛策略（suitable strategies）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Although most trainers know how important handedness is, at present they are rather reluctant to make use of the insights scientists like Matthews can give, which I think is rather short-sighted because focusing on individual flexibility is only part of the story.</div>
+                            <div class="cn-line">尽管大多数教练都知道偏利手的重要性，但目前他们相当不情愿利用像马修斯这样的科学家所提供的深刻见解，我认为这是相当短视的，因为仅关注个体灵活性只是冰山一角。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_23 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q34</span>
+                    <h3 class="card-title">幼年开练双手能力更强 & 漏听also转折并列</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('23_Q34_乐器演奏与幼年混用双手研究.mp3', 'Q34: 幼年学琴与混用手能力')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_23" onclick="handleRecBtnClick('card_23')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_23" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_23"></span>
+                    <span class="rec-status-text" id="rec-status-card_23">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_23">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_23" onclick="playUserRecording('card_23')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_23')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_23')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_23')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "keyboard players had high levels of mixed-handedness, whereas string players like cellists and violinists strongly favoured one hand. <span class="signal-highlight">Also those who</span> <span class="ans-highlight">started younger were more mixed-handed</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P2并列词定位 + T3原词陷阱</strong>：考生听到 <em>keyboard / high levels</em> 容易误选 C。实际上 <em>Also</em> 之后补充了决定性结论：<strong>those who started younger were more mixed-handed</strong>（越小年龄开始学琴，双手混用均衡度越高），对应选项 <strong>A</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Anyway, back to the article. Matthews found a German study which looked at what he called 'mixed-handedness', that is, the capacity to use both left and right hands equally.</div>
+                            <div class="cn-line">不管怎样，回到文章本身。马修斯发现了一项德国的研究，该研究调查了他所谓的‘混合利手’，即同等自如地使用左右手的能力。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> It looked at mixed-handedness in 40 musicians on a variety of instruments. Researchers examined a number of variables, e.g. type of instrument played, regularity of practice undertaken and length of time playing instrument...</div>
+                            <div class="cn-line">这项研究调查了40位演奏各种乐器的音乐家的双手均衡度。研究人员考察了若干变量，如演奏乐器种类、练习规律性以及练琴时间跨度……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> ...and found the following: keyboard players had high levels of mixed-handedness, whereas string players like cellists and violinists strongly favoured one hand. Also those who started younger were more mixed-handed.</div>
+                            <div class="cn-line">……并得出以下结论：键盘演奏者具有很高的双手混合平衡度，而像大提琴和弦乐手则强烈倾向于单手。而且那些在更小年龄开始练琴的人，双手混用能力明显更高。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_24 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q35</span>
+                    <h3 class="card-title">猿猴捕食效率对比 & 固定用手最具优势</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('24_Q35_猿猴固定用手捕蚁效率优势.mp3', 'Q35: 猿猴固定用手捕食优势')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_24" onclick="handleRecBtnClick('card_24')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_24" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_24"></span>
+                    <span class="rec-status-text" id="rec-status-card_24">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_24">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_24" onclick="playUserRecording('card_24')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_24')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_24')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_24')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Apes get a large proportion of their food by 'fishing' ants from ant hills... Studies showed that <span class="signal-highlight">apes consistently using the same hand</span> <span class="ans-highlight">fished out 30% more ants</span> than those varying between the two."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>P3改写定位 + 比较级同义改写</strong>：录音中 <em>consistently using the same hand fished out 30% more ants</em> 用优势比较表达，选项 <strong>A (most successful when using same hand)</strong> 将 <em>more than</em> 改写为最高级 <em>most successful</em>。考生如果听到 left/right hand 自行脑补对比易选错。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Matthews also reports studies of handedness in apes. Apes get a large proportion of their food by 'fishing' ants from ant hills.</div>
+                            <div class="cn-line">马修斯还报告了关于猿猴利手性的研究。猿猴很大一部分食物是通过从蚁丘中‘钓’蚂蚁获得的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> The studies show that apes, like humans, show handedness - though for them right- and left-handedness is about equal, whereas about 85% of humans are right-handed.</div>
+                            <div class="cn-line">研究表明，猿猴和人类一样表现出利手偏好——虽然对它们而言左利与右利比例大致相等，而人类约85%为右利手。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Studies showed that apes consistently using the same hand fished out 30% more ants than those varying between the two.</div>
+                            <div class="cn-line">研究表明，始终坚持使用同一只手的猿猴，比两手交替混用的猿猴多钓出30%的蚂蚁。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_25 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q36-Q37</span>
+                    <h3 class="card-title">曲棍球双向挥杆 & 词性与预读语法判定</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('25_Q36_Q37_曲棍球双向挥杆与混用手自信心.mp3', 'Q36-Q37: 曲棍球挥杆方向与自信心')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_25" onclick="handleRecBtnClick('card_25')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_25" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_25"></span>
+                    <span class="rec-status-text" id="rec-status-card_25">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_25">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_25" onclick="playUserRecording('card_25')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_25')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_25')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_25')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "...hockey stick must be deployed in <span class="ans-highlight">two directions</span> - it would be a drawback to have hand or eye favouring one side. An interesting finding is that mixed-handed hockey players were significantly <span class="signal-highlight">more</span> <span class="ans-highlight">confident</span> than their single-handed counterparts."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>①基数词名词搭配 + ⑥词性坑</strong>：Q36 题干为 <em>stick deployed in ____</em>，答案为 <strong>two directions</strong>；Q37 空前为 <em>more</em>，空后需要形容词，答案为 <strong>confident</strong>（自信的）。很多考生因为听到音顺手写成了名词 <em>confidence</em> 而失分。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Let's start with hockey. Matthews found that it was best to be mixed-handed - this is because a hockey stick must be deployed in two directions - it would be a drawback to have hand or eye favouring one side.</div>
+                            <div class="cn-line">让我们从曲棍球开始。马修斯发现最好是双手混用型——这是因为曲棍球球棍必须在两个方向（two directions）上挥击展开——如果手或眼偏向单侧将是一个劣势。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> An interesting finding is that mixed-handed hockey players were significantly more confident than their single-handed counterparts.</div>
+                            <div class="cn-line">一个有趣的发现是，双手混用型曲棍球运动员明显比单侧型运动员更加自信（more confident）。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_26 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q38-Q39</span>
+                    <h3 class="card-title">同义改写larger area & 近音词correction听辨</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('26_Q38_Q39_球拍类运动视野盲区与动作修正滞后.mp3', 'Q38-Q39: 视野范围与动作击球修正')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_26" onclick="handleRecBtnClick('card_26')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_26" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_26"></span>
+                    <span class="rec-status-text" id="rec-status-card_26">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_26">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_26" onclick="playUserRecording('card_26')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_26')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_26')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_26')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "This means that there is a <span class="signal-highlight">bigger area of</span> <span class="ans-highlight">vision</span> on the side where most of the action occurs. If a player is cross lateral... It means that they can only <span class="signal-highlight">make</span> <span class="ans-highlight">corrections</span> much later... and often the damage has been done by then."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>⑤同义改写 + ①近音词混淆（correction vs creation）</strong>：Q38 卷面 <em>larger area of ____</em> 对应录音 <em>bigger area of vision</em>，答案填 <strong>vision</strong>；Q39 录音 <em>make corrections</em> 语速快，元音容易被错听为 <em>creation</em>。正确答案为名词复数 <strong>corrections</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Things are slightly different in racket sports like tennis. Here the important thing is to have the dominant hand and eye on the one side. This means that there is a bigger area of vision on the side where most of the action occurs.</div>
+                            <div class="cn-line">在网球等球拍类运动中情况略有不同。这里关键是优势手和优势眼在同侧。这意味着在绝大多数动作发生的一侧拥有更大的视野范围（area of vision）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> If a player is cross lateral the racket is invisible from the dominant eye for much of the swing. It means that they can only make corrections much later... and often the damage has been done by then.</div>
+                            <div class="cn-line">如果选手是交叉侧向型的，在大部分挥拍过程中优势眼都看不到球拍。这意味着他们只能在很久之后才能做出击球动作修正（make corrections）……而那时失误往往已经铸成。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_27 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q40</span>
+                    <h3 class="card-title">因果逻辑词 aids 引导 & 核心名词 balance 听写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('27_Q40_体操十字侧向与核心平衡机能.mp3', 'Q40: 体操交叉偏利有助于身体平衡')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_27" onclick="handleRecBtnClick('card_27')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_27" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_27"></span>
+                    <span class="rec-status-text" id="rec-status-card_27">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_27">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_27" onclick="playUserRecording('card_27')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_27')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_27')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_27')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "And moving to a rather different type of sport which involves large but precise movements - gymnastics... The predominant reason for this is because it <span class="signal-highlight">aids</span> <span class="ans-highlight">balance</span> - which is of course absolutely central to performance in this sport."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因解析：</strong><strong>④因果逻辑 + 核心名词拼写</strong>：题干问体操十字手眼偏向的益处。录音 <em>aids balance</em>（有助于保持平衡）紧跟原因连接词 <em>because</em>，答案词为 <strong>balance</strong>。听清发音，拼写规范即可轻松斩获最后一题。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> And moving to a rather different type of sport which involves large but precise movements - gymnastics. It's been found that cross hand-eye favouring is best.</div>
+                            <div class="cn-line">再转向一种涉及大幅度但极其精准动作的截然不同的运动——体操。研究发现，手眼交叉偏利是最好的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> The predominant reason for this is because it aids balance - which is of course absolutely central to performance in this sport.</div>
+                            <div class="cn-line">其主要原因是因为它有助于维持身体平衡（aids balance）——而平衡对于这项运动的表现而言当然绝对处于核心地位。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_sec1 -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Section 1 完整录音</span>
+                    <h3 class="card-title">Section 1: 汽车保险理赔登记 (Q1-Q10 完整音频与全真对照)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_1_Full_汽车保险理赔登记.mp3', 'Section 1 全录音: 汽车保险理赔登记')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_sec1" onclick="handleRecBtnClick('card_sec1')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_sec1" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_sec1"></span>
+                    <span class="rec-status-text" id="rec-status-card_sec1">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_sec1">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_sec1" onclick="playUserRecording('card_sec1')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_sec1')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_sec1')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_sec1')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "完整 Section 1 汽车保险投保咨询录音：涵盖被保险人地址、工作电话、汽车排量型号（Hewton Sable）、理赔历史（stolen）、共同驾驶人（brother-in-law）、通勤用途（travel to work）、生效日期（31st January）及保险公司报价（Red Flag, $450）。"
+                </div>
+                <div class="analysis-box">
+                    <strong>全篇复盘导引：</strong>Section 1 考查高频生存英语登记。核心难点在于数字（27 Bank Road, 730453, $450）与拼写（S-A-B-L-E, P-A-Y-N-T-E-R）的听写抗干扰能力，以及连字符复合词 brother-in-law 的规范书写。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Hello... motor insurance department...</div>
+                            <div class="cn-line">您好……这里是汽车保险部……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Oh hello... I'd like to ask about insurance for my car.</div>
+                            <div class="cn-line">噢您好……我想咨询一下我的汽车保险。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Yes, of course. I'll just take a few details. What's your name?</div>
+                            <div class="cn-line">好的，当然可以。我先登记几个基本信息。请问您叫什么名字？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Patrick Jones.</div>
+                            <div class="cn-line">帕特里克·琼斯。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And your address?</div>
+                            <div class="cn-line">您的住址是？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It's 27 Bank Road.</div>
+                            <div class="cn-line">是河岸路27号（27 Bank Road）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> 27 Bank Road. Is that in Greendale?</div>
+                            <div class="cn-line">河岸路27号。是在格林戴尔吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And what's your daytime phone number?</div>
+                            <div class="cn-line">那您的日间联系电话是多少？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> My work number is 730453.</div>
+                            <div class="cn-line">我的工作电话是 730453。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And could I ask what your occupation is?</div>
+                            <div class="cn-line">我可以问一下您的职业是什么吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Dentist.</div>
+                            <div class="cn-line">牙医。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK... now a few details about your car... What size is the engine?</div>
+                            <div class="cn-line">好的……现在来登记一些关于您汽车的信息……发动机排量是多大？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It's 1200 ccs.</div>
+                            <div class="cn-line">是 1200cc。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Thank you... and the make and model?</div>
+                            <div class="cn-line">谢谢……那品牌和型号呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It's a Hewton Sable.</div>
+                            <div class="cn-line">是休顿·貂（Hewton Sable）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Could you spell the model name please?</div>
+                            <div class="cn-line">能请您拼写一下型号名称吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... S-A-B-L-E.</div>
+                            <div class="cn-line">好的……S-A-B-L-E。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Ah yes... thanks. And when was it made?</div>
+                            <div class="cn-line">啊好的……谢谢。那出厂年份是哪一年？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> 1997.</div>
+                            <div class="cn-line">1997年。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Lovely... right... I presume you've had a previous insurer?</div>
+                            <div class="cn-line">很好……对……我推测您之前投过保？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right... we need to know the name of the company.</div>
+                            <div class="cn-line">好的……我们需要知道那家保险公司的名字。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... it was Northern Star.</div>
+                            <div class="cn-line">好的……之前是北极星保险（Northern Star）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Thank you, and have you made any insurance claims in the last five years?</div>
+                            <div class="cn-line">谢谢，那么在过去五年里您提出过任何保险理赔吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... one in 1999.</div>
+                            <div class="cn-line">是的……1999年有一次。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And what was the problem?</div>
+                            <div class="cn-line">请问当时是什么情况？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> It was stolen... but...</div>
+                            <div class="cn-line">车被偷了……不过……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> That's fine, Mr Jones... that's all we need to know at the moment...</div>
+                            <div class="cn-line">好的琼斯先生……目前我们只需要了解这些信息……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And will there be any other named drivers?</div>
+                            <div class="cn-line">保单上还会有其他指定驾驶人吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Just the one...</div>
+                            <div class="cn-line">就一位……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And his name?</div>
+                            <div class="cn-line">他的姓名是？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Simon Paynter.</div>
+                            <div class="cn-line">西蒙·佩因特（Simon Paynter）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Could you spell the surname please?</div>
+                            <div class="cn-line">能请您拼写一下姓氏吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> P-A-Y-N-T-E-R.</div>
+                            <div class="cn-line">P-A-Y-N-T-E-R。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK thank you... And what relationship is he to you?</div>
+                            <div class="cn-line">好的谢谢……请问他和您是什么关系？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> He's my brother-in-law.</div>
+                            <div class="cn-line">他是我的姐夫/妹夫（brother-in-law）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And what will you or Mr Paynter be using the car for?</div>
+                            <div class="cn-line">那么您或佩因特先生用车主要作什么用途？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Well... mainly for social use...</div>
+                            <div class="cn-line">嗯……主要用于社交日常活动……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Social use. Will you be using it to travel to work?</div>
+                            <div class="cn-line">日常社交。那你们会开这辆车去上班通勤吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes... sometimes.</div>
+                            <div class="cn-line">会的……有时候会开。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> ... Anything else?</div>
+                            <div class="cn-line">……还有其他用途吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> No. That's it...</div>
+                            <div class="cn-line">没有了，就这些……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And finally... when would you like to start the insurance?</div>
+                            <div class="cn-line">最后……您希望这份保险从什么时候开始生效？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> I'll need it from the 31st of January.</div>
+                            <div class="cn-line">我需要它从1月31日起生效。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right... Mr Jones... I'm getting a couple of quotes coming up on the computer now... and the best bet looks like being with a company called Red Flag.</div>
+                            <div class="cn-line">好的……琼斯先生……我的电脑上现在调出了几份报价……看起来最划算的选择是一家叫红旗（Red Flag）的公司。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yeah.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And that comes out at $450 per year...</div>
+                            <div class="cn-line">核算下来是每年 450 美元……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Well... that seems OK... it's quite a bit lower than I've been paying up to now...</div>
+                            <div class="cn-line">嗯……听起来挺不错……比我目前一直在交的保费要便宜相当多……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Great... so would you like me to go ahead with that?</div>
+                            <div class="cn-line">太好了……那您希望我就按这个方案帮您办理吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Sure... why not?</div>
+                            <div class="cn-line">当然……没问题。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_sec2 -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Section 2 完整录音</span>
+                    <h3 class="card-title">Section 2: 城市水陆旅游指南 (Q11-Q20 完整音频与全真对照)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_2_Full_城市水陆旅游指南.mp3', 'Section 2 全录音: 城市水陆旅游指南')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_sec2" onclick="handleRecBtnClick('card_sec2')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_sec2" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_sec2"></span>
+                    <span class="rec-status-text" id="rec-status-card_sec2">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_sec2">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_sec2" onclick="playUserRecording('card_sec2')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_sec2')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_sec2')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_sec2')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "完整 Section 2 城市旅游轮渡与观光巴士独白介绍：涵盖西向东四大轮渡站点（Green Banks, Newtown）、末班船时间（6.30 p.m.）、国王宫殿规整花园（formal gardens）、观光塔全景（views）、罗马遗迹博物馆（history books）、娱乐城七厅影院（seven-screen cinema）及观光巴士班次频率（every 20 minutes, Central Station）。"
+                </div>
+                <div class="analysis-box">
+                    <strong>全篇复盘导引：</strong>Section 2 考查生活场景地名、时刻与设施说明。难点在于专有名词地名合写 Newtown、多义词 views 的语境判定、复合词 seven-screen 及频率短语 every 20 minutes 的快速捕捉。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Thank you for calling the Tourist Line. There are many different ways of getting round the city and we'd like to suggest some you may not have thought of.</div>
+                            <div class="cn-line">感谢您致电旅游热线。在市内有许多不同的出行游览方式，我们想向您推荐一些您可能还没想到的选择。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> How about a city trip by boat? There are four main stopping points - from west to east: stop A Green Banks, stop B City Bridge, stop C Roman Landing and stop D Newtown.</div>
+                            <div class="cn-line">来一场乘船城市游览怎么样？从西向东共有四个主要停靠站：A站绿岸（Green Banks）、B站城市大桥（City Bridge）、C站罗马登陆点（Roman Landing）和D站新城（Newtown）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> You can find the main booking office at stop A.</div>
+                            <div class="cn-line">您可以在A站找到主售票处。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> The first boat leaves at 8 a.m. and the last one at 6.30 p.m. There are also many attractions you can visit along the river.</div>
+                            <div class="cn-line">第一班船于上午8点发车，最后一班是下午6点半。沿着河岸您还可以参观许多著名景点。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> At Stop A, if you have time, you can visit the fine 16th century palace here built for the king with its beautiful formal gardens. It's very near the booking office. Now you can enjoy every corner of this superb residence.</div>
+                            <div class="cn-line">在A站，如果您有时间，可以参观这里为国王建造的精致的16世纪宫殿及其美丽的规整式花园（formal gardens）。它离售票处非常近。现在您可以尽情欣赏这处宏伟宅邸的每一个角落。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Stop B Why don't you visit Tower Restaurant with its wide range of refreshments?</div>
+                            <div class="cn-line">B站，何不光顾一下塔楼餐厅（Tower Restaurant）？那里提供各种茶点小吃。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This is a place where you can sit and enjoy the wonderful views over the old commercial and banking centre of the city.</div>
+                            <div class="cn-line">在这里您可以坐下来，尽情欣赏俯瞰老商业与金融中心的壮丽景观（wonderful views）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Stop C is the area where, in the first century AD, invading soldiers crossed the river; this was much shallower than it is now. That's why this area is called Roman Landing.</div>
+                            <div class="cn-line">C站是公元一世纪侵略士兵渡河的地方；当时的河水比现在要浅得多。这就是为什么这个区域被称为罗马登陆点。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> There's an interactive Museum to visit here with a large shop which has a good range of local history books.</div>
+                            <div class="cn-line">这里有一座互动博物馆可供参观，馆内有一个大型商店，售卖各种当地历史书籍（history books）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> At the furthest point of the trip, stop D, the most exciting place to visit is the new Entertainment Complex with seven-screen cinema, bowling alley and video games arcade.</div>
+                            <div class="cn-line">在整个旅程的最远端D站，最令人兴奋的去处是新的综合娱乐中心，内设七厅影院（seven-screen cinema）、保龄球馆和电子游艺厅。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Besides the boat tours, there are city buses. Two companies offer special services: The Top Bus Company runs all its tours with a live commentary in English. Tours leave from 8.30 a.m. every 20 minutes. There are departures from Central Station, Castle Hill and Long Walk. This is a hop-on hop-off service and tickets are valid for 24 hours.</div>
+                            <div class="cn-line">除了游船之外，还有城市观光巴士。有两家公司提供特色服务：顶级巴士公司的所有行程均配有英语现场解说。观光车从早上8点半开始发车，每20分钟一班。始发点设在中央车站、城堡山和长径漫步道。这是随上随下服务，车票24小时有效。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> The Number One Sightseeing Tour is available with a commentary in eight languages. Buses depart from Central Station every five to six minutes from about 9 a.m. with the last bus at around 7 p.m.</div>
+                            <div class="cn-line">一号观光游览线提供八种语言的语音导览。巴士大约从早上9点起从中央车站发车，每五到六分钟一班，末班车大约在晚上7点。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_sec3 -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Section 3 完整录音</span>
+                    <h3 class="card-title">Section 3: 新西兰南极中心访谈 (Q21-Q30 完整音频与全真对照)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_3_Full_新西兰南极中心访谈.mp3', 'Section 3 全录音: 新西兰南极中心访谈')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_sec3" onclick="handleRecBtnClick('card_sec3')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_sec3" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_sec3"></span>
+                    <span class="rec-status-text" id="rec-status-card_sec3">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_sec3">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_sec3" onclick="playUserRecording('card_sec3')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_sec3')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_sec3')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_sec3')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "完整 Section 3 基督城南极中心主任梅里韦瑟博士访谈：深入探讨基地选址地理真因（second closest country）、科学基地极地装备供给（equipment）、游客中心身临其境体验（what Antarctica is like）、极点绝美风景（beautiful）、穹顶地形严寒成因（shape）、大陆漂移化石地质证据（geological evidence）、国际极地年（1882-1883）、条约签署（1959）及和平用途与核禁令。"
+                </div>
+                <div class="analysis-box">
+                    <strong>全篇复盘导引：</strong>Section 3 是经典学术双人访谈，密集布设了 T3 原词陷阱与 T2 转折逻辑（actually, but, unlike）。核心训练目标是抗原词诱惑，精准捕捉转折词后真正的抽象归纳答案。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> We're pleased to welcome Dr Martin Merrywhether of the Antarctic Centre in Christchurch, New Zealand who has come along to talk to us today about the role of the Centre and the Antarctic Treaty. Now my first question is about the choice of location for the centre. Why Christchurch? Was it because of the climate?</div>
+                            <div class="cn-line">我们非常高兴地欢迎来自新西兰基督城南极中心的马丁·梅里韦瑟博士，他今天来到节目中，向我们介绍该中心的作用以及《南极条约》。我的第一个问题是关于该中心的选址。为什么选择基督城？是因为气候原因吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well actually New Zealand is the second closest country to Antarctica and Christchurch is often used on Antarctic expeditions.</div>
+                            <div class="cn-line">嗯，实际上新西兰是距离南极洲第二近的国家，而且基督城经常被用作南极探险队的基地。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Right, so it's because of where we are... coupled with our historical role. So tell us - what is the main purpose of the centre?</div>
+                            <div class="cn-line">好的，所以是因为地理位置……加上我们的历史角色。那么请告诉我们——该中心的主要宗旨是什么？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well... we have two complementary roles. One is as a scientific base for expeditions and research and the other is as an information centre.</div>
+                            <div class="cn-line">嗯……我们有两个互补的角色。一是作为探险和科研的科学基地，另一个是作为信息咨询中心。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Tell us something about the role as a scientific base.</div>
+                            <div class="cn-line">能跟我们谈谈作为科学基地的角色吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> We're able to provide information about what scientists should take with them to the South Pole - for example, the centre contains a clothing warehouse where expeditions are supplied with suitable clothing for the extreme conditions.</div>
+                            <div class="cn-line">我们能够为科学家提供关于前往南极应携带哪些物品的信息——例如，中心内设有一个服装仓库，为探险队提供适合极端严酷环境的特制服装。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> Really? And what does the visitor's centre offer?</div>
+                            <div class="cn-line">真的吗？那游客中心提供哪些体验呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well, since very few people will ever experience the Antarctic first hand, the visitors' centre aims to recreate the atmosphere of Antarctica. There's a mock camp site where you can see inside an Antarctic tent and imagine yourself sleeping there. And the centre also acts as a showcase for the unique international co-operation which exists in Antarctica today.</div>
+                            <div class="cn-line">嗯，既然极少有人能够亲身踏上南极，游客中心的目标就是再现南极的真实氛围。这里有一个模拟营地，你可以看看南极帐篷的内部，并想象自己睡在里面的情景。此外，该中心还展示了当今南极洲独特的国际合作成果。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-tutor">INTERVIEWER</span> What is it actually like at the South Pole? I know you've been there on a number of occasions.</div>
+                            <div class="cn-line">南极点究竟是什么样子的？我知道您曾多次去过那里。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Yes, I have and each time I'm struck by the awesome beauty of the place. It's magnificent but you can really only visit it in the summer months.</div>
+                            <div class="cn-line">是的，我去过很多次，每次我都为那里惊心动魄的壮美所折服。那里的风景令人叹为观止，但你真的只能在夏季月份去访问。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well, unlike the North Pole, which is actually a frozen sea, Antarctica is a land mass shaped like a dome, with the result that the winds blow down the slopes at speeds of up to 150 km an hour and that's what makes it so cold.</div>
+                            <div class="cn-line">嗯，与实际上是冰冻海洋的北极不同，南极洲是一块呈穹顶状的大陆，导致寒风以高达每小时150公里的速度沿斜坡猛烈下吹，正是这一点造成了那里的极度严寒。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> ...because fossils and rocks have been discovered in Antarctica which are the same as those found in places such as Africa and Australia.</div>
+                            <div class="cn-line">……因为在南极洲发现了化石和岩石，它们与在非洲和澳大利亚等地发现的完全相同。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Over two years from 1882 to 1883. But it wasn't until the 1950s that the idea of an international treaty was proposed. And in 1959 the Treaty was actually signed.</div>
+                            <div class="cn-line">历时两年，从1882年到1883年。但直到20世纪50年代才有人提出订立国际条约的构想。到了1959年，该条约正式签署生效。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">DOCTOR</span> Well, firstly it means that the continent is reserved for peaceful use... Yes but not as important as Article 5, which prohibits any nuclear explosions or waste disposal.</div>
+                            <div class="cn-line">嗯，首先这意味着这片大陆专用于和平目的……是的，但还不如第五条重要——第五条严禁任何核爆炸或放射性废料倾倒处理。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_sec4 -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Section 4 完整录音</span>
+                    <h3 class="card-title">Section 4: 运动偏侧手性科学讲座 (Q31-Q40 完整音频与全真对照)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_4_Full_运动偏侧手性科学讲座.mp3', 'Section 4 全录音: 运动偏侧手性讲座')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_sec4" onclick="handleRecBtnClick('card_sec4')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_sec4" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_sec4"></span>
+                    <span class="rec-status-text" id="rec-status-card_sec4">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_sec4">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_sec4" onclick="playUserRecording('card_sec4')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_sec4')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_sec4')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_sec4')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "完整 Section 4 运动心理学家马修斯偏侧用手优势讲座：阐明被海量数据震撼（sheer volume of observations）、帮助制定比赛策略（suitable strategies）、教练短视迟疑态度（reluctant）、乐手幼年双手平衡性（started younger）、猿猴单手钓蚁高产优势（consistently using same hand）、曲棍球双向挥击与自信心（two directions, confident）、网球侧向视野盲区与迟滞修正（vision, corrections）及体操平衡中枢（balance）。"
+                </div>
+                <div class="analysis-box">
+                    <strong>全篇复盘导引：</strong>Section 4 是一场学术逻辑极强、语速密集的运动科学独白。关键考察点在于对长从句的同义替换理解、信号词关联判定以及空前语法所决定的词性规范（如 confident 为形容词而非 confidence）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> My topic is handedness - whether in different sports it is better to be left- or right-sided or whether a more balanced approach is more successful.</div>
+                            <div class="cn-line">我的演讲主题是身体利手/偏侧性——在不同的体育运动中，究竟是左利侧好、右利侧好，还是一种更为平衡的双手方式更具优势。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> I'm left-handed myself and I actually didn't see any relevance to my own life when I happened to start reading an article by a sports psychologist called Peter Matthews.</div>
+                            <div class="cn-line">我自己就是一个左撇子，当我偶然开始阅读一位名叫彼得·马修斯的运动心理学家写的一篇文章时，起初我其实并没觉得这与我的生活有什么关系。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> He spent the first part of the article talking about handedness in music instead of sport, which I have to say almost put me off from reading further. But what I soon became struck by was the sheer volume of both observation and investigation he had done in many different sports and I felt persuaded that what he had to say would be of real interest.</div>
+                            <div class="cn-line">他在文章的前半部分谈论的是音乐领域的用手偏好而非体育，不得不说这几乎让我放弃继续往下读。但我很快被他在众多不同体育项目中所做的大量观察与调查深深震撼，并确信他所阐述的内容具有极高的实际价值。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> I think Matthews' findings will be beneficial, not so much in helping sportspeople to work on their weaker side, but more that they can help them identify the most suitable strategies to use in a given game. Although most trainers know how important handedness is, at present they are rather reluctant to make use of the insights scientists like Matthews can give, which I think is rather short-sighted because focusing on individual flexibility is only part of the story.</div>
+                            <div class="cn-line">我认为马修斯的研究发现将大有裨益，与其说帮助运动员强化他们的劣势侧，不如说更能帮助他们在特定比赛中确定最适宜的比赛策略。尽管大多数教练都知道偏利手的重要性，但目前他们相当不情愿利用像马修斯这样的科学家所提供的深刻见解，我认为这是相当短视的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Anyway, back to the article. Matthews found a German study which looked at what he called 'mixed-handedness', that is, the capacity to use both left and right hands equally... keyboard players had high levels of mixed-handedness, whereas string players like cellists and violinists strongly favoured one hand. Also those who started younger were more mixed-handed.</div>
+                            <div class="cn-line">不管怎样，回到文章本身。马修斯发现了一项德国的研究，该研究调查了他所谓的‘混合利手’，即同等自如地使用左右手的能力……键盘演奏者具有很高的双手混合平衡度，而像大提琴和弦乐手则强烈倾向于单手。而且那些在更小年龄开始练琴的人，双手混用能力明显更高。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Matthews also reports studies of handedness in apes. Apes get a large proportion of their food by 'fishing' ants from ant hills... Studies showed that apes consistently using the same hand fished out 30% more ants than those varying between the two.</div>
+                            <div class="cn-line">马修斯还报告了关于猿猴利手性的研究。猿猴很大一部分食物是通过从蚁丘中‘钓’蚂蚁获得的……研究表明，始终坚持使用同一只手的猿猴，比两手交替混用的猿猴多钓出30%的蚂蚁。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Let's start with hockey. Matthews found that it was best to be mixed-handed - this is because a hockey stick must be deployed in two directions - it would be a drawback to have hand or eye favouring one side. An interesting finding is that mixed-handed hockey players were significantly more confident than their single-handed counterparts.</div>
+                            <div class="cn-line">让我们从曲棍球开始。马修斯发现最好是双手混用型——这是因为曲棍球球棍必须在两个方向上挥击展开——如果手或眼偏向单侧将是一个劣势。一个有趣的发现是，双手混用型曲棍球运动员明显比单侧型运动员更加自信。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> Things are slightly different in racket sports like tennis. Here the important thing is to have the dominant hand and eye on the one side. This means that there is a bigger area of vision on the side where most of the action occurs. If a player is cross lateral the racket is invisible from the dominant eye for much of the swing. It means that they can only make corrections much later... and often the damage has been done by then.</div>
+                            <div class="cn-line">在网球等球拍类运动中情况略有不同。这里关键是优势手和优势眼在同侧。这意味着在绝大多数动作发生的一侧拥有更大的视野范围。如果选手是交叉侧向型的，在大部分挥拍过程中优势眼都看不到球拍。这意味着他们只能在很久之后才能做出击球动作修正……而那时失误往往已经铸成。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-speaker">LECTURER</span> And moving to a rather different type of sport which involves large but precise movements - gymnastics. It's been found that cross hand-eye favouring is best. The predominant reason for this is because it aids balance - which is of course absolutely central to performance in this sport.</div>
+                            <div class="cn-line">再转向一种涉及大幅度但极其精准动作的截然不同的运动——体操。研究发现，手眼交叉偏利是最好的。其主要原因是因为它有助于维持身体平衡——而平衡对于这项运动的表现而言当然绝对处于核心地位。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </div> <!-- .slice-list -->
+</div> <!-- .container -->
+
+<script>
+    const mainAudio = document.getElementById('main-audio');
+    const nowPlayingText = document.getElementById('now-playing-text');
+    let currentSrc = '';
+    let isLooping = false;
+
+    function playAudio(src, title) {
+        currentSrc = src;
+        mainAudio.src = src;
+        mainAudio.play().catch(e => console.log('Audio autoplay prevented or stopped:', e));
+        nowPlayingText.innerHTML = `<span>▶ 正在播放：</span> <strong>${title}</strong>`;
+        
+        // Highlight active card
+        document.querySelectorAll('.slice-card').forEach(card => {
+            card.classList.remove('playing');
+        });
+        const activeBtn = event ? event.target.closest('.slice-card') : null;
+        if (activeBtn) {
+            activeBtn.classList.add('playing');
+        }
+    }
+
+    function setSpeed(speed, btn) {
+        mainAudio.playbackRate = speed;
+        document.querySelectorAll('.player-controls .btn-group .pill-btn').forEach(b => {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+    }
+
+    function toggleLoop(btn) {
+        isLooping = !isLooping;
+        mainAudio.loop = isLooping;
+        if (isLooping) {
+            btn.classList.add('active');
+            btn.innerText = '🔁 单曲循环: 开';
+        } else {
+            btn.classList.remove('active');
+            btn.innerText = '🔁 单曲循环: 关';
+        }
+    }
+
+    function filterCategory(cat, btn) {
+        document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            if (cat === 'all' || card.dataset.category === cat) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    /* ========================================================
+       SHADOWING RECORDING SYSTEM (Web Audio MediaRecorder)
+       ======================================================== */
+    const userRecordings = {};
+    let activeMediaRecorder = null;
+    let activeAudioChunks = [];
+    let recordingCardId = null;
+    let recordTimerInterval = null;
+    let recordSeconds = 0;
+    let userAudioPlayer = null;
+
+    function handleRecBtnClick(cardId) {
+        if (recordingCardId === cardId) {
+            stopRecording(cardId);
+        } else if (recordingCardId !== null) {
+            stopRecording(recordingCardId);
+            setTimeout(() => toggleRecording(cardId), 300);
+        } else {
+            toggleRecording(cardId);
+        }
+    }
+
+    async function toggleRecording(cardId) {
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        const statusText = document.getElementById(`rec-status-${cardId}`);
+        const dot = document.getElementById(`rec-dot-${cardId}`);
+        const timerBadge = document.getElementById(`rec-time-${cardId}`);
+
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            panel.style.display = 'flex';
+            statusText.innerText = '⚠️ 您的浏览器不支持或未开启录音权限！请使用最新版 Chrome/Edge/Safari 浏览器。';
+            statusText.style.color = '#fbbf24';
+            return;
+        }
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            activeAudioChunks = [];
+            recordingCardId = cardId;
+            recordSeconds = 0;
+
+            let mimeType = 'audio/webm';
+            if (!MediaRecorder.isTypeSupported('audio/webm')) {
+                if (MediaRecorder.isTypeSupported('audio/mp4')) {
+                    mimeType = 'audio/mp4';
+                } else if (MediaRecorder.isTypeSupported('audio/aac')) {
+                    mimeType = 'audio/aac';
+                } else {
+                    mimeType = '';
+                }
+            }
+            
+            const options = mimeType ? { mimeType } : {};
+            activeMediaRecorder = new MediaRecorder(stream, options);
+
+            activeMediaRecorder.ondataavailable = e => {
+                if (e.data && e.data.size > 0) {
+                    activeAudioChunks.push(e.data);
+                }
+            };
+
+            activeMediaRecorder.onstop = () => {
+                const blob = new Blob(activeAudioChunks, { type: activeMediaRecorder.mimeType || 'audio/webm' });
+                const audioUrl = URL.createObjectURL(blob);
+                userRecordings[cardId] = {
+                    blob: blob,
+                    url: audioUrl,
+                    duration: recordSeconds
+                };
+                
+                stream.getTracks().forEach(track => track.stop());
+                updateUIAfterRecording(cardId);
+            };
+
+            activeMediaRecorder.start(200);
+
+            // Update UI
+            recBtn.classList.add('recording');
+            recBtn.innerHTML = '⏹️ 完成录音';
+
+            panel.style.display = 'flex';
+            statusText.innerText = '🔴 正在录音... 请跟读';
+            statusText.style.color = '#f87171';
+            dot.classList.add('recording');
+
+            panel.querySelector('.rec-panel-btns').style.display = 'none';
+
+            // Timer
+            timerBadge.innerText = '00:00';
+            clearInterval(recordTimerInterval);
+            recordTimerInterval = setInterval(() => {
+                recordSeconds++;
+                const mins = String(Math.floor(recordSeconds / 60)).padStart(2, '0');
+                const secs = String(recordSeconds % 60).padStart(2, '0');
+                timerBadge.innerText = `${mins}:${secs}`;
+            }, 1000);
+
+        } catch (err) {
+            console.warn('Microphone access denied or error:', err);
+            panel.style.display = 'flex';
+            statusText.innerText = '⚠️ 请在浏览器地址栏允许麦克风权限后即可跟读录音';
+            statusText.style.color = '#fbbf24';
+        }
+    }
+
+    function stopRecording(cardId) {
+        if (activeMediaRecorder && activeMediaRecorder.state !== 'inactive') {
+            activeMediaRecorder.stop();
+        }
+        clearInterval(recordTimerInterval);
+        recordingCardId = null;
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 重新录音';
+
+        const dot = document.getElementById(`rec-dot-${cardId}`);
+        dot.classList.remove('recording');
+    }
+
+    function updateUIAfterRecording(cardId) {
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'flex';
+
+        const statusText = document.getElementById(`rec-status-${cardId}`);
+        statusText.innerText = '✅ 跟读已录制完成';
+        statusText.style.color = '#34d399';
+
+        const btnGroup = panel.querySelector('.rec-panel-btns');
+        btnGroup.style.display = 'flex';
+    }
+
+    function playUserRecording(cardId) {
+        const item = userRecordings[cardId];
+        if (!item || !item.url) return;
+
+        if (mainAudio && !mainAudio.paused) {
+            mainAudio.pause();
+        }
+
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+
+        userAudioPlayer = new Audio(item.url);
+        const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+        playBtn.innerText = '⏸️ 正在试听';
+
+        userAudioPlayer.play().catch(e => console.error('Play error:', e));
+
+        userAudioPlayer.onended = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+        userAudioPlayer.onpause = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+    }
+
+    function compareOfficial(cardId) {
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const card = document.getElementById(`rec-btn-${cardId}`).closest('.slice-card');
+        const playBtn = card.querySelector('.play-card-btn');
+        playBtn.click();
+    }
+
+    function deleteRecording(cardId) {
+        if (userRecordings[cardId] && userRecordings[cardId].url) {
+            URL.revokeObjectURL(userRecordings[cardId].url);
+            delete userRecordings[cardId];
+        }
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'none';
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 录音跟读';
+    }
+</script>
+
+</body>
+</html>

@@ -83,7 +83,7 @@
         }
 
         .now-playing-title {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--accent-blue);
             display: flex;
@@ -96,11 +96,12 @@
             align-items: center;
             gap: 16px;
             flex-wrap: wrap;
+            font-size: 0.95rem;
         }
 
         audio {
             width: 100%;
-            height: 40px;
+            height: 42px;
             border-radius: 8px;
             outline: none;
         }
@@ -115,9 +116,9 @@
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid var(--border-color);
             color: var(--text-main);
-            padding: 6px 14px;
+            padding: 7px 16px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.92rem;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -147,10 +148,10 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 10px 18px;
+            padding: 11px 20px;
             border-radius: 12px;
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             font-weight: 600;
             white-space: nowrap;
             transition: all 0.2s;
@@ -405,11 +406,13 @@
         }
 
         .card-tag {
-            font-size: 0.78rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 6px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
         }
 
         .tag-p1 { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
@@ -419,20 +422,21 @@
         .tag-full { background: rgba(244, 63, 94, 0.2); color: #fb7185; }
 
         .card-title {
-            font-size: 1.15rem;
+            font-size: 1.35rem;
             font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
 
         .play-card-btn {
             background: linear-gradient(135deg, #38bdf8, #6366f1);
             color: #0f172a;
             border: none;
-            padding: 8px 18px;
+            padding: 9px 20px;
             border-radius: 10px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.96rem;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -455,19 +459,22 @@
 
         .transcript-box {
             background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            padding: 14px;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-            border-left: 3px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+            border-left: 4px solid var(--accent-blue);
+            color: #f1f5f9;
         }
 
         .analysis-box {
-            font-size: 0.88rem;
-            color: var(--text-muted);
+            font-size: 1.02rem;
+            color: #cbd5e1;
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
-            padding: 10px 14px;
+            border-radius: 10px;
+            padding: 12px 18px;
+            line-height: 1.65;
         }
 
         .analysis-box strong {
@@ -534,8 +541,8 @@
         }
 
         .bilingual-summary {
-            padding: 12px 16px;
-            font-size: 0.9rem;
+            padding: 12px 18px;
+            font-size: 1.05rem;
             font-weight: 600;
             color: #7dd3fc;
             cursor: pointer;
@@ -563,16 +570,16 @@
         }
 
         .toggle-badge {
-            font-size: 0.75rem;
+            font-size: 0.82rem;
             background: rgba(56, 189, 248, 0.15);
             color: #38bdf8;
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 6px;
             margin-left: 6px;
         }
 
         .toggle-icon {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--accent-blue);
             transition: transform 0.25s ease;
             display: inline-block;
@@ -583,11 +590,11 @@
         }
 
         .bilingual-body {
-            padding: 16px 18px;
+            padding: 18px 22px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.92rem;
-            line-height: 1.65;
-            max-height: 420px;
+            font-size: 1.12rem;
+            line-height: 1.8;
+            max-height: 480px;
             overflow-y: auto;
             background: rgba(10, 16, 30, 0.5);
         }
@@ -603,12 +610,12 @@
         .script-dialog {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
         .dialog-turn {
-            padding-bottom: 10px;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.07);
+            padding-bottom: 12px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
         }
 
         .dialog-turn:last-child {
@@ -619,10 +626,10 @@
 
         .speaker-tag {
             font-weight: 700;
-            font-size: 0.82rem;
-            padding: 2px 7px;
-            border-radius: 4px;
-            margin-right: 6px;
+            font-size: 0.92rem;
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin-right: 8px;
             display: inline-block;
         }
 
@@ -633,14 +640,16 @@
 
         .en-line {
             color: #f8fafc;
-            margin-bottom: 4px;
-            line-height: 1.55;
+            font-size: 1.12rem;
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 6px;
         }
 
         .cn-line {
-            color: #94a3b8;
-            font-size: 0.86rem;
-            line-height: 1.5;
+            color: #cbd5e1;
+            font-size: 1.02rem;
+            line-height: 1.65;
             padding-left: 2px;
         }
 
@@ -660,6 +669,15 @@
 <body>
 
 <div class="container">
+    <div class="nav-back-bar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 10px 16px; background: rgba(255, 255, 255, 0.04); border-radius: 12px; border: 1px solid var(--border-color);">
+        <a href="../切片/index.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">📂 返回切片总目录 (Index)</a>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 7 · Test 3 精听点播台</span>
+        <div style="display: flex; gap: 14px;">
+            <a href="../C7T1_错题音频切片/C7T1_错题切片点播台.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">前往 Test 1 切片 ➔</a>
+            <a href="../C7T2_错题音频切片/C7T2_错题切片点播台.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">前往 Test 2 切片 ➔</a>
+        </div>
+    </div>
+
     <header>
         <h1>🎧 剑桥雅思 7 Test 3 错题切片点播台</h1>
         <p>20 组高危错题与考点原声切片 · 单曲循环磨耳朵 · 连读弱读与陷阱精听脱敏</p>

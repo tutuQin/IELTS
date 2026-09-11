@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雅思真题错题音频切片与精听点播台 · 总目录</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .badge-main {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Method Banner */
+        .method-banner {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .method-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .method-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .method-step-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 14px 16px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .method-step-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .step-num {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .step-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .step-desc {
+            font-size: 0.98rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* Test Sets Catalog */
+        .section-title {
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .catalog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .test-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+        }
+
+        .test-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .test-card.c7t1::before {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+        }
+
+        .test-card.c7t2::before {
+            background: linear-gradient(90deg, #fbbf24, #f97316);
+        }
+
+        .test-card.c7t3::before {
+            background: linear-gradient(90deg, #34d399, #10b981);
+        }
+
+        .test-card.upcoming::before {
+            background: linear-gradient(90deg, #94a3b8, #64748b);
+        }
+
+        .test-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-top {
+            margin-bottom: 20px;
+        }
+
+        .test-badges {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .badge-tag {
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .badge-ready { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); }
+        .badge-slices { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .badge-rec { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); }
+        .badge-soon { background: rgba(148, 163, 184, 0.2); color: var(--text-muted); }
+
+        .test-title {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .test-subtitle {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .feature-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 0.98rem;
+            color: #f1f5f9;
+        }
+
+        .chip strong {
+            color: var(--accent-amber);
+            font-weight: 700;
+        }
+
+        .pitfall-summary {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            margin-bottom: 22px;
+            line-height: 1.7;
+        }
+
+        .pitfall-summary strong {
+            color: var(--text-main);
+        }
+
+        .card-bottom {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-enter {
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            border: none;
+            color: #ffffff;
+            padding: 13px 26px;
+            border-radius: 24px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-enter:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.45);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-size: 0.98rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge-main">雅思听力靶向精炼平台 · IELTS Listening Mastery</span>
+        <h1>真题错题切片与精听点播台</h1>
+        <p>遵循「答案句及前后两句极致切片（30s~50s）」标准 · 结合影子跟读录音与官方原文精准对应</p>
+    </header>
+
+    <!-- Method Banner -->
+    <div class="method-banner">
+        <div class="method-header">
+            <span class="method-title">🔥 听力 4 步靶向精听法（告别无效刷题 · 打通发音与认知）</span>
+            <a href="../听力精听方法论：真题切片磨耳朵与Part双轨提分指南.md" class="btn-secondary" style="font-size: 0.8rem;">📘 查看精听方法论指南 ➔</a>
+        </div>
+        <div class="method-grid">
+            <div class="method-step-card">
+                <div class="step-num">Step 01</div>
+                <div class="step-name">先读看懂原文</div>
+                <div class="step-desc">展开中英原文，画出主谓宾与同义改写词（如 majority of = most）。先打通文本理解。</div>
+            </div>
+            <div class="method-step-card">
+                <div class="step-num">Step 02</div>
+                <div class="step-name">大声出声朗读</div>
+                <div class="step-desc">大声朗读答案句 3 遍，感受语调、弱读与连读，构建发音肌肉记忆。读不顺一定听不顺。</div>
+            </div>
+            <div class="method-step-card">
+                <div class="step-num">Step 03</div>
+                <div class="step-name">闭眼折叠盲听</div>
+                <div class="step-desc">收起原文折叠框，单曲循环 2~3 遍，仅凭耳朵验证能否在听到信号词的瞬间本能反应出答案。</div>
+            </div>
+            <div class="method-step-card">
+                <div class="step-num">Step 04</div>
+                <div class="step-name">录音跟读比对</div>
+                <div class="step-desc">点击「🎙️ 录音跟读」录制自己的发音，回放试听对比官方原声，揪出卡壳吞音点完成闭环！</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catalog Section -->
+    <h2 class="section-title">📚 剑桥雅思真题精听切片套题目录</h2>
+    <div class="catalog-grid">
+
+        <!-- Test 1 Card -->
+        <div class="test-card c7t1">
+            <div class="card-top">
+                <div class="test-badges">
+                    <span class="badge-tag badge-ready">● 已上线</span>
+                    <span class="badge-tag badge-slices">30 切片 (26考点 + 4全录音)</span>
+                    <span class="badge-tag badge-rec">🎙️ 支持影子跟读</span>
+                </div>
+                <h3 class="test-title">剑桥雅思 7 · Test 1</h3>
+                <p class="test-subtitle">多伦多交通预订 / 欧洲露营服务 / 组织管理行为学 / 纳米比亚岩画</p>
+
+                <div class="feature-chips">
+                    <div class="chip">Part 1: <strong>6 切片</strong> (36s~48s)</div>
+                    <div class="chip">Part 2: <strong>6 切片</strong> (32s~50s)</div>
+                    <div class="chip">Part 3: <strong>8 切片</strong> (32s~48s)</div>
+                    <div class="chip">Part 4: <strong>6 切片</strong> (24s~47s)</div>
+                </div>
+
+                <div class="pitfall-summary">
+                    <strong>核心防坑聚焦点：</strong><br>
+                    • <strong>盲填定位词坑</strong>：Q1 a cab, Q4 door-to-door, Q28 culture, Q37 culture<br>
+                    • <strong>同义替换失敏</strong>：majority of = most, cope with = deal with, avoid = never<br>
+                    • <strong>连环卡顿雪崩重灾区</strong>：Q33-Q35 密集考点抗卡顿训练、Q10 16位长卡号听觉疲劳
+                </div>
+            </div>
+
+            <div class="card-bottom">
+                <a href="../C7T1_错题音频切片/C7T1_错题切片点播台.html" class="btn-enter">
+                    <span>🎧 进入 Test 1 切片点播台</span> ➔
+                </a>
+                <a href="../剑桥7_Test1_听力全40题七坑与3+2复盘汇总表.md" class="btn-secondary">
+                    📊 查看 40 题复盘表
+                </a>
+            </div>
+        </div>
+
+        <!-- Test 2 Card -->
+        <div class="test-card c7t2">
+            <div class="card-top">
+                <div class="test-badges">
+                    <span class="badge-tag badge-ready">● 已上线</span>
+                    <span class="badge-tag badge-slices">31 切片 (27考点 + 4全录音)</span>
+                    <span class="badge-tag badge-rec">🎙️ 支持影子跟读</span>
+                </div>
+                <h3 class="test-title">剑桥雅思 7 · Test 2</h3>
+                <p class="test-subtitle">车辆保险登记 / 城市水陆旅游指南 / 新西兰南极中心 / 运动偏侧手性科学</p>
+
+                <div class="feature-chips">
+                    <div class="chip">Part 1: <strong>7 切片</strong> (32s~42s)</div>
+                    <div class="chip">Part 2: <strong>5 切片</strong> (28s~52s)</div>
+                    <div class="chip">Part 3: <strong>8 切片</strong> (32s~45s)</div>
+                    <div class="chip">Part 4: <strong>7 切片</strong> (30s~44s)</div>
+                </div>
+
+                <div class="pitfall-summary">
+                    <strong>核心防坑聚焦点：</strong><br>
+                    • <strong>拼写纠正与连读陷阱</strong>：Q1 Hendon, Q3 Gazelle发音误导、Q5 brother-in-law 复杂亲属连字<br>
+                    • <strong>同义改写与转折定位</strong>：Q6 occasional = sometimes, Q21 not completely true = only partially, Q26 Gondwana 化石地质证据<br>
+                    • <strong>多选题与双利手对比</strong>：Q29-30 南极条约核禁令与和平用途、Q36-37 混用手缺乏自信与曲棍球双向挥击
+                </div>
+            </div>
+
+            <div class="card-bottom">
+                <a href="../C7T2_错题音频切片/C7T2_错题切片点播台.html" class="btn-enter">
+                    <span>🎧 进入 Test 2 切片点播台</span> ➔
+                </a>
+                <a href="../剑桥7_Test2_听力全40题七坑与3+2复盘汇总表.md" class="btn-secondary">
+                    📊 查看 40 题复盘表
+                </a>
+            </div>
+        </div>
+
+        <!-- Test 3 Card -->
+        <div class="test-card c7t3">
+            <div class="card-top">
+                <div class="test-badges">
+                    <span class="badge-tag badge-ready">● 已上线</span>
+                    <span class="badge-tag badge-slices">24 切片 (20考点 + 4全录音)</span>
+                    <span class="badge-tag badge-rec">🎙️ 支持影子跟读</span>
+                </div>
+                <h3 class="test-title">剑桥雅思 7 · Test 3</h3>
+                <p class="test-subtitle">求职信息登记 / 徒步旅行介绍 / 海洋科研浮标 / 酒店心理机制</p>
+
+                <div class="feature-chips">
+                    <div class="chip">Part 1: <strong>5 切片</strong> (35s~55s)</div>
+                    <div class="chip">Part 2: <strong>5 切片</strong> (35s~55s)</div>
+                    <div class="chip">Part 3: <strong>5 切片</strong> (38s~55s)</div>
+                    <div class="chip">Part 4: <strong>5 切片</strong> (40s~54s)</div>
+                </div>
+
+                <div class="pitfall-summary">
+                    <strong>核心防坑聚焦点：</strong><br>
+                    • <strong>倒装与心算陷阱</strong>：Q11-12 徒步天数心算、Q17-18 昆明寺庙后置报天数<br>
+                    • <strong>弱读与被动态</strong>：Q23 卫星激活浮标被动态弱读、Q8-10 连读与抢跑干扰<br>
+                    • <strong>抽象概念替换</strong>：Q31-34 奢华酒店绝望与外部环境无关、Q39-40 照料享受机制
+                </div>
+            </div>
+
+            <div class="card-bottom">
+                <a href="../C7T3_错题音频切片/C7T3_错题切片点播台.html" class="btn-enter">
+                    <span>🎧 进入 Test 3 切片点播台</span> ➔
+                </a>
+                <a href="../剑桥7_Test3_听力全40题七坑与3+2复盘汇总表.md" class="btn-secondary">
+                    📊 查看 40 题复盘表
+                </a>
+            </div>
+        </div>
+
+        <!-- Methodology & Practice Card -->
+        <div class="test-card upcoming">
+            <div class="card-top">
+                <div class="test-badges">
+                    <span class="badge-tag badge-ready">📖 核心战略文件</span>
+                </div>
+                <h3 class="test-title">听力方法论与训练计划</h3>
+                <p class="test-subtitle">双轨并行提分路线：Part 1&2 基础保分 + Part 3&4 专项攻坚</p>
+
+                <div class="pitfall-summary">
+                    包含《两套题综合缺陷诊断与训练计划》与《数字卡号专项练习表》，用于靶向攻克数字、人名、日期与单复数硬伤。
+                </div>
+            </div>
+
+            <div class="card-bottom">
+                <a href="../两套题综合缺陷诊断与训练计划.md" class="btn-secondary">
+                    📑 查看综合缺陷诊断
+                </a>
+                <a href="../数字卡号练习.md" class="btn-secondary">
+                    🔢 数字卡号专项练习
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>剑桥雅思 7 听力精听切片系统 · 坚持影子跟读与错题靶向训练 · 雅思听力稳步提分 7.0+</p>
+    </footer>
+</div>
+
+</body>
+</html>
