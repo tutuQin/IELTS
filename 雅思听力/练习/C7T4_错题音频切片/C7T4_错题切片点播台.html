@@ -1,0 +1,2936 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 7 Test 4 听力错题原声切片与考点点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Player Sticky Bar */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .now-playing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        audio {
+            width: 100%;
+            height: 42px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            font-weight: bold;
+            border-color: var(--accent-blue);
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 11px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.05rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+            background: rgba(51, 65, 85, 0.8);
+        }
+
+        .tab-btn.active {
+            color: #fff;
+            background: linear-gradient(135deg, #0284c7, #6366f1);
+            border-color: transparent;
+        }
+
+
+        /* Card Actions & Shadowing Recording */
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .record-card-btn {
+            background: rgba(30, 41, 59, 0.85);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            user-select: none;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            transform: scale(1.03);
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+
+        .record-card-btn.recording {
+            background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+            color: #ffffff !important;
+            border-color: #fca5a5 !important;
+            animation: pulse-red 1.4s infinite;
+        }
+
+        .record-card-btn.has-recording {
+            border-color: rgba(52, 211, 153, 0.6);
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.12);
+        }
+
+        /* User Shadowing Panel */
+        .user-rec-panel {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.82));
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            border-radius: 12px;
+            padding: 10px 16px;
+            margin: 12px 0 6px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: #e2e8f0;
+        }
+
+        .rec-status-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            display: inline-block;
+            background: #10b981;
+            box-shadow: 0 0 8px #10b981;
+        }
+
+        .rec-status-dot.recording {
+            background: #ef4444;
+            box-shadow: 0 0 10px #ef4444;
+            animation: pulse-red 1s infinite;
+        }
+
+        .rec-timer-badge {
+            background: rgba(0, 0, 0, 0.45);
+            color: #38bdf8;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-weight: 700;
+            font-size: 0.86rem;
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .rec-btn-pill {
+            border: none;
+            padding: 6px 13px;
+            border-radius: 8px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s;
+        }
+
+        .rec-btn-pill:hover {
+            filter: brightness(1.15);
+            transform: translateY(-1px);
+        }
+
+        .btn-play-user {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #ffffff;
+        }
+
+        .btn-compare {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            color: #ffffff;
+        }
+
+        .btn-rerecord {
+            background: rgba(51, 65, 85, 0.85);
+            color: #f1f5f9;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-del {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .btn-del:hover {
+            background: rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+        }
+
+        /* Shadowing Guide Banner */
+        .shadow-guide-banner {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(99, 102, 241, 0.12));
+            border: 1px dashed rgba(56, 189, 248, 0.45);
+            border-radius: 14px;
+            padding: 12px 18px;
+            margin-bottom: 20px;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: #bae6fd;
+        }
+
+        .shadow-guide-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .shadow-guide-tag {
+            background: rgba(56, 189, 248, 0.2);
+            color: #38bdf8;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        @media (max-width: 640px) {
+            .card-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .card-actions {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .play-card-btn, .record-card-btn {
+                flex: 1;
+                justify-content: center;
+            }
+            .user-rec-panel {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .rec-panel-btns {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        /* Audio Cards */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 22px;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+
+        .card-tag {
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .tag-p1 { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+        .tag-p2 { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+        .tag-p3 { background: rgba(52, 211, 153, 0.2); color: #34d399; }
+        .tag-p4 { background: rgba(192, 132, 252, 0.2); color: #c084fc; }
+        .tag-full { background: rgba(244, 63, 94, 0.2); color: #fb7185; }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, #38bdf8, #6366f1);
+            color: #0f172a;
+            border: none;
+            padding: 9px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.96rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .play-card-btn:hover {
+            filter: brightness(1.15);
+            transform: scale(1.03);
+        }
+
+        /* Transcript & Highlight Box */
+        .card-body {
+            margin-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 14px;
+        }
+
+        .transcript-box {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 14px;
+            border-left: 4px solid var(--accent-blue);
+            color: #f1f5f9;
+        }
+
+        .analysis-box {
+            font-size: 1.02rem;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 12px 18px;
+            line-height: 1.65;
+        }
+
+        .analysis-box strong {
+            color: var(--text-main);
+        }
+
+        /* Badges */
+        .ans-highlight {
+            background: rgba(52, 211, 153, 0.25);
+            color: #34d399;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            border-bottom: 2px solid #34d399;
+        }
+
+        .trap-highlight {
+            background: rgba(248, 113, 113, 0.25);
+            color: #f87171;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+
+        .signal-highlight {
+            background: rgba(251, 191, 36, 0.25);
+            color: #fbbf24;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .badge-legend {
+            display: flex;
+            gap: 16px;
+            font-size: 0.82rem;
+            margin-bottom: 15px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Collapsible Bilingual Script (默认折叠/展开) */
+        .bilingual-details {
+            margin-top: 14px;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .bilingual-details[open] {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #7dd3fc;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            background: rgba(56, 189, 248, 0.06);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(56, 189, 248, 0.14);
+            color: #38bdf8;
+        }
+
+        .bilingual-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.82rem;
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-left: 6px;
+        }
+
+        .toggle-icon {
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            transition: transform 0.25s ease;
+            display: inline-block;
+        }
+
+        .bilingual-details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 18px 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 1.12rem;
+            line-height: 1.8;
+            max-height: 480px;
+            overflow-y: auto;
+            background: rgba(10, 16, 30, 0.5);
+        }
+
+        .bilingual-body::-webkit-scrollbar {
+            width: 6px;
+        }
+        .bilingual-body::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+
+        .script-dialog {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 12px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 3px 10px;
+            border-radius: 5px;
+            margin-right: 8px;
+            display: inline-block;
+        }
+
+        .spk-agent { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+        .spk-student { background: rgba(52, 211, 153, 0.2); color: #34d399; }
+        .spk-speaker { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+        .spk-tutor { background: rgba(192, 132, 252, 0.2); color: #c084fc; }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.12rem;
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 6px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 1.02rem;
+            line-height: 1.65;
+            padding-left: 2px;
+        }
+
+        .kw-en {
+            color: #34d399;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .kw-cn {
+            color: #6ee7b7;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-back-bar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 10px 16px; background: rgba(255, 255, 255, 0.04); border-radius: 12px; border: 1px solid var(--border-color);">
+        <a href="../切片/index.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">📂 返回切片总目录 (Index)</a>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 7 · Test 4 精听点播台</span>
+        <div style="display: flex; gap: 14px;">
+            <a href="../C7T1_错题音频切片/C7T1_错题切片点播台.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">前往 Test 1 ➔</a>
+            <a href="../C7T2_错题音频切片/C7T2_错题切片点播台.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">前往 Test 2 ➔</a>
+            <a href="../C7T3_错题音频切片/C7T3_错题切片点播台.html" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">前往 Test 3 ➔</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>🎧 剑桥雅思 7 Test 4 错题切片点播台</h1>
+        <p>22 组高危错题与考点原声切片 · 单曲循环磨耳朵 · 连读弱读与陷阱精听脱敏</p>
+    </header>
+
+    <!-- Sticky Audio Player -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="playerTitle">
+                <span>🎵 点击下方任意卡片开始播放</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" id="loopBtn" onclick="toggleLoop()">🔁 单曲循环: 关</button>
+                <button class="pill-btn" id="speedBtn" onclick="toggleSpeed()">⚡ 1.0x</button>
+            </div>
+        </div>
+        <audio id="mainAudio" controls preload="metadata"></audio>
+    </div>
+
+    <!-- Color Legend -->
+    <div class="badge-legend">
+        <div class="legend-item"><span class="signal-highlight">黄色高亮</span> 逻辑/路标信号词</div>
+        <div class="legend-item"><span class="trap-highlight">红色划线</span> 干扰项/心算陷阱</div>
+        <div class="legend-item"><span class="ans-highlight">绿色高亮</span> 真正答案核心词</div>
+    </div>
+
+    <!-- Shadowing Guide Banner -->
+    <div class="shadow-guide-banner">
+        <div class="shadow-guide-header">
+            <span>🎙️ <strong>新增「跟读录音与原声对比」功能</strong></span>
+            <span class="shadow-guide-tag">读不流畅一定听不流畅 · 影子跟读刻意训练</span>
+        </div>
+        <div>
+            1. 点击「<strong>▶ 播放切片</strong>」聆听原声，展开下方听力原文扫除连读与生词障碍；<br>
+            2. 闭眼盲听熟悉后，点击「<strong>🎙️ 录音跟读</strong>」录制自己的发音（支持反复重录）；<br>
+            3. 录完点击「<strong>▶ 试听跟读</strong>」找出卡壳吞音处，再点击「<strong>👂 对比原声</strong>」比对语调与节奏。（前端内存暂存，刷新页面即可重置）
+        </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (26)</button>
+        <button class="tab-btn" onclick="filterCategory('part1', this)">Part 1 寄宿登记 (5)</button>
+        <button class="tab-btn" onclick="filterCategory('part2', this)">Part 2 公园导览 (6)</button>
+        <button class="tab-btn" onclick="filterCategory('part3', this)">Part 3 报告筹备 (5)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)">Part 4 味精科学 (6)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">4大 Section 完整音频 (4)</button>
+    </div>
+
+    <!-- Slice List -->
+    <div class="slice-list">
+
+        <!-- CARD_01: 姓氏拼写干扰 & 护照号纯字母数字直击 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q1-Q2</span>
+                    <h3 class="card-title">姓氏拼写干扰 & 护照号纯字母数字直击</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('01_Q1_Q2_姓氏拼写干扰与护照号纯字母数字.mp3', 'Q1-Q2: 姓氏拼写干扰与护照号纯字母数字')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_01" onclick="handleRecBtnClick('card_01')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_01" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_01"></span>
+                    <span class="rec-status-text" id="rec-status-card_01">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_01">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_01" onclick="playUserRecording('card_01')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_01')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_01')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_01')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Could you spell your family name for me? It's ... <span class='trap-highlight'>Yuichini, that's Y-U-I-C-H-I-N-I</span>. And your first name? It's <span class='ans-highlight'>Keiko</span>. <span class='ans-highlight'>K-E-I-K-O</span>... your passport number is <span class='ans-highlight'>JO 6337</span>... And you're how old? <span class='trap-highlight'>twenty-eight</span>"
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q1 姓名顺序与拼写定位</strong>：卷面问的是 <em>First name</em>，考官先问 <em>family name</em>（姓氏 Yuichini，长串字母拼读），考生极易先入为主把姓氏填在第一栏；随后考官追问 <em>And your first name?</em>，女生回答 <code>Keiko</code> 并逐字母拼读 <code>K-E-I-K-O</code>。首字母必须大写。<br>2. <strong>Q2 字母+数字混合卡号听觉盲区</strong>：<em>passport number</em> 考点 <code>JO 6337</code>（官方标准答案亦兼容纯数字形近误读 <code>106337</code>）。考生在听到字母 <code>J-O</code> 时容易卡顿愣神，漏掉后面连读跟上的数字 <code>6337</code>；听到字母数字切忌在脑海中心算，要形成指尖肌肉直接键入反应。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Okay, so let me get some details. What's your name?</div>
+                            <div class="cn-line">好的，让我登记一些个人信息。你叫什么名字？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">My name is Keiko Yuichini.</div>
+                            <div class="cn-line">我叫油井庆子。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Could you spell your family name for me?</div>
+                            <div class="cn-line">能帮我拼一下你的姓氏吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">It's ... Yuichini, that's Y-U-I-C-H-I-N-I.</div>
+                            <div class="cn-line">是……Yuichini，拼作 Y-U-I-C-H-I-N-I。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">And your first name?</div>
+                            <div class="cn-line">那你的名字呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">It's <span class='kw-en'>Keiko</span>. <span class='kw-en'>K-E-I-K-O</span>.</div>
+                            <div class="cn-line">是<span class='kw-cn'>庆子</span>，<span class='kw-cn'>K-E-I-K-O</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">That's Keiko Yuichini ... okay ... and you're female. And your nationality?</div>
+                            <div class="cn-line">好的，油井庆子……你是女性。你的国籍是？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">I'm Japanese.</div>
+                            <div class="cn-line">我是日本人。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Right and could I see your passport, please?</div>
+                            <div class="cn-line">好的，请出示一下你的护照好吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">Here it is ...</div>
+                            <div class="cn-line">给您……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Okay ... your passport number is <span class='kw-en'>JO 6337</span> ... And you're how old?</div>
+                            <div class="cn-line">好的……你的护照号码是 <span class='kw-cn'>JO 6337</span>……你今年多大？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">I'm twenty-eight years old.</div>
+                            <div class="cn-line">我28岁了。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_02: 居住时长心算抗干扰 & 高阶英语学习专业定位 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q3-Q4</span>
+                    <h3 class="card-title">居住时长心算抗干扰 & 高阶英语学习专业定位</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('02_Q3_Q4_居住时长与高阶英语学习定位.mp3', 'Q3-Q4: 居住时长与高阶英语学习定位')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_02" onclick="handleRecBtnClick('card_02')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_02" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_02"></span>
+                    <span class="rec-status-text" id="rec-status-card_02">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_02">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_02" onclick="playUserRecording('card_02')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_02')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_02')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_02')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "how long are you planning on staying with homestay? About <span class='ans-highlight'>4 months</span>... longer if I like it... I've enrolled for <span class='trap-highlight'>twenty weeks</span> in the... um... <span class='ans-highlight'>Advanced English Studies</span> because I need help with my writing..."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q3 住宿总时长</strong>：卷面问 <em>Length of homestay</em>。女生回答 <code>About 4 months</code>（填 <code>4 months</code> 或 <code>four months</code>）。后句 <em>longer if I like it</em> 为条件假设，核心信息词在 <em>four months</em>。<br>2. <strong>Q4 课程名称与周数周期干扰</strong>：卷面问 <em>Course of study</em>。女生先报出 <code>twenty weeks</code>（二十周），听惯数字的考生易盲目手写 twenty weeks；真正课程名紧随其后——<code>Advanced English Studies</code>（核心词 <code>English</code> 必填，括号内 Advanced / Studies 选填，首字母大写）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Now, you live at one of the colleges ... which one?</div>
+                            <div class="cn-line">好的，你现在住在哪个学院？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">Willow College, umm ... Room 21 C.</div>
+                            <div class="cn-line">柳树学院，嗯……21C号房间。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Right, 21C Willow College, and how long are you planning on staying with homestay?</div>
+                            <div class="cn-line">好的，柳树学院21C室。你打算在寄宿家庭住多久？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">About <span class='kw-en'>four months</span> ... longer if I like it ...</div>
+                            <div class="cn-line">大约<span class='kw-cn'>4个月</span>……如果喜欢的话会住更久……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">And what course are you enrolled in?</div>
+                            <div class="cn-line">那你报读的是什么课程？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">Well, I've enrolled for twenty weeks in the ... um ... <span class='kw-en'>Advanced English Studies</span> because I need help with my writing ... and I'm nearly at the end of my first five-week course.</div>
+                            <div class="cn-line">嗯，我报了20周的……<span class='kw-cn'>高级英语研修班</span>，因为我的写作需要提高……我现在第一期的5周课程快要结束了。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_03: 儿童偏好单复数严打 & 兽医背景与宠物复数 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q5-Q6</span>
+                    <h3 class="card-title">儿童偏好单复数严打 & 兽医背景与宠物复数</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('03_Q5_Q6_儿童喜好与兽医宠物背景.mp3', 'Q5-Q6: 儿童喜好与兽医宠物背景')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_03" onclick="handleRecBtnClick('card_03')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_03" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_03"></span>
+                    <span class="rec-status-text" id="rec-status-card_03">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_03">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_03" onclick="playUserRecording('card_03')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_03')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_03')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_03')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Do you have any preference for a family with children or without children? I prefer ... I mean I like <span class='ans-highlight'>young children</span>, <span class='signal-highlight'>but</span> I'd like to be with <span class='trap-highlight'>older people</span>... Okay, and what about <span class='ans-highlight'>pets</span>? I am a veterinarian so that's fine..."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q5 单复数判分红线</strong>：卷面表格问家庭偏好。女生说：<em>I like young children, but I'd like to be with older people...</em>，考点词为 <code>(young) children</code>。<strong>绝不可填单数 child</strong>，雅思官方严格判错！<br>2. <strong>Q6 职业改写与复数名词</strong>：考官询问 <em>what about pets?</em>，考点词为 <code>pets</code>（必须带复数 s）。女生自述 <em>veterinarian</em>（兽医），印证对宠物完全不介意（<em>the more the better</em>）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Okay ... Do you have any preference for a family with children or without children?</div>
+                            <div class="cn-line">好的……你对有小孩或没小孩的家庭有什么偏好吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">I prefer ... I mean I like <span class='kw-en'>young children</span>, but I'd like to be with older people ... you know ... adults ... someone around my age.</div>
+                            <div class="cn-line">我更想……我的意思是我喜欢<span class='kw-cn'>小孩子</span>，但我更想和年纪稍长的人住一起……也就是成年人……和我年龄相仿的人。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Okay, and what about <span class='kw-en'>pets</span>?</div>
+                            <div class="cn-line">好的，那对于<span class='kw-cn'>宠物</span>呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">I am a veterinarian so that's fine ... the more the better.</div>
+                            <div class="cn-line">我是个兽医，所以完全没问题……越多越好。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_04: 海鲜饮食连写单词 & 网球运动双写字母拼写死穴 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q7-Q8</span>
+                    <h3 class="card-title">海鲜饮食连写单词 & 网球运动双写字母拼写死穴</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('04_Q7_Q8_海鲜偏好与网球双写错拼.mp3', 'Q7-Q8: 海鲜偏好与网球双写错拼')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_04" onclick="handleRecBtnClick('card_04')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_04" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_04"></span>
+                    <span class="rec-status-text" id="rec-status-card_04">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_04">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_04" onclick="playUserRecording('card_04')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_04')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_04')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_04')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Are you a vegetarian...? No, I am not a vegetarian ... but I don't eat a lot of <span class='trap-highlight'>meat</span> ... I really like <span class='ans-highlight'>seafood</span>... I joined the <span class='trap-highlight'>handball</span> team, but I didn't like that ... Now I play <span class='ans-highlight'>tennis</span> on the weekend with my friends."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q7 食物要求与合写规则</strong>：考官问饮食习惯，女生否定了素食（<em>not a vegetarian</em>），又排除大量吃肉（<em>don't eat a lot of meat</em>），肯定答案为 <code>seafood</code>。必须合写为一个词，不能拆写为 sea food。<br>2. <strong>Q8 运动项目双写拼写死穴</strong>：女生先说过去加入手球队（<em>handball</em>，强干扰排除），现在进行的运动是：<em>Now I play tennis on the weekend</em>。<code>tennis</code> 拼写极易写成单写 n (tenis) 或多写 s (teniss)，必须牢记 <strong>t-e-n-n-i-s</strong>（双写 n，单写 s）！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">All right, now what about you? Are you a vegetarian or do you have any special food requirements?</div>
+                            <div class="cn-line">好的，那你自己呢？你是素食主义者吗，还是有什么特殊的饮食习惯？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">No, I am not a vegetarian ... but I don't eat a lot of meat ... I really like <span class='kw-en'>seafood</span>.</div>
+                            <div class="cn-line">不，我不是素食者……但我肉吃得不多……我特别喜欢<span class='kw-cn'>海鲜</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">And what are your hobbies?</div>
+                            <div class="cn-line">那你的兴趣爱好是什么？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">I like reading and going to the movies.</div>
+                            <div class="cn-line">我喜欢阅读和看电影。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Do you play any sports?</div>
+                            <div class="cn-line">你做体育运动吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">Yes, I joined the handball team, but I didn't like that ... so I stopped playing. Now I play <span class='kw-en'>tennis</span> on the weekend with my friends.</div>
+                            <div class="cn-line">做，我曾加入过手球队，但我不怎么喜欢……后来就不玩了。现在我周末经常和朋友一起打<span class='kw-cn'>网球</span>。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_05: 交通工具晚点排除选火车 & 时间短语弱读连读 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q9-Q10</span>
+                    <h3 class="card-title">交通工具晚点排除选火车 & 时间短语弱读连读</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('05_Q9_Q10_火车提速与今天下午通知.mp3', 'Q9-Q10: 火车提速与今天下午通知')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_05" onclick="handleRecBtnClick('card_05')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_05" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_05"></span>
+                    <span class="rec-status-text" id="rec-status-card_05">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_05">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_05" onclick="playUserRecording('card_05')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_05')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_05')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_05')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "I've been to the city a few times on the <span class='trap-highlight'>bus</span>, but they are always late. What about the <span class='ans-highlight'>trains</span>? I like catching the <span class='ans-highlight'>train</span> ... they are much faster ... I'll check my records and I'll give you details <span class='ans-highlight'>this afternoon</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q9 交通工具对比排除</strong>：公交车总晚点（<em>bus ... always late</em>，否定排除）；火车快得多（<em>trains ... much faster</em>），答案为 <code>trains</code> 或 <code>(the) train</code>。<br>2. <strong>Q10 时间状语连读弱读</strong>：官员答复：<em>give you details this afternoon</em>。考点词为 <code>this afternoon</code>（或 <code>that afternoon</code>）。连读 /ðɪs ɑːftəˈnuːn/ 节奏极快，必须听准时间状语组合。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">All right, let's see, name, age, now the location. Are you familiar with the public transport system?</div>
+                            <div class="cn-line">好的，姓名、年龄都填了，现在来看看位置。你对公共交通系统熟悉吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">No ... I'm not really because I have been living on campus ... I've been to the city a few times on the bus, but they are always late.</div>
+                            <div class="cn-line">不……不太熟，因为我一直住在校园里……我坐过几次公交车进城，但公交总是晚点。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">What about the trains?</div>
+                            <div class="cn-line">那火车呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">I like catching the <span class='kw-en'>train</span> ... they are much faster ...</div>
+                            <div class="cn-line">我喜欢坐<span class='kw-cn'>火车</span>……火车快得多……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Now, let me go check on the computer and see who I've got ... Listen, leave it with me ... I'll check my records and I'll give you details <span class='kw-en'>this afternoon</span>.</div>
+                            <div class="cn-line">现在让我查一下电脑，看看有哪些可用房东……这样吧，包在我身上……我查查记录，<span class='kw-cn'>今天下午</span>就给你答复细节。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">Thank you for helping me ...</div>
+                            <div class="cn-line">太感谢您的帮助了……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">It's a pleasure. Bye.</div>
+                            <div class="cn-line">不客气，再见。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">Bye.</div>
+                            <div class="cn-line">再见。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_06: 导游着装鞋子叮嘱 & 公园前身厂房仓库同义替换 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q11-Q12</span>
+                    <h3 class="card-title">导游着装鞋子叮嘱 & 公园前身厂房仓库同义替换</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('06_Q11_Q12_导游姓名鞋子与废弃厂房仓库.mp3', 'Q11-Q12: 导游姓名鞋子与废弃厂房仓库')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_06" onclick="handleRecBtnClick('card_06')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_06" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_06"></span>
+                    <span class="rec-status-text" id="rec-status-card_06">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_06">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_06" onclick="playUserRecording('card_06')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_06')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_06')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_06')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "I'm Sally, your guide for this tour of the Bicentennial Park ... I hope that you're all wearing your <span class='ans-highlight'>most comfortable shoes</span> and that you can keep up the pace... There used to be a lot of <span class='trap-highlight'>factories</span> in this area until the 1960s... demolition of lots of derelict buildings... was originally <span class='ans-highlight'>warehouses and storehouses</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q11 导游行前提示单选题</strong>：Sally 叮嘱：<em>hope that you're all wearing your most comfortable shoes</em>，改写对应选项 <strong>C</strong> (wear suitable footwear)。<br>2. <strong>Q12 公园选址旧址历史单选题</strong>：原文先提及 <em>used to be a lot of factories</em>（工厂），但紧接补充关键句：<em>demolition of lots of derelict buildings on the site, so most of the exciting park space all around you was originally warehouses and storehouses</em>。改写对应选项 <strong>B</strong> (warehouses)。考生若一听到 factories 就冲动抢选 A 会直接掉入历史演变干扰坑！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">Welcome to all of you ... can everybody see and hear me? ... Good ... I'm Sally, your guide for this tour of the Bicentennial Park ...</div>
+                            <div class="cn-line">欢迎大家……所有人都能看清并听到我说话吗？……很好……我是萨莉，本次两百年纪念公园之旅的导游……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">I hope that you're all wearing your <span class='kw-en'>most comfortable shoes</span> and that you can keep up the pace. So let's get under way on our tour around this wonderful park.</div>
+                            <div class="cn-line">我希望大家都穿了<span class='kw-cn'>最舒服的鞋子</span>，而且能够跟得上步调。那我们现在就启程游览这座美丽的公园吧。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">I'll start today with some general background information. There used to be a lot of factories in this area until the 1960s.</div>
+                            <div class="cn-line">今天我先从一些基础背景信息讲起。在20世纪60年代之前，这个区域曾经有很多工厂。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">Creating the park required the demolition of lots of derelict buildings on the site, so most of the exciting park space all around you was originally <span class='kw-en'>warehouses</span> and storehouses.</div>
+                            <div class="cn-line">修建这座公园需要拆除场地上的大量废弃建筑，因此你们身边这些令人兴奋的公园绿地，原本其实都是<span class='kw-cn'>仓库</span>和货栈。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_07: 高层住宅抵制选户外绿地 & 观光塔高度精准辨析 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q13-Q14</span>
+                    <h3 class="card-title">高层住宅抵制选户外绿地 & 观光塔高度精准辨析</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('07_Q13_Q14_社区反对高层住宅与观光塔高度.mp3', 'Q13-Q14: 社区反对高层住宅与观光塔高度')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_07" onclick="handleRecBtnClick('card_07')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_07" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_07"></span>
+                    <span class="rec-status-text" id="rec-status-card_07">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_07">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_07" onclick="playUserRecording('card_07')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_07')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_07')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_07')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "developer proposed a <span class='trap-highlight'>high-rise housing development</span>, but the local community wasn't happy... wanted to use the site for <span class='ans-highlight'>recreation</span>. Residents wanted <span class='ans-highlight'>open space for outdoor activities</span>, rather than <span class='trap-highlight'>housing</span> or even an <span class='trap-highlight'>indoor sports complex</span>... The Tower... stands <span class='ans-highlight'>twelve metres</span> high..."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q13 居民真实诉求单选题</strong>：开发商提案高层住宅（<em>high-rise housing</em>，排除），居民强烈要求清理后用于户外娱乐：<em>Residents wanted open space for outdoor activities, rather than housing or even an indoor sports complex</em>。改写对应选项 <strong>A</strong> (ground for leisure activities)。<br>2. <strong>Q14 观光塔高度单选题</strong>：中心地标 The Tower 介绍：<em>It stands twelve metres high</em>。对应选项 <strong>B</strong> (12 metres)。注意辨析 twelve (12) 与 twenty (20) 的读音差异。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">The idea of building a public park here was first discussed when a property developer proposed a high-rise housing development, but the local community wasn't happy.</div>
+                            <div class="cn-line">修建公园的想法最早是由一名房地产开发商提出建造高层住宅时引发讨论的，但当地社区对此并不满意。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">If the land was to be cleaned up, they wanted to use the site for recreation. Residents wanted <span class='kw-en'>open space for outdoor activities</span>, rather than housing or even an indoor sports complex.</div>
+                            <div class="cn-line">如果这片土地要清理改造，居民希望将其用作休闲娱乐。大家想要的是用于<span class='kw-cn'>户外活动的开阔绿地</span>，而不是住房甚至室内体育中心。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">Now to the Bicentennial Park itself. It has two areas, a nature reserve and a formal park with man-made features and gardens.</div>
+                            <div class="cn-line">现在让我们来看看公园本身。它包含两个区域：自然保护区和包含人工景观花园的正规公园。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">The tall blue-and-white building in front of us is called The Tower and is the centre point for the formal gardens. It stands <span class='kw-en'>twelve metres</span> high, so follow me up the stairs to where we can take advantage of the fantastic views.</div>
+                            <div class="cn-line">我们面前这座蓝白相间的高大建筑叫做“塔楼”，是规则花园的中心枢纽。它高<span class='kw-cn'>12米</span>，请大家随我上楼梯，在那里我们可以尽情饱览绝美全景。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_08: 奥运场馆专线火车站 & 容量受限停车场填空 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q15</span>
+                    <h3 class="card-title">奥运场馆专线火车站 & 容量受限停车场填空</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('08_Q15_奥运站火车线路与停车位有限.mp3', 'Q15: 奥运站火车线路与停车位有限')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_08" onclick="handleRecBtnClick('card_08')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_08" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_08"></span>
+                    <span class="rec-status-text" id="rec-status-card_08">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_08">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_08" onclick="playUserRecording('card_08')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_08')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_08')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_08')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Out to the east, the large buildings... are on the <span class='signal-highlight'>Olympic site</span>... you can see the <span class='signal-highlight'>train lines</span>. The Olympic site has its own station to encourage the use of public transport. There is also a <span class='ans-highlight'>car park</span>, <span class='signal-highlight'>but</span> it only holds a <span class='ans-highlight'>limited number of cars</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br><strong>Q15 公园设施填空题</strong>：Sally 在塔顶东望介绍奥运区设施：体育场、游泳馆、铁路线。路标提示转折词：<em>There is also a car park, but it only holds a limited number of cars</em>。题干问容量受限的设施，答案为 <code>car park</code>（停车场）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">Well, here we are at the top of The Tower, and we're going to look at the view from each direction.</div>
+                            <div class="cn-line">好，现在我们登上塔顶了，我们来环顾各个方向的景色。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">Out to the east, the large buildings about a kilometre away are on the Olympic site. There's an indoor arena for gymnastics, a stadium for track and field and a swimming pool for races and synchronised swimming and also diving.</div>
+                            <div class="cn-line">朝东望去，大约一公里外的大型建筑群就是奥运场馆区。那里有一座室内体操馆、一个田径体育场，以及用于竞速赛和花样游泳、跳水的游泳馆。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">If you look carefully down there, you can see the train lines. The Olympic site has its own station to encourage the use of public transport. There is also a <span class='kw-en'>car park</span>, but it only holds a limited number of cars.</div>
+                            <div class="cn-line">如果你仔细往下看，能看到铁路线。奥运园区有自己的专属车站，以鼓励使用公共交通。此外还有一个<span class='kw-cn'>停车场</span>，但只能容纳有限数量的车辆。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_09: 西向玫瑰花园闻花香 & 树影湖畔咖啡厅视觉穿透 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q16-Q17</span>
+                    <h3 class="card-title">西向玫瑰花园闻花香 & 树影湖畔咖啡厅视觉穿透</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('09_Q16_Q17_玫瑰园闻花香与穿树看湖畔咖啡厅.mp3', 'Q16-Q17: 玫瑰园闻花香与穿树看湖畔咖啡厅')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_09" onclick="handleRecBtnClick('card_09')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_09" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_09"></span>
+                    <span class="rec-status-text" id="rec-status-card_09">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_09">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_09" onclick="playUserRecording('card_09')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_09')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_09')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_09')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "around to the west, you can relax and sit on a bench to smell the flowers in the <span class='ans-highlight'>rose garden</span>... finally up to the north... you can hire rowing boats at the boat shed... but if you look through the trees, you can see the <span class='ans-highlight'>cafe</span>, which has lovely views across the water."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q16 方位词与具象景观填空</strong>：<em>around to the west, you can relax and sit on a bench to smell the flowers in the rose garden</em>。考点词为 <code>rose garden</code>。<br>2. <strong>Q17 遮挡排除与餐饮设施填空</strong>：向北望，先提到租船棚（<em>boat shed, which you can't see from here</em>，看不见排除）；紧接视觉引导：<em>if you look through the trees, you can see the cafe</em>。考点词为 <code>cafe</code>（或 <code>café</code>）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">The formal park has some specially-created water features. If you look out here to the south, you can see a circular ornamental pond.</div>
+                            <div class="cn-line">规则园区有一些专门设计的水景。如果朝南看，你能看到一个圆形的人造观赏池。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">And around to the west, you can relax and sit on a bench to smell the flowers in the <span class='kw-en'>rose garden</span>, and finally up to the north, if you look in front of you now, there's a lake with a small island in the centre, you can hire rowing boats at the boat shed, which you can't see from here, - but if you look through the trees, you can see the <span class='kw-en'>cafe</span>, which has lovely views across the water. OK, let's climb down now.</div>
+                            <div class="cn-line">转向西边，你可以坐在长椅上放松，闻一闻<span class='kw-cn'>玫瑰园</span>里的花香；最后朝北看，正前方是一个湖，中心有一个小岛，你可以在船坞租划艇——从这里看不见船坞——但如果穿过树林看去，能看到一家<span class='kw-cn'>咖啡厅</span>，那里坐拥开阔的水岸风光。好，我们现在下楼去。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_10: 红树林木栈道改建 & 反常识俱乐部骑车热 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q18</span>
+                    <h3 class="card-title">红树林木栈道改建 & 反常识俱乐部骑车热</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('10_Q18_红树林木栈道与俱乐部骑行热.mp3', 'Q18: 红树林木栈道与俱乐部骑行热')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_10" onclick="handleRecBtnClick('card_10')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_10" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_10"></span>
+                    <span class="rec-status-text" id="rec-status-card_10">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_10">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_10" onclick="playUserRecording('card_10')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_10')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_10')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_10')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "The Mangroves have been made more accessible to visitors by the boardwalk... You'd think that people would come here to look at the <span class='trap-highlight'>unusual plant life</span> of the area, <span class='signal-highlight'>but in fact</span> it's more often used for <span class='ans-highlight'>cycling</span> and is very popular with the local clubs."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br><strong>Q18 预期违背与反转信号词填空</strong>：Sally 介绍红树林木栈道：<em>You'd think that people would come here to look at the unusual plant life</em>（主观预期假设，排除植物）；信号词 <em>but in fact it's more often used for cycling and is very popular with the local clubs</em>。主要活动是骑行 <code>cycling</code>（动名词拼写结尾 ing）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">We will go now and have a look at the nature reserve section of the park, which has opened up natural wetland to the public.</div>
+                            <div class="cn-line">我们现在去参观公园的自然保护区，这里将天然湿地向公众开放。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">The Mangroves have been made more accessible to visitors by the boardwalk built during the park's upgrade. You'd think that people would come here to look at the unusual plant life of the area, but in fact it's more often used for <span class='kw-en'>cycling</span> and is very popular with the local clubs.</div>
+                            <div class="cn-line">公园升级期间修建了木栈道，使游客更容易走进红树林湿地。你可能会以为人们来这里是为了观察当地独特的植物物种，但事实上这里更常用于<span class='kw-cn'>自行车骑行</span>，在本地骑行俱乐部中大受欢迎。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_11: 青蛙池小学课外生物课 & 水鸟庇护区观鸟亭黑天鹅 -->
+        <div class="slice-card" data-category="part2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p2">Part 2 · Q19-Q20</span>
+                    <h3 class="card-title">青蛙池小学课外生物课 & 水鸟庇护区观鸟亭黑天鹅</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('11_Q19_Q20_青蛙池小学课外生物课与观鸟亭黑天鹅.mp3', 'Q19-Q20: 青蛙池小学课外生物课与观鸟亭黑天鹅')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_11" onclick="handleRecBtnClick('card_11')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_11" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_11"></span>
+                    <span class="rec-status-text" id="rec-status-card_11">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_11">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_11" onclick="playUserRecording('card_11')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_11')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_11')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_11')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "over there you can see the <span class='signal-highlight'>Frog Pond</span>... outdoor classroom... now most often used by primary schools for <span class='ans-highlight'>biology lessons</span>... <span class='signal-highlight'>Waterbird Refuge</span>... that's why the park's <span class='ans-highlight'>viewing shelter</span> is a favourite spot for bird watchers... expect to see <span class='trap-highlight'>black swans</span>..."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q19 户外教室用途填空</strong>：紧靠青蛙池的户外课堂：<em>used by primary schools for biology lessons</em>。考点词为 <code>biology lesson</code>（或 <code>biology lessons</code>）。注意 biology 重音在第二音节 /baɪˈɒlədʒi/。<br>2. <strong>Q20 水鸟保护区设施填空</strong>：水鸟庇护区（Waterbird Refuge）常有观鸟爱好者拿着望远镜找黑天鹅，他们所在的避风建筑是：<em>the park's viewing shelter is a favourite spot for bird watchers</em>。考点词为 <code>viewing shelter</code>（观景遮蔽亭）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">This is the far end of the park and over there you can see the Frog Pond, a natural feature here long before the park was designed.</div>
+                            <div class="cn-line">这是公园的最远端，在那边你们可以看到青蛙池，这是早在公园设计前就存在的天然地貌。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">Just next to it we have our outdoor classroom, a favourite spot for school parties. The area is now most often used by primary schools for <span class='kw-en'>biology lessons</span>.</div>
+                            <div class="cn-line">紧挨着它的是我们的户外课堂，是学校研学团的最爱。这个区域现在最常被各小学用于上<span class='kw-cn'>生物课</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">And finally let's pass by the Waterbird Refuge. This area is in a sheltered part of the estuary, that's why the park's <span class='kw-en'>viewing shelter</span> is a favourite spot for bird watchers who can use it to spy through binoculars.</div>
+                            <div class="cn-line">最后让我们路过水鸟保护区。这个区域位于河口的背风庇护处，这就是为什么公园的<span class='kw-cn'>观鸟亭</span>成为了鸟类观察爱好者的心头好，他们可以用双筒望远镜在这暗中观察。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">You can watch a variety of water birds, but most visitors expect to see black swans when they come to the shelter. You might spot one yourself right now! Well, here we are back at our starting point, the Visitor Centre.</div>
+                            <div class="cn-line">你能观赏到各种各样的水鸟，但大多数游客来到观赏亭时都希望能看到黑天鹅。你现在可能就能亲眼发现一只！好，我们现在回到了起点——游客中心。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_12: 答辩时长心算抗干扰 & 首次展示免考核被动态 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q21-Q22</span>
+                    <h3 class="card-title">答辩时长心算抗干扰 & 首次展示免考核被动态</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('12_Q21_Q22_报告答辩时长与首次展示免考核.mp3', 'Q21-Q22: 报告答辩时长与首次展示免考核')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_12" onclick="handleRecBtnClick('card_12')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_12" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_12"></span>
+                    <span class="rec-status-text" id="rec-status-card_12">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_12">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_12" onclick="playUserRecording('card_12')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_12')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_12')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_12')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "how long is the presentation? Dr White said <span class='trap-highlight'>three per hour</span>. So about <span class='trap-highlight'>twenty minutes</span>? Well ... it'll be <span class='trap-highlight'>fifteen minutes</span> per presentation. And <span class='ans-highlight'>five minutes</span> for questions. And is this one going to be <span class='ans-highlight'>assessed</span>? No .. . not this time round..."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q21 提问时长心算陷阱填空</strong>：对话中出现 3 per hour、20 minutes、15 minutes，最后明确提问时间：<em>And five minutes for questions</em>。填数字 <code>5</code>。<br>2. <strong>Q22 被动语态考核形式填空</strong>：Julie 问本次报告是否计分：<em>And is this one going to be assessed?</em> Trevor 澄清这次不考核。填被动分词原词 <code>assessed</code>（注意双写 s，不可写成原型 assess）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Remind me, Trevor ... how long is the presentation?</div>
+                            <div class="cn-line">提醒我一下，特雷弗……演讲时长是多久来着？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Dr White said three per hour.</div>
+                            <div class="cn-line">怀特博士说每小时讲3组。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">So about twenty minutes?</div>
+                            <div class="cn-line">所以大约是20分钟？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Well ... it'll be fifteen minutes per presentation.</div>
+                            <div class="cn-line">嗯……每场演讲是15分钟。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">And <span class='kw-en'>five minutes</span> for questions.</div>
+                            <div class="cn-line">还有<span class='kw-cn'>5分钟</span>用于提问。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">And is this one going to be <span class='kw-en'>assessed</span>?</div>
+                            <div class="cn-line">那这次是要计入评分<span class='kw-cn'>考核</span>的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">No ... not this time round ... because it's the first one ... you know.</div>
+                            <div class="cn-line">不……这次不评分……因为这是第一次，你懂的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Good news.</div>
+                            <div class="cn-line">太好了，好消息。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_13: 地理位置一致纳入 & 经济细节争议暂缓搁置 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q23-Q24</span>
+                    <h3 class="card-title">地理位置一致纳入 & 经济细节争议暂缓搁置</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('13_Q23_Q24_地理位置必要性与经济细节争议.mp3', 'Q23-Q24: 地理位置必要性与经济细节争议')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_13" onclick="handleRecBtnClick('card_13')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_13" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_13"></span>
+                    <span class="rec-status-text" id="rec-status-card_13">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_13">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_13" onclick="playUserRecording('card_13')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_13')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_13')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_13')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Do you think we ought to give some <span class='trap-highlight'>historical background</span>? Oh no .. . definitely not ... we won't have time! OK ... but I think we ought to say something about the <span class='ans-highlight'>geographical location</span>... <span class='ans-highlight'>cos not a lot of people know where the islands are</span>... Shouldn't we say something about the <span class='signal-highlight'>economy</span>...? ... Dr White said we shouldn't go into that sort of detail. But it's pretty important... because it does <span class='ans-highlight'>influence the education system</span>... Look .. . <span class='ans-highlight'>let's think about that one later</span>"
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q23 确定包含内容选择题</strong>：Trevor 提议讲地理位置：<em>say something about the geographical location ... cos not a lot of people know where the islands are</em>，Julie 同意。对应选项 <strong>A</strong> (include)。<br>2. <strong>Q24 经济话题决定选择题</strong>：Trevor 认为经济影响教育，Julie 提议：<em>let's think about that one later shall we? Let's see how we're doing for time</em>，即稍后再议。对应选项 <strong>B</strong> (decide later whether to include it)。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Well, Trevor, what are we going to include?</div>
+                            <div class="cn-line">好吧特雷弗，那我们内容要包含哪些呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Well ... Do you think we ought to give some historical background?</div>
+                            <div class="cn-line">嗯……你觉得我们应该讲点历史背景吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Oh no ... definitely not ... we won't have time!</div>
+                            <div class="cn-line">哦别，绝对不行……我们没时间的！</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">OK ... but I think we ought to say something about the <span class='kw-en'>geographical location</span> ... cos not a lot of people know where the islands are ...</div>
+                            <div class="cn-line">好吧……但我觉得我们应该讲讲<span class='kw-cn'>地理位置</span>……因为很多人都不知道这些岛屿具体在哪里……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Yes ... OK ... I'll take notes, shall I?</div>
+                            <div class="cn-line">对……好的……我来做记录好吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Yeah, that'll be a help ...</div>
+                            <div class="cn-line">行，那太有帮助了……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">So ... geographical location ...</div>
+                            <div class="cn-line">那么……地理位置……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Then we ought to give an overview of the whole education system.</div>
+                            <div class="cn-line">然后我们应该对整个教育体系做一个总览概括。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Shouldn't we say something about the economy ... you know agricultural produce ... minerals and so forth?</div>
+                            <div class="cn-line">我们难道不该讲讲经济吗……比如农产品……矿产等等？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Well ... Dr White said we shouldn't go into that sort of detail.</div>
+                            <div class="cn-line">这个嘛……怀特博士说我们不应该深入讲那种细节。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">But it's pretty important when you think about it ... you know because it does influence the education system ...</div>
+                            <div class="cn-line">但你仔细想想这挺重要的……因为经济确实会影响教育体系啊……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Look ... <span class='kw-en'>let's think about that one later</span> shall we? Let's see how we're doing for time ...</div>
+                            <div class="cn-line">听着……这部分我们<span class='kw-cn'>晚点再考虑</span>好吗？看我们准备的时间够不够……</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_14: 教育系统总览纳选 & 语言政策错位果断排除 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q25-Q26</span>
+                    <h3 class="card-title">教育系统总览纳选 & 语言政策错位果断排除</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('14_Q25_Q26_教育系统总览与语言政策排除.mp3', 'Q25-Q26: 教育系统总览与语言政策排除')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_14" onclick="handleRecBtnClick('card_14')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_14" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_14"></span>
+                    <span class="rec-status-text" id="rec-status-card_14">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_14">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_14" onclick="playUserRecording('card_14')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_14')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_14')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_14')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "OK ... so .. . <span class='ans-highlight'>general overview of education</span>. Of course ... and then the <span class='trap-highlight'>role of English language</span>... <span class='ans-highlight'>Nope ... that goes in the Language Policy Seminar</span> .. . don 't you remember? Are you sure? Positive."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q25 教育总览选项判定</strong>：Julie 总结 <em>general overview of education</em>，Trevor 秒回 <em>Of course</em>，确定包含，对应选项 <strong>A</strong> (include)。<br>2. <strong>Q26 语言角色排除判定</strong>：Trevor 提议 <em>role of English language</em>，Julie 立即纠偏：<em>Nope ... that goes in the Language Policy Seminar</em>，指明这是另一门研讨课内容，绝不包含，对应选项 <strong>C</strong> (not include)。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">OK ... so ... <span class='kw-en'>general overview of education</span>.</div>
+                            <div class="cn-line">好的……那么……<span class='kw-cn'>教育系统总览</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Of course ... and then the role of English language ...</div>
+                            <div class="cn-line">当然……接下来是英语的作用……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Nope ... <span class='kw-en'>that goes in the Language Policy Seminar</span> ... don't you remember?</div>
+                            <div class="cn-line">不……<span class='kw-cn'>那个是在语言政策研讨课上讲的</span>……你不记得了吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Are you sure?</div>
+                            <div class="cn-line">你确定吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Positive.</div>
+                            <div class="cn-line">十分确定。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_15: 高射投影仪多媒体室借调 & 西非地图资料室调阅 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q27-Q28</span>
+                    <h3 class="card-title">高射投影仪多媒体室借调 & 西非地图资料室调阅</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('15_Q27_Q28_投影仪媒体室与西非地图资源室.mp3', 'Q27-Q28: 投影仪媒体室与西非地图资源室')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_15" onclick="handleRecBtnClick('card_15')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_15" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_15"></span>
+                    <span class="rec-status-text" id="rec-status-card_15">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_15">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_15" onclick="playUserRecording('card_15')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_15')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_15')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_15')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "the most important thing is the <span class='signal-highlight'>overhead projector</span> ... No problem .. . we'll get that from the <span class='ans-highlight'>media room</span> ... must remember to book it ... we'll need a map ... one of <span class='signal-highlight'>West Africa</span> ... There's one in the <span class='ans-highlight'>Resources Room</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q27 投影设备存放地填空</strong>：投影仪（overhead projector）借阅地点：<em>get that from the media room</em>。考点词为 <code>media room</code>。<br>2. <strong>Q28 西非地图调阅地点填空</strong>：西非地图存放地：<em>There's one in the Resources Room</em>。考点词为 <code>resources room</code>（注意 resources 带复数 s）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">All right ... so those are the topics we're going to be ... to be covering ...</div>
+                            <div class="cn-line">好吧……那以上就是我们要涵盖的专题了……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">We need to think about what to prepare ... Dr White said he wanted us to use plenty of visuals and things and we might as well try them out when we're not being assessed ...</div>
+                            <div class="cn-line">我们得想想准备什么……怀特博士说希望我们多用视觉图表之类的教具，既然这次不考核，我们不妨多尝试一下……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Well, the most important thing is the overhead projector ...</div>
+                            <div class="cn-line">嗯，最重要的设备是高射投影仪……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">No problem ... we'll get that from the <span class='kw-en'>media room</span> ... must remember to book it ...</div>
+                            <div class="cn-line">没问题……我们可以从<span class='kw-cn'>多媒体室</span>借……得记住提前预约……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Well ... we'll need a map of course. Probably two ... one of the islands ... large scale. And one of West Africa.</div>
+                            <div class="cn-line">嗯……当然我们还需要地图。可能要两张……一张大比例尺的群岛地图，一张西非地图。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Well, the West African one is no problem ... There's one in the <span class='kw-en'>Resources Room</span>.</div>
+                            <div class="cn-line">西非那张没问题……<span class='kw-cn'>资料室</span>里就有一张。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Oh yeah, of course, the resources room; the islands are going to be more of a problem.</div>
+                            <div class="cn-line">哦对，当然了，资料室有；群岛地图就比较棘手了。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_16: 百科陈旧排除致电使馆 & 权威学位统计数据调取 -->
+        <div class="slice-card" data-category="part3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p3">Part 3 · Q29-Q30</span>
+                    <h3 class="card-title">百科陈旧排除致电使馆 & 权威学位统计数据调取</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('16_Q29_Q30_百科落后致电使馆与学位数据统计.mp3', 'Q29-Q30: 百科落后致电使馆与学位数据统计')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_16" onclick="handleRecBtnClick('card_16')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_16" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_16"></span>
+                    <span class="rec-status-text" id="rec-status-card_16">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_16">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_16" onclick="playUserRecording('card_16')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_16')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_16')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_16')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "How about the <span class='trap-highlight'>encyclopaedia</span>? Nah ... not up-to-date enough! Mmm ... why don't we call the <span class='ans-highlight'>embassy</span>?... We also need <span class='ans-highlight'>statistics</span>... Literacy rates... We can find out <span class='ans-highlight'>statistics on school places</span> from them as well."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q29 权威渠道填空题</strong>：百科全书被否定（<em>encyclopaedia ... not up-to-date enough</em>，排除）；Julie 提议：<em>why don't we call the embassy?</em> 答案为 <code>embassy</code>（大使馆）。<br>2. <strong>Q30 学位名额数据填空题</strong>：除了识字率，还需要：<em>find out statistics on school places from them as well</em>。考点词为 <code>statistics</code>（或口语缩写 <code>stats</code>，复数 s 绝不可丢）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Tell you what ... there's a very clear map of Santiago in that tourist brochure I showed you last week. Don't you remember it?</div>
+                            <div class="cn-line">我跟你说……上周我给你看的那份旅游宣传册里，有一张圣地亚哥非常清晰的地图。你不记得了吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Oh yeah ... that's right; we can just use the tourist brochure.</div>
+                            <div class="cn-line">哦对……没错；我们直接用旅游手册就行了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">We also need statistics ... on several different things. Literacy rates.</div>
+                            <div class="cn-line">我们还需要统计数据……关于好几个不同方面的。识字率。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Yes, and school places. How about the encyclopaedia?</div>
+                            <div class="cn-line">对，还有学位名额。查百科全书怎么样？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Nah ... not up-to-date enough!</div>
+                            <div class="cn-line">算了吧……数据不够新！</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Mmm ... why don't we call the <span class='kw-en'>embassy</span>?</div>
+                            <div class="cn-line">嗯……那我们为什么不打电话给<span class='kw-cn'>大使馆</span>呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Oh ... someone's enthusiastic! Well ... if something's worth doing ...</div>
+                            <div class="cn-line">哟……某人突然很有热情嘛！嗯……如果一件事值得做……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">I know ... it's worth doing well ... OK. We can find out <span class='kw-en'>statistics</span> on school places from them as well.</div>
+                            <div class="cn-line">我知道……就值得把它做好……好的。我们还可以顺便向他们索取学位名额的<span class='kw-cn'>统计数据</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Might as well.</div>
+                            <div class="cn-line">也行。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Look, Julie, it's almost time for our tutorials ... we can meet again on Monday ... but we need to prepare some stuff before then ...</div>
+                            <div class="cn-line">听着，朱莉，我们辅导课时间快到了……周一我们再见……但在此之前我们得准备好一些材料……</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_17: 讲座主旨双重探究 & 递进信号词锁定核心目的 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q31</span>
+                    <h3 class="card-title">讲座主旨双重探究 & 递进信号词锁定核心目的</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('17_Q31_味精两问引子与菜系普及风靡.mp3', 'Q31: 味精两问引子与菜系普及风靡')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_17" onclick="handleRecBtnClick('card_17')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_17" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_17"></span>
+                    <span class="rec-status-text" id="rec-status-card_17">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_17">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_17" onclick="playUserRecording('card_17')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_17')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_17')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_17')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "In today's lecture, I'm going to talk about Monosodium Glutamate, or MSG... Today I am going to explore <span class='trap-highlight'>why it is so popular in these cuisines</span> and, <span class='signal-highlight'>more importantly</span>, <span class='ans-highlight'>how does it enhance the flavour of food</span>?"
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br><strong>Q31 讲座主旨单选题</strong>：讲师开篇交代：探究味精为何在中日烹饪流行，以及递进关键句：<em>more importantly, how does it enhance the flavour of food?</em> 改写对应选项 <strong>B</strong> (how it makes food taste better)。注意听取信号词 <em>more importantly</em> 辨别主次。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">In today's lecture, I'm going to talk about Monosodium Glutamate, or MSG, as it's more commonly known.</div>
+                            <div class="cn-line">在今天的讲座中，我将谈谈谷氨酸钠，也就是更为人熟知的味精——MSG。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">Now, MSG as you probably know, is a flavour enhancer which is used particularly in Chinese and Japanese cooking.</div>
+                            <div class="cn-line">正如大家可能知道的，味精是一种风味增效剂，在中餐和日料烹饪中尤其常见。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">Today I am going to explore why it is so popular in these cuisines and, <span class='kw-en'>more importantly, how does it enhance the flavour of food</span>?</div>
+                            <div class="cn-line">今天我将探究它为何在这些菜系中如此风靡，而且更为重要的是：<span class='kw-cn'>它究竟是如何提升食物风味的</span>？</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_18: 日本昆布古法烹饪 & 1908年谷氨酸科学提取确证 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q32</span>
+                    <h3 class="card-title">日本昆布古法烹饪 & 1908年谷氨酸科学提取确证</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('18_Q32_海带提纯与1908年谷氨酸发现.mp3', 'Q32: 海带提纯与1908年谷氨酸发现')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_18" onclick="handleRecBtnClick('card_18')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_18" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_18"></span>
+                    <span class="rec-status-text" id="rec-status-card_18">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_18">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_18" onclick="playUserRecording('card_18')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_18')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_18')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_18')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "For many thousands of years the Japanese have incorporated a type of seaweed known as <span class='signal-highlight'>kombu</span> in their cooking... But it wasn't until <span class='ans-highlight'>1908</span> that the ingredient in kombu which was responsible for the improvement in flavour was actually <span class='ans-highlight'>discovered to be glutamate by scientists</span> working there."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br><strong>Q32 历史发现年代单选题</strong>：日本人烹饪用海带（kombu）有数千年历史；但转折句：<em>it wasn't until 1908 that the ingredient ... was actually discovered to be glutamate by scientists</em>。对应选项 <strong>C</strong> (in 1908)。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">The main reason why MSG is more commonly used in Japanese meals is tradition. For many thousands of years the Japanese have incorporated a type of seaweed known as kombu in their cooking, as they discovered it had the ability to make food taste better.</div>
+                            <div class="cn-line">味精更常用于日本饮食的主要原因是传统。几千年来，日本人在烹饪中都会加入一种被称为“昆布”的海带，因为他们发现海带具有让食物更美味的魔力。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">But it wasn't until <span class='kw-en'>1908</span> that the ingredient in kombu which was responsible for the improvement in flavour was actually discovered to be glutamate by scientists working there.</div>
+                            <div class="cn-line">但直到<span class='kw-cn'>1908年</span>，在当地工作的科学家们才真正发现：昆布中负责提升风味的成分原来是谷氨酸。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_19: 1956年提取提速工艺革新 & 全球工业级暴增节点 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q33</span>
+                    <h3 class="card-title">1956年提取提速工艺革新 & 全球工业级暴增节点</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('19_Q33_1956年提取工艺革新与工业爆发.mp3', 'Q33: 1956年提取工艺革新与工业爆发')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_19" onclick="handleRecBtnClick('card_19')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_19" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_19"></span>
+                    <span class="rec-status-text" id="rec-status-card_19">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_19">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_19" onclick="playUserRecording('card_19')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_19')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_19')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_19')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "From 1908 until 1956, glutamate was produced commercially in Japan by a <span class='trap-highlight'>very slow and expensive means of extraction</span>. It was in <span class='ans-highlight'>1956</span> that the <span class='ans-highlight'>speed of the process was improved</span>, and industrial production <span class='ans-highlight'>increased dramatically</span>..."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br><strong>Q33 工业化生产转折单选题</strong>：早期萃取极慢极贵（<em>slow and expensive</em>）；1956年提取速度获得质的飞跃，工业化产量急剧攀升：<em>speed of the process was improved, and industrial production increased dramatically</em>。对应选项 <strong>A</strong> (production speed was increased / new method of extraction)。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">From 1908 until 1956, glutamate was produced commercially in Japan by a very slow and expensive means of extraction.</div>
+                            <div class="cn-line">从1908年到1956年，日本商业化生产谷氨酸一直采用一种非常缓慢且昂贵的萃取方法。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">It was in <span class='kw-en'>1956</span> that the <span class='kw-en'>speed of the process was improved</span>, and industrial production <span class='kw-en'>increased dramatically</span> and still continues to increase to this day. In fact, hundreds of thousands of tonnes of MSG are produced all over the world today.</div>
+                            <div class="cn-line">直到<span class='kw-cn'>1956年</span>，该工艺的<span class='kw-cn'>生产速度得到了显著改进</span>，工业产量大幅激增，并一直持续增长至今。事实上，如今全世界每年生产数十万吨味精。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_20: 化学百分比水含量 & 天然富含谷氨酸食材并列 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q34-Q36</span>
+                    <h3 class="card-title">化学百分比水含量 & 天然富含谷氨酸食材并列</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('20_Q34_Q36_水含量占比与天然肉类奶酪并列.mp3', 'Q34-Q36: 水含量占比与天然肉类奶酪并列')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_20" onclick="handleRecBtnClick('card_20')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_20" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_20"></span>
+                    <span class="rec-status-text" id="rec-status-card_20">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_20">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_20" onclick="playUserRecording('card_20')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_20')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_20')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_20')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "seventy-eight point two per cent <span class='signal-highlight'>glutamate</span>, twelve point two per cent <span class='signal-highlight'>sodium</span> and nine point six per cent <span class='ans-highlight'>water</span>. Glutamate is an amino acid that can be found naturally in all protein-containing foods... so this includes food such as <span class='ans-highlight'>meat</span> and <span class='ans-highlight'>cheese</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q34 化学配比成分填空</strong>：味精含 78.2% 谷氨酸、12.2% 钠、9.6% 水（<em>nine point six per cent water</em>）。考点词为 <code>water</code>。<br>2. <strong>Q35 & Q36 天然蛋白质食材并列填空</strong>：谷氨酸天然存在于富含蛋白质食物中：<em>food such as meat and cheese</em>。Q35 和 Q36 顺序任意，分别填 <code>meat</code> 和 <code>cheese</code>。切勿遗漏 cheese 词尾的 e。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">So what exactly is MSG? Well, Monosodium Glutamate contains seventy-eight point two per cent glutamate, twelve point two per cent sodium and nine point six per cent <span class='kw-en'>water</span>.</div>
+                            <div class="cn-line">那么味精到底是什么？嗯，谷氨酸钠包含78.2%的谷氨酸、12.2%的钠以及9.6%的<span class='kw-cn'>水</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">Glutamate is an amino acid that can be found naturally in all protein-containing foods, erm, so this includes food such as <span class='kw-en'>meat</span> and <span class='kw-en'>cheese</span>.</div>
+                            <div class="cn-line">谷氨酸是一种氨基酸，天然存在于所有富含蛋白质的食物中，嗯，这包括<span class='kw-cn'>肉类</span>和<span class='kw-cn'>奶酪</span>等食物。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">It is widely known that Chinese and Japanese food contains MSG but many people don't seem to be aware that it is also used in foods in other parts of the world. For example it is found in commercially made Italian pizzas, in American fast food and in Britain MSG is used in things like potato crisps.</div>
+                            <div class="cn-line">人们普遍知道中餐和日料中含有味精，但许多人似乎并不知道世界上其他地区的食品中也添加了它。例如商业化制作的意大利披萨、美式快餐，而在英国，味精也被广泛用于炸薯片等零食中。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_21: 第五种味觉发现概念突破 & 自然界最常见氨基酸 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q37-Q38</span>
+                    <h3 class="card-title">第五种味觉发现概念突破 & 自然界最常见氨基酸</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('21_Q37_Q38_第五种味觉发现与自然界常见氨基酸.mp3', 'Q37-Q38: 第五种味觉发现与自然界常见氨基酸')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_21" onclick="handleRecBtnClick('card_21')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_21" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_21"></span>
+                    <span class="rec-status-text" id="rec-status-card_21">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_21">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_21" onclick="playUserRecording('card_21')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_21')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_21')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_21')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "we commonly talk of four 'tastes'... sweet, sour, bitter and salt. Well, in 1908, Kikunae Ikeda identified a <span class='ans-highlight'>fifth 'taste'</span>... evolutionary sense that we should have the ability to detect or taste glutamate because it is the amino acid which is <span class='ans-highlight'>most common</span> in natural foods."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q37 颠覆性味觉概念填空</strong>：西方传统有甜、酸、苦、咸四种味觉；1908年池田菊苗发现了鲜味，原文表述为 <em>identified a fifth 'taste'</em>，官方答案为 <code>5th / new taste</code>（或 <code>fifth taste</code>）。<br>2. <strong>Q38 进化机制形容词填空</strong>：人类进化出对谷氨酸的辨识能力，因为它是自然食物中“最常见”的氨基酸：<em>amino acid which is most common in natural foods</em>。空格紧随 most 之后，填形容词 <code>common</code>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">So, how exactly does MSG work? Well, in the Western world, we commonly talk of four 'tastes', and I'm sure you're all familiar with the concepts of sweet, sour, bitter and salt.</div>
+                            <div class="cn-line">那么，味精究竟是如何起作用的呢？在西方世界，我们通常谈论四种“味觉”，相信大家都很熟悉甜、酸、苦、咸这四个概念。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">Well, in 1908, Kikunae Ikeda identified a <span class='kw-en'>fifth 'taste'</span>. And it is thought that MSG intensifies this naturally occurring 'taste' in some food.</div>
+                            <div class="cn-line">然而在1908年，池田菊苗发现了<span class='kw-cn'>第五种“味觉”</span>。人们认为味精能够强化某些食物中天然存在的这种“味道”。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">It does make perfect evolutionary sense that we should have the ability to detect or taste glutamate because it is the amino acid which is most <span class='kw-en'>common</span> in natural foods.</div>
+                            <div class="cn-line">从进化论的角度来看，我们具备探测或品尝谷氨酸的能力是完全合情合理的，因为它是天然食物中<span class='kw-cn'>最常见</span>的一种氨基酸。</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_22: 苦味预警食物毒素警报 & 咸味提示矿物质存在 -->
+        <div class="slice-card" data-category="part4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q39-Q40</span>
+                    <h3 class="card-title">苦味预警食物毒素警报 & 咸味提示矿物质存在</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('22_Q39_Q40_苦味预警毒素与咸味提示矿物质.mp3', 'Q39-Q40: 苦味预警毒素与咸味提示矿物质')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_22" onclick="handleRecBtnClick('card_22')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_22" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_22"></span>
+                    <span class="rec-status-text" id="rec-status-card_22">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_22">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_22" onclick="playUserRecording('card_22')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_22')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_22')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_22')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "<span class='ans-highlight'>Bitterness</span>, he says, alerts us of toxins in the food, while <span class='signal-highlight'>sourness</span> warns us of spoilage and <span class='signal-highlight'>saltiness</span> signals the presence of <span class='ans-highlight'>minerals</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>考点拆解与避坑指南：</strong><br>1. <strong>Q39 警示毒素味觉填空</strong>：芝加哥大学 Prescott 教授指出：<em>Bitterness, he says, alerts us of toxins in the food</em>。考点词必须填名词形态 <code>bitterness</code>，切不可填形容词 bitter！<br>2. <strong>Q40 咸味对应微量元素填空</strong>：酸味警告变质（<em>sourness warns of spoilage</em>），咸味则预示矿物质：<em>saltiness signals the presence of minerals</em>。考点词为 <code>minerals</code>（复数 s 必不可少）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">John Prescott, an associate professor at the University of Chicago, suggests that this fifth taste serves a purpose just as the other tastes do.</div>
+                            <div class="cn-line">芝加哥大学副教授约翰·普雷斯科特认为，这种第五味觉与其它味觉一样，具有特定的生理进化意义。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">He suggests that it signals to us the presence of protein in food, in the same way that sweetness indicates that a food contains energy-giving carbohydrates.</div>
+                            <div class="cn-line">他提出，它向我们传递食物中存在蛋白质的信号，就像甜味提示食物富含提供能量的碳水化合物一样。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line"><span class='kw-en'>Bitterness</span>, he says, alerts us of toxins in the food, while sourness warns us of spoilage and saltiness signals the presence of <span class='kw-en'>minerals</span>. So, what else do we know about this fifth taste ...</div>
+                            <div class="cn-line">他说，<span class='kw-cn'>苦味</span>提醒我们食物中含有毒素，而酸味警告食物腐败变质，咸味则标志着<span class='kw-cn'>矿物质</span>的存在。那么，关于这第五种味觉我们还知道些什么呢……</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_FULL_01: Section 1 全真听力：寄宿家庭信息登记与偏好确认（Q1-Q10） -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-full">Section 1 · 完整录音</span>
+                    <h3 class="card-title">Section 1 全真听力：寄宿家庭信息登记与偏好确认（Q1-Q10）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_1_Full_寄宿家庭申请.mp3', 'Section 1 全真录音: 寄宿家庭信息登记')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_full_01" onclick="handleRecBtnClick('card_full_01')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_full_01" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full_01"></span>
+                    <span class="rec-status-text" id="rec-status-card_full_01">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full_01">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full_01" onclick="playUserRecording('card_full_01')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full_01')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full_01')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full_01')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Homestay application details: Keiko Yuichini, passport JO 6337, four months stay, Advanced English Studies, preference for adults without young children, accepts pets, likes seafood, plays tennis, catches train, details this afternoon."
+                </div>
+                <div class="analysis-box">
+                    <strong>Section 1 全景考点复盘：</strong><br>本部分为生活咨询场景（求租寄宿家庭）。重点考查：姓名大小写与拼写、字母数字混合护照号、时间期限与课程名词、单复数红线（children, pets）、运动拼写（tennis）、交通工具对比与时间状语。适合在掌握各个切片后，做 1.0x 或 1.25x 盲听全卷听写！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Yes, what can I do for you?</div>
+                            <div class="cn-line">您好，有什么我可以帮您的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Keiko</span>
+                            <div class="en-line">My friend is in homestay ... and she really enjoys it ... so I'd like to join a family as well.</div>
+                            <div class="cn-line">我朋友住在寄宿家庭里……她非常喜欢……所以我也想住进一个寄宿家庭。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-agent">Officer</span>
+                            <div class="en-line">Okay, so let me get some details ... (请点击播放完整音频磨耳朵)</div>
+                            <div class="cn-line">好的，让我登记一些细节……（请点击播放完整音频磨耳朵）</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_FULL_02: Section 2 全真听力：两百年纪念公园导览与设施布局（Q11-Q20） -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-full">Section 2 · 完整录音</span>
+                    <h3 class="card-title">Section 2 全真听力：两百年纪念公园导览与设施布局（Q11-Q20）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_2_Full_世纪公园导览.mp3', 'Section 2 全真录音: 世纪公园导览与设施布局')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_full_02" onclick="handleRecBtnClick('card_full_02')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_full_02" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full_02"></span>
+                    <span class="rec-status-text" id="rec-status-card_full_02">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full_02">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full_02" onclick="playUserRecording('card_full_02')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full_02')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full_02')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full_02')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Tour guide Sally introduces Bicentennial Park: demolition of warehouses, open space recreation over housing, The Tower 12m, Olympic site car park, rose garden, lake cafe, mangrove cycling, biology lessons, bird viewing shelter."
+                </div>
+                <div class="analysis-box">
+                    <strong>Section 2 全景考点复盘：</strong><br>本部分为公共场馆导览独白。前半部分为单选题（鞋子、历史前身仓库、居民抗争绿地、塔楼高度），后半部分为地图/设施填空题（停车场、玫瑰园、湖畔咖啡厅、自行车骑行、生物课、观鸟亭）。适合训练边听边看方位路标的抗卡顿能力。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">Welcome to all of you ... can everybody see and hear me? ... Good ... I'm Sally, your guide for this tour of the Bicentennial Park ...</div>
+                            <div class="cn-line">欢迎大家……所有人都能看清并听到我说话吗？……很好……我是萨莉，本次两百年纪念公园之旅的导游……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-speaker">Sally</span>
+                            <div class="en-line">I hope that you're all wearing your most comfortable shoes and that you can keep up the pace ... (请点击播放完整音频磨耳朵)</div>
+                            <div class="cn-line">我希望大家都穿了最舒服的鞋子，而且能够跟得上步调……（请点击播放完整音频磨耳朵）</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_FULL_03: Section 3 全真听力：地理学术报告筹备与分工研讨（Q21-Q30） -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-full">Section 3 · 完整录音</span>
+                    <h3 class="card-title">Section 3 全真听力：地理学术报告筹备与分工研讨（Q21-Q30）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_3_Full_地理学术报告.mp3', 'Section 3 全真录音: 地理学术报告筹备与研讨')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_full_03" onclick="handleRecBtnClick('card_full_03')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_full_03" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full_03"></span>
+                    <span class="rec-status-text" id="rec-status-card_full_03">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full_03">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full_03" onclick="playUserRecording('card_full_03')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full_03')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full_03')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full_03')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Presentation prep: 5 mins for questions, not assessed, geographical location included, economy decided later, general overview included, English role excluded, media room projector, resources room map, call embassy, stats on school places."
+                </div>
+                <div class="analysis-box">
+                    <strong>Section 3 全景考点复盘：</strong><br>本部分为双人学术研讨对话。考查议题讨论中的赞同、否定与暂缓搁置判定，以及教学资源借调地点（media room, resources room）和信息源（embassy, statistics）。语速较快且思维跳跃，需紧跟两人的意见转换与最终敲定结论。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Julie</span>
+                            <div class="en-line">Remind me, Trevor ... how long is the presentation?</div>
+                            <div class="cn-line">提醒我一下，特雷弗……演讲时长是多久来着？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-student">Trevor</span>
+                            <div class="en-line">Dr White said three per hour ... (请点击播放完整音频磨耳朵)</div>
+                            <div class="cn-line">怀特博士说每小时讲3组……（请点击播放完整音频磨耳朵）</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_FULL_04: Section 4 全真听力：味精科学讲座与味觉进化机制（Q31-Q40） -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-full">Section 4 · 完整录音</span>
+                    <h3 class="card-title">Section 4 全真听力：味精科学讲座与味觉进化机制（Q31-Q40）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_4_Full_味精科学讲座.mp3', 'Section 4 全真录音: 味精科学讲座与味觉进化')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_full_04" onclick="handleRecBtnClick('card_full_04')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_full_04" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full_04"></span>
+                    <span class="rec-status-text" id="rec-status-card_full_04">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full_04">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full_04" onclick="playUserRecording('card_full_04')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full_04')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full_04')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full_04')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Monosodium Glutamate lecture: why popular & how enhance flavour, 1908 kombu glutamate discovery, 1956 speed improvement, 9.6% water, natural in meat & cheese, 5th taste, common amino acid, bitterness alerts toxins, minerals."
+                </div>
+                <div class="analysis-box">
+                    <strong>Section 4 全景考点复盘：</strong><br>本部分为高难度食品科学与演化生物学讲座。前半段单选考查味精发现与生产历史（1908年提取，1956年提速），后半段填空考查化学成分（water）、天然食物（meat, cheese）、第五种味觉（5th taste, common）以及味觉预警机制（bitterness -> toxins, saltiness -> minerals）。词汇学术性强，填空要求拼写与词性绝对精准。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="script-dialog">
+                        <div class="dialog-turn">
+                            <span class="speaker-tag spk-tutor">Lecturer</span>
+                            <div class="en-line">In today's lecture, I'm going to talk about Monosodium Glutamate, or MSG, as it's more commonly known ... (请点击播放完整音频磨耳朵)</div>
+                            <div class="cn-line">在今天的讲座中，我将谈谈谷氨酸钠，也就是更为人熟知的味精——MSG……（请点击播放完整音频磨耳朵）</div>
+                        </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color);"><p>剑桥雅思 7 Test 4 听力错题切片与精听点播台 · 坚持影子跟读与错题靶向精听</p></footer>
+</div>
+
+<script>
+
+    const audioPlayer = document.getElementById('mainAudio');
+    const playerTitle = document.getElementById('playerTitle');
+    const loopBtn = document.getElementById('loopBtn');
+    const speedBtn = document.getElementById('speedBtn');
+
+    let isLooping = false;
+    let speeds = [1.0, 1.2, 0.8];
+    let currentSpeedIdx = 0;
+
+    function playAudio(filename, title) {
+        if (activeUserAudioObj && !activeUserAudioObj.paused) {
+            activeUserAudioObj.pause();
+        }
+        audioPlayer.src = filename;
+        playerTitle.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
+        audioPlayer.play();
+    }
+
+    function toggleLoop() {
+        isLooping = !isLooping;
+        audioPlayer.loop = isLooping;
+        if (isLooping) {
+            loopBtn.classList.add('active');
+            loopBtn.innerText = '🔁 单曲循环: 开';
+        } else {
+            loopBtn.classList.remove('active');
+            loopBtn.innerText = '🔁 单曲循环: 关';
+        }
+    }
+
+    function toggleSpeed() {
+        currentSpeedIdx = (currentSpeedIdx + 1) % speeds.length;
+        const spd = speeds[currentSpeedIdx];
+        audioPlayer.playbackRate = spd;
+        speedBtn.innerText = `⚡ ${spd}x`;
+    }
+
+    function filterCategory(cat, btn) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            if (cat === 'all') {
+                card.style.display = 'block';
+            } else if (card.getAttribute('data-category') === cat) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Official Audio mapping
+    const cardOfficialMap = {};
+    cardOfficialMap['card_01'] = { file: '01_Q1_Q2_姓氏拼写干扰与护照号纯字母数字.mp3', title: 'Q1-Q2: 姓氏拼写干扰与护照号纯字母数字' };
+    cardOfficialMap['card_02'] = { file: '02_Q3_Q4_居住时长与高阶英语学习定位.mp3', title: 'Q3-Q4: 居住时长与高阶英语学习定位' };
+    cardOfficialMap['card_03'] = { file: '03_Q5_Q6_儿童喜好与兽医宠物背景.mp3', title: 'Q5-Q6: 儿童喜好与兽医宠物背景' };
+    cardOfficialMap['card_04'] = { file: '04_Q7_Q8_海鲜偏好与网球双写错拼.mp3', title: 'Q7-Q8: 海鲜偏好与网球双写错拼' };
+    cardOfficialMap['card_05'] = { file: '05_Q9_Q10_火车提速与今天下午通知.mp3', title: 'Q9-Q10: 火车提速与今天下午通知' };
+    cardOfficialMap['card_06'] = { file: '06_Q11_Q12_导游姓名鞋子与废弃厂房仓库.mp3', title: 'Q11-Q12: 导游姓名鞋子与废弃厂房仓库' };
+    cardOfficialMap['card_07'] = { file: '07_Q13_Q14_社区反对高层住宅与观光塔高度.mp3', title: 'Q13-Q14: 社区反对高层住宅与观光塔高度' };
+    cardOfficialMap['card_08'] = { file: '08_Q15_奥运站火车线路与停车位有限.mp3', title: 'Q15: 奥运站火车线路与停车位有限' };
+    cardOfficialMap['card_09'] = { file: '09_Q16_Q17_玫瑰园闻花香与穿树看湖畔咖啡厅.mp3', title: 'Q16-Q17: 玫瑰园闻花香与穿树看湖畔咖啡厅' };
+    cardOfficialMap['card_10'] = { file: '10_Q18_红树林木栈道与俱乐部骑行热.mp3', title: 'Q18: 红树林木栈道与俱乐部骑行热' };
+    cardOfficialMap['card_11'] = { file: '11_Q19_Q20_青蛙池小学课外生物课与观鸟亭黑天鹅.mp3', title: 'Q19-Q20: 青蛙池小学课外生物课与观鸟亭黑天鹅' };
+    cardOfficialMap['card_12'] = { file: '12_Q21_Q22_报告答辩时长与首次展示免考核.mp3', title: 'Q21-Q22: 报告答辩时长与首次展示免考核' };
+    cardOfficialMap['card_13'] = { file: '13_Q23_Q24_地理位置必要性与经济细节争议.mp3', title: 'Q23-Q24: 地理位置必要性与经济细节争议' };
+    cardOfficialMap['card_14'] = { file: '14_Q25_Q26_教育系统总览与语言政策排除.mp3', title: 'Q25-Q26: 教育系统总览与语言政策排除' };
+    cardOfficialMap['card_15'] = { file: '15_Q27_Q28_投影仪媒体室与西非地图资源室.mp3', title: 'Q27-Q28: 投影仪媒体室与西非地图资源室' };
+    cardOfficialMap['card_16'] = { file: '16_Q29_Q30_百科落后致电使馆与学位数据统计.mp3', title: 'Q29-Q30: 百科落后致电使馆与学位数据统计' };
+    cardOfficialMap['card_17'] = { file: '17_Q31_味精两问引子与菜系普及风靡.mp3', title: 'Q31: 味精两问引子与菜系普及风靡' };
+    cardOfficialMap['card_18'] = { file: '18_Q32_海带提纯与1908年谷氨酸发现.mp3', title: 'Q32: 海带提纯与1908年谷氨酸发现' };
+    cardOfficialMap['card_19'] = { file: '19_Q33_1956年提取工艺革新与工业爆发.mp3', title: 'Q33: 1956年提取工艺革新与工业爆发' };
+    cardOfficialMap['card_20'] = { file: '20_Q34_Q36_水含量占比与天然肉类奶酪并列.mp3', title: 'Q34-Q36: 水含量占比与天然肉类奶酪并列' };
+    cardOfficialMap['card_21'] = { file: '21_Q37_Q38_第五种味觉发现与自然界常见氨基酸.mp3', title: 'Q37-Q38: 第五种味觉发现与自然界常见氨基酸' };
+    cardOfficialMap['card_22'] = { file: '22_Q39_Q40_苦味预警毒素与咸味提示矿物质.mp3', title: 'Q39-Q40: 苦味预警毒素与咸味提示矿物质' };
+    cardOfficialMap['card_full_01'] = { file: 'Section_1_Full_寄宿家庭申请.mp3', title: 'Section 1 全真录音: 寄宿家庭信息登记' };
+    cardOfficialMap['card_full_02'] = { file: 'Section_2_Full_世纪公园导览.mp3', title: 'Section 2 全真录音: 世纪公园导览与设施布局' };
+    cardOfficialMap['card_full_03'] = { file: 'Section_3_Full_地理学术报告.mp3', title: 'Section 3 全真录音: 地理学术报告筹备与研讨' };
+    cardOfficialMap['card_full_04'] = { file: 'Section_4_Full_味精科学讲座.mp3', title: 'Section 4 全真录音: 味精科学讲座与味觉进化' };
+
+    // Shadowing & Recording State Management
+    let activeRecorder = null;
+    let activeRecordCardId = null;
+    let recordTimerInterval = null;
+    let recordStartTime = null;
+    let activeUserAudioObj = null;
+    let activeUserAudioCardId = null;
+    const userRecordings = new Map(); // cardId -> { blob, url, duration, audioObj }
+
+    function handleRecBtnClick(cardId) {
+        if (activeRecordCardId === cardId) {
+            stopActiveRecording();
+            return;
+        }
+        if (userRecordings.has(cardId)) {
+            playUserRecording(cardId);
+            return;
+        }
+        toggleRecording(cardId);
+    }
+
+    async function toggleRecording(cardId) {
+        if (activeRecordCardId && activeRecorder && activeRecorder.state === 'recording') {
+            stopActiveRecording();
+            if (activeRecordCardId === cardId) return;
+        }
+
+        pauseAllAudios();
+
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            alert("⚠️ 您的浏览器未开启麦克风或不支持录音，请在安全环境（HTTPS或本地）允许麦克风权限后重试。");
+            return;
+        }
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            
+            let mimeType = '';
+            if (typeof MediaRecorder.isTypeSupported === 'function') {
+                if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) mimeType = 'audio/webm;codecs=opus';
+                else if (MediaRecorder.isTypeSupported('audio/webm')) mimeType = 'audio/webm';
+                else if (MediaRecorder.isTypeSupported('audio/mp4')) mimeType = 'audio/mp4';
+            }
+            const options = mimeType ? { mimeType } : {};
+            const recorder = new MediaRecorder(stream, options);
+            const chunks = [];
+
+            activeRecorder = recorder;
+            activeRecordCardId = cardId;
+            recordStartTime = Date.now();
+
+            recorder.ondataavailable = (e) => {
+                if (e.data && e.data.size > 0) chunks.push(e.data);
+            };
+
+            recorder.onstop = () => {
+                clearInterval(recordTimerInterval);
+                const blob = new Blob(chunks, { type: recorder.mimeType || 'audio/webm' });
+                const url = URL.createObjectURL(blob);
+                const durSec = Math.max(1, Math.round((Date.now() - recordStartTime) / 1000));
+
+                if (userRecordings.has(cardId)) {
+                    const old = userRecordings.get(cardId);
+                    if (old.url) URL.revokeObjectURL(old.url);
+                    if (old.audioObj) old.audioObj.pause();
+                }
+
+                const audioObj = new Audio(url);
+                userRecordings.set(cardId, { blob, url, duration: durSec, audioObj });
+
+                stream.getTracks().forEach(t => t.stop());
+                setupUserAudioEvents(cardId, audioObj, durSec);
+
+                renderCardRecordingState(cardId, 'recorded', durSec);
+                activeRecorder = null;
+                activeRecordCardId = null;
+            };
+
+            recorder.start(100);
+            renderCardRecordingState(cardId, 'recording', 0);
+
+            recordTimerInterval = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - recordStartTime) / 1000);
+                const timerBadge = document.getElementById(`rec-time-${cardId}`);
+                const recBtn = document.getElementById(`rec-btn-${cardId}`);
+                const timeStr = formatTime(elapsed);
+                if (timerBadge) timerBadge.innerText = timeStr;
+                if (recBtn) recBtn.innerHTML = `🔴 录音中 ${timeStr} (点击完成)`;
+            }, 500);
+
+        } catch (err) {
+            console.error("Microphone error:", err);
+            alert("⚠️ 麦克风访问失败：请确认已在浏览器中允许麦克风权限。\n" + err.message);
+            renderCardRecordingState(cardId, 'idle', 0);
+            activeRecorder = null;
+            activeRecordCardId = null;
+        }
+    }
+
+    function stopActiveRecording() {
+        if (activeRecorder && activeRecorder.state === 'recording') {
+            activeRecorder.stop();
+        }
+        clearInterval(recordTimerInterval);
+    }
+
+    function setupUserAudioEvents(cardId, audioObj, durSec) {
+        audioObj.ontimeupdate = () => {
+            const timeBadge = document.getElementById(`rec-time-${cardId}`);
+            if (timeBadge) {
+                timeBadge.innerText = `${formatTime(audioObj.currentTime)} / ${formatTime(durSec)}`;
+            }
+        };
+        audioObj.onended = () => {
+            const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+            const recBtn = document.getElementById(`rec-btn-${cardId}`);
+            if (playBtn) playBtn.innerHTML = '▶ 试听跟读';
+            if (recBtn) recBtn.innerHTML = '🎧 听我的跟读';
+            const timeBadge = document.getElementById(`rec-time-${cardId}`);
+            if (timeBadge) timeBadge.innerText = formatTime(durSec);
+            activeUserAudioObj = null;
+            activeUserAudioCardId = null;
+        };
+        audioObj.onpause = () => {
+            const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+            const recBtn = document.getElementById(`rec-btn-${cardId}`);
+            if (playBtn) playBtn.innerHTML = '▶ 试听跟读';
+            if (recBtn) recBtn.innerHTML = '🎧 听我的跟读';
+        };
+        audioObj.onplay = () => {
+            const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+            const recBtn = document.getElementById(`rec-btn-${cardId}`);
+            if (playBtn) playBtn.innerHTML = '⏸️ 暂停试听';
+            if (recBtn) recBtn.innerHTML = '⏸️ 暂停跟读';
+        };
+    }
+
+    function playUserRecording(cardId) {
+        const rec = userRecordings.get(cardId);
+        if (!rec || !rec.audioObj) return;
+
+        if (!rec.audioObj.paused) {
+            rec.audioObj.pause();
+            return;
+        }
+
+        pauseAllAudios();
+
+        activeUserAudioObj = rec.audioObj;
+        activeUserAudioCardId = cardId;
+        rec.audioObj.play();
+    }
+
+    function compareOfficial(cardId) {
+        pauseAllAudios();
+        const info = cardOfficialMap[cardId];
+        if (info) {
+            playAudio(info.file, info.title);
+        }
+    }
+
+    function deleteRecording(cardId) {
+        if (userRecordings.has(cardId)) {
+            const rec = userRecordings.get(cardId);
+            if (rec.audioObj) rec.audioObj.pause();
+            if (rec.url) URL.revokeObjectURL(rec.url);
+            userRecordings.delete(cardId);
+        }
+        renderCardRecordingState(cardId, 'idle', 0);
+    }
+
+    function pauseAllAudios() {
+        if (!audioPlayer.paused) {
+            audioPlayer.pause();
+        }
+        if (activeUserAudioObj && !activeUserAudioObj.paused) {
+            activeUserAudioObj.pause();
+        }
+    }
+
+    function renderCardRecordingState(cardId, state, durSec) {
+        const btn = document.getElementById(`rec-btn-${cardId}`);
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        const dot = document.getElementById(`rec-dot-${cardId}`);
+        const statusText = document.getElementById(`rec-status-${cardId}`);
+        const timeBadge = document.getElementById(`rec-time-${cardId}`);
+        const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+        const btnsGroup = panel ? panel.querySelector('.rec-panel-btns') : null;
+
+        if (state === 'recording') {
+            if (btn) {
+                btn.classList.add('recording');
+                btn.classList.remove('has-recording');
+                btn.innerHTML = `🔴 录音中 00:00 (点击完成)`;
+            }
+            if (panel) panel.style.display = 'flex';
+            if (dot) dot.className = 'rec-status-dot recording';
+            if (statusText) statusText.innerText = '🔴 正在录制你的跟读...（读完点击按钮完成）';
+            if (timeBadge) timeBadge.innerText = '00:00';
+            if (btnsGroup) btnsGroup.style.display = 'none';
+        } else if (state === 'recorded') {
+            if (btn) {
+                btn.classList.remove('recording');
+                btn.classList.add('has-recording');
+                btn.innerHTML = `🎧 听我的跟读`;
+            }
+            if (panel) panel.style.display = 'flex';
+            if (dot) dot.className = 'rec-status-dot';
+            if (statusText) statusText.innerText = '✨ 跟读已就绪：自听找卡壳，点击对比原声';
+            if (timeBadge) timeBadge.innerText = formatTime(durSec);
+            if (btnsGroup) btnsGroup.style.display = 'flex';
+            if (playBtn) playBtn.innerHTML = '▶ 试听跟读';
+        } else {
+            // idle
+            if (btn) {
+                btn.classList.remove('recording');
+                btn.classList.remove('has-recording');
+                btn.innerHTML = `🎙️ 录音跟读`;
+            }
+            if (panel) panel.style.display = 'none';
+            if (btnsGroup) btnsGroup.style.display = 'none';
+        }
+    }
+
+    function formatTime(sec) {
+        if (isNaN(sec) || sec < 0) return '00:00';
+        const m = String(Math.floor(sec / 60)).padStart(2, '0');
+        const s = String(Math.floor(sec % 60)).padStart(2, '0');
+        return `${m}:${s}`;
+    }
+
+
+</script>
+</body>
+</html>
