@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 15 Test 2 Part 1 听力错题切片与考点点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Player Sticky Bar */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .now-playing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        audio {
+            width: 100%;
+            height: 42px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            font-weight: bold;
+            border-color: var(--accent-blue);
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 11px 20px;
+            border-radius: 12px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+        }
+
+        /* Slice Card */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 22px 24px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .slice-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .card-tag {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-p1 { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); border: 1px solid rgba(56, 189, 248, 0.4); }
+        .tag-wrong { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); border: 1px solid rgba(248, 113, 113, 0.4); }
+        .tag-correct { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); border: 1px solid rgba(52, 211, 153, 0.4); }
+
+        .card-title {
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: #f1f5f9;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .play-card-btn:hover {
+            opacity: 0.95;
+            transform: scale(1.03);
+        }
+
+        .record-card-btn {
+            background: rgba(248, 113, 113, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.4);
+            padding: 9px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.25);
+            border-color: var(--accent-red);
+            color: #fca5a5;
+        }
+
+        .record-card-btn.recording {
+            background: var(--accent-red);
+            color: #fff;
+            animation: pulse-red 1.5s infinite;
+            border-color: var(--accent-red);
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(248, 113, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+        }
+
+        /* User Shadowing Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px dashed rgba(248, 113, 113, 0.4);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-red);
+            display: inline-block;
+        }
+
+        .rec-status-dot.recording {
+            animation: pulse-red 1s infinite;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: var(--accent-amber);
+            font-size: 0.85rem;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .rec-btn-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .rec-btn-pill:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .btn-play-user {
+            color: var(--accent-green);
+            border-color: rgba(52, 211, 153, 0.3);
+        }
+
+        .btn-play-user:hover {
+            background: rgba(52, 211, 153, 0.2);
+        }
+
+        .btn-compare {
+            color: var(--accent-blue);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-compare:hover {
+            background: rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-rerecord {
+            color: var(--accent-amber);
+            border-color: rgba(251, 191, 36, 0.3);
+        }
+
+        .btn-del {
+            color: var(--text-muted);
+        }
+
+        .btn-del:hover {
+            color: var(--accent-red);
+        }
+
+        /* Card Body */
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .transcript-box {
+            font-size: 1.12rem;
+            color: #f1f5f9;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-blue);
+            font-style: normal;
+            line-height: 1.8;
+        }
+
+        .ans-highlight {
+            color: #34d399;
+            font-weight: 700;
+            background: rgba(52, 211, 153, 0.15);
+            padding: 2px 8px;
+            border-radius: 5px;
+            border-bottom: 2px solid rgba(52, 211, 153, 0.5);
+        }
+
+        .trap-highlight {
+            color: #f87171;
+            font-weight: 700;
+            text-decoration: line-through;
+            background: rgba(248, 113, 113, 0.15);
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+
+        .signal-highlight {
+            color: #fbbf24;
+            font-weight: 600;
+            background: rgba(251, 191, 36, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .analysis-box {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .analysis-box strong {
+            color: #f8fafc;
+        }
+
+        /* Bilingual Dropdown */
+        .bilingual-details {
+            margin-top: 6px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .bilingual-details[open] {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent-blue);
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .toggle-icon {
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 10px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 2px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .spk-man { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-woman { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Tips panel */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .tips-list strong {
+            color: var(--text-main);
+        }
+
+        .shadow-guide-box {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+            line-height: 1.6;
+        }
+
+        .shadow-guide-title {
+            font-weight: 700;
+            color: #f87171;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shadow-guide-tag {
+            font-size: 0.75rem;
+            background: rgba(248, 113, 113, 0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: #fecaca;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-back-bar">
+        <a href="../切片/index.html" class="nav-link">📂 返回切片总目录 (Index)</a>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 15 · Test 2 Part 1 精听点播台</span>
+        <div style="display: flex; gap: 14px;">
+            <a href="../剑桥15_Test2_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 题型错因复盘表 ➔</a>
+            <a href="../C15T1_错题音频切片/C15T1_错题切片点播台.html" class="nav-link">前往 剑15 T1 切片 ➔</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>剑桥雅思 15 Test 2 Part 1 错题切片点播台</h1>
+        <p>🎯 Festival Information 小镇艺术节信息咨询 · 答案句精准切片 · 破除认知死锁与预判固化</p>
+    </header>
+
+    <!-- Sticky Audio Player -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="now-playing-text">
+                <span>🎵 请在下方选择要练习的题目切片</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="toggleLoop(this)" id="loop-btn" title="单曲循环当前切片">🔁 单曲循环: 关</button>
+            </div>
+        </div>
+        <audio id="main-audio" controls preload="auto"></audio>
+        <div class="player-controls">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">播放速度：</span>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="setSpeed(0.8, this)">0.8x 慢速</button>
+                <button class="pill-btn active" onclick="setSpeed(1.0, this)">1.0x 原速</button>
+                <button class="pill-btn" onclick="setSpeed(1.2, this)">1.2x 提速</button>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: auto;">
+                高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- 4-step Guide -->
+    <div class="tips-panel">
+        <div class="tips-title">💡 针对本套题 4 大核心漏洞靶向精练指南</div>
+        <ol class="tips-list">
+            <li><strong>Step 1 扫除生词脱敏</strong>：认清 <em>carpentry</em>、<em>chisels</em> 纯属背景铺垫生词，紧咬介词短语 <em>out of wood</em>（对应题干 <em>from [ 7 ]</em>）。</li>
+            <li><strong>Step 2 清空死锁预设</strong>：做 Q6 时切断 Q5 的“美食惯性”，只预判“手工作品名词”，听见 <em>posters</em> 绝不质疑它能不能吃！</li>
+            <li><strong>Step 3 抓牢转折词 BUT</strong>：Q2 听到 <em>I haven't seen it myself</em> 瞬间神经紧绷，死咬 <em>BUT the review</em>，绝不把 <em>paper</em> 误当 <em>people</em>！</li>
+            <li><strong>Step 4 录音跟读比对原声</strong>：点击「🎙️ 录音跟读」复述原声，攻克后置具象词 <em>sweet cakes</em> 干扰，建立客观主干抓取反射。</li>
+        </ol>
+    </div>
+
+    <!-- Shadowing Feature Banner -->
+    <div class="shadow-guide-box">
+        <div class="shadow-guide-title">
+            <span>🎙️ <strong>「影子跟读与原声对比」已就绪</strong></span>
+            <span class="shadow-guide-tag">读顺才能听懂 · 彻底粉碎听觉干扰与抢答慌乱</span>
+        </div>
+        1. 每一个切片卡片右上角均配备「<strong>🎙️ 录音跟读</strong>」专属按钮；<br>
+        2. 听顺原声后，点击「<strong>🎙️ 录音跟读</strong>」复述录制（可无限次重录）；<br>
+        3. 录完点击「<strong>▶ 试听跟读</strong>」和「<strong>👂 对比原声</strong>」比对语调语速。（纯前端浏览器本地暂存，安全隐私）。
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (4)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (6)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+    </div>
+
+    <!-- Slice List -->
+    <div class="slice-list">
+
+        <!-- CARD 01: Q1 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q1</span>
+                    <span class="card-tag tag-p1">①词音 + ②拼写</span>
+                    <h3 class="card-title">字母逐字报读精准锁定 · Eustatis 首字母规范大写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('01_Q1_芭蕾舞团名称Eustatis字母逐字拼写.mp3', 'Q1: 芭蕾舞团名称 Eustatis 拼写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_01" onclick="handleRecBtnClick('card_01')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_01" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_01"></span>
+                    <span class="rec-status-text" id="rec-status-card_01">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_01">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_01" onclick="playUserRecording('card_01')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_01')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_01')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_01')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "TIM: The next day, the 18th, there's a performance by a ballet company called <span class="ans-highlight">Eustatis</span>. JEAN: Sorry? TIM: The name is spelt <span class="signal-highlight">E-U-S-T-A-T-I-S</span>. They appeared in last year's festival, and went down very well. Again, their programme is designed for all ages."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。成功规避了英音元音字母 E (<code>/iː/</code>) 与 A (<code>/eɪ/</code>) 易混陷阱，紧跟考官逐字报读 <code>E-U-S-T-A-T-I-S</code>，首字母规范大写，开局稳健拿分。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> The next day, the 18th, there's a performance by a ballet company called Eustatis.</div>
+                            <div class="cn-line">第二天，也就是18号，有一场名为 Eustatis 的芭蕾舞团的演出。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> Sorry?</div>
+                            <div class="cn-line">不好意思，您能再说一遍吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> The name is spelt E-U-S-T-A-T-I-S. They appeared in last year's festival, and went down very well. Again, their programme is designed for all ages.</div>
+                            <div class="cn-line">名字拼作 E-U-S-T-A-T-I-S。他们参加过去年的艺术节，反响非常好。同样，他们的节目老少皆宜。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 02: Q2 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q2</span>
+                    <span class="card-tag tag-p1">④逻辑转折缺失 + ③句意脱靶</span>
+                    <h3 class="card-title">转折信号词 but 脱敏 · paper 错听为 people · 漏听主干 review</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('02_Q2_喜剧剧目Jemima与当地报纸好评review.mp3', 'Q2: 剧评 review 与转折词 but')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_02" onclick="handleRecBtnClick('card_02')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_02" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_02"></span>
+                    <span class="rec-status-text" id="rec-status-card_02">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_02">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_02" onclick="playUserRecording('card_02')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_02')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_02')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_02')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "TIM: You're in luck! On the 19th and 20th a local amateur group are performing one written by a member of the group. It's called <span class="signal-highlight">Jemima</span>. That'll be on in the town hall. They've already performed it two or three times. <span class="trap-highlight">I haven't seen it myself</span>, <span class="signal-highlight">but</span> the <span class="ans-highlight">review</span> in the local paper was very good. JEAN: And is it suitable for children? TIM: Yes, in fact it's aimed more at children than at adults, so both performances are in the afternoon."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因深度诊断与神经机制：本题错失漏填（✗）</strong>。<br>
+                    1. <strong>人名定位成功但后段跟丢</strong>：卷面前期预读定位到人名 <em>Jemima</em> 成功，说明定位锚点有效；<br>
+                    2. <strong>转折词 but 信号脱敏</strong>：说话人 Tim 先讲闲聊 <em>"I haven't seen it myself"</em>（我自己没看过），紧接着用核心强转折词 <strong>but</strong> 引出考点主干 <em>"but the review in the local paper was very good"</em>。因对转折信号词脱敏，注意力被闲聊消耗；<br>
+                    3. <strong>背景词误听替代主干</strong>：耳朵把 <em>local paper</em> 错听成了 <em>local people</em>，大脑算力瞬间陷入“当地人怎么了”的认知纠结中，导致位于转折词后方轻读的主干考点词 <code>review</code> 完全没有进入听觉工作记忆。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> You're in luck! On the 19th and 20th a local amateur group are performing one written by a member of the group. It's called Jemima. That'll be on in the town hall.</div>
+                            <div class="cn-line">你运气真好！在19号和20号，当地的一个业余剧团将上演由他们的一位成员创作的剧目。名字叫《杰米玛》（Jemima）。将在市政厅演出。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> They've already performed it two or three times. I haven't seen it myself, but the review in the local paper was very good.</div>
+                            <div class="cn-line">他们已经演过两三次了。我自己没看过，但当地报纸上的评价非常好。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> And is it suitable for children?</div>
+                            <div class="cn-line">那它适合孩子们看吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> Yes, in fact it's aimed more at children than at adults, so both performances are in the afternoon.</div>
+                            <div class="cn-line">适合，事实上它更多是面向儿童而不是成人的，所以两场演出都在下午。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 03: Q3 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q3</span>
+                    <span class="card-tag tag-p1">④逻辑 + ⑤改写（声音角色反转）</span>
+                    <h3 class="card-title">突破声音角色常规 · 咨询人 Jean 主动提问逆向抓词 dance</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('03_Q3_现代舞蹈专场dance与咨询人提问角色反转.mp3', 'Q3: 舞蹈演出类别 dance 抓词')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_03" onclick="handleRecBtnClick('card_03')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_03" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_03"></span>
+                    <span class="rec-status-text" id="rec-status-card_03">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_03">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_03" onclick="playUserRecording('card_03')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_03')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_03')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_03')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "JEAN: And what about <span class="ans-highlight">dance</span>? Will there be any performances? TIM: Yes, also on the 20th, but in the evening. A professional company is putting on a show of modern pieces, with electronic music by young composers."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。突破了“只有解答人 Tim 才会报出答案”的传统思维模式，在听到咨询者 Jean 反客为主主动提问 <em>"And what about dance?"</em> 时，敏锐捕捉并精准预判答案门类，顺利拿分。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> And what about dance? Will there be any performances?</div>
+                            <div class="cn-line">那舞蹈呢？会有什么演出吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> Yes, also on the 20th, but in the evening. A professional company is putting on a show of modern pieces, with electronic music by young composers.</div>
+                            <div class="cn-line">有的，也是在20号，不过是在晚上。一家专业舞团将上演一台现代舞剧目，配乐是由青年作曲家创作的电子音乐。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 04: Q4 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q4</span>
+                    <span class="card-tag tag-p1">①词音/格式 + ⑤改写</span>
+                    <h3 class="card-title">险胜 young people 干扰诱捕 · 克服常识反差锁定专名 Chat</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('04_Q4_沟通主题舞剧名称Chat与专有名词常识反差.mp3', 'Q4: 舞剧专有名词 Chat')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_04" onclick="handleRecBtnClick('card_04')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_04" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_04"></span>
+                    <span class="rec-status-text" id="rec-status-card_04">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_04">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_04" onclick="playUserRecording('card_04')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_04')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_04')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_04')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "TIM: The show is about how people communicate, or fail to communicate, with each other, so it's got the <span class="signal-highlight">rather strange name</span>, <span class="ans-highlight">Chat</span>. JEAN: I suppose that's because that's something we do both face to face and online. TIM: That's right."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。<br>
+                    1. <strong>克服干扰诱捕</strong>：前面出现了 <em>young composers</em>，由于 young 是常见形容词，在听到 strange name 时大脑在 <em>young people</em> 与 <em>chat</em> 之间产生了剧烈博弈；<br>
+                    2. <strong>决策正确果断</strong>：依靠卷面空前限定词 <em>show is called...</em> 以及录音提示 <em>"rather strange name"</em>（相当奇怪的名字）锁定专有名词 <code>Chat</code>，决策准确。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> The show is about how people communicate, or fail to communicate, with each other, so it's got the rather strange name, Chat.</div>
+                            <div class="cn-line">这台演出的主题是人与人之间如何沟通，或者如何未能沟通，所以它起了一个相当奇怪的名字——《聊天》（Chat）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> I suppose that's because that's something we do both face to face and online.</div>
+                            <div class="cn-line">我想这是因为沟通是我们无论面对面还是在线上都会做的事情吧。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> That's right.</div>
+                            <div class="cn-line">没错。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 05: Q5 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q5</span>
+                    <span class="card-tag tag-p1">③句意 + ⑤改写（具象词覆盖陷阱）</span>
+                    <h3 class="card-title">后置感官词 sweet 强刺激覆盖听觉工作记忆 · 错失定语 healthy</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('05_Q5_烹饪工作坊健康饮食healthy与词性定语改写.mp3', 'Q5: 健康食物 healthy 与甜食 sweet 干扰')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_05" onclick="handleRecBtnClick('card_05')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_05" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_05"></span>
+                    <span class="rec-status-text" id="rec-status-card_05">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_05">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_05" onclick="playUserRecording('card_05')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_05')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_05')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_05')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "JEAN: Good. We're particularly interested in cookery – you don't happen to have a cookery workshop, do you? TIM: We certainly do. It's going to focus on <span class="signal-highlight">how to make food part of a</span> <span class="ans-highlight">healthy</span> <span class="signal-highlight">lifestyle</span>, and it'll show that <span class="trap-highlight">even sweet things like cakes</span> can contain much less sugar than they usually do."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因深度诊断与神经机制：误填具象干扰词 sweet（✗）</strong>。<br>
+                    1. <strong>语法定语改写未预判</strong>：卷面 <code>Making [ 5 ] food</code>，需要一个形容词定语修饰 food。录音先出现了前置逻辑改写 <code>make food part of a healthy lifestyle</code>（把食物作为健康生活的一部分 = 制作健康食物），答案词 <code>healthy</code> 稍纵即逝；<br>
+                    2. <strong>感官词强刺激覆盖听觉缓存</strong>：录音后半句紧接着大声举例甜食 <em>\"even sweet things like cakes\"</em>。<code>sweet / cakes</code> 属于强感官具象词，大脑对其激活阈值极低，瞬间覆盖了前置的抽象词 <code>healthy</code>，导致听觉缓存被改写，误填 sweet。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> Good. We're particularly interested in cookery – you don't happen to have a cookery workshop, do you?</div>
+                            <div class="cn-line">太好了。我们对烹饪特别感兴趣——你们不会碰巧有烹饪工作坊吧？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> We certainly do. It's going to focus on how to make food part of a healthy lifestyle, and it'll show that even sweet things like cakes can contain much less sugar than they usually do.</div>
+                            <div class="cn-line">当然有！它将重点关注如何让食物成为健康生活方式的一部分，并展示即使像蛋糕这样的甜食，也可以比通常情况下含少得多的糖分。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> That might be worth going to. We're trying to encourage our children to cook.</div>
+                            <div class="cn-line">那很值得去。我们正想鼓励孩子们做饭呢。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 06: Q6 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q6</span>
+                    <span class="card-tag tag-p1">【预判锚定固化】+ ⑤改写 / ⑦单复数</span>
+                    <h3 class="card-title">食物框架固化诱发认知失调死锁 · 听见 poster 却漏写复数 posters</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('06_Q6_儿童海报制作posters同义改写与复数尾音.mp3', 'Q6: 海报制作 posters 与破除食物固化')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_06" onclick="handleRecBtnClick('card_06')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_06" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_06"></span>
+                    <span class="rec-status-text" id="rec-status-card_06">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_06">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_06" onclick="playUserRecording('card_06')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_06')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_06')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_06')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "TIM: Another workshop is just for children, and that's on <span class="signal-highlight">creating</span> <span class="ans-highlight">posters</span> <span class="signal-highlight">to reflect the history of the town</span>. The aim is to make children aware of how both the town and people's lives have changed over the centuries. The results will be exhibited in the community centre."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因深度诊断与神经机制：听到 poster 却大脑死锁漏写（✗）</strong>。<br>
+                    1. <strong>思维惯性蔓延固化</strong>：因为 Q5 刚做完“烹饪（cookery/food）”，大脑潜意识把整个 Workshops 都锚定在“食物”范畴内，心里一直在等“孩子做什么食物？”；<br>
+                    2. <strong>认知失调引起前额叶死锁</strong>：耳朵精准捕捉到了 <code>poster</code> 的发音，但大脑正在用“食物框架”强行解码：“poster 是什么食物？海报怎么能吃？是不是某种冷门点心？”，发生短暂逻辑死锁；<br>
+                    3. <strong>破局铁律</strong>：题干 <code>(children only) Making [ 6 ]</code>，只预判“复数名词/手工作品”，<strong>绝不擅自脑补狭隘实词属性（如食物）！</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> Another workshop is just for children, and that's on creating posters to reflect the history of the town.</div>
+                            <div class="cn-line">另一个工作坊专门面向儿童，主题是制作反映小镇历史的海报。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> The aim is to make children aware of how both the town and people's lives have changed over the centuries. The results will be exhibited in the community centre.</div>
+                            <div class="cn-line">目的是让孩子们了解几个世纪以来小镇和人们的生活发生了怎样的变化。制作成果将在社区中心展出。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 07: Q7 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q7</span>
+                    <span class="card-tag tag-p1">【高级生词恐慌抢答】+ ③句意与介词脱节</span>
+                    <h3 class="card-title">生词 carpentry 恐慌诱发盲目抢答 · 错失原料介词短语 out of wood</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('07_Q7_成人木工玩具wood与生词干扰排他.mp3', 'Q7: 木头原材料 wood 与生词 carpentry')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_07" onclick="handleRecBtnClick('card_07')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_07" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_07"></span>
+                    <span class="rec-status-text" id="rec-status-card_07">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_07">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_07" onclick="playUserRecording('card_07')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_07')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_07')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_07')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "JEAN: Oh, why's that? TIM: <span class="trap-highlight">Because it involves carpentry</span> – participants will be <span class="signal-highlight">making toys</span> <span class="signal-highlight">out of</span> <span class="ans-highlight">wood</span>, so there'll be a lot of sharp chisels and other tools around. JEAN: It makes sense to keep children away from it. TIM: Exactly."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因深度诊断与神经机制：生词恐慌提前抢答误填 compen- country（✗）</strong>。<br>
+                    1. <strong>高级生词炸弹诱发提前抢答</strong>：听到生词 <code>carpentry</code>（木工手艺）时，大脑对生词极度敏感且恐惧，误以为“听到一个跟工具相关的难词就是考点”，在未理清语法关系前便急匆匆盲写（拼成 compen- country）；<br>
+                    2. <strong>丢失核心原料介词</strong>：卷面题干是 <code>from [ 7 ]</code>（原料介词短语），录音的对应改写是 <code>out of wood</code>。因手忙脚乱在写废词，听觉通道关闭，真正答案 <code>wood</code> 被擦肩而过。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> Oh, why's that?</div>
+                            <div class="cn-line">哦，为什么呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> Because it involves carpentry – participants will be making toys out of wood, so there'll be a lot of sharp chisels and other tools around.</div>
+                            <div class="cn-line">因为它涉及木工手艺——参与者将用木头制作玩具，所以现场会有很多锋利的凿子和其他工具。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> It makes sense to keep children away from it.</div>
+                            <div class="cn-line">让孩子们离远点确实很合理。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> Exactly.</div>
+                            <div class="cn-line">确实如此。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 08: Q8 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q8</span>
+                    <span class="card-tag tag-p1">④逻辑 + ⑤改写</span>
+                    <h3 class="card-title">双重排他逻辑成功 · 排除泳池干扰 · 锁定天然湖泊 lake</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('08_Q8_户外天然湖泊游泳lake与排除泳池干扰.mp3', 'Q8: 户外天然水域 lake 排除 swimming pool')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_08" onclick="handleRecBtnClick('card_08')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_08" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_08"></span>
+                    <span class="rec-status-text" id="rec-status-card_08">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_08">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_08" onclick="playUserRecording('card_08')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_08')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_08')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_08')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "TIM: Now let me tell you about some of the outdoor activities. There'll be supervised wild swimming … JEAN: Wild swimming? What's that? TIM: It just means swimming in natural waters, <span class="trap-highlight">rather than a swimming pool</span>. JEAN: Oh OK. <span class="signal-highlight">In a</span> <span class="ans-highlight">lake</span>, for instance. TIM: Yes, there's a beautiful one just outside the town, and that'll be the venue for the swimming."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。双重逻辑稳准识别：敏锐排除了 Tim 说的否定项 <em>rather than a swimming pool</em>，并在 Jean 提出 <em>In a lake, for instance</em> 时紧紧咬住，经 Tim 确认为场地后稳稳落笔 <code>lake</code>，抗干扰能力出色。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> Now let me tell you about some of the outdoor activities. There'll be supervised wild swimming …</div>
+                            <div class="cn-line">现在我来告诉你一些户外活动。将有受监护的“野生游泳”……</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> Wild swimming? What's that?</div>
+                            <div class="cn-line">野生游泳？那是什么？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> It just means swimming in natural waters, rather than a swimming pool.</div>
+                            <div class="cn-line">意思就是在天然水域里游泳，而不是在游泳池里。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JEAN</span> Oh OK. In a lake, for instance.</div>
+                            <div class="cn-line">哦好的。比如在湖里。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> Yes, there's a beautiful one just outside the town, and that'll be the venue for the swimming. There'll be lifeguards on duty, so it's suitable for all ages.</div>
+                            <div class="cn-line">是的，小镇外就有一个美丽的湖，那将是游泳的场地。现场会有救生员值班，所以老少皆宜。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 09: Q9 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q9</span>
+                    <span class="card-tag tag-p1">①词音 + ⑦单复数</span>
+                    <h3 class="card-title">领队专家改写映射 · 清辅音复数尾音 /ts/ 听辨无误 insects</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('09_Q9_林间漫步昆虫专家insects连读与单复数.mp3', 'Q9: 昆虫专家 insects 听辨')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_09" onclick="handleRecBtnClick('card_09')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_09" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_09"></span>
+                    <span class="rec-status-text" id="rec-status-card_09">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_09">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_09" onclick="playUserRecording('card_09')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_09')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_09')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_09')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "TIM: And finally, there'll be a walk in some nearby woods every day. <span class="signal-highlight">The leader is an expert on</span> <span class="ans-highlight">insects</span>. He'll show some that live in the woods, and how important they are for the environment."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。复数与主干听辨成功：将卷面 <code>led by an expert on...</code> 与录音 <code>The leader is an expert on...</code> 完美映射，听出了清辅音复数尾音 <code>/ts/</code> 并正确写出 <code>insects</code>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> And finally, there'll be a walk in some nearby woods every day. The leader is an expert on insects. He'll show some that live in the woods, and how important they are for the environment. So there are going to be all sorts of different things to do during the festival.</div>
+                            <div class="cn-line">最后，每天都会有一场在附近树林里的徒步活动。领队是一位昆虫专家。他会展示一些生活在树林里的昆虫，以及它们对环境有多重要。所以艺术节期间将有各种各样不同的活动。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 10: Q10 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q10</span>
+                    <span class="card-tag tag-p1">⑤改写 + ②拼写</span>
+                    <h3 class="card-title">动宾搭配与所有格等价替换 · keeping a blog 锁定 blog</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('10_Q10_筹备博客专栏blog动宾搭配与高频拼写.mp3', 'Q10: 主办人博客 blog 动宾改写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_10" onclick="handleRecBtnClick('card_10')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_10" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_10"></span>
+                    <span class="rec-status-text" id="rec-status-card_10">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_10">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_10" onclick="playUserRecording('card_10')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_10')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_10')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_10')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "TIM: If you'd like to read about how the preparations for the festival are going, the festival <span class="signal-highlight">organizer is keeping a</span> <span class="ans-highlight">blog</span>. Just search online for the festival…"
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。动宾改写对应精准：迅速将卷面 <code>organiser's [ 10 ]</code> 与录音中 <code>organizer is keeping a blog</code> 建立等价联结，拼写标准无误，完美收尾。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TIM</span> If you'd like to read about how the preparations for the festival are going, the festival organizer is keeping a blog. Just search online for the festival…</div>
+                            <div class="cn-line">如果你想了解艺术节的筹备进展，艺术节的主办人正在更新一个博客。直接在网上搜索这个艺术节即可……</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 11: FULL AUDIO -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1" style="background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); border-color: rgba(192, 132, 252, 0.4);\">全篇模考回放</span>
+                    <h3 class="card-title">Section 1 完整无删减录音 (5分31秒) · 全真连续盲听检验</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_1_Full_Festival_Information.mp3', 'Section 1 完整录音: Festival Information')">▶ 播放完整录音</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "本音频为剑桥雅思 15 Test 2 Section 1（Festival Information）完整对话录音，总时长 5 分 31 秒。建议在逐题完成切片盲听与错因诊断后，进行 1 次不暂停的全篇盲听模拟，检验在真实语速下的防死锁跳号纪律与抗干扰定力。"
+                </div>
+                <div class="analysis-box">
+                    <strong>训练建议：</strong>盲听时特别关注 Q2 (<em>but review</em>)、Q5 (<em>healthy lifestyle vs sweet cakes</em>)、Q6 (<em>posters</em>)、Q7 (<em>carpentry vs out of wood</em>) 四大关键节点的反应速度。
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; color: var(--text-muted); font-size: 0.88rem;">
+        <p>剑桥雅思 15 Test 2 Part 1 错题切片点播台 · 原生影子跟读训练 · 突破先验框架死锁</p>
+    </footer>
+</div>
+
+<script>
+    // Audio Player State
+    const mainAudio = document.getElementById('main-audio');
+    const nowPlayingText = document.getElementById('now-playing-text');
+    let isLooping = false;
+
+    function playAudio(filename, title) {
+        if (!mainAudio) return;
+        mainAudio.src = filename;
+        mainAudio.play().then(() => {
+            nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
+        }).catch(err => {
+            console.error("Playback failed:", err);
+            nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+        });
+    }
+
+    function toggleLoop(btn) {
+        isLooping = !isLooping;
+        if (mainAudio) {
+            mainAudio.loop = isLooping;
+        }
+        if (isLooping) {
+            btn.classList.add('active');
+            btn.innerHTML = '🔁 单曲循环: 开';
+        } else {
+            btn.classList.remove('active');
+            btn.innerHTML = '🔁 单曲循环: 关';
+        }
+    }
+
+    function setSpeed(speed, btn) {
+        if (mainAudio) {
+            mainAudio.playbackRate = speed;
+        }
+        const buttons = btn.parentElement.querySelectorAll('.pill-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    // Category Filtering
+    function filterCategory(category, btn) {
+        const tabs = document.querySelectorAll('.tab-btn');
+        tabs.forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (category === 'all') {
+                card.style.display = 'block';
+            } else if (cardCat === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Shadowing Recording Logic
+    const userRecordings = {};
+    let activeMediaRecorder = null;
+    let activeAudioChunks = [];
+    let recordingCardId = null;
+    let recordTimerInterval = null;
+    let recordSeconds = 0;
+    let userAudioPlayer = null;
+
+    function handleRecBtnClick(cardId) {
+        if (recordingCardId === cardId) {
+            stopRecording(cardId);
+        } else {
+            if (recordingCardId) {
+                stopRecording(recordingCardId);
+            }
+            startRecording(cardId);
+        }
+    }
+
+    function toggleRecording(cardId) {
+        deleteRecording(cardId);
+        startRecording(cardId);
+    }
+
+    async function startRecording(cardId) {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            activeAudioChunks = [];
+            recordingCardId = cardId;
+            recordSeconds = 0;
+
+            let mimeType = 'audio/webm';
+            if (!MediaRecorder.isTypeSupported('audio/webm')) {
+                if (MediaRecorder.isTypeSupported('audio/mp4')) {
+                    mimeType = 'audio/mp4';
+                } else if (MediaRecorder.isTypeSupported('audio/aac')) {
+                    mimeType = 'audio/aac';
+                } else {
+                    mimeType = '';
+                }
+            }
+            
+            const options = mimeType ? { mimeType } : {};
+            activeMediaRecorder = new MediaRecorder(stream, options);
+
+            activeMediaRecorder.ondataavailable = e => {
+                if (e.data && e.data.size > 0) {
+                    activeAudioChunks.push(e.data);
+                }
+            };
+
+            activeMediaRecorder.onstop = () => {
+                const blob = new Blob(activeAudioChunks, { type: activeMediaRecorder.mimeType || 'audio/webm' });
+                const audioUrl = URL.createObjectURL(blob);
+                userRecordings[cardId] = {
+                    blob: blob,
+                    url: audioUrl,
+                    duration: recordSeconds
+                };
+                
+                stream.getTracks().forEach(track => track.stop());
+                updateUIAfterRecording(cardId);
+            };
+
+            activeMediaRecorder.start(200);
+
+            // Update UI
+            const recBtn = document.getElementById(`rec-btn-${cardId}`);
+            recBtn.classList.add('recording');
+            recBtn.innerHTML = '⏹️ 完成录音';
+
+            const panel = document.getElementById(`user-rec-panel-${cardId}`);
+            panel.style.display = 'flex';
+            
+            const statusText = document.getElementById(`rec-status-${cardId}`);
+            statusText.innerText = '🔴 正在录音... 请跟着原声朗读复述';
+            statusText.style.color = '#f87171';
+
+            const dot = document.getElementById(`rec-dot-${cardId}`);
+            dot.classList.add('recording');
+
+            panel.querySelector('.rec-panel-btns').style.display = 'none';
+
+            // Timer
+            const timerBadge = document.getElementById(`rec-time-${cardId}`);
+            timerBadge.innerText = '00:00';
+            clearInterval(recordTimerInterval);
+            recordTimerInterval = setInterval(() => {
+                recordSeconds++;
+                const mins = String(Math.floor(recordSeconds / 60)).padStart(2, '0');
+                const secs = String(recordSeconds % 60).padStart(2, '0');
+                timerBadge.innerText = `${mins}:${secs}`;
+            }, 1000);
+
+        } catch (err) {
+            console.error('Microphone access denied or error:', err);
+            alert('无法启动录音：请检查浏览器是否已授权麦克风权限！');
+        }
+    }
+
+    function stopRecording(cardId) {
+        if (activeMediaRecorder && activeMediaRecorder.state !== 'inactive') {
+            activeMediaRecorder.stop();
+        }
+        clearInterval(recordTimerInterval);
+        recordingCardId = null;
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 重新录音';
+
+        const dot = document.getElementById(`rec-dot-${cardId}`);
+        dot.classList.remove('recording');
+    }
+
+    function updateUIAfterRecording(cardId) {
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'flex';
+
+        const statusText = document.getElementById(`rec-status-${cardId}`);
+        statusText.innerText = '✅ 跟读已录制完成';
+        statusText.style.color = '#34d399';
+
+        const btnGroup = panel.querySelector('.rec-panel-btns');
+        btnGroup.style.display = 'flex';
+    }
+
+    function playUserRecording(cardId) {
+        const item = userRecordings[cardId];
+        if (!item || !item.url) return;
+
+        if (mainAudio && !mainAudio.paused) {
+            mainAudio.pause();
+        }
+
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+
+        userAudioPlayer = new Audio(item.url);
+        const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+        playBtn.innerText = '⏸️ 正在试听';
+
+        userAudioPlayer.play().catch(e => console.error('Play error:', e));
+
+        userAudioPlayer.onended = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+        userAudioPlayer.onpause = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+    }
+
+    function compareOfficial(cardId) {
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const card = document.getElementById(`rec-btn-${cardId}`).closest('.slice-card');
+        const playBtn = card.querySelector('.play-card-btn');
+        playBtn.click();
+    }
+
+    function deleteRecording(cardId) {
+        if (userRecordings[cardId] && userRecordings[cardId].url) {
+            URL.revokeObjectURL(userRecordings[cardId].url);
+            delete userRecordings[cardId];
+        }
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'none';
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 录音跟读';
+    }
+</script>
+
+</body>
+</html>
