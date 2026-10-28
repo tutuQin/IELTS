@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 15 Test 4 Part 1 听力错题切片与考点点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Player Sticky Bar */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .now-playing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        audio {
+            width: 100%;
+            height: 44px;
+            border-radius: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Tips panel */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .tips-list strong {
+            color: var(--text-main);
+        }
+
+        .shadow-guide-box {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+            line-height: 1.6;
+        }
+
+        .shadow-guide-title {
+            font-weight: 700;
+            color: #f87171;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .shadow-guide-tag {
+            font-size: 0.78rem;
+            background: rgba(248, 113, 113, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Slice List */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .tag-wrong {
+            background: rgba(248, 113, 113, 0.2);
+            color: var(--accent-red);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+
+        .tag-correct {
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--accent-green);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .tag-p1 {
+            background: rgba(192, 132, 252, 0.2);
+            color: var(--accent-purple);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 2px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .play-card-btn:hover {
+            opacity: 0.9;
+        }
+
+        .record-card-btn {
+            background: rgba(248, 113, 113, 0.15);
+            border: 1px solid rgba(248, 113, 113, 0.4);
+            color: #fca5a5;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.25);
+            color: #fff;
+        }
+
+        .record-card-btn.recording {
+            background: #ef4444;
+            color: #fff;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* User Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ef4444;
+            display: inline-block;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .rec-btn-pill {
+            padding: 4px 10px;
+            border-radius: 14px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-play-user { background: #10b981; color: white; }
+        .btn-compare { background: #8b5cf6; color: white; }
+        .btn-rerecord { background: #f59e0b; color: white; }
+        .btn-del { background: #64748b; color: white; }
+
+        .rec-btn-pill:hover { opacity: 0.85; }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .transcript-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-left: 3px solid var(--accent-blue);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .signal-highlight {
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .ans-highlight {
+            color: var(--accent-green);
+            font-weight: 700;
+            background: rgba(52, 211, 153, 0.15);
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        .trap-highlight {
+            color: var(--accent-red);
+            font-weight: 700;
+            text-decoration: line-through;
+            background: rgba(248, 113, 113, 0.15);
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        .analysis-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .analysis-box strong {
+            color: #f8fafc;
+        }
+
+        /* Bilingual Dropdown */
+        .bilingual-details {
+            margin-top: 6px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .bilingual-details[open] {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent-blue);
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .toggle-icon {
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 10px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 2px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .spk-man { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-woman { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-back-bar">
+        <a href="../切片/index.html" class="nav-link">📂 返回切片总目录</a>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 15 · Test 4 精听点播台</span>
+        <a href="../剑桥15_Test4_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 查看完整复盘表 ➔</a>
+    </div>
+
+    <header>
+        <h1>🎧 剑桥雅思 15 Test 4 Part 1 听力错题切片与考点点播台</h1>
+        <p>Customer Satisfaction Survey（客户满意度调查）· 靶向攻克修饰抢跑、长句抱怨与语法预判盲区</p>
+    </header>
+
+    <!-- Sticky Audio Player -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="now-playing-text">
+                <span>🎵 准备就绪：请点击下方任意切片开始磨耳朵</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="toggleLoop(this)" id="loop-btn" title="单曲循环当前切片">🔁 单曲循环: 关</button>
+            </div>
+        </div>
+        <audio id="main-audio" controls preload="auto"></audio>
+        <div class="player-controls">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">播放速度：</span>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="setSpeed(0.8, this)">0.8x 慢速</button>
+                <button class="pill-btn active" onclick="setSpeed(1.0, this)">1.0x 原速</button>
+                <button class="pill-btn" onclick="setSpeed(1.2, this)">1.2x 提速</button>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: auto;">
+                高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- 4-step Guide -->
+    <div class="tips-panel">
+        <div class="tips-title">💡 针对本套题 4 大核心漏洞靶向精练指南</div>
+        <ol class="tips-list">
+            <li><strong>Step 1 破除定语抢跑（Q4 normal vs return）</strong>：题干已有 <em>Standard</em>，录音念 <em>normal</em> 属于已给词同义改写，强制笔尖悬停半秒，等核心票种名词 <em>return</em>！</li>
+            <li><strong>Step 2 脱敏长难抱怨句（Q6 machine vs online）</strong>：Sophie 大段吐槽售票机属于纯排他垃圾信息，保持耐力，只等收束引语 <em>So to answer your question... online</em>！</li>
+            <li><strong>Step 3 抓牢绝对时间限定词（Q2 shopping vs work）</strong>：题干限定 <em>today</em>，排除转折后带 <em>sometimes</em> 的习惯表达，绝不改错为 <em>work</em>！</li>
+            <li><strong>Step 4 激活空前语法预判（Q8 information vs time）</strong>：看到 <em>how much</em> 立刻锁定不可数名词，对应 <em>the amount of information</em>，绝不盲抓修饰短语 <em>train times</em>！</li>
+        </ol>
+    </div>
+
+    <!-- Shadowing Feature Banner -->
+    <div class="shadow-guide-box">
+        <div class="shadow-guide-title">
+            <span>🎙️ <strong>「影子跟读与原声对比」已就绪</strong></span>
+            <span class="shadow-guide-tag">读顺才能听懂 · 彻底粉碎听觉干扰与抢答慌乱</span>
+        </div>
+        1. 每一个切片卡片右上角均配备「<strong>🎙️ 录音跟读</strong>」专属按钮；<br>
+        2. 听顺原声后，点击「<strong>🎙️ 录音跟读</strong>」复述录制（可无限次重录）；<br>
+        3. 录完点击「<strong>▶ 试听跟读</strong>」和「<strong>👂 对比原声</strong>」比对语调语速。（纯前端浏览器本地暂存，安全隐私）。
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (4)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (6)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+    </div>
+
+    <!-- Slice List -->
+    <div class="slice-list">
+        <!-- CARD_01 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q1</span>
+                    <span class="card-tag tag-p1">①词音 + ②拼写</span>
+                    <h3 class="card-title">职业名词连读与拼写 · journalist 规范作答</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('01_Q1_职业记者journalist拼写与连读考点.mp3', 'Q1: 职业记者 journalist 连读与拼写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_01" onclick="handleRecBtnClick('card_01')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_01" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_01"></span>
+                    <span class="rec-status-text" id="rec-status-card_01">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_01">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_01" onclick="playUserRecording('card_01')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_01')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_01')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_01')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "MAN: And would you mind telling me what you do? SOPHIE: I'm a <span class="ans-highlight">journalist</span>. MAN: Oh really? That must be interesting."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。听辨定位词 <em>what you do</em> 反应敏捷，连读 <em>I'm a journalist</em> 抓取精准，首音节重音与末尾 <em>-ist</em> 拼写规范无误，稳稳拿下开局第一分。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Great. Thank you. So first of all, could you tell me your name?</div>
+                            <div class="cn-line">好的。谢谢你。首先，能告诉我你的名字吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> It's Sophie Bird.</div>
+                            <div class="cn-line">我是索菲·伯德（Sophie Bird）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Thank you. And would you mind telling me what you do?</div>
+                            <div class="cn-line">谢谢。那你介意告诉我你的职业是什么吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> I'm a journalist. [Q1]</div>
+                            <div class="cn-line">我是名记者。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Oh really? That must be interesting.</div>
+                            <div class="cn-line">哦，真的吗？那肯定很有趣。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes. It is.</div>
+                            <div class="cn-line">是的，确实挺有意思的。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_02 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q2</span>
+                    <span class="card-tag tag-p1">④逻辑坑 (T3 原词陷阱 / 频率偷换)</span>
+                    <h3 class="card-title">今日出行目的 shopping 与常态工作 work 陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('02_Q2_出行目的购物shopping与工作work前置转折陷阱.mp3', 'Q2: 出行目的 shopping vs work 前置诱导与转折陷阱')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_02" onclick="handleRecBtnClick('card_02')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_02" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_02"></span>
+                    <span class="rec-status-text" id="rec-status-card_02">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_02">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_02" onclick="playUserRecording('card_02')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_02')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_02')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_02')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "MAN: So was the reason for your visit here today <span class="trap-highlight">work</span>? SOPHIE: Actually, it's my day off. I came here to do some <span class="ans-highlight">shopping</span>. MAN: Oh right. SOPHIE: But I do <span class="trap-highlight">sometimes</span> come here for work."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因诊断与盲点：</strong>你的反馈是“写对 shopping 被 work 影响改错”。<br>1. 男声提问设套 <em>work?</em>，Sophie 用 <em>Actually, it's my day off</em> 明确排除，紧接着给出真实目的 <em>shopping</em>；<br>2. 卷面题干限定 <strong>today</strong>，Sophie 随后补充的 <em>sometimes come here for work</em> 属于<strong>平时的常态习惯</strong>，绝非今日目的！<br>3. 大脑受到最后原词 <em>work</em> 的近因冲击产生怀疑动摇改错。记住：<strong>题干有 today 时，转折后的 sometimes 句一律是干扰！</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> So was the reason for your visit here today work?</div>
+                            <div class="cn-line">那么你今天来这里的目的是为了工作吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Actually, it's my day off. I came here to do some shopping. [Q2]</div>
+                            <div class="cn-line">其实今天是我休息日。我来这是为了买点东西/购物。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Oh right.</div>
+                            <div class="cn-line">哦，这样啊。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> But I do sometimes come here for work.</div>
+                            <div class="cn-line">不过我有时的确也会因为工作来这里。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_03 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q3</span>
+                    <span class="card-tag tag-p1">②拼写坑 (专有名词大写)</span>
+                    <h3 class="card-title">返回车站名称 Staunfirth 专有名词逐字拼写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('03_Q3_返回车站名称Staunfirth专有名词逐字拼写.mp3', 'Q3: 返回车站 Staunfirth 专有名词逐字拼写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_03" onclick="handleRecBtnClick('card_03')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_03" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_03"></span>
+                    <span class="rec-status-text" id="rec-status-card_03">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_03">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_03" onclick="playUserRecording('card_03')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_03')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_03')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_03')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "SOPHIE: Staunfirth, where I live. MAN: Can I just check the spelling? <span class="signal-highlight">S-T-A-U-N-F-I-R-T-H</span>? SOPHIE: That's right."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。地名拼读捕捉精准，英音元音字母 <em>U</em> 与辅音 <em>R</em> 听辨清晰，首字母严格规范大写，专有名词书写完全符合规范。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK. Now I'd like to ask some questions about your journey today, if that's OK.</div>
+                            <div class="cn-line">好的。现在如果方便的话，我想问几个关于你今天行程的问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes. No problem.</div>
+                            <div class="cn-line">可以，没问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Right, so can you tell me which station you're travelling back to?</div>
+                            <div class="cn-line">好的，那你能告诉我你正准备乘车回哪座车站吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Staunfirth, where I live. [Q3]</div>
+                            <div class="cn-line">斯汤弗斯站（Staunfirth），我住在那儿。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Can I just check the spelling? S-T-A-U-N-F-I-R-T-H?</div>
+                            <div class="cn-line">我能核对一下拼写吗？S-T-A-U-N-F-I-R-T-H？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> That's right.</div>
+                            <div class="cn-line">完全正确。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> And you travelled from there this morning?</div>
+                            <div class="cn-line">你今天早上就是从那里乘车过来的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_04 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q4</span>
+                    <span class="card-tag tag-p1">⑤改写 + ⑥格式 (T7 定语抢跑截留)</span>
+                    <h3 class="card-title">票种 return 与修饰词 normal 抢跑陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('04_Q4_车票类型往返票return与定语形容词normal辨析.mp3', 'Q4: 票种 return 与修饰词 normal 抢跑陷阱')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_04" onclick="handleRecBtnClick('card_04')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_04" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_04"></span>
+                    <span class="rec-status-text" id="rec-status-card_04">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_04">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_04" onclick="playUserRecording('card_04')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_04')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_04')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_04')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "MAN: Next, can I ask what kind of ticket you bought? I assume it wasn't a season ticket... SOPHIE: That's right. No, I just got a <span class="trap-highlight">normal</span> <span class="ans-highlight">return</span> ticket."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因诊断与盲点：</strong>你的反馈是“写成 normal 没有听后一个词提前定位答案了”。<br>1. 题干已有前置定语 <strong>Standard [ 4 ] ticket</strong>。Sophie 说的 <em>normal</em> 仅仅是题干已给词 <em>Standard</em> 的<strong>同义改写词</strong>；<br>2. 大脑听到 <em>normal</em> 兴奋抢跑，注意力立刻转去书写，完全漏听了紧随其后的真正票种核心名词 <strong>return</strong>；<br>3. <strong>避坑纪律</strong>：听到题干已给修饰语的改写，必须悬停半秒，等中心名词出现后再落笔！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK, good. Next, can I ask what kind of ticket you bought? I assume it wasn't a season ticket, as you don't travel every day.</div>
+                            <div class="cn-line">好的。接下来，请问你买的是哪种车票？我猜应该不是季票吧，毕竟你不是每天都通勤。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> That's right. No, I just got a normal return [Q4] ticket. I don't have a railcard so I didn't get any discount. I keep meaning to get one because it's a lot cheaper.</div>
+                            <div class="cn-line">没错。不是季票，我只买了一张普通的往返票。我没有铁路打折卡，所以没享受到优惠。我一直打算办一张，因为确实能便宜很多。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_05 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q5</span>
+                    <span class="card-tag tag-p1">①词音 + ⑥格式</span>
+                    <h3 class="card-title">全价票价格 23.70 抓取与虚拟折扣排除</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('05_Q5_全价票价格23.70与折扣优惠打折干扰.mp3', 'Q5: 全价票价 23.70 与虚拟打折 20% 干扰')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_05" onclick="handleRecBtnClick('card_05')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_05" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_05"></span>
+                    <span class="rec-status-text" id="rec-status-card_05">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_05">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_05" onclick="playUserRecording('card_05')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_05')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_05')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_05')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "MAN: Yes – you'd have saved <span class="trap-highlight">20%</span> on your ticket today. So you paid the full price for your ticket? SOPHIE: I paid <span class="ans-highlight">£23.70</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。果断排除了男声虚拟假设句 <em>you'd have saved 20%</em> 的干扰，准确捕捉到了实际支付金额 <em>twenty-three seventy (23.70)</em>，金钱格式规范。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes – you'd have saved 20% on your ticket today. So you paid the full price for your ticket?</div>
+                            <div class="cn-line">是啊——如果你有卡，今天这趟票就能省20%呢。所以你今天买的是全价票？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> I paid £23.70. [Q5]</div>
+                            <div class="cn-line">我付了23.70英镑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK. Do you think that's good value for money?</div>
+                            <div class="cn-line">好的。你觉得这票价物有所值吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Not really. I think it's too much for a journey that only takes 45 minutes.</div>
+                            <div class="cn-line">并不觉得。我觉得对于一段只有45分钟的车程来说，这个价格太贵了。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_06 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q6</span>
+                    <span class="card-tag tag-p1">④逻辑长句干扰 + ⑤改写 (T1 修正)</span>
+                    <h3 class="card-title">购票方式 online 与长句抱怨 machine 陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('06_Q6_购票方式网购online与售票机machine长句干扰陷阱.mp3', 'Q6: 购票途径 online 与长句抱怨 machine 陷阱')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_06" onclick="handleRecBtnClick('card_06')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_06" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_06"></span>
+                    <span class="rec-status-text" id="rec-status-card_06">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_06">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_06" onclick="playUserRecording('card_06')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_06')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_06')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_06')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "SOPHIE: ...I <span class="trap-highlight">hate using ticket machines</span>... There's always a queue for the machines and they're often <span class="trap-highlight">out of order</span>... So to answer your question … I got an e-ticket <span class="ans-highlight">online</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因诊断与盲点：</strong>你的反馈是“听到一大段截取了 machine 没有听最后”。<br>1. Sophie 在给出真实答案前进行了长达十几秒的吐槽（排队长、故障多），全部带有极强烈的<strong>否定排他色彩</strong>；<br>2. 面对信息过载产生听觉慌乱，急于抓稻草截取了 <em>machine</em>；<br>3. 真实答案在总结句 <em>So to answer your question … I got an e-ticket online</em>。<strong>铁律：负向吐槽一律过滤，耐心守候收束总结句！</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Right. And do you usually buy your tickets at the station?</div>
+                            <div class="cn-line">明白。那平时你一般是在车站买票吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Well, I do usually but the ticket office closes early and I hate using ticket machines. I think ticket offices should be open for longer hours. There's always a queue for the machines and they're often out of order.</div>
+                            <div class="cn-line">嗯，平时通常是这样，但售票处关门太早了，我又极度讨厌用自动售票机。我觉得售票处营业时间应该延长点。自动售票机前总是排长队，而且还经常坏掉故障。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> A lot of customers are saying the same thing.</div>
+                            <div class="cn-line">很多旅客也反映过同样的问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> So to answer your question … I got an e-ticket online. [Q6]</div>
+                            <div class="cn-line">所以回到你的问题……我是在网上买的电子票。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_07 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q7</span>
+                    <span class="card-tag tag-p1">③句意 + ④逻辑转折</span>
+                    <h3 class="card-title">不满因素 delay 与平时准点 on time 干扰</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('07_Q7_行程不满意延误delay与准点on_time常态对比.mp3', 'Q7: 不满因素 delay 与平时准点 on time 干扰')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_07" onclick="handleRecBtnClick('card_07')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_07" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_07"></span>
+                    <span class="rec-status-text" id="rec-status-card_07">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_07">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_07" onclick="playUserRecording('card_07')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_07')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_07')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_07')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "SOPHIE: Well, normally, the trains <span class="trap-highlight">run on time</span> and are pretty reliable but today there was a <span class="ans-highlight">delay</span>; the train was about 15 minutes behind schedule."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。转折信号抓取灵敏，成功排除了常态准点 <em>run on time</em> 的干扰，死咬转折连词 <em>but today</em> 后面的真正事实 <em>delay</em>，单数拼写标准。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> And, is there anything you weren't satisfied with?</div>
+                            <div class="cn-line">那么，今天行程中有什么让你不太满意的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Well, normally, the trains run on time and are pretty reliable but today there was a delay [Q7]; the train was about 15 minutes behind schedule.</div>
+                            <div class="cn-line">嗯，通常情况下，列车都很准点而且挺靠谱的，但今天延误了；火车晚点了大概15分钟。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK. I'll put that down.</div>
+                            <div class="cn-line">好的，我把它记下来。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_08 -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q8</span>
+                    <span class="card-tag tag-p1">③句意坑 + ⑥语法预判失灵 (T3 原词陷阱)</span>
+                    <h3 class="card-title">满意设施车次信息 information 与 train times 介词干扰</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('08_Q8_车站满意设施车次信息information与模糊听辨.mp3', 'Q8: 满意设施 车次信息 information 与 train times 介词干扰')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_08" onclick="handleRecBtnClick('card_08')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_08" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_08"></span>
+                    <span class="rec-status-text" id="rec-status-card_08">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_08">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_08" onclick="playUserRecording('card_08')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_08')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_08')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_08')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "SOPHIE: I think the best thing is that they've improved <span class="signal-highlight">the amount of</span> <span class="ans-highlight">information</span> <span class="trap-highlight">about train times</span> etc. that's given to passengers..."
+                </div>
+                <div class="analysis-box">
+                    <strong>错因诊断与盲点：</strong>你的反馈是“写成了 time，没有听懂这句话，题目也没有看懂”。<br>1. <strong>语法预判缺失</strong>：题干是 <em>how much [ 8 ] was provided</em>。<em>how much</em> 后面必须填<strong>不可数名词</strong>！填 <em>time</em>（车站为乘客提供时间）完全荒谬；<br>2. <strong>同义替换映射</strong>：录音中 <em>the amount of information = how much information</em> 是标准改写对；<br>3. <em>about train times</em> 只是后置介词修饰语。审题时画出 <em>how much</em>，提前在脑中预判【不可数名词】，秒杀锁定 <em>information</em>！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Now I'd also like to ask about the facilities at this station. You've probably noticed that the whole station's been upgraded. What are you most satisfied with?</div>
+                            <div class="cn-line">现在我还想了解一下本站的设施。你可能已经注意到整个车站都翻新升级了。你对什么最满意？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> I think the best thing is that they've improved the amount of information [Q8] about train times etc. that's given to passengers – it's much clearer – before there was only one board and I couldn't always see it properly – which was frustrating.</div>
+                            <div class="cn-line">我觉得最好的一点是，他们改善了提供给乘客的关于车次时间等方面的信息量——现在清晰多了——以前只有一个显示牌，我总看不清楚——挺让人心烦的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> That's good.</div>
+                            <div class="cn-line">那挺好的。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_09 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q9</span>
+                    <span class="card-tag tag-p1">⑤改写 + ⑦单复数</span>
+                    <h3 class="card-title">站台缺少座椅 platform / platforms 与同义改写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('09_Q9_站台缺少座椅platform与复数干扰定位.mp3', 'Q9: 站台缺少座椅 platform / platforms 与同义改写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_09" onclick="handleRecBtnClick('card_09')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_09" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_09"></span>
+                    <span class="rec-status-text" id="rec-status-card_09">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_09">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_09" onclick="playUserRecording('card_09')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_09')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_09')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_09')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "SOPHIE: But one thing is that there aren't enough places to sit down, especially on the <span class="ans-highlight">platforms</span>. MAN: OK – so I'll put 'seating' down, shall I..."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。迅速将题干 <em>lack of seats</em> 与录音 <em>aren't enough places to sit down</em> 建立等价映射，锁定介词后方核心地点名词 <em>platforms</em>，单复数均可接受。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> And is there anything you're not satisfied with?</div>
+                            <div class="cn-line">那有什么让你不满意的设施吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Let's see ... I think things have generally improved a lot. The trains are much more modern and I like the new café. But one thing is that there aren't enough places to sit down, especially on the platforms [Q9].</div>
+                            <div class="cn-line">让我想想……我觉得总体改善了很多。列车更现代化了，我也喜欢新开的咖啡馆。但有一点就是坐的地方不够多，特别是在站台上。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK – so I'll put 'seating' down, shall I, as the thing you're least satisfied with?</div>
+                            <div class="cn-line">好的——那我就把“座椅”记为你最不满意的项目，可以吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes, OK.</div>
+                            <div class="cn-line">行，可以。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_10 -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q10</span>
+                    <span class="card-tag tag-p1">③句意 + ⑤改写</span>
+                    <h3 class="card-title">车站停车场 parking 与中立态度评价</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('10_Q10_车站停车场设施parking与中立评价态度.mp3', 'Q10: 车站停车场 parking 与中立态度评价')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_10" onclick="handleRecBtnClick('card_10')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_10" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_10"></span>
+                    <span class="rec-status-text" id="rec-status-card_10">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_10">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_10" onclick="playUserRecording('card_10')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_10')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_10')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_10')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "MAN: What about the <span class="ans-highlight">parking</span> at the station? SOPHIE: Well to be honest, I don't really have an opinion as I never use it. MAN: So, <span class="signal-highlight">neither satisfied nor dissatisfied</span> for that then."
+                </div>
+                <div class="analysis-box">
+                    <strong>作答评价：本题答对（✓）</strong>。紧随男声提问定位到设施名词 <em>parking</em>，并通过后续对话 <em>neither satisfied nor dissatisfied</em> 验证了题干的中立态度区间，稳健完美收官。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Can I ask your opinion on some of the other facilities? What about the parking [Q10] at the station?</div>
+                            <div class="cn-line">我能问问你对其他一些设施的看法吗？车站的停车设施怎么样？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Well to be honest, I don't really have an opinion as I never use it.</div>
+                            <div class="cn-line">呃说实话，我其实没啥意见，因为我从来不用它。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> So, neither satisfied nor dissatisfied for that then.</div>
+                            <div class="cn-line">那么，对停车这项就是“既不满意也不不满意”了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes, I suppose so.</div>
+                            <div class="cn-line">是的，我想是的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK, well, that's all the questions. Thank you very much for your time.</div>
+                            <div class="cn-line">好的，那所有问题就这些了。非常感谢你抽出时间配合。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> You're welcome.</div>
+                            <div class="cn-line">不客气。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- CARD FULL -->
+        <div class="slice-card" data-category="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">完整精听 · Part 1 全篇</span>
+                    <span class="card-tag tag-p1">全篇语流与抗雪崩连贯训练</span>
+                    <h3 class="card-title">Part 1 完整录音实战盲听磨耳朵 (Q1 - Q10 客户满意度调查)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_1_Full_Customer_Satisfaction_Survey.mp3', 'Part 1 完整录音: 客户满意度调查')">▶ 播放完整 Part 1</button>
+                    <button class="record-card-btn" id="rec-btn-card_full" onclick="handleRecBtnClick('card_full')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_full" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full"></span>
+                    <span class="rec-status-text" id="rec-status-card_full">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full" onclick="playUserRecording('card_full')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box" style="font-size: 1rem; max-height: 260px; overflow-y: auto;">
+                    <strong>【完整音频实战目标】</strong>：在完成了分题精准切片与错因深度归因后，合上书面文字，重新播放整段 Part 1 音频。强迫自己严格执行<strong>“1.5 秒笔尖跳号纪律”</strong>：遇到 Q2 转折干扰、Q4 修饰语抢跑、Q6 负面长句抱怨、Q8 语法改写时，测试自己能否在连贯语流中平稳守住全部 10 题节奏！
+                </div>
+                <div class="analysis-box">
+                    <strong>实战防崩铁律：</strong>1. 听完 Q1 无论是否确定，立刻看 Q2 出行目的；2. Q2 排除 work 干扰抓牢 shopping，立刻看 Q3-Q4 票种；3. Q4 听见 normal 悬停半秒锁定 return；4. Q6 过滤 machine 抱怨耐心等结尾 online；5. Q8 预判不可数名词锁定 information。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Section 1 官方完整录音听力原文与逐句精读翻译（100% 完整不删减） <span class="toggle-badge">默认隐藏 · 点击展开精读</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Hello. Do you mind if I ask you some questions about your journey today? We're doing a customer satisfaction survey.</div>
+                            <div class="cn-line">你好。请问你介意我问几个关于你今天行程的问题吗？我们正在做一项客户满意度调查。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes. OK. I've got about ten minutes before my train home leaves. I'm on a day trip.</div>
+                            <div class="cn-line">可以的。在回家的火车开动前我大概有十分钟时间。我今天是来一日游的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Great. Thank you. So first of all, could you tell me your name?</div>
+                            <div class="cn-line">太好了，谢谢你。首先，能告诉我你的名字吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> It's Sophie Bird.</div>
+                            <div class="cn-line">我是索菲·伯德（Sophie Bird）。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Thank you. And would you mind telling me what you do?</div>
+                            <div class="cn-line">谢谢。那你介意告诉我你的职业是什么吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> I'm a journalist. [Q1]</div>
+                            <div class="cn-line">我是名记者。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Oh really? That must be interesting.</div>
+                            <div class="cn-line">哦，真的吗？那肯定很有趣。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes. It is.</div>
+                            <div class="cn-line">是的，确实挺有意思的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> So was the reason for your visit here today work?</div>
+                            <div class="cn-line">那么你今天来这里的目的是为了工作吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Actually, it's my day off. I came here to do some shopping. [Q2]</div>
+                            <div class="cn-line">其实今天是我休息日。我来这是为了买点东西/购物。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Oh right.</div>
+                            <div class="cn-line">哦，这样啊。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> But I do sometimes come here for work.</div>
+                            <div class="cn-line">不过我有时的确也会因为工作来这里。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK. Now I'd like to ask some questions about your journey today, if that's OK.</div>
+                            <div class="cn-line">好的。现在如果方便的话，我想问几个关于你今天行程的问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes. No problem.</div>
+                            <div class="cn-line">可以，没问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Right, so can you tell me which station you're travelling back to?</div>
+                            <div class="cn-line">好的，那你能告诉我你正准备乘车回哪座车站吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Staunfirth [Q3], where I live.</div>
+                            <div class="cn-line">斯汤弗斯站（Staunfirth），我住在那儿。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Can I just check the spelling? S-T-A-U-N-F-I-R-T-H?</div>
+                            <div class="cn-line">我能核对一下拼写吗？S-T-A-U-N-F-I-R-T-H？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> That's right.</div>
+                            <div class="cn-line">完全正确。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> And you travelled from there this morning?</div>
+                            <div class="cn-line">你今天早上就是从那里乘车过来的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK, good. Next, can I ask what kind of ticket you bought? I assume it wasn't a season ticket, as you don't travel every day.</div>
+                            <div class="cn-line">好的。接下来，请问你买的是哪种车票？我猜应该不是季票吧，毕竟你不是每天都通勤。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> That's right. No, I just got a normal return [Q4] ticket. I don't have a railcard so I didn't get any discount. I keep meaning to get one because it's a lot cheaper.</div>
+                            <div class="cn-line">没错。不是季票，我只买了一张普通的往返票。我没有铁路打折卡，所以没享受到优惠。我一直打算办一张，因为确实能便宜很多。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes – you'd have saved 20% on your ticket today. So you paid the full price for your ticket?</div>
+                            <div class="cn-line">是啊——如果你有卡，今天这趟票就能省20%呢。所以你今天买的是全价票？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> I paid £23.70. [Q5]</div>
+                            <div class="cn-line">我付了23.70英镑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK. Do you think that's good value for money?</div>
+                            <div class="cn-line">好的。你觉得这票价物有所值吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Not really. I think it's too much for a journey that only takes 45 minutes.</div>
+                            <div class="cn-line">并不觉得。我觉得对于一段只有45分钟的车程来说，这个价格太贵了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Yes, that's one of the main complaints we get. So, you didn't buy your ticket in advance?</div>
+                            <div class="cn-line">是的，这是我们收到的主要抱怨之一。那么，你没有提前购票吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> No. I know it's cheaper if you buy a week in advance, but I didn't know I was coming then.</div>
+                            <div class="cn-line">没有。我知道提前一周买更便宜，但我当时还不知道自己要来。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> I know. You can't always plan ahead. So, did you buy it this morning?</div>
+                            <div class="cn-line">我明白，人不可能总能提前计划。那你是今天早上买的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> No, it was yesterday.</div>
+                            <div class="cn-line">不是，是昨天买的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Right. And do you usually buy your tickets at the station?</div>
+                            <div class="cn-line">明白。那平时你一般是在车站买票吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Well, I do usually but the ticket office closes early and I hate using ticket machines. I think ticket offices should be open for longer hours. There's always a queue for the machines and they're often out of order.</div>
+                            <div class="cn-line">嗯，平时通常是这样，但售票处关门太早了，我又极度讨厌用自动售票机。我觉得售票处营业时间应该延长点。自动售票机前总是排长队，而且还经常坏掉故障。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> A lot of customers are saying the same thing.</div>
+                            <div class="cn-line">很多旅客也反映过同样的问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> So to answer your question … I got an e-ticket online. [Q6]</div>
+                            <div class="cn-line">所以回到你的问题……我是在网上买的电子票。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK. Now I'd like to ask you about your satisfaction with your journey. So what would you say you were most satisfied with today?</div>
+                            <div class="cn-line">好的。现在我想问问你对今天旅程的满意度。你认为今天最让你满意的是什么？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Well, I like the Wi-Fi on the train. It's improved a lot. It makes it easier for me to work if I want to.</div>
+                            <div class="cn-line">嗯，我很喜欢火车上的 Wi-Fi。改善了很多。如果我想办公的话方便多了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> That's the first time today anyone's mentioned that. It's good to get some positive feedback on that.</div>
+                            <div class="cn-line">这是今天第一次有人提到这点。能收到这方面的正面反馈真不错。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Mmm.</div>
+                            <div class="cn-line">嗯。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> And, is there anything you weren't satisfied with?</div>
+                            <div class="cn-line">那么，今天行程中有什么让你不太满意的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Well, normally, the trains run on time and are pretty reliable but today there was a delay [Q7]; the train was about 15 minutes behind schedule.</div>
+                            <div class="cn-line">嗯，通常情况下，列车都很准点而且挺靠谱的，但今天延误了；火车晚点了大概15分钟。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK. I'll put that down. Now I'd also like to ask about the facilities at this station. You've probably noticed that the whole station's been upgraded. What are you most satisfied with?</div>
+                            <div class="cn-line">好的，我把它记下来。现在我还想了解一下本站的设施。你可能已经注意到整个车站都翻新升级了。你对什么最满意？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> I think the best thing is that they've improved the amount of information [Q8] about train times etc. that's given to passengers – it's much clearer – before there was only one board and I couldn't always see it properly – which was frustrating.</div>
+                            <div class="cn-line">我觉得最好的一点是，他们改善了提供给乘客的关于车次时间等方面的信息量——现在清晰多了——以前只有一个显示牌，我总看不清楚——挺让人心烦的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> That's good. And is there anything you're not satisfied with?</div>
+                            <div class="cn-line">那挺好的。那有什么让你不满意的设施吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Let's see ... I think things have generally improved a lot. The trains are much more modern and I like the new café. But one thing is that there aren't enough places to sit down, especially on the platforms [Q9].</div>
+                            <div class="cn-line">让我想想……我觉得总体改善了很多。列车更现代化了，我也喜欢新开的咖啡馆。但有一点就是坐的地方不够多，特别是在站台上。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK – so I'll put 'seating' down, shall I, as the thing you're least satisfied with?</div>
+                            <div class="cn-line">好的——那我就把“座椅”记为你最不满意的项目，可以吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes, OK.</div>
+                            <div class="cn-line">行，可以。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> Can I ask your opinion on some of the other facilities? What about the parking [Q10] at the station?</div>
+                            <div class="cn-line">我能问问你对其他一些设施的看法吗？车站的停车设施怎么样？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Well to be honest, I don't really have an opinion as I never use it.</div>
+                            <div class="cn-line">呃说实话，我其实没啥意见，因为我从来不用它。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> So, neither satisfied nor dissatisfied for that then.</div>
+                            <div class="cn-line">那么，对停车这项就是“既不满意也不不满意”了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> Yes, I suppose so.</div>
+                            <div class="cn-line">是的，我想是的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">MAN</span> OK, well, that's all the questions. Thank you very much for your time.</div>
+                            <div class="cn-line">好的，那所有问题就这些了。非常感谢你抽出时间配合。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SOPHIE</span> You're welcome.</div>
+                            <div class="cn-line">不客气。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>剑桥雅思 15 Test 4 听力 Part 1 核心考点切片系统 · 雅思听力磨耳朵强化工程</p>
+    </footer>
+</div>
+
+<script>
+    // Audio Player State
+    const mainAudio = document.getElementById('main-audio');
+    const nowPlayingText = document.getElementById('now-playing-text');
+    let isLooping = false;
+
+    function playAudio(filename, title) {
+        if (!mainAudio) return;
+        mainAudio.src = filename;
+        mainAudio.play().then(() => {
+            nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
+        }).catch(err => {
+            console.error("Playback failed:", err);
+            nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+        });
+    }
+
+    function toggleLoop(btn) {
+        isLooping = !isLooping;
+        if (mainAudio) {
+            mainAudio.loop = isLooping;
+        }
+        if (isLooping) {
+            btn.classList.add('active');
+            btn.innerHTML = '🔁 单曲循环: 开';
+        } else {
+            btn.classList.remove('active');
+            btn.innerHTML = '🔁 单曲循环: 关';
+        }
+    }
+
+    function setSpeed(speed, btn) {
+        if (mainAudio) {
+            mainAudio.playbackRate = speed;
+        }
+        const buttons = btn.parentElement.querySelectorAll('.pill-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    // Category Filtering
+    function filterCategory(category, btn) {
+        const tabs = document.querySelectorAll('.tab-btn');
+        tabs.forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (category === 'all') {
+                card.style.display = 'block';
+            } else if (cardCat === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Shadowing Recording Logic
+    const userRecordings = {};
+    let activeMediaRecorder = null;
+    let activeAudioChunks = [];
+    let recordingCardId = null;
+    let recordTimerInterval = null;
+    let recordSeconds = 0;
+    let userAudioPlayer = null;
+
+    function handleRecBtnClick(cardId) {
+        if (recordingCardId === cardId) {
+            stopRecording(cardId);
+        } else {
+            if (recordingCardId) {
+                stopRecording(recordingCardId);
+            }
+            startRecording(cardId);
+        }
+    }
+
+    function toggleRecording(cardId) {
+        deleteRecording(cardId);
+        startRecording(cardId);
+    }
+
+    async function startRecording(cardId) {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            activeAudioChunks = [];
+            recordingCardId = cardId;
+            recordSeconds = 0;
+
+            let mimeType = 'audio/webm';
+            if (!MediaRecorder.isTypeSupported('audio/webm')) {
+                if (MediaRecorder.isTypeSupported('audio/mp4')) {
+                    mimeType = 'audio/mp4';
+                } else if (MediaRecorder.isTypeSupported('audio/aac')) {
+                    mimeType = 'audio/aac';
+                } else {
+                    mimeType = '';
+                }
+            }
+
+            activeMediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+
+            activeMediaRecorder.ondataavailable = e => {
+                if (e.data && e.data.size > 0) {
+                    activeAudioChunks.push(e.data);
+                }
+            };
+
+            activeMediaRecorder.onstop = () => {
+                const audioBlob = new Blob(activeAudioChunks, { type: activeMediaRecorder.mimeType || 'audio/webm' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                userRecordings[cardId] = audioUrl;
+
+                stream.getTracks().forEach(track => track.stop());
+
+                const btn = document.getElementById(`rec-btn-${cardId}`);
+                if (btn) {
+                    btn.classList.remove('recording');
+                    btn.innerHTML = '🎙️ 重新跟读';
+                }
+
+                const panel = document.getElementById(`user-rec-panel-${cardId}`);
+                if (panel) {
+                    const btns = panel.querySelector('.rec-panel-btns');
+                    if (btns) btns.style.display = 'flex';
+                    const statusText = panel.querySelector('.rec-status-text');
+                    if (statusText) statusText.innerText = '✅ 跟读已录制完成';
+                    const dot = panel.querySelector('.rec-status-dot');
+                    if (dot) dot.style.background = '#10b981';
+                }
+                clearInterval(recordTimerInterval);
+                recordingCardId = null;
+            };
+
+            activeMediaRecorder.start();
+
+            const btn = document.getElementById(`rec-btn-${cardId}`);
+            if (btn) {
+                btn.classList.add('recording');
+                btn.innerHTML = '⏹️ 停止录音';
+            }
+
+            const panel = document.getElementById(`user-rec-panel-${cardId}`);
+            if (panel) {
+                panel.style.display = 'flex';
+                const btns = panel.querySelector('.rec-panel-btns');
+                if (btns) btns.style.display = 'none';
+                const statusText = panel.querySelector('.rec-status-text');
+                if (statusText) statusText.innerText = '🔴 正在录制你的跟读...';
+                const dot = panel.querySelector('.rec-status-dot');
+                if (dot) dot.style.background = '#ef4444';
+            }
+
+            const timeBadge = document.getElementById(`rec-time-${cardId}`);
+            recordTimerInterval = setInterval(() => {
+                recordSeconds++;
+                const mins = String(Math.floor(recordSeconds / 60)).padStart(2, '0');
+                const secs = String(recordSeconds % 60).padStart(2, '0');
+                if (timeBadge) timeBadge.innerText = `${mins}:${secs}`;
+            }, 1000);
+
+        } catch (err) {
+            console.error('Microphone access denied:', err);
+            alert('请允许浏览器使用麦克风，以使用影子跟读录音功能！');
+            recordingCardId = null;
+        }
+    }
+
+    function stopRecording(cardId) {
+        if (activeMediaRecorder && activeMediaRecorder.state !== 'inactive') {
+            activeMediaRecorder.stop();
+        }
+    }
+
+    function playUserRecording(cardId) {
+        const url = userRecordings[cardId];
+        if (!url) return;
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        userAudioPlayer = new Audio(url);
+        userAudioPlayer.play();
+    }
+
+    function compareOfficial(cardId) {
+        const card = document.getElementById(`rec-btn-${cardId}`).closest('.slice-card');
+        const playBtn = card.querySelector('.play-card-btn');
+        if (playBtn) playBtn.click();
+    }
+
+    function deleteRecording(cardId) {
+        if (userRecordings[cardId]) {
+            URL.revokeObjectURL(userRecordings[cardId]);
+            delete userRecordings[cardId];
+        }
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        if (panel) panel.style.display = 'none';
+        const btn = document.getElementById(`rec-btn-${cardId}`);
+        if (btn) {
+            btn.classList.remove('recording');
+            btn.innerHTML = '🎙️ 录音跟读';
+        }
+    }
+</script>
+</body>
+</html>

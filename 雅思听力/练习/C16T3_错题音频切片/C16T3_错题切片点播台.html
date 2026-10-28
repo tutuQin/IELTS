@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>剑桥雅思 16 Test 3 Part 1 听力答案句切片点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Sticky Player */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .now-playing-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        audio {
+            width: 100%;
+            height: 44px;
+            border-radius: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Tips Panel */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .tips-list strong {
+            color: var(--text-main);
+        }
+
+        .shadow-guide-box {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+            line-height: 1.6;
+        }
+
+        .shadow-guide-title {
+            font-weight: 700;
+            color: #f87171;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .shadow-guide-tag {
+            font-size: 0.78rem;
+            background: rgba(248, 113, 113, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Slice Cards */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .tag-wrong {
+            background: rgba(248, 113, 113, 0.2);
+            color: var(--accent-red);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+
+        .tag-correct {
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--accent-green);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .tag-p1 {
+            background: rgba(192, 132, 252, 0.2);
+            color: var(--accent-purple);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 2px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .play-card-btn:hover {
+            opacity: 0.9;
+        }
+
+        .record-card-btn {
+            background: rgba(248, 113, 113, 0.15);
+            border: 1px solid rgba(248, 113, 113, 0.4);
+            color: #fca5a5;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.25);
+            color: #fff;
+        }
+
+        .record-card-btn.recording {
+            background: #ef4444;
+            color: #fff;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* User Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ef4444;
+            display: inline-block;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .rec-btn-pill {
+            padding: 4px 10px;
+            border-radius: 14px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-play-user { background: #10b981; color: white; }
+        .btn-compare { background: #8b5cf6; color: white; }
+        .btn-del { background: #64748b; color: white; }
+
+        .rec-btn-pill:hover { opacity: 0.85; }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .prompt-box {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+        }
+
+        .prompt-label {
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .prompt-text {
+            color: #cbd5e1;
+        }
+
+        .blank-answer {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-blue);
+            cursor: pointer;
+        }
+
+        .transcript-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-left: 3px solid var(--accent-blue);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.92rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .highlight-word {
+            background: rgba(251, 191, 36, 0.25);
+            color: #fde047;
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .diagnosis-box {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .diagnosis-box strong {
+            color: #fca5a5;
+        }
+
+        /* Bilingual Dropdown */
+        .bilingual-details {
+            margin-top: 6px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .bilingual-details[open] {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent-blue);
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .toggle-icon {
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 10px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 2px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .spk-man { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-woman { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .full-transcript-scroll { max-height: 460px; overflow-y: auto; }
+
+        .full-audio-banner {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.15));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .full-audio-info h3 {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            margin-bottom: 4px;
+        }
+
+        .full-audio-info p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 25px;
+        }
+    </style>
+<style>.full-transcript-scroll { max-height: 460px; overflow-y: auto; } .card-header { flex-wrap: wrap; } .prompt-text { white-space: normal; }</style><style>
+
+.container { max-width: 1000px; }
+.slice-card.playing { border-color: var(--accent-blue); box-shadow: 0 0 20px rgba(56,189,248,.22); }
+.card-title { font-size: 1.28rem; line-height: 1.4; }
+.transcript-box { font-size: 1.07rem; line-height: 1.8; padding: 15px 19px; border-left-width: 4px; }
+.bilingual-summary { font-size: 1.04rem; }
+.bilingual-body { font-size: 1.1rem; line-height: 1.8; }
+.en-line { font-size: 1.1rem; }
+.cn-line { font-size: 1.01rem; }
+.ans-highlight { color:#34d399; font-weight:700; font-style:normal; background:rgba(52,211,153,.15); padding:2px 7px; border-radius:5px; border-bottom:2px solid rgba(52,211,153,.5); }
+.signal-highlight { color:#fbbf24; font-weight:700; font-style:normal; padding:1px 4px; }
+.trap-highlight { color:#f87171; font-weight:700; font-style:normal; text-decoration:line-through; background:rgba(248,113,113,.15); padding:2px 7px; border-radius:5px; }
+.highlight-legend { color:var(--text-muted); font-size:.83rem; margin-left:auto; }
+.highlight-legend .ans-highlight,.highlight-legend .trap-highlight,.highlight-legend .signal-highlight { text-decoration:none; }
+.btn-rerecord { color:var(--accent-amber); border:1px solid rgba(251,191,36,.35); background:rgba(251,191,36,.1); }
+.rec-status-dot.recording { animation:pulse 1s infinite; }
+.rec-panel-btns[hidden] { display:none !important; }
+.shadow-guide-box { line-height:1.6; }
+.shadow-guide-title { flex-wrap:wrap; gap:8px; }
+.record-card-btn:focus-visible,.play-card-btn:focus-visible,.pill-btn:focus-visible,.tab-btn:focus-visible,.rec-btn-pill:focus-visible,.bilingual-summary:focus-visible { outline:2px solid var(--accent-amber); outline-offset:2px; }
+@media (max-width:760px) {
+  .nav-back-bar,.player-info,.card-header,.card-actions,.player-controls,.rec-panel-btns { flex-wrap:wrap; }
+  .sticky-player { top:0; padding:12px; }
+  .slice-card { padding:16px; }
+  .card-actions { width:100%; }
+  .highlight-legend { margin-left:0; width:100%; }
+  .full-audio-banner { align-items:flex-start; }
+}
+
+</style>
+</head><body><div class="container">
+<div class="nav-back-bar"><a class="nav-link" href="../切片/index.html">📂 返回切片总目录</a><a class="nav-link" href="../剑桥16_Test3_听力Part1_七坑与3+2复盘汇总表.md">📊 打开复盘汇总表</a><a class="nav-link" href="../C16T2_错题音频切片/C16T2_错题切片点播台.html">➔ 剑16 T2 点播台</a></div>
+<header><h1>剑桥雅思 16 Test 3 Part 1 · 答案句切片点播台</h1><p>Junior Cycle Camp · reference / snack / medication / helmet → tent 的连续定位练习</p></header>
+<div class="full-audio-banner"><div class="full-audio-info"><h3>🎧 Part 1 完整连续原声（约 08:10）</h3><p>包含播音员说明、读题停顿、对话及检查时间。</p></div><button class="play-card-btn" onclick="playAudio('Section_1_Full_Junior_Cycle_Camp.mp3','Part 1 完整录音：Junior Cycle Camp', this)">▶ 播放完整 Part 1</button></div>
+<div class="sticky-player"><div class="player-info"><div class="now-playing-title" id="now-playing-text">🎵 待播：点击切片开始练习</div><div class="btn-group"><button class="pill-btn" id="loop-btn" onclick="toggleLoop()">🔁 单曲循环: 关</button></div></div>
+<audio id="main-audio" controls preload="auto">浏览器不支持音频播放。</audio>
+<div class="player-controls"><span class="highlight-legend">高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> ｜ <span class="ans-highlight">■ 答案词</span> ｜ <span class="trap-highlight">■ 干扰项</span></span><div class="btn-group"><button class="pill-btn" onclick="skipTime(-5)">⏪ 后退 5s</button><button class="pill-btn" onclick="skipTime(5)">⏩ 前进 5s</button><button class="pill-btn" onclick="replayAudio()">🔄 重头精听</button></div><div class="btn-group"><span>倍速:</span><button class="pill-btn" onclick="setSpeed(0.8,this)">0.8x</button><button class="pill-btn active" onclick="setSpeed(1,this)">1.0x</button><button class="pill-btn" onclick="setSpeed(1.25,this)">1.25x</button><button class="pill-btn" onclick="setSpeed(1.5,this)">1.5x</button></div></div></div>
+<div class="tips-panel"><div class="tips-title">💡 4 步靶向精听法（参照 C7T1）</div>
+<ol class="tips-list">
+<li><strong>Step 1 先读看懂：</strong>展开每题原文与翻译，找出黄色定位词、绿色答案词和红色干扰项。</li>
+<li><strong>Step 2 出声朗读：</strong>跟着音频把答案句读 3 遍，留意日期、拼读或连读。</li>
+<li><strong>Step 3 合上盲听：</strong>收起原文，把切片单曲循环 2–3 遍，再从定位词独立写出答案。</li>
+<li><strong>Step 4 录音跟读：</strong>录下自己的跟读，先试听，再点「对比原声」找出听读卡壳处。</li>
+</ol></div>
+<div class="shadow-guide-box"><div class="shadow-guide-title"><span>🎙️ <strong>跟读录音与原声对比</strong></span><span class="shadow-guide-tag">录后可试听、对比、重录</span></div>每张卡片都有「录音跟读」按钮；完成后可试听自己的录音、对比原声、重新跟读或清除。录音仅在当前页面内暂存，刷新页面会重置。</div><div class="tips-panel"><div class="tips-title">本套复盘提醒</div><p>Q10 已核对写对 199；重点练 Q6→Q7、Q8→Q9 的连续转场。</p></div>
+<div class="filter-tabs"><button class="tab-btn active" onclick="filterCategory('all',this)">全部切片与完整录音 (11)</button><button class="tab-btn" onclick="filterCategory('wrong',this)">错题 (4)</button><button class="tab-btn" onclick="filterCategory('correct',this)">答对 (6)</button><button class="tab-btn" onclick="filterCategory('full',this)">🎧 Part 1 完整录音</button></div>
+<div class="slice-list">
+        <div class="slice-card" data-category="correct" id="card-q1">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q1 · ✓</span><span class="card-tag tag-p1">P3 改写定位 / ④逻辑</span><h3 class="card-title">Q1: park · 听到定位并写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('01_Q1_先在公园练习park与定位成功.mp3', 'Q1: park', this)">▶ 播放切片 (30s)</button><button class="record-card-btn" id="rec-btn-q1" onclick="handleRecBtnClick('q1')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q1" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q1"></span><span class="rec-status-text" id="rec-status-q1">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q1">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q1" onclick="playUserRecording('q1')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q1')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q1')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q1')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">First of all, children at this level are taken to practise in a [ 1 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: …but <span class="signal-highlight">first</span> they’re taken to ride in the <span class="ans-highlight">park</span>, away from the traffic.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>先在营地练，再去 park，最终目标才是上路。你抓住 first 的先后顺序，写对地点。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Charlie? He’s seven. He can ride a bike, but he needs a little more training before he’s safe to go on the road.</div>
+                            <div class="cn-line">查理七岁。他会骑车，但还需要一些训练才能安全上路。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> He’d probably be best in Level 5. They start off practising on the site here, and we aim to get them riding on the road, but first they’re taken to ride in the park, away from the traffic.</div>
+                            <div class="cn-line">他可能最适合第五级。孩子们先在营地练习，目标是上路；但首先会去远离车辆的公园骑行。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q2">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q2 · ✓</span><span class="card-tag tag-p1">P1 原词定位 / T8 对象</span><h3 class="card-title">Q2: blue · 听到定位并写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('02_Q2_教练蓝色衬衫blue与红色主管干扰.mp3', 'Q2: blue', this)">▶ 播放切片 (35s)</button><button class="record-card-btn" id="rec-btn-q2" onclick="handleRecBtnClick('q2')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q2" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q2"></span><span class="rec-status-text" id="rec-status-q2">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q2">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q2" onclick="playUserRecording('q2')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q2')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q2')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q2')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Instructors wear [ 2 ] shirts.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: …three supervisors … have <span class="trap-highlight">red shirts</span>. … Then the <span class="signal-highlight">instructors themselves</span> are in <span class="ans-highlight">blue shirts</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>red 属于 supervisors，blue 才属于 instructors。你区分了两个岗位，没有被先出现的颜色带偏。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. And can you tell me a bit about the instructors?</div>
+                            <div class="cn-line">好的。能介绍一下教练吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Well, all our staff wear different coloured shirts. So, we have three supervisors, and they have red shirts. They support the instructors, and they also stand in for me if I’m not around. Then the instructors themselves are in blue shirts, and one of these is responsible for each class.</div>
+                            <div class="cn-line">所有工作人员穿不同颜色的上衣。三位主管穿红色上衣，负责支持教练，我不在时也代班。教练本人穿蓝色上衣，每班由一名教练负责。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="wrong" id="card-q3">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q3 · ✗</span><span class="card-tag tag-p1">③句意 + ④逻辑 / T3 后置例子</span><h3 class="card-title">Q3: reference · babysit（听到后面的例子，未理解所需证明）</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('03_Q3_教练须提交推荐证明reference与babysitter干扰.mp3', 'Q3: reference', this)">▶ 播放切片 (34s)</button><button class="record-card-btn" id="rec-btn-q3" onclick="handleRecBtnClick('q3')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q3" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q3"></span><span class="rec-status-text" id="rec-status-q3">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q3">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q3" onclick="playUserRecording('q3')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q3')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q3')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q3')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">A [ 3 ] is required and training is given.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: …instructors have to <span class="signal-highlight">submit</span> a <span class="ans-highlight">reference</span> from someone who’s seen them work with children – like if they’ve worked as a <span class="trap-highlight">babysitter</span>, for example. Then they have to complete our training course.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>required 对应 have to submit；所提交的是 reference（推荐证明）。babysitter 是后置的工作经历举例，不是提交材料；babysit 还是动词，与题干 A [ ] 的名词位置不合。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> In order to be accepted, all our instructors have to submit a reference from someone who’s seen them work with children – like if they’ve worked as a babysitter, for example. Then they have to complete our training course, including how to do lesson plans, and generally care for the well-being of the kids in their class. They do a great job, I have to say.</div>
+                            <div class="cn-line">为了被录用，所有教练都必须提交一份由见过他们照顾儿童的人出具的推荐证明，例如曾见过他们做临时保姆的人。之后还要完成我们的培训课程，包括制订教案及照顾班里孩子的身心状况。我得说他们做得很好。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. And tell me a bit about the classes. What size will Charlie’s class be?</div>
+                            <div class="cn-line">明白了。再说说班级吧。查理的班会有多大？</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q4">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q4 · ✓</span><span class="card-tag tag-p1">P1 原词定位 / T9 并列</span><h3 class="card-title">Q4: story · 写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('04_Q4_安静活动讲故事story与游戏并列.mp3', 'Q4: story', this)">▶ 播放切片 (34s)</button><button class="record-card-btn" id="rec-btn-q4" onclick="handleRecBtnClick('q4')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q4" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q4"></span><span class="rec-status-text" id="rec-status-q4">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q4">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q4" onclick="playUserRecording('q4')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q4')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q4')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q4')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">There are quiet times during the morning for a [ 4 ] or a game.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: …their instructor might tell them a <span class="ans-highlight">story</span> … or get them to play a <span class="signal-highlight">game</span> together.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>a story or a game 与题干并列结构一一对应；你准确抓住 game 前面的另一项。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. And tell me a bit about the classes. What size will Charlie’s class be?</div>
+                            <div class="cn-line">明白了。再说说班级吧。查理的班会有多大？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> We have a limit of eight children in each class, so their instructor really gets to know them well. They’re out riding most of the time but they have quiet times too, where their instructor might tell them a story that’s got something to do with cycling, or get them to play a game together. It’s a lot of fun.</div>
+                            <div class="cn-line">每班最多八个孩子，所以教练能充分了解他们。大部分时间他们都在骑车，但也有安静时段：教练可能讲一个与骑行有关的故事，或带他们一起玩游戏。很有趣。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q5">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q5 · ✓</span><span class="card-tag tag-p1">P2 逻辑定位 / 问答确认</span><h3 class="card-title">Q5: rain · 写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('05_Q5_下雨照常骑行rain与防水衣干扰.mp3', 'Q5: rain', this)">▶ 播放切片 (26s)</button><button class="record-card-btn" id="rec-btn-q5" onclick="handleRecBtnClick('q5')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q5" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q5"></span><span class="rec-status-text" id="rec-status-q5">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q5">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q5" onclick="playUserRecording('q5')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q5')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q5')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q5')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Classes are held even if there is [ 5 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>WOMAN: What happens if there’s <span class="ans-highlight">rain</span>? Do the classes <span class="signal-highlight">still run</span>? JAKE: Oh yes … put on our waterproofs and <span class="signal-highlight">keep cycling</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>女声先提出 rain，男声用 Oh yes 和 keep cycling 确认下雨仍上课。答案出现在提问者口中。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> We have a limit of eight children in each class, so their instructor really gets to know them well. They’re out riding most of the time but they have quiet times too, where their instructor might tell them a story that’s got something to do with cycling, or get them to play a game together. It’s a lot of fun.</div>
+                            <div class="cn-line">每班最多八个孩子，所以教练能充分了解他们。大部分时间他们都在骑车，但也有安静时段：教练可能讲一个与骑行有关的故事，或带他们一起玩游戏。很有趣。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> It must be. Now, what happens if there’s rain? Do the classes still run?</div>
+                            <div class="cn-line">听起来是。那如果下雨呢？课程还照常进行吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Oh yes. We don’t let that put us off – we just put on our waterproofs and keep cycling.</div>
+                            <div class="cn-line">当然。下雨不会让我们停课；大家穿上防水衣继续骑。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="wrong" id="card-q6">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q6 · ✗</span><span class="card-tag tag-p1">①词音 + ②拼写 / 短元音</span><h3 class="card-title">Q6: snack · sneck（定位到，但未认出词义与拼写）</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('06_Q6_自带点心snack与误拼sneck.mp3', 'Q6: snack', this)">▶ 播放切片 (28s)</button><button class="record-card-btn" id="rec-btn-q6" onclick="handleRecBtnClick('q6')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q6" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q6"></span><span class="rec-status-text" id="rec-status-q6">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q6">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q6" onclick="playUserRecording('q6')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q6')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q6')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q6')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">What to bring: a change of clothing; a [ 6 ]; shoes (not sandals).</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: …some spare clothes … And a <span class="ans-highlight">snack</span> for break time. WOMAN: How about a <span class="trap-highlight">drink</span>? JAKE: No, we’ll provide that.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>答案是 snack（点心），发音 /snæk/，拼写为 a，不是 sneck。后面的 drink 被男声否定，饮料由营地提供。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And is there anything special Charlie should bring along with him?</div>
+                            <div class="cn-line">查理需要带什么特别的东西吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Well, maybe some spare clothes, especially if the weather’s not so good. And a snack for break time.</div>
+                            <div class="cn-line">可以带些备用衣服，尤其是天气不好时；还要带一份休息时吃的点心。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> How about a drink?</div>
+                            <div class="cn-line">饮料呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> No, we’ll provide that. And make sure he has shoes, not sandals.</div>
+                            <div class="cn-line">饮料由我们提供。还要确保他穿鞋，而不是凉鞋。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="wrong" id="card-q7">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q7 · ✗</span><span class="card-tag tag-p1">①词音 + 注意力滞留 / P1 原词</span><h3 class="card-title">Q7: medication · 听到药物语义；纠结 Q6 后未听清 medicine / medication</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('07_Q7_随身药物medication与上一题滞留.mp3', 'Q7: medication', this)">▶ 播放切片 (25s)</button><button class="record-card-btn" id="rec-btn-q7" onclick="handleRecBtnClick('q7')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q7" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q7"></span><span class="rec-status-text" id="rec-status-q7">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q7">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q7" onclick="playUserRecording('q7')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q7')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q7')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q7')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">What to bring: Charlie’s [ 7 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>WOMAN: Charlie has to take <span class="ans-highlight">medication</span> <span class="signal-highlight">every few hours</span>, so I’ll make sure he has that.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>录音明确说 medication，不是 medicine。你已判断是药物，但还在回想 Q6 的 snack 拼写，错过了答案词的完整尾音。题目要求填写录音所用的一词。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> No, we’ll provide that. And make sure he has shoes, not sandals.</div>
+                            <div class="cn-line">饮料由我们提供。还要确保他穿鞋，而不是凉鞋。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Sure. And just at present Charlie has to take medication every few hours, so I’ll make sure he has that.</div>
+                            <div class="cn-line">好的。查理目前每隔几小时需要服药，所以我会确保他带上药。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Absolutely. Just give us details of when he has to take it and we’ll make sure he does.</div>
+                            <div class="cn-line">没问题。告诉我们他何时需要服药，我们会确保他按时服用。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Thanks.</div>
+                            <div class="cn-line">谢谢。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q8">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q8 · ✓</span><span class="card-tag tag-p1">P3 改写定位 / 数字铺垫</span><h3 class="card-title">Q8: helmet · 写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('08_Q8_首日检查头盔helmet与时间数字铺垫.mp3', 'Q8: helmet', this)">▶ 播放切片 (53s)</button><button class="record-card-btn" id="rec-btn-q8" onclick="handleRecBtnClick('q8')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q8" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q8"></span><span class="rec-status-text" id="rec-status-q8">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q8">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q8" onclick="playUserRecording('q8')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q8')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q8')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q8')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Before the class, his [ 8 ] will be checked.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: …a very <span class="signal-highlight">careful check</span> to make sure that every child’s <span class="ans-highlight">helmet</span> fits properly.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>题干 will be checked 对应录音 a very careful check；被检查的是 helmet。9.20、9.30、12.30 是首日时间安排，与你写对的物品无关。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Thanks.</div>
+                            <div class="cn-line">谢谢。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Now, there are a few things you should know about Day 1 of the camp. The classes normally start at 9.30 every morning, but on Day 1 you should aim to get Charlie here by 9.20. The finishing time will be 12.30 as usual. We need the additional time because there are a few extra things to do. The most important is that we have a very careful check to make sure that every child’s helmet fits properly. If it doesn’t fit, we’ll try to adjust it, or we’ll find him another one – but he must wear it all the time he’s on the bike.</div>
+                            <div class="cn-line">关于第一天还有几件事。课程平时上午九点半开始，但第一天请尽量在九点二十分送查理来；结束时间照常是十二点半。提前到是因为有额外事项，最重要的是仔细检查每个孩子的头盔是否合适。如不合适，我们会调整或换一个；只要骑车就必须戴头盔。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Of course.</div>
+                            <div class="cn-line">当然。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="wrong" id="card-q9">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q9 · ✗</span><span class="card-tag tag-p1">注意力滞留 / P2 顺序词</span><h3 class="card-title">Q9: tent · 未听到；纠结上一题 helmet 后空耳</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('09_Q9_在帐篷会合tent与头盔题后空耳.mp3', 'Q9: tent', this)">▶ 播放切片 (26s)</button><button class="record-card-btn" id="rec-btn-q9" onclick="handleRecBtnClick('q9')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q9" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q9"></span><span class="rec-status-text" id="rec-status-q9">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q9">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q9" onclick="playUserRecording('q9')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q9')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q9')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q9')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">He should then go to the [ 9 ] to meet his class instructor.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: <span class="signal-highlight">Then after that</span> … they’ll meet up in the <span class="ans-highlight">tent</span> – you can’t miss it.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>Then after that 是从头盔检查转向下一题的明确信号；meet his instructor 对应 meet up，地点是 tent。Q8 已写完应立即把视线移到 Q9。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Now, there are a few things you should know about Day 1 of the camp. The classes normally start at 9.30 every morning, but on Day 1 you should aim to get Charlie here by 9.20. The finishing time will be 12.30 as usual. We need the additional time because there are a few extra things to do. The most important is that we have a very careful check to make sure that every child’s helmet fits properly. If it doesn’t fit, we’ll try to adjust it, or we’ll find him another one – but he must wear it all the time he’s on the bike.</div>
+                            <div class="cn-line">关于第一天还有几件事。课程平时上午九点半开始，但第一天请尽量在九点二十分送查理来；结束时间照常是十二点半。提前到是因为有额外事项，最重要的是仔细检查每个孩子的头盔是否合适。如不合适，我们会调整或换一个；只要骑车就必须戴头盔。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Of course.</div>
+                            <div class="cn-line">当然。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Then after that, all the instructors will be waiting to meet their classes, and they’ll meet up in the tent – you can’t miss it. And each instructor will take their class away and get started.</div>
+                            <div class="cn-line">之后所有教练会等着与各自班级会合，集合地点在帐篷里，很容易找到。每位教练随后带班开始活动。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q10">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q10 · ✓</span><span class="card-tag tag-p1">P1 原词定位 / T1 旧价干扰</span><h3 class="card-title">Q10: 199 · 听到定位并写对 199</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('10_Q10_每周费用199美元与去年190干扰.mp3', 'Q10: 199', this)">▶ 播放切片 (32s)</button><button class="record-card-btn" id="rec-btn-q10" onclick="handleRecBtnClick('q10')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q10" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q10"></span><span class="rec-status-text" id="rec-status-q10">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q10">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q10" onclick="playUserRecording('q10')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q10')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q10')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q10')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">The course costs $[ 10 ] per week.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>JAKE: One hundred <span class="ans-highlight">ninety-nine</span> dollars. … it was one hundred <span class="trap-highlight">ninety then</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>当前每周价格是 199；190 是去年价格（was … then）。你已准确写出 199，也没有被后面的去年价格 190 改掉。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Then after that, all the instructors will be waiting to meet their classes, and they’ll meet up in the tent – you can’t miss it. And each instructor will take their class away and get started.</div>
+                            <div class="cn-line">之后所有教练会等着与各自班级会合，集合地点在帐篷里，很容易找到。每位教练随后带班开始活动。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. Well that all sounds good. Now can you tell me how much the camp costs a week?</div>
+                            <div class="cn-line">好的，听起来不错。请问每周费用是多少？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> One hundred ninety-nine dollars. We’ve managed to keep the price more or less the same as last year – it was one hundred ninety then. But the places are filling up quite quickly.</div>
+                            <div class="cn-line">每周一百九十九美元。我们基本维持了去年的价格；去年是一百九十美元。不过名额很快就满了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. OK, well I’d like to book for …</div>
+                            <div class="cn-line">明白。好的，我想预订……</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="full" id="card-full">
+            <div class="card-header"><div><span class="card-tag tag-p1">完整精听 · Part 1 全篇</span><h3 class="card-title">Part 1 完整录音实战盲听磨耳朵 (Q1 - Q10)</h3></div><div class="card-actions"><button class="play-card-btn" onclick="playAudio('Section_1_Full_Junior_Cycle_Camp.mp3','Part 1 完整录音：Junior Cycle Camp', this)">▶ 播放完整 Part 1</button><button class="record-card-btn" id="rec-btn-full" onclick="handleRecBtnClick('full')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-full" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-full"></span><span class="rec-status-text" id="rec-status-full">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-full">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-full" onclick="playUserRecording('full')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('full')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('full')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('full')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body"><div class="transcript-box"><strong>【完整音频练习目标】</strong>：连贯做 Q1–Q10，遇到 Q6 的拼写犹豫时及时放手；写完 Q8 helmet 后立即看 Q9 的会合地点。最后再展开完整原文核对。</div><div class="diagnosis-box"><strong>整段转场：</strong>park → blue → reference / babysitter 举例 → story → rain → snack → medication → helmet → tent → 199 / 去年 190。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看Part 1 完整对话原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body full-transcript-scroll">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Hello, Junior Cycle Camp, Jake speaking.</div>
+                            <div class="cn-line">你好，这里是青少年骑行营，我是杰克。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Hi. I’m calling for some information about the cycle camp – I’m thinking of sending my son.</div>
+                            <div class="cn-line">你好。我想了解骑行营的信息，正考虑让我儿子参加。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Great. Well, it’s held every weekday morning over the summer vacation and we focus on basic cycling skills and safety. We have eight levels for children from three years upwards. How old’s your son?</div>
+                            <div class="cn-line">好的。暑假期间每个工作日上午都有课程，重点是基本骑行技能和安全。三岁及以上的孩子分为八个级别。您儿子多大？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Charlie? He’s seven. He can ride a bike, but he needs a little more training before he’s safe to go on the road.</div>
+                            <div class="cn-line">查理七岁。他会骑车，但还需要一些训练才能安全上路。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> He’d probably be best in Level 5. They start off practising on the site here, and we aim to get them riding on the road, but first they’re taken to ride in the park, away from the traffic.</div>
+                            <div class="cn-line">他可能最适合第五级。孩子们先在营地练习，目标是上路；但首先会去远离车辆的公园骑行。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. And can you tell me a bit about the instructors?</div>
+                            <div class="cn-line">好的。能介绍一下教练吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Well, all our staff wear different coloured shirts. So, we have three supervisors, and they have red shirts. They support the instructors, and they also stand in for me if I’m not around. Then the instructors themselves are in blue shirts, and one of these is responsible for each class.</div>
+                            <div class="cn-line">所有工作人员穿不同颜色的上衣。三位主管穿红色上衣，负责支持教练，我不在时也代班。教练本人穿蓝色上衣，每班由一名教练负责。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> In order to be accepted, all our instructors have to submit a reference from someone who’s seen them work with children – like if they’ve worked as a babysitter, for example. Then they have to complete our training course, including how to do lesson plans, and generally care for the well-being of the kids in their class. They do a great job, I have to say.</div>
+                            <div class="cn-line">为了被录用，所有教练都必须提交一份由见过他们照顾儿童的人出具的推荐证明，例如曾见过他们做临时保姆的人。之后还要完成我们的培训课程，包括制订教案及照顾班里孩子的身心状况。我得说他们做得很好。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. And tell me a bit about the classes. What size will Charlie’s class be?</div>
+                            <div class="cn-line">明白了。再说说班级吧。查理的班会有多大？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> We have a limit of eight children in each class, so their instructor really gets to know them well. They’re out riding most of the time but they have quiet times too, where their instructor might tell them a story that’s got something to do with cycling, or get them to play a game together. It’s a lot of fun.</div>
+                            <div class="cn-line">每班最多八个孩子，所以教练能充分了解他们。大部分时间他们都在骑车，但也有安静时段：教练可能讲一个与骑行有关的故事，或带他们一起玩游戏。很有趣。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> It must be. Now, what happens if there’s rain? Do the classes still run?</div>
+                            <div class="cn-line">听起来是。那如果下雨呢？课程还照常进行吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Oh yes. We don’t let that put us off – we just put on our waterproofs and keep cycling.</div>
+                            <div class="cn-line">当然。下雨不会让我们停课；大家穿上防水衣继续骑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And is there anything special Charlie should bring along with him?</div>
+                            <div class="cn-line">查理需要带什么特别的东西吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Well, maybe some spare clothes, especially if the weather’s not so good. And a snack for break time.</div>
+                            <div class="cn-line">可以带些备用衣服，尤其是天气不好时；还要带一份休息时吃的点心。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> How about a drink?</div>
+                            <div class="cn-line">饮料呢？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> No, we’ll provide that. And make sure he has shoes, not sandals.</div>
+                            <div class="cn-line">饮料由我们提供。还要确保他穿鞋，而不是凉鞋。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Sure. And just at present Charlie has to take medication every few hours, so I’ll make sure he has that.</div>
+                            <div class="cn-line">好的。查理目前每隔几小时需要服药，所以我会确保他带上药。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Absolutely. Just give us details of when he has to take it and we’ll make sure he does.</div>
+                            <div class="cn-line">没问题。告诉我们他何时需要服药，我们会确保他按时服用。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Thanks.</div>
+                            <div class="cn-line">谢谢。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Now, there are a few things you should know about Day 1 of the camp. The classes normally start at 9.30 every morning, but on Day 1 you should aim to get Charlie here by 9.20. The finishing time will be 12.30 as usual. We need the additional time because there are a few extra things to do. The most important is that we have a very careful check to make sure that every child’s helmet fits properly. If it doesn’t fit, we’ll try to adjust it, or we’ll find him another one – but he must wear it all the time he’s on the bike.</div>
+                            <div class="cn-line">关于第一天还有几件事。课程平时上午九点半开始，但第一天请尽量在九点二十分送查理来；结束时间照常是十二点半。提前到是因为有额外事项，最重要的是仔细检查每个孩子的头盔是否合适。如不合适，我们会调整或换一个；只要骑车就必须戴头盔。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Of course.</div>
+                            <div class="cn-line">当然。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> Then after that, all the instructors will be waiting to meet their classes, and they’ll meet up in the tent – you can’t miss it. And each instructor will take their class away and get started.</div>
+                            <div class="cn-line">之后所有教练会等着与各自班级会合，集合地点在帐篷里，很容易找到。每位教练随后带班开始活动。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. Well that all sounds good. Now can you tell me how much the camp costs a week?</div>
+                            <div class="cn-line">好的，听起来不错。请问每周费用是多少？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">JAKE</span> One hundred ninety-nine dollars. We’ve managed to keep the price more or less the same as last year – it was one hundred ninety then. But the places are filling up quite quickly.</div>
+                            <div class="cn-line">每周一百九十九美元。我们基本维持了去年的价格；去年是一百九十美元。不过名额很快就满了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. OK, well I’d like to book for …</div>
+                            <div class="cn-line">明白。好的，我想预订……</div>
+                        </div>
+                    </div>
+                </details></div>
+        </div>
+</div><footer><p>剑桥雅思 16 Test 3 Part 1 · 答案句切片与七坑复盘</p></footer></div>
+<script>
+const mainAudio = document.getElementById('main-audio');
+const nowPlayingText = document.getElementById('now-playing-text');
+let isLooping = false;
+let activeMediaRecorder = null;
+let activeAudioChunks = [];
+let recordingCardId = null;
+let recordTimerInterval = null;
+let recordSeconds = 0;
+let userAudioPlayer = null;
+const userRecordings = {};
+
+function playAudio(filename, title, button) {
+    if (!mainAudio) return;
+    if (userAudioPlayer) userAudioPlayer.pause();
+    mainAudio.src = filename;
+    mainAudio.play().catch(err => console.warn('音频播放未启动:', err));
+    nowPlayingText.textContent = `▶ 正在播放：${title}`;
+    document.querySelectorAll('.slice-card.playing').forEach(card => card.classList.remove('playing'));
+    const card = button && button.closest('.slice-card');
+    if (card) card.classList.add('playing');
+}
+function replayAudio() { if (mainAudio.src) { mainAudio.currentTime=0; mainAudio.play().catch(()=>{}); } }
+function skipTime(seconds) {
+    if (!mainAudio.src) return;
+    const end = Number.isFinite(mainAudio.duration) ? mainAudio.duration : Infinity;
+    mainAudio.currentTime = Math.max(0, Math.min(end, mainAudio.currentTime + seconds));
+}
+function toggleLoop() {
+    isLooping = !isLooping;
+    mainAudio.loop = isLooping;
+    const btn = document.getElementById('loop-btn');
+    btn.classList.toggle('active', isLooping);
+    btn.textContent = `🔁 单曲循环: ${isLooping ? '开' : '关'}`;
+}
+function setSpeed(speed, btn) {
+    mainAudio.playbackRate = speed;
+    btn.parentElement.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+function filterCategory(category, btn) {
+    document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.slice-card').forEach(card => {
+        card.style.display = category === 'all' || card.dataset.category === category ? 'block' : 'none';
+    });
+}
+function recordingPanel(cardId) { return document.getElementById(`user-rec-panel-${cardId}`); }
+function setRecordingStatus(cardId, message, recording) {
+    const panel = recordingPanel(cardId);
+    panel.style.display = 'flex';
+    panel.querySelector('.rec-status-text').textContent = message;
+    const dot = panel.querySelector('.rec-status-dot');
+    dot.classList.toggle('recording', recording);
+    dot.style.background = recording ? '#f87171' : '#34d399';
+    panel.querySelector('.rec-panel-btns').hidden = recording;
+    const btn = document.getElementById(`rec-btn-${cardId}`);
+    btn.classList.toggle('recording', recording);
+    btn.textContent = recording ? '⏹️ 完成录音' : '🎙️ 重新跟读';
+}
+function handleRecBtnClick(cardId) {
+    if (recordingCardId === cardId) { stopRecording(); return; }
+    if (recordingCardId !== null) {
+        const recorder = activeMediaRecorder;
+        if (recorder) recorder.addEventListener('stop', () => startRecording(cardId), {once:true});
+        stopRecording();
+        return;
+    }
+    startRecording(cardId);
+}
+async function startRecording(cardId) {
+    if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+        alert('此浏览器或页面环境不支持麦克风录音。');
+        return;
+    }
+    let stream;
+    try { stream = await navigator.mediaDevices.getUserMedia({audio:true}); }
+    catch (err) { console.error(err); alert('无法启动录音：请检查麦克风权限。'); return; }
+    if (recordingCardId !== null) { stream.getTracks().forEach(t => t.stop()); return; }
+    if (userRecordings[cardId]) deleteRecording(cardId);
+    const mimeType = ['audio/webm','audio/mp4','audio/aac'].find(type => MediaRecorder.isTypeSupported(type));
+    try { activeMediaRecorder = new MediaRecorder(stream, mimeType ? {mimeType} : undefined); }
+    catch (err) { stream.getTracks().forEach(t => t.stop()); alert('当前浏览器无法使用此录音格式。'); return; }
+    const recorder = activeMediaRecorder;
+    activeAudioChunks = [];
+    recordingCardId = cardId;
+    recordSeconds = 0;
+    document.getElementById(`rec-time-${cardId}`).textContent = '00:00';
+    recorder.ondataavailable = event => { if (event.data?.size) activeAudioChunks.push(event.data); };
+    recorder.onstop = () => {
+        const blob = new Blob(activeAudioChunks, {type:recorder.mimeType || 'audio/webm'});
+        if (blob.size) userRecordings[cardId] = {url:URL.createObjectURL(blob), duration:recordSeconds};
+        stream.getTracks().forEach(track => track.stop());
+        clearInterval(recordTimerInterval);
+        setRecordingStatus(cardId, blob.size ? '✅ 跟读已录制完成' : '录音没有声音，请重新跟读', false);
+        recordingCardId = null;
+        activeMediaRecorder = null;
+    };
+    recorder.start(200);
+    setRecordingStatus(cardId, '🔴 正在录音，请跟读', true);
+    recordTimerInterval = setInterval(() => {
+        recordSeconds++;
+        document.getElementById(`rec-time-${cardId}`).textContent = `${String(Math.floor(recordSeconds/60)).padStart(2,'0')}:${String(recordSeconds%60).padStart(2,'0')}`;
+    },1000);
+}
+function stopRecording() {
+    if (activeMediaRecorder?.state === 'recording') activeMediaRecorder.stop();
+    clearInterval(recordTimerInterval);
+}
+function playUserRecording(cardId) {
+    const item = userRecordings[cardId];
+    if (!item) return;
+    mainAudio.pause();
+    if (userAudioPlayer) userAudioPlayer.pause();
+    userAudioPlayer = new Audio(item.url);
+    const btn = document.getElementById(`play-user-btn-${cardId}`);
+    btn.textContent = '⏸️ 正在试听';
+    userAudioPlayer.onended = () => {btn.textContent='▶ 试听跟读';};
+    userAudioPlayer.play().catch(err => {console.warn(err);btn.textContent='▶ 试听跟读';});
+}
+function compareOfficial(cardId) {
+    if (userAudioPlayer) userAudioPlayer.pause();
+    document.getElementById(`card-${cardId}`)?.querySelector('.play-card-btn')?.click();
+}
+function deleteRecording(cardId) {
+    if (recordingCardId === cardId) stopRecording();
+    if (userRecordings[cardId]) {
+        if (userAudioPlayer) userAudioPlayer.pause();
+        URL.revokeObjectURL(userRecordings[cardId].url);
+        delete userRecordings[cardId];
+    }
+    recordingPanel(cardId).style.display='none';
+    document.getElementById(`rec-btn-${cardId}`).textContent='🎙️ 录音跟读';
+}
+</script>
+</body></html>

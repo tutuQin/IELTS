@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>剑桥雅思 16 Test 4 Part 1 听力答案句切片点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Sticky Player */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .now-playing-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        audio {
+            width: 100%;
+            height: 44px;
+            border-radius: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Tips Panel */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .tips-list strong {
+            color: var(--text-main);
+        }
+
+        .shadow-guide-box {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+            line-height: 1.6;
+        }
+
+        .shadow-guide-title {
+            font-weight: 700;
+            color: #f87171;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .shadow-guide-tag {
+            font-size: 0.78rem;
+            background: rgba(248, 113, 113, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Slice Cards */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .tag-wrong {
+            background: rgba(248, 113, 113, 0.2);
+            color: var(--accent-red);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+
+        .tag-correct {
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--accent-green);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .tag-p1 {
+            background: rgba(192, 132, 252, 0.2);
+            color: var(--accent-purple);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 2px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .play-card-btn:hover {
+            opacity: 0.9;
+        }
+
+        .record-card-btn {
+            background: rgba(248, 113, 113, 0.15);
+            border: 1px solid rgba(248, 113, 113, 0.4);
+            color: #fca5a5;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.25);
+            color: #fff;
+        }
+
+        .record-card-btn.recording {
+            background: #ef4444;
+            color: #fff;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* User Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ef4444;
+            display: inline-block;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .rec-btn-pill {
+            padding: 4px 10px;
+            border-radius: 14px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-play-user { background: #10b981; color: white; }
+        .btn-compare { background: #8b5cf6; color: white; }
+        .btn-del { background: #64748b; color: white; }
+
+        .rec-btn-pill:hover { opacity: 0.85; }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .prompt-box {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+        }
+
+        .prompt-label {
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .prompt-text {
+            color: #cbd5e1;
+        }
+
+        .blank-answer {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-blue);
+            cursor: pointer;
+        }
+
+        .transcript-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-left: 3px solid var(--accent-blue);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.92rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .highlight-word {
+            background: rgba(251, 191, 36, 0.25);
+            color: #fde047;
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .diagnosis-box {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .diagnosis-box strong {
+            color: #fca5a5;
+        }
+
+        /* Bilingual Dropdown */
+        .bilingual-details {
+            margin-top: 6px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .bilingual-details[open] {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent-blue);
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .toggle-icon {
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 10px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 2px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .spk-man { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-woman { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .full-transcript-scroll { max-height: 460px; overflow-y: auto; }
+
+        .full-audio-banner {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.15));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .full-audio-info h3 {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            margin-bottom: 4px;
+        }
+
+        .full-audio-info p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 25px;
+        }
+    </style>
+<style>.full-transcript-scroll { max-height: 460px; overflow-y: auto; } .card-header { flex-wrap: wrap; } .prompt-text { white-space: normal; }</style><style>
+
+.container { max-width: 1000px; }
+.slice-card.playing { border-color: var(--accent-blue); box-shadow: 0 0 20px rgba(56,189,248,.22); }
+.card-title { font-size: 1.28rem; line-height: 1.4; }
+.transcript-box { font-size: 1.07rem; line-height: 1.8; padding: 15px 19px; border-left-width: 4px; }
+.bilingual-summary { font-size: 1.04rem; }
+.bilingual-body { font-size: 1.1rem; line-height: 1.8; }
+.en-line { font-size: 1.1rem; }
+.cn-line { font-size: 1.01rem; }
+.ans-highlight { color:#34d399; font-weight:700; font-style:normal; background:rgba(52,211,153,.15); padding:2px 7px; border-radius:5px; border-bottom:2px solid rgba(52,211,153,.5); }
+.signal-highlight { color:#fbbf24; font-weight:700; font-style:normal; padding:1px 4px; }
+.trap-highlight { color:#f87171; font-weight:700; font-style:normal; text-decoration:line-through; background:rgba(248,113,113,.15); padding:2px 7px; border-radius:5px; }
+.highlight-legend { color:var(--text-muted); font-size:.83rem; margin-left:auto; }
+.highlight-legend .ans-highlight,.highlight-legend .trap-highlight,.highlight-legend .signal-highlight { text-decoration:none; }
+.btn-rerecord { color:var(--accent-amber); border:1px solid rgba(251,191,36,.35); background:rgba(251,191,36,.1); }
+.rec-status-dot.recording { animation:pulse 1s infinite; }
+.rec-panel-btns[hidden] { display:none !important; }
+.shadow-guide-box { line-height:1.6; }
+.shadow-guide-title { flex-wrap:wrap; gap:8px; }
+.record-card-btn:focus-visible,.play-card-btn:focus-visible,.pill-btn:focus-visible,.tab-btn:focus-visible,.rec-btn-pill:focus-visible,.bilingual-summary:focus-visible { outline:2px solid var(--accent-amber); outline-offset:2px; }
+@media (max-width:760px) {
+  .nav-back-bar,.player-info,.card-header,.card-actions,.player-controls,.rec-panel-btns { flex-wrap:wrap; }
+  .sticky-player { top:0; padding:12px; }
+  .slice-card { padding:16px; }
+  .card-actions { width:100%; }
+  .highlight-legend { margin-left:0; width:100%; }
+  .full-audio-banner { align-items:flex-start; }
+}
+
+</style>
+</head><body><div class="container">
+<div class="nav-back-bar"><a class="nav-link" href="../切片/index.html">📂 返回切片总目录</a><a class="nav-link" href="../剑桥16_Test4_听力Part1_七坑与3+2复盘汇总表.md">📊 打开复盘汇总表</a><a class="nav-link" href="../C16T3_错题音频切片/C16T3_错题切片点播台.html">➔ 剑16 T3 点播台</a></div>
+<header><h1>剑桥雅思 16 Test 4 Part 1 · 答案句切片点播台</h1><p>Holiday rental · 28th / Chervil / garden / bridge 的精听与拼读训练</p></header>
+<div class="full-audio-banner"><div class="full-audio-info"><h3>🎧 Part 1 完整连续原声（约 06:40）</h3><p>包含播音员说明、读题停顿、对话及检查时间。</p></div><button class="play-card-btn" onclick="playAudio('Section_1_Full_Holiday_Rental.mp3','Part 1 完整录音：Holiday Rental', this)">▶ 播放完整 Part 1</button></div>
+<div class="sticky-player"><div class="player-info"><div class="now-playing-title" id="now-playing-text">🎵 待播：点击切片开始练习</div><div class="btn-group"><button class="pill-btn" id="loop-btn" onclick="toggleLoop()">🔁 单曲循环: 关</button></div></div>
+<audio id="main-audio" controls preload="auto">浏览器不支持音频播放。</audio>
+<div class="player-controls"><span class="highlight-legend">高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> ｜ <span class="ans-highlight">■ 答案词</span> ｜ <span class="trap-highlight">■ 干扰项</span></span><div class="btn-group"><button class="pill-btn" onclick="skipTime(-5)">⏪ 后退 5s</button><button class="pill-btn" onclick="skipTime(5)">⏩ 前进 5s</button><button class="pill-btn" onclick="replayAudio()">🔄 重头精听</button></div><div class="btn-group"><span>倍速:</span><button class="pill-btn" onclick="setSpeed(0.8,this)">0.8x</button><button class="pill-btn active" onclick="setSpeed(1,this)">1.0x</button><button class="pill-btn" onclick="setSpeed(1.25,this)">1.25x</button><button class="pill-btn" onclick="setSpeed(1.5,this)">1.5x</button></div></div></div>
+<div class="tips-panel"><div class="tips-title">💡 4 步靶向精听法（参照 C7T1）</div>
+<ol class="tips-list">
+<li><strong>Step 1 先读看懂：</strong>展开每题原文与翻译，找出黄色定位词、绿色答案词和红色干扰项。</li>
+<li><strong>Step 2 出声朗读：</strong>跟着音频把答案句读 3 遍，留意日期、拼读或连读。</li>
+<li><strong>Step 3 合上盲听：</strong>收起原文，把切片单曲循环 2–3 遍，再从定位词独立写出答案。</li>
+<li><strong>Step 4 录音跟读：</strong>录下自己的跟读，先试听，再点「对比原声」找出听读卡壳处。</li>
+</ol></div>
+<div class="shadow-guide-box"><div class="shadow-guide-title"><span>🎙️ <strong>跟读录音与原声对比</strong></span><span class="shadow-guide-tag">录后可试听、对比、重录</span></div>每张卡片都有「录音跟读」按钮；完成后可试听自己的录音、对比原声、重新跟读或清除。录音仅在当前页面内暂存，刷新页面会重置。</div><div class="tips-panel"><div class="tips-title">本套复盘提醒</div><p>Q9、Q10 已按你的补充标记正确。Q1 依你的自评作为日期格式练习；部分资料也接受数字 28。</p></div>
+<div class="filter-tabs"><button class="tab-btn active" onclick="filterCategory('all',this)">全部切片与完整录音 (11)</button><button class="tab-btn" onclick="filterCategory('wrong',this)">需复盘 (4)</button><button class="tab-btn" onclick="filterCategory('correct',this)">答对 (6)</button><button class="tab-btn" onclick="filterCategory('full',this)">🎧 Part 1 完整录音</button></div>
+<div class="slice-list">
+        <div class="slice-card" data-category="wrong" id="card-q1">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q1 · ✗</span><span class="card-tag tag-p1">⑥格式 / P2 转折改期</span><h3 class="card-title">Q1: 28th · 写了 28；听到定位，但把日期序数词写成基数数字</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('01_Q1_五月28日日期28th与14日干扰.mp3', 'Q1: 28th', this)">▶ 播放切片 (30s)</button><button class="record-card-btn" id="rec-btn-q1" onclick="handleRecBtnClick('q1')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q1" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q1"></span><span class="rec-status-text" id="rec-status-q1">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q1">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q1" onclick="playUserRecording('q1')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q1')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q1')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q1')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Granary Cottage: available for week beginning [ 1 ] May.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>TOM: The week beginning the <span class="trap-highlight">14th</span>, if possible. SHIRLEY: …it’s <span class="signal-highlight">already booked</span> that week. It’s free the week beginning the <span class="ans-highlight">28th</span>, though.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>14th 是提出但被否定的日期，28th 才可订。按你的自评把本题列为失误，练习听到序数词就写 28th；但部分第三方答案表注明 28 也可接受，实际判分应以所用答案标准为准。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Great. My name’s Tom. Some friends of ours rented Granary Cottage from you last year, and they thought it was great. So my wife and I are hoping to come in May for a week.</div>
+                            <div class="cn-line">太好了。我叫汤姆。朋友去年租过你们的 Granary Cottage，评价很好，所以我和妻子想五月来住一周。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> What date did you have in mind?</div>
+                            <div class="cn-line">你想从哪天开始？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> The week beginning the 14th, if possible.</div>
+                            <div class="cn-line">如果可以，从十四日开始的那周。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> I’ll just check … I’m sorry, Tom, it’s already booked that week. It’s free the week beginning the 28th, though, for seven nights. In fact, that’s the only time you could have it in May.</div>
+                            <div class="cn-line">我查一下……抱歉，汤姆，那周已经订出去了。不过二十八日开始的一周还有空，能住七晚。实际上五月只有这段时间有房。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh. Well, we could manage that, I think. We’d just need to change a couple of things. How much would it cost?</div>
+                            <div class="cn-line">哦，我想我们可以调整，只需改动几个安排。费用是多少？</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q2">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q2 · ✓</span><span class="card-tag tag-p1">P1 原词 / T1 多数字</span><h3 class="card-title">Q2: 550 · 写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('02_Q2_Granary周价550与预算500干扰.mp3', 'Q2: 550', this)">▶ 播放切片 (29s)</button><button class="record-card-btn" id="rec-btn-q2" onclick="handleRecBtnClick('q2')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q2" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q2"></span><span class="rec-status-text" id="rec-status-q2">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q2">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q2" onclick="playUserRecording('q2')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q2')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q2')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q2')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Granary Cottage: cost for the week: £[ 2 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>SHIRLEY: …it’d be <span class="ans-highlight">£550</span> for the week. TOM: …We’ve budgeted up to <span class="trap-highlight">£500</span> for accommodation.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>Granary Cottage 的报价是 550；500 是租客预算，480 则是随后另一间小屋的价格。你抓对了对象和数字。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh. Well, we could manage that, I think. We’d just need to change a couple of things. How much would it cost?</div>
+                            <div class="cn-line">哦，我想我们可以调整，只需改动几个安排。费用是多少？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s the beginning of high season, so it’d be £550 for the week.</div>
+                            <div class="cn-line">那是旺季开始，一周要五百五十英镑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Ah. That’s a bit more than we wanted to pay, I’m afraid. We’ve budgeted up to £500 for accommodation.</div>
+                            <div class="cn-line">这比我们希望支付的多一些。我们为住宿最多准备了五百英镑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Well, we’ve just finished converting another building into a cottage, which we’re calling Chervil Cottage.</div>
+                            <div class="cn-line">我们刚把另一栋建筑改造成小屋，取名叫 Chervil Cottage。</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="wrong" id="card-q3">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q3 · ✗</span><span class="card-tag tag-p1">①词音 + ②拼写 / 拼读解释</span><h3 class="card-title">Q3: Chervil · chervictor；还在怀疑 Q2 数字，后半段靠脑补</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('03_Q3_Chervil拼读V_for_Victor.mp3', 'Q3: Chervil', this)">▶ 播放切片 (32s)</button><button class="record-card-btn" id="rec-btn-q3" onclick="handleRecBtnClick('q3')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q3" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q3"></span><span class="rec-status-text" id="rec-status-q3">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q3">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q3" onclick="playUserRecording('q3')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q3')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q3')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q3')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">[ 3 ] Cottage: cost for the week: £480.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>SHIRLEY: <span class="ans-highlight">Chervil</span>. C-H-E-R-<span class="signal-highlight">V for Victor</span> I-L.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>这里的 Victor 只用于说明字母 V，不是词名的一部分。应把字母串写成 C-H-E-R-V-I-L；听到 “for Victor” 时立刻记 V，再继续听 I-L。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Ah. That’s a bit more than we wanted to pay, I’m afraid. We’ve budgeted up to £500 for accommodation.</div>
+                            <div class="cn-line">这比我们希望支付的多一些。我们为住宿最多准备了五百英镑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Well, we’ve just finished converting another building into a cottage, which we’re calling Chervil Cottage.</div>
+                            <div class="cn-line">我们刚把另一栋建筑改造成小屋，取名叫 Chervil Cottage。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Sorry? What was that again?</div>
+                            <div class="cn-line">抱歉？叫什么？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Chervil. C-H-E-R-V for Victor I-L.</div>
+                            <div class="cn-line">Chervil。拼作 C-H-E-R-V（V 是 Victor 的 V）-I-L。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh, that’s a herb, isn’t it?</div>
+                            <div class="cn-line">哦，这是一种香草，对吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. It grows fairly wild around here. You could have that for the week you want for £480.</div>
+                            <div class="cn-line">对，这附近野生的很多。你想要的那一周，这间房是四百八十英镑。</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q4">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q4 · ✓</span><span class="card-tag tag-p1">P3 改写 / 原用途</span><h3 class="card-title">Q4: garage · 写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('04_Q4_原用途garage与bedroom干扰.mp3', 'Q4: garage', this)">▶ 播放切片 (25s)</button><button class="record-card-btn" id="rec-btn-q4" onclick="handleRecBtnClick('q4')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q4" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q4"></span><span class="rec-status-text" id="rec-status-q4">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q4">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q4" onclick="playUserRecording('q4')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q4')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q4')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q4')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Chervil Cottage: building was originally a [ 4 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>SHIRLEY: The building <span class="signal-highlight">was built as</span> a <span class="ans-highlight">garage</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>originally 对应 was built as，答案是 garage。后面出现的 double bedroom 描述的是现在的住宿布局。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. It grows fairly wild around here. You could have that for the week you want for £480.</div>
+                            <div class="cn-line">对，这附近野生的很多。你想要的那一周，这间房是四百八十英镑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> OK. So could you tell me something about it, please?</div>
+                            <div class="cn-line">好的。能介绍一下那间小屋吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Of course. The building was built as a garage. It’s a little smaller than Granary Cottage.</div>
+                            <div class="cn-line">当然。这栋建筑原本是车库，比 Granary Cottage 略小。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> So that must sleep two people, as well?</div>
+                            <div class="cn-line">它也能住两个人吧？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. There’s a double bedroom.</div>
+                            <div class="cn-line">对，有一间双人卧室。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Does it have a garden?</div>
+                            <div class="cn-line">有花园吗？</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="wrong" id="card-q5">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q5 · ✗</span><span class="card-tag tag-p1">③句意 + ④逻辑 / 邻近词干扰</span><h3 class="card-title">Q5: garden · bedroom；定位到了邻近词，但没听懂去向句</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('05_Q5_客厅法式门通向garden.mp3', 'Q5: garden', this)">▶ 播放切片 (24s)</button><button class="record-card-btn" id="rec-btn-q5" onclick="handleRecBtnClick('q5')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q5" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q5"></span><span class="rec-status-text" id="rec-status-q5">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q5">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q5" onclick="playUserRecording('q5')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q5')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q5')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q5')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Chervil Cottage: walk through doors from living room into a [ 5 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>TOM: Does it have a <span class="ans-highlight">garden</span>? SHIRLEY: Yes, you get to it from the <span class="signal-highlight">living room through French doors</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>题干要填穿过客厅门到达的地方。it 回指上一句的 garden；bedroom 出现在更早的房间介绍中，不是这扇门通向的地方。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Of course. The building was built as a garage. It’s a little smaller than Granary Cottage.</div>
+                            <div class="cn-line">当然。这栋建筑原本是车库，比 Granary Cottage 略小。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> So that must sleep two people, as well?</div>
+                            <div class="cn-line">它也能住两个人吧？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. There’s a double bedroom.</div>
+                            <div class="cn-line">对，有一间双人卧室。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Does it have a garden?</div>
+                            <div class="cn-line">有花园吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, you get to it from the living room through French doors, and we provide two deckchairs. We hope to build a patio in the near future, but I wouldn’t like to guarantee it’ll be finished by May.</div>
+                            <div class="cn-line">有，从客厅穿过法式玻璃门就能到花园；我们提供两把躺椅。我们希望近期建露台，但不能保证五月前完工。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q6">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q6 · ✓</span><span class="card-tag tag-p1">P3 改写 / 空前名词搭配</span><h3 class="card-title">Q6: parking · 写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('06_Q6_前方parking车位.mp3', 'Q6: parking', this)">▶ 播放切片 (22s)</button><button class="record-card-btn" id="rec-btn-q6" onclick="handleRecBtnClick('q6')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q6" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q6"></span><span class="rec-status-text" id="rec-status-q6">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q6">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q6" onclick="playUserRecording('q6')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q6')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q6')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q6')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Chervil Cottage: several [ 6 ] spaces at the front.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>SHIRLEY: …<span class="ans-highlight">parking</span> isn’t a problem – there’s plenty of room <span class="signal-highlight">at the front</span> for that.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>parking spaces 是固定搭配；there’s plenty of room at the front 对应 several spaces at the front。你定位并填写正确。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, you get to it from the living room through French doors, and we provide two deckchairs. We hope to build a patio in the near future, but I wouldn’t like to guarantee it’ll be finished by May.</div>
+                            <div class="cn-line">有，从客厅穿过法式玻璃门就能到花园；我们提供两把躺椅。我们希望近期建露台，但不能保证五月前完工。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> The front door opens onto the old farmyard, and parking isn’t a problem – there’s plenty of room at the front for that. There are some trees and potted plants there.</div>
+                            <div class="cn-line">前门通向旧农家庭院，停车不成问题，前面有很宽敞的停车空间。那里还有树和盆栽。</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q7">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q7 · ✓</span><span class="card-tag tag-p1">P2 问答 / T2 对比词</span><h3 class="card-title">Q7: wood · 写对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('07_Q7_壁炉烧wood与coal干扰.mp3', 'Q7: wood', this)">▶ 播放切片 (27s)</button><button class="record-card-btn" id="rec-btn-q7" onclick="handleRecBtnClick('q7')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q7" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q7"></span><span class="rec-status-text" id="rec-status-q7">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q7">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q7" onclick="playUserRecording('q7')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q7')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q7')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q7')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Central heating and stove that burns [ 7 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>SHIRLEY: We can provide all the <span class="ans-highlight">wood</span> you need for it. It smells so much nicer than <span class="trap-highlight">coal</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>炉子燃烧并由房东提供的是 wood；coal 只是对比项。你排除了后出现的干扰词。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Exactly.</div>
+                            <div class="cn-line">没错。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> What about heating? It sometimes gets quite cool at that time of year.</div>
+                            <div class="cn-line">取暖呢？每年那时有时还挺冷的。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> There’s central heating, and if you want to light a fire, there’s a stove. We can provide all the wood you need for it. It smells so much nicer than coal, and it makes the room very cosy – we’ve got one in our own house.</div>
+                            <div class="cn-line">有中央供暖；如果想生火，还有一台炉子。所需木柴我们都会提供。木柴的味道比煤好闻，也让房间很温馨，我们自己家里也有一台。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> That sounds very pleasant. Perhaps we should come in the winter, to make the most of it!</div>
+                            <div class="cn-line">听起来很舒服。或许我们冬天来也不错，能好好用上炉子！</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="wrong" id="card-q8">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q8 · ✗</span><span class="card-tag tag-p1">P3 场景改写 / ①词音</span><h3 class="card-title">Q8: bridge · 写了 save；没有定位到答案句</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('08_Q8_客厅望见stone_bridge.mp3', 'Q8: bridge', this)">▶ 播放切片 (26s)</button><button class="record-card-btn" id="rec-btn-q8" onclick="handleRecBtnClick('q8')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q8" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q8"></span><span class="rec-status-text" id="rec-status-q8">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q8">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q8" onclick="playUserRecording('q8')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q8')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q8')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q8')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Views of old [ 8 ] from living room.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>SHIRLEY: There’s a famous <span class="ans-highlight">stone bridge</span> – it’s one of the <span class="signal-highlight">oldest</span> in the region, and you can see it from the <span class="signal-highlight">living room</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>old 对应 one of the oldest；view from living room 对应 you can see it from the living room。答案 bridge 出现在前半句，随后才补出客厅视角；应利用整句回指锁定，而非写入不匹配的 save。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> That sounds very pleasant. Perhaps we should come in the winter, to make the most of it!</div>
+                            <div class="cn-line">听起来很舒服。或许我们冬天来也不错，能好好用上炉子！</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, we find we don’t want to go out when we’ve got the fire burning. There are some attractive views from the cottage, which I haven’t mentioned. There’s a famous stone bridge – it’s one of the oldest in the region, and you can see it from the living room. It isn’t far away. The bedroom window looks in the opposite direction, and has a lovely view of the hills and the monument at the top.</div>
+                            <div class="cn-line">是啊，生了火我们都不想出门。我还没说过小屋的景色。附近有一座著名的石桥，是这一带最古老的桥之一，从客厅就能看到，离得不远。卧室窗户朝反方向，能看到群山和山顶的纪念碑。</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q9">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q9 · ✓</span><span class="card-tag tag-p1">P1 原词 / 视角切换</span><h3 class="card-title">Q9: monument · 听到定位并答对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('09_Q9_卧室望见山顶monument.mp3', 'Q9: monument', this)">▶ 播放切片 (25s)</button><button class="record-card-btn" id="rec-btn-q9" onclick="handleRecBtnClick('q9')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q9" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q9"></span><span class="rec-status-text" id="rec-status-q9">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q9">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q9" onclick="playUserRecording('q9')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q9')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q9')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q9')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">View of hilltop [ 9 ] from the bedroom.</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>SHIRLEY: The <span class="signal-highlight">bedroom window</span> looks in the opposite direction, and has a lovely view of the hills and the <span class="ans-highlight">monument</span> at the top.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>卧室窗户朝反方向，看到山和山顶的 monument。你跟上 living room → bedroom 的视角转换并写对。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, we find we don’t want to go out when we’ve got the fire burning. There are some attractive views from the cottage, which I haven’t mentioned. There’s a famous stone bridge – it’s one of the oldest in the region, and you can see it from the living room. It isn’t far away. The bedroom window looks in the opposite direction, and has a lovely view of the hills and the monument at the top.</div>
+                            <div class="cn-line">是啊，生了火我们都不想出门。我还没说过小屋的景色。附近有一座著名的石桥，是这一带最古老的桥之一，从客厅就能看到，离得不远。卧室窗户朝反方向，能看到群山和山顶的纪念碑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Well, that all sounds perfect. I’d like to book it, please. Would you want a deposit?</div>
+                            <div class="cn-line">听起来太好了。我想预订。需要付定金吗？</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="correct" id="card-q10">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q10 · ✓</span><span class="card-tag tag-p1">P2 问答 / T1 月份干扰</span><h3 class="card-title">Q10: March · 听到定位并答对</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('10_Q10_尾款三月底March.mp3', 'Q10: March', this)">▶ 播放切片 (37s)</button><button class="record-card-btn" id="rec-btn-q10" onclick="handleRecBtnClick('q10')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q10" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q10"></span><span class="rec-status-text" id="rec-status-q10">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q10">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q10" onclick="playUserRecording('q10')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q10')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q10')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q10')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Payment: deadline for final payment: end of [ 10 ].</div></div>
+                <div class="transcript-box"><strong>关键录音原文：</strong><br>TOM: And when would you like the rest of the money? SHIRLEY: You’re coming in <span class="trap-highlight">May</span>, so the <span class="ans-highlight">last day of March</span>, please.</div>
+                <div class="diagnosis-box analysis-box"><strong>复盘：</strong>May 是入住月份，尾款截止日期是 March 的最后一天。你按 payment deadline 理解题干，排除了 May。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片原文与逐句翻译（含前后语境） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Well, that all sounds perfect. I’d like to book it, please. Would you want a deposit?</div>
+                            <div class="cn-line">听起来太好了。我想预订。需要付定金吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, we ask for thirty percent to secure your booking, so that’ll be, um, £144.</div>
+                            <div class="cn-line">需要。我们收百分之三十的定金确认预订，也就是一百四十四英镑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> And when would you like the rest of the money?</div>
+                            <div class="cn-line">余款什么时候付？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> You’re coming in May, so the last day of March, please.</div>
+                            <div class="cn-line">你们五月来，所以请在三月最后一天前付清。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Fine.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Excellent. Could I just take your details …</div>
+                            <div class="cn-line">太好了。我再记一下你的资料……</div>
+                        </div>
+                    
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="slice-card" data-category="full" id="card-full">
+            <div class="card-header"><div><span class="card-tag tag-p1">完整精听 · Part 1 全篇</span><h3 class="card-title">Part 1 完整录音实战盲听磨耳朵 (Q1 - Q10)</h3></div><div class="card-actions"><button class="play-card-btn" onclick="playAudio('Section_1_Full_Holiday_Rental.mp3','Part 1 完整录音：Holiday Rental', this)">▶ 播放完整 Part 1</button><button class="record-card-btn" id="rec-btn-full" onclick="handleRecBtnClick('full')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-full" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-full"></span><span class="rec-status-text" id="rec-status-full">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-full">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-full" onclick="playUserRecording('full')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('full')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('full')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('full')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body"><div class="transcript-box"><strong>【完整音频练习目标】</strong>：连贯完成 Q1–Q10；Q2 数字写完立即看 Q3，Q4 的 bedroom 一听过就转向 Q5 的去向，Q8 听完 bridge 立刻跟住卧室视角。</div><div class="diagnosis-box"><strong>整段路线：</strong>14th 被订 → 28th → £550 / 预算 £500 → Chervil / £480 → garage → garden → parking → wood / coal 对比 → bridge → monument → March。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看Part 1 完整对话原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body full-transcript-scroll">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Hello?</div>
+                            <div class="cn-line">你好？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh hello. I was hoping to speak to Jack Fitzgerald about renting a cottage.</div>
+                            <div class="cn-line">你好。我想找杰克·菲茨杰拉德，谈谈租度假小屋的事。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> I’m his wife, Shirley, and we own the cottages together, so I’m sure I can help you.</div>
+                            <div class="cn-line">我是他的妻子雪莉，小屋是我们共同经营的，我应该能帮你。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Great. My name’s Tom. Some friends of ours rented Granary Cottage from you last year, and they thought it was great. So my wife and I are hoping to come in May for a week.</div>
+                            <div class="cn-line">太好了。我叫汤姆。朋友去年租过你们的 Granary Cottage，评价很好，所以我和妻子想五月来住一周。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> What date did you have in mind?</div>
+                            <div class="cn-line">你想从哪天开始？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> The week beginning the 14th, if possible.</div>
+                            <div class="cn-line">如果可以，从十四日开始的那周。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> I’ll just check … I’m sorry, Tom, it’s already booked that week. It’s free the week beginning the 28th, though, for seven nights. In fact, that’s the only time you could have it in May.</div>
+                            <div class="cn-line">我查一下……抱歉，汤姆，那周已经订出去了。不过二十八日开始的一周还有空，能住七晚。实际上五月只有这段时间有房。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh. Well, we could manage that, I think. We’d just need to change a couple of things. How much would it cost?</div>
+                            <div class="cn-line">哦，我想我们可以调整，只需改动几个安排。费用是多少？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s the beginning of high season, so it’d be £550 for the week.</div>
+                            <div class="cn-line">那是旺季开始，一周要五百五十英镑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Ah. That’s a bit more than we wanted to pay, I’m afraid. We’ve budgeted up to £500 for accommodation.</div>
+                            <div class="cn-line">这比我们希望支付的多一些。我们为住宿最多准备了五百英镑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Well, we’ve just finished converting another building into a cottage, which we’re calling Chervil Cottage.</div>
+                            <div class="cn-line">我们刚把另一栋建筑改造成小屋，取名叫 Chervil Cottage。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Sorry? What was that again?</div>
+                            <div class="cn-line">抱歉？叫什么？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Chervil. C-H-E-R-V for Victor I-L.</div>
+                            <div class="cn-line">Chervil。拼作 C-H-E-R-V（V 是 Victor 的 V）-I-L。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh, that’s a herb, isn’t it?</div>
+                            <div class="cn-line">哦，这是一种香草，对吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. It grows fairly wild around here. You could have that for the week you want for £480.</div>
+                            <div class="cn-line">对，这附近野生的很多。你想要的那一周，这间房是四百八十英镑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> OK. So could you tell me something about it, please?</div>
+                            <div class="cn-line">好的。能介绍一下那间小屋吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Of course. The building was built as a garage. It’s a little smaller than Granary Cottage.</div>
+                            <div class="cn-line">当然。这栋建筑原本是车库，比 Granary Cottage 略小。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> So that must sleep two people, as well?</div>
+                            <div class="cn-line">它也能住两个人吧？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. There’s a double bedroom.</div>
+                            <div class="cn-line">对，有一间双人卧室。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Does it have a garden?</div>
+                            <div class="cn-line">有花园吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, you get to it from the living room through French doors, and we provide two deckchairs. We hope to build a patio in the near future, but I wouldn’t like to guarantee it’ll be finished by May.</div>
+                            <div class="cn-line">有，从客厅穿过法式玻璃门就能到花园；我们提供两把躺椅。我们希望近期建露台，但不能保证五月前完工。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> The front door opens onto the old farmyard, and parking isn’t a problem – there’s plenty of room at the front for that. There are some trees and potted plants there.</div>
+                            <div class="cn-line">前门通向旧农家庭院，停车不成问题，前面有很宽敞的停车空间。那里还有树和盆栽。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> What about facilities in the cottage? It has standard things like a cooker and fridge, I presume.</div>
+                            <div class="cn-line">小屋里有哪些设施？我想炉具和冰箱等标准设施都有吧？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> In the kitchen area there’s a fridge-freezer and we’ve just put in an electric cooker.</div>
+                            <div class="cn-line">厨房区有冰箱冷冻柜，我们刚装了电炉。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Is there a washing machine?</div>
+                            <div class="cn-line">有洗衣机吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes. There’s also a TV in the living room, which plays DVDs too. The bathroom is too small for a bath, so there’s a shower instead. I think a lot of people prefer that nowadays, anyway.</div>
+                            <div class="cn-line">有。客厅也有能播放 DVD 的电视。浴室太小，放不下浴缸，所以装的是淋浴。现在很多人更喜欢淋浴。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> It’s more environmentally friendly, isn’t it? Unless you spend half the day in it!</div>
+                            <div class="cn-line">也更环保，对吧？除非你冲上半天！</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Exactly.</div>
+                            <div class="cn-line">没错。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> What about heating? It sometimes gets quite cool at that time of year.</div>
+                            <div class="cn-line">取暖呢？每年那时有时还挺冷的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> There’s central heating, and if you want to light a fire, there’s a stove. We can provide all the wood you need for it. It smells so much nicer than coal, and it makes the room very cosy – we’ve got one in our own house.</div>
+                            <div class="cn-line">有中央供暖；如果想生火，还有一台炉子。所需木柴我们都会提供。木柴的味道比煤好闻，也让房间很温馨，我们自己家里也有一台。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> That sounds very pleasant. Perhaps we should come in the winter, to make the most of it!</div>
+                            <div class="cn-line">听起来很舒服。或许我们冬天来也不错，能好好用上炉子！</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, we find we don’t want to go out when we’ve got the fire burning. There are some attractive views from the cottage, which I haven’t mentioned. There’s a famous stone bridge – it’s one of the oldest in the region, and you can see it from the living room. It isn’t far away. The bedroom window looks in the opposite direction, and has a lovely view of the hills and the monument at the top.</div>
+                            <div class="cn-line">是啊，生了火我们都不想出门。我还没说过小屋的景色。附近有一座著名的石桥，是这一带最古老的桥之一，从客厅就能看到，离得不远。卧室窗户朝反方向，能看到群山和山顶的纪念碑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Well, that all sounds perfect. I’d like to book it, please. Would you want a deposit?</div>
+                            <div class="cn-line">听起来太好了。我想预订。需要付定金吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, we ask for thirty percent to secure your booking, so that’ll be, um, £144.</div>
+                            <div class="cn-line">需要。我们收百分之三十的定金确认预订，也就是一百四十四英镑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> And when would you like the rest of the money?</div>
+                            <div class="cn-line">余款什么时候付？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> You’re coming in May, so the last day of March, please.</div>
+                            <div class="cn-line">你们五月来，所以请在三月最后一天前付清。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Fine.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Excellent. Could I just take your details …</div>
+                            <div class="cn-line">太好了。我再记一下你的资料……</div>
+                        </div>
+                    </div>
+                </details></div>
+        </div>
+</div><footer><p>剑桥雅思 16 Test 4 Part 1 · 答案句切片与七坑复盘</p></footer></div>
+<script>
+const mainAudio = document.getElementById('main-audio');
+const nowPlayingText = document.getElementById('now-playing-text');
+let isLooping = false;
+let activeMediaRecorder = null;
+let activeAudioChunks = [];
+let recordingCardId = null;
+let recordTimerInterval = null;
+let recordSeconds = 0;
+let userAudioPlayer = null;
+const userRecordings = {};
+
+function playAudio(filename, title, button) {
+    if (!mainAudio) return;
+    if (userAudioPlayer) userAudioPlayer.pause();
+    mainAudio.src = filename;
+    mainAudio.play().catch(err => console.warn('音频播放未启动:', err));
+    nowPlayingText.textContent = `▶ 正在播放：${title}`;
+    document.querySelectorAll('.slice-card.playing').forEach(card => card.classList.remove('playing'));
+    const card = button && button.closest('.slice-card');
+    if (card) card.classList.add('playing');
+}
+function replayAudio() { if (mainAudio.src) { mainAudio.currentTime=0; mainAudio.play().catch(()=>{}); } }
+function skipTime(seconds) {
+    if (!mainAudio.src) return;
+    const end = Number.isFinite(mainAudio.duration) ? mainAudio.duration : Infinity;
+    mainAudio.currentTime = Math.max(0, Math.min(end, mainAudio.currentTime + seconds));
+}
+function toggleLoop() {
+    isLooping = !isLooping;
+    mainAudio.loop = isLooping;
+    const btn = document.getElementById('loop-btn');
+    btn.classList.toggle('active', isLooping);
+    btn.textContent = `🔁 单曲循环: ${isLooping ? '开' : '关'}`;
+}
+function setSpeed(speed, btn) {
+    mainAudio.playbackRate = speed;
+    btn.parentElement.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+function filterCategory(category, btn) {
+    document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.slice-card').forEach(card => {
+        card.style.display = category === 'all' || card.dataset.category === category ? 'block' : 'none';
+    });
+}
+function recordingPanel(cardId) { return document.getElementById(`user-rec-panel-${cardId}`); }
+function setRecordingStatus(cardId, message, recording) {
+    const panel = recordingPanel(cardId);
+    panel.style.display = 'flex';
+    panel.querySelector('.rec-status-text').textContent = message;
+    const dot = panel.querySelector('.rec-status-dot');
+    dot.classList.toggle('recording', recording);
+    dot.style.background = recording ? '#f87171' : '#34d399';
+    panel.querySelector('.rec-panel-btns').hidden = recording;
+    const btn = document.getElementById(`rec-btn-${cardId}`);
+    btn.classList.toggle('recording', recording);
+    btn.textContent = recording ? '⏹️ 完成录音' : '🎙️ 重新跟读';
+}
+function handleRecBtnClick(cardId) {
+    if (recordingCardId === cardId) { stopRecording(); return; }
+    if (recordingCardId !== null) {
+        const recorder = activeMediaRecorder;
+        if (recorder) recorder.addEventListener('stop', () => startRecording(cardId), {once:true});
+        stopRecording();
+        return;
+    }
+    startRecording(cardId);
+}
+async function startRecording(cardId) {
+    if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+        alert('此浏览器或页面环境不支持麦克风录音。');
+        return;
+    }
+    let stream;
+    try { stream = await navigator.mediaDevices.getUserMedia({audio:true}); }
+    catch (err) { console.error(err); alert('无法启动录音：请检查麦克风权限。'); return; }
+    if (recordingCardId !== null) { stream.getTracks().forEach(t => t.stop()); return; }
+    if (userRecordings[cardId]) deleteRecording(cardId);
+    const mimeType = ['audio/webm','audio/mp4','audio/aac'].find(type => MediaRecorder.isTypeSupported(type));
+    try { activeMediaRecorder = new MediaRecorder(stream, mimeType ? {mimeType} : undefined); }
+    catch (err) { stream.getTracks().forEach(t => t.stop()); alert('当前浏览器无法使用此录音格式。'); return; }
+    const recorder = activeMediaRecorder;
+    activeAudioChunks = [];
+    recordingCardId = cardId;
+    recordSeconds = 0;
+    document.getElementById(`rec-time-${cardId}`).textContent = '00:00';
+    recorder.ondataavailable = event => { if (event.data?.size) activeAudioChunks.push(event.data); };
+    recorder.onstop = () => {
+        const blob = new Blob(activeAudioChunks, {type:recorder.mimeType || 'audio/webm'});
+        if (blob.size) userRecordings[cardId] = {url:URL.createObjectURL(blob), duration:recordSeconds};
+        stream.getTracks().forEach(track => track.stop());
+        clearInterval(recordTimerInterval);
+        setRecordingStatus(cardId, blob.size ? '✅ 跟读已录制完成' : '录音没有声音，请重新跟读', false);
+        recordingCardId = null;
+        activeMediaRecorder = null;
+    };
+    recorder.start(200);
+    setRecordingStatus(cardId, '🔴 正在录音，请跟读', true);
+    recordTimerInterval = setInterval(() => {
+        recordSeconds++;
+        document.getElementById(`rec-time-${cardId}`).textContent = `${String(Math.floor(recordSeconds/60)).padStart(2,'0')}:${String(recordSeconds%60).padStart(2,'0')}`;
+    },1000);
+}
+function stopRecording() {
+    if (activeMediaRecorder?.state === 'recording') activeMediaRecorder.stop();
+    clearInterval(recordTimerInterval);
+}
+function playUserRecording(cardId) {
+    const item = userRecordings[cardId];
+    if (!item) return;
+    mainAudio.pause();
+    if (userAudioPlayer) userAudioPlayer.pause();
+    userAudioPlayer = new Audio(item.url);
+    const btn = document.getElementById(`play-user-btn-${cardId}`);
+    btn.textContent = '⏸️ 正在试听';
+    userAudioPlayer.onended = () => {btn.textContent='▶ 试听跟读';};
+    userAudioPlayer.play().catch(err => {console.warn(err);btn.textContent='▶ 试听跟读';});
+}
+function compareOfficial(cardId) {
+    if (userAudioPlayer) userAudioPlayer.pause();
+    document.getElementById(`card-${cardId}`)?.querySelector('.play-card-btn')?.click();
+}
+function deleteRecording(cardId) {
+    if (recordingCardId === cardId) stopRecording();
+    if (userRecordings[cardId]) {
+        if (userAudioPlayer) userAudioPlayer.pause();
+        URL.revokeObjectURL(userRecordings[cardId].url);
+        delete userRecordings[cardId];
+    }
+    recordingPanel(cardId).style.display='none';
+    document.getElementById(`rec-btn-${cardId}`).textContent='🎙️ 录音跟读';
+}
+</script>
+</body></html>

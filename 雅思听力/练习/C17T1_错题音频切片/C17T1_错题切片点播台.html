@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 17 Test 1 Part 1 听力错题切片与考点点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Player Sticky Bar */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .now-playing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        audio {
+            width: 100%;
+            height: 44px;
+            border-radius: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Tips panel */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .tips-list li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            background: rgba(0, 0, 0, 0.2);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        .tips-list li strong {
+            color: var(--text-main);
+        }
+
+        /* Filter bar */
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .filter-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-chip:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .filter-chip.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Slice Card */
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 22px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .slice-card.wrong {
+            border-left: 5px solid var(--accent-red);
+        }
+
+        .slice-card.correct {
+            border-left: 5px solid var(--accent-green);
+        }
+
+        .slice-card.full {
+            border-left: 5px solid var(--accent-purple);
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95));
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .q-badge-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .q-badge {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-tag {
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .status-wrong {
+            background: rgba(248, 113, 113, 0.15);
+            color: var(--accent-red);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+
+        .status-correct {
+            background: rgba(52, 211, 153, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .tag-pill {
+            background: rgba(192, 132, 252, 0.15);
+            color: var(--accent-purple);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-play-btn {
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            border: none;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .card-play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(56, 189, 248, 0.5);
+        }
+
+        .stem-box {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: #cbd5e1;
+        }
+
+        .stem-box strong {
+            color: var(--accent-amber);
+        }
+
+        .ans-compare-bar {
+            display: flex;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 10px 16px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+
+        .ans-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .ans-label {
+            color: var(--text-muted);
+        }
+
+        .ans-val-correct {
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        .ans-val-wrong {
+            color: var(--accent-red);
+            font-weight: 700;
+            text-decoration: line-through;
+        }
+
+        /* Shadow recorder box */
+        .recorder-box {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .rec-btn {
+            background: rgba(248, 113, 113, 0.15);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            color: var(--accent-red);
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .rec-btn.recording {
+            background: var(--accent-red);
+            color: white;
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .rec-play-btn {
+            background: rgba(52, 211, 153, 0.15);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            color: var(--accent-green);
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .rec-play-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .rec-status {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Details collapsible */
+        details {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.02);
+            margin-bottom: 14px;
+        }
+
+        summary {
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--accent-blue);
+            font-size: 0.95rem;
+            user-select: none;
+        }
+
+        .transcript-content {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .transcript-en {
+            color: #f1f5f9;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .transcript-zh {
+            color: var(--text-muted);
+        }
+
+        .highlight-match {
+            color: var(--accent-green);
+            background: rgba(52, 211, 153, 0.15);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .highlight-trap {
+            color: var(--accent-red);
+            background: rgba(248, 113, 113, 0.15);
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: line-through;
+        }
+
+        .diagnosis-box {
+            background: rgba(251, 191, 36, 0.08);
+            border-left: 3px solid var(--accent-amber);
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        /* Full audio card */
+        .full-audio-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border: 2px solid var(--accent-blue);
+            border-radius: 18px;
+            padding: 22px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .full-audio-info h3 {
+            font-size: 1.25rem;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .full-audio-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-back-bar">
+        <a href="../切片/index.html" class="nav-link">📂 返回切片总目录</a>
+        <a href="../剑桥17_Test1_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 查看本套 Part 1 复盘诊断表</a>
+        <a href="../C16T4_错题音频切片/C16T4_错题切片点播台.html" class="nav-link">⏮️ 剑16 T4 切片点播台</a>
+    </div>
+
+    <header>
+        <h1>剑桥雅思 17 Test 1 Part 1</h1>
+        <p>Buckworth Conservation Group 环保志愿者组织咨询 · 错题原声切片与影子跟读点播台</p>
+    </header>
+
+    <!-- Sticky Player Bar -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="nowPlayingTitle">
+                <span>🎵 待播状态</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="skipAudio(-5)">⏪ -5s</button>
+                <button class="pill-btn" onclick="skipAudio(5)">+5s ⏩</button>
+            </div>
+        </div>
+        <audio id="globalAudio" controls preload="auto"></audio>
+        <div class="player-controls">
+            <div class="btn-group">
+                <span style="font-size:0.85rem; color:var(--text-muted);">播放速度：</span>
+                <button class="pill-btn" onclick="setSpeed(0.8, this)">0.8x</button>
+                <button class="pill-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="pill-btn" onclick="setSpeed(1.2, this)">1.2x</button>
+                <button class="pill-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" id="loopBtn" onclick="toggleLoop()">🔁 单曲循环: 关</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tips Panel -->
+    <div class="tips-panel">
+        <div class="tips-title">💡 4步靶向精炼 SOP 实操指引（考点切片科学提分）</div>
+        <ul class="tips-list">
+            <li><strong>Step 1 展开对照</strong>：点击「展开官方中英对照」，看清绿色答案词与红色干扰词。</li>
+            <li><strong>Step 2 出声朗读</strong>：出声大声朗读答案句 3 遍，打通发音与口腔肌肉记忆。</li>
+            <li><strong>Step 3 闭眼盲听</strong>：合上对照折叠框，单曲播放切片，验证能否在瞬间本能抓出答案。</li>
+            <li><strong>Step 4 影子录音</strong>：点击「🎙️ 录音跟读」录下自己的发音，回听与原声比对，揪出吞音卡壳！</li>
+        </ul>
+    </div>
+
+    <!-- Full Audio Card -->
+    <div class="full-audio-card">
+        <div class="full-audio-info">
+            <h3>🎧 Part 1 完整无停顿模考录音 (Q1 - Q10)</h3>
+            <p>包含题目讨论全过程 · 适合 1.5 秒笔尖跳号防雪崩连贯演练</p>
+        </div>
+        <button class="card-play-btn" onclick="playSlice('Section_1_Full_Buckworth_Conservation_Group.mp3', 'Part 1 完整模考录音 (5分32秒)')">
+            ▶ 播放完整录音
+        </button>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <div class="filter-chip active" onclick="filterCards('all', this)">全部切片 (11)</div>
+        <div class="filter-chip" onclick="filterCards('wrong', this)">错题与陷阱剖析 (6)</div>
+        <div class="filter-chip" onclick="filterCards('correct', this)">稳健得分点 (4)</div>
+        <div class="filter-chip" onclick="filterCards('full', this)">Part 1 完整音频 (1)</div>
+    </div>
+
+    <!-- Cards Container -->
+    <div id="cardsContainer">
+
+        <!-- Card 01 -->
+        <div class="slice-card wrong" data-type="wrong">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q1 · 海滩无垃圾清理 (litter)</span>
+                    <span class="status-tag status-wrong">实战失误: 误填 dog (抓后题词)</span>
+                    <span class="tag-pill">③句意坑 + ⑤同义改写</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('01_Q1_海滩无垃圾litter与free_of否定改写.mp3', 'Q1 · 海滩无垃圾清理 (litter)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Regular activities · Beach: making sure the beach does not have [ 1 ] on it
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">litter</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-wrong">dog</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q1" onclick="toggleRecord('q1')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q1" onclick="playUserRecord('q1')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q1">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">PETER: Of course. Well, we have a mixture of regular activities and special events. One of the regular ones is trying to <span class='highlight-match'>keep the beach free of litter</span>. A few of us spend a couple of hours a month on it, and it’s awful how much there is to clear. I wish people would be more responsible and take it home with them.</div>
+                    <div class="transcript-zh">彼得：当然。我们有常规活动和特别活动。常规活动之一是尽量<strong>保持海滩没有垃圾</strong>。我们几个人每月花几个小时清理，需要清理的垃圾多得可怕。真希望人们能更有责任心，把垃圾带回家。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>【经典否定短语替换失敏 + 慌乱抓后题词充数】</strong><br>1. <strong>同义改写脱节</strong>：题干是 <code>does not have [ 1 ] on it</code>，录音替换为高级固定短语 <code>keep the beach free of litter</code>（<i>free of = does not have</i> 免除/没有）。开考心智未热身，觉得语速飞快没反应过来，漏听了轻读名词 <code>litter</code>；<br>2. <strong>慌乱抓后题词</strong>：漏听后陷入恐慌，听到 Jan 紧接着问 <i>Is it OK to take dogs?</i> 时，大脑在失控下把后一题的问询词 <code>dog</code> 强行截取填入第 1 题，导致全盘节奏错位。
+            </div>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="slice-card wrong" data-type="wrong">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q2 · 海滩禁狗规则与悬崖干扰 (dogs)</span>
+                    <span class="status-tag status-wrong">实战失误: 误填 cliff (连环错位)</span>
+                    <span class="tag-pill">连环定位雪崩 + ④逻辑排除</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('02_Q2_海滩禁狗dogs与悬崖散步cliff干扰.mp3', 'Q2 · 海滩禁狗规则与悬崖干扰 (dogs)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Regular activities · Beach: no [ 2 ]
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">dogs (dog)</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-wrong">cliff</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q2" onclick="toggleRecord('q2')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q2" onclick="playUserRecord('q2')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q2">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">JAN: I totally agree. I’d be happy to help with that. Is it OK to take <span class='highlight-match'>dogs</span>?<br>PETER: I’m afraid not, as <span class='highlight-match'>they’re banned from the beach itself</span>. You can take them <span class='highlight-trap'>along the cliffs, though</span>. And children are welcome.</div>
+                    <div class="transcript-zh">简：我完全赞同。我很乐意帮忙。带狗去可以吗？<br>彼得：恐怕不行，因为<strong>海滩本身是禁止带狗的</strong>。不过你可以<strong>沿着悬崖带它们散步</strong>。而且非常欢迎带小孩。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>【首题失误引发连环错位 + 允许地点误当禁止项】</strong><br>1. <strong>定位节奏全面崩塌</strong>：由于 Q1 错填了 dog，面对第 2 题 <code>no [ 2 ]</code>（海滩禁止携带什么）时，大脑思维产生错乱；<br>2. <strong>转折允许项误当禁止项</strong>：录音明确指出 dogs 是禁止带去海滩的（<i>banned from the beach itself = no dogs</i>）。Peter 随后的转折补充句 <i>You can take them along the cliffs, though</i> 是指“可以带狗去悬崖边”，结果你慌乱之中把允许去的地方 <code>cliff</code> 误当成了禁止携带的物品/生物。
+            </div>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="slice-card correct" data-type="correct">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q3 · 保护区吸引昆虫 (insects)</span>
+                    <span class="status-tag status-correct">稳健答对: insects</span>
+                    <span class="tag-pill">⑤同义改写 + ①词音清辅音</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('03_Q3_吸引昆虫insects与人工巢箱铺垫.mp3', 'Q3 · 保护区吸引昆虫 (insects)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Nature reserve: next task is taking action to attract [ 3 ] to the place
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">insects</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-correct">insects</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q3" onclick="toggleRecord('q3')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q3" onclick="playUserRecord('q3')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q3">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">PETER: Good. And we have a programme of creating new habitats there. We’ve just finished making and installing nesting boxes for birds to use, and <span class='highlight-match'>next we’re going to work on encouraging insects</span> – they’re important for the biodiversity of the reserve.</div>
+                    <div class="transcript-zh">彼得：很好。我们在那里还有一个创建新栖息地的项目。我们刚做完并安装了供鸟类使用的人工巢箱，<strong>接下来我们将致力于鼓励吸引昆虫</strong>——它们对保护区的生物多样性非常重要。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>改写对应稳健拿分 · 成功止损</strong>：迅速捕捉到时间转场信号词 <code>next</code>，将卷面 <code>taking action to attract</code> 敏锐等价映射到录音 <code>work on encouraging</code>，听准清辅音复数尾音 <code>/ts/</code>，稳稳写出 <code>insects</code>，成功遏制连环失分。
+            </div>
+        </div>
+
+        <!-- Card 04 -->
+        <div class="slice-card wrong" data-type="wrong">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q4 · 识别蝴蝶物种与复数形态 (butterflies)</span>
+                    <span class="status-tag status-wrong">自评失误: 写成 butterfly (单复数犹豫)</span>
+                    <span class="tag-pill">⑦单复数坑 + ②拼写肌肉记忆</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('04_Q4_识别蝴蝶物种butterflies与复数形态.mp3', 'Q4 · 识别蝴蝶物种与复数形态 (butterflies)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Nature reserve: identifying types of [ 4 ]
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">butterflies (butterfly)</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-wrong">butterfly</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q4" onclick="toggleRecord('q4')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q4" onclick="playUserRecord('q4')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q4">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">PETER: Oh, and we’re also running a project to <span class='highlight-match'>identify the different species of butterflies</span> that visit the reserve. You might be interested in taking part in that.<br>JAN: Sure. I was involved in something similar where I used to live, counting all the species of moths. I’d enjoy that.</div>
+                    <div class="transcript-zh">彼得：哦，我们还在进行一个项目，<strong>识别光顾保护区的不同种类的蝴蝶</strong>。你可能会有兴趣参与。<br>简：当然。我在以前住的地方参与过类似的活动，数各种蛾类。我会喜欢的。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>【单复数变形犹豫打颤 + 变ies肌肉记忆断层】</strong><br>1. <strong>定位与辨音准确</strong>：将卷面 <code>types of</code> 精准对应录音 <code>different species of</code>，听音完全抓准；<br>2. <strong>变复数手脑脱节</strong>：官方给出的主答案是复数 <code>butterflies</code>（不同种类的蝴蝶）。你在手写输出时，对辅音字母加 y 结尾变复数（<i>butterfly → butterflies</i>）的手部肌肉记忆不够果断，下笔写成单数，并在交卷时因纠结单复数耗损了宝贵的工作记忆。
+            </div>
+        </div>
+
+        <!-- Card 05 -->
+        <div class="slice-card wrong" data-type="wrong">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q5 · 重砌新墙与暴风雨破坏干扰 (wall)</span>
+                    <span class="status-tag status-wrong">实战失误: 误填 storm (滞留雪崩)</span>
+                    <span class="tag-pill">注意力滞留雪崩 + ③句意客体误判</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('05_Q5_重砌新墙wall与暴风雨破坏storm干扰.mp3', 'Q5 · 重砌新墙与暴风雨破坏干扰 (wall)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Nature reserve: building a new [ 5 ]
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">wall</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-wrong">storm</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q5" onclick="toggleRecord('q5')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q5" onclick="playUserRecord('q5')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q5">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">PETER: Another job we’re doing at the reserve is <span class='highlight-match'>replacing the wall</span> on the southern side, between the parking area and our woodshed. It was badly damaged <span class='highlight-trap'>by a storm last month</span>.<br>JAN: OK.</div>
+                    <div class="transcript-zh">彼得：我们在保护区做的另一项工作是<strong>更换南侧的围墙</strong>，在停车场和我们的木棚之间。它上个月<strong>被一场暴风雨</strong>严重损坏了。<br>简：好的。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>【注意力滞留上一空 + 自然灾害诱捕】</strong><br>1. <strong>注意力滞留上一题</strong>：在 Q4 纠结 butterfly 拼写时注意力脱节，录音已飞速念出动宾短语 <code>replacing the wall</code>（<i>replacing = building a new</i> 翻修重砌新墙）；<br>2. <strong>原因状语误当建造物</strong>：当你慌乱抬头重新接入录音时，刚好听到从句 <i>damaged by a storm</i>。在没有理清句意的情况下病急乱投医，把造成破坏的罪魁祸首 <code>storm</code> 荒谬地当作要建造的新物体填入！
+            </div>
+        </div>
+
+        <!-- Card 06 -->
+        <div class="slice-card correct" data-type="correct">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q6 · 徒步海岛与退潮沙滩 (island)</span>
+                    <span class="status-tag status-correct">稳健答对: island</span>
+                    <span class="tag-pill">⑤同义改写 + ①词音不发音s</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('06_Q6_徒步海岛island与沙滩退潮定位.mp3', 'Q6 · 徒步海岛与退潮沙滩 (island)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Saturday: walk across the sands and reach the [ 6 ]
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">island</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-correct">island</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q6" onclick="toggleRecord('q6')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q6" onclick="playUserRecord('q6')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q6">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">JAN: Right. I presume you have guided walks? I’d like to get to know the local countryside, as I’m new to the area.<br>PETER: Yes, we do. The next walk is to Ruston Island, a week on Saturday. We’ll be meeting in the car park at Dunsmore Beach at low tide – that’s when the sands are dry enough for us to <span class='highlight-match'>walk to the island without getting wet</span>.<br>JAN: Sounds good.</div>
+                    <div class="transcript-zh">简：好的。我猜你们有向导陪同的徒步？我初来乍到，想了解一下当地的乡村风光。<br>彼得：是的，我们有。下一次徒步是下周六去鲁斯顿岛。我们将在退潮时在邓斯莫尔海滩停车场会合——那时沙滩足够干燥，<strong>我们可以走到岛上而不会弄湿</strong>。<br>简：听起来不错。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>小标题转场敏锐 · 稳稳拿分</strong>：准确把握后半段小标题 <code>Saturday / Dunsmore Beach car park</code> 的口语转场，将题干 <code>walk across the sands and reach...</code> 与录音 <code>walk to the island without getting wet</code> 顺畅匹配，不发音字母 s 拼写规范，精准拿下 <code>island</code>。
+            </div>
+        </div>
+
+        <!-- Card 07 -->
+        <div class="slice-card correct" data-type="correct">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q7 · 涉水防水靴与野餐排除 (boots)</span>
+                    <span class="status-tag status-correct">稳健答对: boots</span>
+                    <span class="tag-pill">③句意 + ⑤同义改写</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('07_Q7_涉水防水靴boots与野餐picnic排除.mp3', 'Q7 · 涉水防水靴与野餐排除 (boots)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Saturday: wear appropriate [ 7 ]
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">boots</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-correct">boots</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q7" onclick="toggleRecord('q7')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q7" onclick="playUserRecord('q7')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q7">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">JAN: OK. And is there anything we should bring? Like a <span class='highlight-trap'>picnic</span>, for instance?<br>PETER: Yes, do bring one as it’s a full day walk. And of course it’ll be wet walking across and back, so make sure <span class='highlight-match'>your boots are waterproof</span>.<br>JAN: I must buy a new pair. There’s a hole in one of my current ones. Well, I’d definitely like to come on the walk.</div>
+                    <div class="transcript-zh">简：好的。有什么需要我们带的吗？比如<strong>自带野餐</strong>？<br>彼得：是的，务必带上野餐，因为这是一整天的徒步。当然往返涉水路上会很潮湿，所以一定要确保<strong>你的靴子是防水的</strong>。<br>简：我得买双新的了，我现在这双破了个洞。好的，我非常想参加这次徒步。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>排除野餐干扰 · 属性匹配稳准</strong>：果断排除 Jan 提出的自带野餐 <i>picnic</i> 干扰，将卷面 <code>wear appropriate</code> 与录音中涉水湿路 <code>make sure your boots are waterproof</code> 建立逻辑关联，准确抓取复数靴子名词 <code>boots</code>。
+            </div>
+        </div>
+
+        <!-- Card 08 -->
+        <div class="slice-card wrong" data-type="wrong">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q8 · 木工初学者与跨角色提问倒装 (beginners)</span>
+                    <span class="status-tag status-wrong">实战失误: 空耳未抓到 (跨角色倒装)</span>
+                    <span class="tag-pill">【跨角色提问答案前置】 + ③句意空耳</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('08_Q8_木工初学者beginners与提问先出答案倒装.mp3', 'Q8 · 木工初学者与跨角色提问倒装 (beginners)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Woodwork session: suitable for [ 8 ] to participate in
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">beginners</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-wrong">(空耳漏听)</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q8" onclick="toggleRecord('q8')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q8" onclick="playUserRecord('q8')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q8">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">PETER: Great. Then later this month we’re having a one-day woodwork session in Hopton Wood.<br>JAN: I’ve never tried that before. <span class='highlight-match'>Is it OK for beginners to take part?</span><br>PETER: <span class='highlight-match'>Definitely</span>. There’ll be a couple of experts leading the session and we keep the number of participants down so you’ll get as much help as you need.</div>
+                    <div class="transcript-zh">彼得：太好了。然后这个月晚些时候我们在霍普顿树林有一个为期一天的木工活动。<br>简：我以前从未尝试过。<strong>初学者可以参加吗？</strong><br>彼得：<strong>当然可以</strong>。会有几位专家带队，而且我们控制参与人数，所以你能得到充分的指导。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>【终极倒装伏击：提问者嘴里抢抛核心答案词】</strong><br>1. <strong>跨角色答案前置</strong>：卷面是 <code>suitable for [ 8 ] to participate in</code>。考点词 <code>beginners</code> 根本不是回答者 Peter 说的，而是<strong>咨询者 Jan 主动问出的</strong>（<i>Is it OK for beginners to take part?</i>，<i>take part = participate in</i>）；<br>2. <strong>单字肯定未及反应</strong>：Peter 紧接着只回答了一个简短肯定词 <i>Definitely</i>。由于你的听觉天线死死锁在“等待 Peter 介绍面向什么群体”，直接把 Jan 嘴里说出的核心答案词当作背景闲聊空耳滑过！
+            </div>
+        </div>
+
+        <!-- Card 09 -->
+        <div class="slice-card wrong" data-type="wrong">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q9 · 制作木勺与做椅子干扰 (spoons)</span>
+                    <span class="status-tag status-wrong">自评失误: 写成 spoon (漏复数s)</span>
+                    <span class="tag-pill">⑦单复数坑 + ④逻辑对比干扰</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('09_Q9_制作木勺spoons与做椅子chairs干扰.mp3', 'Q9 · 制作木勺与做椅子干扰 (spoons)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Woodwork session: making [ 9 ] out of wood
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">spoons (spoon)</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-wrong">spoon</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q9" onclick="toggleRecord('q9')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q9" onclick="playUserRecord('q9')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q9">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">JAN: Excellent. I’d love to be able to <span class='highlight-trap'>make chairs</span>.<br>PETER: That’s probably too ambitious for one day. You’ll be starting with <span class='highlight-match'>wooden spoons</span>. And of course learning how to use the tools. And anything you make is yours to take home with you.</div>
+                    <div class="transcript-zh">简：太棒了。我希望能<strong>做椅子</strong>。<br>彼得：对于一天来说那可能太宏大了。你们将从制作<strong>木勺</strong>开始。当然还要学习如何使用工具。做出来的任何东西你都可以带回家。</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>【成功排除椅子干扰 · 败在复数尾音感知钝化】</strong><br>1. <strong>逻辑排除完全在线</strong>：果断识破了 Jan 提出的做椅子期望（<i>make chairs → too ambitious</i> 排除）；<br>2. <strong>复数尾音漏网</strong>：录音中 Peter 明确强调了从木勺子开始做（<i>starting with wooden spoons</i>，<i>wooden = out of wood</i>），末尾读出了清晰的浊辅音 <code>/z/</code>。手写时停留在单数习惯，漏写 <code>s</code>。官方主答案为 <code>spoons</code>。
+            </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="slice-card correct" data-type="correct">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q10 · 基本费用与露营附加费排除 (35)</span>
+                    <span class="status-tag status-correct">稳健答对: 35</span>
+                    <span class="tag-pill">④逻辑排除 + ⑥格式数字</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('10_Q10_基本费用35镑与露营40镑条件排除.mp3', 'Q10 · 基本费用与露营附加费排除 (35)')">
+                    ▶ 播放切片
+                </button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干还原：</strong> Woodwork session: cost of session (no camping): £ [ 10 ]
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item">
+                    <span class="ans-label">正确答案：</span>
+                    <span class="ans-val-correct">35 (thirty-five)</span>
+                </div>
+                <div class="ans-item">
+                    <span class="ans-label">我的答案：</span>
+                    <span class="ans-val-correct">35</span>
+                </div>
+            </div>
+
+            <!-- Shadow Recorder -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q10" onclick="toggleRecord('q10')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_q10" onclick="playUserRecord('q10')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_q10">点击录音跟读，对比官方原声发音</span>
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📖 展开官方中英原声音频文本</summary>
+                <div class="transcript-content">
+                    <div class="transcript-en">JAN: That sounds like fun. When is it?<br>PETER: It’s on the 17th from 10 a.m. until 3 p.m. There’s a charge of <span class='highlight-match'>35 pounds</span>, including lunch, or <span class='highlight-trap'>40 pounds if you want to camp in the wood</span>.<br>JAN: Right. Well, I’d like to come to that too. Now, how do I join the group?</div>
+                    <div class="transcript-zh">简：听起来很有趣。具体在什么时候？<br>彼得：在17号上午10点到下午3点。收费<strong>35英镑</strong>，包含午餐；如果想在树林里<strong>露营则是40英镑</strong>。<br>简：好的，我也想参加那个。那么我该怎么加入这个组织呢？</div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>条件限定排除精准 · 稳健收官</strong>：卷面括号明确限定 <code>(no camping)</code>。面对录音中抛出的露营附加费用 40 镑干扰，保持定力，稳稳抓取不含露营的基础工作坊费用 35 镑，漂亮收尾！
+            </div>
+        </div>
+
+        <!-- Card 11: FULL PART 1 -->
+        <div class="slice-card full" data-type="full">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge" style="color: var(--accent-purple);">🎧 完整精听 · Part 1 全篇</span>
+                    <span class="status-tag" style="background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); border: 1px solid rgba(192, 132, 252, 0.3);">全篇语流与逆向倒装连贯训练</span>
+                    <span class="tag-pill">实战盲听磨耳朵 · 5分32秒</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('Section_1_Full_Buckworth_Conservation_Group.mp3', 'Part 1 完整录音: Buckworth 环保志愿者咨询 (5分32秒)')">
+                    ▶ 播放完整 Part 1
+                </button>
+            </div>
+
+            <div class="stem-box" style="border-left-color: var(--accent-purple);">
+                <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 4px;">Part 1 完整录音实战盲听磨耳朵 (Q1 - Q10 Buckworth Conservation Group 环保志愿者咨询)</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">从审题、破题到连环做题，包含题目讨论全过程 · 适合 1.5 秒笔尖跳号防雪崩连贯演练</p>
+            </div>
+
+            <!-- Shadow Recorder for Full Audio -->
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_full" onclick="toggleRecord('full')">
+                        🎙️ 录音跟读
+                    </button>
+                    <button class="rec-play-btn" id="playRecBtn_full" onclick="playUserRecord('full')" disabled>
+                        ▶ 试听跟读
+                    </button>
+                </div>
+                <span class="rec-status" id="recStatus_full">点击录音跟读全篇磨耳朵，对比官方原声语速与重音节奏</span>
+            </div>
+
+            <div class="diagnosis-box" style="margin-bottom: 14px; background: rgba(192, 132, 252, 0.08); border-left-color: var(--accent-purple);">
+                <strong>【完整音频实战目标】</strong>：在完成了 10 道分题精准切片与错因深度诊断后，合上全部书面文字，重新播放整段 Part 1 音频。强迫自己严格执行<strong>“1.5 秒笔尖跳号纪律”</strong>：哪怕中间某一空犹豫或没写完，也绝不让思维停留在过去，目光和笔尖永远跟随当前正在念的题号，测试自己能否在连贯语流中平稳守住全部 10 题节奏！<br><br>
+                <strong>实战防崩铁律：</strong><br>
+                1. <strong>Q1-Q2 防连环错位位移</strong>：听到 <code>keep the beach free of litter</code> 无论有没有反应过来，<strong>绝不准抓后面的 dog 回填</strong>！下一题死咬 <code>banned from the beach</code> 稳稳抓下 <code>dogs</code>；<br>
+                2. <strong>Q4-Q5 1.5秒强制断舍离</strong>：Q4 听到 <code>butterflies</code> 无论手写单数还是复数，只要录音开始念下一句话，<strong>视线和笔尖强制下移到 Q5</strong>，绝不错过 <code>replacing the wall</code>，绝不把 <code>storm</code> 当要建造的物体！<br>
+                3. <strong>Q8 跨角色倒装破壁</strong>：死等 Peter 报群体必空耳！死死锁定咨询者 Jan 主动问出的 <code>Is it OK for beginners to take part?</code>，只要 Peter 说 <code>Definitely</code>，提问者口中的 <code>beginners</code> 就是唯一答案！<br>
+                4. <strong>Q9-Q10 逻辑对比排除</strong>：听到 Jan 想做椅子 <code>chairs</code>，紧随 Peter 否决转折抓住 <code>wooden spoons</code>（听准复数 /z/）；Q10 面对露营附加费 40 镑干扰，坚决锁定不含露营的基础费用 <code>35</code>！
+            </div>
+
+            <!-- Details Collapsible -->
+            <details>
+                <summary>📜 查看 Section 1 官方完整录音听力原文与逐句精读翻译（100% 完整不删减 · 中英双语精读对照）</summary>
+                <div class="transcript-content" style="max-height: 480px; overflow-y: auto; padding-right: 8px;">
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Hello?<br>
+                        <span style="color: var(--text-muted);">彼得：喂，您好？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Oh hello. My name’s Jan. Are you the right person to talk to about the Buckworth Conservation Group?<br>
+                        <span style="color: var(--text-muted);">简：哦，你好。我叫简。请问你是负责巴克沃斯自然保护组织咨询的人吗？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Yes, I’m Peter. I’m the secretary.<br>
+                        <span style="color: var(--text-muted);">彼得：是的，我是彼得，我是该组织的秘书。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Good. I’ve just moved to this area, and I’m interested in getting involved. I was in a similar group where I used to live. Could you tell me something about your activities, please?<br>
+                        <span style="color: var(--text-muted);">简：太好了。我刚搬到这个地区，很有兴趣参与进来。我在以前住的地方参加过类似的组织。能请你跟我介绍一下你们的活动吗？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Of course. Well, we have a mixture of regular activities and special events. One of the regular ones is trying to <span class='highlight-match'>keep the beach free of litter</span> [Q1]. A few of us spend a couple of hours a month on it, and it’s awful how much there is to clear. I wish people would be more responsible and take it home with them.<br>
+                        <span style="color: var(--text-muted);">彼得：当然可以。我们既有常规活动，也有特别活动。常规活动之一是尽量<strong>保持海滩没有垃圾</strong> [Q1]。我们几个人每月花两三个小时清理，需要清理的垃圾多得可怕。真希望人们能更有责任心，把垃圾带回家。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> I totally agree. I’d be happy to help with that. Is it OK to take <span class='highlight-match'>dogs</span> [Q2]?<br>
+                        <span style="color: var(--text-muted);">简：我完全赞同。我很乐意帮忙。带<strong>狗</strong>去可以吗 [Q2]？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> I’m afraid not, as <span class='highlight-match'>they’re banned from the beach itself</span>. You can take them <span class='highlight-trap'>along the cliffs, though</span>. And children are welcome.<br>
+                        <span style="color: var(--text-muted);">彼得：恐怕不行，因为<strong>海滩本身是禁止带狗的</strong>。不过你可以沿着<strong>悬崖</strong>带它们散步。而且非常欢迎带小孩。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Right.<br>
+                        <span style="color: var(--text-muted);">简：好的。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> We also manage a nature reserve, and there’s a lot to do there all year round. For example, because it’s a popular place to visit, we spend a lot of time looking after the paths and making sure they’re in good condition for walking.<br>
+                        <span style="color: var(--text-muted);">彼得：我们还管理着一个自然保护区，那里一年四季都有很多事情要做。例如，因为那里是热门的游览胜地，我们花很多时间维护小路，确保它们适宜步行。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> I could certainly help with that.<br>
+                        <span style="color: var(--text-muted);">简：我肯定能帮忙做这个。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Good. And we have a programme of creating new habitats there. We’ve just finished making and installing nesting boxes for birds to use, and <span class='highlight-match'>next we’re going to work on encouraging insects</span> [Q3] – they’re important for the biodiversity of the reserve.<br>
+                        <span style="color: var(--text-muted);">彼得：很好。我们在那里还有一个创建新栖息地的项目。我们刚做完并安装了供鸟类使用的人工巢箱，<strong>接下来我们将致力于鼓励吸引昆虫</strong> [Q3]——它们对保护区的生物多样性非常重要。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> They certainly are.<br>
+                        <span style="color: var(--text-muted);">简：确实如此。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Oh, and we’re also running a project to <span class='highlight-match'>identify the different species of butterflies</span> [Q4] that visit the reserve. You might be interested in taking part in that.<br>
+                        <span style="color: var(--text-muted);">彼得：哦，我们还在进行一个项目，<strong>识别光顾保护区的不同种类的蝴蝶</strong> [Q4]。你可能会有兴趣参与。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Sure. I was involved in something similar where I used to live, counting all the species of moths. I’d enjoy that.<br>
+                        <span style="color: var(--text-muted);">简：当然。我在以前住的地方参与过类似的活动，数各种蛾类。我会喜欢的。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Another job we’re doing at the reserve is <span class='highlight-match'>replacing the wall</span> [Q5] on the southern side, between the parking area and our woodshed. It was badly damaged <span class='highlight-trap'>by a storm last month</span>.<br>
+                        <span style="color: var(--text-muted);">彼得：我们在保护区做的另一项工作是<strong>更换南侧的围墙</strong> [Q5]，在停车场和我们的木棚之间。它上个月<strong>被一场暴风雨</strong>严重损坏了。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> OK.<br>
+                        <span style="color: var(--text-muted);">简：好的。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px; color: var(--accent-amber); font-weight: 700;">
+                        [Narrator: Before you hear the rest of the conversation, you have some time to look at questions 6 to 10.]<br>
+                        <span style="color: var(--text-muted); font-weight: normal;">[旁白停顿：在听对话的其余部分之前，你有一些时间看第6到第10题。]</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Then as I said, we have a programme of events as well, both at the weekend, and during the week.<br>
+                        <span style="color: var(--text-muted);">彼得：正如我所说的，我们在周末和工作日也有一系列的活动安排。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Right. I presume you have guided walks? I’d like to get to know the local countryside, as I’m new to the area.<br>
+                        <span style="color: var(--text-muted);">简：好的。我猜你们有向导陪同的徒步？我初来乍到，想了解一下当地的乡村风光。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Yes, we do. The next walk is to Ruston <span class='highlight-match'>Island</span> [Q6], a week on Saturday. We’ll be meeting in the car park at Dunsmore Beach at low tide – that’s when the sands are dry enough for us to <span class='highlight-match'>walk to the island without getting wet</span>.<br>
+                        <span style="color: var(--text-muted);">彼得：是的，我们有。下一次徒步是下周六去鲁斯顿<strong>岛</strong> [Q6]。我们将在退潮时在邓斯莫尔海滩停车场会合——那时沙滩足够干燥，<strong>我们可以走到岛上而不会弄湿</strong>。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Sounds good.<br>
+                        <span style="color: var(--text-muted);">简：听起来不错。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> The island’s a great place to explore. It’s quite small, and it’s got a range of habitats. It’s also an ideal location for seeing seals just off the coast, or even on the beach.<br>
+                        <span style="color: var(--text-muted);">彼得：那个岛是一个非常适合探索的地方。它不大，但拥有一系列多样的栖息地。这也是一个观赏近海甚至海滩上海豹的理想地点。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> OK. And is there anything we should bring? Like a <span class='highlight-trap'>picnic</span>, for instance?<br>
+                        <span style="color: var(--text-muted);">简：好的。有什么需要我们带的吗？比如<strong>野餐</strong>？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Yes, do bring one as it’s a full day walk. And of course it’ll be wet walking across and back, so make sure <span class='highlight-match'>your boots are waterproof</span> [Q7].<br>
+                        <span style="color: var(--text-muted);">彼得：是的，务必带上一份，因为这是一整天的徒步。当然往返涉水路上会很潮湿，所以一定要确保<strong>你的靴子是防水的</strong> [Q7]。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> I must buy a new pair. There’s a hole in one of my current ones. Well, I’d definitely like to come on the walk.<br>
+                        <span style="color: var(--text-muted);">简：我得买双新的了，我现在这双破了个洞。好的，我非常想参加这次徒步。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> Great. Then later this month we’re having a one-day woodwork session in Hopton Wood.<br>
+                        <span style="color: var(--text-muted);">彼得：太好了。然后这个月晚些时候我们在霍普顿树林有一个为期一天的木工体验课。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> I’ve never tried that before. <span class='highlight-match'>Is it OK for beginners to take part</span> [Q8]?<br>
+                        <span style="color: var(--text-muted);">简：我以前从未尝试过。<strong>初学者可以参加吗</strong> [Q8]？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> <span class='highlight-match'>Definitely</span>. There’ll be a couple of experts leading the session and we keep the number of participants down so you’ll get as much help as you need.<br>
+                        <span style="color: var(--text-muted);">彼得：<strong>当然可以</strong>。会有几位专家带队，而且我们控制参与人数，所以你能得到充分的指导。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Excellent. I’d love to be able to <span class='highlight-trap'>make chairs</span>.<br>
+                        <span style="color: var(--text-muted);">简：太棒了。我希望能<strong>做椅子</strong>。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> That’s probably too ambitious for one day. You’ll be starting with <span class='highlight-match'>wooden spoons</span> [Q9]. And of course learning how to use the tools. And anything you make is yours to take home with you.<br>
+                        <span style="color: var(--text-muted);">彼得：对于一天来说那可能太宏大了。你们将从制作<strong>木勺</strong> [Q9] 开始。当然还要学习如何使用工具。做出来的任何东西你都可以带回家。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> That sounds like fun. When is it?<br>
+                        <span style="color: var(--text-muted);">简：听起来很有趣。具体在什么时候？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>PETER:</strong> It’s on the 17th from 10 a.m. until 3 p.m. There’s a charge of <span class='highlight-match'>35 pounds</span> [Q10], including lunch, or <span class='highlight-trap'>40 pounds if you want to camp in the wood</span>.<br>
+                        <span style="color: var(--text-muted);">彼得：在17号上午10点到下午3点。收费<strong>35英镑</strong> [Q10]，包含午餐；如果想在树林里<strong>露营则是40英镑</strong>。</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: 1px dashed rgba(255,255,255,0.08); margin-bottom: 12px; padding-bottom: 8px;">
+                        <strong>JAN:</strong> Right. Well, I’d like to come to that too. Now, how do I join the group?<br>
+                        <span style="color: var(--text-muted);">简：好的，我也想参加那个。那么我该怎么加入这个组织呢？</span>
+                    </div>
+                    <div class="transcript-en" style="border-bottom: none; margin-bottom: 6px;">
+                        <strong>PETER:</strong> You can do it online...<br>
+                        <span style="color: var(--text-muted);">彼得：你可以直接在线申请……</span>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>雅思听力靶向精炼体系 · 剑桥雅思 17 Test 1 Part 1 错题切片点播台 · 祝你听力早日斩获 8.0+！</p>
+    </footer>
+</div>
+
+<script>
+    const audio = document.getElementById('globalAudio');
+    const nowPlayingTitle = document.getElementById('nowPlayingTitle');
+    const loopBtn = document.getElementById('loopBtn');
+    let isLooping = false;
+
+    function playSlice(fileName, titleText) {
+        audio.src = fileName;
+        audio.play();
+        nowPlayingTitle.innerHTML = `<span>🎵 正在播放：${titleText}</span>`;
+    }
+
+    function setSpeed(rate, btn) {
+        audio.playbackRate = rate;
+        document.querySelectorAll('.player-controls .pill-btn').forEach(b => {
+            if (b.innerText.includes('x')) b.classList.remove('active');
+        });
+        btn.classList.add('active');
+    }
+
+    function skipAudio(seconds) {
+        audio.currentTime += seconds;
+    }
+
+    function toggleLoop() {
+        isLooping = !isLooping;
+        audio.loop = isLooping;
+        if (isLooping) {
+            loopBtn.classList.add('active');
+            loopBtn.innerText = '🔁 单曲循环: 开';
+        } else {
+            loopBtn.classList.remove('active');
+            loopBtn.innerText = '🔁 单曲循环: 关';
+        }
+    }
+
+    function filterCards(type, chip) {
+        document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            if (type === 'all') {
+                card.style.display = 'block';
+            } else if (card.getAttribute('data-type') === type) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // MediaRecorder System for Shadowing
+    let mediaRecorder = null;
+    let audioChunks = {};
+    let recordedBlobs = {};
+    let currentRecordingId = null;
+
+    async function toggleRecord(cardId) {
+        const btn = document.getElementById(`recBtn_${cardId}`);
+        const status = document.getElementById(`recStatus_${cardId}`);
+        const playBtn = document.getElementById(`playRecBtn_${cardId}`);
+
+        if (currentRecordingId === cardId && mediaRecorder && mediaRecorder.state === 'recording') {
+            mediaRecorder.stop();
+            btn.classList.remove('recording');
+            btn.innerText = '🎙️ 重新录音';
+            status.innerText = '录音完成！点击右侧试听';
+            currentRecordingId = null;
+            return;
+        }
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            audioChunks[cardId] = [];
+            currentRecordingId = cardId;
+
+            mediaRecorder.ondataavailable = e => {
+                if (e.data.size > 0) audioChunks[cardId].push(e.data);
+            };
+
+            mediaRecorder.onstop = () => {
+                recordedBlobs[cardId] = new Blob(audioChunks[cardId], { type: 'audio/webm' });
+                playBtn.disabled = false;
+                stream.getTracks().forEach(track => track.stop());
+            };
+
+            mediaRecorder.start();
+            btn.classList.add('recording');
+            btn.innerText = '⏹️ 结束录音';
+            status.innerText = '正在录音中...跟读官方原声';
+        } catch (err) {
+            console.error(err);
+            status.innerText = '未获麦克风权限或浏览器不支持录音';
+        }
+    }
+
+    function playUserRecord(cardId) {
+        if (recordedBlobs[cardId]) {
+            const userAudioUrl = URL.createObjectURL(recordedBlobs[cardId]);
+            const userAudio = new Audio(userAudioUrl);
+            userAudio.play();
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 16 Test 2 Part 1 听力错题切片与考点点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Sticky Player */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .now-playing-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        audio {
+            width: 100%;
+            height: 44px;
+            border-radius: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* Tips Panel */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 25px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .tips-list strong {
+            color: var(--text-main);
+        }
+
+        .shadow-guide-box {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+            line-height: 1.6;
+        }
+
+        .shadow-guide-title {
+            font-weight: 700;
+            color: #f87171;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .shadow-guide-tag {
+            font-size: 0.78rem;
+            background: rgba(248, 113, 113, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Slice Cards */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s;
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .tag-wrong {
+            background: rgba(248, 113, 113, 0.2);
+            color: var(--accent-red);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+        }
+
+        .tag-correct {
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--accent-green);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+
+        .tag-p1 {
+            background: rgba(192, 132, 252, 0.2);
+            color: var(--accent-purple);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 2px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .play-card-btn:hover {
+            opacity: 0.9;
+        }
+
+        .record-card-btn {
+            background: rgba(248, 113, 113, 0.15);
+            border: 1px solid rgba(248, 113, 113, 0.4);
+            color: #fca5a5;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.25);
+            color: #fff;
+        }
+
+        .record-card-btn.recording {
+            background: #ef4444;
+            color: #fff;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* User Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ef4444;
+            display: inline-block;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .rec-btn-pill {
+            padding: 4px 10px;
+            border-radius: 14px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-play-user { background: #10b981; color: white; }
+        .btn-compare { background: #8b5cf6; color: white; }
+        .btn-del { background: #64748b; color: white; }
+
+        .rec-btn-pill:hover { opacity: 0.85; }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .prompt-box {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+        }
+
+        .prompt-label {
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .prompt-text {
+            color: #cbd5e1;
+        }
+
+        .blank-answer {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-blue);
+            cursor: pointer;
+        }
+
+        .transcript-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-left: 3px solid var(--accent-blue);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.92rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .highlight-word {
+            background: rgba(251, 191, 36, 0.25);
+            color: #fde047;
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .diagnosis-box {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .diagnosis-box strong {
+            color: #fca5a5;
+        }
+
+        /* Bilingual Dropdown */
+        .bilingual-details {
+            margin-top: 6px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        .bilingual-details[open] {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent-blue);
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .toggle-icon {
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 10px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 2px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .spk-man { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-woman { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .full-transcript-scroll { max-height: 460px; overflow-y: auto; }
+
+        .full-audio-banner {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.15));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .full-audio-info h3 {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            margin-bottom: 4px;
+        }
+
+        .full-audio-info p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-back-bar">
+        <a href="../切片/index.html" class="nav-link">📂 返回切片总目录</a>
+        <a href="../剑桥16_Test2_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 打开 C16T2 复盘汇总表 (Markdown)</a>
+        <a href="../C16T1_错题音频切片/C16T1_错题切片点播台.html" class="nav-link">➔ 切换至 剑16 T1 点播台</a>
+    </div>
+
+    <header>
+        <h1>剑桥雅思 16 Test 2 Part 1 · 听力错题切片与考点点播台</h1>
+        <p>Copying photos to digital format 老照片数字化咨询 · 专攻数字轰炸 / 预判失真 / 跨角色抢答 / 连环卡顿雪崩</p>
+    </header>
+
+    <!-- Global Full Audio Banner -->
+    <div class="full-audio-banner">
+        <div class="full-audio-info">
+            <h3>🎧 Part 1 官方完整连续原声 (05:35)</h3>
+            <p>包含完整读题指导、对话录音及半分钟检查时间，适合考前整段盲听检验！</p>
+        </div>
+        <button class="play-card-btn" onclick="playAudio('Section_1_Full_Copying_Photos_To_Digital_Format.mp3', 'Part 1 官方完整连续音频')">
+            ▶ 播放完整 Part 1
+        </button>
+    </div>
+
+    <!-- Sticky Audio Player Bar -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="now-playing-text">
+                <span>🎵 待播：点击下方任意切片开始磨耳朵</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" id="loop-btn" onclick="toggleLoop()">🔁 单曲循环: 关</button>
+            </div>
+        </div>
+
+        <audio id="main-audio" controls preload="auto">
+            <source id="audio-source" src="" type="audio/mpeg">
+            您的浏览器不支持音频播放。
+        </audio>
+
+        <div class="player-controls">
+            <div class="btn-group">
+                <button class="pill-btn" onclick="skipTime(-5)">⏪ 后退 5s</button>
+                <button class="pill-btn" onclick="skipTime(5)">⏩ 前进 5s</button>
+                <button class="pill-btn" onclick="replayAudio()">🔄 重头精听</button>
+            </div>
+            <div class="btn-group">
+                <span style="font-size:0.85rem; color:var(--text-muted); margin-right:4px;">倍速:</span>
+                <button class="pill-btn" onclick="setSpeed(0.8, this)">0.8x</button>
+                <button class="pill-btn active" onclick="setSpeed(1.0, this)">1.0x</button>
+                <button class="pill-btn" onclick="setSpeed(1.25, this)">1.25x</button>
+                <button class="pill-btn" onclick="setSpeed(1.5, this)">1.5x</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shadowing Guide -->
+    <div class="shadow-guide-box">
+        <div class="shadow-guide-title">
+            <span>🎙️ 独家内置：影子跟读（Shadowing）与双轨发音对比录音室</span>
+            <span class="shadow-guide-tag">Web Audio API 驱动</span>
+        </div>
+        <p>点击每个切片卡片上的 <strong>「🎙️ 录音跟读」</strong>，戴上耳机跟着原声进行口头复述。录音完成后可点击 <strong>「▶ 听我的跟读」</strong> 与 <strong>「🔄 对比原声」</strong>，检查弱读连读（如 <em>by hand</em>）、重音（<em>Grandparents</em>）与数字节奏！</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片与完整录音 (11)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">🎧 Part 1 完整录音</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">🔴 错题精练 (7题)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">🟢 答对巩固 (3题)</button>
+        <button class="tab-btn" onclick="filterCategory('cat-number', this)">⚡ 数字轰炸 (Q2, Q3)</button>
+        <button class="tab-btn" onclick="filterCategory('cat-predict', this)">🎯 预判纠偏 (Q4, Q9)</button>
+        <button class="tab-btn" onclick="filterCategory('cat-logic', this)">🛡️ 否定与逻辑 (Q1, Q10)</button>
+    </div>
+
+    <!-- Slice List -->
+    <div class="slice-list">
+
+        <!-- Q1 Card -->
+        <div class="slice-card" data-category="wrong cat-logic" id="card-q1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q1 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">③句意坑 + ④逻辑坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">提问者先抛答案 + 强形容词诱捕</span>
+                    <h3 class="card-title">Q1: 取出相框 frame 与只听懂干扰词 separate</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('01_Q1_取出相框frame与只听懂干扰词separate.mp3', 'Q1: 取出相框 frame 与只听懂干扰词 separate')">▶ 播放切片 (18s)</button>
+                    <button class="record-card-btn" id="rec-btn-q1" onclick="handleRecBtnClick('q1')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- User Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-q1" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q1">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q1')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q1')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q1')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Requirements)</div>
+                    <div class="prompt-text">
+                        Photos must not be in a <span class="blank-answer" title="点击查看正确答案">frame</span> or an album
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>WOMAN:</strong> That should be fine. And some of them are in a <span class="highlight-word">frame</span> – should I take them out before I send them?<br>
+                    <strong>EMPLOYEE:</strong> Yes please, we can't copy them otherwise. And also the photos must all be <strong>separate</strong>, they mustn't be stuck into an album.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>错因深度剖析（你的复盘：“错过答案句子没有听懂，只听到 separate”）：</strong><br>
+                    1. <strong>跨角色答案前置</strong>：真实答案词 <strong>frame</strong> 是由女声提问抢先抛出的（<em>some of them are in a frame...</em>），男声随后肯定（<em>Yes please</em>）；<br>
+                    2. <strong>后置强刺激词诱捕</strong>：男声随后补充 <em>must all be separate</em>，由于 separate 重读清晰，你因前半句没完全听懂，大脑急于抓词，被 separate 吸走所有注意力；<br>
+                    3. <strong>词性语法校验脱节</strong>：空前有不定冠词 <code>a</code>，要求填入可数名词单数，形容词 separate 根本代不进去！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> That should be fine. And some of them are in a frame – should I take them out before I send them?</div>
+                            <div class="cn-line">那应该没问题。有些照片装在相框里，寄给你们之前需要把它们取出来吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Yes please, we can’t copy them otherwise. And also the photos must all be separate, they mustn’t be stuck into an album.</div>
+                            <div class="cn-line">是的，请取出来，否则我们无法复制。另外，照片必须一张张分开，不能粘在相册里。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q2 Card -->
+        <div class="slice-card" data-category="wrong cat-number" id="card-q2">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q2 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">①词音坑 + ④逻辑坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">数字密集流轰炸</span>
+                    <h3 class="card-title">Q2: 基础服务费用 195 镑与多数字瞬间涌入轰炸</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('02_Q2_基础服务费用195镑与多数字瞬间涌入轰炸.mp3', 'Q2: 基础服务费用 195 镑与多数字瞬间涌入轰炸')">▶ 播放切片 (22s)</button>
+                    <button class="record-card-btn" id="rec-btn-q2" onclick="handleRecBtnClick('q2')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q2" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q2">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q2')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q2')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q2')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Cost)</div>
+                    <div class="prompt-text">
+                        The cost for 360 photos is £<span class="blank-answer" title="点击查看正确答案">195</span> (including one disk)
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>WOMAN:</strong> So can you give me an idea of how much this will cost? I've got about <strong>360</strong> photos I think.<br>
+                    <strong>EMPLOYEE:</strong> We charge £<span class="highlight-word">195</span> for <strong>300 to 400</strong> photos for the basic service.<br>
+                    <strong>WOMAN:</strong> OK. And does that include the disk?<br>
+                    <strong>EMPLOYEE:</strong> Yes, <strong>one</strong> disk – but you can get extra ones for £<strong>5</strong> each.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>错因深度剖析（你的复盘：“大量数字瞬间涌入没有抓住是哪个数字”）：</strong><br>
+                    1. <strong>数字饱和过载</strong>：这段对话里接连出现 360 $\rightarrow$ 195 $\rightarrow$ 300 to 400 $\rightarrow$ one $\rightarrow$ 5 共 6 个数字；<br>
+                    2. <strong>天线未锁定价格属性</strong>：卷面空格前有 <strong>£</strong>（英镑符号），目标必须是跟在 charge/cost 后的价格！女声抛出 360 photos 定位后，男声第一句 <em>We charge £195</em> 就是绝对核心，听到 charge + 195 果断下笔，过滤后续阶梯区间。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK, that’s not a problem. So can you give me an idea of how much this will cost? I’ve got about 360 photos I think.</div>
+                            <div class="cn-line">好的，这没问题。能大概告诉我费用吗？我想我有大约360张照片。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> We charge £195 for 300 to 400 photos for the basic service.</div>
+                            <div class="cn-line">基础服务中，300到400张照片收费195英镑。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. And does that include the disk?</div>
+                            <div class="cn-line">好的。这包含光盘吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Yes, one disk – but you can get extra ones for £5 each.</div>
+                            <div class="cn-line">包含一张光盘；如果需要额外的，每张5英镑。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q3 Card -->
+        <div class="slice-card" data-category="wrong cat-number" id="card-q3">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q3 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">④逻辑坑 + ⑤改写坑</span>
+                    <span class="card-tag" style="background:rgba(239,68,68,0.2); color:#f87171; border:1px solid rgba(239,68,68,0.4);">注意力滞留连环雪崩</span>
+                    <h3 class="card-title">Q3: 发货前收到付款 payment 与注意力滞留连环漏听</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('03_Q3_发货前收到付款payment与注意力滞留连环漏听.mp3', 'Q3: 发货前收到付款 payment 与注意力滞留连环漏听')">▶ 播放切片 (21s)</button>
+                    <button class="record-card-btn" id="rec-btn-q3" onclick="handleRecBtnClick('q3')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q3" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q3">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q3')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q3')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q3')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Cost)</div>
+                    <div class="prompt-text">
+                        Before the complete order is sent, <span class="blank-answer" title="点击查看正确答案">payment</span> is required
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>WOMAN:</strong> That's good. So do I need to pay when I send you the photos?<br>
+                    <strong>EMPLOYEE:</strong> No, we won't need anything until we've actually copied the pictures. Then we'll let you know how much it is, and <span class="highlight-word">once we've received the payment, we'll send the parcel off to you</span>.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>错因深度剖析（你的复盘：“纠结Q2错过Q3”）：</strong><br>
+                    1. <strong>神经卡顿雪崩</strong>：大脑还在懊恼上一题的数字，没有执行 1.5 秒物理断舍离，视线脱离录音；<br>
+                    2. <strong>时间条件倒装改写</strong>：题干 <em>Before... sent, [payment] is required</em>，录音倒装为 <em>once we've received the payment, we'll send the parcel off to you</em>。动词 pay 转化为名词 payment 作为发货前提。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> That’s good. So do I need to pay when I send you the photos?</div>
+                            <div class="cn-line">好的。那么寄照片时就需要付款吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> No, we won’t need anything until we’ve actually copied the pictures. Then we’ll let you know how much it is, and once we’ve received the payment, we’ll send the parcel off to you.</div>
+                            <div class="cn-line">不用。照片复制完成前不需要付款。之后我们会告知金额；一收到付款，就会把包裹寄给你。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right.</div>
+                            <div class="cn-line">明白了。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q4 Card -->
+        <div class="slice-card" data-category="wrong cat-predict" id="card-q4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q4 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">③句意坑 + ②拼写坑</span>
+                    <span class="card-tag" style="background:rgba(239,68,68,0.2); color:#f87171; border:1px solid rgba(239,68,68,0.4);">T3原词诱捕 / 抄卷面词</span>
+                    <h3 class="card-title">Q4: 文件夹命名示例 Grandparents 与误抓提示词 folder</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('04_Q4_文件夹命名示例Grandparents与误抓提示词folder.mp3', 'Q4: 文件夹命名示例 Grandparents 与误抓提示词 folder')">▶ 播放切片 (29s)</button>
+                    <button class="record-card-btn" id="rec-btn-q4" onclick="handleRecBtnClick('q4')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q4" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q4">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q4')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q4')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q4')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Services included in the price)</div>
+                    <div class="prompt-text">
+                        Photos can be placed in a folder, e.g. with the name <span class="blank-answer" title="点击查看正确答案">Grandparents</span>
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>EMPLOYEE:</strong> ...we'll save each group in a different <strong>folder</strong> on the disk and if you like, you can suggest a <strong>name</strong> for each <strong>folder</strong>.<br>
+                    <strong>WOMAN:</strong> So I could have one called '<span class="highlight-word">Grandparents</span>' for instance?<br>
+                    <strong>EMPLOYEE:</strong> Exactly.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>错因深度剖析（你的复盘：“没有听懂定位也没有，只听到 folder 就当答案词了”）：</strong><br>
+                    1. <strong>原词诱捕踩雷</strong>：卷面已有 <code>placed in a folder</code>，提示词 folder 绝不可能重复作为答案！<br>
+                    2. <strong>举例口语替换</strong>：题干 <code>e.g. with the name</code> 在录音中替换为 <code>called 'Grandparents' for instance</code>。专有名词首字母大写，复合词连写。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Is there anything else you’d like to ask about our services?</div>
+                            <div class="cn-line">关于我们的服务，你还有什么想问的吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Yes. I’ve roughly sorted out the photos into groups, according to what they’re about – so can you keep them in those groups when you copy them?</div>
+                            <div class="cn-line">有。我已经按内容把照片大致分组；复制时能保留这些分组吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Sure. We’ll save each group in a different folder on the disk and if you like, you can suggest a name for each folder.</div>
+                            <div class="cn-line">当然。我们会把每组照片存到光盘上的不同文件夹；你也可以为每个文件夹提议名称。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> So I could have one called ‘Grandparents’ for instance?</div>
+                            <div class="cn-line">比如，我可以把其中一个叫作“Grandparents”（祖父母）吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Exactly.</div>
+                            <div class="cn-line">正是这样。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q5 Card -->
+        <div class="slice-card" data-category="correct" id="card-q5">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">Q5 · 答对 ✓</span>
+                    <span class="card-tag tag-p1">⑤改写 + ①词音</span>
+                    <span class="card-tag" style="background:rgba(52,211,153,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.4);">并列结构原词复现</span>
+                    <h3 class="card-title">Q5: 照片色彩优化 colour 与定位词敏锐抓取</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('05_Q5_照片色彩优化colour与定位词敏锐抓取.mp3', 'Q5: 照片色彩优化 colour 与定位词敏锐抓取')">▶ 播放切片 (21s)</button>
+                    <button class="record-card-btn" id="rec-btn-q5" onclick="handleRecBtnClick('q5')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q5" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q5">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q5')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q5')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q5')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Services included in the price)</div>
+                    <div class="prompt-text">
+                        The <span class="blank-answer" title="点击查看正确答案">colour / color</span> and contrast can be improved if necessary
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>EMPLOYEE:</strong> Yes, in the standard service each photo is checked, and we can sometimes touch up the <span class="highlight-word">colour</span> a bit, or improve the contrast – that can make a big difference.
+                </div>
+
+                <div class="diagnosis-box" style="border-left: 3px solid #34d399;">
+                    <strong style="color:#34d399;">成功复盘（你的复盘：“听到定位到”）：</strong><br>
+                    录音的 touch up the colour / improve the contrast 对应题干 can be improved，答案词 colour 原词复现，英式 colour 与美式 color 均被官方认可，发挥稳定拿下分数。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And do you do anything besides scan the photos? Like, can you make any improvements?</div>
+                            <div class="cn-line">除了扫描照片，你们还会做别的处理吗？比如能改善照片吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Yes, in the standard service each photo is checked, and we can sometimes touch up the colour a bit, or improve the contrast – that can make a big difference.</div>
+                            <div class="cn-line">会的。标准服务会检查每张照片；有时我们能稍微调整色彩，或改善对比度，效果可能很明显。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q6 Card -->
+        <div class="slice-card" data-category="wrong" id="card-q6">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q6 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">③句意坑 + ①词音坑</span>
+                    <span class="card-tag" style="background:rgba(239,68,68,0.2); color:#f87171; border:1px solid rgba(239,68,68,0.4);">弱读方式短语滑过</span>
+                    <h3 class="card-title">Q6: 脆弱老照片手工扫描 hand 与定位到却漏抓答案词</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('06_Q6_脆弱老照片手工扫描hand与定位到却漏抓答案词.mp3', 'Q6: 脆弱老照片手工扫描 hand 与定位到却漏抓答案词')">▶ 播放切片 (16s)</button>
+                    <button class="record-card-btn" id="rec-btn-q6" onclick="handleRecBtnClick('q6')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q6" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q6">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q6')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q6')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q6')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Services included in the price)</div>
+                    <div class="prompt-text">
+                        Photos which are very fragile will be scanned by <span class="blank-answer" title="点击查看正确答案">hand</span>
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>WOMAN:</strong> OK. And some of the photos are actually quite <strong>fragile</strong> – they won't get damaged in the process, will they?<br>
+                    <strong>EMPLOYEE:</strong> No, if any look particularly <strong>fragile</strong>, we'd do them by <span class="highlight-word">hand</span>. We do realise how precious these old photos can be.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>错因深度剖析（你的复盘：“定位到了但是没有听到答案词”）：</strong><br>
+                    1. <strong>定位词死锁</strong>：抓到了 fragile；录音并未复述题干中的 scanned，需接着听解决方法；<br>
+                    2. <strong>单音节连读弱化</strong>：<code>by hand</code> (/baɪ hænd/) 很快滑过。潜意识在期待复杂高难词汇，却漏掉了最朴素的生活固定短语 by hand（纯手工）。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. And some of the photos are actually quite fragile – they won’t get damaged in the process, will they?</div>
+                            <div class="cn-line">好的。有些照片其实很脆弱；处理过程中不会弄坏吧？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> No, if any look particularly fragile, we’d do them by hand. We do realise how precious these old photos can be.</div>
+                            <div class="cn-line">不会。如果有照片看起来特别脆弱，我们会手工处理。我们明白这些老照片有多珍贵。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Sure.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q7 Card -->
+        <div class="slice-card" data-category="correct" id="card-q7">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">Q7 · 答对 ✓</span>
+                    <span class="card-tag tag-p1">⑤改写 + ①词音</span>
+                    <span class="card-tag" style="background:rgba(52,211,153,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.4);">同义改写识别敏锐</span>
+                    <h3 class="card-title">Q7: 修复服务替换背景 background 与改写定位稳健</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('07_Q7_修复服务替换背景background与改写定位稳健.mp3', 'Q7: 修复服务替换背景 background 与改写定位稳健')">▶ 播放切片 (20s)</button>
+                    <button class="record-card-btn" id="rec-btn-q7" onclick="handleRecBtnClick('q7')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q7" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q7">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q7')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q7')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q7')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Special restore service)</div>
+                    <div class="prompt-text">
+                        It may be possible to remove an object from a photo, or change the <span class="blank-answer" title="点击查看正确答案">background</span>
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>EMPLOYEE:</strong> And another thing is we can make changes to a photo if you want – so if you want to <strong>remove an object</strong> from a photo, or maybe <strong>alter the</strong> <span class="highlight-word">background</span>, we can do that.
+                </div>
+
+                <div class="diagnosis-box" style="border-left: 3px solid #34d399;">
+                    <strong style="color:#34d399;">成功复盘（你的复盘：“听到定位到写对”）：</strong><br>
+                    敏锐将卷面 <code>change the...</code> 与录音 <code>alter the background</code> 建立映射（<em>change = alter</em>），复合词 background 拼写标准，稳稳拿分。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> And another thing is we can make changes to a photo if you want – so if you want to remove an object from a photo, or maybe alter the background, we can do that.</div>
+                            <div class="cn-line">另外，如果你愿意，我们还能修改照片：例如移除照片中的物体，或更改背景。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Really? I might be interested in that. I’ll have a look through the photos and see.</div>
+                            <div class="cn-line">真的吗？我可能需要这项服务。我会翻看照片再决定。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q8 Card -->
+        <div class="slice-card" data-category="correct" id="card-q8">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">Q8 · 答对 ✓</span>
+                    <span class="card-tag tag-p1">③句意 + ⑤改写</span>
+                    <span class="card-tag" style="background:rgba(52,211,153,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.4);">否定同义改写对应</span>
+                    <h3 class="card-title">Q8: 失焦照片无法修复 focus 与否定前置敏锐判断</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('08_Q8_失焦照片无法修复focus与否定前置敏锐判断.mp3', 'Q8: 失焦照片无法修复 focus 与否定前置敏锐判断')">▶ 播放切片 (13s)</button>
+                    <button class="record-card-btn" id="rec-btn-q8" onclick="handleRecBtnClick('q8')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q8" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q8">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q8')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q8')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q8')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Special restore service)</div>
+                    <div class="prompt-text">
+                        A photo which is not correctly in <span class="blank-answer" title="点击查看正确答案">focus</span> cannot be fixed
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>WOMAN:</strong> Oh, and talking of fixing photos, I've got a few that <strong>aren't properly in</strong> <span class="highlight-word">focus</span>. Can you do anything to make that better?<br>
+                    <strong>EMPLOYEE:</strong> No, I'm afraid that's one thing we can't do.
+                </div>
+
+                <div class="diagnosis-box" style="border-left: 3px solid #34d399;">
+                    <strong style="color:#34d399;">成功复盘（你的复盘：“对”）：</strong><br>
+                    准确捕捉女声问句中的 <em>aren't properly in focus</em>，对应题干 <em>not correctly in focus</em>，否定前置与跨角色提问防守成功。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Oh, and talking of fixing photos – I’ve got a few that aren’t properly in focus. Can you do anything to make that better?</div>
+                            <div class="cn-line">说到修照片，我有几张没有对好焦。你们能改善吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> No, I’m afraid that’s one thing we can’t do.</div>
+                            <div class="cn-line">恐怕不行，这一点我们无法修复。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q9 Card -->
+        <div class="slice-card" data-category="wrong cat-predict" id="card-q9">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q9 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">③句意坑 + ⑥格式坑</span>
+                    <span class="card-tag" style="background:rgba(239,68,68,0.2); color:#f87171; border:1px solid rgba(239,68,68,0.4);">介词 within 语义误判</span>
+                    <h3 class="card-title">Q9: 订单完成工期 10 天与介词 within 误解为所需物</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('09_Q9_订单完成工期10天与介词within误解为所需物.mp3', 'Q9: 订单完成工期 10 天与介词 within 误解为所需物')">▶ 播放切片 (13s)</button>
+                    <button class="record-card-btn" id="rec-btn-q9" onclick="handleRecBtnClick('q9')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q9" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q9">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q9')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q9')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q9')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Other information)</div>
+                    <div class="prompt-text">
+                        Orders are completed within <span class="blank-answer" title="点击查看正确答案">10 days (or ten days)</span>
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>WOMAN:</strong> Er ... oh, how long will it all take?<br>
+                    <strong>EMPLOYEE:</strong> We aim to get the copying done <span class="highlight-word">in 10 days</span>. 
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>错因深度剖析（你的复盘：“听到答案但题目理解错误理解成了完成订单需要什么没有想到是时间，一直在捕捉需要的东西”）：</strong><br>
+                    1. <strong>within 表示时间范围</strong> 你把 within 混淆成了 with 或需要附带物品。在商务英语中，<strong>within + 时间段 100% 表示“在……时限内完成”</strong>！<br>
+                    2. <strong>预判频道设错导致有效答案被大脑过滤</strong>：女声提问 <em>how long will it all take?</em> 明确提示时间，男声回答 <em>in 10 days</em>，因你死等“物品名词”，导致耳朵听到了 10 days 却被大脑当成无用杂音扔掉！
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Any other information I can give you?</div>
+                            <div class="cn-line">还需要我提供其他信息吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Er ... oh, how long will it all take?</div>
+                            <div class="cn-line">嗯……整个过程要多久？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> We aim to get the copying done in ten days.</div>
+                            <div class="cn-line">我们争取在十天内完成复制。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- Q10 Card -->
+        <div class="slice-card" data-category="wrong cat-logic" id="card-q10">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q10 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">③句意坑 + ④逻辑坑</span>
+                    <span class="card-tag" style="background:rgba(239,68,68,0.2); color:#f87171; border:1px solid rgba(239,68,68,0.4);">材质对比逻辑未解</span>
+                    <h3 class="card-title">Q10: 避免塑料盒 plastic 与否定句没听懂错失</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('10_Q10_避免塑料盒plastic与答案句没听懂.mp3', 'Q10: 避免塑料盒 plastic 与否定句没听懂错失')">▶ 播放切片 (18s)</button>
+                    <button class="record-card-btn" id="rec-btn-q10" onclick="handleRecBtnClick('q10')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q10" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q10">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q10')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q10')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q10')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Other information)</div>
+                    <div class="prompt-text">
+                        Send the photos in a box (not <span class="blank-answer" title="点击查看正确答案">plastic</span>)
+                    </div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文：</strong><br>
+                    <strong>EMPLOYEE:</strong> If you've got a strong cardboard box, that's best. We've found that <span class="highlight-word">plastic</span> ones sometimes break in the post.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>错因深度剖析（你的复盘：“定位到了但是没有听懂答案句子而错失”）：</strong><br>
+                    1. <strong>定位到了 box 却败在否定排除</strong>：题干括号 <code>(not ____)</code> 明确要求提取被否定的包装材质；<br>
+                    2. <strong>代词指代未解</strong>：男声说 <em>plastic ones sometimes break</em>（塑料的一寄容易破）。听到 box 时只确认了肯定项，但听到解释破损原因时，未能提炼出被排除的核心属性词 plastic。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Fine. Right, well I’ll get the photos packed up in a box and post them off to you.</div>
+                            <div class="cn-line">好的。我会把照片装进盒子寄给你们。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Right. If you’ve got a strong cardboard box, that’s best. We’ve found that plastic ones sometimes break in the post.</div>
+                            <div class="cn-line">好的。最好用结实的纸板箱。我们发现塑料盒有时会在邮寄途中破裂。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. Right, thanks for your help. Bye.</div>
+                            <div class="cn-line">好的，谢谢你的帮助。再见。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Bye.</div>
+                            <div class="cn-line">再见。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- Full Part 1 practice card, following the reference player's layout -->
+        <div class="slice-card" data-category="full" id="card-full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">完整精听 · Part 1 全篇</span>
+                    <h3 class="card-title">Part 1 完整录音实战盲听磨耳朵 (Q1 - Q10)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_1_Full_Copying_Photos_To_Digital_Format.mp3', 'Part 1 完整录音：老照片数字化咨询')">▶ 播放完整 Part 1</button>
+                    <button class="record-card-btn" id="rec-btn-full" onclick="handleRecBtnClick('full')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-full" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-full">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('full')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('full')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('full')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    <strong>【完整音频练习目标】</strong>：先收起原文，连续盲听 Q1–Q10；每题写完立即看下一题。第二遍展开下方双语对话，核对漏掉的答案句与转场信号；第三遍按原速跟读。
+                </div>
+                <div class="diagnosis-box">
+                    <strong>实战重点：</strong>Q1 抓女声先说的 frame；Q2 只记基础费用 195；Q2 漏听后及时转到 Q3 payment；Q4 听 folder 后继续等文件夹名称；Q6 继续听 by hand；Q9 将 within 预判为时间；Q10 对比 cardboard box 与 plastic ones。
+                </div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Part 1 完整对话原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body full-transcript-scroll">
+                        <div class="dialog-turn"><div class="en-line">以下是对话原文；完整音频中的播音员说明、读题停顿和检查时间未逐字转写。</div></div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Hello, Picturerep. Can I help you?</div>
+                            <div class="cn-line">你好，这里是 Picturerep。有什么可以帮您？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Oh, hi. I saw your advertisement about copying pictures to disk and I’d like a bit more information about what you do.</div>
+                            <div class="cn-line">你好。我看到了你们将照片复制到光盘的广告，想多了解一下服务。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Sure. What would you like to know?</div>
+                            <div class="cn-line">当然。您想了解什么？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Well, I’ve got a box full of old family photos that’s been up in the attic for years, some of them must be 50 or 60 years old, and I’d like to get them converted to digital format.</div>
+                            <div class="cn-line">我有一盒在阁楼放了多年的家庭老照片，其中一些可能已有五六十年历史，我想把它们转成数字格式。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Sure, we can do that for you.</div>
+                            <div class="cn-line">当然，我们可以帮您处理。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right. And what about size? The photos are all sorts of sizes – are there any restrictions?</div>
+                            <div class="cn-line">好的。尺寸方面呢？照片大小不一，有限制吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Well the maximum size of photo we can do with our normal service is 30 centimetres. And each picture must be at least 4 centimetres, that’s the minimum we can cope with.</div>
+                            <div class="cn-line">常规服务可处理的照片最大为30厘米；每张至少要有4厘米，这是我们能处理的最小尺寸。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> That should be fine. And some of them are in a frame – should I take them out before I send them?</div>
+                            <div class="cn-line">那应该没问题。有些照片装在相框里，寄给你们之前需要把它们取出来吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Yes please, we can’t copy them otherwise. And also the photos must all be separate, they mustn’t be stuck into an album.</div>
+                            <div class="cn-line">是的，请取出来，否则我们无法复制。另外，照片必须一张张分开，不能粘在相册里。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK, that’s not a problem. So can you give me an idea of how much this will cost? I’ve got about 360 photos I think.</div>
+                            <div class="cn-line">好的，这没问题。能大概告诉我费用吗？我想我有大约360张照片。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> We charge £195 for 300 to 400 photos for the basic service.</div>
+                            <div class="cn-line">基础服务中，300到400张照片收费195英镑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. And does that include the disk?</div>
+                            <div class="cn-line">好的。这包含光盘吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Yes, one disk – but you can get extra ones for £5 each.</div>
+                            <div class="cn-line">包含一张光盘；如果需要额外的，每张5英镑。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> That’s good. So do I need to pay when I send you the photos?</div>
+                            <div class="cn-line">好的。那么寄照片时就需要付款吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> No, we won’t need anything until we’ve actually copied the pictures. Then we’ll let you know how much it is, and once we’ve received the payment, we’ll send the parcel off to you.</div>
+                            <div class="cn-line">不用。照片复制完成前不需要付款。之后我们会告知金额；一收到付款，就会把包裹寄给你。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Right.</div>
+                            <div class="cn-line">明白了。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Is there anything else you’d like to ask about our services?</div>
+                            <div class="cn-line">关于我们的服务，你还有什么想问的吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Yes. I’ve roughly sorted out the photos into groups, according to what they’re about – so can you keep them in those groups when you copy them?</div>
+                            <div class="cn-line">有。我已经按内容把照片大致分组；复制时能保留这些分组吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Sure. We’ll save each group in a different folder on the disk and if you like, you can suggest a name for each folder.</div>
+                            <div class="cn-line">当然。我们会把每组照片存到光盘上的不同文件夹；你也可以为每个文件夹提议名称。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> So I could have one called ‘Grandparents’ for instance?</div>
+                            <div class="cn-line">比如，我可以把其中一个叫作“Grandparents”（祖父母）吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Exactly.</div>
+                            <div class="cn-line">正是这样。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> And do you do anything besides scan the photos? Like, can you make any improvements?</div>
+                            <div class="cn-line">除了扫描照片，你们还会做别的处理吗？比如能改善照片吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Yes, in the standard service each photo is checked, and we can sometimes touch up the colour a bit, or improve the contrast – that can make a big difference.</div>
+                            <div class="cn-line">会的。标准服务会检查每张照片；有时我们能稍微调整色彩，或改善对比度，效果可能很明显。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. And some of the photos are actually quite fragile – they won’t get damaged in the process, will they?</div>
+                            <div class="cn-line">好的。有些照片其实很脆弱；处理过程中不会弄坏吧？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> No, if any look particularly fragile, we’d do them by hand. We do realise how precious these old photos can be.</div>
+                            <div class="cn-line">不会。如果有照片看起来特别脆弱，我们会手工处理。我们明白这些老照片有多珍贵。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Sure.</div>
+                            <div class="cn-line">是的。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> And another thing is we can make changes to a photo if you want – so if you want to remove an object from a photo, or maybe alter the background, we can do that.</div>
+                            <div class="cn-line">另外，如果你愿意，我们还能修改照片：例如移除照片中的物体，或更改背景。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Really? I might be interested in that. I’ll have a look through the photos and see.</div>
+                            <div class="cn-line">真的吗？我可能需要这项服务。我会翻看照片再决定。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Oh, and talking of fixing photos – I’ve got a few that aren’t properly in focus. Can you do anything to make that better?</div>
+                            <div class="cn-line">说到修照片，我有几张没有对好焦。你们能改善吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> No, I’m afraid that’s one thing we can’t do.</div>
+                            <div class="cn-line">恐怕不行，这一点我们无法修复。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK.</div>
+                            <div class="cn-line">好的。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Any other information I can give you?</div>
+                            <div class="cn-line">还需要我提供其他信息吗？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Er ... oh, how long will it all take?</div>
+                            <div class="cn-line">嗯……整个过程要多久？</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> We aim to get the copying done in ten days.</div>
+                            <div class="cn-line">我们争取在十天内完成复制。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> Fine. Right, well I’ll get the photos packed up in a box and post them off to you.</div>
+                            <div class="cn-line">好的。我会把照片装进盒子寄给你们。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Right. If you’ve got a strong cardboard box, that’s best. We’ve found that plastic ones sometimes break in the post.</div>
+                            <div class="cn-line">好的。最好用结实的纸板箱。我们发现塑料盒有时会在邮寄途中破裂。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">WOMAN</span> OK. Right, thanks for your help. Bye.</div>
+                            <div class="cn-line">好的，谢谢你的帮助。再见。</div>
+                        </div>
+<div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">EMPLOYEE</span> Bye.</div>
+                            <div class="cn-line">再见。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Methodology Summary Panel -->
+    <div class="tips-panel" style="margin-top:40px;">
+        <div class="tips-title">💡 剑16 Test 2 Part 1 实战四步提分指南</div>
+        <ul class="tips-list">
+            <li><strong>Step 1：信息类型预判</strong>：空格前有 <code>£</code> $\rightarrow$ 锁定费用；空前有 <code>within</code> $\rightarrow$ 锁定时间段；空前有 <code>e.g. name</code> $\rightarrow$ 专有名词大写，绝不抄题干原词。</li>
+            <li><strong>Step 2：1.5 秒物理断舍离</strong>：数字密集轰炸漏听后（Q2: 195），必须强行断舍离视线下移，坚决保住下一题（Q3: payment）。</li>
+            <li><strong>Step 3：双向角色防守</strong>：提问者（女声）口中抛出的名词（Q1: frame）往往就是答案本身，回答者的 Yes 只是确认盖章。</li>
+            <li><strong>Step 4：影子跟读录音磨耳朵</strong>：利用上方录音室反复跟读 <em>by hand</em>、<em>Grandparents</em>、<em>in 10 days</em>，建立直接的声音肌肉反射！</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>雅思听力 7 坑与 3+2 复盘系统 · 剑桥雅思 16 Test 2 Part 1 靶向音频切片点播台</p>
+    </footer>
+</div>
+
+<script>
+    const mainAudio = document.getElementById('main-audio');
+    const nowPlayingText = document.getElementById('now-playing-text');
+    let isLooping = false;
+
+    function playAudio(filename, title) {
+        if (!mainAudio) return;
+        mainAudio.src = filename;
+        mainAudio.play();
+        if (nowPlayingText) {
+            nowPlayingText.innerHTML = `<span>▶ 正在播放：${title}</span>`;
+        }
+    }
+
+    function replayAudio() {
+        if (mainAudio) {
+            mainAudio.currentTime = 0;
+            mainAudio.play();
+        }
+    }
+
+    function skipTime(seconds) {
+        if (mainAudio) {
+            mainAudio.currentTime = Math.max(0, Math.min(mainAudio.duration || 9999, mainAudio.currentTime + seconds));
+        }
+    }
+
+    function toggleLoop() {
+        isLooping = !isLooping;
+        if (mainAudio) {
+            mainAudio.loop = isLooping;
+        }
+        const btn = document.getElementById('loop-btn');
+        if (isLooping) {
+            btn.classList.add('active');
+            btn.innerHTML = '🔁 单曲循环: 开';
+        } else {
+            btn.classList.remove('active');
+            btn.innerHTML = '🔁 单曲循环: 关';
+        }
+    }
+
+    function setSpeed(speed, btn) {
+        if (mainAudio) {
+            mainAudio.playbackRate = speed;
+        }
+        const buttons = btn.parentElement.querySelectorAll('.pill-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    // Category Filtering
+    function filterCategory(category, btn) {
+        const tabs = document.querySelectorAll('.tab-btn');
+        tabs.forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category') || '';
+            if (category === 'all') {
+                card.style.display = 'block';
+            } else if (cardCat.includes(category)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Shadowing Recording Logic
+    const userRecordings = {};
+    let activeMediaRecorder = null;
+    let activeAudioChunks = [];
+    let recordingCardId = null;
+    let recordTimerInterval = null;
+    let recordSeconds = 0;
+    let userAudioPlayer = null;
+
+    function handleRecBtnClick(cardId) {
+        if (recordingCardId === cardId) {
+            stopRecording(cardId);
+        } else {
+            if (recordingCardId) {
+                stopRecording(recordingCardId);
+            }
+            startRecording(cardId);
+        }
+    }
+
+    async function startRecording(cardId) {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            activeAudioChunks = [];
+            recordingCardId = cardId;
+            recordSeconds = 0;
+
+            let mimeType = 'audio/webm';
+            if (!MediaRecorder.isTypeSupported('audio/webm')) {
+                if (MediaRecorder.isTypeSupported('audio/mp4')) {
+                    mimeType = 'audio/mp4';
+                } else if (MediaRecorder.isTypeSupported('audio/aac')) {
+                    mimeType = 'audio/aac';
+                } else {
+                    mimeType = '';
+                }
+            }
+
+            activeMediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+
+            activeMediaRecorder.ondataavailable = e => {
+                if (e.data && e.data.size > 0) {
+                    activeAudioChunks.push(e.data);
+                }
+            };
+
+            activeMediaRecorder.onstop = () => {
+                const audioBlob = new Blob(activeAudioChunks, { type: activeMediaRecorder.mimeType || 'audio/webm' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                userRecordings[cardId] = audioUrl;
+
+                stream.getTracks().forEach(track => track.stop());
+
+                const btn = document.getElementById(`rec-btn-${cardId}`);
+                if (btn) {
+                    btn.classList.remove('recording');
+                    btn.innerHTML = '🎙️ 重新跟读';
+                }
+
+                const panel = document.getElementById(`user-rec-panel-${cardId}`);
+                if (panel) {
+                    const btns = panel.querySelector('.rec-panel-btns');
+                    if (btns) btns.style.display = 'flex';
+                    const statusText = panel.querySelector('.rec-status-text');
+                    if (statusText) statusText.innerText = '✅ 跟读已录制完成';
+                    const dot = panel.querySelector('.rec-status-dot');
+                    if (dot) dot.style.background = '#10b981';
+                }
+                clearInterval(recordTimerInterval);
+                recordingCardId = null;
+            };
+
+            activeMediaRecorder.start();
+
+            const btn = document.getElementById(`rec-btn-${cardId}`);
+            if (btn) {
+                btn.classList.add('recording');
+                btn.innerHTML = '⏹️ 停止录音';
+            }
+
+            const panel = document.getElementById(`user-rec-panel-${cardId}`);
+            if (panel) {
+                panel.style.display = 'flex';
+                const btns = panel.querySelector('.rec-panel-btns');
+                if (btns) btns.style.display = 'none';
+                const statusText = panel.querySelector('.rec-status-text');
+                if (statusText) statusText.innerText = '🔴 正在录制你的跟读...';
+                const dot = panel.querySelector('.rec-status-dot');
+                if (dot) dot.style.background = '#ef4444';
+            }
+
+            const timeBadge = document.getElementById(`rec-time-${cardId}`);
+            recordTimerInterval = setInterval(() => {
+                recordSeconds++;
+                const mins = String(Math.floor(recordSeconds / 60)).padStart(2, '0');
+                const secs = String(recordSeconds % 60).padStart(2, '0');
+                if (timeBadge) timeBadge.innerText = `${mins}:${secs}`;
+            }, 1000);
+
+        } catch (err) {
+            console.error('Microphone access denied:', err);
+            alert('请允许浏览器使用麦克风，以使用影子跟读录音功能！');
+            recordingCardId = null;
+        }
+    }
+
+    function stopRecording(cardId) {
+        if (activeMediaRecorder && activeMediaRecorder.state !== 'inactive') {
+            activeMediaRecorder.stop();
+        }
+    }
+
+    function playUserRecording(cardId) {
+        const url = userRecordings[cardId];
+        if (!url) return;
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        userAudioPlayer = new Audio(url);
+        userAudioPlayer.play();
+    }
+
+    function compareOfficial(cardId) {
+        const card = document.getElementById(`card-${cardId}`);
+        if (!card) return;
+        const playBtn = card.querySelector('.play-card-btn');
+        if (playBtn) playBtn.click();
+    }
+
+    function deleteRecording(cardId) {
+        if (userRecordings[cardId]) {
+            URL.revokeObjectURL(userRecordings[cardId]);
+            delete userRecordings[cardId];
+        }
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        if (panel) panel.style.display = 'none';
+        const btn = document.getElementById(`rec-btn-${cardId}`);
+        if (btn) {
+            btn.classList.remove('recording');
+            btn.innerHTML = '🎙️ 录音跟读';
+        }
+    }
+</script>
+</body>
+</html>

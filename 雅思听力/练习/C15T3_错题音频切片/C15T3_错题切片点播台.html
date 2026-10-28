@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 15 Test 3 Part 1 听力错题切片与考点点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Player Sticky Bar */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .now-playing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        audio {
+            width: 100%;
+            height: 42px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            font-weight: bold;
+            border-color: var(--accent-blue);
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 11px 20px;
+            border-radius: 12px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+        }
+
+        /* Slice Card */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 22px 24px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .slice-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .card-tag {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-p1 { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); border: 1px solid rgba(56, 189, 248, 0.4); }
+        .tag-wrong { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); border: 1px solid rgba(248, 113, 113, 0.4); }
+        .tag-correct { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); border: 1px solid rgba(52, 211, 153, 0.4); }
+
+        .card-title {
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: #f1f5f9;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, var(--accent-blue), #2563eb);
+            color: #fff;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .play-card-btn:hover {
+            opacity: 0.95;
+            transform: scale(1.03);
+        }
+
+        .record-card-btn {
+            background: rgba(248, 113, 113, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(248, 113, 113, 0.4);
+            padding: 9px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.25);
+            border-color: var(--accent-red);
+            color: #fca5a5;
+        }
+
+        .record-card-btn.recording {
+            background: var(--accent-red);
+            color: #fff;
+            animation: pulse-red 1.5s infinite;
+            border-color: var(--accent-red);
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(248, 113, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+        }
+
+        /* User Shadowing Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px dashed rgba(248, 113, 113, 0.4);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-red);
+            display: inline-block;
+        }
+
+        .rec-status-dot.recording {
+            animation: pulse-red 1s infinite;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: var(--accent-amber);
+            font-weight: 700;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 8px;
+        }
+
+        .rec-sub-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 14px;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .rec-sub-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--accent-blue);
+        }
+
+        /* Question Stem Box */
+        .q-stem-box {
+            background: rgba(0, 0, 0, 0.35);
+            border-left: 4px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            font-size: 1.05rem;
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        .q-stem-box strong {
+            color: var(--accent-amber);
+        }
+
+        /* Analysis Box */
+        .analysis-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+            font-size: 0.98rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .analysis-box.wrong-focus {
+            background: rgba(248, 113, 113, 0.08);
+            border-color: rgba(248, 113, 113, 0.25);
+        }
+
+        .analysis-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .wrong-focus .analysis-title {
+            color: var(--accent-red);
+        }
+
+        /* Script Drawer */
+        details {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 10px 16px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            color: var(--accent-blue);
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .script-content {
+            padding: 14px 18px;
+            font-size: 1.02rem;
+            line-height: 1.75;
+            color: #e2e8f0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .speaker-sally {
+            color: #38bdf8;
+            font-weight: 700;
+        }
+
+        .speaker-joe {
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .hl-target {
+            background: rgba(52, 211, 153, 0.25);
+            color: #34d399;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            border-bottom: 2px solid #34d399;
+        }
+
+        .hl-trap {
+            background: rgba(248, 113, 113, 0.25);
+            color: #f87171;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-decoration: line-through;
+        }
+
+        .hl-prompt {
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Navigation Bar -->
+    <div class="nav-back-bar">
+        <a href="../切片/index.html" class="nav-link">
+            <span>📂 返回切片总目录</span>
+        </a>
+        <div style="display: flex; gap: 14px;">
+            <a href="../剑桥15_Test3_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link" style="color: var(--accent-amber);">
+                <span>📊 查看 Part 1 深度复盘表</span>
+            </a>
+            <a href="../C15T2_错题音频切片/C15T2_错题切片点播台.html" class="nav-link" style="color: var(--accent-purple);">
+                <span>▶ 剑15 T2 点播台</span>
+            </a>
+        </div>
+    </div>
+
+    <header>
+        <h1>剑桥雅思 15 Test 3 · Part 1 错题切片点播台</h1>
+        <p>Employment Agency: Possible Jobs 职业介绍所职位推荐 · 10 大考点精准切片 · 影子跟读录音 · 深度神经归因</p>
+    </header>
+
+    <!-- Sticky Main Audio Player -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="now-playing-text">
+                <span>🎧</span> <span id="track-title">点击下方任一切片卡片开始播放</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="setPlaybackRate(0.8)" id="rate-08">0.8x</button>
+                <button class="pill-btn active" onclick="setPlaybackRate(1.0)" id="rate-10">1.0x</button>
+                <button class="pill-btn" onclick="setPlaybackRate(1.2)" id="rate-12">1.2x</button>
+                <button class="pill-btn" onclick="toggleLoop()" id="loop-btn">🔁 循环: 关</button>
+            </div>
+        </div>
+        <audio id="main-audio" controls></audio>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCards('all')">全部切片 (11)</button>
+        <button class="tab-btn" onclick="filterCards('wrong')" style="color: #fca5a5;">⚠️ 错题与核心陷阱 (3: Q6/Q7/Q8)</button>
+        <button class="tab-btn" onclick="filterCards('job1')">🏢 岗位一：行政助理 (Q1-Q5)</button>
+        <button class="tab-btn" onclick="filterCards('job2')">📦 岗位二：仓库助理 (Q6-Q10)</button>
+    </div>
+
+    <!-- Slices List -->
+    <div class="slice-list">
+
+        <!-- Q1 Card -->
+        <div class="slice-card" data-type="job1" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q1 考点 · 26秒切片</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <h3 class="card-title">01 · 岗位一所属企业产品 (furniture)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('01_Q1_家具制造公司Home_Solutions与设计制造furniture.mp3', '01 · 岗位所属企业产品 (furniture)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-1" onclick="toggleRecording(1)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-1" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-1"></span>
+                    <span id="rec-status-1">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-1">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-1" onclick="playUserRecording(1)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(1)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(1)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Administrative assistant in a company that produces <strong>[ 1 ]</strong> (North London)
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>改写对应</strong>：卷面 <code>produces</code> $\Leftrightarrow$ 录音 <code>design and make</code>；<br>
+                • <strong>做题心得</strong>：Sally 报出公司名称 <em>Home Solutions</em> 之后紧跟核心动词 <em>design and make</em>，顺利锁定不可数名词 <code>furniture</code>，开局稳步拿分。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> The first one is in a company based in North London. They’re looking for an administrative assistant.</p>
+                    <p><span class="speaker-joe">JOE:</span> OK. What sort of company is it?</p>
+                    <p><span class="speaker-sally">SALLY:</span> They’re called Home Solutions and they <span class="hl-prompt">design and make</span> <span class="hl-target">furniture [Q1]</span>.</p>
+                    <p><span class="speaker-joe">JOE:</span> Oh, I don’t know much about that, but it sounds interesting.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q2 Card -->
+        <div class="slice-card" data-type="job1" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q2 考点 · 27秒切片</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <h3 class="card-title">02 · 行政助理核心职责之一 (meetings)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('02_Q2_参会并记录要点attend_meetings与同义改写.mp3', '02 · 行政助理核心职责之一 (meetings)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-2" onclick="toggleRecording(2)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-2" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-2"></span>
+                    <span id="rec-status-2">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-2">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-2" onclick="playUserRecording(2)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(2)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(2)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Responsibilities: go to <strong>[ 2 ]</strong> and take notes
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>改写对应</strong>：卷面 <code>go to ... and take notes</code> $\Leftrightarrow$ 录音 <code>attend meetings and take notes there</code>；<br>
+                • <strong>做题心得</strong>：迅速排除前面的 <em>data entry</em>，听到 Sally 说 <em>expect the person they appoint to attend...</em> 敏锐抓取 <code>meetings</code> 并听出复数尾音。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> Yes, well as I said, they want someone in their office, and looking at your past experience it does look as if you fit quite a few of the requirements. So on your CV it appears you’ve done some data entry?</p>
+                    <p><span class="speaker-joe">JOE:</span> Yes.</p>
+                    <p><span class="speaker-sally">SALLY:</span> So that’s one skill they want. Then they expect the person they appoint to <span class="hl-prompt">attend</span> <span class="hl-target">meetings [Q2]</span> <span class="hl-prompt">and take notes</span> there …</p>
+                    <p><span class="speaker-joe">JOE:</span> OK. I’ve done that before, yes.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q3 Card -->
+        <div class="slice-card" data-type="job1" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q3 考点 · 26秒切片</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <h3 class="card-title">03 · 行政日常管理工作 (diary)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('03_Q3_日程管理manage_the_diary与简历补充建议.mp3', '03 · 行政日常管理工作 (diary)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-3" onclick="toggleRecording(3)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-3" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-3"></span>
+                    <span id="rec-status-3">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-3">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-3" onclick="playUserRecording(3)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(3)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(3)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Responsibilities: management of <strong>[ 3 ]</strong>
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>角色反转与改写</strong>：答案词由求职者 Joe 在介绍过往经验时主动提及（<em>manage the diary</em>），Sally 确认 <em>that's something they want here too</em>；<br>
+                • <strong>做题心得</strong>：规避了 daily 与 diary 易混发音，精准拼写 <code>diary</code>（日程簿）。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> And you’d need to be able to cope with general admin.</p>
+                    <p><span class="speaker-joe">JOE:</span> Filing, and keeping records and so on? That should be OK. And in my last job I also had to <span class="hl-prompt">manage the</span> <span class="hl-target">diary [Q3]</span>.</p>
+                    <p><span class="speaker-sally">SALLY:</span> Excellent. That’s something they want here too. I’d suggest you add it to your CV – I don’t think you mentioned that, did you?</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q4 Card -->
+        <div class="slice-card" data-type="job1" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q4 考点 · 27秒切片</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <h3 class="card-title">04 · 岗位素质要求 (details / detail)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('04_Q4_做事细致认真takes_care_with_details考点.mp3', '04 · 岗位素质要求 (details / detail)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-4" onclick="toggleRecording(4)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-4" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-4"></span>
+                    <span id="rec-status-4">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-4">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-4" onclick="playUserRecording(4)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(4)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(4)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Requirements: attention to <strong>[ 4 ]</strong>
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>经典固定改写</strong>：卷面 <code>attention to detail</code> $\Leftrightarrow$ 录音 <code>careful and takes care with details</code>；<br>
+                • <strong>做题心得</strong>：在听到 <em>spreadsheets</em> 与 <em>interpersonal skills</em> 后，紧咬空前修饰词 <em>careful</em>，顺利抓出 <code>details</code>。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> And interpersonal skills – which would be something they’d check with your references.</p>
+                    <p><span class="speaker-joe">JOE:</span> I think that should be OK, yes.</p>
+                    <p><span class="speaker-sally">SALLY:</span> Then they mention that they want someone who is <span class="hl-prompt">careful and takes care with</span> <span class="hl-target">details [Q4]</span> – just looking at your CV, I’d say you’re probably alright there.</p>
+                    <p><span class="speaker-joe">JOE:</span> I think so, yes. Do they want any special experience?</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q5 Card -->
+        <div class="slice-card" data-type="job1" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q5 考点 · 26秒切片</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <h3 class="card-title">05 · 最低经验年限要求 (1 year / one year)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('05_Q5_远程会议至少一年经验at_least_one_year与三年干扰.mp3', '05 · 最低经验年限要求 (1 year / one year)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-5" onclick="toggleRecording(5)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-5" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-5"></span>
+                    <span id="rec-status-5">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-5">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-5" onclick="playUserRecording(5)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(5)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(5)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Experience: need a minimum of <strong>[ 5 ]</strong> of experience of teleconferencing
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>程度限定与排雷</strong>：Joe 先报出干扰项 <em>three years' experience</em>，Sally 澄清 <em>in fact they're only asking for at least one year</em>；<br>
+                • <strong>做题心得</strong>：准确将卷面 <code>a minimum of</code> 对应到录音 <code>at least</code>，没有被前置的 3 年个人资历误导，稳抓 <code>1 year</code>。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> I think they wanted some experience of teleconferencing.</p>
+                    <p><span class="speaker-joe">JOE:</span> I’ve got <span class="hl-trap">three years’</span> experience of that.</p>
+                    <p><span class="speaker-sally">SALLY:</span> Let's see, yes, good. In fact they’re only asking for <span class="hl-prompt">at least</span> <span class="hl-target">one year [Q5]</span>, so that’s great. So is that something that might interest you?</p>
+                    <p><span class="speaker-joe">JOE:</span> It is, yes.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q6 Card (Wrong) -->
+        <div class="slice-card" data-type="job2" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q6 错题精研 · 35秒切片</span>
+                    <span class="card-tag tag-p1">②拼写坑 + ⑦单复数</span>
+                    <h3 class="card-title">06 · 仓库助理管理职责 (deliveries)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('06_Q6_货物出入库管理deliveries拼写与复数易错辨析.mp3', '06 · 仓库助理管理职责 (deliveries)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-6" onclick="toggleRecording(6)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-6" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-6"></span>
+                    <span id="rec-status-6">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-6">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-6" onclick="playUserRecording(6)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(6)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(6)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Responsibilities: stock management / managing <strong>[ 6 ]</strong>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">⚠️ 错因核心剖析（字母拼写错乱与单复数形态动摇）</div>
+                • <strong>现场复现</strong>：听到了也定位到了，但在落笔拼写时，第二音节元音字母 <code>i</code> 习惯性误写为 <code>e</code>（写成 dele...），并且在单复数上犹豫不决写错；<br>
+                • <strong>神经认知根因</strong>：大脑对词形表征（Orthographic Representation）模糊，<code>delivery</code> 变复数 <code>deliveries</code> 缺乏连贯肌肉记忆；<br>
+                • <strong>强化训练</strong>：大声朗读 <code>/dɪˈlɪvəriz/</code>，连续默写 10 遍 <code>d-e-l-i-v-e-r-i-e-s</code>，杜绝考场手脑脱节。
+            </div>
+
+            <details open>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▲</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> So the second position might suit you better as far as the location goes; that’s for a warehouse assistant and that’s in South London.</p>
+                    <p><span class="speaker-joe">JOE:</span> Yes, that would be a lot closer.</p>
+                    <p><span class="speaker-sally">SALLY:</span> And you’ve worked in a warehouse before, haven’t you?</p>
+                    <p><span class="speaker-joe">JOE:</span> Yes.</p>
+                    <p><span class="speaker-sally">SALLY:</span> So as far as the responsibilities for this position go, they want someone who can manage the stock, obviously, and <span class="hl-prompt">also</span> <span class="hl-target">deliveries [Q6]</span>.</p>
+                    <p><span class="speaker-joe">JOE:</span> That should be OK. You’ve got to keep track of stuff, but I’ve always been quite good with numbers.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q7 Card (Wrong) -->
+        <div class="slice-card" data-type="job2" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q7 错题精研 · 29秒切片</span>
+                    <span class="card-tag tag-p1">①词义盲区 + ⑥语法脑补</span>
+                    <h3 class="card-title">07 · 个人工作素质特征 (tidy)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('07_Q7_组织条理性与整洁tidy语义认知与形容词并列.mp3', '07 · 个人工作素质特征 (tidy)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-7" onclick="toggleRecording(7)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-7" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-7"></span>
+                    <span id="rec-status-7">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-7">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-7" onclick="playUserRecording(7)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(7)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(7)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Requirements: very organised and <strong>[ 7 ]</strong>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">⚠️ 错因核心剖析（生词盲区与“伪语法前后一致”脑补）</div>
+                • <strong>现场复现</strong>：听出了 <code>tidy</code> 的发音，但因不认识词义，加上空前是 <code>organised</code>，误以为是动词过去分词对称，凭空生造了 <code>tided</code>；<br>
+                • <strong>神经认知根因</strong>：缺乏对基础形容词 <code>tidy</code>（井井有条的）的语义储备，触发了教条的“前后对称语法脑补机制”；<br>
+                • <strong>防坑铁律</strong>：<code>organised</code> 与 <code>tidy</code> 是形容词功能并列（修饰人的性格），绝非字尾拼写对称！凡是听到的声音，原汁原味拼出，绝不可画蛇添足加 -ed。
+            </div>
+
+            <details open>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▲</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> Good, that’s their first requirement. And they want someone who’s computer literate, which we know you are.</p>
+                    <p><span class="speaker-joe">JOE:</span> Sure.</p>
+                    <p><span class="speaker-sally">SALLY:</span> Then they mention organisational skills. They want someone who’s <span class="hl-prompt">well organised</span>.</p>
+                    <p><span class="speaker-joe">JOE:</span> Yes, I think I am.</p>
+                    <p><span class="speaker-sally">SALLY:</span> And <span class="hl-target">tidy [Q7]</span>?</p>
+                    <p><span class="speaker-joe">JOE:</span> Yes, they go together really, don’t they?</p>
+                    <p><span class="speaker-sally">SALLY:</span> Sure.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q8 Card (Wrong) -->
+        <div class="slice-card" data-type="job2" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q8 错题精研 · 29秒切片</span>
+                    <span class="card-tag tag-p1">提前抢跑 + 同义改写脱节</span>
+                    <h3 class="card-title">08 · 团队协作习惯 (team)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('08_Q8_团队协作part_of_a_team与提前抢答workhouse陷阱.mp3', '08 · 团队协作习惯 (team)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-8" onclick="toggleRecording(8)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-8" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-8"></span>
+                    <span id="rec-status-8">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-8">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-8" onclick="playUserRecording(8)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(8)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(8)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Requirements: used to working in a <strong>[ 8 ]</strong>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">⚠️ 错因核心剖析（状语背景词提前抢答与手脑闭塞）</div>
+                • <strong>现场复现</strong>：听到 Joe 说 <em>for the last warehouse job</em> 时，大脑被熟悉的岗位背景词吸引，过早断定答案盲写 <code>workhouse/warehouse</code>，漏掉了后半句真正的主干；<br>
+                • <strong>同义改写链</strong>：卷面 <code>working in a [ 8 ]</code> $\Leftrightarrow$ 录音 <code>being part of a team</code> $\Leftrightarrow$ Sally 确认 <code>used to that</code>；<br>
+                • <strong>防坑铁律</strong>：听到“在上一份工作中（for the last... job）”100% 只是状语背景铺垫！手千万不能动，必须死等主句主干核心名词！
+            </div>
+
+            <details open>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▲</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> Then the usual stuff; they want someone who can communicate well both orally and in writing.</p>
+                    <p><span class="speaker-joe">JOE:</span> OK. And <span class="hl-trap">for the last warehouse job</span> I had, one of the things I enjoyed most was <span class="hl-prompt">being part of a</span> <span class="hl-target">team [Q8]</span>. I found that was really essential for the job.</p>
+                    <p><span class="speaker-sally">SALLY:</span> Excellent. Yes, they do mention that they want someone who’s <span class="hl-prompt">used to that</span>, yes.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q9 Card -->
+        <div class="slice-card" data-type="job2" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q9 考点 · 26秒切片</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <h3 class="card-title">09 · 物品搬运与体力要求 (heavy)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('09_Q9_搬运重物moving_heavy_things厨卫电器语境.mp3', '09 · 物品搬运与体力要求 (heavy)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-9" onclick="toggleRecording(9)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-9" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-9"></span>
+                    <span id="rec-status-9">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-9">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-9" onclick="playUserRecording(9)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(9)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(9)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Requirements: able to cope with items that are <strong>[ 9 ]</strong>
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>改写对应</strong>：卷面 <code>cope with items that are [ 9 ]</code> $\Leftrightarrow$ 录音 <code>OK moving heavy things</code>；<br>
+                • <strong>做题心得</strong>：没有被前面的 <em>sinks and stoves and fridges</em> 具体器具名词干扰，紧跟 Sally 的追问提炼出形容词 <code>heavy</code>。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> Now when you were working in a warehouse last time, what sorts of items were you dealing with?</p>
+                    <p><span class="speaker-joe">JOE:</span> It was mostly bathroom and kitchen equipment, sinks and stoves and fridges.</p>
+                    <p><span class="speaker-sally">SALLY:</span> So you’re OK moving <span class="hl-target">heavy [Q9]</span> <span class="hl-prompt">things</span>?</p>
+                    <p><span class="speaker-joe">JOE:</span> Sure. I’m quite strong, and I’ve had the training.</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q10 Card -->
+        <div class="slice-card" data-type="job2" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q10 考点 · 30秒切片</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <h3 class="card-title">10 · 岗位过往服务经验要求 (customer)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('10_Q10_客户服务经验customer_service工作技能要求.mp3', '10 · 岗位过往服务经验要求 (customer)')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-10" onclick="toggleRecording(10)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-10" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-10"></span>
+                    <span id="rec-status-10">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-10">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-10" onclick="playUserRecording(10)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(10)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(10)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Need experience of: <strong>[ 10 ]</strong> service
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>定位信号</strong>：Sally 给出终结信号词 <em>and the final thing they mention is...</em>；<br>
+                • <strong>做题心得</strong>：高频职场复合名词 <code>customer service</code> 听辨极其清晰，单数拼写标准，完美收官。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">SALLY:</span> Good. Now as far as experience goes, they mention they want someone with a licence, and that you have experience of driving in London – so you can cope with the traffic and so on.</p>
+                    <p><span class="speaker-joe">JOE:</span> Yes, no problem.</p>
+                    <p><span class="speaker-sally">SALLY:</span> And you’ve got experience of warehouse work … and <span class="hl-prompt">the final thing they mention is</span> <span class="hl-target">customer [Q10]</span> service. I think looking at your CV you’re OK there.</p>
+                    <p><span class="speaker-joe">JOE:</span> Right. So what about pay? Can you tell me a bit more about that, please …</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Full Audio Card -->
+        <div class="slice-card" data-type="full" data-wrong="false" style="border-color: rgba(56, 189, 248, 0.4);">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag" style="background: rgba(192, 132, 252, 0.2); color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.4);">全录音 · 5分20秒</span>
+                    <h3 class="card-title">Section 1 官方完整无删减录音 (Q1 - Q10 综合实战演练)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" style="background: linear-gradient(135deg, #818cf8, #c084fc);" onclick="playTrack('Section_1_Full_Employment_Agency_Possible_Jobs.mp3', 'Section 1 官方完整无删减录音 (5m20s)')">
+                        <span>▶ 播放全录音</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="q-stem-box" style="border-left-color: #c084fc;">
+                <strong>实战建议：</strong> 在完成了单个错题卡片的精听与跟读后，播放本完整录音，拿出一张白纸，按照考试实战节奏重新填空盲做一遍，检验肌肉记忆与抗干扰能力！
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>剑桥雅思 15 Test 3 Part 1 听力错题切片与影子跟读点播台 · 聚焦高频失分命门 · 攻克拼写脱节与状语抢跑</p>
+    </footer>
+</div>
+
+<script>
+    // Audio Player State
+    const mainAudio = document.getElementById('main-audio');
+    const nowPlayingText = document.getElementById('now-playing-text');
+    let isLooping = false;
+
+    function playTrack(filename, title) {
+        if (recordingCardId !== null) {
+            stopRecording(recordingCardId);
+        }
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        if (!mainAudio) return;
+
+        mainAudio.src = filename;
+        mainAudio.loop = isLooping;
+        
+        if (nowPlayingText) {
+            nowPlayingText.innerHTML = `<span>🎵 正在播放：</span><span style="color: var(--accent-blue); font-weight: bold;">${title}</span>`;
+        }
+        
+        // Reset card button states
+        document.querySelectorAll('.play-card-btn').forEach(btn => {
+            btn.innerHTML = '<span>▶ 播放</span>';
+        });
+
+        // Highlight currently playing card button
+        if (window.event && window.event.currentTarget && window.event.currentTarget.classList.contains('play-card-btn')) {
+            window.event.currentTarget.innerHTML = '<span>⏸️ 正在播放</span>';
+        }
+
+        mainAudio.play().catch(err => {
+            console.error("Playback failed:", err);
+            if (nowPlayingText) {
+                nowPlayingText.innerHTML = `<span style="color: var(--accent-red);">⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+            }
+        });
+    }
+
+    // Alias playAudio to playTrack for full compatibility
+    const playAudio = playTrack;
+
+    if (mainAudio) {
+        mainAudio.onended = () => {
+            document.querySelectorAll('.play-card-btn').forEach(btn => {
+                btn.innerHTML = '<span>▶ 播放</span>';
+            });
+        };
+        mainAudio.onpause = () => {
+            document.querySelectorAll('.play-card-btn').forEach(btn => {
+                btn.innerHTML = '<span>▶ 播放</span>';
+            });
+        };
+    }
+
+    function toggleLoop(btn) {
+        isLooping = !isLooping;
+        if (mainAudio) {
+            mainAudio.loop = isLooping;
+        }
+        const loopBtn = btn || document.getElementById('loop-btn');
+        if (loopBtn) {
+            if (isLooping) {
+                loopBtn.classList.add('active');
+                loopBtn.innerHTML = '🔁 循环: 开';
+            } else {
+                loopBtn.classList.remove('active');
+                loopBtn.innerHTML = '🔁 循环: 关';
+            }
+        }
+    }
+
+    function setPlaybackRate(rate) {
+        if (mainAudio) {
+            mainAudio.playbackRate = rate;
+        }
+        document.querySelectorAll('.sticky-player .pill-btn').forEach(b => {
+            if (b.id && b.id.startsWith('rate-')) {
+                b.classList.remove('active');
+            }
+        });
+        const activeBtn = document.getElementById(`rate-${String(rate).replace('.', '')}`);
+        if (activeBtn) activeBtn.classList.add('active');
+    }
+    const setSpeed = setPlaybackRate;
+
+    function filterCards(type) {
+        const tabs = document.querySelectorAll('.filter-tabs .tab-btn');
+        tabs.forEach(t => t.classList.remove('active'));
+        if (window.event && window.event.currentTarget && window.event.currentTarget.classList.contains('tab-btn')) {
+            window.event.currentTarget.classList.add('active');
+        }
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            if (type === 'all') {
+                card.style.display = 'block';
+            } else if (type === 'wrong') {
+                card.style.display = card.getAttribute('data-wrong') === 'true' ? 'block' : 'none';
+            } else if (type === 'job1') {
+                card.style.display = card.getAttribute('data-type') === 'job1' ? 'block' : 'none';
+            } else if (type === 'job2') {
+                card.style.display = card.getAttribute('data-type') === 'job2' ? 'block' : 'none';
+            }
+        });
+    }
+    const filterCategory = filterCards;
+
+    // Shadowing Recording Logic
+    const userRecordings = {};
+    let activeMediaRecorder = null;
+    let activeAudioChunks = [];
+    let recordingCardId = null;
+    let recordTimerInterval = null;
+    let recordSeconds = 0;
+    let userAudioPlayer = null;
+
+    function handleRecBtnClick(cardId) {
+        if (recordingCardId === cardId) {
+            stopRecording(cardId);
+        } else {
+            if (recordingCardId) {
+                stopRecording(recordingCardId);
+            }
+            startRecording(cardId);
+        }
+    }
+
+    function toggleRecording(cardId) {
+        deleteRecording(cardId);
+        startRecording(cardId);
+    }
+
+    async function startRecording(cardId) {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            activeAudioChunks = [];
+            recordingCardId = cardId;
+            recordSeconds = 0;
+
+            let mimeType = 'audio/webm';
+            if (!MediaRecorder.isTypeSupported('audio/webm')) {
+                if (MediaRecorder.isTypeSupported('audio/mp4')) {
+                    mimeType = 'audio/mp4';
+                } else if (MediaRecorder.isTypeSupported('audio/aac')) {
+                    mimeType = 'audio/aac';
+                } else {
+                    mimeType = '';
+                }
+            }
+            
+            const options = mimeType ? { mimeType } : {};
+            activeMediaRecorder = new MediaRecorder(stream, options);
+
+            activeMediaRecorder.ondataavailable = e => {
+                if (e.data && e.data.size > 0) {
+                    activeAudioChunks.push(e.data);
+                }
+            };
+
+            activeMediaRecorder.onstop = () => {
+                const blob = new Blob(activeAudioChunks, { type: activeMediaRecorder.mimeType || 'audio/webm' });
+                const audioUrl = URL.createObjectURL(blob);
+                userRecordings[cardId] = {
+                    blob: blob,
+                    url: audioUrl,
+                    duration: recordSeconds
+                };
+                
+                stream.getTracks().forEach(track => track.stop());
+                updateUIAfterRecording(cardId);
+            };
+
+            activeMediaRecorder.start(200);
+
+            // Update UI
+            const recBtn = document.getElementById(`rec-btn-${cardId}`);
+            recBtn.classList.add('recording');
+            recBtn.innerHTML = '⏹️ 完成录音';
+
+            const panel = document.getElementById(`user-rec-panel-${cardId}`);
+            panel.style.display = 'flex';
+            
+            const statusText = document.getElementById(`rec-status-${cardId}`);
+            statusText.innerText = '🔴 正在录音... 请跟着原声朗读复述';
+            statusText.style.color = '#f87171';
+
+            const dot = document.getElementById(`rec-dot-${cardId}`);
+            dot.classList.add('recording');
+
+            panel.querySelector('.rec-panel-btns').style.display = 'none';
+
+            // Timer
+            const timerBadge = document.getElementById(`rec-time-${cardId}`);
+            timerBadge.innerText = '00:00';
+            clearInterval(recordTimerInterval);
+            recordTimerInterval = setInterval(() => {
+                recordSeconds++;
+                const mins = String(Math.floor(recordSeconds / 60)).padStart(2, '0');
+                const secs = String(recordSeconds % 60).padStart(2, '0');
+                timerBadge.innerText = `${mins}:${secs}`;
+            }, 1000);
+
+        } catch (err) {
+            console.error('Microphone access denied or error:', err);
+            alert('无法启动录音：请检查浏览器是否已授权麦克风权限！');
+        }
+    }
+
+    function stopRecording(cardId) {
+        if (activeMediaRecorder && activeMediaRecorder.state !== 'inactive') {
+            activeMediaRecorder.stop();
+        }
+        clearInterval(recordTimerInterval);
+        recordingCardId = null;
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 重新录音';
+
+        const dot = document.getElementById(`rec-dot-${cardId}`);
+        dot.classList.remove('recording');
+    }
+
+    function updateUIAfterRecording(cardId) {
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'flex';
+
+        const statusText = document.getElementById(`rec-status-${cardId}`);
+        statusText.innerText = '✅ 跟读已录制完成';
+        statusText.style.color = '#34d399';
+
+        const btnGroup = panel.querySelector('.rec-panel-btns');
+        btnGroup.style.display = 'flex';
+    }
+
+    function playUserRecording(cardId) {
+        const item = userRecordings[cardId];
+        if (!item || !item.url) return;
+
+        if (mainAudio && !mainAudio.paused) {
+            mainAudio.pause();
+        }
+
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+
+        userAudioPlayer = new Audio(item.url);
+        const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+        playBtn.innerText = '⏸️ 正在试听';
+
+        userAudioPlayer.play().catch(e => console.error('Play error:', e));
+
+        userAudioPlayer.onended = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+        userAudioPlayer.onpause = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+    }
+
+    function compareOfficial(cardId) {
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const card = document.getElementById(`rec-btn-${cardId}`).closest('.slice-card');
+        const playBtn = card.querySelector('.play-card-btn');
+        playBtn.click();
+    }
+
+    function deleteRecording(cardId) {
+        if (userRecordings[cardId] && userRecordings[cardId].url) {
+            URL.revokeObjectURL(userRecordings[cardId].url);
+            delete userRecordings[cardId];
+        }
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'none';
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 录音跟读';
+    }
+</script>
+
+</body>
+</html>
