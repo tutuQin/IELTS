@@ -200,3 +200,4 @@ I truly believe that / taking things one step at a time / is the best way to gro
 1. **先读顺，后脱稿**：前两天看着文本念，念顺了嘴巴肌肉有了记忆，再尝试不看文字只抓脑海中的骨架词。
 2. **抓词块，不背单字**：脱稿时脑中只闪现 4 个核心词（如 Q4: `evolving pace` $\rightarrow$ `room for growth` $\rightarrow$ `complex problems` $\rightarrow$ `one step at a time`），只要把这几个词用自己的语言串起来，考官就会给 7 分！
 3. **允许自由发挥**：考场上漏掉一句话、换一个连词完全不要紧，保持眼神交流与自信的沟通感，你就彻底赢了！
+

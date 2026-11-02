@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剑桥雅思 17 Test 4 Part 1 听力答案句切片点播台</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-red: #f87171;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .nav-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Player Sticky Bar */
+        .sticky-player {
+            position: sticky;
+            top: 15px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .now-playing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        audio {
+            width: 100%;
+            height: 42px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .pill-btn.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            font-weight: bold;
+            border-color: var(--accent-blue);
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 11px 20px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+
+        /* Slice Card */
+        .slice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slice-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 24px;
+            transition: transform 0.2s, border-color 0.2s;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .slice-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .slice-card.playing {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .tag-p1 { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .tag-p2 { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); }
+        .tag-p3 { background: rgba(251, 191, 36, 0.2); color: var(--accent-amber); }
+        .tag-p4 { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); }
+        .tag-full { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .play-card-btn {
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            border: none;
+            color: #ffffff;
+            padding: 9px 20px;
+            border-radius: 20px;
+            font-size: 0.96rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .play-card-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+        }
+
+        .record-card-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 9px 18px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .record-card-btn:hover {
+            background: rgba(248, 113, 113, 0.2);
+            border-color: var(--accent-red);
+            color: #fca5a5;
+        }
+
+        .record-card-btn.recording {
+            background: var(--accent-red);
+            color: #fff;
+            animation: pulse-red 1.5s infinite;
+            border-color: var(--accent-red);
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(248, 113, 113, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+        }
+
+        /* User Shadowing Recording Panel */
+        .user-rec-panel {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px dashed rgba(248, 113, 113, 0.4);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .rec-panel-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .rec-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-red);
+            display: inline-block;
+        }
+
+        .rec-status-dot.recording {
+            animation: pulse-red 1s infinite;
+        }
+
+        .rec-timer-badge {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2px 8px;
+            border-radius: 6px;
+            color: var(--accent-amber);
+            font-size: 0.85rem;
+        }
+
+        .rec-panel-btns {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .rec-btn-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .rec-btn-pill:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .btn-play-user {
+            color: var(--accent-green);
+            border-color: rgba(52, 211, 153, 0.3);
+        }
+
+        .btn-play-user:hover {
+            background: rgba(52, 211, 153, 0.2);
+        }
+
+        .btn-compare {
+            color: var(--accent-blue);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-compare:hover {
+            background: rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-rerecord {
+            color: var(--accent-amber);
+            border-color: rgba(251, 191, 36, 0.3);
+        }
+
+        .btn-del {
+            color: var(--text-muted);
+        }
+
+        .btn-del:hover {
+            color: var(--accent-red);
+        }
+
+        /* Card Body */
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .transcript-box {
+            font-size: 1.15rem;
+            color: #f1f5f9;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-blue);
+            font-style: normal;
+            line-height: 1.8;
+        }
+
+        .ans-highlight {
+            color: #34d399;
+            font-weight: 700;
+            font-style: normal;
+            background: rgba(52, 211, 153, 0.15);
+            padding: 2px 8px;
+            border-radius: 5px;
+            border-bottom: 2px solid rgba(52, 211, 153, 0.5);
+        }
+
+        .trap-highlight {
+            color: #f87171;
+            font-weight: 700;
+            font-style: normal;
+            text-decoration: line-through;
+            background: rgba(248, 113, 113, 0.15);
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+
+        .signal-highlight {
+            color: #fbbf24;
+            font-weight: 700;
+            font-style: normal;
+            padding: 1px 4px;
+        }
+
+        .analysis-box {
+            font-size: 1.02rem;
+            color: #cbd5e1;
+            line-height: 1.65;
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+        }
+
+        .analysis-box strong {
+            color: var(--text-main);
+        }
+
+        /* Bilingual Details Section */
+        .bilingual-details {
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .bilingual-summary {
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .bilingual-summary:hover {
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .summary-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-badge {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 3px 10px;
+            border-radius: 12px;
+        }
+
+        .toggle-icon {
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        details[open] .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .bilingual-body {
+            padding: 18px 22px;
+            font-size: 1.12rem;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .dialog-turn {
+            padding-bottom: 12px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.09);
+        }
+
+        .dialog-turn:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .speaker-tag {
+            font-weight: 700;
+            font-size: 0.92rem;
+            padding: 3px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .spk-man { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-woman { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
+        .spk-speaker { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); }
+        .spk-tutor { background: rgba(251, 191, 36, 0.2); color: var(--accent-amber); }
+        .spk-philip { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
+        .spk-janice { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); }
+
+        .en-line {
+            color: #f8fafc;
+            font-size: 1.12rem;
+            font-weight: 500;
+            line-height: 1.8;
+            margin-bottom: 6px;
+        }
+
+        .cn-line {
+            color: #cbd5e1;
+            font-size: 1.02rem;
+            line-height: 1.65;
+        }
+
+        /* Tips section */
+        .tips-panel {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 30px;
+        }
+
+        .tips-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tips-list strong {
+            color: var(--text-main);
+        }
+
+        .shadow-guide-box {
+            background: rgba(248, 113, 113, 0.1);
+            border: 1px solid rgba(248, 113, 113, 0.3);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #fca5a5;
+            line-height: 1.5;
+        }
+
+        .shadow-guide-title {
+            font-weight: 700;
+            color: #f87171;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shadow-guide-tag {
+            font-size: 0.75rem;
+            background: rgba(248, 113, 113, 0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: #fecaca;
+        }
+    </style>
+    <style>
+        /* ===== 手动进度条 / 指定起点 / AB循环 ===== */
+        .seek-row { display: flex; align-items: center; gap: 10px; }
+        .seek-slider { flex: 1; accent-color: #38bdf8; cursor: pointer; height: 6px; }
+        .seek-time { font-size: 0.8rem; color: var(--text-muted); font-variant-numeric: tabular-nums; min-width: 44px; text-align: center; }
+        .seek-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .seek-tool-label { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+        .seek-input { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); padding: 6px 10px; font-size: 0.85rem; outline: none; }
+        .seek-input:focus { border-color: var(--accent-blue); }
+        .seek-input::placeholder { color: rgba(148, 163, 184, 0.6); }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="nav-back-bar">
+        <a href="../切片/index.html" class="nav-link">📂 返回切片总目录 (Index)</a>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 17 · Test 4 精听点播台</span>
+        <div style="display: flex; gap: 14px;">
+            <a href="../剑桥17_Test4_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 七坑复盘表</a>
+            <a href="../C17T3_错题音频切片/C17T3_错题切片点播台.html" class="nav-link">前往 C17 T3 切片 ➔</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>剑桥雅思 17 Test 4 Part 1 答案句切片点播台</h1>
+        <p>🧽 清洁服务咨询 Easy Life Cleaning Services (Q1-Q10) · 答案句词级时间戳精准切片 · 原生影子跟读录音 · <strong>本次战报：10 题对 4 错 6</strong>（Q2 拼写 · Q3 词音 · Q4 手脑脱节 · Q6 省略倒装 · Q7 答案前置 · Q10 走神）</p>
+    </header>
+
+    <!-- Sticky Audio Player -->
+    <div class="sticky-player">
+        <div class="player-info">
+            <div class="now-playing-title" id="now-playing-text">
+                <span>🎵 请在下方选择要练习的题目切片</span>
+            </div>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="toggleLoop(this)" id="loop-btn" title="单曲循环当前切片">🔁 单曲循环: 关</button>
+            </div>
+        </div>
+        <audio id="main-audio" controls preload="auto"></audio>
+        <!-- Custom Seek Bar：手动拖动进度条 -->
+        <div class="seek-row">
+            <span class="seek-time" id="cur-time-label">00:00</span>
+            <input type="range" class="seek-slider" id="seek-slider" min="0" max="100" value="0" step="0.1" title="拖动调整播放位置">
+            <span class="seek-time" id="dur-time-label">00:00</span>
+        </div>
+        <!-- 指定起点播放 / AB循环 -->
+        <div class="seek-tools">
+            <span class="seek-tool-label">⏮️ 手动跳转：</span>
+            <button class="pill-btn" onclick="skipAudio(-10)">⏪ -10s</button>
+            <button class="pill-btn" onclick="skipAudio(-5)">⏪ -5s</button>
+            <button class="pill-btn" onclick="skipAudio(5)">+5s ⏩</button>
+            <button class="pill-btn" onclick="skipAudio(10)">+10s ⏩</button>
+            <span class="seek-tool-label" style="margin-left:14px;">🎯 指定起点：</span>
+            <input type="text" class="seek-input" id="start-at-input" placeholder="秒数或 分:秒，如 90 / 1:30" style="width:170px;">
+            <button class="pill-btn" onclick="playFromCustomStart()">▶ 从此处播放</button>
+            <span class="seek-tool-label" style="margin-left:14px;">🔁 AB 循环：</span>
+            <input type="text" class="seek-input" id="ab-start" placeholder="起点" style="width:70px;">
+            <span style="color: var(--text-muted);">—</span>
+            <input type="text" class="seek-input" id="ab-end" placeholder="终点" style="width:70px;">
+            <button class="pill-btn" id="ab-loop-btn" onclick="toggleAbLoop(this)">AB循环: 关</button>
+            <button class="pill-btn" onclick="setAbStartFromCurrent()">📌 起点取当前</button>
+        </div>
+        <div class="player-controls">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">播放速度：</span>
+            <div class="btn-group">
+                <button class="pill-btn" onclick="setSpeed(0.8, this)">0.8x 慢速</button>
+                <button class="pill-btn active" onclick="setSpeed(1.0, this)">1.0x 原速</button>
+                <button class="pill-btn" onclick="setSpeed(1.2, this)">1.2x 提速</button>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: auto;">
+                高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
+            </span>
+        </div>
+    </div>
+
+    <!-- 4-step Guide -->
+    <div class="tips-panel">
+        <div class="tips-title">💡 4 步靶向精听法（防坑肌肉记忆构建）</div>
+        <ol class="tips-list">
+            <li><strong>Step 1 先读看懂</strong>：展开查看本切片听力原文与翻译，画出同义替换词与陷阱词（本套核心：<em>much ⚠️ → shirts ✅</em>、<em>allergies（关键词）在 dust（答案）之后</em>）。</li>
+            <li><strong>Step 2 出声朗读</strong>：大声朗读答案句 3 遍，尤其是 <em>fridge</em> 的 /dʒ/、<em>electrician</em> 的重音、<em>review</em> 的双元音。</li>
+            <li><strong>Step 3 闭眼盲听</strong>：合上原文折叠框，单曲循环 2~3 遍，练到「听到 the same thing 立刻停笔等名词」「关键词迟迟不来就回头找名词」的条件反射。</li>
+            <li><strong>Step 4 录音跟读</strong>：点「🎙️ 录音跟读」录下自己的发音，回放比对原声，找出吞音卡壳处。</li>
+        </ol>
+    </div>
+
+    <!-- 本套题战报 -->
+    <div class="tips-panel">
+        <div class="tips-title">📋 本套 Part 1 战报与六大错因（10 题对 4 错 6）</div>
+        <ol class="tips-list">
+            <li><strong>Q2 ✗ ②拼写坑</strong>：定位对、意思也懂（冰箱），但 <em>fridge</em> 写不出来。这个词必须硬背：f + <strong>ridge</strong>，/frɪdʒ/ 的 /dʒ/ 就是 <strong>d+g</strong>。</li>
+            <li><strong>Q3 ✗ ①词音 + 定位错</strong>：把 <em>much</em> /mʌtʃ/ 听成 <em>March</em> /mɑːtʃ/ 并当成答案，实际答案是 <em>shirts</em>。<b>评价句（It wouldn't be much）后面的 just + 名词才是答案。</b></li>
+            <li><strong>Q4 ✗ 手脑脱节</strong>：耳朵听到了 <em>windows</em>，手却写下 <em>desk</em> —— 前一题占着工作记忆，答案词没落地。<b>答案一入耳立刻按音节写在草稿上。</b></li>
+            <li><strong>Q6 ✗ ③句意 + 省略倒装</strong>：抓住 <em>plumber in a hurry</em> 里的 hurry，漏掉 <em>And the same thing if you need an electrician</em>。<b>the same thing 是"又一个并列答案"的信号。</b></li>
+            <li><strong>Q7 ✗ ③句意 + 答案前置</strong>：题干关键词 allergies 出现在答案 <em>dust</em> 之后 4 秒，你一直等它，等到时答案已过，写了 <em>different</em>。<b>关键词迟迟不来 → 答案在它前面。</b></li>
+            <li><strong>Q10 ✗ 走神 + 空耳</strong>：Q8/Q9 连对后放松，最后一句 38 词长句直接过去。<b>Part 1 最后一题是心理空档，必须盯住不放。</b></li>
+            <li><strong>Q1 / Q5 / Q8 / Q9 ✓</strong>：否定句后的 but 抓 floor、No→But 抓 balcony、改写句盯句末名词抓 police、主动被动互换抓 training —— 这四条思路全部正确，继续复用。</li>
+        </ol>
+    </div>
+
+    <!-- Shadowing Feature Banner -->
+    <div class="shadow-guide-box">
+        <div class="shadow-guide-title">
+            <span>🎙️ <strong>「跟读录音与原声对比」系统已就绪</strong></span>
+            <span class="shadow-guide-tag">读不流畅一定听不流畅 · 影子跟读刻意训练</span>
+        </div>
+        1. 每一个切片卡片右上角均配备「<strong>🎙️ 录音跟读</strong>」专属按钮；<br>
+        2. 闭眼盲听熟悉后，点击「<strong>🎙️ 录音跟读</strong>」录制自己的发音（支持反复重录）；<br>
+        3. 录完点击「<strong>▶ 试听跟读</strong>」找出卡壳吞音处，再点击「<strong>👂 对比原声</strong>」比对语调与节奏。（前端内存暂存，刷新页面即可重置）。
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
+        <button class="tab-btn" onclick="filterCategory('part1', this)">Part 1 清洁服务咨询 (10)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+    </div>
+
+    <!-- Slice List -->
+    <div class="slice-list">
+        <!-- CARD: card_01 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q1</span>
+                    <h3 class="card-title">✓ 一次通过 · 全屋地板清洁（<strong>floor</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('01_Q1_floor地板清洁.mp3', 'Q1: floor 地板清洁')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_01" onclick="handleRecBtnClick('card_01')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_01" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_01"></span>
+                    <span class="rec-status-text" id="rec-status-card_01">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_01">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_01" onclick="playUserRecording('card_01')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_01')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_01')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_01')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Does your apartment have <span class="signal-highlight">carpets</span>?" — "No, I don't have any, but the <span class="ans-highlight">floor</span> would need <span class="signal-highlight">cleaning</span>." — "Of course – we'd do that in every room."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（P1 原词 / A1 原词答案）。卷面 <em>Cleaning the ____ throughout the apartment</em>，答案是 <strong>floor</strong>。<br>这题是典型的<b>先生问、客户答、保洁公司复述确认</b>三轮结构：Jacinta 问有没有地毯 → 客户说没有但地板要清洁 → Jacinta 用 <em>we'd do that in every room</em> 把 floor 复述了一遍（<em>throughout the apartment</em> = <em>in every room</em>）。你抓住了第一轮里藏在否定句后的 <em>but the floor...</em>，很稳。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> So we'd do a thorough clean of all surfaces in each room, and polish them where necessary. Does your apartment have <span class="signal-highlight">carpets</span>?</div>
+                            <div class="cn-line">我们会把每个房间的所有表面彻底清洁，必要时上光。您的公寓有地毯吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> No, I don't have any, but the <span class="ans-highlight">floor</span> would need cleaning.</div>
+                            <div class="cn-line">没有，我没铺地毯，不过地板需要清洁。【Q1 答案句 → floor】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Of course – we'd do that in every room. And we'd do a thorough clean of the kitchen and bathroom.</div>
+                            <div class="cn-line">当然——每个房间我们都会做。厨房和卫生间也会彻底清洁。【复述确认：every room = throughout the apartment】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_02 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q2</span>
+                    <h3 class="card-title">✗ 拼写坑 · 冰箱 fridge 少写字母（<strong>fridge</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('02_Q2_fridge冰箱拼写错.mp3', 'Q2: fridge 冰箱清洁')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_02" onclick="handleRecBtnClick('card_02')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_02" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_02"></span>
+                    <span class="rec-status-text" id="rec-status-card_02">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_02">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_02" onclick="playUserRecording('card_02')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_02')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_02')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_02')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Actually, I <span class="signal-highlight">hardly ever use that</span>, but can you do the <span class="ans-highlight">fridge</span>?"
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（②拼写坑）。定位完全正确、意思也听懂了（知道是冰箱），但 <strong>fridge</strong> 拼不出来 —— 这是"认识但不会写"的典型失分。<br><strong>关键：fridge = 冷冻柜 refrigerator 的口语缩写，d 必须写进去</strong>（frige / frige 都是错的）。记忆法：<em>fridge</em> 里藏着 <em>f + ridge（脊）</em>，读音 /frɪdʒ/ 的 /dʒ/ 就是那个 <strong>d+g</strong>。<br>另一种错法是把 <em>fridge</em> 写成 <em>frige</em>（漏 d）或 <em>fridg</em>（漏 e）—— 这个词是雅思 Part 1 家务场景的高频拼写题，直接背下来。<br><strong>防坑口诀：</strong>听到熟悉的实物名先别高兴，<b>先在草稿上把字母念一遍</b>；fridge / bridge / porridge 同一族，都有 d。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Then we have some additional services which you can request if you want – so for example, we can clean your <span class="trap-highlight">oven</span> for you every week.</div>
+                            <div class="cn-line">另外还有一些增值服务，您需要的话可以点——比如我们可以每周帮您清洁烤箱。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Actually, I hardly ever use that, but can you do the <span class="ans-highlight">fridge</span>?</div>
+                            <div class="cn-line">其实我几乎不用那个，不过你们能清洁冰箱吗？【Q2 答案句 → fridge】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Sure. Would you like that done every week?</div>
+                            <div class="cn-line">当然。您想每周做一次吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Yes, definitely.</div>
+                            <div class="cn-line">是的，一定。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_03 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q3</span>
+                    <h3 class="card-title">✗ 定位错听错 · 把 much 听成 March（<strong>shirts</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('03_Q3_shirts衬衫误写March.mp3', 'Q3: shirts 只熨上班衬衫')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_03" onclick="handleRecBtnClick('card_03')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_03" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_03"></span>
+                    <span class="rec-status-text" id="rec-status-card_03">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_03">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_03" onclick="playUserRecording('card_03')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_03')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_03')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_03')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "It wouldn't be <span class="trap-highlight">much</span>, just my <span class="ans-highlight">shirts</span> for work that week."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（①词音 + 定位错位）。卷面 <em>Ironing clothes – ____ only</em>，只能填<b>衣物类名词</b>，答案是 <strong>shirts</strong>。<br>你把 <em>much</em> /mʌtʃ/ 听成了 <strong>March</strong> /mɑːtʃ/ 并当成了答案 —— 两个问题叠在一起：<b>①</b> much 只是"量不大"的口语评价，不是答案；<b>②</b> /ʌ/ 与 /ɑː/ 的元音长度没分辨出来。<br><strong>防坑口诀：</strong>听到 <em>It wouldn't be much</em> 这种"评价句"要立刻往后退半步 —— <b>评价句后面紧跟的 just + 名词才是答案</b>；另外 March 是大写月份，题干"熨衣服"下面填月份本身就不合逻辑，<b>填完回头看一眼语义是否成立</b>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> And would ironing clothes be an additional service you can do?</div>
+                            <div class="cn-line">熨衣服也算增值服务吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Yes, of course.</div>
+                            <div class="cn-line">当然算。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> It wouldn't be <span class="trap-highlight">much</span>, just my <span class="ans-highlight">shirts</span> for work that week.</div>
+                            <div class="cn-line">量不大，就是我那周上班穿的衬衫。【Q3 答案句 → shirts】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> That's fine. And we could also clean your microwave if you want.</div>
+                            <div class="cn-line">没问题。需要的话我们也可以清洁微波炉。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_04 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q4</span>
+                    <h3 class="card-title">✗ 手脑脱节 · 听到 windows 却写下 desk（<strong>windows</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('04_Q4_windows窗户内侧误写desk.mp3', 'Q4: windows 每月擦窗内侧')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_04" onclick="handleRecBtnClick('card_04')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_04" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_04"></span>
+                    <span class="rec-status-text" id="rec-status-card_04">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_04">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_04" onclick="playUserRecording('card_04')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_04')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_04')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_04')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "So for example, if the <span class="signal-highlight">inside</span> of your <span class="ans-highlight">windows</span> need cleaning, we could do that."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（①词音 + 手脑脱节）。卷面 <em>Cleaning all the ____ from the inside</em>，答案是 <strong>windows</strong>。<br>你说"听到了 windows 却写了 desk" —— 这不是没听见，而是<b>听觉信息没有被写下来</b>：前一题（March）占用着工作记忆，等手抬起来时脑子里残留了一个不相干的词。这种「耳朵对、手写错」的失误和 C16T1 的 egg→age 是同一类。<br><strong>防坑口诀：</strong>答案词一入耳，<b>先用 1 秒把它按音节写在草稿上</b>（win-dows），别在脑子里排队；同时把"上一题没写完"的焦虑切断 —— 写错一个字母也得先落笔。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> We also offer additional services that you might want a bit less often, say every month. So for example, if the <span class="signal-highlight">inside</span> of your <span class="ans-highlight">windows</span> need cleaning, we could do that.</div>
+                            <div class="cn-line">我们还有频率低一些的服务，比如每月一次。举例说，如果窗户内侧需要清洁，我们可以做。【Q4 答案句 → windows；from the inside = if the inside ... need cleaning】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Yes, that'd be good. I'm on the fifteenth floor, so the outside gets done regularly by specialists, but the inside does get a bit grubby.</div>
+                            <div class="cn-line">好，那不错。我住十五楼，外面有专业人员定期清洗，但里面确实有点脏。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_05 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q5</span>
+                    <h3 class="card-title">✓ 一次通过 · 每月冲洗阳台（<strong>balcony</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('05_Q5_balcony阳台冲洗.mp3', 'Q5: balcony 冲洗阳台')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_05" onclick="handleRecBtnClick('card_05')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_05" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_05"></span>
+                    <span class="rec-status-text" id="rec-status-card_05">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_05">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_05" onclick="playUserRecording('card_05')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_05')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_05')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_05')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "No, they're OK. But would you be able to do something about the <span class="ans-highlight">balcony</span>?"
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（P2 逻辑 / A2 改写答案）。卷面 <em>Washing down the ____</em>，<strong>washing down = do something about ... it could do with a wash</strong>。<br>这题和 Q2 是同一个套路：<b>先给一个服务（洗窗帘），客户用 No 否掉，再提出自己真正想要的</b>。你成功在 <em>No, they're OK.</em> 之后立刻把注意力挂到 <em>But...</em> 上，抓到了 balcony —— 这说明你已经掌握"客户否掉 → but 后才是需求"的节奏。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And we could arrange for your curtains to get <span class="trap-highlight">cleaned</span> if necessary.</div>
+                            <div class="cn-line">如果需要，我们也可以安排清洗窗帘。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> No, they're OK. But would you be able to do something about the <span class="ans-highlight">balcony</span>? It's quite small and I don't use it much, but it could do with a wash every month or so.</div>
+                            <div class="cn-line">不用，窗帘还好。不过阳台你们能弄一下吗？挺小的，我也不怎么用，但大概每个月需要冲一次。【Q5 答案句 → balcony；washing down = could do with a wash】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Yes, we can get the pressure washer onto that.</div>
+                            <div class="cn-line">可以，我们用高压水枪冲。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_06 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q6</span>
+                    <h3 class="card-title">✗ 抓了 hurry · 省略倒装句没听懂（<strong>electrician</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('06_Q6_electrician电工误写hurry.mp3', 'Q6: electrician 电工')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_06" onclick="handleRecBtnClick('card_06')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_06" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_06"></span>
+                    <span class="rec-status-text" id="rec-status-card_06">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_06">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_06" onclick="playUserRecording('card_06')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_06')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_06')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_06')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "... if you need a plumber in a <span class="trap-highlight">hurry</span>, we can put you in touch with a reliable one who can come out straightaway. And <span class="signal-highlight">the same thing</span> if you need an <span class="ans-highlight">electrician</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + ⑤改写 + 省略倒装）。卷面 <em>They can organise a plumber or an ____</em>，答案是 <strong>electrician</strong>。<br>你写成了 <em>hurry</em> —— 那是前一句 <em>a plumber in a hurry</em> 里紧邻答案的实词，被当成了答案。真正的问题在第二句：<em><strong>And the same thing if you need an electrician.</strong></em> 这是一句<b>省略句</b>，完整意思是 "如果你需要电工，也是<b>同样的情况</b>（我们也能帮你联系）"。因为省掉了谓语，听起来像半句随口补充，很容易被耳朵跳过。<br><strong>防坑口诀：</strong>听到 <b>the same thing / likewise / similarly / so is...</b> 这类"同上"信号词，说明<b>它是一个和前面并列的新答案</b>，必须立刻把笔停住等名词；另外题干已经是 <em>a plumber or an ____</em>，答案必然是和 plumber 并列的<b>职业</b>，hurry 是"匆忙"，语义上根本不成立。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Now if you're interested, we do offer some other possibilities to do with general maintenance. For example, if you have a problem with water and you need a plumber in a <span class="trap-highlight">hurry</span>, we can put you in touch with a reliable one who can come out straightaway.</div>
+                            <div class="cn-line">另外，如果您有兴趣，我们还有些跟日常维修相关的服务。比如水管出问题、急着找水暖工，我们可以帮您联系一位可靠的，马上上门。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And <span class="signal-highlight">the same thing</span> if you need an <span class="ans-highlight">electrician</span>.</div>
+                            <div class="cn-line">需要电工也是一样。【Q6 答案句 → electrician；the same thing = 省略倒装】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Right. That's good to know. I've only just moved here so I don't have any of those sorts of contacts.</div>
+                            <div class="cn-line">好的，这很好。我刚搬来，这些人脉都没有。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_07 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q7</span>
+                    <h3 class="card-title">✗ 答案前置 · 等 allergies 时答案已溜走（<strong>dust</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('07_Q7_dust灰尘答案前置误写different.mp3', 'Q7: dust 除灰尘服务')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_07" onclick="handleRecBtnClick('card_07')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_07" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_07"></span>
+                    <span class="rec-status-text" id="rec-status-card_07">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_07">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_07" onclick="playUserRecording('card_07')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_07')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_07')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_07')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "... by <span class="signal-highlight">capturing up to 99% of all the</span> <span class="ans-highlight">dust</span> in the air. So <span class="trap-highlight">if you're troubled by allergies</span>, this can make a big difference."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + ⑤改写 + 答案前置）。卷面 <em>A special cleaning service is available for customers who are allergic to ____</em>，答案是 <strong>dust</strong>。<br>这是本套最难的一题，难在<b>语序完全倒装</b>：录音先用一整句讲"能捕捉空气中 99% 的<b>灰尘</b>"（答案 <em>dust</em> 在中间），再用一句 <em>So if you're troubled by allergies, this can make a big difference</em> 来点题。<br>而卷面上的关键词 <em>allergic</em> 出现在<b>答案之后</b>，你一直等 allergies，等到它出现时 dust 已经过去 4 秒，只能抓住句尾的 difference 写成 different。<br><strong>三处改写要记住：</strong><em>troubled by allergies = allergic to</em>；<em>capturing = 清除/捕捉</em>；<em>99% of all the dust in the air</em> 就是"对什么过敏"的答案。<br><strong>防坑口诀：</strong>听到题干关键词（allergies）<b>迟迟不来时，答案极可能在它前面</b> —— 立刻回头把刚才那句话里的<b>名词</b>（dust）补上；雅思很喜欢"先给答案、再给理由"的倒装结构。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And I don't know if this is of interest to you, but we also offer a special vacuum cleaning system which can improve the indoor air quality of your home by <span class="signal-highlight">capturing up to 99% of all the</span> <span class="ans-highlight">dust</span> in the air.</div>
+                            <div class="cn-line">不知道您有没有兴趣，我们还有一种特殊的吸尘系统，能捕捉空气中多达 99% 的灰尘，改善室内空气质量。【Q7 答案句前半：dust 在这里！】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> So <span class="trap-highlight">if you're troubled by allergies</span>, this can make a big difference.</div>
+                            <div class="cn-line">所以如果您受过敏困扰，这会很有帮助。【allergic to = troubled by allergies —— 关键词在答案之后才出现】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Right. In fact, I don't have that sort of problem, but I'll bear it in mind. Now can you tell me a bit about your cleaning staff?</div>
+                            <div class="cn-line">好的。其实我没这方面的问题，但我会考虑。现在能跟我讲讲你们的清洁人员吗？</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_08 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q8</span>
+                    <h3 class="card-title">✓ 一次通过 · 警方安全审查（<strong>police</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('08_Q8_police警察背景审查.mp3', 'Q8: police 警方背景审查')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_08" onclick="handleRecBtnClick('card_08')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_08" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_08"></span>
+                    <span class="rec-status-text" id="rec-status-card_08">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_08">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_08" onclick="playUserRecording('card_08')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_08')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_08')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_08')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "When they apply to us, they have to <span class="signal-highlight">undergo a security check</span> with the <span class="ans-highlight">police</span> ..."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 / A2 改写答案）。卷面 <em>all cleaners have a background check carried out by the ____</em>，<strong>background check = security check</strong>，<strong>carried out by = with</strong>。<br>这题的关键是"别被 undergo / security 这两个生词吓住"—— 你抓住了句尾实词 <strong>police</strong>，这就是正确策略：<b>改写句里听不懂的动词先放掉，盯住句末的名词</b>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Of course. So all our cleaners are very carefully selected. When they apply to us, they have to <span class="signal-highlight">undergo a security check</span> with the <span class="ans-highlight">police</span> to make sure they don't have any sort of criminal background.</div>
+                            <div class="cn-line">当然。我们所有清洁工都是精挑细选的。他们应聘时必须接受警方的安全审查，确保没有犯罪背景。【Q8 答案句 → police；background check = security check】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And, of course, they have to provide references as well.</div>
+                            <div class="cn-line">当然，还得提供推荐信。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_09 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q9</span>
+                    <h3 class="card-title">✓ 一次通过 · 为期两周的培训（<strong>training</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('09_Q9_training两周培训.mp3', 'Q9: training 入职培训')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_09" onclick="handleRecBtnClick('card_09')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_09" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_09"></span>
+                    <span class="rec-status-text" id="rec-status-card_09">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_09">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_09" onclick="playUserRecording('card_09')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_09')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_09')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_09')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "... we give them <span class="ans-highlight">training</span> for it. That <span class="signal-highlight">lasts for two weeks</span> ..."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（P1 原词 / A1 原词答案）。卷面 <em>All cleaners are given ____ for two weeks</em>，答案是 <strong>training</strong>。<br>题干 <em>are given</em> 与录音 <em>we give them</em> 是同一动作的主动/被动互换，你直接锁定了 <strong>training</strong>，没有被后面的 <em>very thorough / have a test</em> 干扰。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Then if we think they might be suitable for the job, we give them <span class="ans-highlight">training</span> for it. That <span class="signal-highlight">lasts for two weeks</span> so it's very thorough, and at the end of it, they have a test.</div>
+                            <div class="cn-line">如果我们觉得他合适，就会给他培训。培训持续两周，非常系统，最后还要考试。【Q9 答案句 → training；are given = we give them】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- CARD: card_10 -->
+        <div class="slice-card" data-category="part1">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · Q10</span>
+                    <h3 class="card-title">✗ 走神 + 空耳 · 客户回评（<strong>review</strong>）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('10_Q10_review回访评价.mp3', 'Q10: review 客户评价')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_10" onclick="handleRecBtnClick('card_10')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <!-- Shadowing Recording Panel -->
+            <div class="user-rec-panel" id="user-rec-panel-card_10" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_10"></span>
+                    <span class="rec-status-text" id="rec-status-card_10">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_10">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_10" onclick="playUserRecording('card_10')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_10')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_10')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_10')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "We ask all our clients to <span class="signal-highlight">complete a</span> <span class="ans-highlight">review</span> of their performance after every visit and to email it to us."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（走神 + 空耳）。卷面 <em>Customers send a ____ after each visit</em>，答案是 <strong>review</strong>。<br>这题失分不在难点，而在<b>注意力已经跑到"这题大概讲完了"</b>—— 前面 Q8/Q9 连对两题后放松，最后一句长句（38 个词，含 <em>complete / performance / email</em> 三个生词）直接空耳过去。<br><strong>关键改写：</strong><em>send = email it to us</em>，<em>a ____ after each visit = after every visit</em>，答案是 <strong>review</strong>（评价）。<br><strong>防坑口诀：</strong>Part 1 的最后一题（Q10）永远是<b>最容易掉的那一题</b>，因为它出现在"我以为结束了"的心理空档里。听到 <em>Usually, each customer has one regular cleaner</em> 这类收尾句之前，<b>必须把 Q10 的空还留在视野里</b>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> If they pass that, we take them on, but we monitor them very carefully.</div>
+                            <div class="cn-line">通过了我们就录用，但会非常仔细地监督。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> We ask all our clients to <span class="signal-highlight">complete a</span> <span class="ans-highlight">review</span> of their performance after every visit and to email it to us.</div>
+                            <div class="cn-line">我们请所有客户在每次服务后填写一份对清洁员表现的评价并发邮件给我们。【Q10 答案句 → review；send = email】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> So we can pick up any problems straightaway and deal with them.</div>
+                            <div class="cn-line">这样有问题能立刻发现并处理。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> OK, well that all sounds good. And will I always have the same cleaner?</div>
+                            <div class="cn-line">好，听起来都不错。我会一直是同一个清洁员吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Yes, we do our best to organise it that way, and we usually manage it.</div>
+                            <div class="cn-line">是的，我们尽量这样安排，通常都能做到。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_full -->
+        <div class="slice-card" data-category="full" id="full">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 1 · 完整音频</span>
+                    <h3 class="card-title">完整 Part 1 全文精听（5 分 07 秒 · 清洁服务咨询 Easy Life Cleaning Services）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Part1_Full_清洁服务咨询.mp3', 'Part 1 完整音频：Easy Life 清洁服务咨询')">▶ 播放完整音频</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    用法：全部 10 个切片盲听过关后，最后用本完整音频做「全真模拟」——只按一遍播放，笔尖跟号法逐题作答，检验防坑肌肉记忆是否成型。本段从 "Test 4. Part 1" 开场指令开始，到 "That is the end of part one" 前的对话结束，含两段各 25 秒的看题停顿（0:12-0:37 / 2:47-3:12）。
+                </div>
+                <div class="analysis-box">
+                    <strong>结构提示（本音频时间轴）：</strong>0:00 开场指令 → 0:12-0:37 看题停顿 Q1-Q5 → 0:45 Hello, Easy Life... → <strong>1:13 Q1</strong> (floor) → <strong>1:34 Q2</strong> (fridge) → <strong>1:47 Q3</strong> (shirts) → <strong>2:07 Q4</strong> (windows) → <strong>2:25 Q5</strong> (balcony) → <strong>2:47-3:12 看题停顿 Q6-Q10</strong> → <strong>3:25 Q6</strong> (electrician) → <strong>3:47 Q7</strong> (dust) → <strong>4:11 Q8</strong> (police) → <strong>4:28 Q9</strong> (training) → <strong>4:39 Q10</strong> (review) → 5:07 对话结束。全文 33 轮对话，10 个答案句全部绿色标出。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Part 1 完整官方听力原文与逐句翻译（无删减全文对照） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Hello, Easy Life Cleaning Services, Jacinta speaking.</div>
+                            <div class="cn-line">您好，这里是「轻松生活清洁服务」，我是雅辛塔。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Oh hello. I'm looking for a cleaning service for my apartment – do you do domestic cleaning?</div>
+                            <div class="cn-line">哦你好。我想给我的公寓找个清洁服务——你们做家庭保洁吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Sure.</div>
+                            <div class="cn-line">当然。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Well, it's just a one-bedroom flat. Do you have a basic cleaning package?</div>
+                            <div class="cn-line">嗯，就一个一居室的小公寓。你们有基础清洁套餐吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Yes. For a one-bedroom flat we're probably looking at about two hours for a clean. So we'd do a thorough clean of all surfaces in each room, and polish them where necessary. Does your apartment have <span class="signal-highlight">carpets</span>?</div>
+                            <div class="cn-line">有的。一居室大概需要两个小时。我们会把每个房间的所有表面彻底清洁，必要时上光。您的公寓有地毯吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> No, I don't have any, but the <span class="ans-highlight">floor</span> would need cleaning.</div>
+                            <div class="cn-line">没有，我没铺地毯，不过地板需要清洁。【Q1 答案句 → floor】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Of course – we'd do that in every room. And we'd do a thorough clean of the kitchen and bathroom.</div>
+                            <div class="cn-line">当然——每个房间我们都会做。厨房和卫生间也会彻底清洁。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> OK.</div>
+                            <div class="cn-line">好。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Then we have some additional services which you can request if you want – so for example, we can clean your <span class="trap-highlight">oven</span> for you every week.</div>
+                            <div class="cn-line">另外还有一些增值服务，您需要的话可以点——比如我们可以每周帮您清洁烤箱。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Actually, I hardly ever use that, but can you do the <span class="ans-highlight">fridge</span>?</div>
+                            <div class="cn-line">其实我几乎不用那个，不过你们能清洁冰箱吗？【Q2 答案句 → fridge】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Sure. Would you like that done every week?</div>
+                            <div class="cn-line">当然。您想每周做一次吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Yes, definitely. And would ironing clothes be an additional service you can do?</div>
+                            <div class="cn-line">是的，一定。熨衣服也算增值服务吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Yes, of course.</div>
+                            <div class="cn-line">当然算。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> It wouldn't be <span class="trap-highlight">much</span>, just my <span class="ans-highlight">shirts</span> for work that week.</div>
+                            <div class="cn-line">量不大，就是我那周上班穿的衬衫。【Q3 答案句 → shirts】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> That's fine. And we could also clean your microwave if you want.</div>
+                            <div class="cn-line">没问题。需要的话我们也可以清洁微波炉。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> No, I wipe that out pretty regularly so there's no need for that.</div>
+                            <div class="cn-line">不用，我经常擦，没必要。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> We also offer additional services that you might want a bit less often, say every month. So for example, if the <span class="signal-highlight">inside</span> of your <span class="ans-highlight">windows</span> need cleaning, we could do that.</div>
+                            <div class="cn-line">我们还有频率低一些的服务，比如每月一次。举例说，如果窗户内侧需要清洁，我们可以做。【Q4 答案句 → windows】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Yes, that'd be good. I'm on the fifteenth floor, so the outside gets done regularly by specialists, but the inside does get a bit grubby.</div>
+                            <div class="cn-line">好，那不错。我住十五楼，外面有专业人员定期清洗，但里面确实有点脏。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And we could arrange for your curtains to get cleaned if necessary.</div>
+                            <div class="cn-line">如果需要，我们也可以安排清洗窗帘。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> No, they're OK. But would you be able to do something about the <span class="ans-highlight">balcony</span>? It's quite small and I don't use it much, but it could do with a wash every month or so.</div>
+                            <div class="cn-line">不用，窗帘还好。不过阳台你们能弄一下吗？挺小的，我也不怎么用，但大概每个月需要冲一次。【Q5 答案句 → balcony】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Yes, we can get the pressure washer onto that.</div>
+                            <div class="cn-line">可以，我们用高压水枪冲。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Now if you're interested, we do offer some other possibilities to do with general maintenance. For example, if you have a problem with water and you need a plumber in a <span class="trap-highlight">hurry</span>, we can put you in touch with a reliable one who can come out straightaway.</div>
+                            <div class="cn-line">另外，如果您有兴趣，我们还有些跟日常维修相关的服务。比如水管出问题、急着找水暖工，我们可以帮您联系一位可靠的，马上上门。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And <span class="signal-highlight">the same thing</span> if you need an <span class="ans-highlight">electrician</span>.</div>
+                            <div class="cn-line">需要电工也是一样。【Q6 答案句 → electrician】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Right. That's good to know. I've only just moved here so I don't have any of those sorts of contacts.</div>
+                            <div class="cn-line">好的，这很好。我刚搬来，这些人脉都没有。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And I don't know if this is of interest to you, but we also offer a special vacuum cleaning system which can improve the indoor air quality of your home by <span class="signal-highlight">capturing up to 99% of all the</span> <span class="ans-highlight">dust</span> in the air.</div>
+                            <div class="cn-line">不知道您有没有兴趣，我们还有一种特殊的吸尘系统，能捕捉空气中多达 99% 的灰尘，改善室内空气质量。【Q7 答案句前半 → dust】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> So <span class="trap-highlight">if you're troubled by allergies</span>, this can make a big difference.</div>
+                            <div class="cn-line">所以如果您受过敏困扰，这会很有帮助。【allergic to = troubled by allergies，关键词在答案之后】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Right. In fact, I don't have that sort of problem, but I'll bear it in mind. Now can you tell me a bit about your cleaning staff?</div>
+                            <div class="cn-line">好的。其实我没这方面的问题，但我会考虑。现在能跟我讲讲你们的清洁人员吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Of course. So all our cleaners are very carefully selected. When they apply to us, they have to <span class="signal-highlight">undergo a security check</span> with the <span class="ans-highlight">police</span> to make sure they don't have any sort of criminal background.</div>
+                            <div class="cn-line">当然。我们所有清洁工都是精挑细选的。他们应聘时必须接受警方的安全审查，确保没有犯罪背景。【Q8 答案句 → police】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> And, of course, they have to provide references as well.</div>
+                            <div class="cn-line">当然，还得提供推荐信。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Then if we think they might be suitable for the job, we give them <span class="ans-highlight">training</span> for it. That <span class="signal-highlight">lasts for two weeks</span> so it's very thorough, and at the end of it, they have a test.</div>
+                            <div class="cn-line">如果我们觉得他合适，就会给他培训。培训持续两周，非常系统，最后还要考试。【Q9 答案句 → training】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> If they pass that, we take them on, but we monitor them very carefully.</div>
+                            <div class="cn-line">通过了我们就录用，但会非常仔细地监督。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> We ask all our clients to <span class="signal-highlight">complete a</span> <span class="ans-highlight">review</span> of their performance after every visit and to email it to us. So we can pick up any problems straightaway and deal with them.</div>
+                            <div class="cn-line">我们请所有客户在每次服务后填写一份对清洁员表现的评价并发邮件给我们，这样有问题能立刻发现并处理。【Q10 答案句 → review】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> OK, well that all sounds good. And will I always have the same cleaner?</div>
+                            <div class="cn-line">好，听起来都不错。我会一直是同一个清洁员吗？</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">JACINTA</span> Yes, we do our best to organise it that way, and we usually manage it.</div>
+                            <div class="cn-line">是的，我们尽量这样安排，通常都能做到。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">CLIENT</span> Good. That's fine. Right, so I'd like to go ahead and …</div>
+                            <div class="cn-line">好，那就这样。那我就想直接开始……</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const mainAudio = document.getElementById('main-audio');
+    const nowPlayingText = document.getElementById('now-playing-text');
+    let currentSrc = '';
+    let isLooping = false;
+
+    const audioBlobCache = {};
+
+    async function playAudio(src, title) {
+        currentSrc = src;
+        nowPlayingText.innerHTML = `<span>▶ 正在播放：</span> <strong>${title}</strong>`;
+
+        // Highlight active card
+        document.querySelectorAll('.slice-card').forEach(card => {
+            card.classList.remove('playing');
+        });
+        const activeBtn = event ? event.target.closest('.slice-card') : null;
+        if (activeBtn) {
+            activeBtn.classList.add('playing');
+        }
+
+        // 关键修复：预览服务器不支持 HTTP Range 请求，直接用相对路径时浏览器无法 seek。
+        // 把整段音频下载成 Blob 再用对象 URL 播放，进度条点击/拖动跳转即可百分百生效。
+        try {
+            if (!audioBlobCache[src]) {
+                const resp = await fetch(src);
+                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                audioBlobCache[src] = URL.createObjectURL(await resp.blob());
+            }
+            mainAudio.src = audioBlobCache[src];
+        } catch (e) {
+            // 降级：本地 file:// 打开等场景 fetch 受限时，退回相对路径直接播放
+            mainAudio.src = src;
+        }
+        mainAudio.play().catch(e => console.log('Audio autoplay prevented or stopped:', e));
+    }
+
+    function setSpeed(speed, btn) {
+        mainAudio.playbackRate = speed;
+        document.querySelectorAll('.player-controls .btn-group .pill-btn').forEach(b => {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+    }
+
+    function toggleLoop(btn) {
+        isLooping = !isLooping;
+        mainAudio.loop = isLooping;
+        if (isLooping) {
+            btn.classList.add('active');
+            btn.innerText = '🔁 单曲循环: 开';
+        } else {
+            btn.classList.remove('active');
+            btn.innerText = '🔁 单曲循环: 关';
+        }
+    }
+
+    function filterCategory(cat, btn) {
+        document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+
+        const cards = document.querySelectorAll('.slice-card');
+        cards.forEach(card => {
+            if (cat === 'all' || card.dataset.category === cat) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    /* ========================================================
+       SHADOWING RECORDING SYSTEM (Web Audio MediaRecorder)
+       ======================================================== */
+    const userRecordings = {};
+    let activeMediaRecorder = null;
+    let activeAudioChunks = [];
+    let recordingCardId = null;
+    let recordTimerInterval = null;
+    let recordSeconds = 0;
+    let userAudioPlayer = null;
+
+    function handleRecBtnClick(cardId) {
+        if (recordingCardId === cardId) {
+            stopRecording(cardId);
+        } else if (recordingCardId !== null) {
+            stopRecording(recordingCardId);
+            setTimeout(() => toggleRecording(cardId), 300);
+        } else {
+            toggleRecording(cardId);
+        }
+    }
+
+    async function toggleRecording(cardId) {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            alert('抱歉，您的浏览器不支持或未开启录音权限！请使用最新版 Chrome/Edge/Safari 浏览器。');
+            return;
+        }
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            activeAudioChunks = [];
+            recordingCardId = cardId;
+            recordSeconds = 0;
+
+            let mimeType = 'audio/webm';
+            if (!MediaRecorder.isTypeSupported('audio/webm')) {
+                if (MediaRecorder.isTypeSupported('audio/mp4')) {
+                    mimeType = 'audio/mp4';
+                } else if (MediaRecorder.isTypeSupported('audio/aac')) {
+                    mimeType = 'audio/aac';
+                } else {
+                    mimeType = '';
+                }
+            }
+            
+            const options = mimeType ? { mimeType } : {};
+            activeMediaRecorder = new MediaRecorder(stream, options);
+
+            activeMediaRecorder.ondataavailable = e => {
+                if (e.data && e.data.size > 0) {
+                    activeAudioChunks.push(e.data);
+                }
+            };
+
+            activeMediaRecorder.onstop = () => {
+                const blob = new Blob(activeAudioChunks, { type: activeMediaRecorder.mimeType || 'audio/webm' });
+                const audioUrl = URL.createObjectURL(blob);
+                userRecordings[cardId] = {
+                    blob: blob,
+                    url: audioUrl,
+                    duration: recordSeconds
+                };
+                
+                stream.getTracks().forEach(track => track.stop());
+                updateUIAfterRecording(cardId);
+            };
+
+            activeMediaRecorder.start(200);
+
+            // Update UI
+            const recBtn = document.getElementById(`rec-btn-${cardId}`);
+            recBtn.classList.add('recording');
+            recBtn.innerHTML = '⏹️ 完成录音';
+
+            const panel = document.getElementById(`user-rec-panel-${cardId}`);
+            panel.style.display = 'flex';
+            
+            const statusText = document.getElementById(`rec-status-${cardId}`);
+            statusText.innerText = '🔴 正在录音... 请跟读';
+            statusText.style.color = '#f87171';
+
+            const dot = document.getElementById(`rec-dot-${cardId}`);
+            dot.classList.add('recording');
+
+            panel.querySelector('.rec-panel-btns').style.display = 'none';
+
+            // Timer
+            const timerBadge = document.getElementById(`rec-time-${cardId}`);
+            timerBadge.innerText = '00:00';
+            clearInterval(recordTimerInterval);
+            recordTimerInterval = setInterval(() => {
+                recordSeconds++;
+                const mins = String(Math.floor(recordSeconds / 60)).padStart(2, '0');
+                const secs = String(recordSeconds % 60).padStart(2, '0');
+                timerBadge.innerText = `${mins}:${secs}`;
+            }, 1000);
+
+        } catch (err) {
+            console.error('Microphone access denied or error:', err);
+            alert('无法启动录音：请检查浏览器是否已授权麦克风权限！');
+        }
+    }
+
+    function stopRecording(cardId) {
+        if (activeMediaRecorder && activeMediaRecorder.state !== 'inactive') {
+            activeMediaRecorder.stop();
+        }
+        clearInterval(recordTimerInterval);
+        recordingCardId = null;
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 重新录音';
+
+        const dot = document.getElementById(`rec-dot-${cardId}`);
+        dot.classList.remove('recording');
+    }
+
+    function updateUIAfterRecording(cardId) {
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'flex';
+
+        const statusText = document.getElementById(`rec-status-${cardId}`);
+        statusText.innerText = '✅ 跟读已录制完成';
+        statusText.style.color = '#34d399';
+
+        const btnGroup = panel.querySelector('.rec-panel-btns');
+        btnGroup.style.display = 'flex';
+    }
+
+    function playUserRecording(cardId) {
+        const item = userRecordings[cardId];
+        if (!item || !item.url) return;
+
+        if (mainAudio && !mainAudio.paused) {
+            mainAudio.pause();
+        }
+
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+
+        userAudioPlayer = new Audio(item.url);
+        const playBtn = document.getElementById(`play-user-btn-${cardId}`);
+        playBtn.innerText = '⏸️ 正在试听';
+
+        userAudioPlayer.play().catch(e => console.error('Play error:', e));
+
+        userAudioPlayer.onended = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+        userAudioPlayer.onpause = () => {
+            playBtn.innerText = '▶ 试听跟读';
+        };
+    }
+
+    function compareOfficial(cardId) {
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const card = document.getElementById(`rec-btn-${cardId}`).closest('.slice-card');
+        const playBtn = card.querySelector('.play-card-btn');
+        playBtn.click();
+    }
+
+    function deleteRecording(cardId) {
+        if (userRecordings[cardId] && userRecordings[cardId].url) {
+            URL.revokeObjectURL(userRecordings[cardId].url);
+            delete userRecordings[cardId];
+        }
+        if (userAudioPlayer) {
+            userAudioPlayer.pause();
+        }
+        const panel = document.getElementById(`user-rec-panel-${cardId}`);
+        panel.style.display = 'none';
+
+        const recBtn = document.getElementById(`rec-btn-${cardId}`);
+        recBtn.classList.remove('recording');
+        recBtn.innerHTML = '🎙️ 录音跟读';
+    }
+    /* ========================================================
+       手动进度条 / 指定起点播放 / AB循环
+       ======================================================== */
+    const seekSlider = document.getElementById('seek-slider');
+    const curTimeLabel = document.getElementById('cur-time-label');
+    const durTimeLabel = document.getElementById('dur-time-label');
+    let isDraggingSlider = false;
+
+    function fmtTime(t) {
+        if (!isFinite(t) || t < 0) t = 0;
+        const mins = String(Math.floor(t / 60)).padStart(2, '0');
+        const secs = String(Math.floor(t % 60)).padStart(2, '0');
+        return `${mins}:${secs}`;
+    }
+
+    function parseTimeVal(s) {
+        s = (s || '').trim();
+        if (!s) return null;
+        if (s.includes(':')) {
+            const parts = s.split(':').map(Number);
+            if (parts.some(isNaN)) return null;
+            return parts.reduce((acc, v) => acc * 60 + v, 0);
+        }
+        const v = parseFloat(s);
+        return isNaN(v) ? null : v;
+    }
+
+    mainAudio.addEventListener('loadedmetadata', () => {
+        if (isFinite(mainAudio.duration)) {
+            seekSlider.max = mainAudio.duration;
+            durTimeLabel.innerText = fmtTime(mainAudio.duration);
+        }
+    });
+
+    mainAudio.addEventListener('timeupdate', () => {
+        if (!isDraggingSlider) {
+            seekSlider.value = mainAudio.currentTime;
+        }
+        curTimeLabel.innerText = fmtTime(mainAudio.currentTime);
+        // AB 循环：播到终点自动跳回起点
+        if (abLoopOn && abEndVal !== null && mainAudio.currentTime >= abEndVal) {
+            mainAudio.currentTime = abStartVal || 0;
+        }
+    });
+
+    seekSlider.addEventListener('input', () => {
+        isDraggingSlider = true;
+        const t = parseFloat(seekSlider.value);
+        curTimeLabel.innerText = fmtTime(t);
+        // 点击/拖动即刻定位（Blob 音频源支持任意位置 seek）
+        if (mainAudio.src && isFinite(mainAudio.duration)) {
+            mainAudio.currentTime = t;
+        }
+    });
+    seekSlider.addEventListener('change', () => {
+        isDraggingSlider = false;
+    });
+
+    /* 快退快进（与 C17T1 点播台同款写法） */
+    function skipAudio(seconds) {
+        if (!mainAudio.src) return;
+        mainAudio.currentTime = Math.max(0, Math.min((mainAudio.currentTime || 0) + seconds, mainAudio.duration || 0));
+    }
+
+    function playFromCustomStart() {
+        const v = parseTimeVal(document.getElementById('start-at-input').value);
+        if (v === null) {
+            alert('请输入起点时间：支持秒数（如 90）或 分:秒（如 1:30）');
+            return;
+        }
+        if (!mainAudio.src) {
+            alert('请先点击上方任意切片的「▶ 播放切片」加载音频，再指定起点。');
+            return;
+        }
+        mainAudio.currentTime = Math.min(v, mainAudio.duration || v);
+        mainAudio.play().catch(e => console.log('Play error:', e));
+        nowPlayingText.innerHTML = `<span>▶ 指定起点播放：</span> <strong>${fmtTime(v)} 处</strong>`;
+    }
+
+    let abLoopOn = false, abStartVal = null, abEndVal = null;
+    function toggleAbLoop(btn) {
+        if (!abLoopOn) {
+            const a = parseTimeVal(document.getElementById('ab-start').value);
+            const b = parseTimeVal(document.getElementById('ab-end').value);
+            if (a === null || b === null || b <= a) {
+                alert('请填写有效的起点和终点时间（终点必须大于起点），支持秒数或 分:秒。');
+                return;
+            }
+            abStartVal = a;
+            abEndVal = b;
+            abLoopOn = true;
+            btn.classList.add('active');
+            btn.innerText = 'AB循环: 开';
+            mainAudio.currentTime = a;
+            mainAudio.play().catch(e => console.log('Play error:', e));
+        } else {
+            abLoopOn = false;
+            btn.classList.remove('active');
+            btn.innerText = 'AB循环: 关';
+        }
+    }
+
+    function setAbStartFromCurrent() {
+        document.getElementById('ab-start').value = fmtTime(mainAudio.currentTime || 0);
+    }
+</script>
+
+</body>
+</html>
