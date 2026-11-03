@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雅思口语 Day 1 · 7.5分标准发音与停顿影子跟读台 (Work or Study)</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.75);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
+            --accent-rose: #fb7185;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 20px;
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .nav-back-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .practice-banner {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .banner-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+        }
+
+        .banner-text h4 {
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .banner-text p {
+            color: #cbd5e1;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .badge {
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+
+        .badge-master {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(239, 68, 68, 0.2));
+            color: #fcd34d;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #f1f5f9;
+        }
+
+        .timing-tag {
+            font-size: 0.85rem;
+            color: var(--accent-amber);
+            font-weight: 600;
+        }
+
+        .player-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        audio {
+            flex: 1;
+            min-width: 260px;
+            height: 38px;
+        }
+
+        .speed-btns {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn-speed {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-speed:hover, .btn-speed.active {
+            background: var(--accent-blue);
+            color: #0f172a;
+            border-color: var(--accent-blue);
+        }
+
+        .btn-record {
+            background: rgba(251, 113, 133, 0.15);
+            border: 1px solid rgba(251, 113, 133, 0.4);
+            color: var(--accent-rose);
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-record:hover {
+            background: rgba(251, 113, 133, 0.3);
+        }
+
+        .btn-record.recording {
+            background: var(--accent-rose);
+            color: white;
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .text-display {
+            background: rgba(15, 23, 42, 0.4);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 14px;
+        }
+
+        .en-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .pause-slash {
+            color: var(--accent-amber);
+            font-weight: bold;
+            padding: 0 4px;
+            user-select: none;
+        }
+
+        .stress-word {
+            color: #38bdf8;
+            font-weight: 700;
+        }
+
+        .cn-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-top: 10px;
+        }
+
+        .collocations-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .colloc-chip {
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            color: #6ee7b7;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        .my-recording-box {
+            display: none;
+            margin-top: 12px;
+            padding: 10px 14px;
+            background: rgba(251, 113, 133, 0.08);
+            border: 1px solid rgba(251, 113, 133, 0.2);
+            border-radius: 8px;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .my-recording-box.show {
+            display: flex;
+        }
+
+        .my-recording-label {
+            font-size: 0.85rem;
+            color: var(--accent-rose);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="nav-back-bar">
+        <a href="背诵版.md" class="nav-link">📄 返回《背诵版.md》纯文本</a>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">IELTS Speaking Part 1 · Work & Studies</span>
+        <a href="Day one work or study.md" class="nav-link">🧭 完整剖析文档 ➔</a>
+    </div>
+
+    <header>
+        <h1>🗣️ 雅思口语 7.5分标准发音·停顿影子跟读台</h1>
+        <p>精准意群换气（Pause）· 语调起伏（Intonation）· 真实职场语速（150 WPM）</p>
+    </header>
+
+    <div class="practice-banner">
+        <div class="banner-icon">🎧</div>
+        <div class="banner-text">
+            <h4>影子跟读（Shadowing）训练指南：</h4>
+            <p>1. <strong>第一遍（盲听感知）</strong>：点击播放，闭上眼睛，感受母语考官在黄色斜线 <span style="color:#fbbf24; font-weight:bold;">/</span> 处的轻吸气与短暂停顿。<br>
+            2. <strong>第二遍（0.8x 慢速跟读）</strong>：点击 <strong>0.8x</strong> 按钮，出声跟读，让舌头肌肉彻底摆脱爆破音加音与结巴。<br>
+            3. <strong>第三遍（录音对比）</strong>：点击 <strong>🎙️ 录下我的声音</strong>，自己完整说一遍并回放对比，直到语调一样自然自信！</p>
+        </div>
+    </div>
+
+    <!-- Card 0: Master Story -->
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title-group">
+                <span class="badge badge-master">🌟 万能超级母题全景</span>
+                <h3 class="card-title">45秒满分母版故事（Q1 + Q2 + Q3 深度合体）</h3>
+            </div>
+            <span class="timing-tag">⏱️ 约 65 秒 (带意群舒缓停顿)</span>
+        </div>
+
+        <div class="player-row">
+            <audio id="audio-master" controls src="音频/Day1_Work_or_Study/00_Master_Story_超级母题45秒全景.mp3"></audio>
+            <div class="speed-btns">
+                <button class="btn-speed" onclick="setSpeed('audio-master', 0.8, this)">0.8x</button>
+                <button class="btn-speed active" onclick="setSpeed('audio-master', 1.0, this)">1.0x</button>
+                <button class="btn-speed" onclick="setSpeed('audio-master', 1.2, this)">1.2x</button>
+            </div>
+            <button class="btn-record" id="rec-btn-master" onclick="toggleRecord('master')">🎙️ 录音自测</button>
+        </div>
+
+        <div class="my-recording-box" id="my-rec-box-master">
+            <span class="my-recording-label">我的跟读录音：</span>
+            <audio id="my-audio-master" controls style="height:32px; flex:1;"></audio>
+        </div>
+
+        <div class="text-display">
+            <div class="en-text">
+                “I’m currently working <span class="pause-slash">/</span> as a <span class="stress-word">full stack developer</span> <span class="pause-slash">/</span> at a tech firm. Basically, <span class="pause-slash">/</span> my day-to-day job involves <span class="pause-slash">/</span> developing useful applications <span class="pause-slash">/</span> that <span class="stress-word">make everyday life easier and more convenient for people</span>. It can be quite fast-paced and challenging, <span class="pause-slash">/</span> but <span class="stress-word">I find it deeply fulfilling</span>.<br><br>
+                The main reason I <span class="stress-word">chose this path</span> <span class="pause-slash">/</span> is quite simple— <span class="pause-slash">/</span> I actually <span class="stress-word">majored in computer science</span> <span class="pause-slash">/</span> back in university. Right after graduation, <span class="pause-slash">/</span> I joined a tech company, <span class="pause-slash">/</span> and that was where <span class="pause-slash">/</span> I <span class="stress-word">crossed paths with an amazing team lead</span>. He noticed <span class="pause-slash">/</span> that I had a <span class="stress-word">real knack for coding</span>, <span class="pause-slash">/</span> so he brought me <span class="pause-slash">/</span> into his core team.<br><br>
+                Since then, <span class="pause-slash">/</span> we’ve <span class="stress-word">shipped quite a few successful projects</span> together, <span class="pause-slash">/</span> and even <span class="stress-word">picked up several company awards</span>. Looking back, <span class="pause-slash">/</span> being able to develop useful applications <span class="pause-slash">/</span> that really help people <span class="pause-slash">/</span> gives me a <span class="stress-word">huge sense of achievement and pride</span>. So, <span class="pause-slash">/</span> I <span class="stress-word">genuinely enjoy</span> what I do!”
+            </div>
+            <div class="cn-text">
+                简单来说，我目前在一家科技公司做全栈开发工程师。日常工作主要是开发实用的应用程序，让人们的日常生活更轻松便捷。虽然节奏很快也挺有挑战，但我由衷觉得非常充实。<br>
+                当初选择这条路的原因很简单——大学就是计算机专业。毕业后加入了一家科技公司，在那里结识了一位极棒的团队主管。他敏锐发现我在编程上很有巧门和天赋，于是破格把我带入了他的核心战队。<br>
+                从那时起，我们并肩上线了多个成功的项目，甚至多次斩获公司表彰。回首看来，亲手打造真正改善人们生活的应用，带给我巨大的成就感与自豪感。所以，我打心底里热爱我的事业！
+            </div>
+        </div>
+
+        <div class="collocations-box">
+            <span class="colloc-chip">full stack developer</span>
+            <span class="colloc-chip">make everyday life easier & convenient</span>
+            <span class="colloc-chip">deeply fulfilling</span>
+            <span class="colloc-chip">crossed paths with an amazing team lead</span>
+            <span class="colloc-chip">real knack for coding</span>
+            <span class="colloc-chip">shipped successful projects</span>
+            <span class="colloc-chip">huge sense of achievement and pride</span>
+        </div>
+    </div>
+
+    <!-- Card 1: Q1 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title-group">
+                <span class="badge">Question 1</span>
+                <h3 class="card-title">What is your current job, or what are you studying?</h3>
+            </div>
+            <span class="timing-tag">⏱️ 约 20 秒</span>
+        </div>
+
+        <div class="player-row">
+            <audio id="audio-q1" controls src="音频/Day1_Work_or_Study/01_Q1_Current_Job_当前职业.mp3"></audio>
+            <div class="speed-btns">
+                <button class="btn-speed" onclick="setSpeed('audio-q1', 0.8, this)">0.8x</button>
+                <button class="btn-speed active" onclick="setSpeed('audio-q1', 1.0, this)">1.0x</button>
+                <button class="btn-speed" onclick="setSpeed('audio-q1', 1.2, this)">1.2x</button>
+            </div>
+            <button class="btn-record" id="rec-btn-q1" onclick="toggleRecord('q1')">🎙️ 录音自测</button>
+        </div>
+
+        <div class="my-recording-box" id="my-rec-box-q1">
+            <span class="my-recording-label">我的跟读录音：</span>
+            <audio id="my-audio-q1" controls style="height:32px; flex:1;"></audio>
+        </div>
+
+        <div class="text-display">
+            <div class="en-text">
+                “I’m currently working <span class="pause-slash">/</span> as a <span class="stress-word">full stack developer</span> <span class="pause-slash">/</span> at a tech firm. Basically, <span class="pause-slash">/</span> my <span class="stress-word">day-to-day job involves</span> <span class="pause-slash">/</span> developing useful applications <span class="pause-slash">/</span> that <span class="stress-word">make everyday life easier and more convenient for people</span>. It can be quite <span class="stress-word">fast-paced and challenging</span>, <span class="pause-slash">/</span> but <span class="stress-word">I find it deeply fulfilling</span>.”
+            </div>
+            <div class="cn-text">
+                我目前在一家科技公司担任全栈开发工程师。简单来说，我的日常工作就是开发各种实用的应用程序，让人们的日常生活变得更轻松、更便利。虽然节奏很快也挺有挑战性，但我由衷觉得非常充实、富有价值。
+            </div>
+        </div>
+
+        <div class="collocations-box">
+            <span class="colloc-chip">full stack developer</span>
+            <span class="colloc-chip">day-to-day job involves</span>
+            <span class="colloc-chip">make everyday life easier and more convenient</span>
+            <span class="colloc-chip">fast-paced and challenging</span>
+            <span class="colloc-chip">deeply fulfilling</span>
+        </div>
+    </div>
+
+    <!-- Card 2: Q2 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title-group">
+                <span class="badge">Question 2</span>
+                <h3 class="card-title">Why did you choose this subject or job?</h3>
+            </div>
+            <span class="timing-tag">⏱️ 约 23 秒</span>
+        </div>
+
+        <div class="player-row">
+            <audio id="audio-q2" controls src="音频/Day1_Work_or_Study/02_Q2_Why_Chose_选择原因.mp3"></audio>
+            <div class="speed-btns">
+                <button class="btn-speed" onclick="setSpeed('audio-q2', 0.8, this)">0.8x</button>
+                <button class="btn-speed active" onclick="setSpeed('audio-q2', 1.0, this)">1.0x</button>
+                <button class="btn-speed" onclick="setSpeed('audio-q2', 1.2, this)">1.2x</button>
+            </div>
+            <button class="btn-record" id="rec-btn-q2" onclick="toggleRecord('q2')">🎙️ 录音自测</button>
+        </div>
+
+        <div class="my-recording-box" id="my-rec-box-q2">
+            <span class="my-recording-label">我的跟读录音：</span>
+            <audio id="my-audio-q2" controls style="height:32px; flex:1;"></audio>
+        </div>
+
+        <div class="text-display">
+            <div class="en-text">
+                “The main reason I <span class="stress-word">chose this path</span> <span class="pause-slash">/</span> is quite simple— <span class="pause-slash">/</span> I actually <span class="stress-word">majored in computer science</span> <span class="pause-slash">/</span> back in university. Right after graduation, <span class="pause-slash">/</span> I joined a tech company, <span class="pause-slash">/</span> and that was where <span class="pause-slash">/</span> I <span class="stress-word">crossed paths with an amazing team lead</span>. He noticed <span class="pause-slash">/</span> that I had a <span class="stress-word">real knack for coding</span>, <span class="pause-slash">/</span> so he brought me <span class="pause-slash">/</span> into his core team.”
+            </div>
+            <div class="cn-text">
+                我选择走这条路的原因很简单——大学主修的就是计算机科学专业。刚毕业那会儿，我加入了一家科技公司，正是在那里我结识了一位极棒的主管导师。他发现我在编程上很有天赋和窍门，便破格把我带入了他的核心战队。
+            </div>
+        </div>
+
+        <div class="collocations-box">
+            <span class="colloc-chip">chose this path (时态 past chose)</span>
+            <span class="colloc-chip">majored in computer science</span>
+            <span class="colloc-chip">crossed paths with an amazing team lead</span>
+            <span class="colloc-chip">have a real knack for coding</span>
+            <span class="colloc-chip">brought me into his core team</span>
+        </div>
+    </div>
+
+    <!-- Card 3: Q3 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title-group">
+                <span class="badge">Question 3</span>
+                <h3 class="card-title">Do you enjoy what you are currently doing?</h3>
+            </div>
+            <span class="timing-tag">⏱️ 约 22 秒</span>
+        </div>
+
+        <div class="player-row">
+            <audio id="audio-q3" controls src="音频/Day1_Work_or_Study/03_Q3_Enjoy_Doing_热爱与成就感.mp3"></audio>
+            <div class="speed-btns">
+                <button class="btn-speed" onclick="setSpeed('audio-q3', 0.8, this)">0.8x</button>
+                <button class="btn-speed active" onclick="setSpeed('audio-q3', 1.0, this)">1.0x</button>
+                <button class="btn-speed" onclick="setSpeed('audio-q3', 1.2, this)">1.2x</button>
+            </div>
+            <button class="btn-record" id="rec-btn-q3" onclick="toggleRecord('q3')">🎙️ 录音自测</button>
+        </div>
+
+        <div class="my-recording-box" id="my-rec-box-q3">
+            <span class="my-recording-label">我的跟读录音：</span>
+            <audio id="my-audio-q3" controls style="height:32px; flex:1;"></audio>
+        </div>
+
+        <div class="text-display">
+            <div class="en-text">
+                “Yes, absolutely! <span class="pause-slash">/</span> I <span class="stress-word">genuinely enjoy</span> what I do. Since joining the team, <span class="pause-slash">/</span> we’ve <span class="stress-word">shipped quite a few successful projects</span> together, <span class="pause-slash">/</span> and even <span class="stress-word">picked up several company awards</span>. Looking back, <span class="pause-slash">/</span> being able to develop useful applications <span class="pause-slash">/</span> that really help people <span class="pause-slash">/</span> gives me a <span class="stress-word">huge sense of achievement and pride</span>.”
+            </div>
+            <div class="cn-text">
+                是的，当然！我由衷热爱我现在所做的事。自加入团队以来，我们并肩上线交付了多个优质成功的项目，甚至斩获了多项公司级表彰。回首看来，亲手打造真正帮助人们的应用，带给我强烈的成就感与自豪感。
+            </div>
+        </div>
+
+        <div class="collocations-box">
+            <span class="colloc-chip">genuinely enjoy what I do</span>
+            <span class="colloc-chip">since joining the team</span>
+            <span class="colloc-chip">ship successful projects</span>
+            <span class="colloc-chip">picked up company awards</span>
+            <span class="colloc-chip">a huge sense of achievement and pride</span>
+        </div>
+    </div>
+
+    <!-- Card 4: Q4 -->
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title-group">
+                <span class="badge">Question 4</span>
+                <h3 class="card-title">Do you plan to change your job or field in the near future?</h3>
+            </div>
+            <span class="timing-tag">⏱️ 约 28 秒</span>
+        </div>
+
+        <div class="player-row">
+            <audio id="audio-q4" controls src="音频/Day1_Work_or_Study/04_Q4_Career_Plans_职业规划.mp3"></audio>
+            <div class="speed-btns">
+                <button class="btn-speed" onclick="setSpeed('audio-q4', 0.8, this)">0.8x</button>
+                <button class="btn-speed active" onclick="setSpeed('audio-q4', 1.0, this)">1.0x</button>
+                <button class="btn-speed" onclick="setSpeed('audio-q4', 1.2, this)">1.2x</button>
+            </div>
+            <button class="btn-record" id="rec-btn-q4" onclick="toggleRecord('q4')">🎙️ 录音自测</button>
+        </div>
+
+        <div class="my-recording-box" id="my-rec-box-q4">
+            <span class="my-recording-label">我的跟读录音：</span>
+            <audio id="my-audio-q4" controls style="height:32px; flex:1;"></audio>
+        </div>
+
+        <div class="text-display">
+            <div class="en-text">
+                “Definitely not! <span class="pause-slash">/</span> <span class="stress-word">In the foreseeable future</span>, <span class="pause-slash">/</span> I have <span class="stress-word">no intention of switching jobs</span> <span class="pause-slash">/</span> or leaving this field. The main reason is that <span class="pause-slash">/</span> full stack development <span class="stress-word">has so much depth to it</span>, <span class="pause-slash">/</span> and my skills still have <span class="stress-word">plenty of room for growth</span>, <span class="pause-slash">/</span> especially when <span class="stress-word">tackling complex engineering problems</span>. Right now, <span class="pause-slash">/</span> I plan to stay in my current team, <span class="pause-slash">/</span> <span class="stress-word">sharpen my coding skills</span>, <span class="pause-slash">/</span> and take things <span class="stress-word">one step at a time</span>.”
+            </div>
+            <div class="cn-text">
+                绝对不会！在可预见的未来里，我完全没有跳槽或转行的打算。最主要的原因是，全栈开发里面的学问非常深厚，而我的专业技能依然有巨大的成长空间，尤其是在攻克复杂的工程技术难题方面。眼下，我的打算就是留在现在的团队里，精进磨练编程技能，一步一个脚印地稳步前行。
+            </div>
+        </div>
+
+        <div class="collocations-box">
+            <span class="colloc-chip">in the foreseeable future</span>
+            <span class="colloc-chip">have no intention of switching jobs</span>
+            <span class="colloc-chip">has so much depth to it</span>
+            <span class="colloc-chip">plenty of room for growth</span>
+            <span class="colloc-chip">tackling complex engineering problems</span>
+            <span class="colloc-chip">sharpen my coding skills</span>
+            <span class="colloc-chip">take things one step at a time</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>Google DeepMind Antigravity · 雅思口语 7.5+ 自动化实战加速营</p>
+    </footer>
+
+</div>
+
+<script>
+    // Playback rate controller
+    function setSpeed(audioId, rate, btn) {
+        const audio = document.getElementById(audioId);
+        if (audio) {
+            audio.playbackRate = rate;
+            const parent = btn.parentElement;
+            parent.querySelectorAll('.btn-speed').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    }
+
+    // Audio recorder state map
+    const recorders = {};
+    const audioChunks = {};
+
+    async function toggleRecord(id) {
+        const btn = document.getElementById(`rec-btn-${id}`);
+        const box = document.getElementById(`my-rec-box-${id}`);
+        const myAudio = document.getElementById(`my-audio-${id}`);
+
+        if (recorders[id] && recorders[id].state === 'recording') {
+            // Stop recording
+            recorders[id].stop();
+            btn.classList.remove('recording');
+            btn.innerHTML = '🎙️ 重新录音';
+        } else {
+            // Start recording
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                const mediaRecorder = new MediaRecorder(stream);
+                recorders[id] = mediaRecorder;
+                audioChunks[id] = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks[id].push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks[id], { type: 'audio/mp3' });
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    myAudio.src = audioUrl;
+                    box.classList.add('show');
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                btn.classList.add('recording');
+                btn.innerHTML = '⏹️ 停止录音';
+            } catch (err) {
+                alert('无法访问麦克风，请在浏览器权限设置中允许麦克风权限！');
+                console.error(err);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
