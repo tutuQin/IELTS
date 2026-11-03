@@ -11,7 +11,7 @@
 
 在雅思口语中，考官最喜欢的是**有血有肉、有细节的真实人物**。今晚我们打磨确立的这套个人职业档案，将成为你贯穿 Part 1、Part 2、Part 3 的**核心基石故事**：
 
-* **职业角色**：前端开发工程师（Front-end Developer）
+* **职业角色**：全栈开发工程师（Full Stack Developer）
 * **专业背景**：大学主修计算机科学（Majored in computer science back in university）
 * **职业转折（伯乐团队）**：毕业入职后遇到极其赏识自己编程天赋的技术主管（Team lead / Mentor），被破格纳入核心战队
 * **工作实绩与荣誉**：合作成功交付上线了多个优质项目（Shipped quite a few successful projects），斩获公司表彰奖项（Picked up company awards）
@@ -25,7 +25,7 @@
 > 💡 **使用场景**：考场上若考官一口气问或做 Part 2 延展，或者你想用一整段富有逻辑的语流直接震惊考官，可一口气说出这套 **45秒满分母版**：
 
 ```text
-“I’m currently working as a front-end developer. 
+“I’m currently working as a full stack developer. 
 
 The main reason I chose this path is quite simple—I actually majored in computer science back in university. Right after graduation, I joined a tech company, and that was where I crossed paths with an amazing team lead. He noticed that I had a real knack for coding, so he brought me into his core team. 
 
