@@ -475,6 +475,35 @@
             border-radius: 4px;
         }
 
+        .hl-swap {
+            background: rgba(251, 191, 36, 0.16);
+            color: var(--accent-amber);
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px dashed var(--accent-amber);
+            font-weight: 600;
+        }
+
+        .hl-conn {
+            color: #f472b6;
+            font-weight: 700;
+            background: rgba(244, 114, 182, 0.14);
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px solid #f472b6;
+        }
+
+        .q-stem-box {
+            background: rgba(56, 189, 248, 0.06);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin: 10px 0 14px 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
         .analysis-box {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-color);
@@ -609,8 +638,8 @@
     </div>
 
     <header>
-        <h1>🎧 剑桥雅思 16 Test 1 Part 1 听力错题切片与考点点播台</h1>
-        <p>Children's Engineering Workshops（儿童工程工坊）· 靶向攻克手脑脱节、定位后宕机与逆向语序倒装</p>
+        <h1>🎧 剑桥雅思 16 Test 1 Part 1 + Part 4 听力错题切片与考点点播台</h1>
+        <p>Part 1 Children's Engineering Workshops（儿童工程工坊）+ Part 4 Stoicism（斯多葛哲学讲座）· 靶向攻克手脑脱节、定位后宕机、否定后置误判与铺垫词抢答</p>
     </header>
 
     <!-- Sticky Audio Player -->
@@ -632,19 +661,22 @@
                 <button class="pill-btn" onclick="setSpeed(1.2, this)">1.2x 提速</button>
             </div>
             <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: auto;">
-                高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
+                高亮图例：<span class="signal-highlight">■ 定位词</span> | <span class="hl-swap">■ 题干⇄原文替换</span> | <span class="hl-conn">■ 转折/连词信号</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
             </span>
         </div>
     </div>
 
     <!-- 4-step Guide -->
     <div class="tips-panel">
-        <div class="tips-title">💡 针对本套题 5 大核心漏洞靶向精练指南</div>
+        <div class="tips-title">💡 针对本套题 7 大核心漏洞靶向精练指南</div>
         <ol class="tips-list">
             <li><strong>Step 1 破除手脑乱码（Q1 egg vs age）</strong>：开局稳字当头，抓到发音 <em>/eɡ/</em> 配合常识“生鸡蛋保护罩”落笔，绝不让手部乱码写成 <em>age</em>！</li>
             <li><strong>Step 2 抗住举例后宕机（Q4 cars and trucks vs animals）</strong>：听到定位词绝不庆祝！注意力立刻下移，死死咬住 <em>but also construct</em> 后的并列核心词 <em>animals</em>！</li>
             <li><strong>Step 3 逆向语序抢先记录（Q6 movie & Q10 parking）</strong>：听到吻合空格的名词（5-minute movie / problems parking）立刻草稿记下，绝不死等后续修饰语确认！</li>
             <li><strong>Step 4 激活周期性复数感知（Q8 Wednesdays）</strong>：听到周几开课，脑中立刻启动复数雷达，读准 <em>/z/</em> 尾音并写全末尾 <em>s</em>！</li>
+            <li><strong>Step 5 否定后置不追新（Q32 publication vs Meditations）</strong>：<em>despite the fact that</em> 让步句的答案 <em>publication</em> 在句尾；<em>Cato definitely didn't</em> 只是对前句的否定强调，不是新信息，绝不能被后面 <em>Meditations</em> 书名勾走写成 <em>meditation</em>！</li>
+            <li><strong>Step 6 转折因果词后出答案（Q33 choices / Q39 opportunity）</strong>：Epictetus 名言 <em>but the choices I make...</em> 与 <em>because Stoics teach turning obstacles into opportunity</em>——<em>but / because</em> 一出口笔尖就位，前面的 <em>conscious</em>、<em>setbacks</em> 全是铺垫！</li>
+            <li><strong>Step 7 难词敢写 + 答案倒置等到底（Q36 capitalism / Q40 practice）</strong>：听到 <em>capitalism</em> 就自信落笔，别因"太难"自我怀疑改成 <em>school</em>；定位到 <em>lead a good life</em> 后别放松，<em>considerable practice</em> 在 15 秒后才来，<em>brilliant</em> 是形容词陷阱！</li>
         </ol>
     </div>
 
@@ -661,10 +693,11 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
-        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (5)</button>
-        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (5)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (23)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (12)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (8)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)" style="color:#c084fc;">Part 4 讲座切片 (12)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">完整录音 (2)</button>
     </div>
 
     <!-- Slice List -->
@@ -1446,10 +1479,834 @@
                 </details>
             </div>
         </div>
+
+        <!-- PART 4 SECTION DIVIDER -->
+        <div class="slice-card" data-category="part4" style="border-color: rgba(192, 132, 252, 0.4); background: linear-gradient(135deg, rgba(192,132,252,0.08), rgba(56,189,248,0.05));">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag" style="background: rgba(192,132,252,0.2); color: #c084fc; border: 1px solid rgba(192,132,252,0.4);">Part 4 · 学术讲座 · Q31-Q40</span>
+                    <h3 class="card-title">🏛️ Stoicism 斯多葛哲学讲座 · 战报 10 题对 3 错 7</h3>
+                </div>
+            </div>
+            <div class="q-stem-box" style="border-left-color: #c084fc;">
+                <strong>讲座结构：</strong>总起（Q31 实用）→ 古代斯多葛（Q32 未出版）→ 斯多葛原则（Q33 选择 / Q34 消极视角）→ 影响力（Q35 戏剧 / Q36 资本主义 / Q37 抑郁症 / Q38 逻辑 / Q39 机遇）→ 当代意义（Q40 练习）。<br>
+                <strong>七道错题的三大病根：</strong>① <strong>否定后置与让步从句整句失守</strong>（Q32 despite the fact that 句尾出答案，definitely didn't 省略强调被误判为新信息，Meditations 书名抢答）；② <strong>转折/因果词后出答案 + 前置铺垫词抢写</strong>（Q33 but 前 conscious 抢跑、Q39 because 前 setbacks 抢跑、Q40 lead a good life 定位后放松漏 practice）；③ <strong>自我怀疑与并列名词干扰</strong>（Q36 capitalism 听对不敢写改 school、Q37/Q38 两题挤在两句里，thinking / symptoms / behaviours 全是陷阱）。Part 4 讲座没有对话换气，一题走神就是连环崩。
+            </div>
+            <div class="q-stem-box legend-row" style="border-left-color: #38bdf8;">
+                <strong>🎨 本篇标注图例（Q31-Q40 每题统一）</strong><br>
+                <span class="signal-highlight">蓝色下划线</span> = <strong>定位词</strong>：卷面与录音里同一个词（人名 / 专有名词 / 原词重现），听到它就知道答案区到了；<br>
+                <span class="hl-swap">琥珀色虚线</span> = <strong>题干 ⇄ 原文替换处</strong>：两边换了说法但意思对得上，每处改写在「考点拆解」里都附了中文翻译；<br>
+                <span class="hl-conn">粉色</span> = <strong>转折词 / 连词信号</strong>：but / because / despite / and later / instead / Specifically 等——答案十有八九跟在它们后面；<br>
+                <span class="ans-highlight">绿色</span> = 答案词；<span class="trap-highlight">红色删除线</span> = 干扰项（听到了也要划掉）。<br>
+                <strong>读法：</strong>先看题干里<strong>蓝色</strong>锁定位置 → 顺着<strong>琥珀色</strong>看"卷面怎么变成录音" → 听见<strong>粉色</strong>连词笔尖就位 → <strong>绿色</strong>落笔。
+            </div>
+        </div>
+
+        <!-- CARD_card_31 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q31</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑤改写识别（词性转换）</span>
+                    <h3 class="card-title">31 · Stoicism 最实用 practical 与 appealing 干扰排除</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_Stoicism最实用practical与appealing干扰排除.mp3', 'Q31: Stoicism 最实用 practical 与 appealing 干扰排除')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_31" onclick="handleRecBtnClick('card_31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_31" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_31"></span>
+                    <span class="rec-status-text" id="rec-status-card_31">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_31">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_31" onclick="playUserRecording('card_31')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_31')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_31')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_31')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="signal-highlight">Stoicism</span> is still relevant today because of its <strong>[ 31 ]</strong> <span class="hl-swap">appeal</span>.
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: <span class="hl-conn">Specifically</span>, I am referring to <span class="signal-highlight">Stoicism</span>, which, in my opinion, is the most <span class="ans-highlight">practical [Q31]</span> of all philosophies and <span class="hl-conn">therefore</span> the most <span class="hl-swap">appealing</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✓ 你做对了</strong> —— 定位词 <span class="signal-highlight">Stoicism</span> 一出口答案区即到，<em>the most practical of all philosophies</em> 原词稳稳接住。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>its ____ <span class="hl-swap">appeal</span></em>（它的____吸引力，名词）⇄ 录音 <em>the most practical ... and therefore the most <span class="hl-swap">appealing</span></em>（最实用……因此也最吸引人，形容词）——<strong>appeal（n. 吸引力）⇄ appealing（adj. 吸引人的）</strong>，词性互换；卷面 <em>still relevant today</em>（今天仍有意义）是全文主旨，讲座结尾 <em>as relevant today as it was 2,000 years ago</em> 还会呼应一次（Q40 区域）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">Specifically</span>（具体来说）= 点题信号，答案句紧随；<span class="hl-conn">therefore</span>（因此）后的 appealing 是题干预置词，直接排除。<br>
+• <strong>口诀：空前 its、空后 appeal，答案必是修饰 appeal 的形容词；practical / appealing 两个候选中 appealing 已被卷面占用，落笔 practical。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, it is something people have used throughout history – to solve their problems and to achieve their greatest triumphs.</div>
+                            <div class="cn-line">事实上，它是人类贯穿历史一直在使用的东西——用来解决问题、成就最伟大的胜利。【In fact：重点预告信号】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Specifically</span>, I am referring to <span class="signal-highlight">Stoicism</span>, which, in my opinion, is the most <span class="ans-highlight">practical [Q31]</span> of all philosophies and <span class="hl-conn">therefore</span> the most <span class="hl-swap">appealing</span>.</div>
+                            <div class="cn-line">具体来说，我指的是斯多葛哲学——在我看来，它是所有哲学中最<strong>实用</strong>的，因此也最吸引人。【Q31 → practical；appealing 是题干预置词 appeal 的形容词干扰】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_32 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q32</span>
+                    <span class="card-tag tag-p1">Part 4 · ③句意 + 否定后置陷阱</span>
+                    <h3 class="card-title">32 · 从未出版 publication 与 Meditations 书名陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_从未出版publication与Meditations冥想陷阱.mp3', 'Q32: 从未出版 publication 与 Meditations 冥想陷阱')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_32" onclick="handleRecBtnClick('card_32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_32" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_32"></span>
+                    <span class="rec-status-text" id="rec-status-card_32">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_32">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_32" onclick="playUserRecording('card_32')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_32')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_32')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_32')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> The Stoics' ideas are <span class="hl-swap">surprisingly well known</span>, <span class="hl-conn">despite</span> not being <span class="hl-swap">intended</span> for <strong>[ 32 ]</strong>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: <span class="hl-swap">Amazingly</span>, we still <span class="hl-swap">have access to</span> these ideas, <span class="hl-conn">despite the fact that</span> the most famous Stoics <span class="hl-swap">never wrote anything down for</span> <span class="ans-highlight">publication [Q32]</span>. Cato <span class="hl-conn">definitely didn't</span>. Marcus Aurelius never intended his <span class="trap-highlight">Meditations</span> to be anything but <span class="trap-highlight">personal</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：整句让步改写没听懂 + 否定后置误判</strong> —— 你识别出了 <em>famous ⇄ well known</em> 的替换，但 <em>despite the fact that ... never wrote anything down for publication</em> 整句没跟上；等 <em>Cato definitely didn't</em>（加图肯定没有）追加强调时，你以为是否定新信息、答案已过，于是往后找，把书名 <em>Meditations</em> 写成了 meditation。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>ideas are <span class="hl-swap">surprisingly well known</span></em>（思想惊人地广为人知）⇄ 录音 <em><span class="hl-swap">Amazingly</span>, we still <span class="hl-swap">have access to</span> these ideas</em>（令人惊讶的是，我们至今仍能接触到这些思想）；卷面 <em>not being <span class="hl-swap">intended</span> for ____</em>（并非为____而写）⇄ 录音 <em><span class="hl-swap">never wrote anything down for</span> publication</em>（从未写下任何东西用于出版）——<strong>intended for ⇄ wrote down for（打算用于 ⇄ 写下用于）</strong>。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">despite the fact that</span>（尽管）= 让步信号，答案在从句末尾；<span class="hl-conn">definitely didn't</span> 是省略否定句，didn't 替代的是 wrote anything down for publication——听到省略否定要<strong>回看前句</strong>，而不是向前找新答案。<br>
+• <strong>口诀：让步句（despite）的答案多在句尾；didn't / don't 类省略否定 = 前句复读机，千万别换台；书名（Meditations）、人名永不作填空答案。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-swap">Amazingly</span>, we still <span class="hl-swap">have access to</span> these ideas, <span class="hl-conn">despite the fact that</span> the most famous Stoics <span class="hl-swap">never wrote anything down for</span> <span class="ans-highlight">publication [Q32]</span>.</div>
+                            <div class="cn-line">令人惊讶的是，我们至今仍能接触到这些思想——尽管最著名的斯多葛学派人物从未写下任何文字用于<strong>出版</strong>。【Q32 → publication；despite the fact that 让步，答案在句尾】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Cato <span class="hl-conn">definitely didn't</span>.</div>
+                            <div class="cn-line">加图肯定没有（出版过任何东西）。【definitely didn't 是对前句的否定强调，不是新信息】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Marcus Aurelius never intended his <span class="trap-highlight">Meditations</span> to be anything but <span class="trap-highlight">personal</span>.</div>
+                            <div class="cn-line">马可·奥勒留从未打算让他的《沉思录》成为私人笔记以外的任何东西。【Meditations 是书名陷阱，别抢写 meditation】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_33 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q33</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑥审题定位 + but转折</span>
+                    <h3 class="card-title">33 · 可控制的 choices 与 conscious 抢跑</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_可控制的choices选择与conscious抢跑.mp3', 'Q33: 可控制的 choices 与 conscious 抢跑')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_33" onclick="handleRecBtnClick('card_33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_33" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_33"></span>
+                    <span class="rec-status-text" id="rec-status-card_33">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_33">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_33" onclick="playUserRecording('card_33')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_33')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_33')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_33')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="signal-highlight">Epictetus</span> said that <span class="signal-highlight">external events</span> cannot be controlled <span class="hl-conn">but</span> the <strong>[ 33 ]</strong> people <span class="hl-swap">make in response</span> can be controlled.
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: In the words of <span class="signal-highlight">Epictetus</span>: "<span class="signal-highlight">external events</span> I cannot control, <span class="hl-conn">but</span> the <span class="ans-highlight">choices [Q33]</span> I <span class="hl-swap">make with regard to them</span>, I do control"."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：长铺垫中迷失 + but 后答案没接住</strong> —— 前面 <em>destructive emotions / anger and jealousy / conscious control</em> 一大串铺垫，听到 <em>conscious</em> 时你以为答案区已过；真正的答案句是 Epictetus 名言 <em>but the choices I make with regard to them, I do control</em>——but 转折后你没有反应。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>external events cannot be controlled</em>（外部事件无法被控制）⇄ 录音 <em>external events I cannot control</em>（外部事件我不能控制）——被动⇄主动；卷面 <em>the ____ people <span class="hl-swap">make in response</span></em>（人们作为回应做出的____）⇄ 录音 <em>the choices I <span class="hl-swap">make with regard to them</span></em>（我针对它们做出的选择）——<strong>in response ⇄ with regard to them（作为回应 ⇄ 针对它们）</strong>。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">In the words of Epictetus</span>（用爱比克泰德的话说）= 引语开始，人名定位词落地；<span class="hl-conn">but</span> 是本题唯一也是最关键的开关：but 前 cannot control，but 后 do control——<strong>答案必在 but 后</strong>。<br>
+• <strong>口诀：题干印有 but，录音必念 but；听到 but 立即提笔，but 前的 conscious、control 全是布景。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The road to virtue, in turn, lay in understanding that destructive emotions, like anger and jealousy, are under our <span class="trap-highlight">conscious</span> control.</div>
+                            <div class="cn-line">而通往美德的道路，在于理解破坏性情绪（比如愤怒和嫉妒）都在我们有意识的控制之下。【conscious 是铺垫词，不是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They don't have to control us <span class="hl-conn">because</span> we can learn to control them.</div>
+                            <div class="cn-line">它们不必控制我们，因为我们可以学会控制它们。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In the words of <span class="signal-highlight">Epictetus</span>: "<span class="signal-highlight">external events</span> I cannot control, <span class="hl-conn">but</span> the <span class="ans-highlight">choices [Q33]</span> I <span class="hl-swap">make with regard to them</span>, I do control".</div>
+                            <div class="cn-line">用爱比克泰德的话说：“外部事件我无法控制，<strong>但</strong>我针对它们所做出的<strong>选择</strong>，我能控制。”【Q33 → choices；but 转折后出答案】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_34 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q34</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑤改写三连穿越</span>
+                    <h3 class="card-title">34 · 全然消极 wholly negative 与四连转化排比</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_全然消极wholly_negative与四连转化排比.mp3', 'Q34: 全然消极 wholly negative 与四连转化排比')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_34" onclick="handleRecBtnClick('card_34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_34" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_34"></span>
+                    <span class="rec-status-text" id="rec-status-card_34">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_34">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_34" onclick="playUserRecording('card_34')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_34')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_34')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_34')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> A <span class="signal-highlight">Stoic</span> is someone who has a <span class="hl-swap">different view</span> on <span class="signal-highlight">experiences</span> which <span class="hl-swap">others</span> would <span class="hl-swap">consider as</span> <strong>[ 34 ]</strong>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: The modern-day philosopher and writer, Nassim Nicholas Taleb, defines a <span class="signal-highlight">Stoic</span> as someone who has a <span class="hl-swap">different perspective</span> on <span class="signal-highlight">experiences</span> which <span class="hl-swap">most of us</span> would <span class="hl-swap">see as</span> wholly <span class="ans-highlight">negative [Q34]</span>; a Stoic "transforms fear into caution, pain into transformation, mistakes into initiation <span class="hl-conn">and</span> desire into undertaking"."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✓ 你做对了</strong> —— 三连替换全部穿越，答案 negative 原词收尾。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>a <span class="hl-swap">different view</span> on experiences</em>（对经历的不同看法）⇄ 录音 <em>a <span class="hl-swap">different perspective</span> on experiences</em>（对经历的不同视角）——<strong>view ⇄ perspective（看法 ⇄ 视角）</strong>；卷面 <em><span class="hl-swap">others</span></em>（别人）⇄ 录音 <em><span class="hl-swap">most of us</span></em>（我们大多数人）；卷面 <em><span class="hl-swap">consider as</span></em>（视为）⇄ 录音 <em><span class="hl-swap">see as</span></em>（看作）。<strong>三连替换意思全等。</strong><br>
+• <strong>连词信号</strong>：人名 Nassim Nicholas Taleb + <span class="hl-conn">defines ... as</span>（把……定义为）= 定义句信号，答案在句尾 wholly 之后；后面 <em>transforms fear into caution...</em> 四连排比是纯 elaboration（展开说明），无答案，稳住别慌。<br>
+• <strong>口诀：空前 consider as / see as 后必接评价词；wholly（全然地）是程度副词，提醒后面就是答案 negative。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The modern-day philosopher and writer, Nassim Nicholas Taleb, defines a <span class="signal-highlight">Stoic</span> as someone who has a <span class="hl-swap">different perspective</span> on <span class="signal-highlight">experiences</span> which <span class="hl-swap">most of us</span> would <span class="hl-swap">see as</span> wholly <span class="ans-highlight">negative [Q34]</span>;</div>
+                            <div class="cn-line">现代哲学家兼作家纳西姆·尼古拉斯·塔勒布将斯多葛者定义为：对我们大多数人会认为全然<strong>消极</strong>的经历，持有不同视角的人。【Q34 → negative；view⇄perspective / others⇄most of us / consider as⇄see as 三连替换】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> a Stoic "transforms fear into caution, pain into transformation, mistakes into initiation <span class="hl-conn">and</span> desire into undertaking".</div>
+                            <div class="cn-line">斯多葛者“化恐惧为谨慎，化痛苦为蜕变，化错误为开端，化欲望为担当”。【四连排比，无答案，稳住别慌】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_35 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q35</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑤改写三连穿越</span>
+                    <h3 class="card-title">35 · 华盛顿上演 play 戏剧激励士兵</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_华盛顿上演play戏剧激励士兵.mp3', 'Q35: 华盛顿上演 play 戏剧激励士兵')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_35" onclick="handleRecBtnClick('card_35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_35" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_35"></span>
+                    <span class="rec-status-text" id="rec-status-card_35">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_35">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_35" onclick="playUserRecording('card_35')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_35')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_35')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_35')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="signal-highlight">George Washington</span> <span class="hl-swap">organised</span> a <strong>[ 35 ]</strong> about <span class="signal-highlight">Cato</span> to <span class="hl-swap">motivate</span> his men.
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: <span class="signal-highlight">George Washington</span> was introduced to Stoicism by his neighbours at age seventeen, <span class="hl-conn">and later</span>, <span class="hl-swap">put on</span> a <span class="ans-highlight">play [Q35]</span> <span class="hl-swap">based on the life of</span> <span class="signal-highlight">Cato</span> to <span class="hl-swap">inspire</span> his men."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✓ 你做对了</strong>。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">organised</span> a ____</em>（组织了一场____）⇄ 录音 <em><span class="hl-swap">put on</span> a play</em>（上演了一出戏剧）——<strong>organised ⇄ put on（组织 ⇄ 上演）</strong>；卷面 <em><span class="hl-swap">about</span> Cato</em>（关于加图）⇄ 录音 <em><span class="hl-swap">based on the life of</span> Cato</em>（以加图的生平为蓝本）；卷面 <em>to <span class="hl-swap">motivate</span> his men</em>（激励他的部下）⇄ 录音 <em>to <span class="hl-swap">inspire</span> his men</em>（鼓舞他的部下）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">and later</span>（后来）= 时间推进信号，答案事件紧跟其后。<br>
+• <strong>口诀：George Washington + Cato 双人名定位落地后，第一个可数名词 play 就是答案。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The founding fathers of the United States were inspired by the philosophy.</div>
+                            <div class="cn-line">美国的开国元勋们都受到这门哲学的启发。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="signal-highlight">George Washington</span> was introduced to Stoicism by his neighbours at age seventeen, <span class="hl-conn">and later</span>, <span class="hl-swap">put on</span> a <span class="ans-highlight">play [Q35]</span> <span class="hl-swap">based on the life of</span> <span class="signal-highlight">Cato</span> to <span class="hl-swap">inspire</span> his men.</div>
+                            <div class="cn-line">乔治·华盛顿十七岁时由邻居引荐接触斯多葛哲学，后来他上演了一出以加图生平为蓝本的<strong>戏剧</strong>来激励他的部下。【Q35 → play；organised⇄put on / motivate⇄inspire】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Thomas Jefferson kept a copy of Seneca beside his bed.</div>
+                            <div class="cn-line">托马斯·杰斐逊在床头放着一本塞涅卡的著作。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_36 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q36</span>
+                    <span class="card-tag tag-p1">Part 4 · ②生词 + ⑦心态自我怀疑</span>
+                    <h3 class="card-title">36 · 亚当·斯密 capitalism 与 school 误写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_亚当斯密capitalism资本主义与school误写.mp3', 'Q36: 亚当·斯密 capitalism 资本主义与 school 误写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_36" onclick="handleRecBtnClick('card_36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_36" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_36"></span>
+                    <span class="rec-status-text" id="rec-status-card_36">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_36">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_36" onclick="playUserRecording('card_36')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_36')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_36')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_36')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="signal-highlight">Adam Smith</span>'s <span class="hl-swap">ideas</span> on <strong>[ 36 ]</strong> were influenced by <span class="signal-highlight">Stoicism</span>.
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: The economist, <span class="signal-highlight">Adam Smith</span>'s <span class="hl-swap">theories</span> on <span class="ans-highlight">capitalism [Q36]</span> were <span class="hl-swap">significantly influenced</span> by the <span class="signal-highlight">Stoicism</span> that he studied as a <span class="trap-highlight">schoolboy</span>, under a teacher who had translated Marcus Aurelius' works."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：听对了不敢写</strong> —— <em>capitalism</em> 明明听对了，却觉得"听力不会考这么难的词"，被后面 <em>studied as a schoolboy</em>（他学生时代研习）勾走写成 school。<strong>schoolboy 是时间状语（他还是学生时），不是答案槽。</strong><br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>Adam Smith's <span class="hl-swap">ideas</span> on ____</em>（亚当·斯密关于____的思想）⇄ 录音 <em>Adam Smith's <span class="hl-swap">theories</span> on capitalism</em>（亚当·斯密关于资本主义的理论）——<strong>ideas ⇄ theories（思想 ⇄ 理论）</strong>；卷面 <em>were influenced by Stoicism</em> ⇄ 录音 <em>were significantly influenced by the Stoicism</em>（深受斯多葛哲学影响）——几乎原词。<br>
+• <strong>连词信号</strong>：本题无转折词，靠人名 <span class="signal-highlight">Adam Smith</span> 直接定位；前置头衔 <em>The economist</em>（经济学家）= 人名预警。<br>
+• <strong>口诀：听到的原词只要语法、词性契合就敢写——剑桥专考"你以为太难"的词；a schoolboy 是一个词（男学生），别把尾音拆成 school 抢写。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The economist, <span class="signal-highlight">Adam Smith</span>'s <span class="hl-swap">theories</span> on <span class="ans-highlight">capitalism [Q36]</span> were <span class="hl-swap">significantly influenced</span> by the <span class="signal-highlight">Stoicism</span> that he studied as a <span class="trap-highlight">schoolboy</span>, under a teacher who had translated Marcus Aurelius' works.</div>
+                            <div class="cn-line">经济学家亚当·斯密关于<strong>资本主义</strong>的理论，深受他学生时代研习的斯多葛哲学影响——当时他师从一位翻译过马可·奥勒留著作的老师。【Q36 → capitalism；schoolboy 是时间状语陷阱，别写成 school】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_37 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q37</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑥审题 + 连题抢答</span>
+                    <h3 class="card-title">37 · CBT 治疗 depression 与 thinking 串题</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_治疗depression抑郁症与thinking误写.mp3', 'Q37: CBT 治疗 depression 与 thinking 串题')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_37" onclick="handleRecBtnClick('card_37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_37" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_37"></span>
+                    <span class="rec-status-text" id="rec-status-card_37">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_37">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_37" onclick="playUserRecording('card_37')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_37')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_37')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_37')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> Cognitive Behaviour Therapy (<span class="signal-highlight">CBT</span>) – the <span class="hl-swap">treatment for</span> <strong>[ 37 ]</strong> is <span class="hl-swap">based on ideas from</span> <span class="signal-highlight">Stoicism</span>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: <span class="signal-highlight">Stoicism</span> had a <span class="hl-swap">profound influence on</span> Albert Ellis, who invented <span class="signal-highlight">Cognitive Behaviour Therapy</span>, which is used to help people manage their problems by changing the way that they think and behave. It's most commonly <span class="hl-swap">used to treat</span> <span class="ans-highlight">depression [Q37]</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：两题共栖一段，串题抢答</strong> —— Q37/Q38 的答案挤在相邻两句话里。你听到下一句 <em>create our faulty thinking</em> 的 thinking，误以为 <em>treatment for thinking</em>（治疗思维）；其实 thinking 属于 Q38 句，是"要被消除的东西"之一，与 Q37 无关。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>the <span class="hl-swap">treatment for</span> ____</em>（治疗____的方法）⇄ 录音 <em>It's most commonly <span class="hl-swap">used to treat</span> depression</em>（它最常被用来治疗抑郁症）——<strong>treatment for ⇄ used to treat（治疗…的方法 ⇄ 被用来治疗）</strong>；卷面 <em><span class="hl-swap">based on ideas from</span> Stoicism</em>（基于斯多葛的思想）⇄ 录音 <em>Stoicism had a <span class="hl-swap">profound influence on</span> Albert Ellis, who invented CBT</em>（斯多葛深刻影响了创立 CBT 的埃利斯）——<strong>based on ideas from ⇄ profound influence on（基于…思想 ⇄ 深刻影响）</strong>。<br>
+• <strong>连词信号</strong>：卷面印好的缩写 <span class="signal-highlight">CBT</span> 听到全称 <em>Cognitive Behaviour Therapy</em> 立即就位；<em>most commonly</em>（最常）= 最高级提示，答案临近。<br>
+• <strong>口诀：treatment for X = used to treat X，X 必为疾病名词；treat 后的第一个名词 depression 落笔，下一句的 thinking / symptoms / behaviours 是 Q38 的词，不回头、不串行。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="signal-highlight">Stoicism</span> had a <span class="hl-swap">profound influence on</span> Albert Ellis, who invented <span class="signal-highlight">Cognitive Behaviour Therapy</span>, which is used to help people manage their problems by changing the way that they think and behave.</div>
+                            <div class="cn-line">斯多葛哲学深刻影响了阿尔伯特·埃利斯——他创立了认知行为疗法（CBT），通过改变人们的思维和行为方式来帮助他们应对问题。【profound influence on ⇄ 题干 based on ideas from】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's most commonly <span class="hl-swap">used to treat</span> <span class="ans-highlight">depression [Q37]</span>.</div>
+                            <div class="cn-line">它最常被用来治疗<strong>抑郁症</strong>。【Q37 → depression；treatment for ⇄ used to treat】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_38 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q38</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑥审题 + 并列名词陷阱</span>
+                    <h3 class="card-title">38 · 基于 logic 思考与 behaviours 陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_基于logic逻辑思考与behaviours误写.mp3', 'Q38: 基于 logic 逻辑思考与 behaviours 误写')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_38" onclick="handleRecBtnClick('card_38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_38" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_38"></span>
+                    <span class="rec-status-text" id="rec-status-card_38">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_38">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_38" onclick="playUserRecording('card_38')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_38')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_38')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_38')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> people learn to <span class="hl-swap">base their thinking on</span> <strong>[ 38 ]</strong>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: The idea is that we can take control of our lives by challenging the irrational beliefs that create our faulty <span class="trap-highlight">thinking</span>, <span class="trap-highlight">symptoms</span> and <span class="trap-highlight">behaviours</span> by using <span class="ans-highlight">logic [Q38]</span> <span class="hl-conn">instead</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：并列名词堆中抓错</strong> —— 你只听到 <em>symptoms and behaviours</em> 就写了 behave；但 <em>faulty thinking, symptoms and behaviours</em>（错误思维、症状和行为）三个并列名词全是定语从句里"要被挑战消除的东西"，真正的答案在句尾 <em>by using logic instead</em>。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">base their thinking on</span> ____</em>（把思考建立在____之上）⇄ 录音 <em><span class="hl-swap">by using</span> logic <span class="hl-swap">instead</span></em>（改用逻辑）——<strong>base A on B ⇄ use B instead（以 B 为基 ⇄ 改用 B）</strong>；instead（取而代之的是）暗示旧方式被换掉、新手段登场。<br>
+• <strong>连词信号</strong>：两个 <span class="hl-conn">by</span> 平行结构——<em>by challenging</em>（通过挑战）是手段一，<em>by using</em>（通过使用）是手段二，答案在第二个 by 之后；<span class="hl-conn">instead</span> = 替换信号，答案紧贴其前。<br>
+• <strong>口诀：A, B and C 并列名词堆整体跳过，答案在它们后面的 by doing / instead 结构里；空前要名词，behave（动词）先排除。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The idea is that we can take control of our lives by challenging the irrational beliefs that create our faulty <span class="trap-highlight">thinking</span>, <span class="trap-highlight">symptoms</span> and <span class="trap-highlight">behaviours</span> by using <span class="ans-highlight">logic [Q38]</span> <span class="hl-conn">instead</span>.</div>
+                            <div class="cn-line">其理念是：我们可以通过挑战那些造成错误思维、症状和行为的非理性信念，改用<strong>逻辑</strong>来掌控自己的生活。【Q38 → logic；thinking / symptoms / behaviours 三个并列词全是陷阱，instead 前才是答案】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_39 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q39</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑥审题 + because前置铺垫</span>
+                    <h3 class="card-title">39 · 障碍变机会 opportunity 与 setbacks 抢跑</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_障碍变机会opportunity与setbacks抢跑.mp3', 'Q39: 障碍变机会 opportunity 与 setbacks 抢跑')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_39" onclick="handleRecBtnClick('card_39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_39" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_39"></span>
+                    <span class="rec-status-text" id="rec-status-card_39">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_39">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_39" onclick="playUserRecording('card_39')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_39')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_39')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_39')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="hl-swap">In business</span>, people <span class="hl-swap">benefit from</span> Stoicism by <span class="hl-swap">identifying obstacles as</span> <strong>[ 39 ]</strong>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: Stoicism has <span class="hl-conn">also</span> become popular in the world of <span class="signal-highlight">business</span>. Stoic principles can build the resilience and state of mind required to <span class="trap-highlight">overcome setbacks</span>, <span class="hl-conn">because</span> Stoics teach <span class="hl-swap">turning</span> <span class="signal-highlight">obstacles</span> <span class="hl-swap">into</span> <span class="ans-highlight">opportunity [Q39]</span>. A lesson every business entrepreneur needs to learn."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：铺垫词抢写</strong> —— 你听懂了 <em>build the resilience and state of mind required to overcome setbacks</em>（培养克服挫折所需的韧性与心态），把 setbacks 当答案；但 <em>overcome setbacks</em>（克服挫折）正是题干 <em>identify obstacles</em> 区域的同义铺垫，<span class="hl-conn">because</span> 之后的 <em>turning obstacles into opportunity</em> 才是答案句。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>people <span class="hl-swap">benefit from</span> Stoicism</em>（人们从斯多葛中受益）⇄ 录音 <em>Stoic principles can <span class="hl-swap">build the resilience</span>...</em>（斯多葛原则能培养韧性……）——受益 ⇄ 培养能力；卷面 <em><span class="hl-swap">identifying obstacles as</span> ____</em>（把障碍看作____）⇄ 录音 <em><span class="hl-swap">turning</span> obstacles <span class="hl-swap">into</span> opportunity</em>（把障碍转化为机遇）——<strong>identify ... as ⇄ turn ... into（看作 ⇄ 变成）</strong>。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">because</span>（因为）= 原理解释信号，because 引导的从句才是答案所在；卷面定位词 <span class="signal-highlight">business</span> 与 <span class="signal-highlight">obstacles</span> 均原词出现。<br>
+• <strong>口诀：because 之前听到的名词（setbacks）只是铺垫；because / so 之后的动名词结构 turning X into Y，Y 才是答案。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Stoicism has <span class="hl-conn">also</span> become popular in the world of <span class="signal-highlight">business</span>.</div>
+                            <div class="cn-line">斯多葛哲学在商业界也流行起来。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Stoic principles can build the resilience and state of mind required to <span class="trap-highlight">overcome setbacks</span>, <span class="hl-conn">because</span> Stoics teach <span class="hl-swap">turning</span> <span class="signal-highlight">obstacles</span> <span class="hl-swap">into</span> <span class="ans-highlight">opportunity [Q39]</span>.</div>
+                            <div class="cn-line">斯多葛原则能培养克服挫折所需的韧性和心态，因为斯多葛学派教导人们把障碍转化为<strong>机遇</strong>。【Q39 → opportunity；overcome setbacks 是前置铺垫，because 后才是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A lesson every business entrepreneur needs to learn.</div>
+                            <div class="cn-line">这是每一位企业家都必须学习的一课。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_40 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q40</span>
+                    <span class="card-tag tag-p1">Part 4 · ④结构 + 答案倒置</span>
+                    <h3 class="card-title">40 · 大量 practice 练习与 brilliant 前置陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_需要大量practice练习与brilliant前置陷阱.mp3', 'Q40: 需要大量 practice 练习与 brilliant 前置陷阱')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_40" onclick="handleRecBtnClick('card_40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_40" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_40"></span>
+                    <span class="rec-status-text" id="rec-status-card_40">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_40">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_40" onclick="playUserRecording('card_40')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_40')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_40')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_40')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> It <span class="hl-swap">requires</span> <span class="hl-swap">a lot of</span> <strong>[ 40 ]</strong> <span class="hl-conn">but</span> Stoicism can help people to <span class="signal-highlight">lead a good life</span>.
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: ...thanks to its <span class="trap-highlight">brilliant</span> insights into how to <span class="signal-highlight">lead a good life</span>. ... This is not as easy as it sounds, <span class="hl-conn">and</span> will <span class="hl-swap">require</span> <span class="hl-swap">considerable</span> <span class="ans-highlight">practice [Q40]</span> – it can take a lifetime to master."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：定位后放松 + 形容词误填</strong> —— 你定位到 <em>brilliant insights into how to lead a good life</em> 就以为答案已过，随手填了形容词 brilliant；实际上卷面"需要大量____"对应的是约 15 秒后的 <em>will require considerable practice</em>——<strong>答案顺序与卷面倒置</strong>。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>It <span class="hl-swap">requires</span> <span class="hl-swap">a lot of</span> ____</em>（它需要大量____）⇄ 录音 <em>will <span class="hl-swap">require</span> <span class="hl-swap">considerable</span> practice</em>（将需要大量练习）——<strong>a lot of ⇄ considerable（大量 ⇄ 相当多的）</strong>，require 原词；卷面 <em>help people to lead a good life</em>（帮助人们过上美好生活）⇄ 录音 <em>insights into how to lead a good life</em>（对如何过上美好生活的洞见）——lead a good life 原词定位，但它是"洞见的内容"，不是答案区。<br>
+• <strong>连词信号</strong>：<em>At the very root of the thinking</em>（这种思想的根本）= 深入一层信号；<em>This is <span class="hl-conn">not</span> as easy as it sounds</em>（这知易行难）是 but 的柔性表达，答案紧跟其后。<br>
+• <strong>口诀：定位词出现 ≠ 答案已过；空格要名词，brilliant（形容词）天生出局；considerable / a great deal of / significant 都是 a lot of 的高频替换。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> I would argue that studying Stoicism is as relevant today as it was 2,000 years ago, thanks to its <span class="trap-highlight">brilliant</span> insights into how to <span class="signal-highlight">lead a good life</span>.</div>
+                            <div class="cn-line">我认为，学习斯多葛哲学在今天依然像两千年前一样有意义，因为它对如何过上美好生活提出了深刻的洞见。【brilliant 是形容词前置陷阱，名词槽不能填】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> At the very root of the thinking, there is a very simple way of living – control what you can <span class="hl-conn">and</span> accept what you can't.</div>
+                            <div class="cn-line">这种思想的核心是一种非常简单的活法——控制你能控制的，接受你不能控制的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This is <span class="hl-conn">not</span> as easy as it sounds, <span class="hl-conn">and</span> will <span class="hl-swap">require</span> <span class="hl-swap">considerable</span> <span class="ans-highlight">practice [Q40]</span> – it can take a lifetime to master.</div>
+                            <div class="cn-line">这听起来容易做起来难，需要大量的<strong>练习</strong>——可能要花一辈子才能掌握。【Q40 → practice；a lot of ⇄ considerable】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD FULL4 -->
+        <div class="slice-card" data-category="part4 full" style="border-color: rgba(192, 132, 252, 0.4);">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag" style="background: rgba(192,132,252,0.2); color: #c084fc; border: 1px solid rgba(192,132,252,0.4);">完整精听 · Part 4 全篇</span>
+                    <span class="card-tag tag-p1">全篇语流与抗断崖连贯训练</span>
+                    <h3 class="card-title">Part 4 完整录音实战盲听 (Q31 - Q40 Stoicism 斯多葛哲学讲座 · 7m05s)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" style="background: linear-gradient(135deg, #818cf8, #c084fc);" onclick="playAudio('Section_4_Full_Stoicism斯多葛哲学讲座.mp3', 'Part 4 完整录音: Stoicism 斯多葛哲学讲座')">▶ 播放完整 Part 4</button>
+                    <button class="record-card-btn" id="rec-btn-card_full4" onclick="handleRecBtnClick('card_full4')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_full4" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full4"></span>
+                    <span class="rec-status-text" id="rec-status-card_full4">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full4">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full4" onclick="playUserRecording('card_full4')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full4')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full4')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full4')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box" style="font-size: 1rem;">
+                    <strong>【完整音频实战目标】</strong>：完成 Q32/Q33/Q36/Q37/Q38/Q39/Q40 七张错题卡的精听后，播放本完整录音，拿白纸按考试节奏重新盲做一遍。重点演练：<strong>① despite 让步句句尾出答案、didn't 省略否定不换台（Q32）</strong>；<strong>② but / because 转折因果词后落笔（Q33 / Q39）</strong>；<strong>③ 难词 capitalism 听对敢写（Q36）</strong>；<strong>④ Q37/Q38 连题不串行——treat 后写疾病、instead 前写手段</strong>；<strong>⑤ lead a good life 定位后坚持到底，considerable practice 收尾（Q40）</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Part 4 官方完整录音听力原文与逐句精读翻译（100% 完整不删减） <span class="toggle-badge">默认隐藏 · 点击展开精读</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Ancient philosophy is not just about talking or lecturing, or even reading long, dense books.</div>
+                            <div class="cn-line">古代哲学并不只是清谈、讲学或阅读长篇巨著。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, it is something people have used throughout history – to solve their problems and to achieve their greatest triumphs.</div>
+                            <div class="cn-line">事实上，它是人类贯穿历史一直在使用的东西——用来解决问题、成就最伟大的胜利。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Specifically</span>, I am referring to <span class="signal-highlight">Stoicism</span>, which, in my opinion, is the most <span class="ans-highlight">practical [Q31]</span> of all philosophies and <span class="hl-conn">therefore</span> the most <span class="hl-swap">appealing</span>.</div>
+                            <div class="cn-line">具体来说，我指的是斯多葛哲学——在我看来，它是所有哲学中最实用的，因此也最吸引人。【Q31 → practical】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Stoicism was founded in Ancient Greece by Zeno of Citium in the early 3rd century BC, <span class="hl-conn">but</span> was practised by the likes of Epictetus, Cato, Seneca and Marcus Aurelius.</div>
+                            <div class="cn-line">斯多葛哲学由西提翁的芝诺于公元前三世纪初在古希腊创立，但爱比克泰德、加图、塞涅卡、马可·奥勒留等人都践行过它。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-swap">Amazingly</span>, we still <span class="hl-swap">have access to</span> these ideas, <span class="hl-conn">despite the fact that</span> the most famous Stoics <span class="hl-swap">never wrote anything down for</span> <span class="ans-highlight">publication [Q32]</span>.</div>
+                            <div class="cn-line">令人惊讶的是，我们至今仍能接触到这些思想——尽管最著名的斯多葛学派人物从未写下任何文字用于出版。【Q32 → publication】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Cato <span class="hl-conn">definitely didn't</span>.</div>
+                            <div class="cn-line">加图肯定没有。【省略否定 = 前句强调，不是新信息】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Marcus Aurelius never intended his <span class="trap-highlight">Meditations</span> to be anything but <span class="trap-highlight">personal</span>.</div>
+                            <div class="cn-line">马可·奥勒留从未打算让他的《沉思录》成为私人笔记以外的任何东西。【书名陷阱】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Seneca's letters were, well, letters <span class="hl-conn">and</span> Epictetus' thoughts come to us by way of a note-taking student.</div>
+                            <div class="cn-line">塞涅卡的书信嘛，就只是书信；爱比克泰德的思想则是通过一位做笔记的学生流传下来的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Stoic principles were based on the idea that its followers could have an unshakable happiness in this life <span class="hl-conn">and</span> the key to achieving this was virtue.</div>
+                            <div class="cn-line">斯多葛原则基于这样一个理念：追随者可以在今生获得不可动摇的幸福，而实现它的关键在于美德。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The road to virtue, in turn, lay in understanding that destructive emotions, like anger and jealousy, are under our <span class="trap-highlight">conscious</span> control.</div>
+                            <div class="cn-line">而通往美德的道路，在于理解破坏性情绪（比如愤怒和嫉妒）都在我们有意识的控制之下。【conscious 铺垫词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They don't have to control us <span class="hl-conn">because</span> we can learn to control them.</div>
+                            <div class="cn-line">它们不必控制我们，因为我们可以学会控制它们。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In the words of <span class="signal-highlight">Epictetus</span>: "<span class="signal-highlight">external events</span> I cannot control, <span class="hl-conn">but</span> the <span class="ans-highlight">choices [Q33]</span> I <span class="hl-swap">make with regard to them</span>, I do control".</div>
+                            <div class="cn-line">用爱比克泰德的话说：“外部事件我无法控制，但我针对它们所做出的选择，我能控制。”【Q33 → choices】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The modern-day philosopher and writer, Nassim Nicholas Taleb, defines a <span class="signal-highlight">Stoic</span> as someone who has a <span class="hl-swap">different perspective</span> on <span class="signal-highlight">experiences</span> which <span class="hl-swap">most of us</span> would <span class="hl-swap">see as</span> wholly <span class="ans-highlight">negative [Q34]</span>;</div>
+                            <div class="cn-line">现代哲学家兼作家纳西姆·尼古拉斯·塔勒布将斯多葛者定义为：对我们大多数人会认为全然消极的经历，持有不同视角的人。【Q34 → negative】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> a Stoic "transforms fear into caution, pain into transformation, mistakes into initiation <span class="hl-conn">and</span> desire into undertaking".</div>
+                            <div class="cn-line">斯多葛者“化恐惧为谨慎，化痛苦为蜕变，化错误为开端，化欲望为担当”。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Using this definition as a model, we can see that throughout the centuries Stoicism has been practised in more recent history by kings, presidents, artists, writers and entrepreneurs.</div>
+                            <div class="cn-line">以这个定义为参照，我们可以看到，近几个世纪以来，国王、总统、艺术家、作家和企业家都在践行斯多葛哲学。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The founding fathers of the United States were inspired by the philosophy.</div>
+                            <div class="cn-line">美国的开国元勋们都受到这门哲学的启发。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="signal-highlight">George Washington</span> was introduced to Stoicism by his neighbours at age seventeen, <span class="hl-conn">and later</span>, <span class="hl-swap">put on</span> a <span class="ans-highlight">play [Q35]</span> <span class="hl-swap">based on the life of</span> <span class="signal-highlight">Cato</span> to <span class="hl-swap">inspire</span> his men.</div>
+                            <div class="cn-line">乔治·华盛顿十七岁时由邻居引荐接触斯多葛哲学，后来他上演了一出以加图生平为蓝本的戏剧来激励他的部下。【Q35 → play】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Thomas Jefferson kept a copy of Seneca beside his bed.</div>
+                            <div class="cn-line">托马斯·杰斐逊在床头放着一本塞涅卡的著作。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Writers <span class="hl-conn">and</span> artists have <span class="hl-conn">also</span> been inspired by the Stoics.</div>
+                            <div class="cn-line">作家和艺术家们也受到斯多葛学派的启发。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Eugène Delacroix, the renowned French Romantic artist (known best for his painting Liberty Leading the People) was an ardent Stoic, referring to it as his "consoling religion".</div>
+                            <div class="cn-line">法国浪漫主义著名画家欧仁·德拉克洛瓦（以《自由引导人民》闻名）是一位热忱的斯多葛者，称其为“抚慰人心的宗教”。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The economist, <span class="signal-highlight">Adam Smith</span>'s <span class="hl-swap">theories</span> on <span class="ans-highlight">capitalism [Q36]</span> were <span class="hl-swap">significantly influenced</span> by the <span class="signal-highlight">Stoicism</span> that he studied as a <span class="trap-highlight">schoolboy</span>, under a teacher who had translated Marcus Aurelius' works.</div>
+                            <div class="cn-line">经济学家亚当·斯密关于资本主义的理论，深受他学生时代研习的斯多葛哲学影响——当时他师从一位翻译过马可·奥勒留著作的老师。【Q36 → capitalism；schoolboy 陷阱】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Today's political leaders are no different, with many finding their inspiration from the ancient texts.</div>
+                            <div class="cn-line">今天的政治领袖也不例外，许多人从这些古代典籍中汲取灵感。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Former US president Bill Clinton rereads Marcus Aurelius every single year, <span class="hl-conn">and</span> many have compared former President Obama's calm leadership style to that of Cato.</div>
+                            <div class="cn-line">美国前总统比尔·克林顿每年都重读马可·奥勒留，许多人将奥巴马总统沉着的领导风格与加图相提并论。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Wen Jiabao, the former prime minister of China, claims that Meditations is one of two books he travels with <span class="hl-conn">and</span> that he has read it more than one hundred times over the course of his life.</div>
+                            <div class="cn-line">中国前总理温家宝说，《沉思录》是他随身携带的两本书之一，一生中已读过一百多遍。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="signal-highlight">Stoicism</span> had a <span class="hl-swap">profound influence on</span> Albert Ellis, who invented <span class="signal-highlight">Cognitive Behaviour Therapy</span>, which is used to help people manage their problems by changing the way that they think and behave.</div>
+                            <div class="cn-line">斯多葛哲学深刻影响了阿尔伯特·埃利斯——他创立了认知行为疗法（CBT），通过改变人们的思维和行为方式来帮助他们应对问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's most commonly <span class="hl-swap">used to treat</span> <span class="ans-highlight">depression [Q37]</span>.</div>
+                            <div class="cn-line">它最常被用来治疗抑郁症。【Q37 → depression】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The idea is that we can take control of our lives by challenging the irrational beliefs that create our faulty <span class="trap-highlight">thinking</span>, <span class="trap-highlight">symptoms</span> and <span class="trap-highlight">behaviours</span> by using <span class="ans-highlight">logic [Q38]</span> <span class="hl-conn">instead</span>.</div>
+                            <div class="cn-line">其理念是：我们可以通过挑战那些造成错误思维、症状和行为的非理性信念，改用逻辑来掌控自己的生活。【Q38 → logic】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Stoicism has <span class="hl-conn">also</span> become popular in the world of <span class="signal-highlight">business</span>.</div>
+                            <div class="cn-line">斯多葛哲学在商业界也流行起来。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Stoic principles can build the resilience and state of mind required to <span class="trap-highlight">overcome setbacks</span>, <span class="hl-conn">because</span> Stoics teach <span class="hl-swap">turning</span> <span class="signal-highlight">obstacles</span> <span class="hl-swap">into</span> <span class="ans-highlight">opportunity [Q39]</span>.</div>
+                            <div class="cn-line">斯多葛原则能培养克服挫折所需的韧性和心态，因为斯多葛学派教导人们把障碍转化为机遇。【Q39 → opportunity】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A lesson every business entrepreneur needs to learn.</div>
+                            <div class="cn-line">这是每一位企业家都必须学习的一课。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> I would argue that studying Stoicism is as relevant today as it was 2,000 years ago, thanks to its <span class="trap-highlight">brilliant</span> insights into how to <span class="signal-highlight">lead a good life</span>.</div>
+                            <div class="cn-line">我认为，学习斯多葛哲学在今天依然像两千年前一样有意义，因为它对如何过上美好生活提出了深刻的洞见。【brilliant 形容词陷阱】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> At the very root of the thinking, there is a very simple way of living – control what you can <span class="hl-conn">and</span> accept what you can't.</div>
+                            <div class="cn-line">这种思想的核心是一种非常简单的活法——控制你能控制的，接受你不能控制的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This is <span class="hl-conn">not</span> as easy as it sounds, <span class="hl-conn">and</span> will <span class="hl-swap">require</span> <span class="hl-swap">considerable</span> <span class="ans-highlight">practice [Q40]</span> – it can take a lifetime to master.</div>
+                            <div class="cn-line">这听起来容易做起来难，需要大量的练习——可能要花一辈子才能掌握。【Q40 → practice】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The Stoics <span class="hl-conn">also</span> believed the most important foundation for a good and happy life is <span class="hl-conn">not</span> money, fame, power or pleasure, <span class="hl-conn">but</span> having a disciplined and principled character – something which seems to resonate with many people today.</div>
+                            <div class="cn-line">斯多葛学派还认为，美好幸福生活最重要的根基不是金钱、名望、权力或享乐，而是拥有自律而有原则的品格——这一点似乎引起了今天许多人的共鸣。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>剑桥雅思 16 Test 1 听力 Part 1 核心考点切片系统 · 雅思听力磨耳朵强化工程</p>
+        <p>剑桥雅思 16 Test 1 听力 Part 1 + Part 4 核心考点切片系统 · 雅思听力磨耳朵强化工程</p>
     </footer>
 </div>
 
@@ -1459,15 +2316,28 @@
     const nowPlayingText = document.getElementById('now-playing-text');
     let isLooping = false;
 
+    const audioBlobCache = {};
+
     function playAudio(filename, title) {
         if (!mainAudio) return;
-        mainAudio.src = filename;
-        mainAudio.play().then(() => {
-            nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
-        }).catch(err => {
-            console.error("Playback failed:", err);
-            nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
-        });
+        const startPlay = (src) => {
+            mainAudio.src = src;
+            mainAudio.loop = isLooping;
+            mainAudio.play().then(() => {
+                nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
+            }).catch(err => {
+                console.error("Playback failed:", err);
+                nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+            });
+        };
+        if (audioBlobCache[filename]) { startPlay(audioBlobCache[filename]); return; }
+        fetch(filename).then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.blob();
+        }).then(b => {
+            audioBlobCache[filename] = URL.createObjectURL(b);
+            startPlay(audioBlobCache[filename]);
+        }).catch(() => startPlay(filename));
     }
 
     function toggleLoop(btn) {
@@ -1501,10 +2371,10 @@
 
         const cards = document.querySelectorAll('.slice-card');
         cards.forEach(card => {
-            const cardCat = card.getAttribute('data-category');
+            const cardCat = (card.getAttribute('data-category') || '').split(/\s+/);
             if (category === 'all') {
                 card.style.display = 'block';
-            } else if (cardCat === category) {
+            } else if (cardCat.includes(category)) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';

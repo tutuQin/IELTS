@@ -1,4 +1,4 @@
-# 📊 剑桥雅思 17 Test 1 听力 Part 1 复盘表（基于七坑表 + 3+2/9大陷阱体系）
+# 📊 剑桥雅思 17 Test 1 听力 Part 1 + Part 4 复盘表（基于七坑表 + 3+2/9大陷阱体系）
 
 > 🎧 **音频切片点播台直达**：[C17T1_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/C17T1_错题切片点播台.html) ｜ 📂 [切片总目录](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/切片/index.html) ｜ 📊 [剑16 Test 4 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥16_Test4_听力Part1_七坑与3+2复盘汇总表.md)
 >
@@ -11,7 +11,7 @@
 
 ---
 
-## 篇章：Part 1（Q1 - Q10）Buckworth Conservation Group 环保志愿者组织咨询
+## 篇章一：Part 1（Q1 - Q10）Buckworth Conservation Group 环保志愿者组织咨询
 
 *卷面要求：Write **ONE WORD AND/OR A NUMBER** for each answer.*  
 *本次模考战绩：**4 / 10**（答对：Q3, Q6, Q7, Q10；失分：Q1, Q2, Q4, Q5, Q8, Q9）*
@@ -139,3 +139,100 @@
 4. beginners (初学者，双写n，复数加s)
 5. spoons (木勺，注意复数尾音s)
 ```
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）Labyrinths 迷径讲座
+
+*卷面要求：Write **ONE WORD ONLY** for each answer.*  
+*本次战绩：**6 / 10**（答对：Q31, Q33, Q34, Q35, Q36, Q37；错题：Q32, Q38, Q39, Q40）*  
+*🎧 配套切片：[C17T1 点播台 · Part 4 区](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/C17T1_错题切片点播台.html)*  
+*录音来源：本地已有整套 `full_test1.mp3`（1728.7s）；Part 4 导语 1272.6s → 正文 1345.3s → 结束 1647.2s，整段切片 5m02s。*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | puzzle | **puzzle** | ✓ | **⑤改写（种类）**<br>【**a type of ⇄ a kind of**】<br>(`P3改写 / A2改写`) | 原文: *"In modern times, the word labyrinth has taken on a different meaning and is often used as a synonym for a maze. A maze is quite different as it is a kind of puzzle with an intricate network of paths."*<br>(卷面: *Maze are a type of [ 31 ].*) | **下定义的空抓得准（✓）**：答案在 *a kind of ___* 的介词后。改写只有一处：a type of ⇄ a kind of（种类 ⇄ 一种）。你没有在 synonym / different meaning 上停笔，也没被 intricate network of paths 带走。这类"下定义"的空，答案永远在系动词或 kind/type of 后面。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/31_Q31_迷宫是puzzle谜题与pattern干扰.mp3) |
+| **Q32** | pattern | **logic** | ✗ | **③句意** + **⑦词性**<br>【**pattern 是 logic 的宾语，不是答案**】<br>(`P3改写 / A2改写`) | 原文: *"Entering a maze usually involves getting lost a few times before using logic to work out the pattern and find your way to the centre and then out again."*<br>(卷面: *[ 32 ] is needed to navigate through a maze.*) | **并列/动宾结构里抓错了项**：<br>1. **空格要"工具"，你填了"对象"**：卷面 `___ is needed`（作主语，问必需的东西），原文 *using **logic** to work out the **pattern***——logic 是手段，pattern 是被找出的结果。<br>2. **before 是条件门铃**：*before using logic* = 在用逻辑之前必须先迷路几次，正好对应卷面的 is needed。<br>3. **改写**：navigate through ⇄ find your way / entering a maze（穿行 ⇄ 找到路）。<br>4. **可迁移动作**：听到"动词 + A + 动词 + B"两个名词连着出现，先问哪一个能被 using / with 支配。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/32_Q32_走迷宫需要logic逻辑与pattern干扰.mp3) |
+| **Q33** | confusion | **confusion** | ✓ | **⑤改写（双替换）**<br>【**derived from ⇄ come from**】<br>(`P3改写 / A1原词`) | 原文: *"The word maze is believed to come from a Scandinavian word for a state of confusion. This is where the word amazing comes from."*<br>(卷面: *the word 'maze' is derived from a word meaning a feeling of [ 33 ].*) | **双改写顶住了（✓）**：derived from ⇄ come from（源自 ⇄ 来自）；a feeling of ⇄ a state of（感觉 ⇄ 状态）。你没有在 Scandinavian 上停笔——那是"来源语言"，不是"词义"。空格问 meaning，只能填抽象名词。 | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/33_Q33_maze源自表示confusion混乱的词.mp3) |
+| **Q34** | meditation | **meditation** | ✓ | **⑤改写 + ④并列**<br>【**and prayer 前就是答案**】<br>(`P2逻辑词 / A1原词`) | 原文: *"Labyrinths are thought to encourage a feeling of calm and have been used as a meditation and prayer tool in many cultures over many centuries."*<br>(卷面: *they have frequently been used in [ 34 ] and prayer.*) | **并列结构直接给答案（✓）**：卷面 *and prayer* 是原文 *a meditation and prayer tool* 的原词，答案就在 and 左边一格。改写：frequently ⇄ over many centuries（经常 ⇄ 数百年间）；used in ___ and prayer ⇄ used as a meditation and prayer tool。你没有被前面的 feeling of calm 带走——那是感受词，不是用途。 | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/34_Q34_迷径用于meditation冥想与祈祷.mp3) |
+| **Q35** | stone | **stone** | ✓ | **⑤改写（动词短语）**<br>【**一串地名不是答案**】<br>(`P3改写 / A1原词`) | 原文: *"The earliest examples of the labyrinth spiral pattern have been found carved into stone from Sardinia to Scandinavia, from Arizona to India to Africa."*<br>(卷面: *Ancient carving on [ 35 ] have been found across many cultures.*) | **材质抓得稳（✓）**：Ancient ⇄ earliest（古代 ⇄ 最早）；carving on ⇄ carved into（刻在……上 ⇄ 被刻进）。答案后拖了一长串地名（Sardinia / Scandinavia / Arizona / India / Africa），你没有把地名误当答案——它们是 from…to… 的范围状语。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/35_Q35_古代雕刻在stone石头上.mp3) |
+| **Q36** | coins | **coins** | ✓ | **⑤改写（主语换位）**<br>【**baskets 是上一句的干扰**】<br>(`P3改写 / A1原词`) | 原文: *"The Native American Pima tribe wove baskets with a circular labyrinth design… In ancient Greece, the labyrinth spiral was used on coins around 4,000 years ago."*<br>(卷面: *Ancient Greeks used the symbol on [ 36 ].*) | **对比对象锁得准（✓）**：Ancient Greeks（主语）⇄ In ancient Greece（地点状语）——主语与状语换位；used the symbol（主动）⇄ was used on（被动）。上一句 Pima 的 baskets 是很近的干扰，你没有顺延下来，说明"先锁族群、再听载体"的动作已经成型。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/36_Q36_古希腊人把符号用在coins硬币上.mp3) |
+| **Q37** | tree | **tree** | ✓ | **⑤改写 ×4 + ③句意**<br>【**一句四处改写**】<br>(`P3改写 / A2改写`) | 原文: *"Eleven examples of turf labyrinths survive today, including the largest one at Saffron Walden, England, which used to have a large tree in the middle of it."*<br>(卷面: *The largest surviving example of a turf labyrinth once had a big [ 37 ] at its centre.*) | **改写密度最高的一题顶住了（✓）**：surviving ⇄ survive today；once had ⇄ used to have；big ⇄ large；at its centre ⇄ in the middle of it——四个替换叠在同一句。你没有在 Saffron Walden 这个地名上断流，把 which 从句听完了，这是本套最值钱的一次稳定发挥。 | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/37_Q37_最大草皮迷径中央曾有big_tree大树.mp3) |
+| **Q38** | （未写出 / 只听到 slower） | **breathing** | ✗ | **③句意 + ⑤结果⇄过程**<br>【**reduce rate ⇄ slower**】<br>(`P3改写 / A2改写`) | 原文: *"…there are those who believe in its emotional and physical benefits, which include slower breathing, and a restored sense of balance and perspective."*<br>(卷面: *walking a maze can reduce a person's [ 38 ] rate.*) | **失分不在声音，在换算**：<br>1. **题干是结果，原文是状态**：reduce a person's ___ rate（降低……频率）⇄ slower breathing（呼吸更慢）。必须把 slower 反推成"频率下降"，才能对上 rate。<br>2. **清单入口**：which include 后面是三项清单（slower breathing / balance / perspective），第一项就是答案。<br>3. **固定搭配**：breathing rate 是搭配，单听 slower 写不出答案。<br>4. **可迁移动作**：听到比较级（slower / higher / lower），立刻问"它对应哪个名词、哪个动词"——slower breathing = breathing rate 下降。 | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/38_Q38_降低breathing呼吸频率与slower改写.mp3) |
+| **Q39** | （空 / 还在想 38） | **paper** | ✗ | **③句意 + ⑤材质前置**<br>【**答案在名词之前**】<br>(`P3改写 / A1原词`) | 原文: *"In some hospitals, patients who can't walk can have a paper finger labyrinth brought to their bed."*<br>(卷面: *Patients who can't walk can use 'finger labyrinths' made from [ 39 ].*) | **答案语序被反转**：<br>1. **卷面后置、原文前置**：made from ___ ⇄ *a **paper** finger labyrinth*——材质放在名词前作定语，答案出现在 finger labyrinth **之前**。你如果等 finger labyrinth 之后再找"made from"，就永远等不到。<br>2. **节奏债**：Q38 与 Q39 之间只隔 visitors / doctors 两句（约 8 秒），你在 38 纠结时 paper 已经念完。军规：一题超过 2 秒没结论就放弃、笔尖下移。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/39_Q39_不能走路的病人用paper纸质迷径.mp3) |
+| **Q40** | （空 / 听到 Alzheimer's 已错过） | **anxiety** | ✗ | **③句意 + ④例证结构**<br>【**答案在专有名词之前三个词**】<br>(`P2逻辑词 / A2改写`) | 原文: *"…there are dozens of small-scale studies which support claims about the benefits of labyrinths. For example, one study found that walking a labyrinth provided short-term calming, relaxation, and relief from anxiety for Alzheimer's patients."*<br>(卷面: *Research has shown that Alzheimer's sufferers experience less [ 40 ].*) | **最典型的一次"等名词等到答案过期"**：<br>1. **答案位置**：anxiety 在 Alzheimer's patients **之前三个词**。你等听到 Alzheimer's 才确认"这题到了"，答案已经过去。<br>2. **例证结构规律**：For example 之后，"结论词串 + 例子名"。结论是 calming / relaxation / relief from anxiety，例子名是 Alzheimer's patients——**先抓结论，专有名词只是尾巴**。<br>3. **并列三项**：calming, relaxation, **and** relief from anxiety，答案在 and 之后的最后一项。<br>4. **改写**：experience less ⇄ relief from（经历更少 ⇄ 从……中缓解，正反说）；Research has shown ⇄ studies / one study found。 | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T1_错题音频切片/40_Q40_阿尔茨海默患者焦虑anxiety减轻.mp3) |
+
+---
+
+### Part 4 四道错题的两条病根（Q32 / Q38 / Q39 / Q40）
+
+```text
+               ┌── Q32: using [logic] to work out the [pattern]
+               │        └─► 空格问"工具"，抓了"对象"
+               │
+Part 4 崩盘链   ├── Q38: benefits, which include [slower breathing]
+               │        └─► 卷面 reduce … rate，没把 slower 换算成"频率下降"
+               │
+               ├── Q39: a [paper] finger labyrinth
+               │        └─► 卷面 made from ___ 在后，原文材质在名词前 ──► 还在想 38，整句过去
+               │
+               └── Q40: … and relief from [anxiety] for Alzheimer's patients
+                        └─► 等专有名词才反应，答案在它前面三个词
+```
+
+#### 病根 1：并列/清单结构里抓错项（Q32 / Q38 / Q40）
+
+这三道题的答案都在**并列或清单结构**里，而且都不是"最响的那个词"：
+
+| 题 | 答案 | 你抓的词 | 结构 | 判据 |
+| :--- | :--- | :--- | :--- | :--- |
+| Q32 | logic | pattern | using A to work out B | 空格在句首作主语，问"工具"；B 是结果 |
+| Q38 | breathing | （slower） | which include A, and B | 清单第一项；slower 是修饰语不是名词 |
+| Q40 | anxiety | （Alzheimer's） | calming, relaxation, and relief from A | 三项并列的最后一项 |
+
+**统一军规**：听到 `using…to…` / `which include` / `A, B, and C` 三种结构，立刻在草稿上画一个逗号序列，**答案永远落在"最后一个并列项"或"介词/动名词后的名词"**，不是紧跟其后的专有名词。
+
+#### 病根 2：答案语序与题干相反（Q38 / Q39 / Q40）
+
+这三题都有一个共同点：**卷面的语序和原文相反**。
+
+- Q38 卷面 `reduce a person's ___ rate`（动词 + 名词），原文 `slower breathing`（形容词 + 名词）——结果 ⇄ 状态；
+- Q39 卷面 `made from ___`（材质后置），原文 `a paper finger labyrinth`（材质前置）；
+- Q40 卷面 `Alzheimer's sufferers experience less ___`（人 + 感受），原文 `relief from anxiety for Alzheimer's patients`（感受 + 人）。
+
+**统一军规**：**不要把卷面的语序带进耳朵**。听到题干词（patients / Alzheimer's / rate）时，先问"和它搭配的那个名词在哪一侧"——尤其当题干把专有名词放前面时，答案通常在它前面。
+
+---
+
+### Part 4 改写对沉淀（本次新增 18 对）
+
+| # | 卷面（题干） | 原文（录音） | 改写类型 | 中文对照 |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | a type of | a kind of | 同义短语 | 一种 ⇄ 一类 |
+| 2 | navigate through | find your way / entering | 动词短语 ⇄ 动作 | 穿行 ⇄ 找到路、进入 |
+| 3 | is needed | before using | 结果 ⇄ 条件 | 是必需的 ⇄ 在……之前要用 |
+| 4 | derived from | come from | 动词短语 | 源自 ⇄ 来自 |
+| 5 | a feeling of | a state of | 名词替换 | 感觉 ⇄ 状态 |
+| 6 | frequently | over many centuries | 频率 ⇄ 时间跨度 | 经常 ⇄ 数百年间 |
+| 7 | used in ___ and prayer | used as a meditation and prayer tool | 介词结构改写 | 用于冥想与祈祷 ⇄ 作为冥想与祈祷的工具 |
+| 8 | Ancient | earliest | 同义形容词 | 古代的 ⇄ 最早的 |
+| 9 | carving on | carved into | 介词替换 | 刻在……上 ⇄ 被刻进 |
+| 10 | Ancient Greeks used the symbol on | In ancient Greece, the spiral was used on | 主语 ⇄ 状语 + 主被动 | 古希腊人用符号 ⇄ 在古希腊，螺旋被用于 |
+| 11 | surviving | survive today | 分词 ⇄ 谓语 | 现存的 ⇄ 今天仍存有 |
+| 12 | once had | used to have | 时态改写 | 曾经有 ⇄ 过去曾有 |
+| 13 | big | large | 同义形容词 | 大 ⇄ 大 |
+| 14 | at its centre | in the middle of it | 介词短语 | 在它中央 ⇄ 在它中间 |
+| 15 | reduce a person's ___ rate | slower breathing | 结果 ⇄ 状态 | 降低呼吸频率 ⇄ 呼吸更慢 |
+| 16 | made from ___ | a paper finger labyrinth | 材质后置 ⇄ 前置定语 | 由纸制成 ⇄ 纸质的手指迷径 |
+| 17 | experience less | relief from | 正话反说 | 经历更少 ⇄ 从……中缓解 |
+| 18 | Research has shown | studies / one study found | 名词 ⇄ 具体研究 | 研究表明 ⇄ 一项研究发现 |
+
+---
+
+### Part 4 四步精练（本套专属）
+
+1. **盲听做题**：直接播 `Section_4_Full_Labyrinths`（5m02s），一次听到底，只写 Q32/38/39/40 四个错题空。
+2. **定位句单独听**：Q32 从 `Entering a maze usually involves`、Q38 从 `Some believe that walking a labyrinth`、Q39 从 `In some hospitals`、Q40 从 `For example, one study found` 起——每段只听 6-8 秒，训练"定位词一落地先悬笔、等并列项或介词宾语"。
+3. **并列清单专项**：把 `using logic to work out the pattern`、`which include slower breathing, and a restored sense`、`calming, relaxation, and relief from anxiety` 三句抽出来，每句只问自己"三个名词里哪个是空格"，练到能在 1 秒内定位并列末项。
+4. **专有名词抢答训练（Q40）**：把 Q40 切片倒着听——先记住 Alzheimer's patients 的位置，再往前数三个词确认 anxiety，重复 5 遍，建立"结论词在前、例子名在后"的条件反射。
+

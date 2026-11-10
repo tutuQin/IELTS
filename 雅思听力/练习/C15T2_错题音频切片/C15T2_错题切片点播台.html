@@ -628,7 +628,7 @@
 <div class="container">
     <div class="nav-back-bar">
         <a href="../切片/index.html" class="nav-link">📂 返回切片总目录 (Index)</a>
-        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 15 · Test 2 Part 1 精听点播台</span>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 15 · Test 2 Part 1 + Part 4 精听点播台</span>
         <div style="display: flex; gap: 14px;">
             <a href="../剑桥15_Test2_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 题型错因复盘表 ➔</a>
             <a href="../C15T1_错题音频切片/C15T1_错题切片点播台.html" class="nav-link">前往 剑15 T1 切片 ➔</a>
@@ -636,8 +636,8 @@
     </div>
 
     <header>
-        <h1>剑桥雅思 15 Test 2 Part 1 错题切片点播台</h1>
-        <p>🎯 Festival Information 小镇艺术节信息咨询 · 答案句精准切片 · 破除认知死锁与预判固化</p>
+        <h1>剑桥雅思 15 Test 2 Part 1 + Part 4 错题切片点播台</h1>
+        <p>🎯 Part 1 Festival Information 艺术节咨询 (Q1-Q10) ｜ Part 4 莫桑比克农业项目讲座 Agricultural programme in Mozambique (Q31-Q40) · 答案句精准切片 · 破除认知死锁与预判固化</p>
     </header>
 
     <!-- Sticky Audio Player -->
@@ -688,10 +688,10 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
-        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (4)</button>
-        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (6)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (22)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (9)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (11)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">完整音频 (2)</button>
     </div>
 
     <!-- Slice List -->
@@ -1313,10 +1313,641 @@
             </div>
         </div>
 
+        <!-- ======== PART 4 SECTION DIVIDER ======== -->
+        <div class="tips-panel">
+            <div class="tips-title">🌾 Part 4 · Agricultural programme in Mozambique（Q31 - Q40）学术讲座切片 · 战报 10 题对 5 错 5</div>
+            <div style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.9;">
+                讲座三段结构：<strong>① 项目缘起</strong>（卖木炭不可持续 → 用水才是出路）→ <strong>② 组织与物资</strong>（Q31 灌溉 / Q32 妇女主力 / Q33 铁丝 / Q34 种子 / Q35 立柱："项目给什么 vs 农民给什么"是本段主线）→ <strong>③ 发展与教训</strong>（Q36 运输 / Q37 保鲜 / Q38 养鱼 / Q39 养蜂 / Q40 设计阶段）。<br>
+                五道错题暴露三大病根：<strong>头衔后置陷阱</strong>（Q38 破折号后的 protein 是对 fish 的评价，不是答案）、<strong>心态余震</strong>（Q39 被 Q38 失利波及，答案 bees 入耳时大脑空白）、<strong>收尾聚焦信号丢失</strong>（Q40 的 however + especially 双重强调滑过）。另有 Q32 把"合作方 government"当"干活主力"、Q33 把从句词 where 填进物资坑。<br>
+                <strong>讲座跟读提示：</strong>Part 4 是独白无对话轮次，信息密度高，建议先 0.8x 盲听每张卡片，再 1.0x 跟读。
+            </div>
+        </div>
+
+        <!-- CARD 31: Q31 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q31</span>
+                    <span class="card-tag tag-p1">⑤改写识别成功</span>
+                    <h3 class="card-title">灌溉 irrigation · 主优先级改写一次对齐</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_灌溉系统irrigation主优先级改写.mp3', 'Q31: irrigation 灌溉')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_31" onclick="handleRecBtnClick('card_31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_31" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_31"></span>
+                    <span class="rec-status-text" id="rec-status-card_31">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_31">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_31" onclick="playUserRecording('card_31')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_31')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_31')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_31')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "To support agriculture in this dry region, the programme focused primarily on making use of existing water resources from the Limpopo River by setting up systems of <span class="ans-highlight">irrigation</span>, which would provide a dependable water supply for crops and animals."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 / A2 改写答案）。卷面 <em>31 ____ was seen as the main priority to ensure the supply of water</em>，录音 <em>the programme <strong>focused primarily on</strong>... setting up systems of <strong>irrigation</strong></em> —— <em>main priority = focused primarily on</em> 改写对齐成功；后半句 <em>which would provide a dependable water supply</em> 正好对应卷面 <em>to ensure the supply of water</em>，双重验证。讲座开场就进入战斗状态，开门红稳。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> To support agriculture in this dry region, the programme focused primarily on making use of existing water resources from the Limpopo River by setting up systems of <span class="ans-highlight">irrigation</span>, which would provide a dependable water supply for crops and animals.</div>
+                            <div class="cn-line">为了支持这一干旱地区的农业，项目主要聚焦于利用林波波河的现有水资源，<strong>建立灌溉系统</strong>，为作物和牲畜提供可靠的水源。【Q31 答案句 → irrigation】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 32: Q32 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q32</span>
+                    <span class="card-tag tag-p1">②定位错位 + 干扰主体抢跑</span>
+                    <h3 class="card-title">政府是合作方不是干活的人 · women 才是主力</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_妇女主力women与政府government干扰.mp3', 'Q32: women 妇女')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_32" onclick="handleRecBtnClick('card_32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_32" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_32"></span>
+                    <span class="rec-status-text" id="rec-status-card_32">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_32">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_32" onclick="playUserRecording('card_32')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_32')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_32')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_32')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "The programme worked closely with the district <span class="trap-highlight">government</span> in order to find the best way of implementing this... it was notable that in general, <span class="ans-highlight">women</span> formed the majority of the workforce."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（②定位 + ③句意 + T3 原词陷阱）。卷面 <em>Most of the work organised by farmers' associations was done by 32 ____</em>，答案 <strong>women</strong>。<br>你的路径：听到"项目与地区<strong>政府</strong>密切合作寻找最佳落实方式"，结合前面的 water management（卷面分组标题词），脑补出"通过政府组织管理水源"就填了 government。<strong>但卷面问的是"活儿是谁干的"，不是"跟谁合作的"</strong> —— government 在句子里只是"合作方"，真正的答案在两句之后：<em>it was notable that in general, <strong>women</strong> formed the majority of the workforce</em>（值得注意的是，总体上妇女构成了劳动力的大多数）。<br><strong>两个破绽本可拦住：</strong>① 卷面 <em>was done by ____</em> 的被动语态 = 录音 <em>formed the majority of the workforce</em> 的主动描述，都指向"干活的人"；② 你写的 government 出现在<strong>定位句之前</strong>，而 32 题的定位词（farmers' associations / work）在那之后才出现——答案不可能在定位词之前。<br><strong>防坑口诀：先等定位词（associations / workforce / done by）落地，再看"谁干活"；合作方、出资方、批准方都不是干活的人。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The programme worked closely with the district <span class="trap-highlight">government</span> in order to find the best way of implementing this. The region already had one farmers' association, and it was decided to set up two more of these.</div>
+                            <div class="cn-line">项目与地区<strong>政府</strong>（干扰词：只是合作方，不是 32 题答案）密切合作，寻找落实的最佳方式。该地区原本有一个农民协会，又决定再成立两个。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These associations planned and carried out activities including water management, livestock breeding and agriculture, and it was notable that in general, <span class="ans-highlight">women</span> formed the majority of the workforce.</div>
+                            <div class="cn-line">这些协会规划并实施了包括水资源管理、畜牧养殖和农业在内的活动，<strong>值得注意的是，总体上妇女构成了劳动力的大多数</strong>。【Q32 答案句 → women】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 33: Q33 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q33</span>
+                    <span class="card-tag tag-p1">③句意 + but 转折后才是答案</span>
+                    <h3 class="card-title">where 是定语从句残留 · but 后的 wire 才是答案</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_围栏铁丝wire与where从句残留.mp3', 'Q33: wire(s) 铁丝')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_33" onclick="handleRecBtnClick('card_33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_33" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_33"></span>
+                    <span class="rec-status-text" id="rec-status-card_33">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_33">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_33" onclick="playUserRecording('card_33')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_33')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_33')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_33')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "It was decided that in order to keep the crops safe from animals, both wild and domestic, special areas should be fenced off <span class="trap-highlight">where</span> the crops could be grown. The community was responsible for creating these fences, <span class="signal-highlight">but</span> the programme provided the necessary <span class="ans-highlight">wire</span> for making them."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + 单词不熟）。卷面 <em>The programme provided – 33 ____ for the fences</em>，答案 <strong>wire</strong>（铁丝）。<br>你的路径：定位到了，但句意没吃透，最后写了 <strong>where</strong>。你抓到的 where 来自第一句 <em>special areas should be fenced off <strong>where</strong> the crops could be grown</em>（圈出可以种作物的特殊区域）—— 这里的 where 是定语从句连接词，"圈地"是背景交代，不是"提供了什么物资"。<br><strong>真正的答案句在 but 之后：</strong><em>The community was responsible for creating these fences, <strong>but</strong> the programme provided the necessary <strong>wire</strong> for making them</em> —— 社区负责"出力建围栏"，但项目提供的物资是铁丝。<em>provided the necessary ____ for making them</em> 与卷面 <em>provided ____ for the fences</em> 几乎逐词对应。<br><strong>防坑口诀：卷面空格在 "provided – ____" 结构里，答案必然是个"物资名词"；where / which / that 这类从句词永远填不进 provided 后面的坑。听到 but 前先别动笔 —— 社区建围栏是"人力"，but 后的 wire 才是"项目给的物资"。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It was decided that in order to keep the crops safe from animals, both wild and domestic, special areas should be fenced off where the crops could be grown. The community was responsible for creating these fences, <span class="signal-highlight">but</span> the programme provided the necessary <span class="ans-highlight">wire</span> for making them.</div>
+                            <div class="cn-line">决定圈出特殊区域来保护作物免受野生动物和家畜的侵害。社区负责修建这些围栏，<strong>但</strong>项目提供了制作围栏所需的<strong>铁丝</strong>。【Q33 答案句 → wire；where 只是定语从句词】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 34: Q34 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q34</span>
+                    <span class="card-tag tag-p1">⑤改写识别成功</span>
+                    <h3 class="card-title">适栽作物种子 seeds · provided 结构二连击</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_适栽作物种子seeds.mp3', 'Q34: seed(s) 种子')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_34" onclick="handleRecBtnClick('card_34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_34" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_34"></span>
+                    <span class="rec-status-text" id="rec-status-card_34">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_34">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_34" onclick="playUserRecording('card_34')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_34')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_34')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_34')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "The land was dug, so that vegetables and cereals <span class="signal-highlight">appropriate to the climate</span> could be grown, and the programme provided the necessary <span class="ans-highlight">seeds</span> for this."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 / A2 改写答案）。卷面 <em>provided – 34 ____ for suitable crops</em>，录音 <em>vegetables and cereals <strong>appropriate to the climate</strong></em> —— <em>suitable crops = appropriate to the climate</em>（改写对齐），<em>the programme provided the necessary <strong>seeds</strong> for this</em>。<br>Q33 刚出现过 <em>provided the necessary wire</em>，这次 <em>provided the necessary seeds</em> 同款结构，你完成二连击。注意空格后面给的 pumps（水泵）是"打水用的"，不对应 crops，别被并列结构带偏。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Once the area had been fenced off, it could be cultivated. The land was dug, so that vegetables and cereals <span class="signal-highlight">appropriate to the climate</span> could be grown, and the programme provided the necessary <span class="ans-highlight">seeds</span> for this.</div>
+                            <div class="cn-line">围栏圈好后土地就可以耕种了。翻好地，种上<strong>适合当地气候</strong>的蔬菜和谷物，项目为此提供了所需的<strong>种子</strong>。【Q34 答案句 → seeds】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 35: Q35 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q35</span>
+                    <span class="card-tag tag-p1">④楚河汉界划分成功</span>
+                    <h3 class="card-title">立柱 posts · 项目给 wire、农民给 posts 的对照题</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_农民自备立柱posts.mp3', 'Q35: posts 立柱')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_35" onclick="handleRecBtnClick('card_35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_35" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_35"></span>
+                    <span class="rec-status-text" id="rec-status-card_35">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_35">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_35" onclick="playUserRecording('card_35')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_35')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_35')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_35')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "However, the <span class="signal-highlight">labour was all provided by local people</span>, and they also provided and put up the <span class="ans-highlight">posts</span> that supported the fences around the fields."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（④对比结构 + ⑤改写）。卷面 <em>The farmers provided – labour – 35 ____ for the fences on their land</em>，录音 <em><strong>However</strong>, the labour was all provided by local people, and they also provided and put up the <strong>posts</strong> that supported the fences</em>。<br>However 换边信号你抓住了：前一句是"项目提供水泵"，这句换成"农民提供劳动力和<strong>立柱</strong>"。<em>supported the fences = for the fences</em>，<em>local people = farmers</em>，双向改写都对齐。Q33（项目给 wire）与 Q35（农民给 posts）是本套最典型的一组对照题，你两边都没混，防线稳固。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The programme also provided pumps so that water could be brought from the river in pipes to the fields. However, the <span class="signal-highlight">labour was all provided by local people</span>, and they also provided and put up the <span class="ans-highlight">posts</span> that supported the fences around the fields.</div>
+                            <div class="cn-line">项目还提供了水泵，把河水通过管道送到田里。<strong>然而</strong>，劳动力全部由当地人提供，他们还提供并竖起了支撑田边围栏的<strong>立柱</strong>。【Q35 答案句 → posts】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 36: Q36 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q36</span>
+                    <span class="card-tag tag-p1">⑤否定改写识别成功</span>
+                    <h3 class="card-title">运输 transport · lack of 否定改写稳稳拿下</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_运输缺失transport否定改写.mp3', 'Q36: transport 运输')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_36" onclick="handleRecBtnClick('card_36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_36" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_36"></span>
+                    <span class="rec-status-text" id="rec-status-card_36">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_36">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_36" onclick="playUserRecording('card_36')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_36')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_36')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_36')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "However, getting the produce to places where it could be marketed was sometimes a problem, as the farmers <span class="signal-highlight">did not have access to</span> <span class="ans-highlight">transport</span>, and this resulted in large amounts of produce, especially vegetables, being spoiled."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 / 否定转换）。卷面 <em>The marketing of produce was sometimes difficult due to lack of 36 ____</em>，录音 <em>getting the produce to places where it could be marketed was sometimes a problem, as the farmers <strong>did not have access to transport</strong></em>。<br>三重改写你全部对齐：① <em>getting the produce to market = marketing</em>；② <em>difficult due to lack of = did not have access to</em>（卷面肯定句式 → 录音否定句式）；③ 答案 <strong>transport</strong>。这句是本套 Part 4 最长的改写链，你完整走通，含金量最高的 1 分。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> However, getting the produce to places where it could be marketed was sometimes a problem, as the farmers <span class="signal-highlight">did not have access to</span> <span class="ans-highlight">transport</span>, and this resulted in large amounts of produce, especially vegetables, being spoiled.</div>
+                            <div class="cn-line">然而，把农产品运到可以销售的地方有时是个难题，因为农民<strong>没有</strong><strong>运输</strong>渠道，这导致大量农产品、尤其是蔬菜腐坏变质。【Q36 答案句 → transport】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 37: Q37 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q37</span>
+                    <span class="card-tag tag-p1">⑤问题→对策链锁定</span>
+                    <h3 class="card-title">食物保鲜 preservation · 沿着 spoiled 问题顺藤摸瓜</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_食物保鲜preservation.mp3', 'Q37: preservation 保鲜')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_37" onclick="handleRecBtnClick('card_37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_37" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_37"></span>
+                    <span class="rec-status-text" id="rec-status-card_37">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_37">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_37" onclick="playUserRecording('card_37')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_37')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_37')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_37')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "This problem was discussed with the farmers' associations and it was decided that in order to <span class="signal-highlight">prevent food from being spoiled</span>, the farmers needed to learn techniques for its <span class="ans-highlight">preservation</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 + 逻辑链）。卷面 <em>Training was therefore provided in methods of food 37 ____</em>，录音 <em>the farmers needed to <strong>learn techniques</strong> for its <strong>preservation</strong></em> —— <em>learn techniques = training</em>、<em>methods of = techniques for</em>，答案 <strong>preservation</strong>。<br>这句还叠了正反改写：<em>in order to prevent food from being spoiled</em>（防止食物腐坏）= 保鲜的目的。Q36（spoiled 问题）→ Q37（preservation 对策）的问题-对策链你顺藤摸下来了，四连正确收下。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This problem was discussed with the farmers' associations and it was decided that in order to prevent food from being spoiled, the farmers needed to learn techniques for its <span class="ans-highlight">preservation</span>.</div>
+                            <div class="cn-line">这个问题与农民协会进行了讨论，并决定：为了防止食物腐坏，农民需要学习食物<strong>保鲜</strong>技术。【Q37 答案句 → preservation】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 38: Q38 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q38</span>
+                    <span class="card-tag tag-p1">③头衔后置陷阱 + 抢填评价词</span>
+                    <h3 class="card-title">protein 只是鱼的头衔 · breeding fish 才是答案</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_水箱养鱼fish与protein头衔陷阱.mp3', 'Q38: fish(es) 鱼')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_38" onclick="handleRecBtnClick('card_38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_38" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_38"></span>
+                    <span class="rec-status-text" id="rec-status-card_38">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_38">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_38" onclick="playUserRecording('card_38')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_38')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_38')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_38')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "This was when farmers started to dig holes for <span class="signal-highlight">tanks</span> in the fenced-off areas and to fill these with water and use them for breeding <span class="ans-highlight">fish</span> — an important source of <span class="trap-highlight">protein</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + 头衔后置陷阱）。卷面 <em>Farmers made special places where 38 ____ could be kept</em>，答案 <strong>fish</strong>。<br>你的路径：定位到了这句，听到"农民挖坑做水箱、装水、用来养什么"，但 <em>breeding fish</em> 没有捕捉到；随后破折号后的 <em>an important source of <strong>protein</strong></em>（重要的蛋白质来源）入耳，就填了 protein。<br><strong>结构拆解：</strong>破折号后的 "a source of protein" 是对 fish 的<strong>同位语评价</strong>——是"头衔"不是"实体"。卷面问的是"<strong>什么东西被养在这些地方</strong>"，能被 keep 的必然是个生物，protein（营养成分）在语义上填不进去。<br>同款陷阱 C15T1 Q31 刚出现过（shelter → biodiversity 总结句诱改）：高级抽象词在答案词后面出现时，99% 是评价/归纳，不是答案。<br><strong>防坑口诀：破折号 / 逗号后的 "a source of... / which is... / an important..." 是解释性尾巴，答案在它前面那个被解释的实体词；填完做语义自检——"protein 能被 keep 在水箱里吗？"一次就能拦住。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> There was also an additional initiative that had not been originally planned, but which became a central feature of the programme. This was when farmers started to dig holes for <span class="signal-highlight">tanks</span> in the fenced-off areas and to fill these with water and use them for breeding <span class="ans-highlight">fish</span> — an important source of <span class="trap-highlight">protein</span>.</div>
+                            <div class="cn-line">还有一项最初并未计划的额外举措，后来却成了项目的核心特色：农民开始在围栏区内挖坑做<strong>水箱</strong>，灌上水，用来<strong>养鱼</strong>——鱼是重要的<strong>蛋白质</strong>来源（同位语评价，不是答案）。【Q38 答案句 → fish】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 39: Q39 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q39</span>
+                    <span class="card-tag tag-p1">心态余震 + 语义验证缺失</span>
+                    <h3 class="card-title">later 定位对了心态崩了 · bees 没接住 honey 没验证</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_养蜂取蜜bees与later定位.mp3', 'Q39: bees 蜜蜂')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_39" onclick="handleRecBtnClick('card_39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_39" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_39"></span>
+                    <span class="rec-status-text" id="rec-status-card_39">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_39">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_39" onclick="playUserRecording('card_39')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_39')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_39')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_39')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "After a time, another suggestion was made by local people... <span class="signal-highlight">later on</span>. They decided to try setting up <span class="signal-highlight">colonies of</span> <span class="ans-highlight">bees</span>, which would provide <span class="trap-highlight">honey</span> both for their own consumption and to sell."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（心态余震 + 语义验证缺失）。卷面 <em>Local people <strong>later</strong> suggested keeping 39 ____</em>，答案 <strong>bees</strong>。<br>你的路径复盘得非常诚实：Q38 失利后脑子发懵，到这里抓住了定位词 later 开始等答案，但 <em>colonies of bees</em> 入耳时大脑空白没接住；后一句 <em>which would provide honey</em>（会产蜂蜜）是命题人送的语义验证也没听到；最后凭残影写了个 been（本想吃牛肉 beef，忙着放弃听下一句又写错一个字母）。<br><strong>两个救命题的信号：</strong>① <em>setting up <strong>colonies of</strong> ____</em> 与卷面 <em>keeping ____</em> 是直译对应 —— 听到 colonies of 后面的名词就是答案；② <em>provide honey</em> = 能产蜂蜜的生物只有 bees，这是免费的答案确认。<br><strong>防坑口诀：上一题丢了就让它丢 —— 单题止损，绝不带伤作战。听到 colonies of / a group of / a pair of 就死盯后面的名词；答案后紧跟的 which would provide ____ 还能反向验证一次。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> After a time, another suggestion was made by local people which hadn't been part of the programme's original proposal, but which was also adopted <span class="signal-highlight">later on</span>. They decided to try setting up colonies of <span class="ans-highlight">bees</span>, which would provide honey both for their own consumption and to sell.</div>
+                            <div class="cn-line">过了一段时间，当地人又提出一个原方案里没有、但后来也被采纳的建议：他们决定尝试建立<strong>蜜蜂</strong>群落，产出的蜂蜜既可供自己食用，也可以出售。【Q39 答案句 → bees；honey 是产出提示，不是答案】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 40: Q40 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q40</span>
+                    <span class="card-tag tag-p1">收尾聚焦信号丢失 + 生词 timelines</span>
+                    <h3 class="card-title">however 转折 + especially 聚焦双信号滑过 · design 只差半步</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_设计阶段design与especially聚焦.mp3', 'Q40: design 设计阶段')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_40" onclick="handleRecBtnClick('card_40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_40" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_40"></span>
+                    <span class="rec-status-text" id="rec-status-card_40">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_40">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_40" onclick="playUserRecording('card_40')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_40')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_40')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_40')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "However, it's important to set <span class="signal-highlight">realistic timelines</span> for each phase of the programme, <span class="signal-highlight">especially for its</span> <span class="ans-highlight">design</span>, as mistakes made at this stage may be hard to correct later on."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + 收尾聚焦信号丢失）。卷面 <em>Enough time must be allowed, particularly for the 40 ____ phase of the programme</em>，答案 <strong>design</strong>。<br>你的路径：只捕捉到 <em>each phase of</em>，后面就断了。这句有三重信号叠加，全滑过去了：<br>① <strong>However 转折</strong> —— 前面 First of all 那段是"成绩总结"（有水就有潜力、产量提升），However 一响 = 重点切换，答案区开始；<br>② <em>it's important to set <strong>realistic timelines</strong></em>（设定符合实际的时间线）= 卷面 <em>enough time must be allowed</em> 的改写 —— realistic 是生词卡壳点；<br>③ <strong>especially for its design</strong> = 卷面 <strong>particularly for the design phase</strong> —— especially / particularly 就是答案聚焦灯，它后面的名词必考。<br>收尾句 <em>mistakes made at this stage may be hard to correct later on</em>（这个阶段犯的错以后很难纠正）还在给 design 补语义验证：改起来最贵的阶段 = 设计阶段。<br><strong>防坑口诀：Part 4 最后 30 秒必出收官答案，结构固定为 "However, ... important ... especially ____" —— 听到 especially / particularly / in particular，笔尖直接压上去等名词。realistic 不认识就放掉，抓 especially 后面那一个词就够了。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So what lessons can be learned from this programme? First of all, it tells us that in dry, arid regions, if there is access to a reliable source of water, there is great potential for the development of agriculture. In Chicualacuala, there was a marked improvement in agricultural production, which improved food security and benefited local people by providing them with both food and income.</div>
+                            <div class="cn-line">那么从这个项目能学到什么教训？首先，它告诉我们：在干旱地区，只要能获得可靠的水源，农业发展就有巨大潜力。在奇库拉库拉，农业产量显著提升，改善了粮食安全，也让当地人同时获得了食物和收入。【成绩总结段：没有 40 题答案，However 之前别动笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> However, it's important to set realistic timelines for each phase of the programme, <span class="ans-highlight">especially for its design</span>, as mistakes made at this stage may be hard to correct later on.</div>
+                            <div class="cn-line"><strong>然而</strong>，为项目的每个阶段设定符合实际的时间线很重要，<strong>尤其是设计阶段</strong>，因为这个阶段犯的错误以后可能很难纠正。【Q40 答案句 → design】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD FULL PART 4 -->
+        <div class="slice-card" data-category="full" id="full4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">完整精听 · Part 4 全篇</span>
+                    <h3 class="card-title">Part 4 完整录音实战盲听磨耳朵 (Q31 - Q40) · 莫桑比克农业项目讲座 7:29</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_4_Full_莫桑比克农业项目讲座.mp3', 'Part 4 完整录音: Agricultural programme in Mozambique')">▶ 播放完整 Part 4</button>
+                    <button class="record-card-btn" id="rec-btn-card_full4" onclick="handleRecBtnClick('card_full4')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_full4" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full4"></span>
+                    <span class="rec-status-text" id="rec-status-card_full4">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full4">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full4" onclick="playUserRecording('card_full4')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full4')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full4')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full4')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box" style="font-size: 1rem; max-height: 260px; overflow-y: auto;">
+                    <strong>【完整音频练习目标】</strong>：分题靶向精听后，合上全部文字，整段播放 Part 4。独白讲座没有对话轮次帮你"换气"，练习<strong>用笔记结构图跟节奏</strong>：左栏画"组织与物资 / 发展 / 教训"三级标题，物资栏再分"项目给"（wire / seeds / pumps）与"农民给"（labour / posts）两列，播完看自己能否重建整场讲座骨架。
+                </div>
+                <div class="analysis-box">
+                    <strong>实战防崩铁律：</strong>1. Q31-Q35 是"物资归属"连环题，听到 provided 就在心里问"谁给谁"；2. Q38 出现破折号后的 protein 时默念"头衔不是答案，前面那个才是"；3. Q39 是心态题 —— 上一题丢了立刻清零，later 之后死盯 colonies of 后面的名词；4. Q40 在最后 40 秒，However 一响进入收官状态，especially 后面的名词就是答案。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Part 4 完整官方听力原文与逐句翻译（无删减全文对照） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> I'm going to report on a case study of a programme which has been set up to help rural populations in Mozambique, a largely agricultural country in South-East Africa. The programme worked with three communities in Chicualacuala district, near the Limpopo River. This is a dry and arid region, with unpredictable rainfall.</div>
+                            <div class="cn-line">我要报告一个案例研究，关于一个为帮助莫桑比克农村人口而设立的项目。莫桑比克是非洲东南部一个以农业为主的国家。项目在林波波河附近的奇库拉库拉区与三个社区合作。这是一个干旱地区，降雨量难以预测。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Because of this, people in the area were unable to support themselves through agriculture and instead they used the forest as a means of providing themselves with an income, mainly by selling charcoal. However, this was not a sustainable way of living in the long term, as they were rapidly using up this resource.</div>
+                            <div class="cn-line">因此，当地民众无法靠农业维持生计，转而把森林当作收入来源，主要靠卖木炭。然而从长远看这不可持续，因为他们在快速耗尽这一资源。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> To support agriculture in this dry region, the programme focused primarily on making use of existing water resources from the Limpopo River by setting up systems of <span class="ans-highlight">irrigation</span>, which would provide a dependable water supply for crops and animals.</div>
+                            <div class="cn-line">为支持这一干旱地区的农业，项目主要聚焦利用林波波河的现有水资源，<strong>建立灌溉系统</strong>，为作物和牲畜提供可靠水源。【Q31 答案句 → irrigation】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The programme worked closely with the district government in order to find the best way of implementing this. The region already had one farmers' association, and it was decided to set up two more of these. These associations planned and carried out activities including water management, livestock breeding and agriculture, and it was notable that in general, <span class="ans-highlight">women</span> formed the majority of the workforce.</div>
+                            <div class="cn-line">项目与地区<strong>政府</strong>（干扰词）密切合作寻找落实方式。该地区原本有一个农民协会，又决定再建两个。这些协会规划实施了水资源管理、畜牧养殖和农业等活动，<strong>值得注意的是，总体上妇女构成了劳动力的大多数</strong>。【Q32 答案句 → women】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It was decided that in order to keep the crops safe from animals, both wild and domestic, special areas should be fenced off where the crops could be grown. The community was responsible for creating these fences, but the programme provided the necessary <span class="ans-highlight">wire</span> for making them.</div>
+                            <div class="cn-line">为保护作物免受野生动物和家畜侵害，决定圈出特殊围栏区。社区负责修建围栏，但项目提供了制作围栏所需的<strong>铁丝</strong>。【Q33 答案句 → wire】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Once the area had been fenced off, it could be cultivated. The land was dug, so that vegetables and cereals appropriate to the climate could be grown, and the programme provided the necessary <span class="ans-highlight">seeds</span> for this.</div>
+                            <div class="cn-line">围栏区圈好后即可耕种。翻地后种上适合当地气候的蔬菜和谷物，项目提供了所需的<strong>种子</strong>。【Q34 答案句 → seeds】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The programme also provided pumps so that water could be brought from the river in pipes to the fields. However, the labour was all provided by local people, and they also provided and put up the <span class="ans-highlight">posts</span> that supported the fences around the fields.</div>
+                            <div class="cn-line">项目还提供了水泵，把河水经管道送进田里。然而劳动力全部由当地人提供，他们还提供并竖起了支撑围栏的<strong>立柱</strong>。【Q35 答案句 → posts】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Once the programme had been set up, its development was monitored carefully. The farmers were able to grow enough produce not just for their own needs, but also to sell.</div>
+                            <div class="cn-line">项目建立后，其发展受到密切监测。农民种出的农产品不仅够自给，还能出售。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> However, getting the produce to places where it could be marketed was sometimes a problem, as the farmers did not have access to <span class="ans-highlight">transport</span>, and this resulted in large amounts of produce, especially vegetables, being spoiled.</div>
+                            <div class="cn-line">然而，把农产品运到销售地有时是难题，因为农民没有<strong>运输</strong>渠道，大量农产品尤其是蔬菜因此腐坏。【Q36 答案句 → transport】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This problem was discussed with the farmers' associations and it was decided that in order to prevent food from being spoiled, the farmers needed to learn techniques for its <span class="ans-highlight">preservation</span>.</div>
+                            <div class="cn-line">这个问题与农民协会讨论后决定：为防止食物腐坏，农民需要学习食物<strong>保鲜</strong>技术。【Q37 答案句 → preservation】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> There was also an additional initiative that had not been originally planned, but which became a central feature of the programme. This was when farmers started to dig holes for tanks in the fenced-off areas and to fill these with water and use them for breeding <span class="ans-highlight">fish</span> — an important source of protein.</div>
+                            <div class="cn-line">还有一项计划外的额外举措后来成了项目核心特色：农民在围栏区挖坑做水箱，灌水用来<strong>养鱼</strong>——鱼是重要的蛋白质来源（同位语评价，不是答案）。【Q38 答案句 → fish】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> After a time, another suggestion was made by local people which hadn't been part of the programme's original proposal, but which was also adopted later on. They decided to try setting up colonies of <span class="ans-highlight">bees</span>, which would provide honey both for their own consumption and to sell.</div>
+                            <div class="cn-line">过了一段时间，当地人又提出一个原方案外的建议，后来也被采纳：尝试建立<strong>蜜蜂</strong>群落，蜂蜜既供自用也可出售。【Q39 答案句 → bees】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So what lessons can be learned from this programme? First of all, it tells us that in dry, arid regions, if there is access to a reliable source of water, there is great potential for the development of agriculture. In Chicualacuala, there was a marked improvement in agricultural production, which improved food security and benefited local people by providing them with both food and income.</div>
+                            <div class="cn-line">这个项目给我们什么教训？首先：干旱地区只要有可靠水源，农业就有巨大发展潜力。奇库拉库拉的农业产量显著提升，改善了粮食安全，当地人也同时获得食物和收入。【成绩总结段，无 40 题答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> However, it's important to set realistic timelines for each phase of the programme, especially for its <span class="ans-highlight">design</span>, as mistakes made at this stage may be hard to correct later on.</div>
+                            <div class="cn-line"><strong>然而</strong>，为项目每个阶段设定符合实际的时间线很重要，<strong>尤其是设计阶段</strong>，因为这个阶段犯的错以后可能很难纠正。【Q40 答案句 → design】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
     </div>
 
     <footer style="text-align: center; margin-top: 50px; color: var(--text-muted); font-size: 0.88rem;">
-        <p>剑桥雅思 15 Test 2 Part 1 错题切片点播台 · 原生影子跟读训练 · 突破先验框架死锁</p>
+        <p>剑桥雅思 15 Test 2 Part 1 + Part 4 错题切片点播台 · 原生影子跟读训练 · 突破先验框架死锁</p>
     </footer>
 </div>
 
@@ -1326,15 +1957,26 @@
     const nowPlayingText = document.getElementById('now-playing-text');
     let isLooping = false;
 
+    const audioBlobCache = {};
     function playAudio(filename, title) {
         if (!mainAudio) return;
-        mainAudio.src = filename;
-        mainAudio.play().then(() => {
-            nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
-        }).catch(err => {
-            console.error("Playback failed:", err);
-            nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
-        });
+        nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
+        const startPlay = (src) => {
+            mainAudio.src = src;
+            mainAudio.loop = isLooping;
+            mainAudio.play().catch(err => {
+                console.error("Playback failed:", err);
+                nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+            });
+        };
+        if (audioBlobCache[filename]) { startPlay(audioBlobCache[filename]); return; }
+        fetch(filename).then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.blob();
+        }).then(b => {
+            audioBlobCache[filename] = URL.createObjectURL(b);
+            startPlay(audioBlobCache[filename]);
+        }).catch(() => startPlay(filename));
     }
 
     function toggleLoop(btn) {

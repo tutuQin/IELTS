@@ -493,6 +493,78 @@
             font-weight: 700;
         }
 
+        .hl-loc {
+            color: var(--accent-blue);
+            border-bottom: 2px solid var(--accent-blue);
+            font-weight: 700;
+            padding: 0 2px;
+        }
+
+        .hl-swap {
+            background: rgba(251, 191, 36, 0.16);
+            color: var(--accent-amber);
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px dashed var(--accent-amber);
+            font-weight: 600;
+        }
+
+        .hl-conn {
+            color: #f472b6;
+            font-weight: 700;
+            background: rgba(244, 114, 182, 0.14);
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px solid #f472b6;
+        }
+
+        .hl-ans {
+            color: var(--accent-green);
+            font-weight: 700;
+            background: rgba(52, 211, 153, 0.15);
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
+        .hl-trap {
+            color: var(--accent-red);
+            font-weight: 700;
+            text-decoration: line-through;
+            background: rgba(248, 113, 113, 0.15);
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        .divider-card {
+            border-left: 5px solid var(--accent-purple);
+            background: rgba(192, 132, 252, 0.08);
+        }
+
+        .divider-card h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.15rem;
+            color: var(--accent-purple);
+        }
+
+        .divider-card p {
+            margin: 0;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .legend-card {
+            border-left: 5px solid var(--accent-blue);
+            background: rgba(56, 189, 248, 0.06);
+        }
+
+        .legend-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
         .diagnosis-box {
             background: rgba(30, 41, 59, 0.5);
             border-radius: 10px;
@@ -653,8 +725,8 @@
     </div>
 
     <header>
-        <h1>剑桥雅思 16 Test 2 Part 1 · 听力错题切片与考点点播台</h1>
-        <p>Copying photos to digital format 老照片数字化咨询 · 专攻数字轰炸 / 预判失真 / 跨角色抢答 / 连环卡顿雪崩</p>
+        <h1>剑桥雅思 16 Test 2 Part 1 + Part 4 · 听力错题切片与考点点播台</h1>
+        <p>Part 1 老照片数字化咨询 + Part 4 Health Benefits of Dance（舞蹈的健康益处）· 专攻数字轰炸 / 预判失真 / 定位词改写识别失败 / 题序错位连错</p>
     </header>
 
     <!-- Global Full Audio Banner -->
@@ -711,10 +783,11 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片与完整录音 (11)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">🎧 Part 1 完整录音</button>
-        <button class="tab-btn" onclick="filterCategory('wrong', this)">🔴 错题精练 (7题)</button>
-        <button class="tab-btn" onclick="filterCategory('correct', this)">🟢 答对巩固 (3题)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片与完整录音 (23)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)" style="color:#c084fc;">📚 Part 4 讲座切片 (12)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">🎧 完整录音 (2)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">🔴 错题精练 (13题)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">🟢 答对巩固 (7题)</button>
         <button class="tab-btn" onclick="filterCategory('cat-number', this)">⚡ 数字轰炸 (Q2, Q3)</button>
         <button class="tab-btn" onclick="filterCategory('cat-predict', this)">🎯 预判纠偏 (Q4, Q9)</button>
         <button class="tab-btn" onclick="filterCategory('cat-logic', this)">🛡️ 否定与逻辑 (Q1, Q10)</button>
@@ -1095,7 +1168,7 @@
                     <h3 class="card-title">Q6: 脆弱老照片手工扫描 hand 与定位到却漏抓答案词</h3>
                 </div>
                 <div class="card-actions">
-                    <button class="play-card-btn" onclick="playAudio('06_Q6_脆弱老照片手工扫描hand与定位到却漏抓答案词.mp3', 'Q6: 脆弱老照片手工扫描 hand 与定位到却漏抓答案词')">▶ 播放切片 (16s)</button>
+                    <button class="play-card-btn" onclick="playAudio('06_Q6_脆弱老照片手工扫描hand与定位到却漏抓答案词.mp3', 'Q6: 脆弱老照片手工扫描 hand 与定位到却漏抓答案词')">▶ 播放切片 (43s)</button>
                     <button class="record-card-btn" id="rec-btn-q6" onclick="handleRecBtnClick('q6')">🎙️ 录音跟读</button>
                 </div>
             </div>
@@ -1231,7 +1304,7 @@
                     <h3 class="card-title">Q8: 失焦照片无法修复 focus 与否定前置敏锐判断</h3>
                 </div>
                 <div class="card-actions">
-                    <button class="play-card-btn" onclick="playAudio('08_Q8_失焦照片无法修复focus与否定前置敏锐判断.mp3', 'Q8: 失焦照片无法修复 focus 与否定前置敏锐判断')">▶ 播放切片 (13s)</button>
+                    <button class="play-card-btn" onclick="playAudio('08_Q8_失焦照片无法修复focus与否定前置敏锐判断.mp3', 'Q8: 失焦照片无法修复 focus 与否定前置敏锐判断')">▶ 播放切片 (19s)</button>
                     <button class="record-card-btn" id="rec-btn-q8" onclick="handleRecBtnClick('q8')">🎙️ 录音跟读</button>
                 </div>
             </div>
@@ -1301,7 +1374,7 @@
                     <h3 class="card-title">Q9: 订单完成工期 10 天与介词 within 误解为所需物</h3>
                 </div>
                 <div class="card-actions">
-                    <button class="play-card-btn" onclick="playAudio('09_Q9_订单完成工期10天与介词within误解为所需物.mp3', 'Q9: 订单完成工期 10 天与介词 within 误解为所需物')">▶ 播放切片 (13s)</button>
+                    <button class="play-card-btn" onclick="playAudio('09_Q9_订单完成工期10天与介词within误解为所需物.mp3', 'Q9: 订单完成工期 10 天与介词 within 误解为所需物')">▶ 播放切片 (19s)</button>
                     <button class="record-card-btn" id="rec-btn-q9" onclick="handleRecBtnClick('q9')">🎙️ 录音跟读</button>
                 </div>
             </div>
@@ -1638,17 +1711,873 @@
 
     <!-- Methodology Summary Panel -->
     <div class="tips-panel" style="margin-top:40px;">
-        <div class="tips-title">💡 剑16 Test 2 Part 1 实战四步提分指南</div>
+        <div class="tips-title">💡 针对本套题 8 大核心漏洞靶向精练指南</div>
         <ul class="tips-list">
-            <li><strong>Step 1：信息类型预判</strong>：空格前有 <code>£</code> $\rightarrow$ 锁定费用；空前有 <code>within</code> $\rightarrow$ 锁定时间段；空前有 <code>e.g. name</code> $\rightarrow$ 专有名词大写，绝不抄题干原词。</li>
-            <li><strong>Step 2：1.5 秒物理断舍离</strong>：数字密集轰炸漏听后（Q2: 195），必须强行断舍离视线下移，坚决保住下一题（Q3: payment）。</li>
-            <li><strong>Step 3：双向角色防守</strong>：提问者（女声）口中抛出的名词（Q1: frame）往往就是答案本身，回答者的 Yes 只是确认盖章。</li>
-            <li><strong>Step 4：影子跟读录音磨耳朵</strong>：利用上方录音室反复跟读 <em>by hand</em>、<em>Grandparents</em>、<em>in 10 days</em>，建立直接的声音肌肉反射！</li>
+            <li><strong>Step 1：信息类型预判（Part 1）</strong>：空格前有 <code>£</code> 锁定费用；空前有 <code>within</code> 锁定时间段；空前有 <code>e.g. name</code> 锁定专有名词大写，绝不抄题干原词。</li>
+            <li><strong>Step 2：1.5 秒物理断舍离（Part 1 Q2 → Q3）</strong>：数字密集轰炸漏听后（Q2: 195），必须强行断舍离视线下移，坚决保住下一题（Q3: payment）。</li>
+            <li><strong>Step 3：双向角色防守（Part 1 Q1）</strong>：提问者（女声）口中抛出的名词（frame）往往就是答案本身，回答者的 Yes 只是确认盖章。</li>
+            <li><strong>Step 4：下义词具体化改写（Part 4 Q34 accidents ⇄ falls）</strong>：题干写 <em>accidents</em>（事故），录音只说 <em>falls</em>（摔倒）——上位概念换成具体动作是 Part 4 最阴的一种改写。听不到 falls 就会把上一句已听到的 <em>balance</em> 错填到下一题，<strong>一错连两题</strong>。</li>
+            <li><strong>Step 5：句尾名词不等于答案（Q31 tasks / Q39 数字）</strong>：Q31 的 creativity 被 <em>cognitive tasks</em> 和 <em>problem-solving tasks</em> 前后夹击；Q39 的 obesity 后紧跟 <em>1.2 kilos / 1%</em>。<strong>空格要名词就看词性，不要跟着“最后听到的词”跑。</strong></li>
+            <li><strong>Step 6：轻读介词短语藏答案（Q39 with obesity）</strong>：<em>women with obesity</em> 中 with 几乎吞音，答案就藏在介词短语里。凡是题干主语带“患某病/有某特征”，听到 <em>with / suffering from / who have</em> 就要竖耳。</li>
+            <li><strong>Step 7：整句改写一个原词不留（Q35 work faster ⇄ process things more quickly）</strong>：<em>improves brain function</em> 被拆成 <em>forces their brain to…</em>，<em>work faster</em> 换成 <em>process things more quickly</em>。这类题只能靠 <strong>especially / because</strong> 定位答案句、靠句意兜底，不能等原词。</li>
+            <li><strong>Step 8：结尾段的强调 + 结果句式（Q40 More importantly … so…that）</strong>：独白结尾段 <em>More importantly</em> 一出口就是最后一题的开始；<em>became a habit ⇄ made it a habit</em> 是句式改写，别等 became 原词。</li>
         </ul>
+        <!-- PART 4 SECTION DIVIDER -->
+        <div class="slice-card divider-card" data-category="part4" id="card-p4-divider">
+            <h2>🔻 PART 4 · Health Benefits of Dance 舞蹈的健康益处 · 学术独白讲座</h2>
+            <p>战报：10 题对 4 错 6（错 Q31 / Q34 / Q35 / Q38 / Q39 / Q40）· 两大病灶：① 定位词改写识别失败（accidents⇄falls、work faster⇄process quickly）→ 题序错位连错；② 轻读介词短语藏答案（with obesity）+ 末段重读词错位（habit 写进 Q39）</p>
+        </div>
+
+        <!-- PART 4 LEGEND -->
+        <div class="slice-card legend-card" data-category="part4" id="card-p4-legend">
+            <strong>🎨 Part 4 五色标注图例</strong>
+            <div class="legend-row">
+                <span class="hl-loc">■ 定位词（题干⇄原文同词锁定）</span>
+                <span class="hl-swap">■ 题干⇄原文替换改写</span>
+                <span class="hl-conn">■ 转折/连词/强调信号</span>
+                <span class="hl-ans">■ 官方答案词</span>
+                <span class="hl-trap">■ 干扰陷阱词</span>
+            </div>
+        </div>
+
+        <!-- CARD_card_31 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q31">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q31 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">⑤改写坑 + ⑥审题坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">句尾名词吸走注意力</span>
+                    <h3 class="card-title">Q31: 实验证明跳舞提升 creativity 创造力与 tasks 词尾陷阱</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_实验证明跳舞提升creativity创造力与tasks陷阱.mp3', 'PQ31: 实验证明跳舞提升 creativity 创造力与 tasks 词尾陷阱')">▶ 播放切片 (43s)</button>
+                    <button class="record-card-btn" id="rec-btn-q31" onclick="handleRecBtnClick('q31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q31" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q31">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q31')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q31')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q31')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">An <span class="hl-loc">experiment</span> on <span class="hl-loc">university students</span> suggested that dance <span class="hl-swap">increases</span> <span class="blank-answer" title="点击查看正确答案">creativity</span>.</div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    In another <span class="hl-loc">experiment</span>, <span class="hl-loc">university</span> researchers at York and Sheffield took a group of <span class="hl-loc">students</span> ... All were given <span class="hl-trap">cognitive tasks</span> to perform before and after. <span class="hl-conn">The result showed that</span> those who chose to dance <span class="hl-swap">showed much more</span> <span class="hl-ans">creativity</span> when doing <span class="hl-trap">problem-solving tasks</span>.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（你的复盘：“定位错误写成了 task，导致后面没有听”）：</strong><br>
+1. <strong>定位路径</strong>：experiment → university → students 三个定位词全部原词复现，本篇定位最容易的一题，丢分极其可惜；<br>
+2. <strong>改写对照</strong>：increases ⇄ showed much more（增加 ⇄ 表现出明显更多的）——题干一个动词，原文换成“动词+程度副词”短语；<br>
+3. <strong>信号词</strong>：<em>The result showed that</em>（结果宣告，实验类独白里它一开口，答案必在从句里）；<br>
+4. <strong>避坑</strong>：答案 creativity 在句中被 <em>cognitive tasks</em>（实验前）和 <em>problem-solving tasks</em>（句尾）两个 task 前后夹击，“最后听到的词最响”错觉让你落了 task。词性自检可救命：increases 后应接抽象名词，“跳舞增加任务”句意根本不通。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In another <span class="hl-loc">experiment</span>, <span class="hl-loc">university</span> researchers at York and Sheffield took a group of <span class="hl-loc">students</span> and sent each of them into a lab where music was played for five minutes.</div>
+                            <div class="cn-line">在另一项实验中，约克大学和谢菲尔德大学的研究人员让一组学生分别进入一个播放五分钟音乐的实验室。【定位三连：experiment → university → students，全部原词复现，听到即可锁定本段】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Each had to choose from three options: to sit and listen quietly to the music, to cycle on an exercise bike while they listened, or to get up and dance.</div>
+                            <div class="cn-line">每个人要从三个选项中选择：坐着安静听音乐、边听边骑健身车，或起身跳舞。【纯铺垫句，无答案；注意力要留给下一句的结果宣告】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> All were given <span class="hl-trap">cognitive tasks</span> to perform before and after.</div>
+                            <div class="cn-line">所有人在实验前后都要完成认知任务。【cognitive tasks 是第一个 task 干扰，此处不落笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">The result showed that</span> those who chose to dance <span class="hl-swap">showed much more</span> <span class="hl-ans">creativity [Q31]</span> when doing <span class="hl-trap">problem-solving tasks</span>.</div>
+                            <div class="cn-line">结果显示，选择跳舞的人在解决任务时表现出明显更强的<strong>创造力</strong>。【Q31 → creativity；increases ⇄ showed much more（增加 ⇄ 表现出明显更多）；句尾 problem-solving tasks 是第二个 task 干扰，“最后听到的词最响”会让你把 task 写进空格】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_32 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q32">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">Q32 · 答对 ✓</span>
+                    <span class="card-tag tag-p1">⑤改写坑</span>
+                    <span class="card-tag" style="background:rgba(52,211,153,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.4);">观点信号抓得稳</span>
+                    <h3 class="card-title">Q32: 舞蹈作为 therapy 疗法治疗心理健康</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_舞蹈作为therapy疗法治疗心理健康.mp3', 'PQ32: 舞蹈作为 therapy 疗法治疗心理健康')">▶ 播放切片 (19s)</button>
+                    <button class="record-card-btn" id="rec-btn-q32" onclick="handleRecBtnClick('q32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q32" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q32">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q32')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q32')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q32')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">For those with <span class="hl-loc">mental illness</span>, dance could be used as <span class="hl-swap">a form of</span> <span class="blank-answer" title="点击查看正确答案">therapy</span>.</div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    Dr Lovett, at the University of Hertfordshire, believes dance could be a very useful way to help people suffering from <span class="hl-swap">mental health problems</span>. <span class="hl-conn">He thinks</span> dance should be <span class="hl-swap">prescribed as</span> <span class="hl-ans">therapy</span> to help people overcome issues such as <span class="hl-trap">depression</span>.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（答对巩固）：</strong><br>
+1. <strong>定位路径</strong>：题干定位词 mental illness 在原文被改写成 <em>mental health problems</em>（心理疾病 ⇄ 心理健康问题，同义短语改写），靠 suffering from 语境跟上；<br>
+2. <strong>改写对照</strong>：be used as a form of ⇄ be prescribed as（被用作一种形式 ⇄ 被作为处方开出——prescribe 本义“开处方”，医生语境里 = 当作治疗手段）；<br>
+3. <strong>信号词</strong>：<em>He thinks</em>（观点信号，Part 4 里人物观点句后常跟答案）；<br>
+4. <strong>避坑</strong>：depression 只是 <em>issues such as</em> 后面举的例子，不是“形式”，词性逻辑排除。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Dr Lovett, at the University of Hertfordshire, believes dance could be a very useful way to help people suffering from <span class="hl-swap">mental health problems</span>.</div>
+                            <div class="cn-line">赫特福德大学的洛瓦特博士认为，跳舞是帮助心理问题患者的一种非常有用的方式。【定位词 mental illness ⇄ mental health problems（心理疾病 ⇄ 心理健康问题，正反说同一件事）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">He thinks</span> dance should be <span class="hl-swap">prescribed as</span> <span class="hl-ans">therapy [Q32]</span> to help people overcome issues such as <span class="hl-trap">depression</span>.</div>
+                            <div class="cn-line">他认为应该把跳舞作为<strong>治疗手段</strong>开给病人，帮助他们克服抑郁等问题。【Q32 → therapy；be used as a form of ⇄ be prescribed as（被用作一种形式 ⇄ 被当作处方开出）；He thinks 是观点信号，答案紧跟其后；depression 只是 issues such as 的举例】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_33 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q33">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">Q33 · 答对 ✓</span>
+                    <span class="card-tag tag-p1">⑤改写坑</span>
+                    <span class="card-tag" style="background:rgba(52,211,153,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.4);">even 强调后出答案</span>
+                    <h3 class="card-title">Q33: 低 fitness 体能者也可参与的舞蹈</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_低fitness体能者也可参与的舞蹈.mp3', 'PQ33: 低 fitness 体能者也可参与的舞蹈')">▶ 播放切片 (19s)</button>
+                    <button class="record-card-btn" id="rec-btn-q33" onclick="handleRecBtnClick('q33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q33" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q33">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q33')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q33')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q33')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">accessible for people with low levels of <span class="blank-answer" title="点击查看正确答案">fitness</span></div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    One of the great things about dance is that there are no barriers to participation. <span class="hl-swap">Anyone can have a go</span>, <span class="hl-conn">even</span> those <span class="hl-swap">whose standard of</span> <span class="hl-ans">fitness</span> <span class="hl-swap">is quite low</span>.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（答对巩固）：</strong><br>
+1. <strong>定位路径</strong>：靠小标题 <em>Benefits of dance for older people</em> 和原文 <em>people in their 60s and beyond</em>（六十多岁及以上的人）带路进入 Q33 区域；<br>
+2. <strong>改写对照</strong>：low levels of ⇄ whose standard of ... is quite low（低水平的 ⇄ 标准相当低的——题干前置定语，原文拆成定语从句后置）；accessible ⇄ Anyone can have a go（可参与、门槛低的 ⇄ 任何人都可以试一试，口语化解释）；<br>
+3. <strong>信号词</strong>：<em>even</em>（让步强调信号，even 后的名词组常藏答案）；<br>
+4. <strong>避坑</strong>：fitness 重读清晰、词性吻合（levels of + 名词），果断落笔。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">Studies have shown</span> that there are enormous benefits for people in their sixties <span class="hl-conn">and beyond</span>.</div>
+                            <div class="cn-line">研究表明，跳舞对六十岁及以上的人群有巨大益处。【older people ⇄ people in their sixties and beyond（老年人 ⇄ 六十岁及以上），定位被改写但语义清晰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One of the great things about dance is that there are <span class="hl-swap">no barriers to participation</span>.</div>
+                            <div class="cn-line">跳舞的一大优点是没有参与门槛。【accessible ⇄ no barriers to participation（可参与的 ⇄ 没有参与障碍）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Anyone can have a go, <span class="hl-conn">even</span> those whose standard of <span class="hl-ans">fitness [Q33]</span> is <span class="hl-swap">quite low</span>.</div>
+                            <div class="cn-line">任何人都可以尝试，<strong>即使是</strong>体能水平相当低的人。【Q33 → fitness；low levels of fitness ⇄ standard of fitness is quite low（体能水平低 ⇄ 体能标准相当低）；even 是强调信号，答案紧随其后】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_34 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q34">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q34 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">⑤改写坑 + ⑥审题坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">答案听到却错位填写</span>
+                    <h3 class="card-title">Q34: 更好 balance 平衡减少摔倒事故与错位填写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_更好balance平衡减少摔倒事故与错位填写.mp3', 'PQ34: 更好 balance 平衡减少摔倒事故与错位填写')">▶ 播放切片 (14s)</button>
+                    <button class="record-card-btn" id="rec-btn-q34" onclick="handleRecBtnClick('q34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q34" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q34">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q34')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q34')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q34')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">better <span class="blank-answer" title="点击查看正确答案">balance</span> reduces the risk of <span class="hl-loc">accidents</span></div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    <span class="hl-conn">And</span> there's plenty of evidence which suggests that dancing <span class="hl-swap">lowers the risk of</span> <span class="hl-loc">falls</span>, which could result in a broken hip, for example, <span class="hl-conn">by</span> <span class="hl-swap">helping people to improve their</span> <span class="hl-ans">balance</span>.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（你的复盘：“听到 balance 但前面是 improves，以为错过了，把它填到 35 题上去了，34 空着”）：</strong><br>
+1. <strong>定位路径</strong>：题干定位词 accidents 被改写成 <em>falls</em>（事故 ⇄ 摔倒，下义词具体化改写——摔倒正是老年人最典型的“事故”），你没认出它，以为 Q34 还没来；<br>
+2. <strong>改写对照</strong>：reduces the risk of ⇄ lowers the risk of（降低……的风险，同义动词）；better ⇄ improve（更好的 ⇄ 改善，形容词 ⇄ 动词词性转换）；<br>
+3. <strong>信号词</strong>：<em>by</em>（方式状语信号，“by + doing”结构后面常挂答案）；<br>
+4. <strong>避坑</strong>：你其实完整听到了 <em>improve their balance</em>，因为没认出 falls⇄accidents，判断“这题已经过了/还没来”，把 balance 错填进 Q35——这是“定位词改写识别失败 → 题序错位”的教科书案例。改写本必收：accidents ⇄ falls。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And</span> there's <span class="hl-loc">plenty of evidence</span> <span class="hl-conn">which suggests that</span> dancing lowers the risk of <span class="hl-swap">falls</span>, which could result in a <span class="hl-trap">broken hip</span>, for example, <span class="hl-conn">by</span> helping people to improve their <span class="hl-ans">balance [Q34]</span>.</div>
+                            <div class="cn-line">大量证据表明，跳舞能帮助人们改善<strong>平衡能力</strong>，从而降低摔倒的风险——摔倒可能导致髋部骨折。【Q34 → balance；accidents ⇄ falls（事故 ⇄ 摔倒，下义词具体化，这是你没听出来的地方）；which suggests that 领起证据，by + V-ing 才是方式，答案落在最后；broken hip 是举例干扰】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_35 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q35">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q35 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">⑤改写坑 + ③句意坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">定位词全部被改写</span>
+                    <h3 class="card-title">Q35: 跳舞加速 brain 大脑运转与 work faster 改写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_跳舞加速brain大脑运转与work_faster改写.mp3', 'PQ35: 跳舞加速 brain 大脑运转与 work faster 改写')">▶ 播放切片 (20s)</button>
+                    <button class="record-card-btn" id="rec-btn-q35" onclick="handleRecBtnClick('q35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q35" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q35">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q35')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q35')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q35')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">improves <span class="blank-answer" title="点击查看正确答案">brain</span> <span class="hl-swap">function</span> <span class="hl-swap">by making it work faster</span></div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    It also requires a lot of concentration <span class="hl-conn">because</span> you need to remember different steps and routines. For older people, this kind of activity is <span class="hl-conn">especially</span> important <span class="hl-conn">because</span> it <span class="hl-swap">forces their</span> <span class="hl-ans">brain</span> <span class="hl-swap">to process things more quickly</span> and to retain more information.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（你的复盘：“定位错误，改写定位词都没有听到”）：</strong><br>
+1. <strong>定位路径</strong>：题干两个“定位词”<em>function</em> 和 <em>work faster</em> 全部被改写，原文一个原词都没有——这是本篇改写幅度最大的一题，只能靠 Q34 balance 落笔后“顺序推进”来锚定；<br>
+2. <strong>改写对照</strong>：making it work faster ⇄ process things more quickly（让它运转更快 ⇄ 更快地处理事情，拟人化说法换成学术说法）；improves ... function ⇄ forces ... to（改善……的功能 ⇄ 迫使……去做，改善义换成强制义）；<br>
+3. <strong>信号词</strong>：<em>because</em> 连出两次（因果信号），第二个 because 从句里出答案；<em>especially</em>（强调信号）铺垫；<br>
+4. <strong>避坑</strong>：审题时就要预判“work faster 这种大白话 100% 会被换掉”，听的时候主动监听 quickly / speed / process 类近义词，而不是死等原词。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It also requires a lot of <span class="hl-swap">concentration</span> <span class="hl-conn">because</span> you need to remember different steps and routines.</div>
+                            <div class="cn-line">它还需要高度集中注意力，因为你必须记住不同的舞步和动作组合。【这是给下一句 brain 的铺垫，不含答案，别在这里落笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For older people, this kind of activity is <span class="hl-conn">especially</span> important <span class="hl-conn">because</span> it forces their <span class="hl-ans">brain [Q35]</span> <span class="hl-swap">to process things more quickly</span> and to retain more information.</div>
+                            <div class="cn-line">对老年人来说，这类活动尤其重要，因为它迫使他们的<strong>大脑</strong>更快地处理事情并记住更多信息。【Q35 → brain；improves brain function ⇄ forces their brain to…（改善大脑功能 ⇄ 迫使大脑去…）；work faster ⇄ process things more quickly（运转更快 ⇄ 处理得更快）；especially + because 双信号叠加，答案在 because 从句里】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_36 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q36">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">Q36 · 答对 ✓</span>
+                    <span class="card-tag tag-p1">⑤改写坑</span>
+                    <span class="card-tag" style="background:rgba(52,211,153,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.4);">并列信号稳稳接住</span>
+                    <h3 class="card-title">Q36: 更大 motivation 动力去锻炼</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_更大motivation动力去锻炼.mp3', 'PQ36: 更大 motivation 动力去锻炼')">▶ 播放切片 (14s)</button>
+                    <button class="record-card-btn" id="rec-btn-q36" onclick="handleRecBtnClick('q36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q36" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q36">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q36')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q36')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q36')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">gives people more <span class="blank-answer" title="点击查看正确答案">motivation</span> to <span class="hl-swap">take exercise</span></div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    Participants report feeling less tired <span class="hl-conn">and</span> <span class="hl-swap">having greater</span> <span class="hl-ans">motivation</span> <span class="hl-swap">to be more active and do daily activities</span> such as gardening or walking to the shops or a park.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（答对巩固）：</strong><br>
+1. <strong>定位路径</strong>：上句 <em>general sense of well-being</em>（整体幸福感）与题干 <em>improves participants' general well-being</em> 原词复现，是天然的“过路站牌”；<br>
+2. <strong>改写对照</strong>：gives people more ⇄ having greater（给予人们更多 ⇄ 拥有更大的）；take exercise ⇄ be more active and do daily activities（锻炼 ⇄ 更活跃、做日常活动，解释说明型改写，把“锻炼”展开成具体行为）；<br>
+3. <strong>信号词</strong>：<em>and</em>（并列信号，feeling less tired 与 having greater motivation 是并列双果，答案在第二个分支）；<br>
+4. <strong>避坑</strong>：motivation 长词重读清晰，词性吻合（more + 不可数名词），果断写。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">Participants</span> report feeling <span class="hl-swap">less tired</span> and having <span class="hl-swap">greater</span> <span class="hl-ans">motivation [Q36]</span> to be more active and do daily activities such as <span class="hl-trap">gardening</span> or walking to the shops or a park.</div>
+                            <div class="cn-line">参与者报告说感觉不那么疲劳，并且更有<strong>动力</strong>多运动、做园艺或步行去商店、公园等日常活动。【Q36 → motivation；gives people more motivation ⇄ having greater motivation（给人更多动力 ⇄ 拥有更大的动力）；more ⇄ greater 是同义替换；such as 后全是举例干扰】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_37 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q37">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">Q37 · 答对 ✓</span>
+                    <span class="card-tag tag-p1">⑤改写坑</span>
+                    <span class="card-tag" style="background:rgba(52,211,153,0.2); color:#34d399; border:1px solid rgba(52,211,153,0.4);">长铺垫后等来了答案</span>
+                    <h3 class="card-title">Q37: 减少老年人 isolation 孤独感</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_减少老年人isolation孤独感.mp3', 'PQ37: 减少老年人 isolation 孤独感')">▶ 播放切片 (20s)</button>
+                    <button class="record-card-btn" id="rec-btn-q37" onclick="handleRecBtnClick('q37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q37" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q37">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q37')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q37')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q37')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">can <span class="hl-swap">lessen the feeling of</span> <span class="blank-answer" title="点击查看正确答案">isolation</span>, very common in older people</div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    They require collaboration and often involve touching a dance partner, all of which encourages interaction on the dance floor. This helps to develop new relationships <span class="hl-conn">and</span> can <span class="hl-swap">reduce</span> older people's <span class="hl-swap">sense of</span> <span class="hl-ans">isolation</span>, which is <span class="hl-swap">a huge problem in many countries</span>.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（答对巩固）：</strong><br>
+1. <strong>定位路径</strong>： ballroom / country dancing、touching a dance partner 长达 15 秒的社交铺垫里没有答案——耐心等，别手痒；<br>
+2. <strong>改写对照</strong>：lessen ⇄ reduce（减少，同义动词）；the feeling of ⇄ sense of（……的感觉 ⇄ ……感，近义名词）；very common ⇄ a huge problem in many countries（很常见 ⇄ 许多国家的大问题，程度解释型改写）；<br>
+3. <strong>信号词</strong>：<em>and</em>（并列信号，develop new relationships 与 reduce isolation 是并列双果）；<br>
+4. <strong>避坑</strong>：isolation 是学术高频词（social isolation），听到 sense of 就该进入预备状态。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They require <span class="hl-swap">collaboration</span> and often involve touching a dance partner, all of <span class="hl-conn">which</span> encourages interaction on the dance floor.</div>
+                            <div class="cn-line">它们需要配合，通常还涉及与舞伴的身体接触，这些都能促进舞池中的互动。【这是 mutual interaction 的铺垫，不是隔离感本身，别抢写】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This helps to develop new relationships and can <span class="hl-swap">reduce</span> older people's sense of <span class="hl-ans">isolation [Q37]</span>, <span class="hl-conn">which is</span> a <span class="hl-trap">huge problem</span> in many countries.</div>
+                            <div class="cn-line">这有助于建立新的人际关系，并能减轻老年人的<strong>孤独感</strong>——这在许多国家都是个大问题。【Q37 → isolation；lessen the feeling of isolation ⇄ reduce … sense of isolation（减轻孤独感 ⇄ 减少孤独感）；very common ⇄ a huge problem（很普遍 ⇄ 大问题）：题干的第二个短语被写成 which 从句，只解释不换词】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_38 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q38">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q38 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">⑤改写坑 + ②生词坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">数字旁边的真身</span>
+                    <h3 class="card-title">Q38: 40 分钟 Zumba 燃烧 calories 卡路里</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_40分钟Zumba燃烧calories卡路里.mp3', 'PQ38: 40 分钟 Zumba 燃烧 calories 卡路里')">▶ 播放切片 (26s)</button>
+                    <button class="record-card-btn" id="rec-btn-q38" onclick="handleRecBtnClick('q38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q38" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q38">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q38')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q38')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q38')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">doing <span class="hl-loc">Zumba</span> for <span class="hl-loc">40 minutes</span> <span class="hl-swap">uses up as many</span> <span class="blank-answer" title="点击查看正确答案">calories</span> <span class="hl-swap">as other quite intense forms of exercise</span></div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    John Porcari, a professor of exercise and sports science at the <span class="hl-loc">University of Wisconsin</span>, analysed a group of women who were Zumba regulars <span class="hl-conn">and found that</span> a class lasting <span class="hl-loc">40 minutes</span> <span class="hl-swap">burns</span> about <span class="hl-trap">370</span> <span class="hl-ans">calories</span>. This is <span class="hl-swap">similar to moderately intense exercises</span> like step aerobics or kickboxing.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（你的复盘：“定位到了但没听懂啥意思，替换词和答案词都没有听到，答案词也听不懂”）：</strong><br>
+1. <strong>定位路径</strong>：Zumba、40 minutes 原词复现，University of Wisconsin 是题干原词，定位本身没问题——问题全在定位之后；<br>
+2. <strong>改写对照</strong>：uses up ⇄ burns（消耗 ⇄ 燃烧，核心动词改写，burn calories 是固定搭配，听不出 burns 整句就散架）；as many ... as other quite intense forms of exercise ⇄ similar to moderately intense exercises（与其他高强度运动一样多 ⇄ 与中等强度运动相似，比较结构换成形容词短语）；<br>
+3. <strong>信号词</strong>：<em>and found that</em>（研究发现宣告信号，后面必出核心数据）；<br>
+4. <strong>避坑</strong>：370 是数字干扰——题干要 ONE WORD 且空格前是 as many（后接可数复数），calories 才是“被消耗的东西”。calories 这个词本身要进生词本：/ˈkæləriz/ 卡路里。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">John Porcari</span>, a professor of exercise and sport science at the University of Wisconsin, <span class="hl-swap">analysed</span> a group of women who were <span class="hl-loc">Zumba</span> regulars and found that a class <span class="hl-swap">lasting 40 minutes</span> <span class="hl-swap">burns</span> about <span class="hl-swap">370</span> <span class="hl-ans">calories [Q38]</span>.</div>
+                            <div class="cn-line">威斯康星大学运动科学教授约翰·波尔卡里分析了一组经常跳尊巴的女性，发现一节 40 分钟的课能<strong>燃烧约 370 卡路里</strong>。【Q38 → calories；uses up ⇄ burns（消耗 ⇄ 燃烧）；doing Zumba for 40 minutes ⇄ a class lasting 40 minutes（跳 40 分钟 ⇄ 一节持续 40 分钟的课）；370 只是数字，空格要的是名词 calories】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This is similar to <span class="hl-swap">moderately intense exercises</span> like <span class="hl-trap">step aerobics</span> or <span class="hl-trap">kickboxing</span>.</div>
+                            <div class="cn-line">这与踏板操、跆拳道等中等强度运动相当。【quite intense forms of exercise ⇄ moderately intense exercises（相当高强度的运动 ⇄ 中等强度的运动）；like 后是举例干扰】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_39 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q39">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q39 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">②生词坑 + ⑥审题坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">轻读答案 + 错位连错</span>
+                    <h3 class="card-title">Q39: 肥胖 obesity 女性受益与 habit 错位</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_肥胖obesity女性受益与habit错位.mp3', 'PQ39: 肥胖 obesity 女性受益与 habit 错位')">▶ 播放切片 (20s)</button>
+                    <button class="record-card-btn" id="rec-btn-q39" onclick="handleRecBtnClick('q39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q39" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q39">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q39')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q39')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q39')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">women <span class="hl-swap">suffering from</span> <span class="blank-answer" title="点击查看正确答案">obesity</span> benefited from doing Zumba</div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    <span class="hl-conn">A study in the American Journal of Health Behaviour showed that</span> <span class="hl-conn">when</span> women <span class="hl-swap">with</span> <span class="hl-ans">obesity</span> did Zumba three times a week for 16 weeks, they lost an average of <span class="hl-trap">1.2 kilos</span> and lowered their percentage of body fat by <span class="hl-trap">1%</span>.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（你的复盘：“填了 habit 完美错位，导致 40 迟迟听不到答案”）：</strong><br>
+1. <strong>定位路径</strong>：<em>American Journal of Health Behaviour</em> 是题干小字里的原词路牌，showed that 后就是 Q39 区域；<br>
+2. <strong>改写对照</strong>：suffering from ⇄ with（遭受……的 ⇄ 患有……的——题干用现在分词 suffering，原文压缩成一个轻读介词 with，obesity 藏在介词短语里一闪而过）；<br>
+3. <strong>信号词</strong>：<em>showed that</em>（研究结果宣告）+ <em>when</em>（时间状语从句里挂主语修饰语）；<br>
+4. <strong>避坑</strong>：obesity 轻读没抓到 → 你举着笔等，19 秒后听到重读的 habit 就写进了 Q39——错位一题连错两题。1.2 kilos / 1% 都是研究结果干扰。教训：没抓到就果断跳，<em>women with...</em> 区域一过立刻预读 Q40 的 became a，把 habit 留给它真正的家。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A study in the American Journal of Health Behaviour showed that <span class="hl-conn">when</span> women <span class="hl-swap">with</span> <span class="hl-ans">obesity [Q39]</span> did <span class="hl-loc">Zumba</span> three times a week for 16 weeks, they <span class="hl-swap">lost an average of</span> <span class="hl-trap">1.2 kilos</span> and <span class="hl-swap">lowered their percentage of body fat by</span> <span class="hl-trap">1%</span>.</div>
+                            <div class="cn-line">《美国健康行为杂志》的一项研究表明，<strong>肥胖</strong>女性每周跳三次尊巴、坚持 16 周后，平均减重 1.2 公斤，体脂率下降 1%。【Q39 → obesity；suffering from obesity ⇄ women with obesity（患肥胖症 ⇄ 有肥胖问题的女性），with 极轻读，一滑就漏；benefited from ⇄ lost an average of 1.2 kilos / lowered body fat by 1%（受益 ⇄ 具体减重数据）；1.2 kilos 与 1% 是数字陷阱】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_40 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q40">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">Q40 · 答错 ✗</span>
+                    <span class="card-tag tag-p1">⑤改写坑 + ③句意坑</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">强调信号后出答案</span>
+                    <h3 class="card-title">Q40: Zumba 成为 habit 习惯与 made it 改写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_Zumba成为habit习惯与made_it改写.mp3', 'PQ40: Zumba 成为 habit 习惯与 made it 改写')">▶ 播放切片 (15s)</button>
+                    <button class="record-card-btn" id="rec-btn-q40" onclick="handleRecBtnClick('q40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-q40" style="display:none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot"></span>
+                    <span class="rec-status-text">🔴 正在录制你的跟读...</span>
+                    <span class="rec-timer-badge" id="rec-time-q40">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-btn-pill btn-play-user" onclick="playUserRecording('q40')">▶ 听我的跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q40')">🔄 对比原声</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q40')">🗑️ 删除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 (Question)</div>
+                    <div class="prompt-text">Zumba <span class="hl-swap">became a</span> <span class="blank-answer" title="点击查看正确答案">habit</span> for <span class="hl-loc">the participants</span></div>
+                </div>
+
+                <div class="transcript-box">
+                    <strong>录音原文（答案句切片）：</strong><br>
+                    <span class="hl-conn">More importantly</span>, <span class="hl-loc">the women</span> enjoyed the class <span class="hl-conn">so much that</span> they <span class="hl-swap">made it a</span> <span class="hl-ans">habit</span> <span class="hl-conn">and</span> continued to attend classes at least once a week, very unusual for an aerobic exercise programme.
+                </div>
+
+                <div class="diagnosis-box">
+                    <strong>🎯 考点拆解与定位路径（你的复盘：“定位到了但改写没有听懂，改写的句意没建立”）：</strong><br>
+1. <strong>定位路径</strong>：the participants ⇄ the women（参与者 ⇄ 这些女性，指代回前文研究对象），定位成立；<br>
+2. <strong>改写对照</strong>：became a ⇄ made it a（变成了一种 ⇄ 使之成为一种——题干系动词 became，原文换成“make + 宾语 + 宾补”结构，it 指代跳尊巴这件事）；<br>
+3. <strong>信号词</strong>：<em>More importantly</em>（强调信号，独白结尾段它来领路，后面几乎都是考点）+ <em>so ... that</em>（结果句式，答案在 that 从句里）；<br>
+4. <strong>避坑</strong>：你定位到了但 <em>made it a habit</em> 这个结构没在脑中成型，句意没建立就不敢写。改写本必收：become ⇄ make it + 名词。结尾 <em>very unusual</em> 只是评价，不含答案。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">More importantly</span>, the women enjoyed the class <span class="hl-conn">so much that</span> they <span class="hl-swap">made it a</span> <span class="hl-ans">habit [Q40]</span> and continued to attend classes at least once a week - <span class="hl-trap">very unusual</span> for an aerobic exercise programme.</div>
+                            <div class="cn-line">更重要的是，这些女性非常喜欢这门课，以至于把它变成了<strong>习惯</strong>，每周至少继续上一次课——这对有氧运动项目来说非常罕见。【Q40 → habit；Zumba became a habit ⇄ they made it a habit（成为习惯 ⇄ 使之成为习惯，became ⇄ made it a 是句式改写）；More importantly 是结尾段的强调信号，so … that 结果句式里藏答案；very unusual 是评价干扰】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD FULL PART 4 -->
+        <div class="slice-card" data-category="full part4" id="card-full4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-full">完整 Part 4 全录音</span>
+                    <span class="card-tag tag-p1">整段盲听验收</span>
+                    <h3 class="card-title">完整 Part 4：Health Benefits of Dance 舞蹈的健康益处讲座（含读题指导）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_4_Full_舞蹈健康益处讲座.mp3', '完整 Part 4：舞蹈的健康益处讲座')">▶ 播放全录音 (7m33s)</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="diagnosis-box">
+                    <strong>【完整音频实战目标】</strong>：完成 Q31/Q34/Q35/Q38/Q39/Q40 六张错题卡的精听后，播放本完整录音，拿白纸按考试节奏重新盲做一遍。重点演练：<strong>① 定位词后紧跟答案，不被 tasks 夹击（Q31 creativity）</strong>；<strong>② accidents ⇄ falls 的下义词具体化改写（Q34 balance）</strong>；<strong>③ work faster ⇄ process things more quickly 整句改写、一个原词不留（Q35 brain）</strong>；<strong>④ uses up ⇄ burns + 40 minutes 时间换算（Q38 calories）</strong>；<strong>⑤ 轻读 with obesity 一滑就漏、数字 1.2 kilos / 1% 别抢（Q39 obesity）</strong>；<strong>⑥ More importantly + so…that 后落笔，became ⇄ made it a（Q40 habit）</strong>。
+                </div>
+                <div class="diagnosis-box" style="margin-top:10px;">
+                    <strong>使用方法：</strong>10 个答案句切片精听全部毕业后，用这条完整音频做整段盲听验收（模拟真实考试节奏：读题 → 连续听 → 不停顿）。听不出来的句子立刻回到对应题号切片单独补。全文对照如下，全景五色标注：🔵 定位词 / 🟡 题干⇄原文替换 / 🩷 转折连词信号 / 🟢 答案 / 🔴 干扰陷阱，【】内为对应题号与答案。
+                </div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Part 4 官方完整录音原文与逐句精读翻译（100% 完整不删减 · 五色标注） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Dancing is something that humans do when they want to have a good time.</div>
+                            <div class="cn-line">跳舞是人们想要开心时就会做的事。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's a universal response to music, found in all cultures.</div>
+                            <div class="cn-line">这是所有文化中都存在的一种对音乐的普遍反应。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">But</span> what's only been discovered recently is that dancing <span class="hl-conn">not only</span> makes us feel good, it's also extremely good for our health.</div>
+                            <div class="cn-line">但直到最近人们才发现，跳舞不仅让我们感觉良好，还对健康极为有益。【But 开场定调：本讲从“开心”转向“健康益处”，后面全是考点】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Dancing, like other forms of exercise, releases hormones, such as <span class="hl-trap">dopamine</span>, <span class="hl-conn">which</span> make us feel relaxed and happy.</div>
+                            <div class="cn-line">跳舞和其他运动形式一样，会释放多巴胺等激素，让我们感到放松和快乐。【dopamine 是举例干扰，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And</span> it also reduces feelings of <span class="hl-trap">stress or anxiety</span>.</div>
+                            <div class="cn-line">它还能减轻压力和焦虑感。【并列补充，无空格；注意力保持在线等下一段】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Dancing is also a sociable activity, which is another reason it makes us feel good.</div>
+                            <div class="cn-line">跳舞也是一种社交活动，这是它让我们感觉良好的另一个原因。【引出“社交”这条线，Q37 的伏笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One study compared people's enjoyment of dancing at home in front of a video with dancing in a group in a studio.</div>
+                            <div class="cn-line">一项研究比较了人们在家对着视频跳舞和在舞蹈室集体跳舞的愉悦程度。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The people dancing in a group reported feeling happier, <span class="hl-conn">whereas</span> those dancing alone did not.</div>
+                            <div class="cn-line">集体跳舞的人感觉更快乐，独自跳舞的人则没有。【whereas 对比信号，一般不出答案，只交代结论】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In another <span class="hl-loc">experiment</span>, <span class="hl-loc">university</span> researchers at York and Sheffield took a group of <span class="hl-loc">students</span> and sent each of them into a lab where music was played for five minutes.</div>
+                            <div class="cn-line">在另一项实验中，约克大学和谢菲尔德大学的研究人员让一组学生分别进入一个播放五分钟音乐的实验室。【Q31 定位三连：experiment / university / students，全原词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Each had to choose from three options: to sit and listen quietly to the music, to cycle on an exercise bike while they listened, or to get up and dance.</div>
+                            <div class="cn-line">每个人要从三个选项中选择：坐着安静听音乐、边听边骑健身车，或起身跳舞。【三个选项是铺垫，答案在后面的结果句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> All were given <span class="hl-trap">cognitive tasks</span> to perform before and after.</div>
+                            <div class="cn-line">所有人在实验前后都要完成认知任务。【第一个 task 干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">The result showed that</span> those who chose to dance <span class="hl-swap">showed much more</span> <span class="hl-ans">creativity [Q31]</span> when doing <span class="hl-trap">problem-solving tasks</span>.</div>
+                            <div class="cn-line">结果显示，选择跳舞的人在解决任务时表现出明显更强的<strong>创造力</strong>。【Q31 → creativity；increases ⇄ showed much more；句尾 tasks 是第二个干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Dr Lovett at the University of Hertfordshire believes dance could be a very useful way to help people suffering from <span class="hl-swap">mental health problems</span>.</div>
+                            <div class="cn-line">赫特福德大学的洛瓦特博士认为，跳舞是帮助心理健康问题患者的一种非常有用的方式。【mental illness ⇄ mental health problems】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">He thinks</span> dance should be <span class="hl-swap">prescribed as</span> <span class="hl-ans">therapy [Q32]</span> to help people overcome issues such as <span class="hl-trap">depression</span>.</div>
+                            <div class="cn-line">他认为应该把跳舞作为<strong>治疗手段</strong>开给病人，帮助他们克服抑郁等问题。【Q32 → therapy；be used as a form of ⇄ be prescribed as；depression 是举例】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's well established that dance is a good way of encouraging adolescent girls to take exercise <span class="hl-conn">but what about</span> older people?</div>
+                            <div class="cn-line">跳舞是鼓励青春期女孩锻炼的好方法，这一点已得到充分证实，但老年人呢？【but what about 是话题切换信号：从青少年切到老年组，Q33 从这里开始】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">Studies have shown</span> that there are enormous benefits for people in their sixties <span class="hl-conn">and beyond</span>.</div>
+                            <div class="cn-line">研究表明，跳舞对六十岁及以上的人群有巨大益处。【older people ⇄ people in their sixties and beyond】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One of the great things about dance is that there are <span class="hl-swap">no barriers to participation</span>.</div>
+                            <div class="cn-line">跳舞的一大优点是没有参与门槛。【accessible ⇄ no barriers to participation】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Anyone can have a go, <span class="hl-conn">even</span> those whose standard of <span class="hl-ans">fitness [Q33]</span> is <span class="hl-swap">quite low</span>.</div>
+                            <div class="cn-line">任何人都可以尝试，<strong>即使是</strong>体能水平相当低的人。【Q33 → fitness；low levels of fitness ⇄ standard of fitness is quite low；even 强调后出答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Dance can be <span class="hl-conn">especially</span> beneficial for older adults who can't run or do more intense workouts, or for those who don't want to.</div>
+                            <div class="cn-line">跳舞尤其适合那些不能跑步或做高强度锻炼的老年人，或者不想做的人。【especially 再次强调，但本句无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One 2015 study found that <span class="hl-conn">even</span> a gentle dance workout helps to promote a healthy heart.</div>
+                            <div class="cn-line">2015 年的一项研究发现，即使是舒缓的舞蹈锻炼也有助于促进心脏健康。【even 让步，说明“强度低也有效”，为 Q33 的 fitness 做侧面支撑】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And</span> there's <span class="hl-loc">plenty of evidence</span> <span class="hl-conn">which suggests that</span> dancing lowers the risk of <span class="hl-swap">falls</span>, which could result in a <span class="hl-trap">broken hip</span>, for example, <span class="hl-conn">by</span> helping people to improve their <span class="hl-ans">balance [Q34]</span>.</div>
+                            <div class="cn-line">大量证据表明，跳舞能帮助人们改善<strong>平衡能力</strong>，从而降低摔倒的风险——摔倒可能导致髋部骨折。【Q34 → balance；accidents ⇄ falls；by + V-ing 引出方式，答案在句末；broken hip 是举例】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> There are some less obvious benefits of dance for older people <span class="hl-conn">too</span>.</div>
+                            <div class="cn-line">跳舞对老年人还有一些不太明显的好处。【too = 又一层，提示新考点群开始（Q35 起）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One thing I hadn't realised before researching this topic was that dance isn't <span class="hl-conn">just</span> a physical challenge.</div>
+                            <div class="cn-line">在研究这个课题之前，我没有意识到跳舞不仅仅是体能上的挑战。【not just 引出“还有别的”，下一句才是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It also requires a lot of <span class="hl-swap">concentration</span> <span class="hl-conn">because</span> you need to remember different steps and routines.</div>
+                            <div class="cn-line">它还需要高度集中注意力，因为你必须记住不同的舞步和动作组合。【给 Q35 铺垫，不含答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For older people, this kind of activity is <span class="hl-conn">especially</span> important <span class="hl-conn">because</span> it forces their <span class="hl-ans">brain [Q35]</span> <span class="hl-swap">to process things more quickly</span> and to retain more information.</div>
+                            <div class="cn-line">对老年人来说，这类活动尤其重要，因为它迫使他们的<strong>大脑</strong>更快地处理事情并记住更多信息。【Q35 → brain；improves brain function ⇄ forces their brain to…；work faster ⇄ process things more quickly】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Current research also shows that dance promotes a general sense of well-being in older participants, which can last up to a week after a class.</div>
+                            <div class="cn-line">目前的研究还表明，跳舞能提升老年参与者的整体幸福感，这种效果在课后可以持续长达一周。【well-being 是干扰概念，不是 Q36 的 motivation】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">Participants</span> report feeling <span class="hl-swap">less tired</span> and having <span class="hl-swap">greater</span> <span class="hl-ans">motivation [Q36]</span> to be more active and do daily activities such as <span class="hl-trap">gardening</span> or walking to the shops or a park.</div>
+                            <div class="cn-line">参与者报告说感觉不那么疲劳，并且更有<strong>动力</strong>多运动、做园艺或步行去商店、公园等日常活动。【Q36 → motivation；gives people more motivation ⇄ having greater motivation；more ⇄ greater；such as 后举例干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Ballroom or country dancing, both popular with older people, have to be done in groups.</div>
+                            <div class="cn-line">交际舞和乡村舞都深受老年人喜爱，而且必须集体进行。【引出“集体”这条线，Q37 的定位在这里】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They require <span class="hl-swap">collaboration</span> and often involve touching a dance partner, all of <span class="hl-conn">which</span> encourages interaction on the dance floor.</div>
+                            <div class="cn-line">它们需要配合，通常还涉及与舞伴的身体接触，这些都能促进舞池中的互动。【which 指代前面整句，是 Q37 的铺垫，不是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This helps to develop new relationships and can <span class="hl-swap">reduce</span> older people's sense of <span class="hl-ans">isolation [Q37]</span>, <span class="hl-conn">which is</span> a <span class="hl-trap">huge problem</span> in many countries.</div>
+                            <div class="cn-line">这有助于建立新的人际关系，并能减轻老年人的<strong>孤独感</strong>——这在许多国家都是个大问题。【Q37 → isolation；lessen the feeling of isolation ⇄ reduce … sense of isolation；very common ⇄ a huge problem，后置 which 从句解释题干后半句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> I also looked at the benefits of <span class="hl-loc">Zumba</span>.</div>
+                            <div class="cn-line">我还研究了尊巴舞的好处。【话题切换信号：进入 Zumba 数据段（Q38-Q40）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Fifteen million people in 180 countries now regularly take a <span class="hl-loc">Zumba</span> class, an aerobic workout based on Latin American dance moves.</div>
+                            <div class="cn-line">目前，180 个国家的 1500 万人定期参加尊巴课，这是一种基于拉丁美洲舞蹈动作的有氧运动。【15 million / 180 是数字干扰，本句无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">John Porcari</span>, a professor of exercise and sport science at the University of Wisconsin, <span class="hl-swap">analysed</span> a group of women who were <span class="hl-loc">Zumba</span> regulars and found that a class <span class="hl-swap">lasting 40 minutes</span> <span class="hl-swap">burns</span> about <span class="hl-swap">370</span> <span class="hl-ans">calories [Q38]</span>.</div>
+                            <div class="cn-line">威斯康星大学运动科学教授约翰·波尔卡里分析了一组经常跳尊巴的女性，发现一节 40 分钟的课能<strong>燃烧约 370 卡路里</strong>。【Q38 → calories；uses up ⇄ burns；doing Zumba for 40 minutes ⇄ a class lasting 40 minutes；370 是数字，空格要名词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This is similar to <span class="hl-swap">moderately intense exercises</span> like <span class="hl-trap">step aerobics</span> or <span class="hl-trap">kickboxing</span>.</div>
+                            <div class="cn-line">这与踏板操、跆拳道等中等强度运动相当。【quite intense forms of exercise ⇄ moderately intense exercises；like 后举例】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A study in the American Journal of Health Behaviour showed that <span class="hl-conn">when</span> women <span class="hl-swap">with</span> <span class="hl-ans">obesity [Q39]</span> did Zumba three times a week for 16 weeks, they <span class="hl-swap">lost an average of</span> <span class="hl-trap">1.2 kilos</span> and <span class="hl-swap">lowered their percentage of body fat by</span> <span class="hl-trap">1%</span>.</div>
+                            <div class="cn-line">《美国健康行为杂志》的一项研究表明，<strong>肥胖</strong>女性每周跳三次尊巴、坚持 16 周后，平均减重 1.2 公斤，体脂率下降 1%。【Q39 → obesity；suffering from obesity ⇄ women with obesity，with 极轻读；benefited from ⇄ 后面那串具体数据；1.2 kilos / 1% 是数字陷阱】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">More importantly</span>, the women enjoyed the class <span class="hl-conn">so much that</span> they <span class="hl-swap">made it a</span> <span class="hl-ans">habit [Q40]</span> and continued to attend classes at least once a week - <span class="hl-trap">very unusual</span> for an aerobic exercise programme.</div>
+                            <div class="cn-line">更重要的是，这些女性非常喜欢这门课，以至于把它变成了<strong>习惯</strong>，每周至少继续上一次课——这对有氧运动项目来说非常罕见。【Q40 → habit；Zumba became a habit ⇄ they made it a habit；More importantly + so … that 双信号；very unusual 是评价干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Dance is <span class="hl-conn">never</span> going to compete with high-intensity workouts <span class="hl-conn">when it comes to</span> physical fitness gains, <span class="hl-conn">but</span> its popularity is likely to keep on rising <span class="hl-conn">because</span> it's such a fun way to keep fit.</div>
+                            <div class="cn-line">在体能提升方面，跳舞永远无法与高强度锻炼相比，但它很可能会越来越受欢迎，因为它是一种如此有趣的健身方式。【结尾让步 + 转折 + 原因，无空格，但这是 Part 4 结尾的标准套路】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <p>雅思听力 7 坑与 3+2 复盘系统 · 剑桥雅思 16 Test 2 Part 1 靶向音频切片点播台</p>
+        <p>雅思听力 7 坑与 3+2 复盘系统 · 剑桥雅思 16 Test 2 Part 1 + Part 4 靶向音频切片点播台</p>
     </footer>
 </div>
 
@@ -1657,13 +2586,26 @@
     const nowPlayingText = document.getElementById('now-playing-text');
     let isLooping = false;
 
+    const audioBlobCache = {};
+
     function playAudio(filename, title) {
         if (!mainAudio) return;
-        mainAudio.src = filename;
-        mainAudio.play();
-        if (nowPlayingText) {
-            nowPlayingText.innerHTML = `<span>▶ 正在播放：${title}</span>`;
-        }
+        const startPlay = (src) => {
+            mainAudio.src = src;
+            mainAudio.loop = isLooping;
+            mainAudio.play();
+            if (nowPlayingText) {
+                nowPlayingText.innerHTML = `<span>▶ 正在播放：${title}</span>`;
+            }
+        };
+        if (audioBlobCache[filename]) { startPlay(audioBlobCache[filename]); return; }
+        fetch(filename).then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.blob();
+        }).then(b => {
+            audioBlobCache[filename] = URL.createObjectURL(b);
+            startPlay(audioBlobCache[filename]);
+        }).catch(() => startPlay(filename));
     }
 
     function replayAudio() {

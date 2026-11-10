@@ -669,22 +669,46 @@
 }
 
 </style>
+<style>
+/* ===== Part 4 五色标注体系 ===== */
+.hl-loc { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); font-weight: 700; padding: 0 2px; }
+.hl-swap { background: rgba(251, 191, 36, 0.16); color: var(--accent-amber); padding: 1px 5px; border-radius: 4px; border-bottom: 2px dashed var(--accent-amber); font-weight: 600; }
+.hl-conn { color: #f472b6; font-weight: 700; background: rgba(244, 114, 182, 0.14); padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #f472b6; }
+.hl-ans { color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.15); padding: 1px 5px; border-radius: 4px; }
+.hl-trap { color: #f87171; font-weight: 700; text-decoration: line-through; background: rgba(248, 113, 113, 0.15); padding: 1px 5px; border-radius: 4px; }
+.cn-note { display:block; margin:6px 0 0; font-size:.84rem; line-height:1.7; color:#fbbf24; background:rgba(251,191,36,.08); border-left:3px solid rgba(251,191,36,.55); padding:4px 9px; border-radius:4px; }
+.divider-card { border-left: 5px solid var(--accent-purple); background: rgba(192, 132, 252, 0.08); }
+.divider-card h2 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--accent-purple); }
+.divider-card p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.7; }
+.legend-card { border-left: 5px solid var(--accent-blue); background: rgba(56, 189, 248, 0.07); }
+.legend-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.legend-row > span { font-size: .84rem; }
+.legend-row .hl-trap { text-decoration: none; }
+.q-stem-box { background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.28); border-radius: 8px; padding: 10px 14px; margin: 10px 0; }
+.q-stem-box .qs-label { font-size: .76rem; color: var(--accent-blue); letter-spacing: .04em; display: block; margin-bottom: 4px; }
+.q-stem-box .qs-text { font-size: 1rem; line-height: 1.75; }
+.blank-answer { display: inline-block; min-width: 74px; text-align: center; border-bottom: 1.5px solid var(--accent-green); color: var(--accent-green); font-weight: 700; padding: 0 6px; }
+</style>
 </head><body><div class="container">
 <div class="nav-back-bar"><a class="nav-link" href="../切片/index.html">📂 返回切片总目录</a><a class="nav-link" href="../剑桥16_Test4_听力Part1_七坑与3+2复盘汇总表.md">📊 打开复盘汇总表</a><a class="nav-link" href="../C16T3_错题音频切片/C16T3_错题切片点播台.html">➔ 剑16 T3 点播台</a></div>
-<header><h1>剑桥雅思 16 Test 4 Part 1 · 答案句切片点播台</h1><p>Holiday rental · 28th / Chervil / garden / bridge 的精听与拼读训练</p></header>
+<header><h1>剑桥雅思 16 Test 4 Part 1 + Part 4 · 答案句切片点播台</h1><p>Part 1 Holiday Rental 度假屋租赁 · Part 4 The Extinction of the Dodo 渡渡鸟灭绝讲座 · 定位词 / 逻辑信号词 / 替换改写五色标注</p></header>
 <div class="full-audio-banner"><div class="full-audio-info"><h3>🎧 Part 1 完整连续原声（约 06:40）</h3><p>包含播音员说明、读题停顿、对话及检查时间。</p></div><button class="play-card-btn" onclick="playAudio('Section_1_Full_Holiday_Rental.mp3','Part 1 完整录音：Holiday Rental', this)">▶ 播放完整 Part 1</button></div>
 <div class="sticky-player"><div class="player-info"><div class="now-playing-title" id="now-playing-text">🎵 待播：点击切片开始练习</div><div class="btn-group"><button class="pill-btn" id="loop-btn" onclick="toggleLoop()">🔁 单曲循环: 关</button></div></div>
 <audio id="main-audio" controls preload="auto">浏览器不支持音频播放。</audio>
-<div class="player-controls"><span class="highlight-legend">高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> ｜ <span class="ans-highlight">■ 答案词</span> ｜ <span class="trap-highlight">■ 干扰项</span></span><div class="btn-group"><button class="pill-btn" onclick="skipTime(-5)">⏪ 后退 5s</button><button class="pill-btn" onclick="skipTime(5)">⏩ 前进 5s</button><button class="pill-btn" onclick="replayAudio()">🔄 重头精听</button></div><div class="btn-group"><span>倍速:</span><button class="pill-btn" onclick="setSpeed(0.8,this)">0.8x</button><button class="pill-btn active" onclick="setSpeed(1,this)">1.0x</button><button class="pill-btn" onclick="setSpeed(1.25,this)">1.25x</button><button class="pill-btn" onclick="setSpeed(1.5,this)">1.5x</button></div></div></div>
-<div class="tips-panel"><div class="tips-title">💡 4 步靶向精听法（参照 C7T1）</div>
+<div class="player-controls"><span class="highlight-legend">高亮图例：<span class="hl-loc">■ 定位词</span> ｜ <span class="hl-swap">■ 题干⇄原文替换</span> ｜ <span class="hl-conn">■ 转折/连词信号</span> ｜ <span class="hl-ans">■ 答案</span> ｜ <span class="hl-trap">■ 干扰</span></span><div class="btn-group"><button class="pill-btn" onclick="skipTime(-5)">⏪ 后退 5s</button><button class="pill-btn" onclick="skipTime(5)">⏩ 前进 5s</button><button class="pill-btn" onclick="replayAudio()">🔄 重头精听</button></div><div class="btn-group"><span>倍速:</span><button class="pill-btn" onclick="setSpeed(0.8,this)">0.8x</button><button class="pill-btn active" onclick="setSpeed(1,this)">1.0x</button><button class="pill-btn" onclick="setSpeed(1.25,this)">1.25x</button><button class="pill-btn" onclick="setSpeed(1.5,this)">1.5x</button></div></div></div>
+<div class="tips-panel"><div class="tips-title">💡 8 步靶向精练指南（Part 1 四步通用 + Part 4 四步专项）</div>
 <ol class="tips-list">
 <li><strong>Step 1 先读看懂：</strong>展开每题原文与翻译，找出黄色定位词、绿色答案词和红色干扰项。</li>
 <li><strong>Step 2 出声朗读：</strong>跟着音频把答案句读 3 遍，留意日期、拼读或连读。</li>
 <li><strong>Step 3 合上盲听：</strong>收起原文，把切片单曲循环 2–3 遍，再从定位词独立写出答案。</li>
 <li><strong>Step 4 录音跟读：</strong>录下自己的跟读，先试听，再点「对比原声」找出听读卡壳处。</li>
+<li><strong>Step 5 定位词先落地，别在定位句抢写（Part 4 Q31/Q34/Q40）：</strong>卷面给的几乎都是原词（Portuguese ships / soft tissue / meant），但答案不在定位句本身——Q31 的答案在下一小句 The sailors were carrying ___ 里，Q40 的答案在被两个定语从句包住的主语 forest 上。</li>
+<li><strong>Step 6 盯连词门铃再落笔（Part 4）：</strong>本篇 6 道错题里 5 道的答案挂在 but / However / In fact / so 之后——听到这些词立刻把笔移到空格上。</li>
+<li><strong>Step 7 词性自检过滤器（Part 4 Q34/Q35/Q37/Q40）：</strong>capable of ___ 只能填名词（movement）；Their ___ was of average size 只能填名词（brain）；The ___ was destroyed 只能填名词（forest）；dried ___ 只能填名词（head）。重读词词性不对，立刻丢弃。</li>
+<li><strong>Step 8 抗后置与从句干扰（Part 4 Q35/Q37/Q39/Q40）：</strong>fast、body size、home 都是答案之后或从句里的词；听到 they were a particular danger … because 这种"主句 + because"结构，答案在主句，不要在从句里找。</li>
 </ol></div>
 <div class="shadow-guide-box"><div class="shadow-guide-title"><span>🎙️ <strong>跟读录音与原声对比</strong></span><span class="shadow-guide-tag">录后可试听、对比、重录</span></div>每张卡片都有「录音跟读」按钮；完成后可试听自己的录音、对比原声、重新跟读或清除。录音仅在当前页面内暂存，刷新页面会重置。</div><div class="tips-panel"><div class="tips-title">本套复盘提醒</div><p>Q9、Q10 已按你的补充标记正确。Q1 依你的自评作为日期格式练习；部分资料也接受数字 28。</p></div>
-<div class="filter-tabs"><button class="tab-btn active" onclick="filterCategory('all',this)">全部切片与完整录音 (11)</button><button class="tab-btn" onclick="filterCategory('wrong',this)">需复盘 (4)</button><button class="tab-btn" onclick="filterCategory('correct',this)">答对 (6)</button><button class="tab-btn" onclick="filterCategory('full',this)">🎧 Part 1 完整录音</button></div>
+<div class="filter-tabs"><button class="tab-btn active" onclick="filterCategory('all',this)">全部切片与完整录音 (24)</button><button class="tab-btn" onclick="filterCategory('wrong',this)">错题 (10)</button><button class="tab-btn" onclick="filterCategory('correct',this)">答对 (10)</button><button class="tab-btn" onclick="filterCategory('part4',this)">🔻 Part 4 全部 (13)</button><button class="tab-btn" onclick="filterCategory('full',this)">🎧 完整录音 (2)</button></div>
 <div class="slice-list">
         <div class="slice-card" data-category="wrong" id="card-q1">
             <div class="card-header"><div><span class="card-tag tag-wrong">Q1 · ✗</span><span class="card-tag tag-p1">⑥格式 / P2 转折改期</span><h3 class="card-title">Q1: 28th · 写了 28；听到定位，但把日期序数词写成基数数字</h3></div>
@@ -1067,92 +1091,92 @@
                             <div class="cn-line">你好？</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh hello. I was hoping to speak to Jack Fitzgerald about renting a cottage.</div>
-                            <div class="cn-line">你好。我想找杰克·菲茨杰拉德，谈谈租度假小屋的事。</div>
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh hello. I was hoping to speak to Jack Fitzgerald about <span class="hl-loc">renting a cottage</span>.</div>
+                            <div class="cn-line">你好。我想找杰克·菲茨杰拉德，谈谈租度假小屋的事。<span class="cn-note">【Q1 定位：renting a cottage ⇄ 卷面 available for week beginning】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> I’m his wife, Shirley, and we own the cottages together, so I’m sure I can help you.</div>
                             <div class="cn-line">我是他的妻子雪莉，小屋是我们共同经营的，我应该能帮你。</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Great. My name’s Tom. Some friends of ours rented Granary Cottage from you last year, and they thought it was great. So my wife and I are hoping to come in May for a week.</div>
-                            <div class="cn-line">太好了。我叫汤姆。朋友去年租过你们的 Granary Cottage，评价很好，所以我和妻子想五月来住一周。</div>
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Great. My name’s Tom. Some friends of ours rented <span class="hl-loc">Granary Cottage</span> from you last year, and they thought it was great. So my wife and I are hoping to come in <span class="hl-loc">May</span> for a week.</div>
+                            <div class="cn-line">太好了。我叫汤姆。朋友去年租过你们的 Granary Cottage，评价很好，所以我和妻子想五月来住一周。<span class="cn-note">【Q1 场景：Granary Cottage + in May，锁定预订对象与月份】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> What date did you have in mind?</div>
-                            <div class="cn-line">你想从哪天开始？</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> <span class="hl-loc">What date</span> did you have in mind?</div>
+                            <div class="cn-line">你想从哪天开始？<span class="cn-note">【Q1 定位：What date ⇄ 卷面 week beginning】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> The week beginning the 14th, if possible.</div>
-                            <div class="cn-line">如果可以，从十四日开始的那周。</div>
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> <span class="hl-trap">The week beginning the 14th</span>, if possible.</div>
+                            <div class="cn-line">如果可以，从十四日开始的那周。<span class="cn-note">【Q1 干扰：14th 是提出后已被订满的日期】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> I’ll just check … I’m sorry, Tom, it’s already booked that week. It’s free the week beginning the 28th, though, for seven nights. In fact, that’s the only time you could have it in May.</div>
-                            <div class="cn-line">我查一下……抱歉，汤姆，那周已经订出去了。不过二十八日开始的一周还有空，能住七晚。实际上五月只有这段时间有房。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> I’ll just check … I’m sorry, Tom, it’s <span class="hl-swap">already booked</span> that week. <span class="hl-swap">It’s free</span> the <span class="hl-loc">week beginning</span> the <span class="hl-ans">28th</span>, <span class="hl-conn">though</span>, for seven nights. <span class="hl-conn">In fact</span>, that’s the only time you could have it in May.</div>
+                            <div class="cn-line">我查一下……抱歉，汤姆，那周已经订出去了。不过二十八日开始的一周还有空，能住七晚。实际上五月只有这段时间有房。<span class="cn-note">【Q1 答案：28th；already booked ⇄ 卷面已排除 14th；though 转折提示真正可订的是后一个日期】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh. Well, we could manage that, I think. We’d just need to change a couple of things. How much would it cost?</div>
-                            <div class="cn-line">哦，我想我们可以调整，只需改动几个安排。费用是多少？</div>
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh. Well, we could manage that, I think. We’d just need to change a couple of things. <span class="hl-loc">How much would it cost?</span></div>
+                            <div class="cn-line">哦，我想我们可以调整，只需改动几个安排。费用是多少？<span class="cn-note">【Q2 定位：How much would it cost ⇄ 卷面 cost for the week】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s the beginning of high season, so it’d be £550 for the week.</div>
-                            <div class="cn-line">那是旺季开始，一周要五百五十英镑。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s the beginning of high season, <span class="hl-conn">so</span> <span class="hl-swap">it’d be</span> £<span class="hl-ans">550</span> for the week.</div>
+                            <div class="cn-line">那是旺季开始，一周要五百五十英镑。<span class="cn-note">【Q2 答案：£550（Granary Cottage 一周报价）】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Ah. That’s a bit more than we wanted to pay, I’m afraid. We’ve budgeted up to £500 for accommodation.</div>
-                            <div class="cn-line">这比我们希望支付的多一些。我们为住宿最多准备了五百英镑。</div>
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Ah. That’s a bit more than we wanted to pay, I’m afraid. We’ve budgeted up to £<span class="hl-trap">500</span> for accommodation.</div>
+                            <div class="cn-line">这比我们希望支付的多一些。我们为住宿最多准备了五百英镑。<span class="cn-note">【Q2 干扰：£500 是租客预算上限，不是房价】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Well, we’ve just finished converting another building into a cottage, which we’re calling Chervil Cottage.</div>
-                            <div class="cn-line">我们刚把另一栋建筑改造成小屋，取名叫 Chervil Cottage。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Well, we’ve just finished converting another building into a cottage, which we’re calling <span class="hl-ans">Chervil Cottage</span>.</div>
+                            <div class="cn-line">我们刚把另一栋建筑改造成小屋，取名叫 Chervil Cottage。<span class="cn-note">【Q3 答案：Chervil Cottage（新改造的那间）】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Sorry? What was that again?</div>
                             <div class="cn-line">抱歉？叫什么？</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Chervil. C-H-E-R-V for Victor I-L.</div>
-                            <div class="cn-line">Chervil。拼作 C-H-E-R-V（V 是 Victor 的 V）-I-L。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> <span class="hl-ans">Chervil</span>. C-H-E-R-V <span class="hl-trap">for Victor</span> I-L.</div>
+                            <div class="cn-line">Chervil。拼作 C-H-E-R-V（V 是 Victor 的 V）-I-L。<span class="cn-note">【Q3 拼读：C-H-E-R-V for Victor I-L；“for Victor” 只说明字母 V，不写进答案】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Oh, that’s a herb, isn’t it?</div>
                             <div class="cn-line">哦，这是一种香草，对吗？</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. It grows fairly wild around here. You could have that for the week you want for £480.</div>
-                            <div class="cn-line">对，这附近野生的很多。你想要的那一周，这间房是四百八十英镑。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. It grows fairly wild around here. You could have that for the week you want for £<span class="hl-ans">480</span>.</div>
+                            <div class="cn-line">对，这附近野生的很多。你想要的那一周，这间房是四百八十英镑。<span class="cn-note">【Q3 价格：£480，对应卷面 cost for the week】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> OK. So could you tell me something about it, please?</div>
                             <div class="cn-line">好的。能介绍一下那间小屋吗？</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Of course. The building was built as a garage. It’s a little smaller than Granary Cottage.</div>
-                            <div class="cn-line">当然。这栋建筑原本是车库，比 Granary Cottage 略小。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Of course. <span class="hl-loc">The building</span> was <span class="hl-swap">built as</span> a <span class="hl-ans">garage</span>. It’s a little smaller than Granary Cottage.</div>
+                            <div class="cn-line">当然。这栋建筑原本是车库，比 Granary Cottage 略小。<span class="cn-note">【Q4 改写：originally ⇄ was built as；答案 garage。后面的 double bedroom 是现状】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> So that must sleep two people, as well?</div>
                             <div class="cn-line">它也能住两个人吧？</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. There’s a double bedroom.</div>
-                            <div class="cn-line">对，有一间双人卧室。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> That’s right. There’s a <span class="hl-trap">double bedroom</span>.</div>
+                            <div class="cn-line">对，有一间双人卧室。<span class="cn-note">【Q5 干扰：double bedroom 是房间布局，不是门通向的地方】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Does it have a garden?</div>
-                            <div class="cn-line">有花园吗？</div>
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Does it have a <span class="hl-ans">garden</span>?</div>
+                            <div class="cn-line">有花园吗？<span class="cn-note">【Q5 答案：garden；下一句的 it 回指它】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, you get to it from the living room through French doors, and we provide two deckchairs. We hope to build a patio in the near future, but I wouldn’t like to guarantee it’ll be finished by May.</div>
-                            <div class="cn-line">有，从客厅穿过法式玻璃门就能到花园；我们提供两把躺椅。我们希望近期建露台，但不能保证五月前完工。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, you get to it <span class="hl-loc">from the living room through French doors</span>, and we provide two deckchairs. We hope to build a <span class="hl-trap">patio</span> in the near future, <span class="hl-conn">but</span> I wouldn’t like to guarantee it’ll be finished by May.</div>
+                            <div class="cn-line">有，从客厅穿过法式玻璃门就能到花园；我们提供两把躺椅。我们希望近期建露台，但不能保证五月前完工。<span class="cn-note">【Q5 改写：walk through doors from living room ⇄ get to it from the living room through French doors】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> OK.</div>
                             <div class="cn-line">好的。</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> The front door opens onto the old farmyard, and parking isn’t a problem – there’s plenty of room at the front for that. There are some trees and potted plants there.</div>
-                            <div class="cn-line">前门通向旧农家庭院，停车不成问题，前面有很宽敞的停车空间。那里还有树和盆栽。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> The front door opens onto the old farmyard, and <span class="hl-ans">parking</span> isn’t a problem – there’s <span class="hl-swap">plenty of room at the front</span> for that. There are some trees and potted plants there.</div>
+                            <div class="cn-line">前门通向旧农家庭院，停车不成问题，前面有很宽敞的停车空间。那里还有树和盆栽。<span class="cn-note">【Q6 改写：several spaces at the front ⇄ plenty of room at the front；答案 parking（固定搭配 parking spaces）】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> What about facilities in the cottage? It has standard things like a cooker and fridge, I presume.</div>
@@ -1183,16 +1207,16 @@
                             <div class="cn-line">取暖呢？每年那时有时还挺冷的。</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> There’s central heating, and if you want to light a fire, there’s a stove. We can provide all the wood you need for it. It smells so much nicer than coal, and it makes the room very cosy – we’ve got one in our own house.</div>
-                            <div class="cn-line">有中央供暖；如果想生火，还有一台炉子。所需木柴我们都会提供。木柴的味道比煤好闻，也让房间很温馨，我们自己家里也有一台。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> There’s <span class="hl-loc">central heating</span>, and if you want to <span class="hl-swap">light a fire</span>, there’s a <span class="hl-loc">stove</span>. We can provide all the <span class="hl-ans">wood</span> you need for it. It smells <span class="hl-conn">so much nicer than</span> <span class="hl-trap">coal</span>, and it makes the room very cosy – we’ve got one in our own house.</div>
+                            <div class="cn-line">有中央供暖；如果想生火，还有一台炉子。所需木柴我们都会提供。木柴的味道比煤好闻，也让房间很温馨，我们自己家里也有一台。<span class="cn-note">【Q7 答案：wood；coal 只是对比干扰（比煤好闻）】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> That sounds very pleasant. Perhaps we should come in the winter, to make the most of it!</div>
                             <div class="cn-line">听起来很舒服。或许我们冬天来也不错，能好好用上炉子！</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, we find we don’t want to go out when we’ve got the fire burning. There are some attractive views from the cottage, which I haven’t mentioned. There’s a famous stone bridge – it’s one of the oldest in the region, and you can see it from the living room. It isn’t far away. The bedroom window looks in the opposite direction, and has a lovely view of the hills and the monument at the top.</div>
-                            <div class="cn-line">是啊，生了火我们都不想出门。我还没说过小屋的景色。附近有一座著名的石桥，是这一带最古老的桥之一，从客厅就能看到，离得不远。卧室窗户朝反方向，能看到群山和山顶的纪念碑。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> Yes, we find we don’t want to go out when we’ve got the fire burning. There are some attractive <span class="hl-loc">views from the cottage</span>, which I haven’t mentioned. There’s a famous <span class="hl-ans">stone bridge</span> – it’s one of the <span class="hl-swap">oldest</span> in the region, and you can see it <span class="hl-loc">from the living room</span>. It isn’t far away. The <span class="hl-loc">bedroom window</span> looks in the opposite direction, and has a lovely view of the <span class="hl-trap">hills</span> and the <span class="hl-ans">monument</span> <span class="hl-swap">at the top</span>.</div>
+                            <div class="cn-line">是啊，生了火我们都不想出门。我还没说过小屋的景色。附近有一座著名的石桥，是这一带最古老的桥之一，从客厅就能看到，离得不远。卧室窗户朝反方向，能看到群山和山顶的纪念碑。<span class="cn-note">【Q8/Q9 视角切换：from the living room → stone bridge（Q8）；bedroom window → monument（Q9）；hills 是伴生干扰】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Well, that all sounds perfect. I’d like to book it, please. Would you want a deposit?</div>
@@ -1203,12 +1227,12 @@
                             <div class="cn-line">需要。我们收百分之三十的定金确认预订，也就是一百四十四英镑。</div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> And when would you like the rest of the money?</div>
-                            <div class="cn-line">余款什么时候付？</div>
+                            <div class="en-line"><span class="speaker-tag spk-man">TOM</span> And when would you like <span class="hl-loc">the rest of the money</span>?</div>
+                            <div class="cn-line">余款什么时候付？<span class="cn-note">【Q10 定位：the rest of the money ⇄ 卷面 final payment】</span></div>
                         </div>
                         <div class="dialog-turn">
-                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> You’re coming in May, so the last day of March, please.</div>
-                            <div class="cn-line">你们五月来，所以请在三月最后一天前付清。</div>
+                            <div class="en-line"><span class="speaker-tag spk-woman">SHIRLEY</span> You’re coming in <span class="hl-trap">May</span>, <span class="hl-conn">so</span> the <span class="hl-loc">last day</span> of <span class="hl-ans">March</span>, please.</div>
+                            <div class="cn-line">你们五月来，所以请在三月最后一天前付清。<span class="cn-note">【Q10 答案：March；May 是入住月份，不是尾款期限】</span></div>
                         </div>
                         <div class="dialog-turn">
                             <div class="en-line"><span class="speaker-tag spk-man">TOM</span> Fine.</div>
@@ -1221,7 +1245,542 @@
                     </div>
                 </details></div>
         </div>
-</div><footer><p>剑桥雅思 16 Test 4 Part 1 · 答案句切片与七坑复盘</p></footer></div>
+        <!-- PART 4 SECTION DIVIDER -->
+        <div class="slice-card divider-card" data-category="part4" id="card-p4-divider">
+            <h2>🔻 PART 4 · The Extinction of the Dodo 渡渡鸟的灭绝 · 学术独白讲座（Q31–Q40）</h2>
+            <p>战报：10 题对 4 错 6（对 Q32 / Q33 / Q36 / Q38；错 Q31 / Q34 / Q35 / Q37 / Q39 / Q40）· 四大病灶：① <strong>定位后抢写</strong>（Q31 听到 sailors 就落笔，丢掉 carrying spices；Q40 听到 agriculture 就落笔，丢掉后面的 forest）；② <strong>词音混淆</strong>（Q34 head /hed/ 听成 had /hæd/、Q39 ships /ʃɪps/ 听成 sheep /ʃiːp/）；③ <strong>后置/从句干扰</strong>（Q35 句尾 fast、Q37 In fact 之后 body size、Q40 定语从句里的 home）；④ <strong>词性与句法自检缺失</strong>（capable of 后必须接名词、the forest … was cut down 的双定语从句主干）。</p>
+        </div>
+
+        <!-- PART 4 LEGEND -->
+        <div class="slice-card legend-card" data-category="part4" id="card-p4-legend">
+            <strong>🎨 Part 4 五色标注图例</strong>
+            <div class="legend-row">
+                <span class="hl-loc">■ 定位词（题干⇄原文同词锁定）</span>
+                <span class="hl-swap">■ 题干⇄原文替换改写</span>
+                <span class="hl-conn">■ 转折/连词/强调信号（but / However / In fact / so / because）</span>
+                <span class="hl-ans">■ 官方答案词</span>
+                <span class="hl-trap">■ 干扰陷阱词（后置重读词 / 从句干扰）</span>
+            </div>
+        </div>
+
+        <!-- CARD_card_31 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q31">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q31 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + A1 原词</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">定位句后抢写 sailors</span><h3 class="card-title">Q31: 葡萄牙船运 spices 香料与 sailors 抢答</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('31_Q31_葡萄牙船运spices香料与sailors抢答.mp3', 'PQ31: Q31: 葡萄牙船运 spices 香料与 sailors 抢答', this)">▶ 播放切片 (23s)</button><button class="record-card-btn" id="rec-btn-q31" onclick="handleRecBtnClick('q31')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q31" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q31"></span><span class="rec-status-text" id="rec-status-q31">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q31">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q31" onclick="playUserRecording('q31')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q31')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q31')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q31')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">1507 – <span class="hl-loc">Portuguese ships</span> <span class="hl-swap">transporting</span> <span class="blank-answer">31</span> <span class="hl-loc">stopped at the island</span> to <span class="hl-loc">collect food and water</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br><span class="hl-conn">Then</span>, in the year <span class="hl-loc">1507</span>, the first <span class="hl-loc">Portuguese ships</span> <span class="hl-loc">stopped at the island</span>. The <span class="hl-trap">sailors</span> were <span class="hl-swap">carrying</span> <span class="hl-ans">spices [Q31]</span> <span class="hl-swap">back to Europe</span> <span class="hl-conn">and</span> found the island a convenient stopping place where they could <span class="hl-swap">stock up with</span> food and water for the rest of the voyage, <span class="hl-conn">but</span> they didn't settle on Mauritius.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>1507</em> / <em>Portuguese ships</em> 原词复现，但<strong>答案不在这一句</strong>——它在 next 小句 <em>The sailors were carrying ___</em> 里，也就是定位句的下一句；<br>
+2. <strong>改写对照</strong>：transporting ⇄ carrying（运输 ⇄ 携带、运送）；collect food and water ⇄ stock up with food and water（收集食物和水 ⇄ 储备食物和水）；更关键的是 <em>ships transporting X</em> ⇄ <em>sailors were carrying X</em>（船运 X ⇄ 船员携带 X）——<strong>主语从“船”换成了“人”</strong>，这是本题最大的台阶；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">Then</span>（时间推进到 1507）+ <span class="hl-conn">and</span>（把 carrying spices 与 found the island 并列）+ <span class="hl-conn">but</span>（转折到"没有定居"，为 Q32 的 1638 做铺垫）；<br>
+4. <strong>避坑（你写 sailors 的原因）</strong>：<span class="hl-trap">sailors</span> /ˈseɪləz/ 一出现你就落笔，后面 carrying spices 整句的结构就听丢了。sailors 是<strong>主语</strong>，空格要的是"船上运的货"；<em>ships transporting ___</em> 需要名词宾语，语义上只能是香料。<strong>听到主语不等于听到答案</strong>，Part 4 的答案多落在定位句的谓语/宾语位置。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Then, in the year 1507, the first Portuguese ships stopped at the island.</div>
+                            <div class="cn-line">然后，在 1507 年，第一批葡萄牙船只停靠在这个岛上。【定位：1507 + Portuguese ships 双原词复现】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The sailors were carrying <span class="hl-ans">spices [Q31]</span> back to Europe and found the island a convenient stopping place where they could stock up with food and water for the rest of the voyage,</div>
+                            <div class="cn-line">船员们正把<strong>香料</strong>运回欧洲；他们发现这个岛是个方便的补给点，可以为余下的航程储备食物和水。【Q31 → spices；transporting ⇄ carrying（运输 ⇄ 携带）；collect ⇄ stock up with（收集 ⇄ 储备）；主语从 ships 换成了 sailors】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> but they didn't settle on Mauritius.</div>
+                            <div class="cn-line">但他们并没有在毛里求斯定居。【but 转折；settle 与 Q32 的 colony 呼应，是下一题的前置信号】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_32 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q32">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q32 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">短语动词 set up</span><h3 class="card-title">Q32: 1638 荷兰人建立 colony 殖民地</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('32_Q32_1638荷兰人建立colony殖民地.mp3', 'PQ32: Q32: 1638 荷兰人建立 colony 殖民地', this)">▶ 播放切片 (14s)</button><button class="record-card-btn" id="rec-btn-q32" onclick="handleRecBtnClick('q32')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q32" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q32"></span><span class="rec-status-text" id="rec-status-q32">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q32">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q32" onclick="playUserRecording('q32')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q32')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q32')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q32')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">1638 – <span class="hl-loc">The Dutch</span> <span class="hl-swap">established</span> a <span class="blank-answer">32</span> <span class="hl-loc">on the island</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br><span class="hl-conn">However</span>, in <span class="hl-loc">1638</span> <span class="hl-loc">the Dutch</span> arrived <span class="hl-conn">and</span> <span class="hl-swap">set up</span> a <span class="hl-ans">colony [Q32]</span> there. These first <span class="hl-swap">human inhabitants</span> of the island found the dodo birds a <span class="hl-swap">convenient source of meat</span>, <span class="hl-conn">although</span> not everyone liked the taste.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>1638</em> + <em>the Dutch</em> 双原词，答案紧跟在动词短语 <em>set up</em> 后面；<br>
+2. <strong>改写对照</strong>：established ⇄ set up（建立 ⇄ 设立）——<strong>短语动词是最高频的一类改写</strong>，题干一个词、原文拆成两个词；on the island ⇄ there（在岛上 ⇄ 那里，指代替换）；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">However</span>（时间线开关：1507 葡萄牙人 → 1638 荷兰人）+ <span class="hl-conn">and</span>（arrived and set up，两个动作一口气接完）；<br>
+4. <strong>本题为什么对</strong>：你没有在 arrived 上停笔去等"到达了什么"，而是跟着 and 把 set up a colony 听完，短语动词的宾语抓得稳。官方答案 colony / settlement 都接受。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, in 1638 the Dutch arrived and <span class="hl-swap">set up</span> a <span class="hl-ans">colony [Q32]</span> there.</div>
+                            <div class="cn-line">然而，1638 年荷兰人到来，在那里建立了一个<strong>殖民地</strong>。【Q32 → colony；established ⇄ set up（建立 ⇄ 设立）；on the island ⇄ there（指代替换）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These first <span class="hl-swap">human inhabitants</span> of the island found the dodo birds a convenient source of meat, although not everyone liked the taste.</div>
+                            <div class="cn-line">这些岛上最早的人类居民发现渡渡鸟是方便的肉食来源，尽管不是所有人都喜欢那个味道。【human inhabitants ⇄ 居民，是 colony 的同义复现；although 让步，无空格】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_33 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q33">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q33 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">两幅画对比干扰</span><h3 class="card-title">Q33: 荷兰画作里的 fat 肥胖与印度画“更瘦”干扰</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('33_Q33_荷兰画作显得fat肥胖与印度画更瘦干扰.mp3', 'PQ33: Q33: 荷兰画作里的 fat 肥胖与印度画“更瘦”干扰', this)">▶ 播放切片 (24s)</button><button class="record-card-btn" id="rec-btn-q33" onclick="handleRecBtnClick('q33')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q33" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q33"></span><span class="rec-status-text" id="rec-status-q33">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q33">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q33" onclick="playUserRecording('q33')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q33')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q33')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q33')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">A <span class="hl-loc">Dutch painting</span> <span class="hl-swap">suggests</span> the dodo was very <span class="blank-answer">33</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>We do have some written records from sailors and a few pictures, <span class="hl-conn">but</span> we don't know how reliable these are. The best-known picture is a <span class="hl-loc">Dutch painting</span> in which the bird <span class="hl-swap">appears to be</span> <span class="hl-swap">extremely</span> <span class="hl-ans">fat [Q33]</span>, <span class="hl-conn">but</span> this may not be accurate. An <span class="hl-trap">Indian painting</span> done at the same time shows a much <span class="hl-trap">thinner</span> bird.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>Dutch painting</em> 原词，答案在 <em>in which</em> 定语从句的系动词后面（appears to be extremely ___）；<br>
+2. <strong>改写对照</strong>：suggests ⇄ appears to be（表明 ⇄ 看起来）；very ⇄ extremely（非常 ⇄ 极其）；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">but this may not be accurate</span>（削弱 fat 的可信度）——但卷面问的是"这幅画表明它很___"，答案仍是画上的 <strong>fat</strong>，不要被 but 带走；<em>An Indian painting</em> 是对比对象切换；<br>
+4. <strong>本题为什么对</strong>：你认准了卷面限定的 <em>Dutch painting</em>，没有被后半句的 <span class="hl-trap">Indian painting / thinner</span> 抢答，也没有被 may not be accurate 拐去写别的。这正是"两幅画对比"题的标准解法：<strong>先在题干里锁死对象，再听描述</strong>。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> We do have some written records from sailors and a few pictures, but we don't know how reliable these are.</div>
+                            <div class="cn-line">我们确实有一些船员留下的文字记录和几幅画，但我们不知道这些有多可靠。【铺垫句，无空格；reliable 为后文"不准确"埋线】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The best-known picture is a <span class="hl-loc">Dutch painting</span> in which the bird <span class="hl-swap">appears to be</span> <span class="hl-swap">extremely</span> <span class="hl-ans">fat [Q33]</span>, but this may not be accurate.</div>
+                            <div class="cn-line">最著名的一幅画是一张荷兰画，画中这只鸟看起来极其<strong>肥胖</strong>，但这可能并不准确。【Q33 → fat；suggests ⇄ appears to be（表明 ⇄ 看起来）；very ⇄ extremely（非常 ⇄ 极其）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> An <span class="hl-trap">Indian painting</span> done at the same time shows a much <span class="hl-trap">thinner</span> bird.</div>
+                            <div class="cn-line">同一时期的一幅印度画则显示这是一只瘦得多的鸟。【Indian painting / thinner 是对比干扰，卷面问的是 Dutch painting】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_34 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q34">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q34 · 答错 ✗</span><span class="card-tag tag-p1">①词音坑 + ③句意坑</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">head 听成 had</span><h3 class="card-title">Q34: 仅存软组织是 head 头部与 skeleton 干扰</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('34_Q34_仅存软组织是dodo_head头部与skeleton干扰.mp3', 'PQ34: Q34: 仅存软组织是 head 头部与 skeleton 干扰', this)">▶ 播放切片 (24s)</button><button class="record-card-btn" id="rec-btn-q34" onclick="handleRecBtnClick('q34')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q34" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q34"></span><span class="rec-status-text" id="rec-status-q34">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q34">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q34" onclick="playUserRecording('q34')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q34')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q34')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q34')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">The <span class="hl-swap">only remaining</span> <span class="hl-loc">soft tissue</span> is a <span class="hl-loc">dried</span> <span class="blank-answer">34</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>In the early 17th century, four <span class="hl-loc">dried</span> parts of a bird were known to exist. Of these, three have disappeared, <span class="hl-conn">so</span> <span class="hl-swap">only one example of</span> <span class="hl-loc">soft tissue</span> from the dodo survives, a dodo <span class="hl-ans">head [Q34]</span>. Bones have also been found, <span class="hl-conn">but</span> there's only one complete <span class="hl-trap">skeleton</span> in existence.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>soft tissue</em> + <em>dried</em> 双原词；答案在 <em>survives</em> 之后的<strong>同位语</strong>里（a dodo head）；<br>
+2. <strong>改写对照</strong>：only remaining ⇄ only one example ... survives（仅存的 ⇄ 只剩一个留存下来）；is a dried ___ ⇄ a dodo ___（dried 已在上一句 four dried parts 里用过，答案句只留 head）；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">so</span>（因果：三件消失 → 只剩一件）+ <span class="hl-conn">but</span>（转折到骨骼，是干扰句）；<br>
+4. <strong>避坑（你写 skeleton 的原因）</strong>：你把 <strong>head</strong> /hed/ 听成了 <strong>had</strong> /hæd/，当成助动词放了过去，于是一直等后面的名词，最后抓到 but 之后的 <span class="hl-trap">skeleton</span>。两条硬判据可以救回来：① <em>soft tissue</em> 是"软组织"，skeleton 是"骨架"，属于<strong>骨</strong>不属于软组织，语义直接冲突；② 卷面是 <em>dried ___</em>，答案是"干燥的部件"，不是"完整骨架"。head 才是既 dried 又是 soft tissue 的唯一选项。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In the early 17th century, four <span class="hl-loc">dried</span> parts of a bird were known to exist.</div>
+                            <div class="cn-line">在 17 世纪初，已知有四件干燥的鸟类部件存在。【dried parts 是 Q34 的原词伏笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Of these, three have disappeared, <span class="hl-conn">so</span> <span class="hl-swap">only one example of</span> <span class="hl-loc">soft tissue</span> from the dodo survives, a dodo <span class="hl-ans">head [Q34]</span>.</div>
+                            <div class="cn-line">其中三件已经消失，所以只剩一个渡渡鸟软组织的样本留存下来——一个渡渡鸟的<strong>头</strong>。【Q34 → head；only remaining ⇄ only one example ... survives（仅存的 ⇄ 只剩一个留存）；head /hed/ 极易听成 had /hæd/，别当助动词放过】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Bones have also been found, <span class="hl-conn">but</span> there's only one complete <span class="hl-trap">skeleton</span> in existence.</div>
+                            <div class="cn-line">骨骼也被发现过，但全世界只有一具完整的骨架。【skeleton 是下一句的干扰：它是"骨"，不是软组织，也不是 dried】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_35 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q35">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q35 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + ⑦词性自检</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">句尾 fast 抢答</span><h3 class="card-title">Q35: 膝关节证明 capable of movement 而非 fast</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('35_Q35_膝关节使其capable_of_movement能移动与fast干扰.mp3', 'PQ35: Q35: 膝关节证明 capable of movement 而非 fast', this)">▶ 播放切片 (27s)</button><button class="record-card-btn" id="rec-btn-q35" onclick="handleRecBtnClick('q35')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q35" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q35"></span><span class="rec-status-text" id="rec-status-q35">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q35">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q35" onclick="playUserRecording('q35')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q35')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q35')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q35')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Recent studies of a dodo <span class="hl-loc">skeleton</span> <span class="hl-swap">suggest</span> the birds were <span class="hl-loc">capable of</span> <span class="hl-swap">rapid</span> <span class="blank-answer">35</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>For example, early accounts of the birds mention how <span class="hl-trap">slow and clumsy</span> it was, <span class="hl-conn">but</span> scientists now believe the bird's strong knee joints would have made it <span class="hl-loc">capable of</span> <span class="hl-ans">movement [Q35]</span> which was <span class="hl-swap">not slow, but actually quite fast</span>. <span class="hl-conn">In fact</span>, one 17th century sailor wrote that he found the birds <span class="hl-trap">hard to catch</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>capable of</em> 原词锁定，答案紧跟其后，是个名词（movement）；<br>
+2. <strong>改写对照</strong>：suggest ⇄ scientists now believe（表明 ⇄ 科学家现在认为）；early accounts ⇄ slow and clumsy（早期记载 ⇄ 又慢又笨）；<strong>rapid ⇄ not slow, but actually quite fast</strong>（快 ⇄ 不慢，实际上相当快）——题干把"快"压成一个形容词，原文用 not A but B 展开，<strong>fast 已经被用来改写 rapid 了，不可能再是答案</strong>；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">but</span>（推翻 early accounts）+ <span class="hl-conn">In fact</span>（强调补充，后面的 hard to catch 是"跑得快"的侧证）；<br>
+4. <strong>避坑（你写 fast 的原因）</strong>：你等的是"rapid 后面的名词"，但没听到 movement（/ˈmuːvmənt/ 弱读、又夹在 which 从句前），于是把句尾重读的 fast 当成了答案。<strong>词性自检</strong>：capable of ___ 后面只能是名词/动名词，fast 是形容词；而且 rapid 已经 = fast，同义重复，语法和语义双重不成立。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For example, early accounts of the birds mention how <span class="hl-trap">slow and clumsy</span> it was,</div>
+                            <div class="cn-line">例如，早期关于这种鸟的记载提到它多么缓慢笨拙，【early accounts ⇄ 早期记载；slow and clumsy 是即将被推翻的旧说法】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">but</span> scientists now believe the bird's strong knee joints would have made it <span class="hl-loc">capable of</span> <span class="hl-ans">movement [Q35]</span> which was <span class="hl-swap">not slow, but actually quite fast</span>.</div>
+                            <div class="cn-line">但科学家现在认为，这种鸟强壮的膝关节使它能够做出并不缓慢、实际上相当快速的<strong>移动</strong>。【Q35 → movement；suggest ⇄ scientists now believe（表明 ⇄ 认为）；rapid ⇄ not slow, but actually quite fast（快 ⇄ 不慢、相当快）；capable of 后必须跟名词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, one 17th century sailor wrote that he found the birds <span class="hl-trap">hard to catch</span>.</div>
+                            <div class="cn-line">事实上，一位 17 世纪的水手写道，他觉得这种鸟很难抓到。【In fact 强调；hard to catch 是"跑得快"的侧证，不是答案】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_36 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q36">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q36 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">主动变被动 employed for</span><h3 class="card-title">Q36: 小翅膀维持 balance 平衡</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('36_Q36_小翅膀用于maintain_balance保持平衡.mp3', 'PQ36: Q36: 小翅膀维持 balance 平衡', this)">▶ 播放切片 (17s)</button><button class="record-card-btn" id="rec-btn-q36" onclick="handleRecBtnClick('q36')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q36" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q36"></span><span class="rec-status-text" id="rec-status-q36">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q36">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q36" onclick="playUserRecording('q36')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q36')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q36')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q36')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text"><span class="hl-swap">It's thought</span> they were able to use their <span class="hl-loc">small wings</span> to <span class="hl-swap">maintain</span> <span class="blank-answer">36</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>It's true that the dodo's <span class="hl-loc">small wings</span> wouldn't have <span class="hl-trap">allowed it to leave the ground</span>, <span class="hl-conn">but</span> the scientists suggest that these were probably <span class="hl-swap">employed for</span> <span class="hl-ans">balance [Q36]</span> <span class="hl-conn">while</span> going over uneven ground.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>small wings</em> 原词；答案在 but 之后的 <em>employed for</em> 后面；<br>
+2. <strong>改写对照</strong>：It's thought ⇄ the scientists suggest（人们认为 ⇄ 科学家提出）；maintain ⇄ employed for（保持 ⇄ 被用于）；were able to use ⇄ were probably employed（能够使用 ⇄ 可能被用于）——<strong>主动变被动，主语从"鸟"变成"翅膀"</strong>；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">but</span>（先否定"不能飞"，再给出真实用途）+ <span class="hl-conn">while</span>（同时进行，后面 uneven ground 是场景）；<br>
+4. <strong>本题为什么对</strong>：你守住了 but 之后的 employed for，没有被 <span class="hl-trap">leave the ground</span>（不能飞）带跑去填 ground / fly，也接住了"保持 ⇄ 被用于"这组改写。这类"否定旧观念 + but 给新结论"的句式，答案永远在 but 之后。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's true that the dodo's <span class="hl-loc">small wings</span> wouldn't have <span class="hl-trap">allowed it to leave the ground</span>,</div>
+                            <div class="cn-line">确实，渡渡鸟的小翅膀不可能让它离开地面，【leave the ground 是干扰：不能飞，但翅膀另有用途】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">but</span> the scientists suggest that these were probably <span class="hl-swap">employed for</span> <span class="hl-ans">balance [Q36]</span> <span class="hl-conn">while</span> going over uneven ground.</div>
+                            <div class="cn-line">但科学家提出，它们很可能是用来在走过不平地面时保持<strong>平衡</strong>的。【Q36 → balance；It's thought ⇄ scientists suggest（人们认为 ⇄ 科学家提出）；maintain ⇄ employed for（保持 ⇄ 被用于）；were able to use ⇄ were probably employed（主动变被动）】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_37 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q37">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q37 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + 后置干扰</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">In fact 后 body 错位</span><h3 class="card-title">Q37: 脑 brain 大小平均与 body size 后置干扰</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('37_Q37_大脑brain大小平均与body_size后置干扰.mp3', 'PQ37: Q37: 脑 brain 大小平均与 body size 后置干扰', this)">▶ 播放切片 (28s)</button><button class="record-card-btn" id="rec-btn-q37" onclick="handleRecBtnClick('q37')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q37" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q37"></span><span class="rec-status-text" id="rec-status-q37">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q37">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q37" onclick="playUserRecording('q37')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q37')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q37')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q37')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Their <span class="blank-answer">37</span> was of <span class="hl-loc">average size</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>Another group of scientists carried out analysis of the dodo's <span class="hl-loc">skull</span>. They found that the reports of the <span class="hl-trap">lack of intelligence</span> of the dodo were not borne out by their research, which suggested the bird's <span class="hl-ans">brain [Q37]</span> was <span class="hl-swap">not small, but average in size</span>. <span class="hl-conn">In fact</span>, <span class="hl-swap">in relation to</span> its <span class="hl-trap">body size</span>, it was <span class="hl-swap">similar to</span> that of the pigeon, which is known to be a <span class="hl-trap">highly intelligent bird</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>average size</em> 原词；答案就在 <em>average in size</em> 前面三个词——the bird's <strong>brain</strong> was not small, but average in size；<br>
+2. <strong>改写对照</strong>：Their ___ was of average size ⇄ the bird's ___ was not small, but average in size（它们的___是中等大小 ⇄ 这种鸟的___不小，而是中等大小）——<strong>not A but B 的"正话反说 + 修正"结构</strong>，卷面只保留了结论；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">In fact</span>（强调，也是你踩坑的地方）；<span class="hl-swap">in relation to</span>（"相对于"，引出参照物）；which suggested（从句层层嵌套）；<br>
+4. <strong>避坑（你写 body 的原因）</strong>：In fact 之后第一个名词短语是 <em>in relation to its <span class="hl-trap">body size</span></em>，你把<strong>参照物</strong>当成了<strong>被描述的对象</strong>。真正的语法主干是 <em>it (= the brain) was similar to that of the pigeon</em>；body size 只是比较基准。再验证一次：空格在句首作主语（Their ___ was of average size），"身体"本身没有"中等大小"这一说，body size 才是尺寸——这属于<strong>主语后置 + 插入语</strong>造成的错位。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Another group of scientists carried out analysis of the dodo's <span class="hl-loc">skull</span>.</div>
+                            <div class="cn-line">另一组科学家对渡渡鸟的头骨进行了分析。【skull 是定位词：分析的是头骨，答案却落在"脑"上】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They found that the reports of the <span class="hl-trap">lack of intelligence</span> of the dodo were not borne out by their research, which suggested the bird's <span class="hl-ans">brain [Q37]</span> was <span class="hl-swap">not small, but average in size</span>.</div>
+                            <div class="cn-line">他们发现，关于渡渡鸟智力低下的说法并没有得到研究的支持；研究表明，这种鸟的<strong>脑</strong>并不小，而是中等大小。【Q37 → brain；Their ___ was of average size ⇄ the brain was not small, but average in size；not A but B 修正结构】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, <span class="hl-swap">in relation to</span> its <span class="hl-trap">body size</span>, it was <span class="hl-swap">similar to</span> that of the pigeon, which is known to be a <span class="hl-trap">highly intelligent bird</span>.</div>
+                            <div class="cn-line">事实上，相对于它的身体大小，它（的脑）与鸽子相近，而鸽子以高智商著称。【In fact 后的 body size 是"参照物"不是答案；真正的主语 it = the brain，极易错位】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_38 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q38">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q38 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">was that of + 感官名词</span><h3 class="card-title">Q38: 嗅觉 smell 灵敏用于找食</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('38_Q38_嗅觉smell灵敏用于寻找食物.mp3', 'PQ38: Q38: 嗅觉 smell 灵敏用于找食', this)">▶ 播放切片 (22s)</button><button class="record-card-btn" id="rec-btn-q38" onclick="handleRecBtnClick('q38')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q38" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q38"></span><span class="rec-status-text" id="rec-status-q38">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q38">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q38" onclick="playUserRecording('q38')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q38')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q38')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q38')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">Their <span class="hl-loc">sense of</span> <span class="blank-answer">38</span> <span class="hl-swap">enabled them to find food</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>The researchers <span class="hl-conn">also</span> found that the structure of the bird's skull suggested that one <span class="hl-loc">sense</span> which was particularly <span class="hl-swap">well developed</span> was that of <span class="hl-ans">smell [Q38]</span>, <span class="hl-conn">so</span> the dodo may <span class="hl-conn">also</span> have been particularly <span class="hl-swap">good at locating</span> ripe fruit and other food in the island's thick vegetation.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>sense</em> 原词；答案在 <em>was that of ___</em> 的介词后，是一个感官名词；<br>
+2. <strong>改写对照</strong>：enabled them to find food ⇄ good at locating ... food（使它们能找到食物 ⇄ 擅长定位食物）；well developed ⇄ particularly（发达 ⇄ 特别）——that of smell 里的 that 指代前面的 one sense；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">also</span>（并列上一段的研究）+ <span class="hl-conn">so</span>（因果，后半句是 smell 带来的结果，也是"找食物"这层改写的依据）；<br>
+4. <strong>本题为什么对</strong>：你抓到了 <em>was that of smell</em> 这个"介词 + 名词"的落点，没有被 structure / skull / thick vegetation 这些大名词吸走。可以再进一层：so 之后的 <em>good at locating</em> 正是卷面 enabled them to find food 的改写，两句连起来听才叫真懂。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The researchers <span class="hl-conn">also</span> found that the structure of the bird's skull suggested that one <span class="hl-loc">sense</span> which was particularly <span class="hl-swap">well developed</span> was that of <span class="hl-ans">smell [Q38]</span>,</div>
+                            <div class="cn-line">研究人员还发现，这种鸟头骨的结构表明，有一种感官特别发达，那就是<strong>嗅觉</strong>。【Q38 → smell；sense 原词定位；答案在 was that of 之后；well developed ⇄ 发达】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">so</span> the dodo may <span class="hl-conn">also</span> have been particularly <span class="hl-swap">good at locating</span> ripe fruit and other food in the island's thick vegetation.</div>
+                            <div class="cn-line">所以渡渡鸟可能也特别擅长在岛上茂密的植被中找到成熟的果实和其他食物。【enabled them to find food ⇄ good at locating ... food（使能找到食物 ⇄ 擅长定位食物）；so 引出结果】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_39 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q39">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q39 · 答错 ✗</span><span class="card-tag tag-p1">①词音坑 + ③句意坑</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">ships 听成 sheep</span><h3 class="card-title">Q39: 船上逃出的 rats 吃蛋与 ships→sheep 误听</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('39_Q39_船上逃出的rats老鼠吃蛋与sheep误听.mp3', 'PQ39: Q39: 船上逃出的 rats 吃蛋与 ships→sheep 误听', this)">▶ 播放切片 (36s)</button><button class="record-card-btn" id="rec-btn-q39" onclick="handleRecBtnClick('q39')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q39" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q39"></span><span class="rec-status-text" id="rec-status-q39">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q39">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q39" onclick="playUserRecording('q39')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q39')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q39')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q39')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text"><span class="blank-answer">39</span> <span class="hl-loc">also</span> <span class="hl-swap">escaped onto the island</span> and <span class="hl-swap">ate the birds' eggs</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>These included dogs, which would have been a threat to the dodos, <span class="hl-conn">and also</span> monkeys, which ate the fruit that was the main part of the dodo's diet. These were brought to the island <span class="hl-swap">deliberately</span>, <span class="hl-conn">but</span> the ships also brought <span class="hl-swap">another type of creature</span>, <span class="hl-ans">rats [Q39]</span>, which <span class="hl-swap">came to land from the ships</span> and <span class="hl-swap">rapidly overran</span> the island. These upset the ecology of the island, not just the dodos, but other species too. <span class="hl-conn">However</span>, they were a <span class="hl-swap">particular danger</span> to the dodos <span class="hl-conn">because</span> they <span class="hl-swap">consumed their eggs</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>also</em> + <em>ate the birds' eggs</em> 两处对应；答案在 <em>but the ships also brought another type of creature, ___</em> 的<strong>同位语</strong>位置；<br>
+2. <strong>改写对照</strong>：escaped onto the island ⇄ came to land from the ships / rapidly overran the island（逃到岛上 ⇄ 从船上上岸、迅速遍布全岛）；ate the birds' eggs ⇄ consumed their eggs（吃鸟蛋 ⇄ 消耗掉它们的蛋）；another type of creature ⇄ rats；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">but</span>（把"故意带来的狗和猴子"与"顺带带来的老鼠"分开）+ <span class="hl-conn">However</span>（再转一层，落到"吃蛋"这个致命点）+ <span class="hl-conn">because</span>（直接对应卷面 ate the eggs）；<br>
+4. <strong>避坑（你写 sheep 的原因）</strong>：<strong>ships</strong> /ʃɪps/ 与 <strong>sheep</strong> /ʃiːp/ 只差一个元音的长短，你把 ships 听成了 sheep，又顺着"船运来的羊"编了一个物种。实际结构是 <em>the ships also brought another type of creature, rats</em>——ships 是<strong>主语（船）</strong>，逗号后的 rats 才是答案。记住这个固定信号：<strong>名词 + 逗号 + 名词 = 同位语，逗号后面那个词就是答案</strong>。deliberately 也提示了对比：狗和猴子是有意带来的，rats 是顺带上岸的。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These included dogs, which would have been a threat to the dodos, <span class="hl-conn">and also</span> monkeys, which ate the fruit that was the main part of the dodo's diet.</div>
+                            <div class="cn-line">这些包括狗（对渡渡鸟是威胁），还有猴子（吃掉了渡渡鸟主要食物的果实）。【狗和猴子是"有意带来"的，不是 Q39 的答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These were brought to the island <span class="hl-swap">deliberately</span>, <span class="hl-conn">but</span> the ships also brought <span class="hl-swap">another type of creature</span>, <span class="hl-ans">rats [Q39]</span>, which <span class="hl-swap">came to land from the ships</span> and <span class="hl-swap">rapidly overran</span> the island.</div>
+                            <div class="cn-line">这些是被有意带到岛上的，但船只还带来了另一种生物——<strong>老鼠</strong>，它们从船上上岸并迅速遍布全岛。【Q39 → rats；escaped onto the island ⇄ came to land from the ships / overran；another type of creature, rats 是同位语，逗号后即答案；ships /ʃɪps/ 别听成 sheep /ʃiːp/】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These upset the ecology of the island, not just the dodos, but other species too. <span class="hl-conn">However</span>, they were a <span class="hl-swap">particular danger</span> to the dodos <span class="hl-conn">because</span> they <span class="hl-swap">consumed their eggs</span>.</div>
+                            <div class="cn-line">它们扰乱了岛上的生态，不只是渡渡鸟，还有其他物种。然而，它们对渡渡鸟尤其危险，因为它们吃掉了鸟蛋。【ate the birds' eggs ⇄ consumed their eggs（吃鸟蛋 ⇄ 消耗蛋）；However + because 把答案钉在"吃蛋"上】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_40 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q40">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q40 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + 长难句</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">双定语从句 + home 干扰</span><h3 class="card-title">Q40: 农业 agriculture 让 forest 被砍与 home 干扰</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('40_Q40_农业agriculture致forest森林被砍与home干扰.mp3', 'PQ40: Q40: 农业 agriculture 让 forest 被砍与 home 干扰', this)">▶ 播放切片 (40s)</button><button class="record-card-btn" id="rec-btn-q40" onclick="handleRecBtnClick('q40')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q40" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q40"></span><span class="rec-status-text" id="rec-status-q40">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q40">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q40" onclick="playUserRecording('q40')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q40')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q40')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q40')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">The <span class="hl-swap">arrival of farming</span> <span class="hl-loc">meant</span> the <span class="blank-answer">40</span> <span class="hl-swap">was destroyed</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br><span class="hl-conn">However</span>, we now think that probably the main cause of the bird's extinction was <span class="hl-conn">not</span> the introduction of <span class="hl-trap">non-native species</span>, <span class="hl-conn">but</span> the introduction of <span class="hl-swap">agriculture</span>. This meant that the <span class="hl-loc">forest</span> that had once <span class="hl-swap">covered all the island</span> and that had <span class="hl-swap">provided a perfect home</span> for the dodo <span class="hl-swap">was cut down</span> so that crops such as sugar could be grown.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>meant</em> 原词；答案是被"砍掉"的那个<strong>主语</strong>——the forest；<br>
+2. <strong>改写对照</strong>：arrival of farming ⇄ the introduction of agriculture（农业的到来 ⇄ 农业的引入）；was destroyed ⇄ was cut down（被摧毁 ⇄ 被砍倒）；covered all the island ⇄ 曾覆盖全岛；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">not A but B</span>（真正原因是 B：agriculture，A 是 non-native species——这一句正好接上 Q39 的判断）+ <span class="hl-conn">so that</span>（目的：种甘蔗）；<br>
+4. <strong>避坑（你写 home 的原因）</strong>：这是一个"<strong>主语 + 两个定语从句 + 谓语</strong>"的长难句：<br>
+<em>the forest</em> [that had once covered all the island] <em>and</em> [that had provided a perfect home for the dodo] <em>was cut down</em>。<br>
+你把 <em>provided a perfect home</em> 当成了主句谓语，于是理解成"home 被摧毁"。判断方法：两个 that 从句都只是修饰 forest 的定语，<strong>真正的谓语在最外层——was cut down</strong>。中文切分：森林（曾覆盖全岛、曾为渡渡鸟提供完美家园）<strong>被砍倒了</strong>。另外 agriculture 只是"原因"，不是"被摧毁的东西"，卷面问的是"农业的到来意味着什么被摧毁"。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, we now think that probably the main cause of the bird's extinction was <span class="hl-conn">not</span> the introduction of <span class="hl-trap">non-native species</span>, <span class="hl-conn">but</span> the introduction of <span class="hl-swap">agriculture</span>.</div>
+                            <div class="cn-line">然而，我们现在认为，这种鸟灭绝的主要原因可能不是外来物种的引入，而是<strong>农业</strong>的引入。【not A but B：but 后面才是真原因；agriculture 是"原因"，不是被摧毁的对象】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This meant that the <span class="hl-loc">forest</span> that had once <span class="hl-swap">covered all the island</span> and that had <span class="hl-swap">provided a perfect home</span> for the dodo <span class="hl-swap">was cut down</span> so that crops such as sugar could be grown.</div>
+                            <div class="cn-line">这意味着，曾经覆盖全岛、曾为渡渡鸟提供完美家园的<strong>森林</strong>被砍倒了，以便种植甘蔗等作物。【Q40 → forest；arrival of farming ⇄ introduction of agriculture（农业的到来 ⇄ 农业的引入）；was destroyed ⇄ was cut down（被摧毁 ⇄ 被砍倒）；主干是 the forest ... was cut down，两个 that 从句只是修饰语，home 不是被砍的对象】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So although the dodo had survived for thousands of years, suddenly it was gone.</div>
+                            <div class="cn-line">所以，尽管渡渡鸟存活了数千年，它却突然消失了。【收尾句，无空格】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD FULL4 -->
+        <div class="slice-card" data-category="full part4" id="card-full4">
+            <div class="card-header"><div><span class="card-tag tag-p1">完整精听 · Part 4 全篇</span><h3 class="card-title">Part 4 完整录音实战盲听（The Extinction of the Dodo · Q31–Q40）</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('Section_4_Full_Dodo_Bird.mp3', 'Part 4 完整录音：The Extinction of the Dodo 渡渡鸟的灭绝', this)">▶ 播放完整 Part 4 (7m55s)</button><button class="record-card-btn" id="rec-btn-full4" onclick="handleRecBtnClick('full4')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-full4" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-full4"></span><span class="rec-status-text" id="rec-status-full4">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-full4">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-full4" onclick="playUserRecording('full4')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('full4')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('full4')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('full4')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="diagnosis-box analysis-box"><strong>🎧 用法：</strong>先不展开原文，整段盲听一遍并随手记下 Q31–Q40；第二遍再点开逐句对照，检查每题答案句的定位词（蓝）、替换（黄）、逻辑词（粉）是否和自己听到的一致。</div>
+                <details class="bilingual-details" open>
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 Part 4 完整听力原文与逐句翻译（37 句）<span class="toggle-badge">含全部十题标注</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One of the most famous cases of extinction is that of a bird known as the <span class="hl-loc">dodo</span>.</div>
+                            <div class="cn-line">最著名的灭绝案例之一，是一种叫做<strong>渡渡鸟</strong>的鸟。【开篇定位：dodo，与卷面大标题同词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, there's even a saying in English, "as dead as the dodo", used to refer to something which no longer exists.</div>
+                            <div class="cn-line">事实上，英语里甚至有一句俗语"像渡渡鸟一样死透了"，用来指某样东西已不复存在。【In fact 强调，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">But</span> for many centuries, the dodo was alive and well, although it could only be found in one place, the island of Mauritius in the Indian Ocean.</div>
+                            <div class="cn-line">但许多个世纪以来，渡渡鸟活得很好，尽管它只在一个地方能被找到——印度洋上的毛里求斯岛。【although 让步，交代地点 Mauritius】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It was a very large bird, about one metre tall, and over the centuries it had lost the ability to fly, <span class="hl-conn">but</span> it survived happily under the trees that covered the island.</div>
+                            <div class="cn-line">它是一种很大的鸟，约一米高；几个世纪下来它失去了飞行能力，但它在覆盖全岛的树林下活得很快乐。【trees that covered the island 是 Q40 forest 的伏笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Then</span>, in the year <span class="hl-loc">1507</span>, the first <span class="hl-loc">Portuguese ships</span> <span class="hl-loc">stopped at the island</span>.</div>
+                            <div class="cn-line">然后，在 <strong>1507</strong> 年，第一批葡萄牙船只停靠在这个岛上。【Q31 定位：1507 + Portuguese ships 双原词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The sailors were carrying <span class="hl-ans">spices [Q31]</span> back to Europe and found the island a convenient stopping place where they could <span class="hl-swap">stock up with</span> food and water for the rest of the voyage, <span class="hl-conn">but</span> they didn't settle on Mauritius.</div>
+                            <div class="cn-line">船员们正把<strong>香料</strong>运回欧洲；他们发现这个岛是个方便的补给点，可以为余下的航程储备食物和水，但他们并没有在毛里求斯定居。【Q31 → spices；transporting ⇄ carrying；collect ⇄ stock up with；主语从 ships 换成 sailors】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, in <span class="hl-loc">1638</span> <span class="hl-loc">the Dutch</span> arrived and <span class="hl-swap">set up</span> a <span class="hl-ans">colony [Q32]</span> there.</div>
+                            <div class="cn-line">然而，<strong>1638</strong> 年荷兰人到来，在那里建立了一个<strong>殖民地</strong>。【Q32 → colony；established ⇄ set up；on the island ⇄ there】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These first <span class="hl-swap">human inhabitants</span> of the island found the dodo birds a <span class="hl-swap">convenient source of meat</span>, although not everyone liked the taste.</div>
+                            <div class="cn-line">这些岛上最早的人类居民发现渡渡鸟是方便的肉食来源，尽管不是所有人都喜欢那个味道。【human inhabitants ⇄ 居民，colony 的同义复现】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's hard to get an accurate description of what the dodo actually looked like.</div>
+                            <div class="cn-line">很难准确描述渡渡鸟究竟长什么样。【进入 Description 段落，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> We do have some written records from sailors and a few pictures, <span class="hl-conn">but</span> we don't know how reliable these are.</div>
+                            <div class="cn-line">我们确实有一些船员留下的文字记录和几幅画，但我们不知道这些有多可靠。【铺垫句：后面两幅画会互相矛盾】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The best-known picture is a <span class="hl-loc">Dutch painting</span> in which the bird <span class="hl-swap">appears to be</span> <span class="hl-swap">extremely</span> <span class="hl-ans">fat [Q33]</span>, <span class="hl-conn">but</span> this may not be accurate.</div>
+                            <div class="cn-line">最著名的一幅画是一张<strong>荷兰画</strong>，画中这只鸟看起来极其<strong>肥胖</strong>，但这可能并不准确。【Q33 → fat；suggests ⇄ appears to be；very ⇄ extremely】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> An <span class="hl-trap">Indian painting</span> done at the same time shows a much <span class="hl-trap">thinner</span> bird.</div>
+                            <div class="cn-line">同一时期的一幅印度画则显示这是一只瘦得多的鸟。【Indian painting / thinner 是对比干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Although no complete specimen survives, in the early 17th century, four <span class="hl-loc">dried</span> parts of a bird were known to exist.</div>
+                            <div class="cn-line">虽然没有完整的标本留存下来，但在 17 世纪初，已知有四件干燥的鸟类部件存在。【dried parts 是 Q34 的原词伏笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Of these, three have disappeared, <span class="hl-conn">so</span> <span class="hl-swap">only one example of</span> <span class="hl-loc">soft tissue</span> from the dodo survives, a dodo <span class="hl-ans">head [Q34]</span>.</div>
+                            <div class="cn-line">其中三件已经消失，所以只剩一个渡渡鸟软组织的样本留存下来——一个渡渡鸟的<strong>头</strong>。【Q34 → head；only remaining ⇄ only one example ... survives；head /hed/ 别听成 had】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Bones have also been found, <span class="hl-conn">but</span> there's only one complete <span class="hl-trap">skeleton</span> in existence.</div>
+                            <div class="cn-line">骨骼也被发现过，但全世界只有一具完整的骨架。【skeleton 是干扰：骨 ≠ 软组织，也不是 dried】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This single dodo skeleton has recently been the subject of <span class="hl-loc">scientific research</span>, which suggests that many of the earlier beliefs about dodos may have been incorrect.</div>
+                            <div class="cn-line">这具唯一的渡渡鸟骨架最近成了科学研究的对象，研究表明许多早先关于渡渡鸟的看法可能都不正确。【承上启下：下面开始逐条推翻旧看法】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For example, early accounts of the birds mention how <span class="hl-trap">slow and clumsy</span> it was, <span class="hl-conn">but</span> scientists now believe the bird's strong knee joints would have made it <span class="hl-loc">capable of</span> <span class="hl-ans">movement [Q35]</span> which was <span class="hl-swap">not slow, but actually quite fast</span>.</div>
+                            <div class="cn-line">例如，早期关于这种鸟的记载提到它多么缓慢笨拙，但科学家现在认为，这种鸟强壮的膝关节使它能够做出并不缓慢、实际上相当快速的<strong>移动</strong>。【Q35 → movement；rapid ⇄ not slow, but actually quite fast】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, one 17th century sailor wrote that he found the birds <span class="hl-trap">hard to catch</span>.</div>
+                            <div class="cn-line">事实上，一位 17 世纪的水手写道，他觉得这种鸟很难抓到。【hard to catch 是"跑得快"的侧证】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's true that the dodo's <span class="hl-loc">small wings</span> wouldn't have <span class="hl-trap">allowed it to leave the ground</span>, <span class="hl-conn">but</span> the scientists suggest that these were probably <span class="hl-swap">employed for</span> <span class="hl-ans">balance [Q36]</span> <span class="hl-conn">while</span> going over uneven ground.</div>
+                            <div class="cn-line">确实，渡渡鸟的小翅膀不可能让它离开地面，但科学家提出，它们很可能是用来在走过不平地面时保持<strong>平衡</strong>的。【Q36 → balance；maintain ⇄ employed for；主动变被动】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Another group of scientists carried out analysis of the dodo's <span class="hl-loc">skull</span>.</div>
+                            <div class="cn-line">另一组科学家对渡渡鸟的头骨进行了分析。【skull 定位，答案却落在"脑"上】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They found that the reports of the <span class="hl-trap">lack of intelligence</span> of the dodo were not borne out by their research, which suggested the bird's <span class="hl-ans">brain [Q37]</span> was <span class="hl-swap">not small, but average in size</span>.</div>
+                            <div class="cn-line">他们发现，关于渡渡鸟智力低下的说法并没有得到研究的支持；研究表明，这种鸟的<strong>脑</strong>并不小，而是中等大小。【Q37 → brain；not A but B 修正结构】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, <span class="hl-swap">in relation to</span> its <span class="hl-trap">body size</span>, it was <span class="hl-swap">similar to</span> that of the pigeon, which is known to be a <span class="hl-trap">highly intelligent bird</span>.</div>
+                            <div class="cn-line">事实上，相对于它的身体大小，它（的脑）与鸽子相近，而鸽子以高智商著称。【In fact 后的 body size 是参照物，不是答案；主语 it = the brain】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The researchers <span class="hl-conn">also</span> found that the structure of the bird's skull suggested that one <span class="hl-loc">sense</span> which was particularly <span class="hl-swap">well developed</span> was that of <span class="hl-ans">smell [Q38]</span>,</div>
+                            <div class="cn-line">研究人员还发现，这种鸟头骨的结构表明，有一种感官特别发达，那就是<strong>嗅觉</strong>。【Q38 → smell；答案在 was that of 之后】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">so</span> the dodo may <span class="hl-conn">also</span> have been particularly <span class="hl-swap">good at locating</span> ripe fruit and other food in the island's thick vegetation.</div>
+                            <div class="cn-line">所以渡渡鸟可能也特别擅长在岛上茂密的植被中找到成熟的果实和其他食物。【enabled them to find food ⇄ good at locating ... food】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So it looks as if the dodo was better able to survive and defend itself than was originally believed.</div>
+                            <div class="cn-line">所以看起来，渡渡鸟的生存和自卫能力比原先认为的更强。【小结句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Yet</span>, less than 200 years after Europeans first arrived on the island, they had become extinct.</div>
+                            <div class="cn-line">然而，在欧洲人首次抵达该岛后不到 200 年，它们就灭绝了。【Yet 转折，进入 Reasons for extinction】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So what was the reason for this?</div>
+                            <div class="cn-line">那么原因是什么呢？【设问，下面开始给原因】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For a long time it was believed that the dodos were hunted to extinction, <span class="hl-conn">but</span> scientists now believe the situation was more complicated than this.</div>
+                            <div class="cn-line">很长一段时间里，人们认为渡渡鸟是被猎杀至灭绝的，但科学家现在认为情况比这更复杂。【but 推翻"猎杀是主因"，与卷面 Hunting was probably not the main cause 对应】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Another factor may have been the new species brought to the island by the sailors.</div>
+                            <div class="cn-line">另一个因素可能是船员带到岛上的新物种。【总起句，下面列举狗、猴子、老鼠】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These included dogs, which would have been a threat to the dodos, <span class="hl-conn">and also</span> monkeys, which ate the fruit that was the main part of the dodo's diet.</div>
+                            <div class="cn-line">这些包括狗（对渡渡鸟是威胁），还有猴子（吃掉了渡渡鸟主要食物的果实）。【狗和猴子是"有意带来"的】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These were brought to the island <span class="hl-swap">deliberately</span>, <span class="hl-conn">but</span> <span class="hl-loc">the ships</span> also brought <span class="hl-swap">another type of creature</span>, <span class="hl-ans">rats [Q39]</span>, which <span class="hl-swap">came to land from the ships</span> and <span class="hl-swap">rapidly overran</span> the island.</div>
+                            <div class="cn-line">这些是被有意带到岛上的，但船只还带来了另一种生物——<strong>老鼠</strong>，它们从船上上岸并迅速遍布全岛。【Q39 → rats；another type of creature, rats 同位语；ships /ʃɪps/ ≠ sheep /ʃiːp/】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These upset the ecology of the island, not just the dodos, <span class="hl-conn">but</span> other species too.</div>
+                            <div class="cn-line">它们扰乱了岛上的生态，不只是渡渡鸟，还有其他物种。【not just A but B 递进，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, they were a <span class="hl-swap">particular danger</span> to the dodos <span class="hl-conn">because</span> they <span class="hl-swap">consumed their eggs</span>.</div>
+                            <div class="cn-line">然而，它们对渡渡鸟尤其危险，因为它们吃掉了鸟蛋。【ate the birds' eggs ⇄ consumed their eggs；However + because 锁死答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> And since each dodo only laid one at a time, this probably had a devastating effect on populations.</div>
+                            <div class="cn-line">而且由于每只渡渡鸟一次只产一枚蛋，这可能对种群造成了毁灭性影响。【since 原因；铺垫下一段"主因"】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, we now think that probably <span class="hl-loc">the main cause of the bird's extinction</span> was <span class="hl-conn">not</span> the introduction of <span class="hl-trap">non-native species</span>, <span class="hl-conn">but</span> the introduction of <span class="hl-swap">agriculture</span>.</div>
+                            <div class="cn-line">然而，我们现在认为，这种鸟灭绝的主要原因可能不是外来物种的引入，而是<strong>农业</strong>的引入。【not A but B：but 后面是真原因；agriculture 是"原因"，不是被摧毁的东西】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This meant that the <span class="hl-ans">forest [Q40]</span> that had once <span class="hl-swap">covered all the island</span> and that had <span class="hl-swap">provided a perfect home</span> for the dodo <span class="hl-swap">was cut down</span> so that crops such as sugar could be grown.</div>
+                            <div class="cn-line">这意味着，曾经覆盖全岛、曾为渡渡鸟提供完美家园的<strong>森林</strong>被砍倒了，以便种植甘蔗等作物。【Q40 → forest；arrival of farming ⇄ introduction of agriculture；was destroyed ⇄ was cut down；主干 the forest ... was cut down，两个 that 从句只是定语】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So although the dodo had survived for thousands of years, suddenly it was gone.</div>
+                            <div class="cn-line">所以，尽管渡渡鸟存活了数千年，它却突然消失了。【收尾句】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+</div><footer><p>剑桥雅思 16 Test 4 Part 1 + Part 4 · 答案句切片与七坑复盘</p></footer></div>
 <script>
 const mainAudio = document.getElementById('main-audio');
 const nowPlayingText = document.getElementById('now-playing-text');
@@ -1234,11 +1793,26 @@ let recordSeconds = 0;
 let userAudioPlayer = null;
 const userRecordings = {};
 
+const _audioBlobCache = {};
 function playAudio(filename, title, button) {
     if (!mainAudio) return;
     if (userAudioPlayer) userAudioPlayer.pause();
-    mainAudio.src = filename;
-    mainAudio.play().catch(err => console.warn('音频播放未启动:', err));
+    if (!window._audioBlobCache) window._audioBlobCache = {};
+    const startPlay = (src) => {
+        mainAudio.src = src;
+        mainAudio.loop = isLooping;
+        mainAudio.play().catch(err => console.warn('音频播放未启动:', err));
+    };
+    if (window._audioBlobCache[filename]) { startPlay(window._audioBlobCache[filename]); }
+    else {
+        fetch(filename).then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.blob();
+        }).then(b => {
+            window._audioBlobCache[filename] = URL.createObjectURL(b);
+            startPlay(window._audioBlobCache[filename]);
+        }).catch(() => startPlay(filename));
+    }
     nowPlayingText.textContent = `▶ 正在播放：${title}`;
     document.querySelectorAll('.slice-card.playing').forEach(card => card.classList.remove('playing'));
     const card = button && button.closest('.slice-card');
@@ -1266,7 +1840,8 @@ function filterCategory(category, btn) {
     document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.slice-card').forEach(card => {
-        card.style.display = category === 'all' || card.dataset.category === category ? 'block' : 'none';
+        const cats = (card.dataset.category || '').split(/\s+/);
+        card.style.display = category === 'all' || cats.includes(category) ? 'block' : 'none';
     });
 }
 function recordingPanel(cardId) { return document.getElementById(`user-rec-panel-${cardId}`); }

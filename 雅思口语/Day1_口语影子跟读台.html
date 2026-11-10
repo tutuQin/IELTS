@@ -325,6 +325,35 @@
             color: var(--text-muted);
             font-size: 0.85rem;
         }
+
+        /* ===== 双版本示范音源 / 循环控制 ===== */
+        .version-bar {
+            display: flex; align-items: center; justify-content: space-between; gap: 18px;
+            flex-wrap: wrap; margin-bottom: 22px; padding: 16px 20px;
+            background: linear-gradient(135deg, rgba(56,189,248,0.10), rgba(192,132,252,0.10));
+            border: 1px solid rgba(56,189,248,0.35); border-radius: 14px;
+        }
+        .version-bar strong { color: var(--accent-blue); font-size: 1rem; }
+        .version-desc { margin-top: 6px; font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
+        .version-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+        .version-btn {
+            background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18);
+            color: var(--text-main); padding: 9px 15px; border-radius: 9px; cursor: pointer;
+            font-size: 0.85rem; font-weight: 700; transition: all .2s; white-space: nowrap;
+        }
+        .version-btn:hover { border-color: var(--accent-blue); }
+        .version-btn.active {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: #0f172a; border-color: transparent;
+        }
+        .btn-loop {
+            background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.4);
+            color: var(--accent-green); padding: 6px 12px; border-radius: 8px; cursor: pointer;
+            font-size: 0.82rem; font-weight: 700; transition: all .2s; white-space: nowrap;
+        }
+        .btn-loop:hover { background: rgba(52,211,153,0.28); }
+        .btn-loop.active { background: var(--accent-green); color: #0f172a; }
+        .pause-hint { color: var(--accent-amber); font-weight: 700; }
     </style>
 </head>
 <body>
@@ -339,16 +368,29 @@
 
     <header>
         <h1>🗣️ 雅思口语 7.5分标准发音·停顿影子跟读台</h1>
-        <p>精准意群换气（Pause）· 语调起伏（Intonation）· 真实职场语速（150 WPM）</p>
+        <p>精准意群换气（Pause）· 语调起伏（Intonation）· 7.5 / 7 分双档示范 · 可拖进度条精听任意意群</p>
     </header>
+
+    <div class="version-bar">
+        <div>
+            <strong>🎚️ 示范音源：按 / 意群精确切分（英音 en-GB-SoniaNeural）</strong>
+            <div class="version-desc" id="version-desc">
+                0.27s 意群换气 / 0.53s 句末收调 · 自然考场语速 · 每个意群自带语调起伏，适合练连贯表达
+            </div>
+        </div>
+        <div class="version-btns">
+            <button class="version-btn active" onclick="setVersion('7.5分标准版', this)">7.5 分标准版 · 自然语速</button>
+            <button class="version-btn" onclick="setVersion('7分慢速跟读版', this)">7 分打底版 · 逐句留白</button>
+        </div>
+    </div>
 
     <div class="practice-banner">
         <div class="banner-icon">🎧</div>
         <div class="banner-text">
             <h4>影子跟读（Shadowing）训练指南：</h4>
-            <p>1. <strong>第一遍（盲听感知）</strong>：点击播放，闭上眼睛，感受母语考官在黄色斜线 <span style="color:#fbbf24; font-weight:bold;">/</span> 处的轻吸气与短暂停顿。<br>
+            <p>1. <strong>第一遍（听题 + 盲听感知）</strong>：每段开头会先朗读该题的 <strong>question</strong>（母题为 <em>Work or study</em>），短暂停顿后才是答案；闭上眼睛感受母语考官在黄色斜线 <span style="color:#fbbf24; font-weight:bold;">/</span> 处的轻吸气与短暂停顿，<strong>影子跟读只跟答案部分</strong>。<br>
             2. <strong>第二遍（0.8x 慢速跟读）</strong>：点击 <strong>0.8x</strong> 按钮，出声跟读，让舌头肌肉彻底摆脱爆破音加音与结巴。<br>
-            3. <strong>第三遍（录音对比）</strong>：点击 <strong>🎙️ 录下我的声音</strong>，自己完整说一遍并回放对比，直到语调一样自然自信！</p>
+            3. <strong>第三遍（逐句留白跟读）</strong>：切到 <strong>7 分打底版</strong>，每句后有 2 秒空白，跟着空白出声复述，先拆碎再合起来。<br>4. <strong>第四遍（录音对比）</strong>：点击 <strong>🎙️ 录音自测</strong>，完整说一遍并回放，直到语调一样自然自信！<br>💡 进度条可任意拖动：想单练某个意群就拖到那里，再点 <strong>🔁 循环</strong>反复磨；黄色 <span class="pause-hint">/</span> 就是音频里真实的换气点。</p>
         </div>
     </div>
 
@@ -363,12 +405,13 @@
         </div>
 
         <div class="player-row">
-            <audio id="audio-master" controls src="音频/Day1_Work_or_Study/00_Master_Story_超级母题45秒全景.mp3"></audio>
+            <audio id="audio-master" controls preload="none" data-src="音频/Day1_Work_or_Study/7.5分标准版/00_Master_Story_超级母题45秒全景.mp3" src="音频/Day1_Work_or_Study/7.5分标准版/00_Master_Story_超级母题45秒全景.mp3"></audio>
             <div class="speed-btns">
                 <button class="btn-speed" onclick="setSpeed('audio-master', 0.8, this)">0.8x</button>
                 <button class="btn-speed active" onclick="setSpeed('audio-master', 1.0, this)">1.0x</button>
                 <button class="btn-speed" onclick="setSpeed('audio-master', 1.2, this)">1.2x</button>
             </div>
+            <button class="btn-loop" onclick="toggleLoop('audio-master', this)">🔁 循环</button>
             <button class="btn-record" id="rec-btn-master" onclick="toggleRecord('master')">🎙️ 录音自测</button>
         </div>
 
@@ -412,12 +455,13 @@
         </div>
 
         <div class="player-row">
-            <audio id="audio-q1" controls src="音频/Day1_Work_or_Study/01_Q1_Current_Job_当前职业.mp3"></audio>
+            <audio id="audio-q1" controls preload="none" data-src="音频/Day1_Work_or_Study/7.5分标准版/01_Q1_Current_Job_当前职业.mp3" src="音频/Day1_Work_or_Study/7.5分标准版/01_Q1_Current_Job_当前职业.mp3"></audio>
             <div class="speed-btns">
                 <button class="btn-speed" onclick="setSpeed('audio-q1', 0.8, this)">0.8x</button>
                 <button class="btn-speed active" onclick="setSpeed('audio-q1', 1.0, this)">1.0x</button>
                 <button class="btn-speed" onclick="setSpeed('audio-q1', 1.2, this)">1.2x</button>
             </div>
+            <button class="btn-loop" onclick="toggleLoop('audio-q1', this)">🔁 循环</button>
             <button class="btn-record" id="rec-btn-q1" onclick="toggleRecord('q1')">🎙️ 录音自测</button>
         </div>
 
@@ -455,12 +499,13 @@
         </div>
 
         <div class="player-row">
-            <audio id="audio-q2" controls src="音频/Day1_Work_or_Study/02_Q2_Why_Chose_选择原因.mp3"></audio>
+            <audio id="audio-q2" controls preload="none" data-src="音频/Day1_Work_or_Study/7.5分标准版/02_Q2_Why_Chose_选择原因.mp3" src="音频/Day1_Work_or_Study/7.5分标准版/02_Q2_Why_Chose_选择原因.mp3"></audio>
             <div class="speed-btns">
                 <button class="btn-speed" onclick="setSpeed('audio-q2', 0.8, this)">0.8x</button>
                 <button class="btn-speed active" onclick="setSpeed('audio-q2', 1.0, this)">1.0x</button>
                 <button class="btn-speed" onclick="setSpeed('audio-q2', 1.2, this)">1.2x</button>
             </div>
+            <button class="btn-loop" onclick="toggleLoop('audio-q2', this)">🔁 循环</button>
             <button class="btn-record" id="rec-btn-q2" onclick="toggleRecord('q2')">🎙️ 录音自测</button>
         </div>
 
@@ -498,12 +543,13 @@
         </div>
 
         <div class="player-row">
-            <audio id="audio-q3" controls src="音频/Day1_Work_or_Study/03_Q3_Enjoy_Doing_热爱与成就感.mp3"></audio>
+            <audio id="audio-q3" controls preload="none" data-src="音频/Day1_Work_or_Study/7.5分标准版/03_Q3_Enjoy_Doing_热爱与成就感.mp3" src="音频/Day1_Work_or_Study/7.5分标准版/03_Q3_Enjoy_Doing_热爱与成就感.mp3"></audio>
             <div class="speed-btns">
                 <button class="btn-speed" onclick="setSpeed('audio-q3', 0.8, this)">0.8x</button>
                 <button class="btn-speed active" onclick="setSpeed('audio-q3', 1.0, this)">1.0x</button>
                 <button class="btn-speed" onclick="setSpeed('audio-q3', 1.2, this)">1.2x</button>
             </div>
+            <button class="btn-loop" onclick="toggleLoop('audio-q3', this)">🔁 循环</button>
             <button class="btn-record" id="rec-btn-q3" onclick="toggleRecord('q3')">🎙️ 录音自测</button>
         </div>
 
@@ -541,12 +587,13 @@
         </div>
 
         <div class="player-row">
-            <audio id="audio-q4" controls src="音频/Day1_Work_or_Study/04_Q4_Career_Plans_职业规划.mp3"></audio>
+            <audio id="audio-q4" controls preload="none" data-src="音频/Day1_Work_or_Study/7.5分标准版/04_Q4_Career_Plans_职业规划.mp3" src="音频/Day1_Work_or_Study/7.5分标准版/04_Q4_Career_Plans_职业规划.mp3"></audio>
             <div class="speed-btns">
                 <button class="btn-speed" onclick="setSpeed('audio-q4', 0.8, this)">0.8x</button>
                 <button class="btn-speed active" onclick="setSpeed('audio-q4', 1.0, this)">1.0x</button>
                 <button class="btn-speed" onclick="setSpeed('audio-q4', 1.2, this)">1.2x</button>
             </div>
+            <button class="btn-loop" onclick="toggleLoop('audio-q4', this)">🔁 循环</button>
             <button class="btn-record" id="rec-btn-q4" onclick="toggleRecord('q4')">🎙️ 录音自测</button>
         </div>
 
@@ -636,7 +683,84 @@
             }
         }
     }
+
+    // ===== 双版本示范音源 + Blob 内存加载（解决预览服务器不支持 Range 请求导致进度条拖不动）=====
+    const AUDIO_BASE = '音频/Day1_Work_or_Study/';
+    const FILES = {
+        master: '00_Master_Story_超级母题45秒全景.mp3',
+        q1: '01_Q1_Current_Job_当前职业.mp3',
+        q2: '02_Q2_Why_Chose_选择原因.mp3',
+        q3: '03_Q3_Enjoy_Doing_热爱与成就感.mp3',
+        q4: '04_Q4_Career_Plans_职业规划.mp3'
+    };
+    const VERSIONS = {
+        '7.5分标准版': {
+            desc: '0.27s 意群换气 / 0.53s 句末收调 · 自然考场语速 · 每个意群自带语调起伏，适合练连贯表达',
+            times: ['约 63 秒', '约 23 秒', '约 25 秒', '约 24 秒', '约 31 秒']
+        },
+        '7分慢速跟读版': {
+            desc: '同声英音降速 15% · 0.39s 意群停顿 · <span class="pause-hint">每句后留 2 秒空白</span>供你出声复述，先拆碎再合起来',
+            times: ['约 89 秒', '约 31 秒', '约 35 秒', '约 35 秒', '约 43 秒']
+        }
+    };
+    let currentVersion = '7.5分标准版';
+    const blobCache = {};
+
+    function applyTimes(v) {
+        const tags = document.querySelectorAll('.timing-tag');
+        VERSIONS[v].times.forEach((t, i) => { if (tags[i]) tags[i].innerHTML = '⏱️ ' + t; });
+    }
+
+    async function blobLoad(audio) {
+        const src = audio.dataset.src;
+        if (!src) return;
+        if (blobCache[src]) { audio.src = blobCache[src]; return; }
+        try {
+            const r = await fetch(src);
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            const url = URL.createObjectURL(await r.blob());
+            blobCache[src] = url;
+            audio.src = url;
+        } catch (e) {
+            audio.src = src;   // file:// 直接双击打开时降级为相对路径
+        }
+    }
+
+    function currentRate(audio) {
+        const active = audio.parentElement.querySelector('.speed-btns .btn-speed.active');
+        return active ? parseFloat(active.textContent) : 1.0;
+    }
+
+    async function setVersion(v, btn) {
+        currentVersion = v;
+        document.querySelectorAll('.version-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('version-desc').innerHTML = VERSIONS[v].desc;
+        applyTimes(v);
+        for (const [id, file] of Object.entries(FILES)) {
+            const a = document.getElementById('audio-' + id);
+            if (!a) continue;
+            const rate = currentRate(a);
+            a.pause();
+            a.dataset.src = AUDIO_BASE + v + '/' + file;
+            await blobLoad(a);
+            a.playbackRate = rate;
+        }
+    }
+
+    function toggleLoop(audioId, btn) {
+        const a = document.getElementById(audioId);
+        a.loop = !a.loop;
+        btn.classList.toggle('active', a.loop);
+        btn.innerHTML = a.loop ? '🔁 循环中' : '🔁 循环';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        applyTimes(currentVersion);
+        document.querySelectorAll('audio[id^="audio-"]').forEach(a => blobLoad(a));
+    });
 </script>
 
 </body>
 </html>
+

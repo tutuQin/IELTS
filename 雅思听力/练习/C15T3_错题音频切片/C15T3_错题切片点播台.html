@@ -485,6 +485,28 @@
             font-weight: 600;
         }
 
+        /* 定位词：蓝色实线下划线 */
+        .hl-loc {
+            background: rgba(56, 189, 248, 0.16);
+            color: #7dd3fc;
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px solid #38bdf8;
+            font-weight: 600;
+        }
+
+        /* 题干 ⇄ 原文替换处：琥珀色虚线下划线 */
+        .hl-swap {
+            background: rgba(251, 191, 36, 0.16);
+            color: #fbbf24;
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px dashed #fbbf24;
+            font-weight: 600;
+        }
+
+        .legend-row { line-height: 2.1; }
+
         footer {
             text-align: center;
             color: var(--text-muted);
@@ -515,8 +537,8 @@
     </div>
 
     <header>
-        <h1>剑桥雅思 15 Test 3 · Part 1 错题切片点播台</h1>
-        <p>Employment Agency: Possible Jobs 职业介绍所职位推荐 · 10 大考点精准切片 · 影子跟读录音 · 深度神经归因</p>
+        <h1>剑桥雅思 15 Test 3 · Part 1 + Part 4 错题切片点播台</h1>
+        <p>Part 1 Employment Agency 职业介绍所职位推荐 (Q1-Q10) ｜ Part 4 Early history of keeping clean 清洁的早期历史讲座 (Q31-Q40) · 答案句精准切片 · 影子跟读录音 · 深度神经归因</p>
     </header>
 
     <!-- Sticky Main Audio Player -->
@@ -537,10 +559,11 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCards('all')">全部切片 (11)</button>
-        <button class="tab-btn" onclick="filterCards('wrong')" style="color: #fca5a5;">⚠️ 错题与核心陷阱 (3: Q6/Q7/Q8)</button>
+        <button class="tab-btn active" onclick="filterCards('all')">全部切片 (22)</button>
+        <button class="tab-btn" onclick="filterCards('wrong')" style="color: #fca5a5;">⚠️ 错题与核心陷阱 (10: P1 Q6/Q7/Q8 + P4 Q33-38/Q40)</button>
         <button class="tab-btn" onclick="filterCards('job1')">🏢 岗位一：行政助理 (Q1-Q5)</button>
         <button class="tab-btn" onclick="filterCards('job2')">📦 岗位二：仓库助理 (Q6-Q10)</button>
+        <button class="tab-btn" onclick="filterCards('part4')" style="color: #c084fc;">🧼 Part 4：清洁史讲座 (Q31-Q40)</button>
     </div>
 
     <!-- Slices List -->
@@ -1091,10 +1114,611 @@
             </div>
         </div>
 
+        <!-- ======== PART 4 SECTION DIVIDER ======== -->
+        <div class="slice-card" data-type="part4" data-wrong="false" style="border-color: rgba(192, 132, 252, 0.4); background: linear-gradient(135deg, rgba(192,132,252,0.08), rgba(56,189,248,0.05));">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag" style="background: rgba(192,132,252,0.2); color: #c084fc; border: 1px solid rgba(192,132,252,0.4);">Part 4 · 学术讲座 · Q31-Q40</span>
+                    <h3 class="card-title">🧼 Early history of keeping clean 清洁的早期历史 · 战报 10 题对 3 错 7</h3>
+                </div>
+            </div>
+            <div class="q-stem-box" style="border-left-color: #c084fc;">
+                <strong>讲座时间轴：</strong>史前（Q31 泥垢）→ 古巴比伦（Q32 陶土）→ 古希腊（Q33 金属刮身板）→ 日耳曼高卢（Q34 染发）→ 古罗马（Q35 浴场）→ 中世纪（Q36 瘟疫 / Q37 香水）→ 近代科学（Q38 食盐制碱 / Q39 成为科学 / Q40 重税取消）。<br>
+                <strong>七道错题的三大病根：</strong>① <strong>答案前置连环阵</strong>（Q33 metal 在生词 strigil 前、Q35 baths 在 aqueducts 前——等定位词=等丢答案）；② <strong>生词卡壳断崖</strong>（strigil→unsanitary→连败 Q33-Q38 空窗）；③ <strong>审题与语法自检缺失</strong>（Q34 把"染什么"记成"由什么组成"、Q40 把 tax 空耳成 hightext）。Part 4 独白没有对话换气，一题卡壳就是连环崩——本套是最典型的"断崖案例"。
+            </div>
+        </div>
+
+        <!-- 标注图例 -->
+        <div class="slice-card" data-type="part4" data-wrong="false" style="border-color: rgba(56,189,248,0.3);">
+            <div class="q-stem-box legend-row" style="border-left-color: #38bdf8;">
+                <strong>🎨 本篇（Part 4）标注图例</strong> —— 每一题都按同一套颜色标注：<br>
+                <span class="hl-loc">蓝色实线</span> = <strong>定位词</strong>：卷面和录音里<strong>同一个词</strong>（人名 / 地名 / 年份 / 专有名词），听到它就知道答案区到了；卷面里的定位词和原文里的定位词用<strong>同一种蓝</strong>，一眼能对上。<br>
+                <span class="hl-swap">黄色虚线</span> = <strong>替换处</strong>：题干和原文<strong>换了说法</strong>的地方（同义替换 / 词性转换 / 主被动倒置 / 介词框架颠倒），左边题干、右边原文都标黄，成对看就是命题人的改写路径。<br>
+                <span class="hl-target">绿色</span> = 答案词；<span class="hl-trap" style="text-decoration: line-through;">红色删除线</span> = 干扰项（听到了也要划掉）。<br>
+                <strong>读法：</strong>先看题干里<strong>蓝色</strong>锁定位置 → 再顺着<strong>黄色</strong>看"卷面怎么变成录音" → <strong>绿色</strong>落笔。
+            </div>
+        </div>
+
+        <!-- Q31 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q31 考点切片 · Part 4</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <span class="card-tag tag-p1">⑤改写识别成功</span>
+                    <h3 class="card-title">31 · 史前时期：清水冲掉的是 mud 泥垢</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('31_Q31_史前泥垢mud清水冲洗.mp3', '31 · 史前时期：清水冲掉的是 mud 泥垢')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-31" onclick="toggleRecording(31)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-31" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-31"></span>
+                    <span id="rec-status-31">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-31">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-31" onclick="playUserRecording(31)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(31)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(31)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <span class="hl-loc">Prehistoric times</span>: <span class="hl-loc">water</span> was used to <span class="hl-swap">wash off</span> <strong>[ 31 ]</strong> <em style="color: var(--text-muted);">（wash off ⇄ 原文 rinse off）</em>
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>改写对应</strong>：卷面 <code>wash off</code> $\Leftrightarrow$ 录音 <code>rinsed ... off</code>；<br>
+• <strong>做题心得</strong>：讲座开场即战斗状态，<em>at least that it rinsed <strong>mud</strong> off their hands</em> 一步到位。史前语境里能被清水冲掉的日常脏东西就是泥垢，语义自检通过。开门红稳住节奏。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> Nowadays, we use different products for personal cleanliness, laundry, dishwashing and household cleaning, but this is very much a 20th-century development.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">如今我们把个人清洁、洗衣、洗碗和家居清洁用不同的产品分开处理，但这主要是 20 世纪才有的发展。【讲座开场引子，无答案】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> The origins of cleanliness date back to <span class="hl-loc">prehistoric times</span>. Since <span class="hl-loc">water</span> is essential for life, the earliest people lived near water and knew something about its cleansing properties – at least that it <span class="hl-swap">rinsed</span> <span class='hl-target'>mud [Q31]</span> <span class="hl-swap">off</span> their hands.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">清洁的起源可以追溯到史前时代。水是生命必需，最早的人类临水而居，也多少了解水的清洁特性——至少知道水能把手上的<strong>泥垢</strong>冲掉。【Q31 答案句 → mud】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q32 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q32 考点切片 · Part 4</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <span class="card-tag tag-p1">⑤改写识别成功</span>
+                    <h3 class="card-title">32 · 古巴比伦：陶土 clay 圆筒上的肥皂配方</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('32_Q32_巴比伦陶土clay圆筒.mp3', '32 · 古巴比伦：陶土 clay 圆筒上的肥皂配方')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-32" onclick="toggleRecording(32)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-32" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-32"></span>
+                    <span id="rec-status-32">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-32">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-32" onclick="playUserRecording(32)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(32)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(32)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <span class="hl-loc">Ancient Babylon</span>: <span class="hl-swap">soap-like material</span> <span class="hl-swap">found in</span> <strong>[ 32 ]</strong> <span class="hl-loc">cylinders</span> <em style="color: var(--text-muted);">（found in ____ cylinders ⇄ discovered cylinders made of ____）</em>
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>改写对应</strong>：卷面 <em>soap-like material found in ____ cylinders</em> $\Leftrightarrow$ 录音 <em>Archaeologists discovered <strong>cylinders made of clay</strong></em> —— 卷面后置定语 in ____ cylinders 反过来就是 made of clay；<br>
+• <strong>做题心得</strong>：2800 BC 这个年份是天然路标，紧跟的 discovered cylinders made of <strong>clay</strong> 直接锁定。后面 inscriptions / fats boiled with ashes 是配方细节干扰，没有动摇，稳。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> During the excavation of <span class="hl-loc">ancient Babylon</span>, evidence was found that soapmaking was known as early as <span class="hl-loc">2800 BC</span>. Archaeologists <span class="hl-swap">discovered</span> <span class="hl-loc">cylinders</span> <span class="hl-swap">made of</span> <span class='hl-target'>clay [Q32]</span>, with inscriptions on them saying that fats were boiled with ashes.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">在对古巴比伦的发掘中，找到了早在公元前 2800 年就懂得制皂的证据。考古学家发现了<strong>陶土圆筒</strong>，上面的铭文记载着油脂与灰烬同煮。【Q32 答案句 → clay；fats/ashes 是配方干扰，不是答案】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q33 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q33 错题切片 · Part 4</span>
+                    <span class="card-tag tag-wrong">✗ 错题精研</span>
+                    <span class="card-tag tag-p1">②定位错位 + 答案前置 + 生词卡壳</span>
+                    <h3 class="card-title">33 · 古希腊刮身板：metal 在生词 strigil 之前就说完了</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('33_Q33_希腊金属metal刮身板与生词strigil.mp3', '33 · 古希腊刮身板：metal 在生词 strigil 之前就说完了')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-33" onclick="toggleRecording(33)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-33" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-33"></span>
+                    <span id="rec-status-33">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-33">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-33" onclick="playUserRecording(33)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(33)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(33)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <span class="hl-loc">Ancient Greece</span>: used a <span class="hl-loc">strigil</span> – <span class="hl-swap">scraper</span> <span class="hl-swap">made of</span> <strong>[ 33 ]</strong> <em style="color: var(--text-muted);">（strigil 是生词定位词；scraper ⇄ 原文 scraped off ... instrument）</em>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>✗ 你的错因：定位不到</strong> —— 不是没听到这句，而是<strong>答案在定位词前面溜走了</strong>：<br>
+• <strong>答案前置结构</strong>：原文顺序是 <em>scraped off the oil and dirt with a <strong>metal</strong> instrument known as a <strong>strigil</strong></em> —— 答案 metal 先出，2 秒后才出现卷面定位词 strigil。你竖着耳朵等 strigil，等它出现时 metal 已经说完。<br>
+• <strong>生词雪上加霜</strong>：strigil（刮身板）谁都不认识，但命题人故意把它放在卷面当定位词——听到陌生名词别慌，它只是路标，答案往往在它<strong>前面</strong>的日常词里（metal 初中词汇）。<br>
+• <strong>防坑口诀：卷面结构 "A – B made of ____"（A 是生词时），答案在录音里 A 出现之前 3 秒内。刮痧板是金属做的——语义常识也能兜底。</strong>
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> The <span class="hl-loc">early Greeks</span> bathed for aesthetic reasons and apparently didn't use soap. Instead, they cleaned their bodies with blocks of sand, pumice and ashes, then anointed themselves with oil, and <span class="hl-swap">scraped off</span> the oil and dirt with a <span class='hl-target'>metal [Q33]</span> <span class="hl-swap">instrument</span> known as a <span class="hl-loc">strigil</span>. They also used oil mixed with ashes. Clothes were washed without soap in streams.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">早期希腊人为了美观而沐浴，但显然不用肥皂。他们用砂块、浮石和灰烬擦洗身体，再抹上油，然后用一种叫 <strong>strigil（刮身板）</strong> 的<strong>金属</strong>器具刮掉油污。他们还用油混灰烬。衣服则在溪流中不用肥皂直接洗。【Q33 答案句 → metal；答案在生词 strigil 之前出现】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q34 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q34 错题切片 · Part 4</span>
+                    <span class="card-tag tag-wrong">✗ 错题精研</span>
+                    <span class="card-tag tag-p1">⑥审题失真 + 成分句干扰抢答</span>
+                    <h3 class="card-title">34 · 日耳曼人：肥皂用来染红的是 hair，ashes 是配方</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('34_Q34_日耳曼染红头发hair与成分ashes干扰.mp3', '34 · 日耳曼人：肥皂用来染红的是 hair，ashes 是配方')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-34" onclick="toggleRecording(34)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-34" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-34"></span>
+                    <span id="rec-status-34">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-34">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-34" onclick="playUserRecording(34)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(34)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(34)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <span class="hl-loc">Ancient Germany and Gaul</span>: used <span class="hl-loc">soap</span> to <span class="hl-swap">colour their</span> <strong>[ 34 ]</strong> <em style="color: var(--text-muted);">（colour their ____ ⇄ 原文 tint their ____，要的是身体部位）</em>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>✗ 你的错因：听到了 hair 却没写，写了 ashes</strong> —— 复盘你自己的话："题目没有审题对，记忆成了由什么组成"。<br>
+• <strong>审题失真</strong>：卷面写的是 <em>used soap to <strong>colour their</strong> ____</em>（用来"染"他们的什么），你记成了"肥皂由什么组成"——一个词之差，整个听音目标全错。<br>
+• <strong>成分句精准埋雷</strong>：原文恰好先说 <em>a substance called soap, <strong>made of</strong> melted animal fat and <strong>ashes</strong></em>（肥皂的成分：动物油脂+灰烬）——带着"组成"的预期去听，ashes 就成了完美诱饵；真正的答案句在后一句：<em>They used this mixture to <strong>tint their hair</strong> red</em>（用这种混合物把<strong>头发</strong>染红），tint = colour 改写。<br>
+• <strong>防坑口诀：预读时把空格两侧的词都划出来——"colour their + ____" 的坑只能是身体部位/外观词；made of 结构出现时默念"这是配方不是用途"。审题错一道 = 全套目标错位。</strong>
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> The <span class="hl-loc">ancient Germans and Gauls</span> are also credited with discovering how to make a substance called <span class="hl-loc">soap</span>, <span class="hl-swap">made of</span> melted animal fat and <span class='trap-highlight' style='background: rgba(248,113,113,0.25); padding: 1px 4px; border-radius: 3px; color: #fca5a5;'>ashes</span>. They used this mixture to <span class="hl-swap">tint</span> their <span class='hl-target'>hair [Q34]</span> red.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">古日耳曼人和高卢人也被认为发现了如何制造一种叫“肥皂”的物质——<strong>由</strong>熔化的动物油脂和<strong>灰烬</strong>制成（成分干扰：不是 34 题答案）。他们用这种混合物把<strong>头发</strong>染红。【Q34 答案句 → hair；tint = colour】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q35 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q35 错题切片 · Part 4</span>
+                    <span class="card-tag tag-wrong">✗ 错题精研</span>
+                    <span class="card-tag tag-p1">答案前置 + 被动主动转换</span>
+                    <h3 class="card-title">35 · 罗马浴场：baths 在定位词 aqueducts 之前就出完了</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('35_Q35_罗马浴场baths与引水渠后置.mp3', '35 · 罗马浴场：baths 在定位词 aqueducts 之前就出完了')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-35" onclick="toggleRecording(35)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-35" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-35"></span>
+                    <span id="rec-status-35">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-35">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-35" onclick="playUserRecording(35)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(35)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(35)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <span class="hl-loc">Ancient Rome</span>: from about <span class="hl-loc">312 BC</span>, <span class="hl-swap">water carried to</span> Roman <strong>[ 35 ]</strong> <span class="hl-swap">by aqueducts</span> <em style="color: var(--text-muted);">（carried to ... by aqueducts ⇄ 原文 supplied with water from ... aqueducts）</em>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>✗ 你的错因：没有听到答案句</strong> —— 又是一道<strong>答案前置</strong>：<br>
+• <strong>结构拆解</strong>：卷面 <em>water carried to Roman ____ by aqueducts</em>（水被引水渠送到罗马的____），原文反过来说：<em>The first of the famous Roman <strong>baths</strong>, supplied with water from their <strong>aqueducts</strong>, was built around 312 BC</em> —— 先说 baths，插入语里才出现 aqueducts，还把被动（carried to）改成主动（supplied with）。你等 aqueducts 这个定位词，baths 在它前面 2 秒就过完了。<br>
+• <strong>两条防线</strong>：① 312 BC 是卷面给的数字锚点，它的前后 5 秒就是答案区；② 语义常识——罗马引水渠送水去的地方，除了浴场还能是哪（罗马浴场是常识级考点）。<br>
+• <strong>防坑口诀：卷面有数字/年份时，把数字本身当第一定位词；插入语（两个逗号之间的 supplied with...）里藏着定位词时，答案在插入语之前的主干里。</strong>
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> As <span class="hl-loc">Roman civilisation</span> advanced, so did bathing. The first of the famous Roman <span class='hl-target'>baths [Q35]</span>, <span class="hl-swap">supplied with water from</span> their <span class="hl-loc">aqueducts</span>, was built around <span class="hl-loc">312 BC</span>. The baths were luxurious, and bathing became very popular. And by the second century AD, the Greek physician Galen recommended soap for both medicinal and cleansing purposes.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">随着罗马文明进步，洗浴也跟着发展。第一批著名的罗马<strong>浴场</strong>约建于公元前 312 年，<strong>由引水渠</strong>供水。浴场奢华，洗浴蔚然成风。到公元 2 世纪，希腊医师盖伦还推荐肥皂兼作药用和清洁。【Q35 答案句 → baths；答案在定位词 aqueducts 之前】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q36 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q36 错题切片 · Part 4</span>
+                    <span class="card-tag tag-wrong">✗ 错题精研</span>
+                    <span class="card-tag tag-p1">⑤三重改写链 + 生词断崖</span>
+                    <h3 class="card-title">36 · 中世纪：不洗澡的代价是 disease 瘟疫</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('36_Q36_中世纪瘟疫disease改写链.mp3', '36 · 中世纪：不洗澡的代价是 disease 瘟疫')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-36" onclick="toggleRecording(36)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-36" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-36"></span>
+                    <span id="rec-status-36">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-36">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-36" onclick="playUserRecording(36)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(36)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(36)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> Europe in <span class="hl-loc">Middle Ages</span>: <span class="hl-swap">decline in bathing</span> <span class="hl-swap">contributed to occurrence of</span> <strong>[ 36 ]</strong> <em style="color: var(--text-muted);">（decline in bathing ⇄ lack of personal cleanliness；contributed to occurrence of ⇄ were major factors in the outbreaks of）</em>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>✗ 你的错因：过了什么都没听到</strong> —— 这句是本套最长改写链：<br>
+• <strong>三重改写</strong>：① 卷面 <em>decline in bathing</em> $\Leftrightarrow$ 录音 <em>This <strong>lack of personal cleanliness</strong></em>；② 卷面 <em>contributed to occurrence of</em> $\Leftrightarrow$ 录音 <em>were <strong>major factors in the outbreaks of</strong></em>；③ 答案 <strong>disease</strong>。<br>
+• <strong>断崖点</strong>：前面的 <em>the fall of Rome in 467 AD</em> 和 <em>unsanitary living conditions</em>（unsanitary 不卫生的，生词）连环卡壳，等解码完这两处，disease 已经说完。<br>
+• <strong>语义兜底</strong>：Black Death（黑死病）14 世纪——欧洲中世纪因为不讲卫生爆发了什么？瘟疫/疾病是历史常识，就算改写链全断，disease 也该凭语境写出来。<br>
+• <strong>防坑口诀：unsanitary / filth 这类生词放掉，抓住 "outbreaks of ____" 这个名词坑等单词；黑死病 = disease 的免费提示。</strong>
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> After the fall of Rome in 467 AD and the resulting <span class="hl-swap">decline in bathing habits</span>, much of Europe felt the impact of filth on public health. This <span class="hl-swap">lack of personal cleanliness</span> and related unsanitary living conditions were <span class="hl-swap">major factors in the outbreaks of</span> <span class='hl-target'>disease [Q36]</span> in the <span class="hl-loc">Middle Ages</span>, and especially the Black Death of the 14th century.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">公元 467 年罗马陷落后，洗浴习惯随之衰退，欧洲大部分地区饱受污秽对公共卫生的冲击。个人清洁的缺失加上恶劣的卫生条件，是中世纪<strong>瘟疫</strong>爆发——尤其 14 世纪黑死病——的主要成因。【Q36 答案句 → disease；Black Death 是语义验证】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q37 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q37 错题切片 · Part 4</span>
+                    <span class="card-tag tag-wrong">✗ 错题精研</span>
+                    <span class="card-tag tag-p1">②定位错位 + along with 后置答案</span>
+                    <h3 class="card-title">37 · 加进肥皂的是 perfume 香水，plants 只是灰烬的定语</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('37_Q37_肥皂添加香水perfume与plants干扰.mp3', '37 · 加进肥皂的是 perfume 香水，plants 只是灰烬的定语')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-37" onclick="toggleRecording(37)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-37" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-37"></span>
+                    <span id="rec-status-37">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-37">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-37" onclick="playUserRecording(37)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(37)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(37)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <strong>[ 37 ]</strong> <span class="hl-swap">began to be added to</span> <span class="hl-loc">soap</span> <em style="color: var(--text-muted);">（began to be added to ⇄ along with ... for the first time）</em>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>✗ 你的错因：写成 plants，定位不对</strong> ——<br>
+• <strong>干扰词解剖</strong>：原文 <em>Vegetable and animal oils were used with <strong>ashes of plants</strong>, along with <strong>perfume</strong>, apparently for the first time</em> —— plants 出现在 <em>ashes of plants</em>（草木灰）这个短语里，是灰烬的定语，不是"被加进肥皂的新东西"。<br>
+• <strong>答案在 along with 之后</strong>：卷面 <em>____ began to be added to soap</em> 的改写是 <em>along with <strong>perfume</strong>, apparently <strong>for the first time</strong></em> —— "for the first time" 对应卷面的 began（开始被加入），这是本题最隐蔽的定位锚点。<br>
+• <strong>防坑口诀：听到 "A of B" 结构时，B 只是 A 的定语，别拿 B 填空；along with / together with / as well as 后面的名词才是"新加入项"。began = for the first time 是时间改写。</strong>
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> Nevertheless, <span class="hl-loc">soapmaking</span> became an established craft in Europe, and associations of soapmakers guarded their trade secrets closely. Vegetable and animal oils were used with <span class="hl-swap">ashes of</span> <span class='trap-highlight' style='background: rgba(248,113,113,0.25); padding: 1px 4px; border-radius: 3px; color: #fca5a5;'>plants</span>, <span class="hl-swap">along with</span> <span class='hl-target'>perfume [Q37]</span>, apparently <span class="hl-swap">for the first time</span>.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">尽管如此，制皂在欧洲成为一门成熟的行当，制皂师行会严守商业机密。人们用植物油和动物油与<strong>草木灰</strong>（plants 只是 ashes 的定语，不是答案）一起使用，并且<strong>首次</strong>加入了<strong>香水</strong>。【Q37 答案句 → perfume；for the first time 对应卷面 began】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q38 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q38 错题切片 · Part 4</span>
+                    <span class="card-tag tag-wrong">✗ 错题精研</span>
+                    <span class="card-tag tag-p1">⑤介词框架倒置 + 生词连读</span>
+                    <h3 class="card-title">38 · 勒布朗法：turning salt into soda ash 的原料是 salt</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('38_Q38_勒布朗食盐salt制碱.mp3', '38 · 勒布朗法：turning salt into soda ash 的原料是 salt')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-38" onclick="toggleRecording(38)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-38" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-38"></span>
+                    <span id="rec-status-38">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-38">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-38" onclick="playUserRecording(38)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(38)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(38)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <span class="hl-loc">1791</span>: <span class="hl-loc">Leblanc</span> <span class="hl-swap">invented a way of making</span> <span class="hl-loc">soda ash</span> <span class="hl-swap">from</span> <strong>[ 38 ]</strong> <em style="color: var(--text-muted);">（make Y from X ⇄ 原文 turning X into Y，X 的位置前后颠倒）</em>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>✗ 你的错因：直接过了没听到</strong> —— Q36/Q37 连败后的空窗期，正好撞上本套最隐蔽的<strong>介词框架倒置</strong>：<br>
+• <strong>结构拆解</strong>：卷面 <em>making soda ash <strong>from</strong> ____</em>（用____制碱），录音说 <em>patented a process for <strong>turning</strong> <strong>salt</strong> <strong>into</strong> soda ash</strong></em> —— "turn X into Y" 与 "make Y from X" 的 X 位置完全颠倒：卷面空格在句尾（from 后），录音答案在句中（turning 后）。<br>
+• <strong>双锚点</strong>：① 1791 是卷面数字锚点，答案就在它后 5 秒；② <em>Leblanc</em> 人名锚点后紧跟 patented a process。<br>
+• <strong>防坑口诀：卷面 from ____ 的空，在录音里 90% 变成 "turning ____ into..."——听到动词 turn/turning 的瞬间笔尖就位，等它后面的第一个名词。化学常识也行：勒布朗法就是盐制纯碱。</strong>
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> A major step toward large-scale commercial soapmaking occurred in <span class="hl-loc">1791</span>, when a French chemist, Nicolas <span class="hl-loc">Leblanc</span>, <span class="hl-swap">patented a process for turning</span> <span class='hl-target'>salt [Q38]</span> <span class="hl-swap">into</span> <span class="hl-loc">soda ash</span>, or sodium carbonate. Soda ash is the alkali obtained from ashes that combines with fat to form soap.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">1791 年，制皂商业化迈出重大一步：法国化学家尼古拉·勒布朗取得一项专利工艺——把<strong>食盐</strong>转化为纯碱（碳酸钠）。纯碱是从灰烬中提取的碱，与油脂结合即成皂。【Q38 答案句 → salt；turning X into Y = make Y from X】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q39 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="false">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q39 考点切片 · Part 4</span>
+                    <span class="card-tag tag-correct">✓ 模考答对</span>
+                    <span class="card-tag tag-p1">⑤改写识别成功</span>
+                    <h3 class="card-title">39 · 谢弗勒尔让制皂成为 science 科学</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('39_Q39_制皂成为科学science.mp3', '39 · 谢弗勒尔让制皂成为 science 科学')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-39" onclick="toggleRecording(39)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-39" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-39"></span>
+                    <span id="rec-status-39">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-39">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-39" onclick="playUserRecording(39)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(39)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(39)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> <span class="hl-loc">early 1800s</span>: <span class="hl-loc">Chevreul</span> <span class="hl-swap">turned</span> <span class="hl-loc">soapmaking</span> <span class="hl-swap">into a</span> <strong>[ 39 ]</strong> <em style="color: var(--text-muted);">（turned ... into ⇄ 原文 became a）</em>
+            </div>
+
+            <div class="analysis-box">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>改写对应</strong>：卷面 <em>turned soapmaking into a ____</em> $\Leftrightarrow$ 录音 <em>soapmaking <strong>became</strong> a <strong>science</strong></em>；<br>
+• <strong>做题心得</strong>：Chevreul / glycerine / fatty acids 全是生词轰炸，但你抓住了主干 <em>became a science</em>。前一题的空窗没有延续到这一题——说明你能从连败里爬出来，这是本套最值得肯定的一分。science 前的冠词 a 也帮了忙：单数名词坑，science 语义顺滑。
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> Modern <span class="hl-loc">soapmaking</span> was born some twenty years later, in the <span class="hl-loc">early nineteenth century</span>, with the discovery by Michel Eugène <span class="hl-loc">Chevreul</span>, another French chemist, of the chemical nature and relationship of fats, glycerine and fatty acids. His studies established the basis for both fat and soap chemistry, and soapmaking <span class="hl-swap">became a</span> <span class='hl-target'>science [Q39]</span>.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">大约 20 年后的 19 世纪初，现代制皂业诞生：又一位法国化学家米歇尔·欧仁·谢弗勒尔发现了油脂、甘油和脂肪酸的化学本质与相互关系。他的研究奠定了油脂化学和皂化学的基础，制皂由此成为一门<strong>科学</strong>。【Q39 答案句 → science】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Q40 Card (Part 4) -->
+        <div class="slice-card" data-type="part4" data-wrong="true">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Q40 错题切片 · Part 4</span>
+                    <span class="card-tag tag-wrong">✗ 错题精研</span>
+                    <span class="card-tag tag-p1">③句意 + 空耳连读 + 语法自检缺失</span>
+                    <h3 class="card-title">40 · 收官题：high tax 的 tax 就是答案，别写成 hightext</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playTrack('40_Q40_重税tax取消与hightext空耳.mp3', '40 · 收官题：high tax 的 tax 就是答案，别写成 hightext')">
+                        <span>▶ 播放</span>
+                    </button>
+                    <button class="record-card-btn" id="rec-btn-40" onclick="toggleRecording(40)">
+                        <span>🎙️ 录音跟读</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-40" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-40"></span>
+                    <span id="rec-status-40">准备录音...</span>
+                    <span class="rec-timer-badge" id="rec-time-40">00:00</span>
+                </div>
+                <div class="rec-panel-btns">
+                    <button class="rec-sub-btn" id="play-user-btn-40" onclick="playUserRecording(40)">▶ 试听跟读</button>
+                    <button class="rec-sub-btn" onclick="compareOfficial(40)">🎧 对比原声</button>
+                    <button class="rec-sub-btn" onclick="deleteRecording(40)">🗑️ 重录</button>
+                </div>
+            </div>
+
+            <div class="q-stem-box">
+                <strong>卷面题干：</strong> from <span class="hl-loc">1800s</span>, there was <span class="hl-swap">no longer</span> a <strong>[ 40 ]</strong> on <span class="hl-loc">soap</span> <em style="color: var(--text-muted);">（no longer a ____ on soap ⇄ 原文 the high tax was removed）</em>
+            </div>
+
+            <div class="analysis-box wrong-focus">
+                <div class="analysis-title">🎯 考点拆解与定位路径</div>
+                • <strong>✗ 你的错因：听到了 high tax 却写成 hightext</strong> —— 你自己复盘得很准："听到 high tax，没有听懂句意"：<br>
+• <strong>句意拆解</strong>：<em>Until the 19th century, soap was regarded as a luxury item, and was <strong>heavily taxed</strong></em>（19 世纪前肥皂被视为奢侈品，被课以重税）—— tax 第一次以动词 <strong>taxed</strong> 出现；随后 <em>a development that was reinforced when the <strong>high tax</strong> was <strong>removed</strong></em>（重税取消后这一趋势更加强化）—— tax 第二次以名词出现，正是答案。<br>
+• <strong>空耳修复</strong>：/tæks/ 被前词 high 的 /aɪ/ 带跑，听成 text 的音。但卷面早就给了答案的语法框架：<em>no longer <strong>a</strong> ____ <strong>on</strong> soap</em> —— 冠词 a + 介词 on，坑里必须是单数名词；hightext 根本不是一个英文单词。<br>
+• <strong>收尾语义链</strong>：奢侈品 → 重税 → 普通人买不起 → 税取消 → 变成日用品（everyday necessity）→ 清洁水平提升。"no longer a tax on soap" = 肥皂税没了。<br>
+• <strong>防坑口诀：落笔前 1 秒语法质检——a ____ on soap 的坑，动词/形容词/不存在的词一律出局；tax 不熟就想想"奢侈品为什么贵"。</strong>
+            </div>
+
+            <details>
+                <summary><span>📜 展开中英精听原文与标注文档</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> Until the <span class="hl-loc">nineteenth century</span>, <span class="hl-loc">soap</span> was regarded as a luxury item, and was <span class="hl-swap">heavily taxed</span> in several countries. As it became more readily available, it became an everyday necessity, a development that was reinforced when the <span class="hl-swap">high</span> <span class='hl-target'>tax [Q40]</span> <span class="hl-swap">was removed</span>. Soap was then something ordinary people could afford, and cleanliness standards improved.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">直到 19 世纪，肥皂一直被视为奢侈品，在多个国家被课以<strong>重税</strong>。随着它越来越容易获得，它成了日常必需品——<strong>重税取消</strong>后这一趋势进一步强化。肥皂从此是普通人买得起的东西，清洁标准随之提升。【Q40 答案句 → tax；taxed 动词先出现，high tax 名词是答案】</p>
+                </div>
+            </details>
+        </div>
+
+        <!-- Full Part 4 Audio Card -->
+        <div class="slice-card" data-type="part4" data-wrong="false" style="border-color: rgba(192, 132, 252, 0.4);">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag" style="background: rgba(192, 132, 252, 0.2); color: #c084fc; border: 1px solid rgba(192, 132, 252, 0.4);">Part 4 全录音 · 6分29秒</span>
+                    <h3 class="card-title">Part 4 官方完整录音实战盲听 (Q31 - Q40) · 清洁的早期历史讲座</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" style="background: linear-gradient(135deg, #818cf8, #c084fc);" onclick="playTrack('Section_4_Full_清洁的早期历史讲座.mp3', 'Part 4 官方完整录音: Early history of keeping clean (6m29s)')">
+                        <span>▶ 播放 Part 4 全录音</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="q-stem-box" style="border-left-color: #c084fc;">
+                <strong>实战建议：</strong> 先分题靶向精听（重点 Q33 / Q34 / Q35 / Q40 四张错题卡），再整段播放做全真模拟——左栏画"时期 → 关键物"笔记（史前 mud / 巴比伦 clay / 希腊 metal…），练"断崖自救"：任何一处没听懂，立即默念"过"，指针拨到下一个时期词（Babylon / Greece / Rome / Middle Ages / 1791 / 1800s）。
+            </div>
+
+            <details>
+                <summary><span>📜 查看 Part 4 完整官方听力原文与逐句翻译（无删减全文对照）</span> <span>▼</span></summary>
+                <div class="script-content">
+                    <p><span class="speaker-sally">LECTURER:</span> Nowadays, we use different products for personal cleanliness, laundry, dishwashing and household cleaning, but this is very much a 20th-century development. The origins of cleanliness date back to <span class="hl-loc">prehistoric times</span>. Since <span class="hl-loc">water</span> is essential for life, the earliest people lived near water and knew something about its cleansing properties – at least that it <span class="hl-swap">rinsed</span> <span class='hl-target'>mud [Q31]</span> <span class="hl-swap">off</span> their hands.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">如今我们把个人清洁、洗衣、洗碗和家居清洁用不同产品分开处理，但这主要是 20 世纪的发展。清洁的起源追溯到史前：水是生命必需，最早的人类临水而居，至少知道水能把手上的<strong>泥垢</strong>冲掉。【Q31 答案句 → mud】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> During the excavation of <span class="hl-loc">ancient Babylon</span>, evidence was found that soapmaking was known as early as <span class="hl-loc">2800 BC</span>. Archaeologists <span class="hl-swap">discovered</span> <span class="hl-loc">cylinders</span> <span class="hl-swap">made of</span> <span class='hl-target'>clay [Q32]</span>, with inscriptions on them saying that fats were boiled with ashes. This is a method of making soap, though there's no reference to the purpose of this material.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">古巴比伦的发掘找到了公元前 2800 年就懂得制皂的证据：考古学家发现了<strong>陶土圆筒</strong>，铭文记载油脂与灰烬同煮——这是一种制皂方法，尽管没提用途。【Q32 答案句 → clay】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> The <span class="hl-loc">early Greeks</span> bathed for aesthetic reasons and apparently didn't use soap. Instead, they cleaned their bodies with blocks of sand, pumice and ashes, then anointed themselves with oil, and <span class="hl-swap">scraped off</span> the oil and dirt with a <span class='hl-target'>metal [Q33]</span> <span class="hl-swap">instrument</span> known as a <span class="hl-loc">strigil</span>. They also used oil mixed with ashes. Clothes were washed without soap in streams.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">早期希腊人为美观而沐浴，但显然不用肥皂：用砂块、浮石和灰烬擦身，抹油后再用叫 strigil（刮身板）的<strong>金属</strong>器具刮掉油污。衣服在溪流中直洗。【Q33 答案句 → metal；答案在生词 strigil 之前】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> The <span class="hl-loc">ancient Germans and Gauls</span> are also credited with discovering how to make a substance called <span class="hl-loc">soap</span>, <span class="hl-swap">made of</span> melted animal fat and <span class='hl-trap'>ashes</span>. They used this mixture to <span class="hl-swap">tint</span> their <span class='hl-target'>hair [Q34]</span> red.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">古日耳曼人和高卢人也被认为发现了制造“肥皂”的方法——由动物油脂和灰烬组成（成分干扰）。他们用这种混合物把<strong>头发</strong>染红。【Q34 答案句 → hair；tint = colour】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> Soap got its name, according to an ancient Roman legend, from Mount Sapo, where animals were sacrificed, leaving deposits of animal fat. Rain washed these deposits, along with wood ashes, down into the clay soil along the River Tiber. Women found that this mixture greatly reduced the effort required to wash their clothes.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">据古罗马传说，肥皂得名于萨波山：那里献祭动物留下油脂沉积，雨水把油脂连同木灰冲进台伯河沿岸的黏土里。妇女们发现这种混合物能大大省去洗衣的力气。【过渡段：Soap 名称由来，无考题】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> As <span class="hl-loc">Roman civilisation</span> advanced, so did bathing. The first of the famous Roman <span class='hl-target'>baths [Q35]</span>, <span class="hl-swap">supplied with water from</span> their <span class="hl-loc">aqueducts</span>, was built around <span class="hl-loc">312 BC</span>. The baths were luxurious, and bathing became very popular. And by the second century AD, the Greek physician Galen recommended soap for both medicinal and cleansing purposes.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">罗马文明进步，洗浴也随之发展。第一批著名的罗马<strong>浴场</strong>约建于公元前 312 年，由引水渠供水。到公元 2 世纪，希腊医师盖伦推荐肥皂兼作药用和清洁。【Q35 答案句 → baths；答案在定位词 aqueducts 之前】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> After the fall of Rome in 467 AD and the resulting <span class="hl-swap">decline in bathing habits</span>, much of Europe felt the impact of filth on public health. This <span class="hl-swap">lack of personal cleanliness</span> and related unsanitary living conditions were <span class="hl-swap">major factors in the outbreaks of</span> <span class='hl-target'>disease [Q36]</span> in the <span class="hl-loc">Middle Ages</span>, and especially the Black Death of the 14th century.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">公元 467 年罗马陷落后洗浴习惯衰退，欧洲饱受污秽之害。个人清洁缺失加上恶劣卫生条件，是中世纪<strong>瘟疫</strong>——尤其 14 世纪黑死病——的主要成因。【Q36 答案句 → disease】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> Nevertheless, <span class="hl-loc">soapmaking</span> became an established craft in Europe, and associations of soapmakers guarded their trade secrets closely. Vegetable and animal oils were used with <span class="hl-swap">ashes of</span> <span class='hl-trap'>plants</span>, <span class="hl-swap">along with</span> <span class='hl-target'>perfume [Q37]</span>, apparently <span class="hl-swap">for the first time</span>. Gradually more varieties of soap became available for shaving and shampooing, as well as bathing and laundering.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">尽管如此，制皂在欧洲成为成熟行当。人们用植物油、动物油与草木灰一起使用，并<strong>首次</strong>加入<strong>香水</strong>。渐渐地，剃须、洗发、沐浴、洗衣用的肥皂种类越来越多。【Q37 答案句 → perfume；plants 只是干扰】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> A major step toward large-scale commercial soapmaking occurred in <span class="hl-loc">1791</span>, when a French chemist, Nicolas <span class="hl-loc">Leblanc</span>, <span class="hl-swap">patented a process for turning</span> <span class='hl-target'>salt [Q38]</span> <span class="hl-swap">into</span> <span class="hl-loc">soda ash</span>, or sodium carbonate. Soda ash is the alkali obtained from ashes that combines with fat to form soap. The Leblanc process yielded quantities of good-quality, inexpensive soda ash.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">1791 年制皂商业化迈出重大一步：法国化学家勒布朗取得专利，把<strong>食盐</strong>转化为纯碱（碳酸钠）——纯碱与油脂结合即成皂。勒布朗法产出了大量优质廉价的纯碱。【Q38 答案句 → salt；turning X into Y = make Y from X】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> Modern <span class="hl-loc">soapmaking</span> was born some twenty years later, in the <span class="hl-loc">early nineteenth century</span>, with the discovery by Michel Eugène <span class="hl-loc">Chevreul</span>, another French chemist, of the chemical nature and relationship of fats, glycerine and fatty acids. His studies established the basis for both fat and soap chemistry, and soapmaking <span class="hl-swap">became a</span> <span class='hl-target'>science [Q39]</span>. Further developments during the nineteenth century made it easier and cheaper to manufacture soap.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">约 20 年后的 19 世纪初，现代制皂业诞生：法国化学家谢弗勒尔发现了油脂、甘油和脂肪酸的化学本质与关系，奠定了油脂化学与皂化学的基础，制皂成为一门<strong>科学</strong>。19 世纪的后续发展让制皂更容易、更便宜。【Q39 答案句 → science】</p>
+                    <p><span class="speaker-sally">LECTURER:</span> Until the <span class="hl-loc">nineteenth century</span>, <span class="hl-loc">soap</span> was regarded as a luxury item, and was <span class="hl-swap">heavily taxed</span> in several countries. As it became more readily available, it became an everyday necessity, a development that was reinforced when the <span class="hl-swap">high</span> <span class='hl-target'>tax [Q40]</span> <span class="hl-swap">was removed</span>. Soap was then something ordinary people could afford, and cleanliness standards improved. With this widespread use came the development of milder soaps for bathing and soaps for use in the washing machines that were available to consumers by the turn of the 20th century.</p>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; margin: -4px 0 12px 0;">直到 19 世纪，肥皂一直被视为奢侈品，在多国被课以重税。随着越来越易得，它成了日常必需品——<strong>重税取消</strong>后这一趋势进一步强化，肥皂从此是普通人买得起的，清洁标准随之提升。随着广泛使用，还发展出更温和的沐浴皂和洗衣机专用皂，到 20 世纪初已进入消费者家庭。【Q40 答案句 → tax】</p>
+                </div>
+            </details>
+        </div>
+
+
     </div>
 
     <footer>
-        <p>剑桥雅思 15 Test 3 Part 1 听力错题切片与影子跟读点播台 · 聚焦高频失分命门 · 攻克拼写脱节与状语抢跑</p>
+        <p>剑桥雅思 15 Test 3 Part 1 + Part 4 听力错题切片与影子跟读点播台 · 聚焦高频失分命门 · 攻克答案前置与生词断崖</p>
     </footer>
 </div>
 
@@ -1113,29 +1737,42 @@
         }
         if (!mainAudio) return;
 
-        mainAudio.src = filename;
-        mainAudio.loop = isLooping;
-        
-        if (nowPlayingText) {
-            nowPlayingText.innerHTML = `<span>🎵 正在播放：</span><span style="color: var(--accent-blue); font-weight: bold;">${title}</span>`;
-        }
-        
-        // Reset card button states
-        document.querySelectorAll('.play-card-btn').forEach(btn => {
-            btn.innerHTML = '<span>▶ 播放</span>';
-        });
+        const startPlay = (src) => {
+            mainAudio.src = src;
+            mainAudio.loop = isLooping;
 
-        // Highlight currently playing card button
-        if (window.event && window.event.currentTarget && window.event.currentTarget.classList.contains('play-card-btn')) {
-            window.event.currentTarget.innerHTML = '<span>⏸️ 正在播放</span>';
-        }
-
-        mainAudio.play().catch(err => {
-            console.error("Playback failed:", err);
             if (nowPlayingText) {
-                nowPlayingText.innerHTML = `<span style="color: var(--accent-red);">⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+                nowPlayingText.innerHTML = `<span>🎵 正在播放：</span><span style="color: var(--accent-blue); font-weight: bold;">${title}</span>`;
             }
-        });
+
+            // Reset card button states
+            document.querySelectorAll('.play-card-btn').forEach(btn => {
+                btn.innerHTML = '<span>▶ 播放</span>';
+            });
+
+            // Highlight currently playing card button
+            if (window.event && window.event.currentTarget && window.event.currentTarget.classList.contains('play-card-btn')) {
+                window.event.currentTarget.innerHTML = '<span>⏸️ 正在播放</span>';
+            }
+
+            mainAudio.play().catch(err => {
+                console.error("Playback failed:", err);
+                if (nowPlayingText) {
+                    nowPlayingText.innerHTML = `<span style="color: var(--accent-red);">⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+                }
+            });
+        };
+        if (window._audioBlobCache === undefined) window._audioBlobCache = {};
+        if (window._audioBlobCache[filename]) { startPlay(window._audioBlobCache[filename]); }
+        else {
+            fetch(filename).then(r => {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.blob();
+            }).then(b => {
+                window._audioBlobCache[filename] = URL.createObjectURL(b);
+                startPlay(window._audioBlobCache[filename]);
+            }).catch(() => startPlay(filename));
+        }
     }
 
     // Alias playAudio to playTrack for full compatibility
@@ -1202,6 +1839,8 @@
                 card.style.display = card.getAttribute('data-type') === 'job1' ? 'block' : 'none';
             } else if (type === 'job2') {
                 card.style.display = card.getAttribute('data-type') === 'job2' ? 'block' : 'none';
+            } else if (type === 'part4') {
+                card.style.display = card.getAttribute('data-type') === 'part4' ? 'block' : 'none';
             }
         });
     }

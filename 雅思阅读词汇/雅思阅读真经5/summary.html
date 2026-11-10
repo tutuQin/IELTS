@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雅思阅读真经 5 · Summary 填空题改写透视库</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      
+      --locator-color: #38bdf8;
+      --locator-bg: rgba(56, 189, 248, 0.15);
+      --locator-border: rgba(56, 189, 248, 0.4);
+      
+      --para-color: #fbbf24;
+      --para-bg: rgba(251, 191, 36, 0.15);
+      --para-border: rgba(251, 191, 36, 0.4);
+      
+      --ans-color: #4ade80;
+      --ans-bg: rgba(74, 222, 128, 0.18);
+      --ans-border: rgba(74, 222, 128, 0.5);
+
+      --trap-color: #f87171;
+      --trap-bg: rgba(239, 68, 68, 0.15);
+      --trap-border: rgba(239, 68, 68, 0.4);
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 30px 20px 80px;
+    }
+    .container { max-width: 940px; margin: 0 auto; }
+    
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; color: #fff; }
+    .subtitle { font-size: 14px; color: var(--text-muted); }
+    
+    .nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .nav-tab {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      background: #162032;
+    }
+    .nav-tab:hover, .nav-tab.active {
+      color: #fff;
+      background: #2563eb;
+      border-color: #3b82f6;
+    }
+
+    .legend-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .legend-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .tag-loc { color: var(--locator-color); background: var(--locator-bg); border: 1px solid var(--locator-border); }
+    .tag-para { color: var(--para-color); background: var(--para-bg); border: 1px solid var(--para-border); }
+    .tag-ans { color: var(--ans-color); background: var(--ans-bg); border: 1px solid var(--ans-border); }
+    .tag-trap { color: var(--trap-color); background: var(--trap-bg); border: 1px solid var(--trap-border); }
+
+    .passage-section {
+      margin-top: 35px;
+    }
+    .passage-title-bar {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+      border: 1px solid #3b82f6;
+      border-radius: 12px;
+      padding: 18px 24px;
+      margin-bottom: 24px;
+    }
+    .passage-title-bar h2 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .passage-meta {
+      font-size: 13px;
+      color: #93c5fd;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--card-border);
+    }
+    .q-title { font-size: 17px; font-weight: 700; color: #fff; }
+    .q-ans-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--ans-color);
+      background: var(--ans-bg);
+      border: 1px solid var(--ans-border);
+      padding: 3px 12px;
+      border-radius: 6px;
+    }
+    
+    .locator-line {
+      font-size: 13px;
+      color: var(--locator-color);
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      background: rgba(56, 189, 248, 0.08);
+      border-left: 3px solid var(--locator-color);
+      border-radius: 4px;
+    }
+    
+    .block {
+      margin-bottom: 14px;
+      border-radius: 8px;
+      padding: 14px 16px;
+      background: #162032;
+    }
+    .block-header {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header-stem { color: #f97316; }
+    .header-orig { color: #38bdf8; }
+    
+    .en-text {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 6px;
+      color: #e2e8f0;
+    }
+    .zh-text {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    
+    .logic-box {
+      background: rgba(168, 85, 247, 0.08);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 14px;
+    }
+    .logic-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #c084fc;
+      margin-bottom: 6px;
+    }
+    .logic-list {
+      font-size: 13px;
+      color: #cbd5e1;
+      padding-left: 18px;
+    }
+    .logic-list li { margin-bottom: 4px; }
+
+    /* Trap Box for User Mistakes */
+    .trap-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid var(--trap-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .trap-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--trap-color);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .trap-content {
+      font-size: 13px;
+      color: #fca5a5;
+      line-height: 1.55;
+    }
+    
+    /* Highlight Classes */
+    .loc {
+      color: var(--locator-color);
+      background: var(--locator-bg);
+      border: 1px solid var(--locator-border);
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .para {
+      color: var(--para-color);
+      background: var(--para-bg);
+      border: 1px solid var(--para-border);
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .ans {
+      color: var(--ans-color);
+      background: var(--ans-bg);
+      border: 1px solid var(--ans-border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    .wrong-ans {
+      color: var(--trap-color);
+      background: var(--trap-bg);
+      border: 1px solid var(--trap-border);
+      padding: 1px 5px;
+      border-radius: 4px;
+      text-decoration: line-through;
+      font-weight: 600;
+    }
+    
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+    .badge-q { background: #ea580c; color: #fff; }
+    .badge-orig { background: #0284c7; color: #fff; }
+    .badge-warn { background: #dc2626; color: #fff; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>雅思阅读真经 5 · Summary 填空题改写透视库</h1>
+    <div class="subtitle">考官题干检索 ⇄ 原文出处母本 ⇄ 同义换皮解析 ⇄ 错因深度靶向</div>
+    <div class="nav-tabs">
+      <a href="#passage-3" class="nav-tab active">Passage 3: Lost Giant: Mammoth（猛犸象 · P20-P24）</a>
+      <a href="#passage-2" class="nav-tab">Passage 2: Alfred Nobel（诺贝尔 · P14-P17）</a>
+      <a href="#passage-1" class="nav-tab">Passage 1: The Refrigerator（冰箱 · P9-P11）</a>
+    </div>
+    <div class="legend-bar">
+      <div class="legend-tag tag-loc">🔵 蓝色：黄金定位词（秒查坐标）</div>
+      <div class="legend-tag tag-para">🟠 橙色：同义替换改写（换皮特征）</div>
+      <div class="legend-tag tag-ans">🟢 绿色：标准答案（原文原词）</div>
+      <div class="legend-tag tag-trap">🔴 红色：错题陷阱剖析</div>
+    </div>
+  </header>
+
+  <!-- ================= PASSAGE 3 ================= -->
+  <section id="passage-3" class="passage-section">
+    <div class="passage-title-bar">
+      <h2>Reading Passage 3: Lost Giant: Mammoth（失落的巨兽：猛犸象）</h2>
+      <div class="passage-meta">
+        <span>📍 对应位置：PDF P37-P41 / 纸质 P20-P24</span>
+        <span>🎯 题型：Summary 细节填空（Q1-Q7 年代史 + Q8-Q12 生物特征）</span>
+        <span>⏱️ 本次耗时：23 分钟（12 题对 9 题，正确率 75%）</span>
+      </div>
+    </div>
+
+    <!-- ================= Section 1: Q1-Q7 ================= -->
+    <h3 style="color:#60a5fa; margin-bottom:16px; font-size:16px; border-left:4px solid #3b82f6; padding-left:10px;">
+      Part 1: The chronology of mammoths（猛犸象年代演变史 · Q1-Q7）
+    </h3>
+
+    <!-- Q1 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 1: 猛犸象最初的起源地</div>
+        <div class="q-ans-pill">Africa</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>about 5 million years ago</code>（数字地标）、<code>mammoths originated from</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          Fossil evidences show that <span class="loc">about 5 million years ago</span> mammoths <span class="para">originated from</span> 1 <span class="ans">[Africa]</span>.
+        </div>
+        <div class="zh-text">
+          化石证据表明，在<span style="color:var(--locator-color);">大约500万年前</span>，猛犸象<span style="color:var(--para-color);">起源于</span>【<span style="color:var(--ans-color);">非洲</span>】。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P38 第3段第1-3行)</div>
+        <div class="en-text">
+          It has long been clear that mammoths <span class="para">arose in</span> <span class="ans">Africa</span>, says Lister, because fossils of ancestral mammoths <span class="loc">dating back as far as 5 million years ago</span> have been found there.
+        </div>
+        <div class="zh-text">
+          李斯特表示，长期以来人们就很清楚猛犸象<span style="color:var(--para-color);">起源于</span><span style="color:var(--ans-color);">非洲</span>，因为在那里发现了<span style="color:var(--locator-color);">追溯到500万年前</span>的祖先猛犸象化石。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>动词同义替换</strong>：原文 <code>arose in</code>（产生/起源于）改写为题干 <code>originated from</code>（起源于）；</li>
+          <li><strong>时间表述改写</strong>：原文 <code>dating back as far as 5 million years ago</code> 简化为题干 <code>about 5 million years ago</code>；</li>
+          <li><strong>专有名词提取</strong>：起源大洲名称 <code>Africa</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q2: 错题 -->
+    <div class="card" style="border-color: rgba(239, 68, 68, 0.4);">
+      <div class="card-header">
+        <div class="q-title">Question 2: 猛犸象分支迁徙的目的地</div>
+        <div class="q-ans-pill">Asia</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>split off</code>、<code>migrated to</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          Then some mammoths <span class="loc">split off</span> and <span class="para">migrated to</span> 2 <span class="ans">[Asia]</span>.
+        </div>
+        <div class="zh-text">
+          随后一部分猛犸象<span style="color:var(--locator-color);">分化出来</span>，并<span style="color:var(--para-color);">迁徙到了</span>【<span style="color:var(--ans-color);">亚洲</span>】。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P38 第3段后半部分)</div>
+        <div class="en-text">
+          The studies show that the lineage leading to African elephants <span class="loc">split off</span> from the common ancestor first, around 6 million years ago. Not too long after that, the mammoths <span class="para">forked away from what would become the</span> <span class="ans">Asian</span> elephant.
+        </div>
+        <div class="zh-text">
+          研究表明，通往非洲象的谱系在大约600万年前首先从共同祖先中<span style="color:var(--locator-color);">分化出来</span>。在那之后不久，猛犸象又与后来演变成<span style="color:var(--ans-color);">亚洲</span>象的谱系<span style="color:var(--para-color);">分道扬镳</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>动词短语改写</strong>：原文 <code>forked away from what would become the Asian elephant</code>（与未来的亚洲象分支分开）改写为题干 <code>migrated to [Asia]</code>；</li>
+          <li><strong>形容词转专有名词</strong>：考官将原文的形容词 <code>Asian</code> 转换为大洲名词 <code>Asia</code>（《真经5》机经还原出题的词形变通）。</li>
+        </ul>
+      </div>
+      <div class="trap-box">
+        <div class="trap-title"><span class="badge badge-warn">错题剖析</span> 为什么这道题容易错？</div>
+        <div class="trap-content">
+          <strong>1. 介词 <code>to</code> 强制要求地点名词</strong>：题干写的是 <code>migrated to 2 [______]</code>，介词 <code>to</code> 后面必须接一个大洲或地域名词。原文对应句里只有 <code>Asian elephant</code>，很多考生因为原文没有直接出现 <code>Asia</code> 而愣住，甚至错填了 <code>Asian elephant</code>（违背了“迁徙到某地”的地理语义）。<br>
+          <strong>2. 考点本质</strong>：考官考查的是由“非洲起源（Africa）”迁徙分散到“亚洲分支（Asia）”的宏观地理逻辑。
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 3: 适应250万年前冰期演变出的新物种</div>
+        <div class="q-ans-pill">steppe mammoth</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>climate change</code>、<code>around 2.5 million years ago</code>（数字地标）、<code>new species</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          In order to <span class="para">cope with the climate change that occurred</span> <span class="loc">around 2.5 million years ago</span>, mammoths <span class="para">evolved into a new species, called the</span> 3 <span class="ans">[steppe mammoth]</span>.
+        </div>
+        <div class="zh-text">
+          为了<span style="color:var(--para-color);">应对</span><span style="color:var(--locator-color);">大约250万年前发生的</span><span style="color:var(--para-color);">气候变化</span>，猛犸象<span style="color:var(--para-color);">演变出了一个名为</span>【<span style="color:var(--ans-color);">草原猛犸象（steppe mammoth）</span>】<span style="color:var(--para-color);">的新物种</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P38 第4段末至第5段初)</div>
+        <div class="en-text">
+          ...<span class="loc">Around 2.5 million years ago</span>, an epoch of ice ages began... These dramatic changes <span class="para">led to the evolution of a new kind of mammoth, the</span> <span class="ans">steppe mammoth</span>, which <span class="para">adapted to life in a colder world</span>...
+        </div>
+        <div class="zh-text">
+          ……<span style="color:var(--locator-color);">大约250万年前</span>，冰河纪时期开启……这些剧烈的变化<span style="color:var(--para-color);">导致了一种新型猛犸象——</span><span style="color:var(--ans-color);">草原猛犸象</span><span style="color:var(--para-color);">的进化，它适应了更寒冷世界的生存</span>……
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>因果同义改写</strong>：原文 <code>adapted to life in a colder world</code>（适应更冷世界）改写为题干 <code>cope with the climate change</code>（应对气候变化）；</li>
+          <li><strong>词对改写</strong>：原文 <code>evolution of a new kind of</code> 改写为 <code>evolved into a new species</code>；</li>
+          <li><strong>原词提取</strong>：同位语直接带出新物种名称 <code>steppe mammoth</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 4: 通过陆桥进入的大陆</div>
+        <div class="q-ans-pill">North America</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>About 1.7 millions years ago</code>、<code>from China</code>、<code>Northern Hemisphere</code>、<code>land bridge</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          <span class="loc">About 1.7 millions years ago</span>, these animals gradually <span class="loc">spread out from China across the Northern Hemisphere</span>, and <span class="para">travelled via land bridge into</span> 4 <span class="ans">[North America]</span>.
+        </div>
+        <div class="zh-text">
+          <span style="color:var(--locator-color);">大约170万年前</span>，这些动物逐渐<span style="color:var(--locator-color);">从中国扩散至整个北半球</span>，并通过<span style="color:var(--para-color);">陆桥进入了</span>【<span style="color:var(--ans-color);">北美洲</span>】。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P38 第6段第1-5行)</div>
+        <div class="en-text">
+          Fossils recently unearthed in <span class="loc">China</span> show that the steppe mammoth evolved there <span class="loc">about 1.7 million years ago</span> and gradually <span class="loc">spread out across the Northern Hemisphere</span>... It was around this time that some mammoths <span class="para">crossed a land bridge joining Siberia to</span> <span class="ans">North America</span>.
+        </div>
+        <div class="zh-text">
+          最近在中国出土的化石表明，草原猛犸象<span style="color:var(--locator-color);">大约在170万年前</span>在那里进化，并逐渐<span style="color:var(--locator-color);">扩散至北半球各地</span>……大约就在这个时候，一些猛犸象<span style="color:var(--para-color);">穿过连接西伯利亚与</span><span style="color:var(--ans-color);">北美洲</span><span style="color:var(--para-color);">的陆桥</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>动词同义改写</strong>：原文 <code>crossed a land bridge joining Siberia to...</code> 改写为题干 <code>travelled via land bridge into...</code>；</li>
+          <li><strong>专有名词原词提取</strong>：大洲专有名词 <code>North America</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 5: 继续向南扩散到达的最远地域</div>
+        <div class="q-ans-pill">Central America</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>went further south to</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          Some of them <span class="para">went further south to</span> 5 <span class="ans">[Central America]</span>...
+        </div>
+        <div class="zh-text">
+          它们中的一些<span style="color:var(--para-color);">进一步向南到达了</span>【<span style="color:var(--ans-color);">中美洲</span>】……
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P38 第6段第7-8行)</div>
+        <div class="en-text">
+          ...There, mammoths evolved into distinctive North American forms and some <span class="para">eventually spread as far south as</span> <span class="ans">Central America</span>.
+        </div>
+        <div class="zh-text">
+          ……在那里，猛犸象演化成了独特的北美物种形态，有些<span style="color:var(--para-color);">最终向南扩散到了远至</span><span style="color:var(--ans-color);">中美洲</span><span style="color:var(--para-color);">的地方</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>方位同义改写</strong>：原文 <code>spread as far south as</code> 改写为题干 <code>went further south to</code>；</li>
+          <li><strong>地理专有名词提取</strong>：原词照抄 <code>Central America</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q6: 错题 -->
+    <div class="card" style="border-color: rgba(239, 68, 68, 0.4);">
+      <div class="card-header">
+        <div class="q-title">Question 6: 最终演变出的最著名的种类</div>
+        <div class="q-ans-pill">woolly mammoth</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>evolved to</code>、<code>well-known kind</code>、<code>named the</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          ...where they <span class="para">evolved to the well-known kind, named the</span> 6 <span class="ans">[woolly mammoth]</span>.
+        </div>
+        <div class="zh-text">
+          ……在那里它们<span style="color:var(--para-color);">演变出了众所周知的种类，名为</span>【<span style="color:var(--ans-color);">长毛猛犸象（woolly mammoth）</span>】。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P38 第6段末尾)</div>
+        <div class="en-text">
+          Meanwhile, some steppe mammoths were becoming ever more specialised for cold climates and open grassland, <span class="para">giving rise to the</span> <span class="ans">woolly mammoth</span>, <span class="para">the most famous of its kind</span>.
+        </div>
+        <div class="zh-text">
+          与此同时，一部分草原猛犸象变得越来越适应寒冷气候和开阔草原，<span style="color:var(--para-color);">孕育出了</span><span style="color:var(--ans-color);">长毛猛犸象</span>，<span style="color:var(--para-color);">这也是同类中最著名的一种</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>核心同义词替换</strong>：原文 <code>the most famous of its kind</code>（同类中最著名的）$\Longleftrightarrow$ 题干 <code>the well-known kind</code>（众所周知的种类）！</li>
+          <li><strong>演变动词改写</strong>：原文 <code>giving rise to...</code>（孕育/产生出）改写为题干 <code>evolved to...</code>。</li>
+        </ul>
+      </div>
+      <div class="trap-box">
+        <div class="trap-title"><span class="badge badge-warn">错题剖析</span> 你为什么会错写成 <span class="wrong-ans">steppe mammoths</span>？</div>
+        <div class="trap-content">
+          <strong>1. 混淆了“祖先物种”与“进化后代成果”</strong>：原文整句话的主语是 <code>some steppe mammoths were becoming... giving rise to the woolly mammoth</code>（是草原猛犸象孕育出了长毛猛犸象）。题干问的是<strong>被演变出来的那种著名的形态叫什么</strong>！<br>
+          <strong>2. 漏看了同义替换核心修饰词</strong>：题干明确说了 <code>well-known kind</code>（著名的种类），这个修饰词完美对应了原文末尾的 <code>the most famous of its kind</code>，而紧贴着 <code>most famous</code> 的就是 <code>woolly mammoth</code>！<br>
+          <strong>3. 逻辑去重检查</strong>：<code>steppe mammoth</code> 已经在 Q3 填过了，雅思 Summary 填空极少会在同一个段落内让同一个物种名字作为两个题目的答案。
+        </div>
+      </div>
+    </div>
+
+    <!-- Q7: 错题 -->
+    <div class="card" style="border-color: rgba(239, 68, 68, 0.4);">
+      <div class="card-header">
+        <div class="q-title">Question 7: 猛犸象最终灭绝的年代</div>
+        <div class="q-ans-pill">4000</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>Eventually</code>、<code>went extinct around</code>、<code>years ago</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          <span class="loc">Eventually</span>, the mammoths <span class="para">went extinct around</span> 7 <span class="ans">[4000]</span> <span class="loc">years ago</span>.
+        </div>
+        <div class="zh-text">
+          <span style="color:var(--locator-color);">最终</span>，猛犸象在<span style="color:var(--locator-color);">大约</span>【<span style="color:var(--ans-color);">4000</span>】<span style="color:var(--locator-color);">年前</span><span style="color:var(--para-color);">灭绝了</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P40 第2段末尾)</div>
+        <div class="en-text">
+          The last stand of the mammoths appears to have taken place on Wrangel Island... and they survived for 5,000 years before <span class="para">dying out around</span> <span class="ans">4,000</span> <span class="loc">years ago</span>—around the time humans arrived.
+        </div>
+        <div class="zh-text">
+          猛犸象的最后一站似乎发生在弗兰格尔岛……它们在那里存活了5000年，直到<span style="color:var(--locator-color);">大约</span><span style="color:var(--ans-color);">4000</span><span style="color:var(--locator-color);">年前</span>才<span style="color:var(--para-color);">彻底灭绝</span>——大约也就是人类抵达的时间。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>灭绝动词经典改写</strong>：原文 <code>dying out around ... years ago</code> 改写为题干 <code>went extinct around ... years ago</code>；</li>
+          <li><strong>终结副词对标</strong>：题干开头的 <code>Eventually</code> 对标原文的 <code>The last stand of the mammoths</code>（猛犸象最后的栖息地/绝唱）。</li>
+        </ul>
+      </div>
+      <div class="trap-box">
+        <div class="trap-title"><span class="badge badge-warn">错题剖析</span> 你为什么会错写成 <span class="wrong-ans">100000</span>？</div>
+        <div class="trap-content">
+          <strong>1. 掉入“数字与生词近邻的视觉诱捕”</strong>：在 PDF P39 第二段，原文出现了：<br>
+          <code>...expanded as the world entered the last ice age around 100,000 years ago and remained stable during that ice age. And then, as the ice age ended, it went extinct.</code><br>
+          你眼睛扫到了 <code>100,000 years ago</code>，又在同一段扫到了 <code>went extinct</code>，大脑就仓促地把这两个词强行拼在了一起！<br>
+          <strong>2. 致命逻辑颠倒</strong>：原文明确说 <strong>100,000年前是“种群数量扩张（expanded）并保持稳定”</strong>，是进入冰河期的起点，根本不是灭绝时间！<br>
+          <strong>3. 没有读到全篇真正的最终终点（The last stand）</strong>：题干第一词是 <code>Eventually</code>（最终）。猛犸象真正最后的灭绝地点是在弗兰格尔岛（Wrangel Island），原文清清楚楚写着：<code>dying out around 4,000 years ago</code>。
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= Section 2: Q8-Q12 ================= -->
+    <h3 style="color:#60a5fa; margin-top:35px; margin-bottom:16px; font-size:16px; border-left:4px solid #3b82f6; padding-left:10px;">
+      Part 2: The features of the woolly mammoths（长毛猛犸象的生理特征 · Q8-Q12）
+    </h3>
+
+    <!-- Q8 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 8: 猛犸象皮肤覆盖物</div>
+        <div class="q-ans-pill">hair / coat</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>woolly mammoths</code>、<code>skin was covered with long</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          Their skin was <span class="para">covered with long</span> 8 <span class="ans">[hair]</span>...
+        </div>
+        <div class="zh-text">
+          它们的皮肤<span style="color:var(--para-color);">覆盖着长长的</span>【<span style="color:var(--ans-color);">毛发（hair/coat）</span>】……
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P39 第1段第1-4行)</div>
+        <div class="en-text">
+          The woolly mammoth’s most distinctive feature was its <span class="para">long, shaggy</span> <span class="ans">coat</span>... Besides its <span class="para">long</span> <span class="ans">hair</span>, the woolly mammoth had a thick layer of fat...
+        </div>
+        <div class="zh-text">
+          长毛猛犸象最显著的特征就是它<span style="color:var(--para-color);">长而蓬乱的</span><span style="color:var(--ans-color);">皮毛（coat）</span>……除了其<span style="color:var(--para-color);">长长的</span><span style="color:var(--ans-color);">毛发（hair）</span>外，猛犸象还拥有一层厚厚的脂肪……
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>原词提取</strong>：形容词 <code>long</code> 后面直接修饰的被覆盖物是 <code>hair</code>（或 <code>coat</code>），均为单数原词。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 9: 抵御严寒的身体组织</div>
+        <div class="q-ans-pill">fat</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>helped isolate from the cold</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          ...and their 9 <span class="ans">[fat]</span> <span class="para">helped isolate from the cold</span>.
+        </div>
+        <div class="zh-text">
+          ……并且它们的【<span style="color:var(--ans-color);">脂肪（fat）</span>】<span style="color:var(--para-color);">有助于隔离严寒</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P39 第1段第4-5行)</div>
+        <div class="en-text">
+          ...the woolly mammoth had a thick layer of <span class="ans">fat</span> <span class="para">to insulate against the cold</span>.
+        </div>
+        <div class="zh-text">
+          ……长毛猛犸象拥有一层厚厚的<span style="color:var(--ans-color);">脂肪</span>，<span style="color:var(--para-color);">以隔绝严寒</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>考点动词近义改写</strong>：原文 <code>insulate against the cold</code>（隔绝寒冷）改写为题干 <code>isolate from the cold</code>；</li>
+          <li><strong>名词提取</strong>：起隔热保温作用的核心名词就是 <code>fat</code>（脂肪）。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 10: 小耳短尾减少的消耗</div>
+        <div class="q-ans-pill">heat</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>smaller ears and shorter tails</code>、<code>consumed less</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          The woolly mammoths had <span class="loc">smaller ears and shorter tails</span> which <span class="para">consumed less</span> 10 <span class="ans">[heat]</span>.
+        </div>
+        <div class="zh-text">
+          长毛猛犸象拥有<span style="color:var(--locator-color);">较小的耳朵和较短的尾巴</span>，这可以<span style="color:var(--para-color);">消耗更少的</span>【<span style="color:var(--ans-color);">热量（heat）</span>】。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P39 第1段第5-7行)</div>
+        <div class="en-text">
+          It also had <span class="loc">smaller ears and a shorter tail</span> than its forebears, which would <span class="para">minimise heat loss</span>.
+        </div>
+        <div class="zh-text">
+          它还拥有比祖先<span style="color:var(--locator-color);">更小的耳朵和更短的尾巴</span>，这能<span style="color:var(--para-color);">最大限度减少热量散失</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>反向动作改写</strong>：原文 <code>minimise heat loss</code>（最小化热量流失）$\Longleftrightarrow$ 题干 <code>consumed less [heat]</code>（消耗更少的热量）；</li>
+          <li><strong>核心不可数名词提取</strong>：答案提取 <code>heat</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q11 & Q12 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 11 & 12: 象牙的破坏与寻找功能</div>
+        <div class="q-ans-pill">11. ice &nbsp;|&nbsp; 12. vegetation</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>ivories were rather huge</code>、<code>smash</code>、<code>discover</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P41)</div>
+        <div class="en-text">
+          Their <span class="loc">ivories were rather huge</span> and may have been used to <span class="para">smash</span> 11 <span class="ans">[ice]</span> and <span class="para">discover</span> 12 <span class="ans">[vegetation]</span>.
+        </div>
+        <div class="zh-text">
+          它们的<span style="color:var(--locator-color);">象牙相当巨大</span>，可能曾被用来<span style="color:var(--para-color);">粉碎</span>【11. <span style="color:var(--ans-color);">冰块（ice）</span>】，并<span style="color:var(--para-color);">发现</span>【12. <span style="color:var(--ans-color);">植被（vegetation）</span>】。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P39 第1段末尾)</div>
+        <div class="en-text">
+          Its <span class="loc">huge tusks</span> may have been used like a snowplow to <span class="para">expose</span> <span class="ans">vegetation</span> to eat or to <span class="para">break up</span> <span class="ans">ice</span>.
+        </div>
+        <div class="zh-text">
+          它<span style="color:var(--locator-color);">巨大的长牙（tusks）</span>可能像扫雪机一样，被用来<span style="color:var(--para-color);">刨开</span><span style="color:var(--ans-color);">植被</span>来进食，或是<span style="color:var(--para-color);">击碎</span><span style="color:var(--ans-color);">冰块</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>象牙同义替换</strong>：原文 <code>tusks</code>（长牙/象牙）改写为题干 <code>ivories</code>；</li>
+          <li><strong>动作动词互换</strong>：
+            <ul>
+              <li>原文 <code>break up [ice]</code> 改写为题干 <code>smash [ice]</code>；</li>
+              <li>原文 <code>expose [vegetation]</code>（暴露/掀开植被）改写为题干 <code>discover [vegetation]</code>（发现植被）。</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PASSAGE 2 ================= -->
+  <section id="passage-2" class="passage-section">
+    <div class="passage-title-bar">
+      <h2>Reading Passage 2: Alfred Nobel（诺贝尔奖的缔造者）</h2>
+      <div class="passage-meta">
+        <span>📍 对应位置：PDF P31-P34 / 纸质 P14-P17</span>
+        <span>🎯 题型：Summary 细节摘要填空（Q1-Q10）</span>
+        <span>⚠️ 字数限制：NO MORE THAN THREE WORDS（不超过3个词）</span>
+      </div>
+    </div>
+
+    <!-- Q1 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 1: 父亲伊曼纽尔的工程爆破技术</div>
+        <div class="q-ans-pill">blasting rocks</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>Immanuel Nobel</code>、<code>techniques for</code>、<code>construction work</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34)</div>
+        <div class="en-text">
+          <span class="loc">Immanuel Nobel</span> was an engineer who <span class="para">developed various techniques for</span> 1 <span class="ans">[blasting rocks]</span> <span class="loc">for his construction work</span>.
+        </div>
+        <div class="zh-text">
+          <span style="color:var(--locator-color);">伊曼纽尔·诺贝尔</span>是一位工程师，他<span style="color:var(--para-color);">为自己的建筑工作开发了用于</span>【<span style="color:var(--ans-color);">爆破岩石</span>】<span style="color:var(--para-color);">的各种技术</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P31 Part 1 第2段)</div>
+        <div class="en-text">
+          <span class="loc">In connection with his construction work</span> <span class="loc">Immanuel Nobel</span> also <span class="para">experimented with different techniques for</span> <span class="ans">blasting rocks</span>.
+        </div>
+        <div class="zh-text">
+          <span style="color:var(--locator-color);">结合他的建筑工作</span>，<span style="color:var(--locator-color);">伊曼纽尔·诺贝尔</span>还<span style="color:var(--para-color);">试验了用于</span><span style="color:var(--ans-color);">爆破岩石</span><span style="color:var(--para-color);">的不同技术</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>同义形容词替换</strong>：原文 <code>different techniques</code> 改写为题干 <code>various techniques</code>；</li>
+          <li><strong>原词提取</strong>：介词 <code>for</code> 后面原词照抄 <code>blasting rocks</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 2: 送阿尔弗雷德出国接受的专业培训</div>
+        <div class="q-ans-pill">chemical engineering</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>sent his son, Alfred Nobel, abroad</code>、<code>receive training in</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34)</div>
+        <div class="en-text">
+          He <span class="loc">sent his son, Alfred Nobel, abroad</span> <span class="para">to receive training in</span> 2 <span class="ans">[chemical engineering]</span>.
+        </div>
+        <div class="zh-text">
+          他<span style="color:var(--locator-color);">将儿子阿尔弗雷德·诺贝尔送到国外</span>，<span style="color:var(--para-color);">去接受</span>【<span style="color:var(--ans-color);">化学工程</span>】<span style="color:var(--para-color);">方面的培训</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P31 Part 1 第3段第1行)</div>
+        <div class="en-text">
+          In order to widen Alfred’s horizons his father <span class="loc">sent him abroad</span> <span class="para">for further training in</span> <span class="ans">chemical engineering</span>.
+        </div>
+        <div class="zh-text">
+          为了开拓阿尔弗雷德的视野，他的父亲<span style="color:var(--locator-color);">送他出国</span>，<span style="color:var(--para-color);">去接受</span><span style="color:var(--ans-color);">化学工程</span><span style="color:var(--para-color);">方面的进一步培训</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>介词转动词不定式</strong>：原文 <code>for further training in</code> 改写为 <code>to receive training in</code>；</li>
+          <li><strong>专业名词提取</strong>：介词 <code>in</code> 后直接带出学科名称 <code>chemical engineering</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q3: 错题 -->
+    <div class="card" style="border-color: rgba(239, 68, 68, 0.4);">
+      <div class="card-header">
+        <div class="q-title">Question 3: 硝化甘油无法实用的根本原因</div>
+        <div class="q-ans-pill">safety</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>In Paris</code>、<code>laboratory</code>、<code>inventor of nitroglycerine</code>、<code>unpractical</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34)</div>
+        <div class="en-text">
+          In Paris, Alfred Nobel worked in a private laboratory, and met the inventor of nitroglycerine, which was <span class="para">considered highly unpractical due to its</span> 3 <span class="ans">[safety]</span> <span class="para">risk</span>.
+        </div>
+        <div class="zh-text">
+          在巴黎，诺贝尔在一家私人实验室工作，遇到了硝化甘油的发明者；硝化甘油当时被<span style="color:var(--para-color);">认为极不实用，原因是由于它的</span>【<span style="color:var(--ans-color);">安全</span>】<span style="color:var(--para-color);">风险</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P31末跨至P32第1-4行)</div>
+        <div class="en-text">
+          ...invented nitroglycerine, a highly explosive liquid. But it was <span class="para">considered too dangerous to be of any practical use</span>... He also realised that the <span class="ans">safety</span> <span class="para">problems</span> had to be solved...
+        </div>
+        <div class="zh-text">
+          ……发明了硝化甘油这种高爆炸性液体。但它被<span style="color:var(--para-color);">认为太危险，以至于没有任何实用价值</span>……他也意识到必须解决<span style="color:var(--ans-color);">安全</span><span style="color:var(--para-color);">问题</span>……
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>核心同义改写</strong>：原文 <code>too dangerous to be of any practical use</code> 改写为题干 <code>considered highly unpractical due to its ... risk</code>；</li>
+          <li><strong>同义名词替换</strong>：原文 <code>safety problems</code> 被考官同义替换为题干 <code>safety risk</code>。</li>
+        </ul>
+      </div>
+      <div class="trap-box">
+        <div class="trap-title"><span class="badge badge-warn">错题剖析</span> 你为什么会错写成 <span class="wrong-ans">highly explosive</span>？</div>
+        <div class="trap-content">
+          <strong>1. 掉入就近词眼陷阱</strong>：在原文第一行看到了 <code>a highly explosive liquid</code> 就直接搬了上去；<br>
+          <strong>2. 语法搭配断裂</strong>：题干空格后自带名词 <code>risk</code>，填入 <code>highly explosive</code> 导致 <code>its highly explosive risk</code> 语法冗余扭曲；真正的名词定语是 <code>safety</code>（安全风险）。
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 4: 诺贝尔想将硝化甘油应用到的领域</div>
+        <div class="q-ans-pill">construction work</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>became interested in</code>、<code>apply this explosive liquid in</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34)</div>
+        <div class="en-text">
+          Alfred Nobel <span class="loc">became interested in</span> <span class="para">how to apply this explosive liquid in</span> 4 <span class="ans">[construction work]</span>.
+        </div>
+        <div class="zh-text">
+          阿尔弗雷德·诺贝尔开始<span style="color:var(--locator-color);">对</span><span style="color:var(--para-color);">如何将这种爆炸性液体应用到</span>【<span style="color:var(--ans-color);">建筑工程</span>】<span style="color:var(--locator-color);">中产生兴趣</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P32 Part 1 末尾)</div>
+        <div class="en-text">
+          Alfred Nobel <span class="loc">became very interested in</span> nitroglycerine and <span class="para">how it could be put to practical use in</span> <span class="ans">construction work</span>.
+        </div>
+        <div class="zh-text">
+          阿尔弗雷德·诺贝尔<span style="color:var(--locator-color);">对硝化甘油以及</span><span style="color:var(--para-color);">如何将其投入实际应用到</span><span style="color:var(--ans-color);">建筑工程</span><span style="color:var(--locator-color);">中产生了极大的兴趣</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>动词短语替换</strong>：<code>put to practical use in</code> 改写为 <code>apply ... in</code>；</li>
+          <li><strong>原词提取</strong>：介词 <code>in</code> 后提取 <code>construction work</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q5: 错题 -->
+    <div class="card" style="border-color: rgba(239, 68, 68, 0.4);">
+      <div class="card-header">
+        <div class="q-title">Question 5: 斯德哥尔摩政府对危险实验的处理</div>
+        <div class="q-ans-pill">forbidden</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>experiments</code>、<code>within the city area</code>、<code>government of the Stockholm city</code>、<code>move ... to a lake</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34 Part 2)</div>
+        <div class="en-text">
+          Since the experiments were too dangerous and <span class="para">were</span> 5 <span class="ans">[forbidden]</span> <span class="loc">within the city area</span> <span class="para">by the government of the Stockholm city</span>, Nobel had to <span class="loc">move his experiments to a lake</span>.
+        </div>
+        <div class="zh-text">
+          由于实验太危险，并且<span style="color:var(--para-color);">被斯德哥尔摩市政府在</span><span style="color:var(--locator-color);">城市范围内</span>【<span style="color:var(--ans-color);">禁止</span>】，诺贝尔不得不<span style="color:var(--locator-color);">把实验转移到了一个湖上</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P32 Part 2 第2段)</div>
+        <div class="en-text">
+          ...convinced the authorities that nitroglycerine production was exceedingly dangerous. <span class="para">They forbade further experimentation</span> with nitroglycerine <span class="loc">within the Stockholm city limits</span> and Alfred Nobel had to <span class="loc">move his experimentation to a barge anchored on Lake Malaren</span>.
+        </div>
+        <div class="zh-text">
+          ……让当局确信硝化甘油的生产极其危险。<span style="color:var(--para-color);">他们禁止</span>在<span style="color:var(--locator-color);">斯德哥尔摩城市范围内</span><span style="color:var(--para-color);">进行进一步的实验</span>，阿尔弗雷德·诺贝尔不得不<span style="color:var(--locator-color);">将其实验转移到停泊在梅拉伦湖上的一艘驳船上</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>主动变被动</strong>：原文 <code>They forbade experimentation</code> 改写为题干 <code>experiments were [forbidden] by the government</code>；</li>
+          <li><strong>机经还原瑕疵</strong>：原文为过去式 <code>forbade</code>，考官在被动态题干中要求填过去分词 <code>forbidden</code>。</li>
+        </ul>
+      </div>
+      <div class="trap-box">
+        <div class="trap-title"><span class="badge badge-warn">错题剖析</span> 你为什么会错写成 <span class="wrong-ans">nitroglycerine</span>？</div>
+        <div class="trap-content">
+          <strong>1. 忽视了被动语态语法结构</strong>：题干结构是 <code>were too dangerous and were 5 ______ by the government</code>，后面有 <code>by the government</code>，此处必须填过去分词或形容词！填入名词 <code>nitroglycerine</code> 语法完全不通。<br>
+          <strong>2. 原文词眼顺风车</strong>：原文写 <code>experimentation with nitroglycerine</code>，眼睛顺着扫过去抓了名词，漏看了谓语动作 <code>forbade</code>（禁止）。
+        </div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 6: 与硝化甘油混合的新物质</div>
+        <div class="q-ans-pill">kieselguhr</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>combined with nitroglycerine</code>、<code>convert liquid into a paste</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34 Part 2)</div>
+        <div class="en-text">
+          Finally, he discovered 6 <span class="ans">[kieselguhr]</span> that could be <span class="para">combined with nitroglycerine</span> <span class="para">to convert liquid into a paste</span>.
+        </div>
+        <div class="zh-text">
+          最终，他发现了【<span style="color:var(--ans-color);">硅藻土（kieselguhr）</span>】，它可以<span style="color:var(--para-color);">与硝化甘油结合</span>，<span style="color:var(--para-color);">将液体转化为糊状物</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P32 Part 2 第4行)</div>
+        <div class="en-text">
+          He soon found that <span class="para">mixing nitroglycerine with</span> <span class="ans">kieselguhr</span> <span class="para">would turn the liquid into a paste</span>...
+        </div>
+        <div class="zh-text">
+          他很快发现，<span style="color:var(--para-color);">将硝化甘油与</span><span style="color:var(--ans-color);">硅藻土</span><span style="color:var(--para-color);">混合，可以把液体变成糊状物</span>……
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>动词同义替换</strong>：<code>mixing ... with</code> 改写为 <code>combined with</code>；<code>turn ... into</code> 改写为 <code>convert ... into</code>；</li>
+          <li><strong>原词提取</strong>：混合介质原料生词 <code>kieselguhr</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 7: 新炸药材料的专利命名</div>
+        <div class="q-ans-pill">dynamite</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>called this material</code>、<code>patented it</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34 Part 2)</div>
+        <div class="en-text">
+          He <span class="para">called this material</span> 7 <span class="ans">[dynamite]</span> and <span class="loc">patented it</span>.
+        </div>
+        <div class="zh-text">
+          他<span style="color:var(--para-color);">将这种材料命名为</span>【<span style="color:var(--ans-color);">黄色炸药（dynamite）</span>】，并<span style="color:var(--locator-color);">为其申请了专利</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P32 Part 2 第6行)</div>
+        <div class="en-text">
+          In 1867 he <span class="loc">patented this material</span> <span class="para">under the name of</span> <span class="ans">dynamite</span>.
+        </div>
+        <div class="zh-text">
+          1867年，他<span style="color:var(--para-color);">以</span><span style="color:var(--ans-color);">黄色炸药（dynamite）</span><span style="color:var(--para-color);">的名字为这种材料申请了专利</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>句型同义改写</strong>：<code>patented ... under the name of X</code> 改写为 <code>called this material X and patented it</code>；</li>
+          <li><strong>专有名词提取</strong>：炸药专有名词 <code>dynamite</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 8: 发明对建筑工程的最大贡献</div>
+        <div class="q-ans-pill">cost</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>inventions came into general use</code>、<code>construction work</code>、<code>lowering the</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34 Part 2)</div>
+        <div class="en-text">
+          His inventions came into general use and made great contributions to construction work by <span class="para">lowering the</span> 8 <span class="ans">[cost]</span>.
+        </div>
+        <div class="zh-text">
+          他的发明得到了普遍应用，并通过<span style="color:var(--para-color);">降低</span>【<span style="color:var(--ans-color);">成本</span>】对建筑工程做出了巨大贡献。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P32 Part 2 第10行)</div>
+        <div class="en-text">
+          Together these inventions drastically <span class="para">reduced the</span> <span class="ans">cost</span> of blasting rock, drilling tunnels... and many other forms of <span class="loc">construction work</span>.
+        </div>
+        <div class="zh-text">
+          这些发明结合在一起，大幅<span style="color:var(--para-color);">降低了</span>爆破岩石、开凿隧道以及许多其他形式<span style="color:var(--locator-color);">建筑工程</span>的<span style="color:var(--ans-color);">成本</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>同义动词改写</strong>：<code>drastically reduced the ...</code> 改写为 <code>lowering the ...</code>；</li>
+          <li><strong>宾语名词提取</strong>：动作 <code>lowering the</code> 后面接的宾语就是 <code>cost</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 9: 秘书反抗的核心对象</div>
+        <div class="q-ans-pill">arms race</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>secretary left him</code>、<code>protestor against the</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34 Part 3)</div>
+        <div class="en-text">
+          His secretary left him and eventually became a famous <span class="para">protestor against the</span> 9 <span class="ans">[arms race]</span>.
+        </div>
+        <div class="zh-text">
+          他的秘书离开了他，最终成为了一名反对【<span style="color:var(--ans-color);">军备竞赛（arms race）</span>】的著名抗议者。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P33 Part 3 第1段)</div>
+        <div class="en-text">
+          ...Over the years Bertha von Suttner became increasingly <span class="para">critical of the</span> <span class="ans">arms race</span>. She wrote a famous book, Lay Down Your Arms and became a prominent figure in the <span class="para">peace movement</span>.
+        </div>
+        <div class="zh-text">
+          ……多年来，贝尔塔·冯·苏特纳对<span style="color:var(--ans-color);">军备竞赛</span>变得越来越<span style="color:var(--para-color);">持批判态度</span>。她写了一本著名著作《放下武器》，并成为<span style="color:var(--para-color);">和平运动</span>中的杰出人物。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>词性转换</strong>：<code>critical of the arms race</code> 改写为题干 <code>protestor against the [arms race]</code>；</li>
+          <li><strong>专有名词提取</strong>：抗议的对象 <code>arms race</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q10: 错题 -->
+    <div class="card" style="border-color: rgba(239, 68, 68, 0.4);">
+      <div class="card-header">
+        <div class="q-title">Question 10: 遗嘱中包含的具体奖项</div>
+        <div class="q-ans-pill">Nobel Peace Prize</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>part of the reason why</code>、<code>included ... in his final will</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P34 Part 3)</div>
+        <div class="en-text">
+          That was part of the reason why Nobel <span class="para">included</span> 10 <span class="ans">[Nobel Peace Prize]</span> <span class="loc">in his final will</span>.
+        </div>
+        <div class="zh-text">
+          这就是诺贝尔在<span style="color:var(--locator-color);">最后的遗嘱中</span><span style="color:var(--para-color);">包含</span>【<span style="color:var(--ans-color);">诺贝尔和平奖</span>】的部分原因。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P33 Part 3 第1段后半)</div>
+        <div class="en-text">
+          No doubt this influenced Alfred Nobel when he wrote <span class="loc">his final will</span> which was to <span class="para">include a Prize for persons or organisations who promoted peace</span>. Several years after the death of Alfred Nobel, the Norwegian Storting (Parliament) decided to award the 1905 <span class="ans">Nobel Peace Prize</span> to Bertha von Suttner.
+        </div>
+        <div class="zh-text">
+          毫无疑问，这影响了阿尔弗雷德·诺贝尔写下<span style="color:var(--locator-color);">他的最终遗嘱</span>，其内容是<span style="color:var(--para-color);">设立一个表彰促进和平人士或组织的奖项</span>。诺贝尔去世数年后，挪威议会决定将1905年的<span style="color:var(--ans-color);">诺贝尔和平奖</span>颁发给贝尔塔·冯·苏特纳。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>从句浓缩为专有名词</strong>：原文从句 <code>include a Prize for persons or organisations who promoted peace</code> 对应后文正式官方名称 <code>Nobel Peace Prize</code>；</li>
+          <li><strong>因果对标</strong>：<code>No doubt this influenced Alfred Nobel</code> 改写为 <code>That was part of the reason why...</code>。</li>
+        </ul>
+      </div>
+      <div class="trap-box">
+        <div class="trap-title"><span class="badge badge-warn">错题剖析</span> 你为什么会错写成 <span class="wrong-ans">a prize</span>？</div>
+        <div class="trap-content">
+          <strong>1. 答非所问、核心信息缺失</strong>：诺贝尔遗嘱里有5个奖（物理、化学、医学、文学、和平）。题干上下文完全是因为秘书的和平运动促使他设立的，光写 <code>a prize</code>（一个奖项）根本没有回答出是什么奖！<br>
+          <strong>2. 看到短语提前刹车</strong>：原文写 <code>include a Prize for...</code>，你只抄了 <code>a prize</code> 两个词，没有看到后面紧跟的修饰语是指下文的 <code>Nobel Peace Prize</code>。题目允许写不超过3个词，写 <code>Nobel Peace Prize</code> 刚刚好！
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PASSAGE 1 ================= -->
+  <section id="passage-1" class="passage-section">
+    <div class="passage-title-bar">
+      <h2>Reading Passage 1: The Refrigerator（冰箱的发明）</h2>
+      <div class="passage-meta">
+        <span>📍 对应位置：PDF P26-P28 / 纸质 P9-P11</span>
+        <span>🎯 题型：Summary 单词填写题（Q1-Q6）</span>
+        <span>⚠️ 字数限制：ONE WORD ONLY（仅限1个词）</span>
+      </div>
+    </div>
+
+    <!-- Q1 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 1: 制冷方式的古代起源</div>
+        <div class="q-ans-pill">refrigeration</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>In ancient time</code>、<code>ice and snow</code>、<code>store food</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P28)</div>
+        <div class="en-text">
+          In ancient time, people <span class="para">mainly used</span> <span class="loc">ice and snow</span> <span class="para">as the means of</span> 1 <span class="ans">[refrigeration]</span> <span class="loc">to store food</span>.
+        </div>
+        <div class="zh-text">
+          在古代，人们<span style="color:var(--para-color);">主要使用</span><span style="color:var(--locator-color);">冰和雪</span><span style="color:var(--para-color);">作为</span>【<span style="color:var(--ans-color);">制冷</span>】<span style="color:var(--para-color);">的手段</span>来<span style="color:var(--locator-color);">储存食物</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P26)</div>
+        <div class="en-text">
+          Progress took time, however, and <span class="loc">snow and ice</span> <span class="para">served as the primary means of</span> <span class="ans">refrigeration</span> until the beginning of the 20th century.
+        </div>
+        <div class="zh-text">
+          然而，进步需要时间，直到 20 世纪初，<span style="color:var(--locator-color);">雪和冰</span>依然<span style="color:var(--para-color);">充当着</span><span style="color:var(--ans-color);">制冷</span><span style="color:var(--para-color);">的主要手段</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>句式功能改写</strong>：原文系表结构 <code>served as primary</code> 改写为主动动词短语 <code>mainly used ... as</code>；</li>
+          <li><strong>词性转换</strong>：形容词 <code>primary</code> 换副词 <code>mainly</code>；</li>
+          <li><strong>原词提取</strong>：介词 <code>of</code> 后直接提取名词 <code>refrigeration</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q2 & Q3 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 2 & 3: 商业制冷的早期应用行业</div>
+        <div class="q-ans-pill">brewing / meatpacking</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>icebox</code>、<code>19th century</code>、<code>commercial refrigeration</code>、<code>industries</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P28)</div>
+        <div class="en-text">
+          Then <span class="loc">icebox</span> was introduced during <span class="loc">19th century</span> and <span class="loc">commercial refrigeration</span> <span class="para">was applied to</span> 2 <span class="ans">[brewing]</span> <span class="para">as well as</span> 3 <span class="ans">[meatpacking]</span> <span class="loc">industries</span>.
+        </div>
+        <div class="zh-text">
+          随后在 <span style="color:var(--locator-color);">19 世纪</span>，<span style="color:var(--locator-color);">冰盒</span>被引入，并且<span style="color:var(--locator-color);">商业制冷</span><span style="color:var(--para-color);">被应用到了</span>【<span style="color:var(--ans-color);">酿造</span>】<span style="color:var(--para-color);">以及</span>【<span style="color:var(--ans-color);">肉类加工</span>】<span style="color:var(--locator-color);">行业</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P26 跨至 P27)</div>
+        <div class="en-text">
+          ...and developed vapor-compression refrigeration <span class="para">for the</span> <span class="ans">brewing</span> <span class="para">and</span> <span class="ans">meatpacking</span> <span class="loc">industries</span>.
+        </div>
+        <div class="zh-text">
+          ……并<span style="color:var(--para-color);">为</span><span style="color:var(--ans-color);">酿造</span><span style="color:var(--para-color);">和</span><span style="color:var(--ans-color);">肉类加工</span><span style="color:var(--locator-color);">行业</span>开发了蒸汽压缩制冷技术。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>动宾被动扩展</strong>：<code>refrigeration for ... industries</code> 改写为 <code>was applied to ... industries</code>；</li>
+          <li><strong>并列连词改写</strong>：<code>and</code> 改写为 <code>as well as</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 4: 早期有毒冷却剂的更替</div>
+        <div class="q-ans-pill">ammonia</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>In 1859</code>、<code>coolant</code>、<code>poisonous</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P28)</div>
+        <div class="en-text">
+          <span class="loc">In 1859</span>, 4 <span class="ans">[ammonia]</span> <span class="para">replaced air as a coolant</span>, but it was <span class="para">poisonous</span>.
+        </div>
+        <div class="zh-text">
+          在 <span style="color:var(--locator-color);">1859 年</span>，【<span style="color:var(--ans-color);">氨气</span>】<span style="color:var(--para-color);">替代了空气作为冷却剂</span>，但它具有<span style="color:var(--para-color);">毒性</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P27)</div>
+        <div class="en-text">
+          <span class="loc">In 1859</span>, France’s Ferdinand Carré created a more advanced system that <span class="para">used</span> <span class="ans">ammonia</span> <span class="para">as a coolant; the earlier vapor-compression machines used air</span>. The ammonia worked well, but was <span class="para">toxic</span> if it leaked.
+        </div>
+        <div class="zh-text">
+          在 <span style="color:var(--locator-color);">1859 年</span>，法国的费迪南德·卡雷发明了一种更先进的系统，<span style="color:var(--para-color);">使用</span><span style="color:var(--ans-color);">氨气</span><span style="color:var(--para-color);">作为冷却剂；早期的蒸汽压缩机使用的是空气</span>。氨气效果很好，但如果泄漏则具有<span style="color:var(--para-color);">毒性</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>核心同义替换</strong>：<code>toxic</code> 换 <code>poisonous</code>；</li>
+          <li><strong>对比浓缩为动词</strong>：用 <code>replaced</code> 概括新旧更替。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 5: 1920年代更安全的新型制冷剂</div>
+        <div class="q-ans-pill">Freon</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>1920s</code>、<code>safer</code>、<code>took over it</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P28)</div>
+        <div class="en-text">
+          The <span class="para">safer</span> 5 <span class="ans">[Freon]</span> <span class="para">took over it</span> in <span class="loc">1920s</span>.
+        </div>
+        <div class="zh-text">
+          更<span style="color:var(--para-color);">安全的</span>【<span style="color:var(--ans-color);">氟利昂</span>】在 <span style="color:var(--locator-color);">20 世纪 20 年代</span><span style="color:var(--para-color);">取代了它</span>。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P27)</div>
+        <div class="en-text">
+          Engineers worked until the <span class="loc">1920s</span> to come up with <span class="para">better alternatives, one of which was</span> <span class="ans">Freon</span>.
+        </div>
+        <div class="zh-text">
+          工程师们一直努力到 <span style="color:var(--locator-color);">20 世纪 20 年代</span>才构想出<span style="color:var(--para-color);">更好的替代方案，其中之一就是</span><span style="color:var(--ans-color);">氟利昂（Freon）</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>名词改写为动宾</strong>：<code>better alternatives</code> 改写为 <code>safer took over it</code>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="q-title">Question 6: 爱因斯坦的绿色发明</div>
+        <div class="q-ans-pill">eco-friendly / greener</div>
+      </div>
+      <div class="locator-line">
+        🎯 <strong>黄金定位词</strong>：<code>Even Einstein</code>、<code>inventing ... refrigerator</code>
+      </div>
+      <div class="block">
+        <div class="block-header header-stem"><span class="badge badge-q">1. 题干检索点</span> 考官题干句 (PDF P28)</div>
+        <div class="en-text">
+          Even <span class="loc">Einstein</span> made contributions <span class="para">by inventing</span> 6 <span class="ans">[eco-friendly]</span> <span class="loc">refrigerator</span>.
+        </div>
+        <div class="zh-text">
+          甚至连<span style="color:var(--locator-color);">爱因斯坦</span>也<span style="color:var(--para-color);">通过发明</span>【<span style="color:var(--ans-color);">环保</span>】<span style="color:var(--locator-color);">冰箱</span>做出了贡献。
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-header header-orig"><span class="badge badge-orig">2. 原文事实点</span> 原文出处句 (PDF P27)</div>
+        <div class="en-text">
+          Albert <span class="loc">Einstein</span> is remembered for many scientific achievements, but, as Time magazine notes, it’s often overlooked that he also made great <span class="para">contributions to</span> <span class="ans">eco-friendly</span> <span class="loc">refrigeration</span>.
+        </div>
+        <div class="zh-text">
+          阿尔伯特·<span style="color:var(--locator-color);">爱因斯坦</span>因许多科学成就而被铭记，但正如《时代》杂志指出的，人们往往忽略了他还为<span style="color:var(--ans-color);">环保</span><span style="color:var(--locator-color);">制冷</span>做出过巨大<span style="color:var(--para-color);">贡献</span>。
+        </div>
+      </div>
+      <div class="logic-box">
+        <div class="logic-title">⚡ 考官改写逻辑</div>
+        <ul class="logic-list">
+          <li><strong>后置修饰转前置定语</strong>：<code>contributions to eco-friendly refrigeration</code> 改写为 <code>inventing [eco-friendly] refrigerator</code>。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

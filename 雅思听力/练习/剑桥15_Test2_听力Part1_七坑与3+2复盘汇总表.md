@@ -1,4 +1,4 @@
-# 📊 剑桥雅思 15 Test 2 听力 Part 1 复盘表（基于七坑表 + 3+2/9大陷阱体系）
+# 📊 剑桥雅思 15 Test 2 听力 Part 1 + Part 4 复盘表（基于七坑表 + 3+2/9大陷阱体系）
 
 > 🎧 **音频切片点播台直达**：[C15T2_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/C15T2_错题切片点播台.html) ｜ 📂 [切片总目录](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/切片/index.html) ｜ 📊 [剑15 Test 1 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test1_听力Part1_七坑与3+2复盘汇总表.md)
 >
@@ -117,4 +117,86 @@
 1. 预判空位只定词性，严禁脑补狭隘物品属性（绝不把后空强行限定为食物！）。
 2. 空前有介词（from / of / in），不见原词或同义介词（out of），绝不提前抢写生词！
 3. 听到 but / however，耳朵神经瞬间绷紧，捕捉转折后第一个实词！
+```
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）Agricultural programme in Mozambique 莫桑比克农业援助项目讲座
+
+*卷面要求：Write **ONE WORD ONLY** for each answer.*  
+*本次模考战绩：**5 / 10**（答对：Q31, Q34, Q35, Q36, Q37；错题：Q32, Q33, Q38, Q39, Q40）*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | irrigation | irrigation | ✓ | **⑤改写**<br>(`P3改写` / `A2改写`) | 原文: *"To support agriculture in this dry region, the programme focused primarily on making use of existing water resources from the Limpopo River by setting up systems of **irrigation**, which would provide a dependable water supply for crops and animals."* (卷面: *[ 31 ] was seen as the main priority to ensure the supply of water*) | **主优先级改写一次对齐**：*main priority = focused primarily on* 完成改写对齐；后半句 *provide a dependable water supply* 对应卷面 *ensure the supply of water* 双重验证。讲座开场即战斗状态，开门红。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/31_Q31_灌溉系统irrigation主优先级改写.mp3) |
+| **Q32** | government | women | ✗ | **②定位错位** + **③句意**<br>【**T3原词陷阱**】<br>(`P3改写` / `A2改写`) | 原文: *"The programme worked closely with the district **government** in order to find the best way of implementing this... These associations planned and carried out activities including water management... and it was notable that in general, **women** formed the majority of the workforce."* (卷面: *Most of the work organised by farmers' associations was done by [ 32 ]*) | **【合作方 ≠ 干活的人 + 答案写在定位词之前】**：<br>1. **主体角色混淆**：听到"项目与地区政府密切合作落实项目"，结合卷面分组标题 *water management*，脑补出"通过政府组织管理水源"就填了 government。但卷面问的是**活儿是谁干的**（*was done by*），government 只是合作方；<br>2. **答案在定位词之后**：government 出现在 farmers' associations 这个定位词**之前**，答案不可能在定位词前；<br>3. **真正的答案句**：*it was notable that in general, **women** formed the majority of the workforce*（总体上妇女构成劳动力的大多数）—— *most of the work done by = formed the majority of the workforce*。<br>**铁律：先等定位词落地，再看"谁干活"；合作方、出资方、批准方都不是干活的人。** | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/32_Q32_妇女主力women与政府government干扰.mp3) |
+| **Q33** | where | wire<br>*(wires)* | ✗ | **③句意** + **单词不熟**<br>(`P1原词` / `A1原词`) | 原文: *"It was decided that in order to keep the crops safe from animals, both wild and domestic, special areas should be fenced off **where** the crops could be grown. The community was responsible for creating these fences, **but** the programme provided the necessary **wire** for making them."* (卷面: *The programme provided – [ 33 ] for the fences*) | **【从句词填进物资坑 + but 后才是答案】**：<br>1. **where 的来源**：第一句 *special areas should be fenced off **where** the crops could be grown* —— where 是定语从句连接词，"圈地"只是背景交代；<br>2. **句意没吃透**：定位到了这句，但没理清"谁提供了什么物资"，最后把从句残留 where 当答案写了；<br>3. **答案句在 but 之后**：*The community was responsible for creating these fences, **but** the programme provided the necessary **wire*** —— 社区出人力建围栏，项目提供的物资是铁丝；*provided the necessary ____ for making them* 与卷面几乎逐词对应。<br>**铁律：卷面 "provided – ____" 的坑必然填物资名词；where / which / that 这类从句词永远填不进去。听到 but 前先别动笔。** | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/33_Q33_围栏铁丝wire与where从句残留.mp3) |
+| **Q34** | seeds | seeds<br>*(seed)* | ✓ | **⑤改写**<br>(`P3改写` / `A1原词`) | 原文: *"The land was dug, so that vegetables and cereals **appropriate to the climate** could be grown, and the programme provided the necessary **seeds** for this."* (卷面: *[ 34 ] for suitable crops*) | **provided 结构二连击**：*suitable crops = appropriate to the climate* 改写对齐，*provided the necessary seeds* 同 Q33 结构直接锁定。并列项 pumps（水泵）是打水用的、不对应 crops，未被带偏。 | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/34_Q34_适栽作物种子seeds.mp3) |
+| **Q35** | posts | posts | ✓ | **④对比结构** + **⑤改写**<br>(`P2逻辑` / `A2改写`) | 原文: *"However, the **labour was all provided by local people**, and they also provided and put up the **posts** that supported the fences around the fields."* (卷面: *The farmers provided – labour – [ 35 ] for the fences on their land*) | **楚河汉界划分成功**：However 换边信号抓住——前句"项目给水泵"，这句"农民给劳动力和立柱"。*supported the fences = for the fences*、*local people = farmers* 双向改写对齐。与 Q33（项目给 wire）的对照题两边都没混。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/35_Q35_农民自备立柱posts.mp3) |
+| **Q36** | transport | transport | ✓ | **⑤改写（否定转换）**<br>(`P3改写` / `A1原词`) | 原文: *"However, getting the produce to places where it could be marketed was sometimes a problem, as the farmers **did not have access to transport**, and this resulted in large amounts of produce, especially vegetables, being spoiled."* (卷面: *difficult due to lack of [ 36 ]*) | **本套最长改写链走通**：① *getting the produce to market = marketing*；② *difficult due to lack of = did not have access to*（肯定句式 ↔ 否定句式）；③ 答案 transport。含金量最高的一分。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/36_Q36_运输缺失transport否定改写.mp3) |
+| **Q37** | preservation | preservation | ✓ | **⑤改写** + **逻辑链**<br>(`P3改写` / `A1原词`) | 原文: *"This problem was discussed... it was decided that in order to prevent food from being spoiled, the farmers needed to **learn techniques** for its **preservation**."* (卷面: *Training was therefore provided in **methods of food** [ 37 ]*) | **问题→对策链顺藤摸瓜**：Q36 的 spoiled 问题在本题给出对策；*learn techniques = training*、*methods of = techniques for*；*prevent food from being spoiled* 反向印证 preservation。四连正确。 | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/37_Q37_食物保鲜preservation.mp3) |
+| **Q38** | protein | fish<br>*(fishes)* | ✗ | **③句意**<br>【**T3原词陷阱（头衔后置）**】<br>(`P3改写` / `A1原词`) | 原文: *"This was when farmers started to dig holes for tanks in the fenced-off areas and to fill these with water and use them for breeding **fish** — an important source of **protein**."* (卷面: *Farmers made special places where [ 38 ] could be kept*) | **【头衔后置陷阱 —— 同 C15T1 Q31 的 biodiversity 同款】**：<br>1. **定位成功但答案词滑过**：听到了"挖坑做水箱、装水、用来养什么"，但 *breeding fish* 没捕捉到；<br>2. **评价词抢位**：破折号后的 *an important source of **protein***（重要的蛋白质来源）是对 fish 的**同位语评价**——是"头衔"不是"实体"；<br>3. **语义自检缺失**：卷面问"什么东西被养在这些地方"，能被 keep 的必然是生物，protein（营养成分）填不进去。<br>**铁律：破折号/逗号后的 "a source of... / which is... / an important..." 是解释性尾巴，答案在它前面那个被解释的实体词；填完做一次语义自检（protein 能被养在水箱里吗？）。** | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/38_Q38_水箱养鱼fish与protein头衔陷阱.mp3) |
+| **Q39** | been | bees | ✗ | **心态余震** + **③句意**<br>(`P1原词` / `A1原词`) | 原文: *"After a time, another suggestion was made by local people... but which was also adopted **later on**. They decided to try setting up **colonies of bees**, which would provide **honey** both for their own consumption and to sell."* (卷面: *Local people **later** suggested keeping [ 39 ]*) | **【定位对了，心态崩了 —— 单题失利波及下一题】**：<br>1. **心态余震**：Q38 失利后脑子发懵，抓住定位词 later 后等答案，但 *colonies of bees* 入耳时大脑空白没接住；<br>2. **语义验证没听到**：后一句 *which would provide honey*（会产蜂蜜）是命题人送的免费确认；<br>3. **凭残影乱写**：最后写了 been（本想吃牛肉 beef，忙着放弃听下一句又错一字母）。<br>**铁律：上一题丢了就让它丢——单题止损，绝不带伤作战。*colonies of / a group of* 后面的名词就是答案。** | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/39_Q39_养蜂取蜜bees与later定位.mp3) |
+| **Q40** | (只捕捉到 each) | design | ✗ | **③句意** + **收尾聚焦信号丢失**<br>【**T2转折**】<br>(`P3改写` / `A1原词`) | 原文: *"**However**, it's important to set **realistic timelines** for each phase of the programme, **especially for its design**, as mistakes made at this stage may be hard to correct later on."* (卷面: *Enough time must be allowed, particularly for the [ 40 ] phase of the programme*) | **【however + especially 双重聚焦信号全滑过】**：<br>1. **However 转折 = 答案区开始**：前面 *First of all* 那段是成绩总结（有水就有潜力、产量提升），However 一响重点切换，你整段没听到；<br>2. **生词卡壳**：*realistic timelines*（符合实际的时间线）是卷面 *enough time must be allowed* 的改写，realistic 不认识导致前半句断链；<br>3. **especially 聚焦灯**：*especially for its design* = 卷面 *particularly for the design phase*——especially / particularly 后面的名词必考；只捕捉到 *each phase of* 后面就断了。<br>4. **收尾句还在送验证**：*mistakes made at this stage may be hard to correct later on*（这个阶段犯错最难纠正 = 设计阶段）。<br>**铁律：Part 4 最后 30 秒的收官结构固定为 "However, ... important ... especially ____"——听到 especially 笔尖直接压上去等名词；realistic 不认识就放掉。** | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T2_错题音频切片/40_Q40_设计阶段design与especially聚焦.mp3) |
+
+---
+
+## 💡 Part 4 深度诊断：三大核心缺陷
+
+### 缺陷一：头衔后置陷阱（Q38 protein / 与 C15T1 Q31 biodiversity 同款连败）
+
+破折号或逗号后跟着 *"a source of... / which would provide... / an important..."* 时，那是给前面实体词的**评价标签**，不是新答案。你两套题在同一类陷阱上连摔两次（biodiversity 顶替 shelter、protein 顶替 fish），说明这不是偶然失手，而是**解码策略缺陷**：高级抽象词对大脑的吸引力远大于普通实体词（fish / shelter 都是初中词汇）。对策就一条：**填空先填"实体"（能被 keep / 能被 provide / 能被 grow 的东西），填完做 1 秒语义自检——"protein 能被养在水箱里吗？"一次就能拦住。**
+
+### 缺陷二：单题失利的"余震效应"（Q39 been / Q40 each）
+
+Q38 丢了 protein，Q39 定位词 later 明明抓住了，答案 bees 入耳时大脑却在"疯狂想这是什么东西"；到 Q40 干脆整段失聪，只残存一个 each。这是典型的**注意力资源被上一题的懊悔占用**。Part 4 十题连续独白，没有换气机会，一题带伤就是三题连崩。对策：练习时强制执行**"落笔即清零"**——写完或放弃的瞬间，嘴里默念"过"，把注意力指针强制拨回下一题的定位词（本套 Q39 是 later、Q40 是 However）。
+
+### 缺陷三：合作方/评价词/从句词填错坑 —— "语法质检"环节缺失
+
+Q32 的 government（合作方）、Q33 的 where（从句词）、Q38 的 protein（营养成分）——三个词**在语法上都填不进卷面的坑**：*done by ____* 要"人"、*provided ____ for the fences* 要"物资名词"、*where ____ could be kept* 要"生物"。写完的 1 秒语法自检（词性 + 语义角色）本可以拦住全部三题。这不是听力问题，是**落笔纪律问题**：Part 4 填空前先问一句"这个坑在句子里扮演什么角色？"
+
+---
+
+## 🎯 Part 4 靶向精练四步法
+
+### Step 1：精读 · 三组关键句结构（5 分钟）
+
+1. **物资归属对照**：Q33 *the community was responsible for creating these fences, but the programme provided the necessary wire* ↔ Q35 *the labour was all provided by local people, and they also provided and put up the posts* —— 划出"谁 provide 什么"。
+2. **头衔后置句**：Q38 *breeding fish — an important source of protein* —— 破折号前后各是什么角色。
+3. **收官聚焦句**：Q40 *However, it's important to set realistic timelines for each phase, especially for its design* —— 圈出 However / especially。
+
+### Step 2：朗读 · 五组表达（5 分钟）
+
+- *it was notable that in general, women formed the majority of the workforce*
+- *did not have access to transport*
+- *techniques for its preservation*
+- *use them for breeding fish*
+- *setting up colonies of bees*
+
+### Step 3：盲听（配合点播台 Part 4 切片）· 10 分钟
+
+先单曲循环 **Q38 切片**（练"头衔不是答案"）和 **Q40 切片**（练 However-especially 收官反应），再开 AB 循环 Q39 的 *later on. They decided to try setting up colonies of* 那两秒；最后整段播放 `Section_4_Full` 做全真模拟，只允许自己记"项目给 / 农民给"两栏笔记。
+
+### Step 4：沉淀改写对 + 烟雾弹黑名单（2 分钟）
+
+```text
+【高频改写沉淀（Part 4）】
+1. main priority            <===>  focused primarily on
+2. most of the work done by <===>  formed the majority of the workforce
+3. suitable crops           <===>  appropriate to the climate
+4. lack of                  <===>  did not have access to
+5. methods of food ____     <===>  techniques for its preservation
+6. made special places      <===>  dig holes for tanks
+7. keeping ____             <===>  setting up colonies of ____
+8. enough time must be allowed <==>  set realistic timelines
+
+【烟雾弹黑名单】
+government（合作方）/ where（从句词）/ protein（头衔）/ honey（产出）/
+realistic timelines（生词，放掉）/ each phase（定位词，不是答案）
+
+【心智防线铁律】
+1. 答案只出现在定位词之后；定位词之前听到的名词一律当背景。
+2. 破折号/逗号后的 "a source of / which would provide" 是评价尾巴，答案在前面。
+3. 上一题丢完立刻清零：默念"过"，指针拨到下一题定位词。
+4. However + especially / particularly = 收官答案聚焦灯，笔尖压上去等名词。
 ```

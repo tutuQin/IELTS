@@ -475,6 +475,40 @@
             border-radius: 4px;
         }
 
+        /* Part 4 新增：题干⇄原文替换处（琥珀色虚线） */
+        .hl-swap {
+            background: rgba(251, 191, 36, 0.16);
+            color: var(--accent-amber);
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px dashed var(--accent-amber);
+            font-weight: 600;
+        }
+
+        /* Part 4 新增：转折/连接词提示答案（粉色） */
+        .hl-conn {
+            color: #f472b6;
+            font-weight: 700;
+            background: rgba(244, 114, 182, 0.14);
+            padding: 1px 5px;
+            border-radius: 4px;
+            border-bottom: 2px solid #f472b6;
+        }
+
+        /* Part 4 新增：卷面题干框 */
+        .q-stem-box {
+            background: rgba(56, 189, 248, 0.06);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin: 10px 0 14px 0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .legend-row { line-height: 2.1; }
+
         .analysis-box {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border-color);
@@ -609,8 +643,8 @@
     </div>
 
     <header>
-        <h1>🎧 剑桥雅思 15 Test 4 Part 1 听力错题切片与考点点播台</h1>
-        <p>Customer Satisfaction Survey（客户满意度调查）· 靶向攻克修饰抢跑、长句抱怨与语法预判盲区</p>
+        <h1>🎧 剑桥雅思 15 Test 4 Part 1 + Part 4 听力错题切片与考点点播台</h1>
+        <p>Part 1: Customer Satisfaction Survey（客户满意度调查）· Part 4: How the Industrial Revolution affected life in Britain（工业革命如何改变英国生活）· 靶向攻克修饰抢跑、定语拦截与答案前置盲区</p>
     </header>
 
     <!-- Sticky Audio Player -->
@@ -632,19 +666,22 @@
                 <button class="pill-btn" onclick="setSpeed(1.2, this)">1.2x 提速</button>
             </div>
             <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: auto;">
-                高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
+                高亮图例：<span class="signal-highlight">■ 定位词</span> | <span class="hl-swap">■ 题干⇄原文替换处</span> | <span class="hl-conn">■ 转折/连词提示</span> | <span class="ans-highlight">■ 官方答案词</span> | <span class="trap-highlight">■ 干扰陷阱</span>
             </span>
         </div>
     </div>
 
     <!-- 4-step Guide -->
     <div class="tips-panel">
-        <div class="tips-title">💡 针对本套题 4 大核心漏洞靶向精练指南</div>
+        <div class="tips-title">💡 本套题 7 大核心漏洞靶向精练指南（Part 1 四坑 + Part 4 三坑）</div>
         <ol class="tips-list">
-            <li><strong>Step 1 破除定语抢跑（Q4 normal vs return）</strong>：题干已有 <em>Standard</em>，录音念 <em>normal</em> 属于已给词同义改写，强制笔尖悬停半秒，等核心票种名词 <em>return</em>！</li>
-            <li><strong>Step 2 脱敏长难抱怨句（Q6 machine vs online）</strong>：Sophie 大段吐槽售票机属于纯排他垃圾信息，保持耐力，只等收束引语 <em>So to answer your question... online</em>！</li>
-            <li><strong>Step 3 抓牢绝对时间限定词（Q2 shopping vs work）</strong>：题干限定 <em>today</em>，排除转折后带 <em>sometimes</em> 的习惯表达，绝不改错为 <em>work</em>！</li>
-            <li><strong>Step 4 激活空前语法预判（Q8 information vs time）</strong>：看到 <em>how much</em> 立刻锁定不可数名词，对应 <em>the amount of information</em>，绝不盲抓修饰短语 <em>train times</em>！</li>
+            <li><strong>Step 1 破除定语抢跑（P1 Q4 normal vs return）</strong>：题干已有 <em>Standard</em>，录音念 <em>normal</em> 属于已给词同义改写，强制笔尖悬停半秒，等核心票种名词 <em>return</em>！</li>
+            <li><strong>Step 2 脱敏长难抱怨句（P1 Q6 machine vs online）</strong>：Sophie 大段吐槽售票机属于纯排他垃圾信息，保持耐力，只等收束引语 <em>So to answer your question... online</em>！</li>
+            <li><strong>Step 3 抓牢绝对时间限定词（P1 Q2 shopping vs work）</strong>：题干限定 <em>today</em>，排除转折后带 <em>sometimes</em> 的习惯表达，绝不改错为 <em>work</em>！</li>
+            <li><strong>Step 4 激活空前语法预判（P1 Q8 information vs time）</strong>：看到 <em>how much</em> 立刻锁定不可数名词，对应 <em>the amount of information</em>，绝不盲抓修饰短语 <em>train times</em>！</li>
+            <li><strong>Step 5 强调句与长主语不迷路（P4 Q31 wealth）</strong>：听到 <em>it was in the 19th century that...</em> 立刻把注意力推到 <em>that</em> 之后，「the quantity and quality of people's <em>possessions</em>」这种双词 of 长主语，定位词永远在 of 后面最后一个名词！</li>
+            <li><strong>Step 6 A of B 取本体、材料词忍住（P4 Q33 power / Q39 windows）</strong>：<em>new sources of ____</em> 填 <em>power</em> 不填 sources；<em>plate glass</em> 只是手段，等 <em>which</em> 从句里的 <em>windows</em>，并用卷面 <em>were</em> 做单复数质检！</li>
+            <li><strong>Step 7 别被标题词和结尾举例骗走（P4 Q32 technology / Q40 advertising）</strong>：句尾 <em>several key areas</em> 撞大标题不是「区域结束」；<em>Previously ... now ...</em> 里 <em>now</em> 后第一句就是答案，讲座结尾 <em>sugar / cutlery</em> 一字不写！</li>
         </ol>
     </div>
 
@@ -661,10 +698,11 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
-        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (4)</button>
-        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (6)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (23)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (9: P1 Q2/Q4/Q6/Q8 + P4 Q31/Q32/Q33/Q39/Q40)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (11)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">完整音频 (2)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)" style="color: #c084fc;">🏭 Part 4：工业革命讲座 (Q31-Q40)</button>
     </div>
 
     <!-- Slice List -->
@@ -1572,8 +1610,792 @@
         </div>
     </div>
 
+        <!-- PART 4 SECTION DIVIDER -->
+        <div class="slice-card" data-category="part4" style="border-color: rgba(192, 132, 252, 0.4); background: linear-gradient(135deg, rgba(192,132,252,0.08), rgba(56,189,248,0.05));">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag" style="background: rgba(192,132,252,0.2); color: #c084fc; border: 1px solid rgba(192,132,252,0.4);">Part 4 · 学术讲座 · Q31-Q40</span>
+                    <h3 class="card-title">🏭 How the Industrial Revolution affected life in Britain 工业革命如何改变英国生活 · 战报 10 题对 5 错 5</h3>
+                </div>
+            </div>
+            <div class="q-stem-box" style="border-left-color: #c084fc;">
+                <strong>讲座结构：</strong>总起（Q31 财富 / Q32 技术）→ 制造业 Manufacturing（Q33 动力 / Q34 纺织 / Q35 机器）→ 交通 Transport（Q36 报纸 / Q37 本地）→ 零售 Retailing（Q38 照明 / Q39 橱窗 / Q40 广告）。<br>
+                <strong>五道错题的三大病根：</strong>① <strong>强调句与长主语打散定位</strong>（Q31 it was...that 强调句， possessions 埋进 the quantity and quality of... 长主语里）；② <strong>标题词原词误导 + 定语拦截</strong>（Q32 听到 areas 以为跳到第三板块直接放弃、Q33 把 sources of power 的定语 source 当答案）；③ <strong>答案前置 / 材料词抢先</strong>（Q39 plate glass 先于 windows、Q40 persuade 在 advertising 之后作后置定语，结尾 sugar 举例抢答）。Part 4 讲座没有对话换气，一题走神就是连环崩。
+            </div>
+            <div class="q-stem-box legend-row" style="border-left-color: #38bdf8;">
+                <strong>🎨 本篇标注图例（Q31-Q40 每题统一）</strong><br>
+                <span class="signal-highlight">蓝色下划线</span> = <strong>定位词</strong>：卷面与录音里同一个词（年份 / 人名 / 专有名词），听到它就知道答案区到了；<br>
+                <span class="hl-swap">琥珀色虚线</span> = <strong>题干 ⇄ 原文替换处</strong>：两边换了说法但意思对得上，每处改写在「考点拆解」里都附了中文翻译；<br>
+                <span class="hl-conn">粉色</span> = <strong>转折词 / 连词信号</strong>：But / In fact / as well as / instead of / Previously...now / for instance 等——答案十有八九跟在它们后面；<br>
+                <span class="ans-highlight">绿色</span> = 答案词；<span class="trap-highlight">红色删除线</span> = 干扰项（听到了也要划掉）。<br>
+                <strong>读法：</strong>先看题干里<strong>蓝色</strong>锁定位置 → 顺着<strong>琥珀色</strong>看"卷面怎么变成录音" → 听见<strong>粉色</strong>连词笔尖就位 → <strong>绿色</strong>落笔。
+            </div>
+        </div>
+
+        <!-- CARD_card_31 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q31</span>
+                    <span class="card-tag tag-p1">Part 4 · ③句意 + 强调句定位错位</span>
+                    <h3 class="card-title">31 · 19 世纪：possessions 衡量国家财富 wealth</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_19世纪possessions衡量国家wealth财富.mp3', 'Q31: possessions 衡量国家财富 wealth')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_31" onclick="handleRecBtnClick('card_31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_31" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_31"></span>
+                    <span class="rec-status-text" id="rec-status-card_31">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_31">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_31" onclick="playUserRecording('card_31')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_31')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_31')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_31')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="signal-highlight">19th century</span>: <span class="hl-conn">For the first time</span>, people's <span class="signal-highlight">possessions</span> were used to <span class="hl-swap">measure</span> Britain's <strong>[ 31 ]</strong>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: <span class="hl-conn">In fact</span>, it was in the 19th century that the quantity and quality of people's possessions was used as an indication of the <span class="ans-highlight">wealth [Q31]</span> of the country."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：定位错 + 听不懂句意</strong> —— 原文是一句 <em>it was ... that ...</em> <strong>强调句</strong>，把词序打散了：定位词 possessions 被埋在长主语 <em>the quantity and quality of people's possessions</em>（人们物品的数量和质量）末尾，等你反应过来，答案已经过了。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em>were used to <span class="hl-swap">measure</span> Britain's ____</em>（被用来衡量英国的____）⇄ 录音 <em>was used as an <span class="hl-swap">indication</span> of the wealth of the country</em>（被用作国家财富的标志）——<strong>measure ⇄ indication（衡量 ⇄ 标志/指标）</strong>；卷面 <em>For the first time</em>（首次）⇄ 录音 <em>In fact, it was in the 19th century that...</em>（事实上，正是在 19 世纪……——强调句本身就是"首次"的表达方式）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">In fact</span>（事实上）一出口就是"重点来了"的信号，答案句紧跟其后；下一句的 <span class="hl-conn">but</span> all that was changed（但一切都被改变了）是"此前 vs 此后"对比，帮助确认语境。<br>
+• <strong>防坑口诀：听到 it is/was ... that 强调句，注意力立刻锁到 that 之后的名词堆末尾；quantity and quality of X 这种"双词 + of"结构里，X 才是定位词。wealth = 财富（不可数），别再犹豫词性。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, it was in the <span class="signal-highlight">19th century</span> that the quantity and quality of people's <span class="signal-highlight">possessions</span> was used as an <span class="hl-swap">indication</span> of the <span class="ans-highlight">wealth [Q31]</span> of the country.</div>
+                            <div class="cn-line">事实上，正是在 19 世纪，人们拥有物品的<strong>数量和质量</strong>被用作衡量国家<strong>财富</strong>的标志。【Q31 答案句 → wealth；强调句 it was...that，定位词 possessions 藏在长主语末尾】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Before this, the vast majority of people had very few possessions, <span class="hl-conn">but</span> all that was changed by the Industrial Revolution.</div>
+                            <div class="cn-line">在此之前，绝大多数人的财产寥寥无几，但工业革命改变了这一切。【but 转折：此前 vs 此后对比】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_32 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q32</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑤改写链 + 标题词 areas 误导弃答</span>
+                    <h3 class="card-title">32 · 商品制造与 technology 技术引发巨变</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_goods生产与technology技术引发巨变与areas误区.mp3', 'Q32: 生产与技术进步 technology')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_32" onclick="handleRecBtnClick('card_32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_32" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_32"></span>
+                    <span class="rec-status-text" id="rec-status-card_32">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_32">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_32" onclick="playUserRecording('card_32')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_32')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_32')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_32')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="hl-swap">Developments in production of</span> <span class="signal-highlight">goods</span> <span class="hl-conn">and</span> in <strong>[ 32 ]</strong> <span class="hl-swap">greatly changed lives</span>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: This was the era from the mid-18th to the late 19th century, when improvements in how goods were made, as well as in technology, triggered massive social changes that transformed life for just about everybody in several key areas."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：听到 areas 以为定位跳到第三题，果断放弃</strong> —— 句尾的 <em>several key areas</em> 恰好撞上卷面大标题 <em>MAIN AREAS OF CHANGE</em>，你以为答案区已过；其实 <strong>areas 是承上启下的陷阱词，真正的答案 technology 在它之前 2 秒</strong>就说完了。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">Developments in production of goods</span></em>（商品生产的进步）⇄ 录音 <em><span class="hl-swap">improvements in how goods were made</span></em>（商品制造方式的改进）；卷面 <em><span class="hl-swap">greatly changed lives</span></em>（极大地改变了生活）⇄ 录音 <em><span class="hl-swap">triggered massive social changes that transformed life</span></em>（引发了改变生活的巨大社会变革）。<br>
+• <strong>连词信号</strong>：卷面 <em>production of goods <span class="hl-conn">and</span> in ____</em> 的并列，在录音里变成 <em>improvements in how goods were made, <span class="hl-conn">as well as</span> in <span class="ans-highlight">technology</span></em> —— <strong>as well as（以及/除了…还）是并列补充信号，答案就是 as well as 后面的第一个名词</strong>。<br>
+• <strong>防坑口诀：大标题的原词（areas）听到时警惕"是不是已经说完了"，答案往往藏在它前面的并列结构里；as well as / and / along with 后面紧跟的名词优先记。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This was the era from the mid-18th to the late 19th century, when <span class="hl-swap">improvements in how</span> <span class="signal-highlight">goods</span> <span class="hl-swap">were made</span>, <span class="hl-conn">as well as</span> in <span class="ans-highlight">technology [Q32]</span>, <span class="hl-swap">triggered massive social changes that transformed life</span> for just about everybody in several key <span class="trap-highlight">areas</span>.</div>
+                            <div class="cn-line">这段时期从 18 世纪中叶延续到 19 世纪末，<strong>商品制造方式</strong>的改进<strong>以及技术</strong>上的进步，引发了巨大的社会变革，几乎在几个关键领域改变了每个人的生活。【Q32 答案句 → technology；句尾 areas 撞卷面大标题，是"弃答"陷阱】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_33 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q33</span>
+                    <span class="card-tag tag-p1">Part 4 · ①词音/拼写 + 定语拦截 sources</span>
+                    <h3 class="card-title">33 · 工业革命的新能源来源 power 动力</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_新能源sources_of_power动力源与source误填.mp3', 'Q33: 新型动力来源 power')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_33" onclick="handleRecBtnClick('card_33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_33" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_33"></span>
+                    <span class="rec-status-text" id="rec-status-card_33">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_33">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_33" onclick="playUserRecording('card_33')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_33')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_33')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_33')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> The <span class="signal-highlight">Industrial Revolution</span> <span class="hl-swap">would not have happened without</span> the new types of <strong>[ 33 ]</strong> that were used then
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: And it's true that the Industrial Revolution couldn't have taken place at all if it weren't for these new sources of power."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：填了 source，没有理解意思</strong> —— 录音说的是 <em>new <span class="trap-highlight">sources</span> of <span class="ans-highlight">power</span></em>（新的动力<strong>来源</strong>）：sources 是"来源"、power 才是"东西本体"。卷面 <em>new types of ____</em>（新型的____）要的是"新东西"，对应 <strong>of 后面的 power</strong>；sources 提前 1 秒出现，把你拦截了。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">would not have happened without</span></em>（没有____就不会发生）⇄ 录音 <em><span class="hl-swap">couldn't have taken place at all if it weren't for</span></em>（如果没有____，根本不可能发生）——<strong>双重否定 + 虚拟语气，意思一模一样但词全换了</strong>；卷面 <em>new types of</em>（新型）⇄ 录音 <em>new sources of</em>（新来源）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">And it's true that</span>（确实如此——确认信号）之后就是答案句；句内 <em>if it weren't for</em>（若非）是虚拟条件，<strong>for 后面的名词短语尾巴就是答案</strong>。<br>
+• <strong>防坑口诀：A of B 结构，卷面空格在"种类/类型/来源"类名词后时，答案取 B（of 后的本体词）；sources / types / kinds 只是框架词，填它们必错。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And it's true that</span> the <span class="signal-highlight">Industrial Revolution</span> <span class="hl-swap">couldn't have taken place at all</span> if it <span class="hl-swap">weren't for</span> these new <span class="trap-highlight">sources</span> of <span class="ans-highlight">power [Q33]</span>.</div>
+                            <div class="cn-line">确实，如果没有这些新的动力<strong>来源</strong>，工业革命根本不可能发生。【Q33 答案句 → power；sources 是框架词"来源"，答案取 of 后的 power】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They marked an important shift away from the traditional watermills and windmills that had dominated before this.</div>
+                            <div class="cn-line">它们标志着从此前占主导地位的传统水车和风车发生了重要转变。【语义验证：取代水车风车的当然是"动力"】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_34 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q34</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑤改写识别成功</span>
+                    <h3 class="card-title">34 · 19 世纪最先进产业 textiles 纺织业</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_19世纪最发达行业textiles纺织业.mp3', 'Q34: 最先进产业 textiles')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_34" onclick="handleRecBtnClick('card_34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_34" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_34"></span>
+                    <span class="rec-status-text" id="rec-status-card_34">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_34">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_34" onclick="playUserRecording('card_34')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_34')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_34')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_34')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> The <span class="hl-swap">leading</span> <span class="signal-highlight">industry</span> was <strong>[ 34 ]</strong> (its products <span class="hl-swap">became widely available</span>)
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: The most advanced industry for much of the 19th century was textiles. This meant that fashionable fabrics, and lace and ribbons were made available to everyone."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>作答评价：本题答对（✓）</strong>。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">leading</span></em>（领先的）⇄ 录音 <em><span class="hl-swap">most advanced</span></em>（最先进的）；卷面括号提示 <em><span class="hl-swap">products became widely available</span></em>（产品人人可得）⇄ 录音 <em><span class="hl-swap">fabrics, lace and ribbons were made available to everyone</span></em>（时尚面料、蕾丝缎带人人都能买到）——前后两句互相印证。<br>
+• <strong>做题心得</strong>：定位词 <em><span class="signal-highlight">industry</span></em> 原词重现，紧跟 <em>was <span class="ans-highlight">textiles</span></em> 一步到位。textiles 是高频学科词（纺织业），拼写以 -iles 收尾，注意别写成 textile 单数以外的变形——本题单复数都接受，但复数更贴合录音。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="hl-swap">most advanced</span> <span class="signal-highlight">industry</span> for much of the 19th century was <span class="ans-highlight">textiles [Q34]</span>.</div>
+                            <div class="cn-line">在 19 世纪的大部分时间里，最先进的产业是<strong>纺织业</strong>。【Q34 答案句 → textiles】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This meant that fashionable fabrics, and lace and ribbons <span class="hl-swap">were made available to everyone</span>.</div>
+                            <div class="cn-line">这意味着时尚面料、蕾丝和缎带人人都能买到。【验证卷面括号里的 products became widely available】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_35 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q35</span>
+                    <span class="card-tag tag-p1">Part 4 · 转折后出答案</span>
+                    <h3 class="card-title">35 · 巨大新 machines 机器催生大工厂</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_巨大新machines机器催生大工厂.mp3', 'Q35: 新机器让工厂成为必需 machines')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_35" onclick="handleRecBtnClick('card_35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_35" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_35"></span>
+                    <span class="rec-status-text" id="rec-status-card_35">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_35">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_35" onclick="playUserRecording('card_35')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_35')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_35')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_35')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> New <strong>[ 35 ]</strong> <span class="hl-swap">made factories necessary</span> <span class="hl-conn">and so</span> more people <span class="hl-swap">moved into</span> <span class="signal-highlight">towns</span>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: But enormous new machines were now being created that could produce the goods faster and on a larger scale, and these required a lot more space. So large factories were built... In fact, large numbers of people migrated from villages into towns as a result."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>作答评价：本题答对（✓）</strong>。<br>
+• <strong>连词信号（本题三连）</strong>：① <span class="hl-conn">But</span>（但是）——前文说"过去在家小作坊生产"，But 一转折，答案 machines 立刻出现；② <span class="hl-conn">So</span>（于是）——"机器需要更大空间，<strong>于是</strong>建起大型工厂"，对应卷面 made factories necessary；③ <span class="hl-conn">In fact</span>（事实上）——引出"大量人口迁入城镇"，对应卷面 moved into towns。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">made factories necessary</span></em>（使工厂成为必需）⇄ 录音 <em><span class="hl-swap">required a lot more space</span>, so large factories were built</em>（需要更大空间，于是大型工厂建成）；卷面 <em><span class="hl-swap">moved into towns</span></em>（迁入城镇）⇄ 录音 <em><span class="hl-swap">migrated from villages into towns</span></em>（从乡村迁移到城镇）。<br>
+• <strong>防坑口诀：But 后 3 秒内必有答案候选名词；enormous new ____ 这种"形容词 + new + 名词"的空，听到 new 就准备下笔。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Before the Industrial Revolution, most people made goods to sell in small workshops, often in their own homes.</div>
+                            <div class="cn-line">工业革命之前，大多数人是在小作坊——往往就是自己家里——制作商品出售。【铺垫：过去式】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">But</span> enormous new <span class="ans-highlight">machines [Q35]</span> were now being created that could produce the goods faster and on a larger scale, and these <span class="hl-swap">required a lot more space</span>.</div>
+                            <div class="cn-line"><strong>但</strong>现在巨大的新<strong>机器</strong>被制造出来，可以更快、更大规模地生产商品，而这些机器需要大得多的空间。【Q35 答案句 → machines；But 转折后立刻出答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">So</span> large factories were built, replacing the workshops, and forcing workers to travel to work.</div>
+                            <div class="cn-line"><strong>于是</strong>大型工厂建起来了，取代了作坊，工人们不得不通勤上班。【So 因果：对应 made factories necessary】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, large numbers of people <span class="hl-swap">migrated from villages into towns</span> as a result.</div>
+                            <div class="cn-line"><strong>事实上</strong>，大量人口因此从乡村迁入城镇。【In fact：对应 moved into towns】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_36 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q36</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑤改写链识别成功</span>
+                    <h3 class="card-title">36 · 铁路运送 newspapers 报纸刺激购买欲</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_铁路运送newspapers报纸刺激购买欲.mp3', 'Q36: 更易接触到报纸 newspapers')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_36" onclick="handleRecBtnClick('card_36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_36" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_36"></span>
+                    <span class="rec-status-text" id="rec-status-card_36">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_36">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_36" onclick="playUserRecording('card_36')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_36')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_36')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_36')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> Because of the new <span class="signal-highlight">transport</span>: greater <span class="hl-swap">access to</span> <strong>[ 36 ]</strong> made people more <span class="hl-swap">aware of what they could buy in shops</span>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: And the goods they moved weren't just coal, iron, clothes, and so on – significantly, they included newspapers, which meant that thousands of people could also read about what was available in the shops."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>作答评价：本题答对（✓）</strong>。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">access to</span> ____</em>（接触到____）⇄ 录音 <em>they <span class="hl-swap">included</span> <span class="ans-highlight">newspapers</span></em>（其中包括报纸）→ <em>could also <span class="hl-swap">read about</span></em>（还能读到）；卷面 <em><span class="hl-swap">aware of what they could buy in shops</span></em>（知道商店里能买什么）⇄ 录音 <em><span class="hl-swap">read about what was available in the shops</span></em>（读到商店里有什么货）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">And</span>（而且）开启货物品类列举，coal, iron, clothes 全是铺垫；<span class="hl-conn">significantly</span>（值得注意的是——强调信号词）后面紧接答案 newspapers；<em>not only ... <span class="hl-conn">but</span> also ...</em> 递进结构把"读报 → 知道商店卖什么 → 买更多"的逻辑链串起来。<br>
+• <strong>做题心得</strong>：先听到 weren't just（不只是）列举实物，significantly 转折到"报纸"这个非实物——它正是能"告知商品信息"的东西，语义自检通过，稳稳拿下。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And</span> the goods they moved weren't just coal, iron, clothes, and so on – <span class="hl-conn">significantly</span>, they <span class="hl-swap">included</span> <span class="ans-highlight">newspapers [Q36]</span>, which meant that thousands of people were not only more knowledgeable about what was going on in the country, <span class="hl-conn">but</span> could also <span class="hl-swap">read about what was available in the shops</span>, and that encouraged them to buy more.</div>
+                            <div class="cn-line"><strong>而且</strong>它们运的不只是煤、铁、衣服等等——<strong>值得注意的是</strong>还包括<strong>报纸</strong>。这意味着成千上万的人不仅更了解国家大事，<strong>还</strong>能读到商店里有什么可买，这就鼓励他们买得更多。【Q36 答案句 → newspapers；significantly 是答案预告信号】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_37 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q37</span>
+                    <span class="card-tag tag-p1">Part 4 · instead of 对比锁答案</span>
+                    <h3 class="card-title">37 · 不再局限于 local 本地市场</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_不再局限于local本地市场.mp3', 'Q37: 不再只买本地商品 local')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_37" onclick="handleRecBtnClick('card_37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_37" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_37"></span>
+                    <span class="rec-status-text" id="rec-status-card_37">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_37">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_37" onclick="playUserRecording('card_37')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_37')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_37')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_37')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> when shopping, people were <span class="hl-swap">not limited to buying</span> <strong>[ 37 ]</strong> goods
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: So faster forms of transport resulted in distribution becoming far more efficient – goods could now be sold all over the country, instead of just in the local market."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>作答评价：本题答对（✓）</strong>。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">not limited to buying</span> ____ goods</em>（不再只买____的商品）⇄ 录音 <em>could now be sold all over the country, <span class="hl-conn">instead of</span> just in the <span class="ans-highlight">local</span> market</em>（现在可以卖到全国各地，<strong>而不是</strong>只在本地市场）——<strong>not limited to（不限于）⇄ instead of just（而不是仅仅），否定↔对比，严丝合缝</strong>。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">So</span>（于是——因果总结信号）先告诉你"分销效率大大提高"；<strong>instead of（而不是）是答案路标，它后面的第一个形容词/名词就是答案</strong>——instead of just in the local market，local 落笔。<br>
+• <strong>防坑口诀：卷面有 not limited / not only 时，竖起耳朵等 instead of / but also；对比连词之后必有考点词。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">So</span> faster forms of transport resulted in distribution becoming far more efficient.</div>
+                            <div class="cn-line"><strong>于是</strong>，更快的运输方式让货物分销效率大大提高。【So 因果总结】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Goods could now be sold all over the country, <span class="hl-conn">instead of</span> just in the <span class="ans-highlight">local [Q37]</span> market.</div>
+                            <div class="cn-line">商品现在可以卖到全国各地，<strong>而不是</strong>只在<strong>本地</strong>市场。【Q37 答案句 → local；instead of 之后就是答案】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_38 (Part 4) -->
+        <div class="slice-card" data-category="part4 correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q38</span>
+                    <span class="card-tag tag-p1">Part 4 · for instance 举例信号</span>
+                    <h3 class="card-title">38 · 店内 lighting 照明提升商品可见度</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_店内lighting照明提升商品可见度.mp3', 'Q38: 更好的店内照明 lighting')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_38" onclick="handleRecBtnClick('card_38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_38" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_38"></span>
+                    <span class="rec-status-text" id="rec-status-card_38">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_38">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_38" onclick="playUserRecording('card_38')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_38')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_38')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_38')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> The <span class="hl-swap">displays of goods were more visible</span>: inside stores because of <span class="hl-swap">better</span> <strong>[ 38 ]</strong>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: The entrepreneurs who opened these found new ways to stock them with goods, and to attract customers: for instance, improved lighting inside greatly increased the visibility of the goods for sale."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>作答评价：本题答对（✓）</strong>。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">displays of goods were more visible</span></em>（商品陈列更显眼）⇄ 录音 <em><span class="hl-swap">greatly increased the visibility of the goods for sale</span></em>（大大提高了在售商品的可见度）——<strong>形容词 visible ⇄ 名词 visibility，词性转换</strong>；卷面 <em><span class="hl-swap">better</span></em>（更好的）⇄ 录音 <em><span class="hl-swap">improved</span></em>（改善了的）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">for instance</span>（比如——举例信号）一出现，例子里的第一个名词就是答案：improved <strong>lighting</strong> inside（店内改善的照明）。卷面 inside stores ⇄ 录音 inside，原词重现帮你确认。<br>
+• <strong>做题心得</strong>：上句 entrepreneurs ... attract customers 是铺垫，for instance 后直奔答案，节奏干净利落。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The entrepreneurs who opened these found new ways to stock them with goods, and to attract customers.</div>
+                            <div class="cn-line">开百货店的企业家们找到了进货和吸引顾客的新方法。【铺垫句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">For instance</span>, <span class="hl-swap">improved</span> <span class="ans-highlight">lighting [Q38]</span> inside <span class="hl-swap">greatly increased the visibility</span> of the goods for sale.</div>
+                            <div class="cn-line"><strong>比如</strong>，店内<strong>照明</strong>的改善大大提高了在售商品的可见度。【Q38 答案句 → lighting；for instance 举例信号】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_39 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q39</span>
+                    <span class="card-tag tag-p1">Part 4 · ⑥审题 + 材料词 glass 抢跑 + which 从句答案后置</span>
+                    <h3 class="card-title">39 · 平板玻璃让 windows 橱窗变大</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_plate_glass让windows橱窗变大与glass陷阱.mp3', 'Q39: 店外更大的橱窗 windows')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_39" onclick="handleRecBtnClick('card_39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_39" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_39"></span>
+                    <span class="rec-status-text" id="rec-status-card_39">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_39">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_39" onclick="playUserRecording('card_39')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_39')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_39')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_39')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <span class="hl-swap">outside</span> stores, because <strong>[ 39 ]</strong> <span class="hl-swap">were bigger</span>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: Another development that made goods more visible from outside resulted from the use of plate glass, which made it possible for windows to be much larger than previously."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：写成了 glass，听到 windows 但没听懂句子</strong> —— 句子主干是 <em>Another development ... resulted from the use of <span class="trap-highlight">plate glass</span></em>（另一项发展源于平板<strong>玻璃</strong>的使用），glass 是"材料"先出现；真正的答案在 <span class="hl-conn">which</span> 引导的定语从句里：<em>made it possible for <span class="ans-highlight">windows</span> to be much larger</em>（让<strong>橱窗</strong>可以做得更大）。你理解成"用于制作 glass 的什么"，把整个句子的主从关系听反了。<br>
+• <strong>审题定锚</strong>：卷面问的是 <em>outside stores, because ____ were bigger</em>（店外什么变大了）——空格后紧跟复数动词 <strong>were</strong>，答案必须是<strong>复数名词</strong>；glass（玻璃，不可数）语法上就出局，windows 才是复数。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">outside</span></em>（店外）⇄ 录音 <em><span class="hl-swap">visible from outside</span></em>（从店外可见）；卷面 <em><span class="hl-swap">were bigger</span></em>（更大了）⇄ 录音 <em><span class="hl-swap">to be much larger than previously</span></em>（比以前大得多）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">Another development that</span>（另一项发展——换题信号，提示 Q38 已过、Q39 开始）；<span class="hl-conn">which</span>（非限定定语从句——"它带来的结果"），<strong>which made it possible for ____ to be ... 这个框架里 for 后面的名词就是答案</strong>。<br>
+• <strong>防坑口诀：听到"材料词"（glass / wood / metal）先别急着写——卷面问"什么变大/变好/变多"时，答案往往是 which 从句里的功能名词（windows），材料只是实现手段。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Another development</span> that made goods more <span class="hl-swap">visible from outside</span> resulted from the use of <span class="trap-highlight">plate glass</span>, <span class="hl-conn">which</span> made it possible for <span class="ans-highlight">windows [Q39]</span> to be <span class="hl-swap">much larger than previously</span>.</div>
+                            <div class="cn-line"><strong>另一项</strong>让商品从店外更显眼的发展源于平板<strong>玻璃</strong>的使用，<strong>它</strong>让<strong>橱窗</strong>可以做得比以前大得多。【Q39 答案句 → windows；plate glass 是材料干扰，答案在 which 从句里】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_40 (Part 4) -->
+        <div class="slice-card" data-category="part4 wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q40</span>
+                    <span class="card-tag tag-p1">Part 4 · ③句意 + 答案前置 + 结尾 sugar 抢答</span>
+                    <h3 class="card-title">40 · advertising 广告爆炸式增长</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_advertising广告爆炸与sugar干扰.mp3', 'Q40: 有说服力的广告 advertising')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_40" onclick="handleRecBtnClick('card_40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_40" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_40"></span>
+                    <span class="rec-status-text" id="rec-status-card_40">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_40">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_40" onclick="playUserRecording('card_40')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_40')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_40')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_40')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="q-stem-box">
+                    <strong>卷面题干：</strong> <strong>[ 40 ]</strong> that was <span class="hl-swap">persuasive</span> <span class="hl-swap">became much more common</span>
+                </div>
+                <div class="transcript-box">
+                    "LECTURER: Previously, the focus had been on informing potential customers about the availability of goods; now there was an explosion in advertising trying to persuade people to go shopping."
+                </div>
+                <div class="analysis-box">
+                    <strong>🎯 考点拆解与定位路径</strong><br>• <strong>✗ 你的错因：听到了 advertising 但没听懂句子，错过答案写了 sugar</strong> —— 定位词 <em>persuasive</em>（有说服力的）在录音里变成 <em>trying to <span class="hl-swap">persuade</span> people</em>（试图说服人们），而且是<strong>答案前置</strong>：advertising 先说，persuade 作为它的后置定语后出现。你听到了 advertising 却没识别出它就是答案；讲座 12 秒后的结尾 <em>from <span class="trap-highlight">sugar</span> to cutlery</em>（从糖到餐具）是"奢侈品→必需品"的举例，与 Q40 无关——典型的"结尾词抢答"。<br>
+• <strong>替换改写（附中文）</strong>：卷面 <em><span class="hl-swap">persuasive</span></em>（有说服力的，形容词）⇄ 录音 <em><span class="hl-swap">trying to persuade people to go shopping</span></em>（试图说服人们去购物，动词短语）——<strong>形容词⇄动词，词性转换</strong>；卷面 <em><span class="hl-swap">became much more common</span></em>（变得普遍得多）⇄ 录音 <em><span class="hl-swap">there was an explosion in</span></em>（出现了爆炸式增长）。<br>
+• <strong>连词信号</strong>：<span class="hl-conn">Previously</span>, ... ; <span class="hl-conn">now</span> ...（过去……现在……时间对比）——Previously 句讲"过去只是告知有什么货"，<strong>now 一出口就是答案句</strong>：an explosion in <strong>advertising</strong>。前一句 <em>New ways of promoting goods were introduced, <span class="hl-conn">too</span></em>（推广新方式也被引入）里的 too（也）是"新一层信息"预告。<br>
+• <strong>防坑口诀：答案词先出、定位词（ persuade ）后到 = 答案前置，听到的每个实义名词都先记下来再用定位词回验；讲座结尾的例子词（ sugar / cutlery ）永远不是答案——卷面没有"举例"空。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> New ways of promoting goods were introduced, <span class="hl-conn">too</span>.</div>
+                            <div class="cn-line">推广商品的新方式<strong>也</strong>被引入了。【too：新信息预告】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Previously</span>, the focus had been on informing potential customers about the availability of goods; <span class="hl-conn">now</span> there was <span class="hl-swap">an explosion in</span> <span class="ans-highlight">advertising [Q40]</span> trying to <span class="hl-swap">persuade</span> people to go shopping.</div>
+                            <div class="cn-line"><strong>过去</strong>，重点只是告知潜在顾客有什么货；<strong>现在</strong>，<strong>广告</strong>出现了爆炸式增长，试图说服人们去购物。【Q40 答案句 → advertising；persuade 在答案后作后置定语 = 答案前置】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Flanders claims that one of the great effects of the Industrial Revolution was that it created choice. All sorts of things that had previously been luxuries – from <span class="trap-highlight">sugar</span> to <span class="trap-highlight">cutlery</span> – became conveniences, and before long they'd turned into necessities.</div>
+                            <div class="cn-line">弗兰德斯认为工业革命的重大影响之一是创造了选择。以前的各种奢侈品——从<strong>糖</strong>到<strong>餐具</strong>——都变成了便利品，很快又变成了必需品。【干扰区：sugar 在这里出现，但只是结尾举例，不是 Q40 答案】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD FULL PART 4 -->
+        <div class="slice-card" data-category="part4 full" style="border-color: rgba(192, 132, 252, 0.4);">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag" style="background: rgba(192,132,252,0.2); color: #c084fc; border: 1px solid rgba(192,132,252,0.4);">完整精听 · Part 4 全篇</span>
+                    <span class="card-tag tag-p1">全篇语流与抗断崖连贯训练</span>
+                    <h3 class="card-title">Part 4 完整录音实战盲听 (Q31 - Q40 工业革命如何改变英国生活 · 6m37s)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" style="background: linear-gradient(135deg, #818cf8, #c084fc);" onclick="playAudio('Section_4_Full_工业革命影响英国生活讲座.mp3', 'Part 4 完整录音: How the Industrial Revolution affected life in Britain')">▶ 播放完整 Part 4</button>
+                    <button class="record-card-btn" id="rec-btn-card_full4" onclick="handleRecBtnClick('card_full4')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_full4" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full4"></span>
+                    <span class="rec-status-text" id="rec-status-card_full4">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full4">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full4" onclick="playUserRecording('card_full4')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full4')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full4')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full4')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box" style="font-size: 1rem;">
+                    <strong>【完整音频实战目标】</strong>：在完成 Q31/Q32/Q33/Q39/Q40 五张错题卡的精听后，播放本完整录音，拿白纸按考试节奏重新盲做一遍。重点演练：<strong>① 听到 areas 不弃答（Q32）</strong>；<strong>② A of B 结构取 of 后名词（Q33）</strong>；<strong>③ 材料词 glass 不抢答，等 which 从句（Q39）</strong>；<strong>④ Previously...now 对比后落笔（Q40）</strong>；<strong>⑤ 结尾 sugar / cutlery 举例区一字不写</strong>。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Part 4 官方完整录音听力原文与逐句精读翻译（100% 完整不删减） <span class="toggle-badge">默认隐藏 · 点击展开精读</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Hi everyone, in this session I'll be presenting my research about the social history of Britain during the Industrial Revolution.</div>
+                            <div class="cn-line">大家好，这节课我将展示我的研究——工业革命时期英国的社会史。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> I particularly looked at how ordinary lives were affected by changes that happened at that time.</div>
+                            <div class="cn-line">我特别关注了当时发生的变化如何影响普通人的日常生活。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This was a time that saw the beginning of a new phenomenon; consumerism – where buying and selling goods became a major part of ordinary people's lives.</div>
+                            <div class="cn-line">那个时代见证了一种新现象的开端——消费主义：买卖商品成为普通人生活的重要组成部分。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, it was in the <span class="signal-highlight">19th century</span> that the quantity and quality of people's <span class="signal-highlight">possessions</span> was used as an <span class="hl-swap">indication</span> of the <span class="ans-highlight">wealth [Q31]</span> of the country.</div>
+                            <div class="cn-line">事实上，正是在 19 世纪，人们拥有物品的数量和质量被用作衡量国家<strong>财富</strong>的标志。【Q31 → wealth】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Before this, the vast majority of people had very few possessions, <span class="hl-conn">but</span> all that was changed by the Industrial Revolution.</div>
+                            <div class="cn-line">在此之前，绝大多数人的财产寥寥无几，但工业革命改变了这一切。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This was the era from the mid-18th to the late 19th century, when <span class="hl-swap">improvements in how</span> <span class="signal-highlight">goods</span> <span class="hl-swap">were made</span>, <span class="hl-conn">as well as</span> in <span class="ans-highlight">technology [Q32]</span>, <span class="hl-swap">triggered massive social changes that transformed life</span> for just about everybody in several key <span class="trap-highlight">areas</span>.</div>
+                            <div class="cn-line">这段时期从 18 世纪中叶延续到 19 世纪末，商品制造方式以及技术上的进步，在几个关键领域引发了改变几乎每个人生活的巨大社会变革。【Q32 → technology；areas 是弃答陷阱】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> First let's look at manufacturing.</div>
+                            <div class="cn-line">首先来看制造业。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> When it comes to manufacturing, we tend to think of the Industrial Revolution in images of steam engines and coal.</div>
+                            <div class="cn-line">说到制造业，我们往往会把工业革命想象成蒸汽机和煤炭的画面。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And it's true that</span> the <span class="signal-highlight">Industrial Revolution</span> <span class="hl-swap">couldn't have taken place at all</span> if it <span class="hl-swap">weren't for</span> these new <span class="trap-highlight">sources</span> of <span class="ans-highlight">power [Q33]</span>.</div>
+                            <div class="cn-line">确实，如果没有这些新的动力来源，工业革命根本不可能发生。【Q33 → power】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> They marked an important shift away from the traditional watermills and windmills that had dominated before this.</div>
+                            <div class="cn-line">它们标志着从此前占主导地位的传统水车和风车发生了重要转变。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="hl-swap">most advanced</span> <span class="signal-highlight">industry</span> for much of the 19th century was <span class="ans-highlight">textiles [Q34]</span>. This meant that fashionable fabrics, and lace and ribbons <span class="hl-swap">were made available to everyone</span>.</div>
+                            <div class="cn-line">在 19 世纪的大部分时间里，最先进的产业是<strong>纺织业</strong>。这意味着时尚面料、蕾丝和缎带人人都能买到。【Q34 → textiles】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Before the Industrial Revolution, most people made goods to sell in small workshops, often in their own homes.</div>
+                            <div class="cn-line">工业革命之前，大多数人在小作坊里——往往就是自己家里——制作商品出售。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">But</span> enormous new <span class="ans-highlight">machines [Q35]</span> were now being created that could produce the goods faster and on a larger scale, and these <span class="hl-swap">required a lot more space</span>.</div>
+                            <div class="cn-line">但现在巨大的新<strong>机器</strong>被制造出来，可以更快、更大规模地生产商品，而这些机器需要大得多的空间。【Q35 → machines；But 转折出答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">So</span> large factories were built, replacing the workshops, and forcing workers to travel to work. <span class="hl-conn">In fact</span>, large numbers of people <span class="hl-swap">migrated from villages into towns</span> as a result.</div>
+                            <div class="cn-line">于是大型工厂建起来了，取代了作坊，工人们不得不通勤上班。事实上，大量人口因此从乡村迁入城镇。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> As well as manufacturing, there were new technologies in transport, contributing to the growth of consumerism.</div>
+                            <div class="cn-line">除了制造业，交通领域也出现了新技术，助推了消费主义的发展。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The horse-drawn stagecoaches and carts of the 18th century, which carried very few people and goods, and travelled slowly along poorly surfaced roads, were gradually replaced by the numerous canals that were constructed. These were particularly important for the transportation of goods.</div>
+                            <div class="cn-line">18 世纪的马车和货车载人载货量很小，还只能在路况糟糕的路上缓慢行驶，逐渐被大量修建的运河取代。运河对货物运输尤其重要。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The canals gradually fell out of use, though, as railways were developed, becoming the main way of moving goods and people from one end of the country to the other.</div>
+                            <div class="cn-line">不过，随着铁路的发展，运河逐渐被淘汰——铁路成了把货物和人员从国家一端运到另一端的主要方式。【though 转折：运河 → 铁路】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And</span> the goods they moved weren't just coal, iron, clothes, and so on – <span class="hl-conn">significantly</span>, they <span class="hl-swap">included</span> <span class="ans-highlight">newspapers [Q36]</span>, which meant that thousands of people were not only more knowledgeable about what was going on in the country, <span class="hl-conn">but</span> could also <span class="hl-swap">read about what was available in the shops</span>, and that encouraged them to buy more.</div>
+                            <div class="cn-line">而且它们运的不只是煤、铁、衣服等等——值得注意的是还包括<strong>报纸</strong>。这意味着成千上万的人不仅更了解国家大事，还能读到商店里有什么可买，这就鼓励他们买得更多。【Q36 → newspapers】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">So</span> faster forms of transport resulted in distribution becoming far more efficient – goods could now be sold all over the country, <span class="hl-conn">instead of</span> just in the <span class="ans-highlight">local [Q37]</span> market.</div>
+                            <div class="cn-line">于是更快的运输方式让货物分销效率大大提高——商品可以卖到全国各地，而不是只在<strong>本地</strong>市场。【Q37 → local】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The third main area that saw changes that contributed to consumerism was retailing.</div>
+                            <div class="cn-line">第三个推动消费主义变化的主要领域是零售业。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The number and quality of shops grew rapidly, and in particular, small shops suffered as customers flocked to the growing number of department stores – a form of retailing that was new in the 19th century.</div>
+                            <div class="cn-line">商店的数量和质量迅速提升；尤其是小商店受到冲击，因为顾客蜂拥涌向越来越多的百货商店——这是 19 世纪新兴的零售形式。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The entrepreneurs who opened these found new ways to stock them with goods, and to attract customers.</div>
+                            <div class="cn-line">开百货店的企业家们找到了进货和吸引顾客的新方法。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">For instance</span>, <span class="hl-swap">improved</span> <span class="ans-highlight">lighting [Q38]</span> inside <span class="hl-swap">greatly increased the visibility</span> of the goods for sale.</div>
+                            <div class="cn-line">比如，店内<strong>照明</strong>的改善大大提高了在售商品的可见度。【Q38 → lighting】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Another development</span> that made goods more <span class="hl-swap">visible from outside</span> resulted from the use of <span class="trap-highlight">plate glass</span>, <span class="hl-conn">which</span> made it possible for <span class="ans-highlight">windows [Q39]</span> to be <span class="hl-swap">much larger than previously</span>.</div>
+                            <div class="cn-line">另一项让商品从店外更显眼的发展源于平板玻璃的使用，它让<strong>橱窗</strong>可以做得比以前大得多。【Q39 → windows；plate glass 是材料干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> New ways of promoting goods were introduced, <span class="hl-conn">too</span>.</div>
+                            <div class="cn-line">推广商品的新方式也被引入了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Previously</span>, the focus had been on informing potential customers about the availability of goods; <span class="hl-conn">now</span> there was <span class="hl-swap">an explosion in</span> <span class="ans-highlight">advertising [Q40]</span> trying to <span class="hl-swap">persuade</span> people to go shopping.</div>
+                            <div class="cn-line">过去，重点只是告知潜在顾客有什么货；现在，<strong>广告</strong>出现了爆炸式增长，试图说服人们去购物。【Q40 → advertising；now 之后就是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Flanders claims that one of the great effects of the Industrial Revolution was that it created choice. All sorts of things that had previously been luxuries – from <span class="trap-highlight">sugar</span> to <span class="trap-highlight">cutlery</span> – became conveniences, and before long they'd turned into necessities: life without sugar or cutlery was unimaginable. Rather like mobile phones these days!</div>
+                            <div class="cn-line">弗兰德斯认为工业革命的重大影响之一是创造了选择。以前的各种奢侈品——从糖到餐具——都变成了便利品，很快又变成了必需品：没有糖和餐具的生活难以想象，就像今天的手机一样！【结尾举例区，无考题】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
     <footer>
-        <p>剑桥雅思 15 Test 4 听力 Part 1 核心考点切片系统 · 雅思听力磨耳朵强化工程</p>
+        <p>剑桥雅思 15 Test 4 听力 Part 1 + Part 4 核心考点切片系统 · 工业革命讲座五连错题专训 · 雅思听力磨耳朵强化工程</p>
     </footer>
 </div>
 
@@ -1583,15 +2405,29 @@
     const nowPlayingText = document.getElementById('now-playing-text');
     let isLooping = false;
 
+    // 关键修复：预览服务器不支持 HTTP Range 请求，直接用相对路径时进度条无法拖动定位。
+    // 把整段音频下载成 Blob 再用对象 URL 播放，拖动/点击跳转百分百生效。
+    const audioBlobCache = {};
     function playAudio(filename, title) {
         if (!mainAudio) return;
-        mainAudio.src = filename;
-        mainAudio.play().then(() => {
-            nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
-        }).catch(err => {
-            console.error("Playback failed:", err);
-            nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
-        });
+        const startPlay = (src) => {
+            mainAudio.src = src;
+            mainAudio.loop = isLooping;
+            mainAudio.play().then(() => {
+                nowPlayingText.innerHTML = `<span>▶ 正在播放: <strong>${title}</strong></span>`;
+            }).catch(err => {
+                console.error("Playback failed:", err);
+                nowPlayingText.innerHTML = `<span>⚠️ 播放失败: 请检查音频文件是否存在</span>`;
+            });
+        };
+        if (audioBlobCache[filename]) { startPlay(audioBlobCache[filename]); return; }
+        fetch(filename).then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.blob();
+        }).then(b => {
+            audioBlobCache[filename] = URL.createObjectURL(b);
+            startPlay(audioBlobCache[filename]);
+        }).catch(() => startPlay(filename));
     }
 
     function toggleLoop(btn) {
@@ -1625,10 +2461,10 @@
 
         const cards = document.querySelectorAll('.slice-card');
         cards.forEach(card => {
-            const cardCat = card.getAttribute('data-category');
+            const cardCat = (card.getAttribute('data-category') || '').split(/\s+/);
             if (category === 'all') {
                 card.style.display = 'block';
-            } else if (cardCat === category) {
+            } else if (cardCat.includes(category)) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';

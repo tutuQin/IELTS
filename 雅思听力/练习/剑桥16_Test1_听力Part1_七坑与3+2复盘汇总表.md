@@ -1,4 +1,4 @@
-# 📊 剑桥雅思 16 Test 1 听力 Part 1 复盘表（基于七坑表 + 3+2/9大陷阱体系）
+# 📊 剑桥雅思 16 Test 1 听力 Part 1 + Part 4 复盘表（基于七坑表 + 3+2/9大陷阱体系）
 
 > 🎧 **音频切片点播台直达**：[C16T1_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/C16T1_错题切片点播台.html) ｜ 📂 [切片总目录](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/切片/index.html) ｜ 📊 [剑16 Test 2 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥16_Test2_听力Part1_七坑与3+2复盘汇总表.md) ｜ 📊 [剑15 Test 4 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test4_听力Part1_七坑与3+2复盘汇总表.md)
 >
@@ -136,3 +136,157 @@
    听到卷面已给的原词时，严禁让大脑进入“庆祝模式”，笔尖必须立刻下移半厘米，准备迎接紧随其后的真实答案。
 3. **星期名词复数尾音神经开关**：
    在日常做题中，只要答案是周一到周日（Mondays, Tuesdays...），立刻在草稿纸上打个问号检查：“这是每周固定发生吗？末尾加 s 了没有？”。
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）Stoicism 斯多葛哲学讲座
+
+*卷面要求：Write **ONE WORD ONLY** for each answer.*  
+*本次战绩：**3 / 10**（答对：Q31, Q34, Q35；错题：Q32, Q33, Q36, Q37, Q38, Q39, Q40）*  
+*🎧 配套切片：[C16T1 点播台 · Part 4 区](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/C16T1_错题切片点播台.html)*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | practical | practical | ✓ | **⑤改写（词性转换 appeal⇄appealing）**<br>【**T6 词性**】<br>(`P3改写 / A1原词`) | 原文: *"Specifically, I am referring to Stoicism, which, in my opinion, is the most practical of all philosophies and therefore the most appealing."*<br>(卷面: *Stoicism is still relevant today because of its [ 31 ] appeal.*) | **词性转换一步穿越（✓）**：卷面 *appeal*（名词，吸引力）在录音里变成 *appealing*（形容词，吸引人的）——`appeal ⇄ appealing`。定位词 *Stoicism* 原词落在句首，*the most practical ... and therefore the most appealing* 中 *appealing* 已被卷面占用，只有 *practical* 能填。**口诀：空前 its、空后 appeal，答案必是修饰 appeal 的形容词。** | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/31_Q31_Stoicism最实用practical与appealing干扰排除.mp3) |
+| **Q32** | meditation | publication | ✗ | **③句意** + **④逻辑（否定后置）**<br>【**T2 让步从句 + 省略否定**】<br>(`P3改写 / A2改写`) | 原文: *"Amazingly, we still have access to these ideas, despite the fact that the most famous Stoics never wrote anything down for publication. Cato definitely didn't. Marcus Aurelius never intended his Meditations to be anything but personal."*<br>(卷面: *The Stoics' ideas are surprisingly well known, despite not being intended for [ 32 ]*) | **【整句让步改写失守 + did n't 误判为新信息】**：<br>1. **句子结构听断**：*despite the fact that ... never wrote anything down for publication*（尽管最著名的斯多葛者从未写下任何东西用于出版）——*despite the fact that* 引导的让步从句一长，句意没接上，答案 *publication* 在从句**末尾**才出现。<br>2. **否定后置误判**：*Cato definitely didn't* 是省略否定句，*didn't* 替代的正是 *wrote anything down for publication*——它是**前一句的复读强调**，不是新信息。你把它当成"答案已过"的信号，转身往后找。<br>3. **书名抢答**：下一句 *Marcus Aurelius never intended his **Meditations** to be anything but personal*（从未打算让《沉思录》成为私人以外的任何东西）里的书名 *Meditations* 被你写成 meditation——书名、人名永远不是填空答案。<br>4. **修复**：听到 *despite / although / in spite of* 立即预判"答案在从句尾"；听到 *didn't / don't / never* 这类省略否定，笔尖回看前句而不是往前冲。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/32_Q32_从未出版publication与Meditations冥想陷阱.mp3) |
+| **Q33** | —（未定位） | choices | ✗ | **③句意** + **⑥审题（定位错）**<br>【**T2 转折 but 后出答案**】<br>(`P3改写 / A2改写`) | 原文: *"In the words of Epictetus: 'external events I cannot control, but the choices I make with regard to them, I do control'."*<br>(卷面: *Epictetus said that external events cannot be controlled but the [ 33 ] people make in response can be controlled.*) | **【长铺垫耗光注意力 + but 后答案没接住】**：<br>1. **铺垫区过长**：前面 *destructive emotions, like anger and jealousy, are under our conscious control*（愤怒、嫉妒等破坏性情绪都在我们有意识的控制之下）连说两句，*conscious* 一出你以为答案区已过——但 *conscious* 只是铺垫词，卷面根本没这个空。<br>2. **but 后即答案**：真正的答案句是 Epictetus 名言 *but the **choices** I make with regard to them, I do control*——题干印着 but，录音也念 but，*but* 后第一个名词就是答案。<br>3. **改写没对上**：*make in response*（作为回应做出）⇄ *make with regard to them*（针对它们做出）；*cannot be controlled*（被动）⇄ *I cannot control*（主动）。<br>4. **修复**：题干出现 but / however，录音到 but 时立刻提笔，but 前的所有名词都只是布景。 | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/33_Q33_可控制的choices选择与conscious抢跑.mp3) |
+| **Q34** | negative | negative | ✓ | **⑤改写（三连替换）**<br>【**T3 同义替换**】<br>(`P3改写 / A1原词`) | 原文: *"Nassim Nicholas Taleb defines a Stoic as someone who has a different perspective on experiences which most of us would see as wholly negative."*<br>(卷面: *A Stoic is someone who has a different view on experiences which others would consider as [ 34 ]*) | **三连替换全部穿越（✓）**：*view ⇄ perspective*（看法 ⇄ 视角）、*others ⇄ most of us*（别人 ⇄ 我们大多数人）、*consider as ⇄ see as*（视为 ⇄ 看作）。人名 Taleb + *defines ... as* 定义句句型锁定答案区，句尾 *wholly*（全然地）后的评价词 *negative* 原词落笔。后面的 *transforms fear into caution, pain into transformation...* 四连排比只是展开，没有空。 | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/34_Q34_全然消极wholly_negative与四连转化排比.mp3) |
+| **Q35** | play | play | ✓ | **⑤改写（三连替换）**<br>【**T3 同义替换**】<br>(`P3改写 / A1原词`) | 原文: *"George Washington was introduced to Stoicism by his neighbours at age seventeen, and later, put on a play based on the life of Cato to inspire his men."*<br>(卷面: *George Washington organised a [ 35 ] about Cato to motivate his men.*) | **三连替换稳稳接住（✓）**：*organised ⇄ put on*（组织 ⇄ 上演）、*about ⇄ based on the life of*（关于 ⇄ 以…生平为蓝本）、*motivate ⇄ inspire*（激励 ⇄ 鼓舞）。双人名 George Washington + Cato 落地，*and later* 时间推进后第一个可数名词 *play* 就是答案。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/35_Q35_华盛顿上演play戏剧激励士兵.mp3) |
+| **Q36** | school | capitalism | ✗ | **②生词** + **⑦心态（自我怀疑）**<br>【**T3 难词不敢写 + 尾音拆分**】<br>(`P1原词 / A1原词`) | 原文: *"The economist Adam Smith's theories on capitalism were significantly influenced by the Stoicism that he studied as a schoolboy, under a teacher who had translated Marcus Aurelius' works."*<br>(卷面: *Adam Smith's ideas on [ 36 ] were influenced by Stoicism.*) | **【听对了却不敢写：难词自我怀疑 + schoolboy 尾音抢答】**：<br>1. **心态崩在第一秒**：*capitalism* 你已准确听出，却判断"听力不会考这么难的词"，于是放弃——剑桥恰恰专考这种"看着难、拼得出"的词（对比 C15T3 的 strigil）。<br>2. **尾音拆词**：后面 *studied as a **schoolboy***（他学生时代研习）里的 schoolboy 是一个词（男学生），你只抓前半截写成 school，并把时间状语当成了答案。<br>3. **改写对**：*ideas ⇄ theories*（思想 ⇄ 理论）；*were influenced by* 原词照搬。<br>4. **修复**：听到原词且语法契合（*ideas on ____* 要名词），**先落笔再怀疑**；*a + 名词* 是一个整体，别把尾音切成另一个词。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/36_Q36_亚当斯密capitalism资本主义与school误写.mp3) |
+| **Q37** | thinking | depression | ✗ | **③句意** + **⑥审题（连题串行）**<br>【**T8 对象错位**】<br>(`P3改写 / A1原词`) | 原文: *"Stoicism had a profound influence on Albert Ellis, who invented Cognitive Behaviour Therapy, which is used to help people manage their problems by changing the way that they think and behave. It's most commonly used to treat depression."*<br>(卷面: *CBT – the treatment for [ 37 ] is based on ideas from Stoicism*) | **【Q37/Q38 挤在两句话里 → 串题抢答】**：<br>1. **答案对象错位**：卷面问 *treatment for ____*（治疗什么病），答案只能是疾病名词。你听到下一句 *create our faulty thinking* 的 *thinking*，把"要被消除的错误思维"当成了被治疗对象。<br>2. **Q37 答案其实一句就到位**：*It's most commonly used to treat **depression***（最常被用来治疗抑郁症），*treatment for ⇄ used to treat*，*treat* 后第一个名词就是答案。<br>3. **同一段里两题的分工**：Q37 = 治疗什么（depression）；Q38 = 依靠什么（logic）。前一句 *think and behave* 只是描述"改变思维与行为"，不是答案。<br>4. **修复**：连续两题共栖一段时，先用卷面空格前的**词性/语义**锁定"这题要疾病、下题要手段"，听到 treat 写病名，听到 instead 写手段，绝不混用。 | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/37_Q37_治疗depression抑郁症与thinking误写.mp3) |
+| **Q38** | behave | logic | ✗ | **③句意** + **⑥审题（并列名词陷阱）**<br>【**T9 并列 + T6 词性**】<br>(`P3改写 / A1原词`) | 原文: *"The idea is that we can take control of our lives by challenging the irrational beliefs that create our faulty thinking, symptoms and behaviours by using logic instead."*<br>(卷面: *people learn to base their thinking on [ 38 ]*) | **【三个并列名词全是陷阱，答案在 instead 前】**：<br>1. **并列堆抓错**：*faulty **thinking**, **symptoms** and **behaviours*** 三个词是定语从句里"要被挑战消除的东西"，你只听到 *symptoms and behaviours* 就写了 behave——而且还把名词写成了动词。<br>2. **答案位置**：真正答案是 *by using **logic** instead*（改用逻辑），*instead*（取而代之）提示"新手段登场"，答案紧贴其前。<br>3. **改写对**：*base their thinking on ____*（把思考建立在____上）⇄ *by using ____ instead*（改用____）；*challenging the irrational beliefs*（挑战非理性信念）⇄ *faulty thinking*（错误思维）。<br>4. **修复**：A, B and C 并列名词堆整体跳过；空前要名词，动词原形 behave 先排除。 | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/38_Q38_基于logic逻辑思考与behaviours误写.mp3) |
+| **Q39** | setbacks | opportunity | ✗ | **③句意** + **⑥审题（前置抢写）**<br>【**T2 因果 because 后出答案**】<br>(`P3改写 / A1原词`) | 原文: *"Stoic principles can build the resilience and state of mind required to overcome setbacks, because Stoics teach turning obstacles into opportunity."*<br>(卷面: *In business, people benefit from Stoicism by identifying obstacles as [ 39 ]*) | **【because 前的铺垫词抢写】**：<br>1. **同义区误当答案区**：*build the resilience and state of mind required to **overcome setbacks**（培养克服挫折所需的韧性与心态）正是卷面 *identify obstacles*（识别障碍）这一段的意思，*setbacks* 是铺垫，不是答案。<br>2. **because 后才是答案**：*because Stoics teach **turning obstacles into opportunity***（因为斯多葛教导把障碍转化为机遇）——*identify ... as ⇄ turn ... into*（看作 ⇄ 变成）。<br>3. **结构提示**：卷面 *by identifying obstacles as ____* 是"把障碍当作什么"，录音给的是"把障碍变成什么"，一动一静指向同一个空。<br>4. **修复**：先听到的名词若在 because / so 之前，一律视为铺垫；因果词后的动名词结构（turning X into Y）里，Y 就是答案。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/39_Q39_障碍变机会opportunity与setbacks抢跑.mp3) |
+| **Q40** | brilliant | practice | ✗ | **④结构（答案倒置）** + **⑥审题（词性）**<br>【**T6 形容词陷阱 + 答案倒置**】<br>(`P3改写 / A1原词`) | 原文: *"...thanks to its brilliant insights into how to lead a good life. ... This is not as easy as it sounds, and will require considerable practice – it can take a lifetime to master."*<br>(卷面: *It requires a lot of [ 40 ] but Stoicism can help people to lead a good life.*) | **【定位成功就放松 → 答案在 15 秒后才来】**：<br>1. **定位≠答案区**：你抓住 *brilliant insights into how to **lead a good life***（对如何过好生活的洞见）就以为答案已过，随手填了形容词 *brilliant*——而卷面 `a lot of ____` 要的是名词。<br>2. **答案倒置**：卷面"需要大量____"其实对应后面的 *will **require** **considerable practice***（将需要大量练习）——*a lot of ⇄ considerable*，*require* 原词复现。<br>3. **柔性转折**：*This is not as easy as it sounds*（这知易行难）是 *but* 的口语化表达，转折后紧跟答案句。<br>4. **修复**：**定位词出现 ≠ 答案已过**；填完立刻做词性质检（形容词不能在 a lot of 后面）；*considerable / a great deal of / significant* 都是 *a lot of* 的高频替换。 | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/40_Q40_需要大量practice练习与brilliant前置陷阱.mp3) |
+
+---
+
+### Part 4 七连错题的三条病根（Q32 / Q33 / Q36 / Q37 / Q38 / Q39 / Q40）
+
+```text
+               ┌── Q32: 听到 Cato definitely didn't ──► 误判「否定新信息，答案已过」──► 往后找写成 meditation ──► 【despite 让步句尾出答案】
+               │
+               ├── Q33: 听到 conscious（铺垫）──► 以为答案区已过 ──► but the choices... 没接住 ──► 【but 后即答案】
+               │
+Part 4 崩盘链   ├── Q36: 听对 capitalism ──► 「这么难不会考」自我怀疑 ──► 抓 schoolboy 写成 school ──► 【难词不敢写】
+               │
+               ├── Q37/Q38: 两题挤两句 ──► treat 后写成 thinking（下题的词）──► symptoms/behaviours 抓成 behave ──► 【连题串行 + 并列陷阱】
+               │
+               ├── Q39: 听到 overcome setbacks 抢写 ──► 漏 because 后的 opportunity ──► 【because 前是铺垫】
+               │
+               └── Q40: 定位到 lead a good life ──► 以为答案已过，填 brilliant ──► considerable practice 在 15 秒后 ──► 【答案倒置】
+```
+
+#### 病根 1：否定后置与让步从句的「整句失守」（Q32 / Q33）
+
+- **Q32**：`despite the fact that the most famous Stoics never wrote anything down for publication.` —— 让步从句长、答案在从句**末尾**；紧接的 `Cato definitely didn't.` 是省略否定（= 没有写下来出版），属于**前句复读**，听到它应该回看前句，而不是换台。
+- **Q33**：`external events I cannot control, but the choices I make with regard to them, I do control.` —— 题干已经印了 but，录音也一定念 but；but 前的 *conscious / control* 都是布景。
+- **铁律**：① 让步词（despite / although / in spite of）后**先等从句尾**；② 省略否定（didn't / don't / never）是**前句回声**；③ but / however / yet 一出口，笔尖就位，答案在其后 3 秒内。
+
+#### 病根 2：难词自我怀疑 + 连题串行（Q36 / Q37 / Q38）
+
+- **Q36**：*capitalism* 听对不敢写，反而被 *schoolboy* 的尾音带成 school —— **听对就写，语法契合就是证据**；`a + 名词` 是一个词，别切尾音。
+- **Q37 / Q38**：`...by changing the way that they think and behave. It's most commonly used to treat depression.` + `...by using logic instead.` —— 两题答案挤在相邻两句里：**treat 后写病名（depression），instead 前写手段（logic）**；`thinking / symptoms / behaviours` 三个并列词属于 Q38 句的"宾语区"，不是任何一题的答案。
+- **铁律**：连续两题的答案若在同一段，先用**空前的语义类型**（疾病？手段？领域？）给两题分工，再听录音对号入座。
+
+#### 病根 3：铺垫词抢写与答案倒置（Q39 / Q40）
+
+- **Q39**：`required to overcome setbacks, because Stoics teach turning obstacles into opportunity.` —— *overcome setbacks* 是 *identify obstacles* 的同义铺垫，**because 后**的 *turning obstacles into opportunity* 才是答案。
+- **Q40**：`thanks to its brilliant insights into how to lead a good life ... will require considerable practice.` —— 卷面"需要大量____"被录音**倒装**到后文，*brilliant* 是形容词陷阱，*a lot of ⇄ considerable* 才是替换对。
+- **铁律**：① **定位词出现 ≠ 答案已过**，空没落笔就继续等；② 填完立刻做词性质检；③ 因果/柔性转折（because / so / This is not as easy as it sounds）之后才是答案句。
+
+---
+
+### Part 4 改写对沉淀（务必背下来）
+
+```text
+【Q31】its ____ appeal                  <==>  the most practical ... and therefore the most appealing
+【Q32】surprisingly well known          <==>  Amazingly, we still have access to these ideas
+       not being intended for ____      <==>  never wrote anything down for publication
+       （definitely didn't = 前句省略否定复读，非新信息）
+【Q33】the ____ people make in response <==>  the choices I make with regard to them
+       cannot be controlled             <==>  I cannot control
+【Q34】different view on experiences    <==>  different perspective on experiences
+       others would consider as         <==>  most of us would see as
+【Q35】organised a ____ about Cato       <==>  put on a play based on the life of Cato
+       to motivate his men              <==>  to inspire his men
+【Q36】Adam Smith's ideas on ____        <==>  Adam Smith's theories on capitalism
+       （schoolboy = 学生时代，时间状语，非答案）
+【Q37】the treatment for ____            <==>  used to treat depression
+       based on ideas from Stoicism     <==>  had a profound influence on Albert Ellis, who invented CBT
+【Q38】base their thinking on ____       <==>  by using logic instead
+       （faulty thinking / symptoms / behaviours = 要消除的对象，非答案）
+【Q39】people benefit from Stoicism      <==>  build the resilience and state of mind
+       identifying obstacles as ____     <==>  turning obstacles into opportunity
+【Q40】It requires a lot of ____          <==>  will require considerable practice
+       （brilliant = 形容词前置陷阱，a lot of 后要名词）
+```
+
+---
+
+### 🎯 针对剑16 Test 1 Part 4 靶向精练四步法
+
+#### Step 1：精读（拆让步句与转折结构）· 5 分钟
+
+把以下 5 句抄下来，标出「让步词 / 转折词 / 因果词」以及它们后面紧跟的答案词：
+
+1. **Q32 让步 + 省略否定**：`despite the fact that the most famous Stoics never wrote anything down for PUBLICATION. Cato definitely didn't.`
+2. **Q33 but 后出答案**：`external events I cannot control, BUT the CHOICES I make with regard to them, I do control.`
+3. **Q37/Q38 连题分工**：`It's most commonly used to TREAT DEPRESSION.` → `...by using LOGIC instead.`
+4. **Q39 because 后出答案**：`required to overcome setbacks, BECAUSE Stoics teach turning obstacles into OPPORTUNITY.`
+5. **Q40 答案倒置**：`...how to LEAD A GOOD LIFE ... will require CONSIDERABLE PRACTICE.`
+
+#### Step 2：朗读（难词 + 连词重音）· 5 分钟
+
+出声朗读以下考点句各 3 遍，特别注意连词重读与难词拼读：
+
+- `the most PRACTICAL of all philosophies` → /ˈpræktɪkl/
+- `never wrote anything down for PUBLICATION` → /ˌpʌblɪˈkeɪʃn/（不是 public）
+- `the CHOICES I make with regard to them, I do control` → /ˈtʃɔɪsɪz/（复数）
+- `theories on CAPITALISM` → /ˈkæpɪtəlɪzəm/（c-a-p-i-t-a-l-i-s-m，敢写！）
+- `used to treat DEPRESSION` → /dɪˈpreʃn/（双 s，不是 depresion）
+- `turning obstacles into OPPORTUNITY` → /ˌɒpəˈtjuːnəti/（单数，别加 s）
+- `will require considerable PRACTICE` → /ˈpræktɪs/（名词拼 practice）
+
+#### Step 3：盲听（配合 C16T1 点播台 Part 4 区）· 10 分钟
+
+打开 [C16T1_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T1_错题音频切片/C16T1_错题切片点播台.html)，切到「Part 4 讲座切片」：
+- **第一遍盲听**：只看卷面题干（收起双语对照），在 Q32 / Q33 / Q39 三题上专门练「连词就位」——听到 *despite / but / because* 手指先放到答题线上。
+- **第二遍对照**：展开「📜 查看本切片完整听力原文与逐句翻译」，逐句核对琥珀色（替换处）与粉色（连词），把没听出的改写念三遍。
+- **第三遍跟读**：点「🎙️ 录音跟读」，重点跟 Q40 那段 *This is not as easy as it sounds, and will require considerable practice* 的语流。
+
+#### Step 4：沉淀错词与改写对 · 2 分钟
+
+```text
+【Part 4 改写对沉淀】
+1. not intended for      <==>  never wrote anything down for publication
+2. make in response      <==>  make with regard to them
+3. different view / consider as <==> different perspective / see as
+4. organised a ____ about Cato  <==> put on a play based on the life of Cato（to motivate ⇄ to inspire）
+5. ideas on ____         <==>  theories on capitalism
+6. treatment for ____    <==>  used to treat depression
+7. base their thinking on ____  <==> by using logic instead
+8. identifying obstacles as ____ <==> turning obstacles into opportunity
+9. a lot of ____         <==>  considerable practice
+
+【高频拼写严禁再错】
+1. practical（不是 practicle）
+2. publication（不是 public 或 publication→publcation）
+3. choices（复数，ch-o-i-c-e-s）
+4. negative（n-e-g-a-t-i-v-e）
+5. capitalism（c-a-p-i-t-a-l-i-s-m）
+6. depression（双 s：d-e-p-r-e-s-s-i-o-n）
+7. logic / opportunity（单数） / practice（名词拼 -ice）
+```
+
+---
+
+## 🏁 课外基本功专项突破建议（Part 4 增补）
+
+1. **「连词就位」肌肉记忆**：
+   Part 4 是独白，没有对话换气，**连词就是唯一的路标**。把 *but / because / despite / instead / and later / Specifically* 做成一张卡片，每听到一个就轻敲桌面一次，把"敲击"和"提笔"绑成条件反射。
+2. **「难词敢写」训练**：
+   把剑桥 15/16 里出现过的"看起来超纲"的答案词（strigil / capitalism / biodiversity / publication）做成默写清单，每天默 10 个——**你怕的不是拼不出，是不敢写**。
+3. **「定位≠答案」的耐心训练**：
+   凡是卷面空格在句首、录音答案在句尾的题（Q40 型），刻意练"听到定位词后继续等 15 秒"；用点播台的 1.2x 变速练"提前落笔 + 事后校验"。
+4. **「一题一段」的边界感**：
+   连续两题共栖一段（Q37/Q38 型）时，先给两题贴标签（这题要"病名"、下题要"手段"），听到第一个符合标签的名词立刻落笔，其余并列名词一律划掉。

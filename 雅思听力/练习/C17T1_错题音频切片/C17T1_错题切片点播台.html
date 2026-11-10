@@ -553,6 +553,28 @@
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
         }
+
+        /* ===== Part 4 五色标注体系 ===== */
+        .hl-loc { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); font-weight: 700; padding: 0 2px; }
+        .hl-swap { background: rgba(251, 191, 36, 0.16); color: var(--accent-amber); padding: 1px 5px; border-radius: 4px; border-bottom: 2px dashed var(--accent-amber); font-weight: 600; }
+        .hl-conn { color: #f472b6; font-weight: 700; background: rgba(244, 114, 182, 0.14); padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #f472b6; }
+        .hl-ans { color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .hl-trap { color: #f87171; font-weight: 700; text-decoration: line-through; background: rgba(248, 113, 113, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .cn-note { display: block; margin: 6px 0 0; font-size: .84rem; line-height: 1.7; color: #fbbf24; background: rgba(251, 191, 36, .08); border-left: 3px solid rgba(251, 191, 36, .55); padding: 4px 9px; border-radius: 4px; }
+        .dialog-turn { padding: 8px 0 8px 12px; border-left: 2px solid rgba(255, 255, 255, .08); margin-bottom: 6px; }
+        .en-line { font-size: .95rem; line-height: 1.95; color: var(--text-main); }
+        .cn-line { font-size: .88rem; line-height: 1.85; color: var(--text-muted); margin-top: 6px; }
+        .speaker-tag { display: inline-block; font-size: .7rem; letter-spacing: .05em; padding: 1px 7px; border-radius: 4px; margin-right: 8px; vertical-align: 1px; }
+        .spk-man { background: rgba(56, 189, 248, .16); color: var(--accent-blue); }
+        .spk-woman { background: rgba(244, 114, 182, .16); color: #f472b6; }
+        .divider-card { border-left: 5px solid var(--accent-purple); background: rgba(192, 132, 252, .08); }
+        .divider-card h2 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--accent-purple); }
+        .divider-card p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.7; }
+        .legend-card { border-left: 5px solid var(--accent-blue); background: rgba(56, 189, 248, .07); }
+        .legend-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .legend-row > span { font-size: .84rem; }
+        .legend-row .hl-trap { text-decoration: none; }
+        .blank-answer { display: inline-block; min-width: 74px; text-align: center; border-bottom: 1.5px solid var(--accent-green); color: var(--accent-green); font-weight: 700; padding: 0 6px; }
     </style>
 </head>
 <body>
@@ -560,13 +582,13 @@
 <div class="container">
     <div class="nav-back-bar">
         <a href="../切片/index.html" class="nav-link">📂 返回切片总目录</a>
-        <a href="../剑桥17_Test1_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 查看本套 Part 1 复盘诊断表</a>
+        <a href="../剑桥17_Test1_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 查看本套 Part 1 + Part 4 复盘诊断表</a>
         <a href="../C16T4_错题音频切片/C16T4_错题切片点播台.html" class="nav-link">⏮️ 剑16 T4 切片点播台</a>
     </div>
 
     <header>
-        <h1>剑桥雅思 17 Test 1 Part 1</h1>
-        <p>Buckworth Conservation Group 环保志愿者组织咨询 · 错题原声切片与影子跟读点播台</p>
+        <h1>剑桥雅思 17 Test 1 Part 1 + Part 4</h1>
+        <p>Part 1 Buckworth Conservation Group 环保志愿者咨询 · Part 4 Labyrinths 迷径讲座 · 定位词 / 逻辑信号 / 替换改写五色标注</p>
     </header>
 
     <!-- Sticky Player Bar -->
@@ -597,12 +619,16 @@
 
     <!-- Tips Panel -->
     <div class="tips-panel">
-        <div class="tips-title">💡 4步靶向精炼 SOP 实操指引（考点切片科学提分）</div>
+        <div class="tips-title">💡 8 步靶向精练指南（Part 1 四步通用 + Part 4 四步专项）</div>
         <ul class="tips-list">
             <li><strong>Step 1 展开对照</strong>：点击「展开官方中英对照」，看清绿色答案词与红色干扰词。</li>
             <li><strong>Step 2 出声朗读</strong>：出声大声朗读答案句 3 遍，打通发音与口腔肌肉记忆。</li>
             <li><strong>Step 3 闭眼盲听</strong>：合上对照折叠框，单曲播放切片，验证能否在瞬间本能抓出答案。</li>
             <li><strong>Step 4 影子录音</strong>：点击「🎙️ 录音跟读」录下自己的发音，回听与原声比对，揪出吞音卡壳！</li>
+            <li><strong>Step 5 先词性、后词义（Part 4 Q32/Q38/Q40）：</strong>逻辑填空的答案几乎都是名词。<em>A type of ___</em> 要名词（puzzle）；<em>a person's ___ rate</em> 要名词（breathing）；<em>experience less ___</em> 要名词（anxiety）。听到词性不对的词，立刻丢掉。</li>
+            <li><strong>Step 6 盯住 and / but / so 三个门铃（Part 4 Q34/Q38/Q40）：</strong>Q40 的 anxiety 就在 <em>calming, relaxation, and relief from ___</em> 的 and 之后；Q34 的 meditation 就在 <em>and prayer</em> 之前。并列结构里，答案常是并列项的最后一项。</li>
+            <li><strong>Step 7 答案在专有名词之前（Part 4 Q40）：</strong>你听到 Alzheimer's patients 才反应过来，但 anxiety 在它前面三个词——<strong>例证句的答案永远在例子名之前</strong>，先抓结论词，再等专有名词落地。</li>
+            <li><strong>Step 8 一句一题、绝不回脑（Part 4 Q39）：</strong>38 纠结时，39 的 paper 已经念完。军规：录音进入下一句，笔尖强制下移，上一题写多少算多少。</li>
         </ul>
     </div>
 
@@ -619,10 +645,11 @@
 
     <!-- Filter Bar -->
     <div class="filter-bar">
-        <div class="filter-chip active" onclick="filterCards('all', this)">全部切片 (11)</div>
-        <div class="filter-chip" onclick="filterCards('wrong', this)">错题与陷阱剖析 (6)</div>
-        <div class="filter-chip" onclick="filterCards('correct', this)">稳健得分点 (4)</div>
-        <div class="filter-chip" onclick="filterCards('full', this)">Part 1 完整音频 (1)</div>
+        <div class="filter-chip active" onclick="filterCards('all', this)">全部切片与完整录音 (24)</div>
+        <div class="filter-chip" onclick="filterCards('wrong', this)">错题 (10)</div>
+        <div class="filter-chip" onclick="filterCards('correct', this)">答对 (10)</div>
+        <div class="filter-chip" onclick="filterCards('part4', this)">🔻 Part 4 讲座切片 (13)</div>
+        <div class="filter-chip" onclick="filterCards('full', this)">🎧 完整录音 (2)</div>
     </div>
 
     <!-- Cards Container -->
@@ -1362,10 +1389,757 @@
             </details>
         </div>
 
+        <!-- Part 4 Divider -->
+        <div class="slice-card divider-card" id="card-p4-divider" data-category="part4">
+            <h2>🔻 Part 4 · Labyrinths 迷径讲座（Q31 - Q40）</h2>
+            <p>人类学学生做的一场关于迷径（labyrinth）的课堂演示：定义 → 与迷宫（maze）的区别 → 历史上的螺旋图案 → 现代疗愈用途。<strong>本套战绩 6 / 10</strong>（对 Q31、Q33、Q34、Q35、Q36、Q37；错 Q32、Q38、Q39、Q40）。<br>
+            本篇 4 道错题指向两类病根：<strong>①并列/清单里抓错项</strong>（Q32 pattern、Q38 slower 没换算成 rate）；<strong>②节奏被上一题拖住</strong>（Q39 卡在 38、Q40 等专有名词才反应）。</p>
+        </div>
+
+        <!-- Part 4 Legend -->
+        <div class="slice-card legend-card" id="card-p4-legend" data-category="part4">
+            <div class="q-badge-wrap"><span class="q-badge" style="color:var(--accent-blue);">🎨 五色标注说明（Part 4 全部卡片通用）</span></div>
+            <div class="legend-row">
+                <span class="hl-loc">■ 定位词：卷面与原文对得上的锚点</span>
+                <span class="hl-swap">■ 题干 ⇄ 原文的替换改写</span>
+                <span class="hl-conn">■ but / and / so / before 等逻辑信号词</span>
+                <span class="hl-ans">■ 正确答案</span>
+                <span class="hl-trap">■ 干扰项（听到会写错的那个词）</span>
+            </div>
+            <p style="margin-top:10px; color:var(--text-muted); font-size:.86rem; line-height:1.8;">读法：<strong>蓝</strong>告诉你"句子在哪"，<strong>粉</strong>告诉你"什么时候落笔"，<strong>黄</strong>告诉你"卷面这个词在原文长什么样"，<strong>绿</strong>是答案，<strong>红</strong>是你最容易误抓的词。</p>
+        </div>
+
+        <!-- CARD Q31 (Part 4) -->
+        <div class="slice-card" id="card-q31" data-category="correct part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q31 · 迷宫是 puzzle 谜题</span>
+                    <span class="status-tag status-correct">✓ 答对</span>
+                    <span class="tag-pill">③句意 + ⑤改写</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">a type of ⇄ a kind of</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('31_Q31_迷宫是puzzle谜题与pattern干扰.mp3', 'PQ31: 迷宫是 puzzle 谜题')">▶ 播放切片 (17s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Labyrinths compared with mazes · <span class="hl-loc">Maze</span> are <span class="hl-swap">a type of</span> <span class="blank-answer">31</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">puzzle</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">puzzle ✓</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q31" onclick="toggleRecord('q31')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q31" onclick="playUserRecord('q31')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q31">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In modern times</span>, the word labyrinth has taken on a different meaning <span class="hl-conn">and</span> is often used as a <span class="hl-swap">synonym</span> for <span class="hl-loc">a maze</span>.</div>
+                            <div class="cn-line">在现代，labyrinth 一词有了不同含义，常被当作 maze 的同义词。【Q31 定位：a maze 首次出现；synonym = 同义词，等于宣布"下面要比较这两个词"】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A maze is quite different <span class="hl-conn">as</span> it is a <span class="hl-swap">kind of</span> <span class="hl-ans">puzzle [Q31]</span> with an <span class="hl-loc">intricate network of paths</span>.</div>
+                            <div class="cn-line">迷宫则很不一样，它是一种谜题，路径构成复杂的网络。【Q31 → puzzle；卷面 a type of ⇄ 原文 a kind of（种类 ⇄ 一种）；intricate network 只是补充说明，不是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Mazes became <span class="hl-loc">fashionable</span> in the <span class="hl-loc">15th and 16th centuries</span> in Europe and can still be found in the gardens of great houses and palaces.</div>
+                            <div class="cn-line">迷宫在 15、16 世纪的欧洲流行起来，至今仍能在豪宅与宫殿的花园里见到。【年代 + 地点信息，本篇未设题；听到具体年代不要急着落笔】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面的 <em>Maze</em> 在上一句就以 <em>a synonym for <span class="hl-loc">a maze</span></em> 出现，答案在 <em>a kind of ___</em> 的介词后——名词位置，语义是"迷宫属于哪一类东西"。<br>
+2. <strong>改写对照</strong>：a type of ⇄ a kind of（种类 ⇄ 一种）；<span class="hl-swap">kind of</span> 是本题唯一的替换点，两个词都是"种类"，替换幅度小，但空格刚好压在它后面。<br>
+3. <strong>信号词</strong>：<span class="hl-conn">In modern times</span>（时间跳转，开始讲词义变化）+ <span class="hl-conn">as</span>（原因：因为它是 a kind of puzzle，所以"很不一样"）。<br>
+4. <strong>为什么对</strong>：你没有把前面 <em>synonym / different meaning</em> 当成答案，也没有被 <em>intricate network of paths</em> 这类描述性短语带走，直接锁定了 <em>a kind of</em> 后面的名词。这类"下定义"的空，答案永远是系动词/kind of/type of 后面的名词。
+            </div>
+        </div>
+
+        <!-- CARD Q32 (Part 4) -->
+        <div class="slice-card" id="card-q32" data-category="wrong part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q32 · 走迷宫需要 logic 逻辑</span>
+                    <span class="status-tag status-wrong">✗ 答错</span>
+                    <span class="tag-pill">③句意 + ⑦词性</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">pattern 抢答：它是 logic 的宾语</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('32_Q32_走迷宫需要logic逻辑与pattern干扰.mp3', 'PQ32: 走迷宫需要 logic 逻辑')">▶ 播放切片 (15s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> <span class="blank-answer">32</span> is needed to <span class="hl-swap">navigate through</span> a maze.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">logic</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">pattern</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q32" onclick="toggleRecord('q32')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q32" onclick="playUserRecord('q32')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q32">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Entering a maze usually involves <span class="hl-swap">getting lost</span> a few times <span class="hl-conn">before</span> using <span class="hl-ans">logic [Q32]</span> to work out the <span class="hl-trap">pattern</span> <span class="hl-conn">and</span> find <span class="hl-loc">your way</span> to the centre and then out again.</div>
+                            <div class="cn-line">进入迷宫通常会先迷路几次，然后才用逻辑找出规律，找到通往中心的路再走出来。【Q32 → logic；before 之后是"必须先具备的东西"；pattern 只是 logic 的宾语，不是答案（你写的就是这个词）；navigate through ⇄ find your way（穿行 ⇄ 找到路）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> There are lots of <span class="hl-loc">dead ends</span> and paths which lead you back to where you started.</div>
+                            <div class="cn-line">里面有很多死路，还有把你带回起点的路。【dead ends 进一步解释 maze 为什么难走，无空格】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>navigate through a maze</em> ⇄ <em>Entering a maze / find your way</em>；答案在 <em>before using ___</em> 的动名词后——名词，且是"穿行迷宫所必需的东西"。<br>
+2. <strong>改写对照</strong>：navigate through ⇄ find your way（穿行 ⇄ 找到路）；is needed ⇄ <em>before using</em>（是必需的 ⇄ 在用……之前）——<strong>before 之后是前置条件，正好对应卷面的"needed"</strong>。<br>
+3. <strong>信号词</strong>：<span class="hl-conn">before</span>（条件门铃：before 后面 = 必须先有的）+ <span class="hl-conn">and</span>（work out the pattern <em>and</em> find your way，两个动作并列）。<br>
+4. <strong>避坑（你写 pattern 的原因）</strong>：<span class="hl-trap">pattern</span> 紧跟 logic 出现，是 <em>work out the pattern</em> 的宾语——它是"用逻辑处理的对象"，不是"必需的能力"。两条判据：① 卷面空格在句首作主语，问的是"什么东西被需要"，pattern 是被找出来的结果，不是工具；② <em>using</em> 后面接的是手段，logic 才是手段。听到 A + B 两个名词时，先问"哪个是手段、哪个是对象"。
+            </div>
+        </div>
+
+        <!-- CARD Q33 (Part 4) -->
+        <div class="slice-card" id="card-q33" data-category="correct part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q33 · maze 源自表示 confusion 混乱的词</span>
+                    <span class="status-tag status-correct">✓ 答对</span>
+                    <span class="tag-pill">⑤改写 + P2 词源</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">derived from ⇄ come from</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('33_Q33_maze源自表示confusion混乱的词.mp3', 'PQ33: maze 源自表示 confusion 混乱的词')">▶ 播放切片 (8s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> The word "maze" is <span class="hl-swap">derived from</span> a word meaning <span class="hl-swap">a feeling of</span> <span class="blank-answer">33</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">confusion</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">confusion ✓</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q33" onclick="toggleRecord('q33')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q33" onclick="playUserRecord('q33')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q33">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="hl-loc">word maze</span> is believed to <span class="hl-swap">come from</span> a Scandinavian word for a <span class="hl-swap">state of</span> <span class="hl-ans">confusion [Q33]</span>.</div>
+                            <div class="cn-line">maze 一词被认为来自斯堪的纳维亚语中表示"混乱状态"的词。【Q33 → confusion；卷面 derived from ⇄ come from（源自 ⇄ 来自）；a feeling of ⇄ a state of（感觉 ⇄ 状态）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">This is where</span> the word <span class="hl-swap">amazing</span> comes from.</div>
+                            <div class="cn-line">amazing 这个词就是从这里来的。【This is where 承接上一句的 confusion，讲词源延伸，无空格】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>The word maze</em> 原词复现，答案在 <em>for a state of ___</em> 的介词后。<br>
+2. <strong>改写对照</strong>：derived from ⇄ come from（源自 ⇄ 来自）；a feeling of ⇄ a state of（感觉 ⇄ 状态）——<strong>两个短语各自换掉一个词，是典型的"双改写"</strong>。<br>
+3. <strong>信号词</strong>：<span class="hl-conn">This is where … comes from</span>（下一句承接，说明 amazing 也来自同一个词源，属于补充信息）。<br>
+4. <strong>为什么对</strong>：你没有在 Scandinavian（斯堪的纳维亚语）上停笔——它是"来源语言"，不是"词义"；也没有被下一句的 amazing 拉走。空格问的是 meaning，只能填表示感受/状态的抽象名词。
+            </div>
+        </div>
+
+        <!-- CARD Q34 (Part 4) -->
+        <div class="slice-card" id="card-q34" data-category="correct part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q34 · 迷径用于 meditation 冥想与祈祷</span>
+                    <span class="status-tag status-correct">✓ 答对</span>
+                    <span class="tag-pill">⑤改写 + ④并列</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">and prayer 前就是答案</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('34_Q34_迷径用于meditation冥想与祈祷.mp3', 'PQ34: 迷径用于 meditation 冥想与祈祷')">▶ 播放切片 (23s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Labyrinths represent a journey through life · they have <span class="hl-swap">frequently</span> been used in <span class="blank-answer">34</span> <span class="hl-loc">and prayer</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">meditation</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">meditation ✓</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q34" onclick="toggleRecord('q34')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q34" onclick="playUserRecord('q34')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q34">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The winding spiral of the labyrinth has been used for centuries as a <span class="hl-swap">metaphor for life's journey</span>.</div>
+                            <div class="cn-line">迷径的盘旋结构几个世纪以来一直被用作人生旅程的隐喻。【卷面 represent a journey through life ⇄ a metaphor for life's journey（代表 ⇄ 隐喻）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It served as a <span class="hl-loc">spiritual reminder</span> that there is purpose and meaning to our lives <span class="hl-conn">and</span> helped to give people a <span class="hl-loc">sense of direction</span>.</div>
+                            <div class="cn-line">它是一个精神提醒：我们的人生有目的和意义；它还帮助人们获得方向感。【and 并列两个作用；spiritual 是 Q34 prayer 的伏笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Labyrinths are thought to encourage a <span class="hl-loc">feeling of calm</span> <span class="hl-conn">and</span> have been used as a <span class="hl-ans">meditation [Q34]</span> <span class="hl-conn">and</span> <span class="hl-loc">prayer tool</span> in many cultures <span class="hl-swap">over many centuries</span>.</div>
+                            <div class="cn-line">人们认为迷径能带来平静感，并作为冥想与祈祷的工具被许多文化使用了数百年。【Q34 → meditation；卷面 frequently ⇄ over many centuries（经常 ⇄ 数百年间）；used in ___ and prayer ⇄ used as a meditation and prayer tool——and prayer 前面的并列项就是答案】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面的 <em>and prayer</em> 是原文 <em>a meditation and prayer tool</em> 的原词，答案就在 and 前面的并列项。<br>
+2. <strong>改写对照</strong>：frequently ⇄ over many centuries（经常 ⇄ 数百年间）；used in ___ and prayer ⇄ used as a <em>meditation and prayer tool</em>（介词结构改写：in + 名词 ⇄ as + 名词 + tool）。<br>
+3. <strong>信号词</strong>：<span class="hl-conn">on the other hand</span>（上一句，话题从 maze 切回 labyrinth）+ <span class="hl-conn">and</span>（两个并列作用：encourage calm / used as tool）+ <span class="hl-conn">and prayer</span>（并列项门铃）。<br>
+4. <strong>为什么对</strong>：这是全篇最标准的一道"并列结构给答案"——听到 <em>and prayer</em>，立刻往左一个词拿 meditation。你没有去抓前面的 feeling of calm（那是 Q38 一类感受词），守住了并列位置。
+            </div>
+        </div>
+
+        <!-- CARD Q35 (Part 4) -->
+        <div class="slice-card" id="card-q35" data-category="correct part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q35 · 古代雕刻在 stone 石头上</span>
+                    <span class="status-tag status-correct">✓ 答对</span>
+                    <span class="tag-pill">⑤改写 + P2 材质</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">一串地名是范围不是答案</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('35_Q35_古代雕刻在stone石头上.mp3', 'PQ35: 古代雕刻在 stone 石头上')">▶ 播放切片 (12s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Early examples of labyrinth spiral · <span class="hl-swap">Ancient</span> <span class="hl-swap">carving on</span> <span class="blank-answer">35</span> have been found <span class="hl-loc">across many cultures</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">stone</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">stone ✓</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q35" onclick="toggleRecord('q35')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q35" onclick="playUserRecord('q35')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q35">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="hl-loc">earliest examples</span> of the labyrinth spiral pattern have been found <span class="hl-swap">carved into</span> <span class="hl-ans">stone [Q35]</span> from Sardinia to Scandinavia, from Arizona to India to Africa.</div>
+                            <div class="cn-line">最早的迷径螺旋图案被发现刻在石头上，分布从撒丁岛到斯堪的纳维亚、从亚利桑那到印度和非洲。【Q35 → stone；卷面 Ancient ⇄ earliest（古代 ⇄ 最早）；carving on ⇄ carved into（刻在……上 ⇄ 被刻进）；后面一串地名是分布范围，不是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In Europe, these <span class="hl-loc">spiral carvings</span> date from the late Bronze Age.</div>
+                            <div class="cn-line">在欧洲，这些螺旋雕刻可追溯到青铜时代晚期。【date from = 追溯到；年代信息，本篇未设题】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>earliest examples / labyrinth spiral pattern / carved</em> 三个词把句子锁死，答案在 <em>carved into ___</em> 的介词后——材质名词。<br>
+2. <strong>改写对照</strong>：Ancient ⇄ earliest（古代的 ⇄ 最早的）；carving on ⇄ carved into（刻在……上 ⇄ 被刻进）；across many cultures ⇄ from Sardinia to Scandinavia, from Arizona to India to Africa（跨许多文化 ⇄ 一串地名）。<br>
+3. <strong>信号词</strong>：无转折词，靠 <em>have been found</em> 被动结构把答案夹在中间。<br>
+4. <strong>为什么对</strong>：你没有把 Sardinia / Scandinavia / Arizona 这些地名当答案——它们是 <em>from…to…</em> 的范围状语。空格问的是"刻在什么上"，只能是材质。这类"答案后面拖一串列举"的句子，最容易慌，你的处理是对的。
+            </div>
+        </div>
+
+        <!-- CARD Q36 (Part 4) -->
+        <div class="slice-card" id="card-q36" data-category="correct part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q36 · 古希腊人把符号用在 coins 硬币上</span>
+                    <span class="status-tag status-correct">✓ 答对</span>
+                    <span class="tag-pill">⑤改写 + 主语换位</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">baskets 是上一句的干扰</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('36_Q36_古希腊人把符号用在coins硬币上.mp3', 'PQ36: 古希腊人把符号用在 coins 硬币上')">▶ 播放切片 (11s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Ancient Greeks <span class="hl-swap">used the symbol</span> on <span class="blank-answer">36</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">coins</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">coins ✓</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q36" onclick="toggleRecord('q36')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q36" onclick="playUserRecord('q36')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q36">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The Native American <span class="hl-loc">Pima tribe</span> <span class="hl-swap">wove baskets</span> with a circular labyrinth design that depicted their own cosmology.</div>
+                            <div class="cn-line">美洲原住民皮马部落把圆形迷径图案织在篮子上，描绘自己的宇宙观。【Pima 是专有名词、baskets 是载体——下一句 Ancient Greeks 的 baskets 干扰就来自这里】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In <span class="hl-loc">ancient Greece</span>, the labyrinth spiral <span class="hl-swap">was used on</span> <span class="hl-ans">coins [Q36]</span> around <span class="hl-loc">4,000 years ago</span>.</div>
+                            <div class="cn-line">在古希腊，迷径螺旋在大约 4000 年前被用在硬币上。【Q36 → coins；卷面 Ancient Greeks used the symbol on ⇄ 原文 In ancient Greece, … was used on（主语变状语 + 主动变被动）】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>Ancient Greeks</em> ⇄ 原文 <em>In ancient Greece</em>（人 ⇄ 地点状语），答案在 <em>was used on ___</em> 的介词后。<br>
+2. <strong>改写对照</strong>：Ancient Greeks（主语）⇄ In ancient Greece（状语）——<strong>主语与地点状语的换位</strong>；used the symbol（主动）⇄ the labyrinth spiral was used on（被动）；on coins 原词保留。<br>
+3. <strong>信号词</strong>：上一句 <em>The Pima tribe wove <span class="hl-trap">baskets</span></em> 是干扰源——baskets 属于美洲原住民，不是古希腊。<br>
+4. <strong>为什么对</strong>：你抓住了"Ancient Greeks"这个施动者，没有把上一句末尾的 baskets 顺延下来。对比题（Pima vs Greeks）的解法就是：<strong>先锁族群/国家，再听他把它用在什么上</strong>。
+            </div>
+        </div>
+
+        <!-- CARD Q37 (Part 4) -->
+        <div class="slice-card" id="card-q37" data-category="correct part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q37 · 最大草皮迷径中央曾有 big tree 大树</span>
+                    <span class="status-tag status-correct">✓ 答对</span>
+                    <span class="tag-pill">⑤改写 ×4 + ③句意</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">一句四处改写</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('37_Q37_最大草皮迷径中央曾有big_tree大树.mp3', 'PQ37: 最大草皮迷径中央曾有 big tree 大树')">▶ 播放切片 (15s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Walking labyrinths · The <span class="hl-swap">largest surviving</span> example of a <span class="hl-loc">turf labyrinth</span> <span class="hl-swap">once had</span> a <span class="hl-swap">big</span> <span class="blank-answer">37</span> <span class="hl-swap">at its centre</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">tree</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">tree ✓</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q37" onclick="toggleRecord('q37')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q37" onclick="playUserRecord('q37')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q37">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In <span class="hl-loc">Northern Europe</span> there were actual <span class="hl-swap">physical labyrinths designed for walking on</span>.</div>
+                            <div class="cn-line">在北欧出现了真正可以走上去的实体迷径。【physical / designed for walking on 是 Q37 turf labyrinth 的前置说明】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These were <span class="hl-loc">cut into the turf or grass</span>, usually in a circular pattern.</div>
+                            <div class="cn-line">它们被刻进草皮或草地，通常呈圆形。【turf / grass 正是 Q37 卷面 turf labyrinth 的原词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The origin of these walking labyrinths remains unclear, <span class="hl-conn">but</span> they were probably used for <span class="hl-swap">fertility rites</span> which may date back thousands of years.</div>
+                            <div class="cn-line">这些可步行的迷径起源不明，但可能用于生育仪式，可追溯到数千年前。【but 转折；fertility rites 是干扰信息，本篇未设题】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Eleven examples of <span class="hl-loc">turf labyrinths</span> <span class="hl-swap">survive today</span>, including the <span class="hl-loc">largest one</span> at Saffron Walden, England, which <span class="hl-swap">used to have</span> a <span class="hl-swap">large</span> <span class="hl-ans">tree [Q37]</span> <span class="hl-swap">in the middle of it</span>.</div>
+                            <div class="cn-line">如今存有 11 处草皮迷径，包括英格兰萨弗伦沃尔登最大的一处，它中央曾经有一棵大树。【Q37 → tree；四处改写叠在同一句：surviving ⇄ survive today、once had ⇄ used to have、big ⇄ large、at its centre ⇄ in the middle of it】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>turf labyrinths / largest</em> 双原词，答案在被 <em>which</em> 从句包住的 <em>used to have a large ___</em> 后面。<br>
+2. <strong>改写对照</strong>（一句话四处）：surviving ⇄ survive today（现存的 ⇄ 今天仍存有）；once had ⇄ used to have（曾经有 ⇄ 过去曾有）；big ⇄ large（大 ⇄ 大）；at its centre ⇄ in the middle of it（在中央 ⇄ 在它中间）。<br>
+3. <strong>信号词</strong>：<span class="hl-conn">but</span>（上一句：起源不明，但可能用于生育仪式）+ <em>including</em>（举例，把 largest one 引出来）。<br>
+4. <strong>为什么对</strong>：这句话改写密度极高，你顶住了四个替换点，靠的是把 <em>which used to have</em> 这个从句结构听完整、没有在 Saffron Walden（地名）上停笔。地名 + 从句是本篇最容易断流的地方。
+            </div>
+        </div>
+
+        <!-- CARD Q38 (Part 4) -->
+        <div class="slice-card" id="card-q38" data-category="wrong part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q38 · 降低 breathing 呼吸频率与 slower 改写</span>
+                    <span class="status-tag status-wrong">✗ 答错</span>
+                    <span class="tag-pill">③句意 + ⑤结果⇄过程</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">reduce rate ⇄ slower</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('38_Q38_降低breathing呼吸频率与slower改写.mp3', 'PQ38: 降低 breathing 呼吸频率与 slower 改写')">▶ 播放切片 (14s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Believed to have a beneficial impact on mental and physical health, e.g. walking a maze can <span class="hl-swap">reduce</span> a person's <span class="blank-answer">38</span> <span class="hl-loc">rate</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">breathing</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">（未填 / 只听到 slower）</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q38" onclick="toggleRecord('q38')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q38" onclick="playUserRecord('q38')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q38">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">More recently</span>, labyrinths have experienced <span class="hl-swap">something of a revival</span>.</div>
+                            <div class="cn-line">最近，迷径又经历了一次复兴。【More recently 时间跳转，进入"现代用途"段】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Some believe that walking a labyrinth promotes healing and mindfulness, <span class="hl-conn">and</span> there are those who believe in its <span class="hl-loc">emotional and physical benefits</span>, <span class="hl-conn">which include</span> <span class="hl-swap">slower</span> <span class="hl-ans">breathing [Q38]</span>, <span class="hl-conn">and</span> a restored sense of balance and perspective.</div>
+                            <div class="cn-line">有人认为走迷径能促进疗愈与正念，也有人相信它对情绪和身体有益，包括呼吸更慢、平衡感与洞察力恢复。【Q38 → breathing；卷面 reduce a person's ___ rate ⇄ 原文 slower breathing（降低……频率 ⇄ 更慢的呼吸，结果 ⇄ 过程）；which include 后面是清单，第一项就是答案】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>walking a labyrinth / physical benefits</em> 定位到位后，答案在 <em>which include ___</em> 的清单里——名词，且与"身体"有关。<br>
+2. <strong>改写对照（本题真正的台阶）</strong>：reduce a person's ___ rate ⇄ <em>slower breathing</em>。题干是<strong>结果</strong>（降低频率），原文是<strong>过程/状态</strong>（呼吸更慢）——这是"结果 ⇄ 属性"的改写，不是同义词替换。你必须把 slower 反推成"频率下降"，才能对上 rate。<br>
+3. <strong>信号词</strong>：<span class="hl-conn">and</span>（promotes healing and mindfulness）+ <span class="hl-conn">which include</span>（清单入口，后面第一项就是答案）+ <span class="hl-conn">and</span>（breathing 与 balance and perspective 并列）。<br>
+4. <strong>避坑（你说"句意改写没听懂"）</strong>：这题的失分不在声音，而在<strong>没有把 slower 换算成 reduce…rate</strong>。训练方法：听到形容词比较级（slower / higher / lower），立刻在脑内问"它对应的名词是什么、动词是什么"——slower breathing = breathing rate 下降。另外 <em>breathing</em> 是 breathing rate 的固定搭配，单听 slower 是写不出答案的。
+            </div>
+        </div>
+
+        <!-- CARD Q39 (Part 4) -->
+        <div class="slice-card" id="card-q39" data-category="wrong part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q39 · 不能走路的病人用 paper 纸质迷径</span>
+                    <span class="status-tag status-wrong">✗ 答错</span>
+                    <span class="tag-pill">③句意 + ⑤材质前置</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">脑子还停在 38</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('39_Q39_不能走路的病人用paper纸质迷径.mp3', 'PQ39: 不能走路的病人用 paper 纸质迷径')">▶ 播放切片 (9s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Patients who can't walk can use "finger labyrinths" <span class="hl-swap">made from</span> <span class="blank-answer">39</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">paper</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">（空 / 仍在想 38）</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q39" onclick="toggleRecord('q39')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q39" onclick="playUserRecord('q39')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q39">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Many <span class="hl-loc">visitors</span> find walking a labyrinth <span class="hl-swap">less stressful than</span> sitting in a corridor or waiting room.</div>
+                            <div class="cn-line">许多访客觉得走迷径比坐在走廊或候诊室压力更小。【less stressful than 比较结构；corridor / waiting room 是场景干扰，不设题】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Some <span class="hl-loc">doctors</span> even walk the labyrinth during their breaks.</div>
+                            <div class="cn-line">有些医生甚至在工作间隙走迷径。【doctors 对应卷面的 staff，属于"员工也受益"的细节】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In some hospitals, <span class="hl-loc">patients who can't walk</span> can have a <span class="hl-ans">paper [Q39]</span> <span class="hl-loc">finger labyrinth</span> brought to their bed.</div>
+                            <div class="cn-line">在一些医院里，不能走路的病人可以让人把纸质的手指迷径送到床边。【Q39 → paper；卷面 made from ___ ⇄ 原文把材质放在名词前作定语 a paper finger labyrinth（所以答案在 finger labyrinth 之前，不是之后）】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>patients who can't walk</em> + <em>finger labyrinth</em> 双原词，答案在名词前的定语位置。<br>
+2. <strong>改写对照（语序反转）</strong>：made from ___ ⇄ <em>a <span class="hl-ans">paper</span> finger labyrinth</em>——卷面把材质放在空格里（后置），原文把材质放在名词前作定语（前置）。<strong>答案出现在 finger labyrinth 之前，不是在它后面。</strong><br>
+3. <strong>信号词</strong>：<em>In some hospitals</em>（场景切换）+ 上一句 <em>Some doctors even walk…</em>（从医生切回病人）。<br>
+4. <strong>避坑（你说"脑子还在 38"）</strong>：Q38→Q39 之间只隔两句（visitors / doctors），大约 8 秒。你在 38 纠结 slower 的时候，<em>a paper finger labyrinth</em> 已经念完了。两条军规：① 一题超过 2 秒没结论就放弃、笔尖下移；② 听到 <em>In some hospitals</em> 这种新场景词，立刻清空上一题。
+            </div>
+        </div>
+
+        <!-- CARD Q40 (Part 4) -->
+        <div class="slice-card" id="card-q40" data-category="wrong part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge">Q40 · 阿尔茨海默患者焦虑 anxiety 减轻</span>
+                    <span class="status-tag status-wrong">✗ 答错</span>
+                    <span class="tag-pill">③句意 + ④例证结构</span>
+                    <span class="tag-pill" style="background:rgba(251,191,36,0.14); color:#fbbf24; border-color:rgba(251,191,36,0.35);">答案在专有名词之前</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('40_Q40_阿尔茨海默患者焦虑anxiety减轻.mp3', 'PQ40: 阿尔茨海默患者焦虑 anxiety 减轻')">▶ 播放切片 (16s)</button>
+            </div>
+
+            <div class="stem-box">
+                <strong>卷面题干：</strong> Research has shown that Alzheimer's sufferers experience <span class="hl-swap">less</span> <span class="blank-answer">40</span>.
+            </div>
+
+            <div class="ans-compare-bar">
+                <div class="ans-item"><span class="ans-label">正确答案：</span><span class="ans-val-correct">anxiety</span></div>
+                <div class="ans-item"><span class="ans-label">我的答案：</span><span class="ans-val-wrong">（空 / 听到 Alzheimer's 时已错过）</span></div>
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_q40" onclick="toggleRecord('q40')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_q40" onclick="playUserRecord('q40')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_q40">点击录音跟读，对比官方原声的连读与重音</span>
+            </div>
+
+            <details>
+                <summary>📖 展开本切片完整中英原文（含定位词 / 逻辑词 / 替换改写五色标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The science behind the theory is a little <span class="hl-swap">sketchy</span>, <span class="hl-conn">but</span> there are dozens of small-scale <span class="hl-loc">studies</span> which support claims about the benefits of labyrinths.</div>
+                            <div class="cn-line">这套理论背后的科学依据还比较粗略，但有数十项小型研究支持迷径有益的说法。【studies 对应卷面 Research；but 转折引出"确实有研究支持"，是 Q40 的定位句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">For example</span>, one study found that walking a labyrinth provided short-term <span class="hl-swap">calming</span>, <span class="hl-swap">relaxation</span>, <span class="hl-conn">and</span> <span class="hl-swap">relief from</span> <span class="hl-ans">anxiety [Q40]</span> for <span class="hl-loc">Alzheimer's patients</span>.</div>
+                            <div class="cn-line">例如，一项研究发现走迷径能为阿尔茨海默患者带来短期的平静、放松和焦虑缓解。【Q40 → anxiety；卷面 experience less ⇄ relief from（经历更少 ⇄ 从……中缓解）；答案在 Alzheimer's patients 之前三个词——听到专有名词才反应就已经晚了】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">So</span> what is it about labyrinths that makes their appeal so universal?</div>
+                            <div class="cn-line">那么，迷径究竟为什么如此普遍地吸引人？【So 收尾提问，全文结束】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>Research</em> ⇄ 原文 <em>studies</em>（上一句），答案在 <em>relief from ___</em> 的介词后——情绪类名词。<br>
+2. <strong>改写对照</strong>：experience less ⇄ relief from（经历更少 ⇄ 从……中缓解，正反说）；has shown ⇄ one study found（研究表明 ⇄ 一项研究发现）。<br>
+3. <strong>信号词</strong>：<span class="hl-conn">but</span>（上一句：理论依据粗略，<strong>但</strong>有研究支持）+ <span class="hl-conn">For example</span>（进入例证）+ <span class="hl-conn">and</span>（calming, relaxation, <strong>and</strong> relief from anxiety 三项并列，答案在最后一项）。<br>
+4. <strong>避坑（关键洞察）</strong>：<span class="hl-ans">anxiety</span> 出现在 <span class="hl-loc">Alzheimer's patients</span> <strong>之前三个词</strong>。你等听到 Alzheimer's 才意识到"这题到了"，但那时答案已经过去了——这就是你说的"完美错过"。<strong>例证句的答案永远在例子名之前</strong>：听到 For example 就把笔悬在空格上，先抓 calming / relaxation / relief from 这一串结论词，专有名词只是尾巴。
+            </div>
+        </div>
+
+        <!-- CARD FULL PART 4 -->
+        <div class="slice-card" id="card-full4" data-category="full part4">
+            <div class="card-header">
+                <div class="q-badge-wrap">
+                    <span class="q-badge" style="color: var(--accent-purple);">🎧 完整精听 · Part 4 全篇</span>
+                    <span class="status-tag" style="background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); border: 1px solid rgba(192, 132, 252, 0.3);">Q31 - Q40 全篇语流与信号词连贯训练</span>
+                    <span class="tag-pill">5 分 02 秒 · 38 句</span>
+                </div>
+                <button class="card-play-btn" onclick="playSlice('Section_4_Full_Labyrinths.mp3', 'Part 4 完整录音: Labyrinths 迷径讲座 (5分02秒)')">▶ 播放完整 Part 4</button>
+            </div>
+
+            <div class="stem-box" style="border-left-color: var(--accent-purple);">
+                <strong>用法：</strong>先不展开原文，整段盲听一遍并随手记下 Q31–Q40；第二遍再点开逐句对照，检查每题答案句的<span class="hl-loc">定位词</span>、<span class="hl-swap">替换</span>、<span class="hl-conn">逻辑词</span>是否和自己听到的一致。
+            </div>
+
+            <div class="recorder-box">
+                <div class="rec-btn-group">
+                    <button class="rec-btn" id="recBtn_full4" onclick="toggleRecord('full4')">🎙️ 录音跟读</button>
+                    <button class="rec-play-btn" id="playRecBtn_full4" onclick="playUserRecord('full4')" disabled>▶ 试听跟读</button>
+                </div>
+                <span class="rec-status" id="recStatus_full4">整段跟读：重点听 For example / but / which include 之后的重读</span>
+            </div>
+
+            <details>
+                <summary>📜 Part 4 完整听力原文与逐句翻译（38 句，含全部十题标注）</summary>
+                <div class="transcript-content">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Labyrinths have existed for <span class="hl-loc">well over 4,000 years</span>.</div>
+                            <div class="cn-line">迷径已经存在了 4000 多年。【开篇背景句；well over = 远超过，不设题】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">Labyrinths</span> and labyrinthine symbols have been found in regions <span class="hl-swap">as diverse as</span> modern-day Turkey, Ireland, Greece and India.</div>
+                            <div class="cn-line">迷径与迷径符号在土耳其、爱尔兰、希腊、印度等差异极大的地区都被发现过。【as diverse as = 多样到……；一串国名只是范围，不是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> There are various designs of labyrinth, <span class="hl-conn">but</span> what they all have in common is a <span class="hl-loc">winding spiral path</span> which leads to a <span class="hl-loc">central area</span>.</div>
+                            <div class="cn-line">迷径有多种设计，但它们的共同点是一条通向中心区域的蜿蜒盘旋路径。【but 转折：忽略差异、只看共同点；这是全篇的定义句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> There is <span class="hl-loc">one starting point</span> at the entrance <span class="hl-conn">and</span> the goal is to reach the <span class="hl-loc">central area</span>.</div>
+                            <div class="cn-line">入口处只有一个起点，目标是抵达中心区域。【and 并列两个结构要素：单一起点 + 中心终点】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Finding your way through a labyrinth involves many <span class="hl-swap">twists and turns</span>, <span class="hl-conn">but</span> it's not possible to get lost as there is <span class="hl-loc">only one single path</span>.</div>
+                            <div class="cn-line">在迷径中找路会有很多转弯，但不可能迷路，因为只有一条路。【but + as 因果；only one single path 是迷径与迷宫最核心的区别，为 Q31 的比较做铺垫】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In modern times</span>, the word labyrinth has taken on a different meaning <span class="hl-conn">and</span> is often used as a <span class="hl-swap">synonym</span> for <span class="hl-loc">a maze</span>.</div>
+                            <div class="cn-line">在现代，labyrinth 一词有了不同含义，常被当作 maze 的同义词。【Q31 定位：a maze 首次出现；synonym = 同义词，等于宣布"下面要比较这两个词"】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A maze is quite different <span class="hl-conn">as</span> it is a <span class="hl-swap">kind of</span> <span class="hl-ans">puzzle [Q31]</span> with an <span class="hl-loc">intricate network of paths</span>.</div>
+                            <div class="cn-line">迷宫则很不一样，它是一种谜题，路径构成复杂的网络。【Q31 → puzzle；卷面 a type of ⇄ 原文 a kind of（种类 ⇄ 一种）；intricate network 只是补充说明，不是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Mazes became <span class="hl-loc">fashionable</span> in the <span class="hl-loc">15th and 16th centuries</span> in Europe and can still be found in the gardens of great houses and palaces.</div>
+                            <div class="cn-line">迷宫在 15、16 世纪的欧洲流行起来，至今仍能在豪宅与宫殿的花园里见到。【年代 + 地点信息，本篇未设题；听到具体年代不要急着落笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The paths are usually surrounded by <span class="hl-loc">thick, high hedges</span> <span class="hl-conn">so that</span> it's not possible to see over them.</div>
+                            <div class="cn-line">这些路径通常被又厚又高的树篱围住，因此无法越过顶部看清。【so that 结果；树篱是"迷宫会让人迷路"的物理原因】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Entering a maze usually involves <span class="hl-swap">getting lost</span> a few times <span class="hl-conn">before</span> using <span class="hl-ans">logic [Q32]</span> to work out the <span class="hl-trap">pattern</span> <span class="hl-conn">and</span> find <span class="hl-loc">your way</span> to the centre and then out again.</div>
+                            <div class="cn-line">进入迷宫通常会先迷路几次，然后才用逻辑找出规律，找到通往中心的路再走出来。【Q32 → logic；before 之后是"必须先具备的东西"；pattern 只是 logic 的宾语，不是答案（你写的就是这个词）；navigate through ⇄ find your way（穿行 ⇄ 找到路）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> There are lots of <span class="hl-loc">dead ends</span> and paths which lead you back to where you started.</div>
+                            <div class="cn-line">里面有很多死路，还有把你带回起点的路。【dead ends 进一步解释 maze 为什么难走，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="hl-loc">word maze</span> is believed to <span class="hl-swap">come from</span> a Scandinavian word for a <span class="hl-swap">state of</span> <span class="hl-ans">confusion [Q33]</span>.</div>
+                            <div class="cn-line">maze 一词被认为来自斯堪的纳维亚语中表示"混乱状态"的词。【Q33 → confusion；卷面 derived from ⇄ come from（源自 ⇄ 来自）；a feeling of ⇄ a state of（感觉 ⇄ 状态）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">This is where</span> the word <span class="hl-swap">amazing</span> comes from.</div>
+                            <div class="cn-line">amazing 这个词就是从这里来的。【This is where 承接上一句的 confusion，讲词源延伸，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Labyrinths, <span class="hl-conn">on the other hand</span>, have a very different function.</div>
+                            <div class="cn-line">另一方面，迷径的功能则完全不同。【on the other hand 话题切换：从 maze 转回 labyrinth，是 Q34 的入口信号】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Although</span> people now often refer to things they find complicated as labyrinths, this is not how they were seen in the past.</div>
+                            <div class="cn-line">虽然现在人们常把复杂的事物称作迷径，但过去并不是这样看待它们的。【Although 让步 + 否定后置，真正的重点是"过去不是这样"】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The winding spiral of the labyrinth has been used for centuries as a <span class="hl-swap">metaphor for life's journey</span>.</div>
+                            <div class="cn-line">迷径的盘旋结构几个世纪以来一直被用作人生旅程的隐喻。【卷面 represent a journey through life ⇄ a metaphor for life's journey（代表 ⇄ 隐喻）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It served as a <span class="hl-loc">spiritual reminder</span> that there is purpose and meaning to our lives <span class="hl-conn">and</span> helped to give people a <span class="hl-loc">sense of direction</span>.</div>
+                            <div class="cn-line">它是一个精神提醒：我们的人生有目的和意义；它还帮助人们获得方向感。【and 并列两个作用；spiritual 是 Q34 prayer 的伏笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Labyrinths are thought to encourage a <span class="hl-loc">feeling of calm</span> <span class="hl-conn">and</span> have been used as a <span class="hl-ans">meditation [Q34]</span> <span class="hl-conn">and</span> <span class="hl-loc">prayer tool</span> in many cultures <span class="hl-swap">over many centuries</span>.</div>
+                            <div class="cn-line">人们认为迷径能带来平静感，并作为冥想与祈祷的工具被许多文化使用了数百年。【Q34 → meditation；卷面 frequently ⇄ over many centuries（经常 ⇄ 数百年间）；used in ___ and prayer ⇄ used as a meditation and prayer tool——and prayer 前面的并列项就是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="hl-loc">earliest examples</span> of the labyrinth spiral pattern have been found <span class="hl-swap">carved into</span> <span class="hl-ans">stone [Q35]</span> from Sardinia to Scandinavia, from Arizona to India to Africa.</div>
+                            <div class="cn-line">最早的迷径螺旋图案被发现刻在石头上，分布从撒丁岛到斯堪的纳维亚、从亚利桑那到印度和非洲。【Q35 → stone；卷面 Ancient ⇄ earliest（古代 ⇄ 最早）；carving on ⇄ carved into（刻在……上 ⇄ 被刻进）；后面一串地名是分布范围，不是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In Europe, these <span class="hl-loc">spiral carvings</span> date from the late Bronze Age.</div>
+                            <div class="cn-line">在欧洲，这些螺旋雕刻可追溯到青铜时代晚期。【date from = 追溯到；年代信息，本篇未设题】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The Native American <span class="hl-loc">Pima tribe</span> <span class="hl-swap">wove baskets</span> with a circular labyrinth design that depicted their own cosmology.</div>
+                            <div class="cn-line">美洲原住民皮马部落把圆形迷径图案织在篮子上，描绘自己的宇宙观。【Pima 是专有名词、baskets 是载体——下一句 Ancient Greeks 的 baskets 干扰就来自这里】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In <span class="hl-loc">ancient Greece</span>, the labyrinth spiral <span class="hl-swap">was used on</span> <span class="hl-ans">coins [Q36]</span> around <span class="hl-loc">4,000 years ago</span>.</div>
+                            <div class="cn-line">在古希腊，迷径螺旋在大约 4000 年前被用在硬币上。【Q36 → coins；卷面 Ancient Greeks used the symbol on ⇄ 原文 In ancient Greece, … was used on（主语变状语 + 主动变被动）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Labyrinths made of <span class="hl-loc">mosaics</span> were commonly found in bathhouses, villas and tombs throughout the Roman Empire.</div>
+                            <div class="cn-line">罗马帝国时期，马赛克迷径常见于浴场、别墅和陵墓。【mosaics 是材质，与 Q35 的 stone 属同类信息，注意区分年代与地区】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In <span class="hl-loc">Northern Europe</span> there were actual <span class="hl-swap">physical labyrinths designed for walking on</span>.</div>
+                            <div class="cn-line">在北欧出现了真正可以走上去的实体迷径。【physical / designed for walking on 是 Q37 turf labyrinth 的前置说明】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> These were <span class="hl-loc">cut into the turf or grass</span>, usually in a circular pattern.</div>
+                            <div class="cn-line">它们被刻进草皮或草地，通常呈圆形。【turf / grass 正是 Q37 卷面 turf labyrinth 的原词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The origin of these walking labyrinths remains unclear, <span class="hl-conn">but</span> they were probably used for <span class="hl-swap">fertility rites</span> which may date back thousands of years.</div>
+                            <div class="cn-line">这些可步行的迷径起源不明，但可能用于生育仪式，可追溯到数千年前。【but 转折；fertility rites 是干扰信息，本篇未设题】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Eleven examples of <span class="hl-loc">turf labyrinths</span> <span class="hl-swap">survive today</span>, including the <span class="hl-loc">largest one</span> at Saffron Walden, England, which <span class="hl-swap">used to have</span> a <span class="hl-swap">large</span> <span class="hl-ans">tree [Q37]</span> <span class="hl-swap">in the middle of it</span>.</div>
+                            <div class="cn-line">如今存有 11 处草皮迷径，包括英格兰萨弗伦沃尔登最大的一处，它中央曾经有一棵大树。【Q37 → tree；四处改写叠在同一句：surviving ⇄ survive today、once had ⇄ used to have、big ⇄ large、at its centre ⇄ in the middle of it】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">More recently</span>, labyrinths have experienced <span class="hl-swap">something of a revival</span>.</div>
+                            <div class="cn-line">最近，迷径又经历了一次复兴。【More recently 时间跳转，进入"现代用途"段】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Some believe that walking a labyrinth promotes healing and mindfulness, <span class="hl-conn">and</span> there are those who believe in its <span class="hl-loc">emotional and physical benefits</span>, <span class="hl-conn">which include</span> <span class="hl-swap">slower</span> <span class="hl-ans">breathing [Q38]</span>, <span class="hl-conn">and</span> a restored sense of balance and perspective.</div>
+                            <div class="cn-line">有人认为走迷径能促进疗愈与正念，也有人相信它对情绪和身体有益，包括呼吸更慢、平衡感与洞察力恢复。【Q38 → breathing；卷面 reduce a person's ___ rate ⇄ 原文 slower breathing（降低……频率 ⇄ 更慢的呼吸，结果 ⇄ 过程）；which include 后面是清单，第一项就是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This idea has become <span class="hl-conn">so</span> popular <span class="hl-conn">that</span> labyrinths have been laid into the floors of <span class="hl-loc">spas</span>, wellness centres, and even prisons in recent years.</div>
+                            <div class="cn-line">这个理念如此流行，以至于近年来迷径被铺进温泉馆、健康中心甚至监狱的地面。【so…that 结果结构；spas / wellness centres 对应卷面的 medical and health settings】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A pamphlet at Colorado Children's Hospital <span class="hl-loc">informs patients</span> that walking a labyrinth can often <span class="hl-swap">calm people</span> in the midst of a crisis.</div>
+                            <div class="cn-line">科罗拉多儿童医院的一本小册子告知病人，走迷径常常能让处于危机中的人平静下来。【informs patients / calm 是下一句"受益的不只是病人"的铺垫】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">And apparently</span> it's not only patients who benefit.</div>
+                            <div class="cn-line">而且显然受益的不只是病人。【And apparently 递进，话题从病人扩展到访客与医生】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Many <span class="hl-loc">visitors</span> find walking a labyrinth <span class="hl-swap">less stressful than</span> sitting in a corridor or waiting room.</div>
+                            <div class="cn-line">许多访客觉得走迷径比坐在走廊或候诊室压力更小。【less stressful than 比较结构；corridor / waiting room 是场景干扰，不设题】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Some <span class="hl-loc">doctors</span> even walk the labyrinth during their breaks.</div>
+                            <div class="cn-line">有些医生甚至在工作间隙走迷径。【doctors 对应卷面的 staff，属于"员工也受益"的细节】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> In some hospitals, <span class="hl-loc">patients who can't walk</span> can have a <span class="hl-ans">paper [Q39]</span> <span class="hl-loc">finger labyrinth</span> brought to their bed.</div>
+                            <div class="cn-line">在一些医院里，不能走路的病人可以让人把纸质的手指迷径送到床边。【Q39 → paper；卷面 made from ___ ⇄ 原文把材质放在名词前作定语 a paper finger labyrinth（所以答案在 finger labyrinth 之前，不是之后）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The science behind the theory is a little <span class="hl-swap">sketchy</span>, <span class="hl-conn">but</span> there are dozens of small-scale <span class="hl-loc">studies</span> which support claims about the benefits of labyrinths.</div>
+                            <div class="cn-line">这套理论背后的科学依据还比较粗略，但有数十项小型研究支持迷径有益的说法。【studies 对应卷面 Research；but 转折引出"确实有研究支持"，是 Q40 的定位句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">For example</span>, one study found that walking a labyrinth provided short-term <span class="hl-swap">calming</span>, <span class="hl-swap">relaxation</span>, <span class="hl-conn">and</span> <span class="hl-swap">relief from</span> <span class="hl-ans">anxiety [Q40]</span> for <span class="hl-loc">Alzheimer's patients</span>.</div>
+                            <div class="cn-line">例如，一项研究发现走迷径能为阿尔茨海默患者带来短期的平静、放松和焦虑缓解。【Q40 → anxiety；卷面 experience less ⇄ relief from（经历更少 ⇄ 从……中缓解）；答案在 Alzheimer's patients 之前三个词——听到专有名词才反应就已经晚了】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">So</span> what is it about labyrinths that makes their appeal so universal?</div>
+                            <div class="cn-line">那么，迷径究竟为什么如此普遍地吸引人？【So 收尾提问，全文结束】</div>
+                        </div>
+                </div>
+            </details>
+
+            <div class="diagnosis-box">
+                <strong>🎯 全篇结构（跟读时按这个骨架走）：</strong><br>
+                ① 定义（1-5 句）：labyrinth = 一条盘旋路 + 中心区；<br>
+                ② 与 maze 对比（6-13 句）：maze 是 puzzle（Q31）、靠 logic（Q32）、词源 confusion（Q33）；<br>
+                ③ 历史功能（14-20 句）：人生隐喻、meditation + prayer（Q34）、刻在 stone（Q35）；<br>
+                ④ 早期实例（21-27 句）：Pima 篮子、希腊 coins（Q36）、北欧草皮迷径中央的 tree（Q37）；<br>
+                ⑤ 现代用途（28-37 句）：疗愈、breathing（Q38）、paper 指尖迷径（Q39）、Alzheimer 患者 anxiety 减轻（Q40）；<br>
+                ⑥ 收尾提问（38 句）。<br><br>
+                <strong>四道错题的共同点：</strong>答案都藏在<strong>并列结构或名词前置定语</strong>里——pattern 是 logic 的宾语、slower 要换算成 rate、paper 在名词前、anxiety 在 Alzheimer's 之前。听的时候把"and / which include / 名词前的形容词"当成三个落笔点。
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <p>雅思听力靶向精炼体系 · 剑桥雅思 17 Test 1 Part 1 错题切片点播台 · 祝你听力早日斩获 8.0+！</p>
+        <p>雅思听力靶向精炼体系 · 剑桥雅思 17 Test 1 Part 1 + Part 4 错题切片点播台 · 祝你听力早日斩获 8.0+！</p>
     </footer>
 </div>
 
@@ -1375,10 +2149,29 @@
     const loopBtn = document.getElementById('loopBtn');
     let isLooping = false;
 
+    const _audioBlobCache = {};
     function playSlice(fileName, titleText) {
-        audio.src = fileName;
-        audio.play();
+        const startPlay = (src) => {
+            audio.src = src;
+            audio.loop = isLooping;
+            audio.play().catch(err => console.warn('音频播放未启动:', err));
+        };
+        if (_audioBlobCache[fileName]) { startPlay(_audioBlobCache[fileName]); }
+        else {
+            fetch(fileName).then(r => {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.blob();
+            }).then(b => {
+                _audioBlobCache[fileName] = URL.createObjectURL(b);
+                startPlay(_audioBlobCache[fileName]);
+            }).catch(() => startPlay(fileName));
+        }
         nowPlayingTitle.innerHTML = `<span>🎵 正在播放：${titleText}</span>`;
+        document.querySelectorAll('.slice-card.playing').forEach(c => c.classList.remove('playing'));
+        if (window.event && window.event.target) {
+            const card = window.event.target.closest('.slice-card');
+            if (card) card.classList.add('playing');
+        }
     }
 
     function setSpeed(rate, btn) {
@@ -1411,13 +2204,9 @@
 
         const cards = document.querySelectorAll('.slice-card');
         cards.forEach(card => {
-            if (type === 'all') {
-                card.style.display = 'block';
-            } else if (card.getAttribute('data-type') === type) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            const raw = card.dataset.category || card.getAttribute('data-type') || '';
+            const cats = raw.split(/\s+/);
+            card.style.display = (type === 'all' || cats.includes(type)) ? 'block' : 'none';
         });
     }
 

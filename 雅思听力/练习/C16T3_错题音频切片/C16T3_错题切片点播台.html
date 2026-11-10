@@ -668,23 +668,44 @@
   .full-audio-banner { align-items:flex-start; }
 }
 
+/* ===== Part 4 五色标注体系 ===== */
+.hl-loc { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); font-weight: 700; padding: 0 2px; }
+.hl-swap { background: rgba(251, 191, 36, 0.16); color: var(--accent-amber); padding: 1px 5px; border-radius: 4px; border-bottom: 2px dashed var(--accent-amber); font-weight: 600; }
+.hl-conn { color: #f472b6; font-weight: 700; background: rgba(244, 114, 182, 0.14); padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #f472b6; }
+.hl-ans { color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.15); padding: 1px 5px; border-radius: 4px; }
+.hl-trap { color: #f87171; font-weight: 700; text-decoration: line-through; background: rgba(248, 113, 113, 0.15); padding: 1px 5px; border-radius: 4px; }
+.divider-card { border-left: 5px solid var(--accent-purple); background: rgba(192, 132, 252, 0.08); }
+.divider-card h2 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--accent-purple); }
+.divider-card p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.7; }
+.legend-card { border-left: 5px solid var(--accent-blue); background: rgba(56, 189, 248, 0.07); }
+.legend-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.legend-row > span { font-size: .84rem; }
+.legend-row .hl-trap { text-decoration: none; }
+.q-stem-box { background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.28); border-radius: 8px; padding: 10px 14px; margin: 10px 0; }
+.q-stem-box .qs-label { font-size: .76rem; color: var(--accent-blue); letter-spacing: .04em; display: block; margin-bottom: 4px; }
+.q-stem-box .qs-text { font-size: 1rem; line-height: 1.75; }
+.blank-answer { display: inline-block; min-width: 74px; text-align: center; border-bottom: 1.5px solid var(--accent-green); color: var(--accent-green); font-weight: 700; padding: 0 6px; }
 </style>
 </head><body><div class="container">
 <div class="nav-back-bar"><a class="nav-link" href="../切片/index.html">📂 返回切片总目录</a><a class="nav-link" href="../剑桥16_Test3_听力Part1_七坑与3+2复盘汇总表.md">📊 打开复盘汇总表</a><a class="nav-link" href="../C16T2_错题音频切片/C16T2_错题切片点播台.html">➔ 剑16 T2 点播台</a></div>
-<header><h1>剑桥雅思 16 Test 3 Part 1 · 答案句切片点播台</h1><p>Junior Cycle Camp · reference / snack / medication / helmet → tent 的连续定位练习</p></header>
+<header><h1>剑桥雅思 16 Test 3 Part 1 + Part 4 · 答案句切片点播台</h1><p>Part 1 Junior Cycle Camp 青少年骑行营 · Part 4 Hand Knitting 手工编织讲座 · 定位词 / 逻辑信号词 / 替换改写五色标注</p></header>
 <div class="full-audio-banner"><div class="full-audio-info"><h3>🎧 Part 1 完整连续原声（约 08:10）</h3><p>包含播音员说明、读题停顿、对话及检查时间。</p></div><button class="play-card-btn" onclick="playAudio('Section_1_Full_Junior_Cycle_Camp.mp3','Part 1 完整录音：Junior Cycle Camp', this)">▶ 播放完整 Part 1</button></div>
 <div class="sticky-player"><div class="player-info"><div class="now-playing-title" id="now-playing-text">🎵 待播：点击切片开始练习</div><div class="btn-group"><button class="pill-btn" id="loop-btn" onclick="toggleLoop()">🔁 单曲循环: 关</button></div></div>
 <audio id="main-audio" controls preload="auto">浏览器不支持音频播放。</audio>
-<div class="player-controls"><span class="highlight-legend">高亮图例：<span class="signal-highlight">■ 定位/逻辑词</span> ｜ <span class="ans-highlight">■ 答案词</span> ｜ <span class="trap-highlight">■ 干扰项</span></span><div class="btn-group"><button class="pill-btn" onclick="skipTime(-5)">⏪ 后退 5s</button><button class="pill-btn" onclick="skipTime(5)">⏩ 前进 5s</button><button class="pill-btn" onclick="replayAudio()">🔄 重头精听</button></div><div class="btn-group"><span>倍速:</span><button class="pill-btn" onclick="setSpeed(0.8,this)">0.8x</button><button class="pill-btn active" onclick="setSpeed(1,this)">1.0x</button><button class="pill-btn" onclick="setSpeed(1.25,this)">1.25x</button><button class="pill-btn" onclick="setSpeed(1.5,this)">1.5x</button></div></div></div>
-<div class="tips-panel"><div class="tips-title">💡 4 步靶向精听法（参照 C7T1）</div>
+<div class="player-controls"><span class="highlight-legend">高亮图例：<span class="hl-loc">■ 定位词</span> ｜ <span class="hl-swap">■ 题干⇄原文替换</span> ｜ <span class="hl-conn">■ 转折/连词信号</span> ｜ <span class="hl-ans">■ 答案</span> ｜ <span class="hl-trap">■ 干扰</span></span><div class="btn-group"><button class="pill-btn" onclick="skipTime(-5)">⏪ 后退 5s</button><button class="pill-btn" onclick="skipTime(5)">⏩ 前进 5s</button><button class="pill-btn" onclick="replayAudio()">🔄 重头精听</button></div><div class="btn-group"><span>倍速:</span><button class="pill-btn" onclick="setSpeed(0.8,this)">0.8x</button><button class="pill-btn active" onclick="setSpeed(1,this)">1.0x</button><button class="pill-btn" onclick="setSpeed(1.25,this)">1.25x</button><button class="pill-btn" onclick="setSpeed(1.5,this)">1.5x</button></div></div></div>
+<div class="tips-panel"><div class="tips-title">💡 8 步靶向精练指南（Part 1 四步通用 + Part 4 四步专项）</div>
 <ol class="tips-list">
 <li><strong>Step 1 先读看懂：</strong>展开每题原文与翻译，找出黄色定位词、绿色答案词和红色干扰项。</li>
 <li><strong>Step 2 出声朗读：</strong>跟着音频把答案句读 3 遍，留意日期、拼读或连读。</li>
 <li><strong>Step 3 合上盲听：</strong>收起原文，把切片单曲循环 2–3 遍，再从定位词独立写出答案。</li>
 <li><strong>Step 4 录音跟读：</strong>录下自己的跟读，先试听，再点「对比原声」找出听读卡壳处。</li>
+<li><strong>Step 5 定位词先落地（Part 4 Q31/Q34/Q39/Q40）：</strong>Part 4 每题都在段落开头留了原词定位（Hand knitting / economic difficulty / Geographical areas / Everyday tasks），先确认定位，再等答案，别在半路上抢写。</li>
+<li><strong>Step 6 盯连词门铃再落笔（Part 4）：</strong>本篇四个答案分别挂在 <em>perhaps</em>（插入语）、<em>and indeed</em>、<em>while / if</em>、<em>for example</em> 之后——连词一响，答案就在后面 3 秒内。</li>
+<li><strong>Step 7 词性自检过滤器（Part 4 Q34/Q39/Q40）：</strong>in times of ___ difficulty 只能填形容词（economic），their own ___ of knitting 只能填名词（style），looking after ___ 只能填名词（sheep）。重读词词性不对，立刻丢弃。</li>
+<li><strong>Step 8 抗后置干扰（Part 4 Q31/Q34/Q39）：</strong>family / money / time 三个干扰词全部出现在答案<strong>之后</strong>的下一句里，是典型的“后置重读词抢答”陷阱，写完之后不要再改。</li>
 </ol></div>
 <div class="shadow-guide-box"><div class="shadow-guide-title"><span>🎙️ <strong>跟读录音与原声对比</strong></span><span class="shadow-guide-tag">录后可试听、对比、重录</span></div>每张卡片都有「录音跟读」按钮；完成后可试听自己的录音、对比原声、重新跟读或清除。录音仅在当前页面内暂存，刷新页面会重置。</div><div class="tips-panel"><div class="tips-title">本套复盘提醒</div><p>Q10 已核对写对 199；重点练 Q6→Q7、Q8→Q9 的连续转场。</p></div>
-<div class="filter-tabs"><button class="tab-btn active" onclick="filterCategory('all',this)">全部切片与完整录音 (11)</button><button class="tab-btn" onclick="filterCategory('wrong',this)">错题 (4)</button><button class="tab-btn" onclick="filterCategory('correct',this)">答对 (6)</button><button class="tab-btn" onclick="filterCategory('full',this)">🎧 Part 1 完整录音</button></div>
+<div class="filter-tabs"><button class="tab-btn active" onclick="filterCategory('all',this)">全部切片与完整录音 (24)</button><button class="tab-btn" onclick="filterCategory('wrong',this)">错题 (8)</button><button class="tab-btn" onclick="filterCategory('correct',this)">答对 (12)</button><button class="tab-btn" onclick="filterCategory('part4',this)">🔻 Part 4 全部 (13)</button><button class="tab-btn" onclick="filterCategory('full',this)">🎧 完整录音 (2)</button></div>
 <div class="slice-list">
         <div class="slice-card" data-category="correct" id="card-q1">
             <div class="card-header"><div><span class="card-tag tag-correct">Q1 · ✓</span><span class="card-tag tag-p1">P3 改写定位 / ④逻辑</span><h3 class="card-title">Q1: park · 听到定位并写对</h3></div>
@@ -1107,7 +1128,488 @@
                     </div>
                 </details></div>
         </div>
-</div><footer><p>剑桥雅思 16 Test 3 Part 1 · 答案句切片与七坑复盘</p></footer></div>
+        <!-- PART 4 SECTION DIVIDER -->
+        <div class="slice-card divider-card" data-category="part4" id="card-p4-divider">
+            <h2>🔻 PART 4 · Hand Knitting 手工编织 · 学术独白讲座（Q31–Q40）</h2>
+            <p>战报：10 题对 6 错 4（错 Q31 / Q34 / Q39 / Q40）· 四大病灶：① <strong>句尾/后置重读词抢答</strong>（family、money、time 三个干扰词全部落在答案之后的一句里）；② <strong>词性自检缺失</strong>（money 填进 “in times of ___ difficulty”、time 填进 “their own ___ of knitting”，语法都不成立）；③ <strong>主谓错切</strong>（regional differences in style developed，把 developed 当成新句子）；④ <strong>听音盲猜</strong>（watching over sheep 连读没听清，写成 overdshit）。</p>
+        </div>
+
+        <!-- PART 4 LEGEND -->
+        <div class="slice-card legend-card" data-category="part4" id="card-p4-legend">
+            <strong>🎨 Part 4 五色标注图例</strong>
+            <div class="legend-row">
+                <span class="hl-loc">■ 定位词（题干⇄原文同词锁定）</span>
+                <span class="hl-swap">■ 题干⇄原文替换改写</span>
+                <span class="hl-conn">■ 转折/连词/强调信号（but / and indeed / while / for example）</span>
+                <span class="hl-ans">■ 官方答案词</span>
+                <span class="hl-trap">■ 干扰陷阱词（后置重读词）</span>
+            </div>
+        </div>
+
+        <!-- CARD_card_31 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q31">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q31 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + A1 原词</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">句尾 family 抢答</span><h3 class="card-title">Q31: 祖母 grandmother 与 family 句尾抢答陷阱</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('31_Q31_祖母grandmother与family句意陷阱.mp3', 'PQ31: Q31: 祖母 grandmother 与 family 句尾抢答陷阱', this)">▶ 播放切片 (16s)</button><button class="record-card-btn" id="rec-btn-q31" onclick="handleRecBtnClick('q31')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q31" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q31"></span><span class="rec-status-text" id="rec-status-q31">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q31">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q31" onclick="playUserRecording('q31')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q31')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q31')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q31')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">We <span class="hl-swap">imagine</span> <span class="hl-swap">someone like</span> a <span class="blank-answer">31</span> <span class="hl-loc">knitting</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>When someone says the word <span class="hl-loc">knitting</span>, we <span class="hl-swap">might well picture</span> an <span class="hl-swap">elderly person</span> – a <span class="hl-ans">grandmother [Q31]</span> <span class="hl-conn">perhaps</span> – sitting by the fire knitting garments for themselves or other members of the <span class="hl-trap">family</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>knitting</em> 原词复现 → <em>we imagine someone like</em> 是句子的主语部分，答案是"人"；<br>
+2. <strong>改写对照</strong>：imagine ⇄ might well picture（想象 ⇄ 很可能会浮现出画面）；someone like an elderly person ⇄ a grandmother perhaps（像某位年长者 ⇄ 也许是位祖母）——“泛指的人”被具体化为“祖母”；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">perhaps</span>（插入语，“也许”）；答案就夹在两个破折号中间，<strong>插入语里往往就是答案</strong>，不要因为它语气不确定就跳过；<br>
+4. <strong>避坑（你写 family 的原因）</strong>：<span class="hl-trap">family</span> 是整句最后一个重读名词，且带 <em>other members of the</em> 的强调结构，“最后听到的词最响”让你落了 family。但 <em>someone like a ___ knitting</em> 要求填“人”，family 是集合名词、语法不合；且 knitting 是现在分词，逻辑主语必须是单个人。你定位完全正确、句子也听懂了大概，输在<strong>落笔前没做词性自检</strong>。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> When someone says the word <span class="hl-loc">knitting</span>,</div>
+                            <div class="cn-line">当有人说起“编织”这个词时，【定位词：knitting，与卷面同词复现】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> we <span class="hl-swap">might well picture</span> an <span class="hl-swap">elderly person</span> – a <span class="hl-ans">grandmother [Q31]</span> <span class="hl-conn">perhaps</span> –</div>
+                            <div class="cn-line">我们很可能会想到一位年长的人——也许是位<strong>祖母</strong>，【Q31 → grandmother；imagine ⇄ might well picture（想象 ⇄ 很可能浮现出画面）；someone like an elderly person ⇄ a grandmother perhaps（像某位年长者 ⇄ 也许是位祖母）；perhaps 插入语，答案就在破折号之间】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> sitting by the fire knitting garments for themselves or other members of the <span class="hl-trap">family</span>.</div>
+                            <div class="cn-line">坐在炉火边为自己或家里的其他成员织衣服。【family 是句尾重读干扰，卷面要求“人”，不选】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's a homely image,</div>
+                            <div class="cn-line">这是一幅温馨的画面，【下一题的转折铺垫，本句不落笔】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_32 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q32">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q32 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">时间单位前置改写</span><h3 class="card-title">Q32: 十年前的 decade 与 but / and indeed 转折递进</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('32_Q32_十年前decade预测消失与but转折.mp3', 'PQ32: Q32: 十年前的 decade 与 but / and indeed 转折递进', this)">▶ 播放切片 (18s)</button><button class="record-card-btn" id="rec-btn-q32" onclick="handleRecBtnClick('q32')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q32" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q32"></span><span class="rec-status-text" id="rec-status-q32">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q32">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q32" onclick="playUserRecording('q32')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q32')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q32')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q32')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">A <span class="blank-answer">32</span> <span class="hl-loc">ago</span>, knitting was <span class="hl-swap">expected to disappear</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>It's a homely image, <span class="hl-conn">but</span> one that may lead you to feel that knitting is an activity of the past – and, <span class="hl-conn">indeed</span>, <span class="hl-swap">during the previous</span> <span class="hl-ans">decade [Q32]</span>, it was one of the skills that was <span class="hl-swap">predicted to vanish</span> from everyday life.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：<em>activity of the past</em> → <em>ago</em> 的时间概念；<br>
+2. <strong>改写对照</strong>：A ___ ago ⇄ during the previous ___（___ 以前 ⇄ 在之前的 ___ 期间）——题干把时间单位放在 ago 前，原文放在 previous 后，<strong>同一个词换了语序</strong>；expected to disappear ⇄ predicted to vanish（被期待消失 ⇄ 被预测会消亡）——两个动词都被换掉；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">but</span>（转折，前面 homely image 全部作废）+ <span class="hl-conn">and, indeed</span>（递进强调，听到 indeed 立刻绷紧）；<br>
+4. <strong>本题为什么对</strong>：你没有在 homely image 上停留，跟住了 but 之后的否定方向，并且接受 ago ⇄ previous 的语序对调。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's a homely image, <span class="hl-conn">but</span> one that may lead you to feel that knitting is an activity of the past –</div>
+                            <div class="cn-line">这是一幅温馨的画面，但它可能让你觉得编织是过去的行当，【but 转折：前半句放弃】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> and, <span class="hl-conn">indeed</span>, <span class="hl-swap">during the previous</span> <span class="hl-ans">decade [Q32]</span>, it was one of the skills that was <span class="hl-swap">predicted to vanish</span> from everyday life.</div>
+                            <div class="cn-line">而事实上，在过去的<strong>十年</strong>里，它曾被预测会从日常生活中消亡。【Q32 → decade；A ___ ago ⇄ during the previous ___（语序对调）；expected to disappear ⇄ predicted to vanish（被期待消失 ⇄ 被预测消亡）；and indeed 是答案门铃】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_33 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q33">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q33 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">销量⇄购买 抽象化改写</span><h3 class="card-title">Q33: 编织 equipment 器材销量上升与 However 段落总开关</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('33_Q33_编织equipment器材销量上升与However转折.mp3', 'PQ33: Q33: 编织 equipment 器材销量上升与 However 段落总开关', this)">▶ 播放切片 (23s)</button><button class="record-card-btn" id="rec-btn-q33" onclick="handleRecBtnClick('q33')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q33" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q33"></span><span class="rec-status-text" id="rec-status-q33">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q33">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q33" onclick="playUserRecording('q33')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q33')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q33')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q33')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">People are <span class="hl-swap">buying more</span> <span class="blank-answer">33</span> for knitting <span class="hl-swap">nowadays</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br><span class="hl-conn">However</span>, that's all changing, and interest in <span class="hl-loc">knitting classes</span> in many countries is actually <span class="hl-swap">rising</span>, as more and more people are seeking formal instruction in the skill. <span class="hl-conn">With that trend</span>, we're <span class="hl-conn">also</span> seeing an <span class="hl-swap">increase in the sales figures</span> for knitting <span class="hl-ans">equipment [Q33]</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面第一句 <em>The number of knitting classes is now increasing</em> 直接对应 <em>interest in knitting classes … is rising</em>，两句是同一段；答案在紧跟的第二句；<br>
+2. <strong>改写对照</strong>：buying more ⇄ an increase in the sales figures（买得更多 ⇄ 销售数字上升）——具体消费行为被抽象成商业统计；nowadays ⇄ With that trend（如今 ⇄ 随着这一趋势）；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">However</span>（段落总开关，一开口整篇从“衰落”翻到“复兴”）+ <span class="hl-conn">With that trend</span>（承接上文，把话题带到答案）+ <span class="hl-conn">also</span>（并列补一条新信息）；<br>
+4. <strong>避坑</strong>：equipment 出现在句尾，前面被 <em>sales figures</em> 吸走注意力很容易写成 sales。你守住了句尾名词，也听出了“销量上升=买得更多”这层抽象。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, that's all changing, and interest in <span class="hl-loc">knitting classes</span> in many countries is actually <span class="hl-swap">rising</span>,</div>
+                            <div class="cn-line">然而，这一切都在改变；许多国家对编织课程的兴趣实际上在上升，【However 段落总开关；interest ... is rising ⇄ The number of knitting classes is now increasing（兴趣上升 ⇄ 课程数量增加）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> as more and more people are seeking formal instruction in the skill.</div>
+                            <div class="cn-line">因为越来越多的人在寻求这项技能的正规指导。【as 引导原因，纯铺垫】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">With that trend</span>, we're <span class="hl-conn">also</span> seeing an <span class="hl-swap">increase in the sales figures</span> for knitting <span class="hl-ans">equipment [Q33]</span>.</div>
+                            <div class="cn-line">随着这一趋势，我们也看到编织<strong>器材</strong>的销量在增长。【Q33 → equipment；buying more ⇄ an increase in the sales figures（买得更多 ⇄ 销售数字上升）；nowadays ⇄ With that trend（如今 ⇄ 随着这一趋势）】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_34 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q34">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q34 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + ⑥审题坑</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">money 后置干扰 + 词性失守</span><h3 class="card-title">Q34: 经济 economic 困难与 money 后置陷阱</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('34_Q34_经济economic困难与money后置陷阱.mp3', 'PQ34: Q34: 经济 economic 困难与 money 后置陷阱', this)">▶ 播放切片 (24s)</button><button class="record-card-btn" id="rec-btn-q34" onclick="handleRecBtnClick('q34')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q34" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q34"></span><span class="rec-status-text" id="rec-status-q34">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q34">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q34" onclick="playUserRecording('q34')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q34')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q34')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q34')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">gives <span class="hl-swap">support</span> in times of <span class="blank-answer">34</span> <span class="hl-loc">difficulty</span></div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br><span class="hl-conn">While</span> many people knitted garments in the past <span class="hl-conn">because</span> they couldn't afford to buy clothes, it's still true today that knitting can be <span class="hl-swap">helpful</span> if you're experiencing <span class="hl-ans">economic [Q34]</span> <span class="hl-swap">hardship</span>. If you have several children who all need warm winter clothes, knitting may save you a lot of <span class="hl-trap">money</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>difficulty</em> → 原文 <em>hardship</em>（困难 ⇄ 艰难），这是唯一能对上的词，听到它就要准备落笔；<br>
+2. <strong>改写对照</strong>：gives support ⇄ can be helpful（给予支持 ⇄ 会有帮助）；in times of ___ difficulty ⇄ if you’re experiencing ___ hardship（在 ___ 困难时期 ⇄ 如果你正经历 ___ 艰难）；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">While</span>（让步，前半句“买不起衣服”是过去的情况，不是答案位置）+ <span class="hl-conn">because</span> + <span class="hl-conn">if</span>（条件，答案就在 if 从句里）；<br>
+4. <strong>你写 money 的两个原因</strong>：① 你把 While 从句的意思理解成“没钱买衣服也没钱买别的”，提前进入了“钱”的语义场；② <span class="hl-trap">money</span> 在<strong>下一句</strong>才出现（may save you a lot of money），而且重读，你听到就填了。<strong>词性自检可以救命</strong>：in times of ___ difficulty，空格修饰 difficulty，只能是形容词，money 是名词，填入后 <em>in times of money difficulty</em> 语法不成立。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">While</span> many people knitted garments in the past <span class="hl-conn">because</span> they couldn't afford to buy clothes,</div>
+                            <div class="cn-line">虽然过去很多人编织衣物是因为买不起衣服，【While 让步：这是过去的情况，不是答案位置；“没钱买衣服”的语义可能误导你进入 money 语境】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> it's still true today that knitting can be <span class="hl-swap">helpful</span> if you're experiencing <span class="hl-ans">economic [Q34]</span> <span class="hl-swap">hardship</span>.</div>
+                            <div class="cn-line">但今天依然如此：如果你正经历<strong>经济</strong>困难，编织会有帮助。【Q34 → economic；gives support ⇄ can be helpful（给予支持 ⇄ 有帮助）；in times of ___ difficulty ⇄ if you’re experiencing ___ hardship（在困难时期 ⇄ 正经历艰难）；空格修饰 difficulty，只能填形容词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> If you have several children who all need warm winter clothes, knitting may save you a lot of <span class="hl-trap">money</span>.</div>
+                            <div class="cn-line">如果你有几个孩子都需要暖和的冬衣，编织可能会为你省下不少钱。【money 是下一句的后置重读干扰，不在 Q34 的位置】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_35 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q35">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q35 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">让步从句藏答案</span><h3 class="card-title">Q35: 只需 basic 基础技能与 little money 高级改写</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('35_Q35_只需basic基础技能与低投入.mp3', 'PQ35: Q35: 只需 basic 基础技能与 little money 高级改写', this)">▶ 播放切片 (14s)</button><button class="record-card-btn" id="rec-btn-q35" onclick="handleRecBtnClick('q35')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q35" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q35"></span><span class="rec-status-text" id="rec-status-q35">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q35">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q35" onclick="playUserRecording('q35')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q35')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q35')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q35')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">requires <span class="hl-swap">only</span> <span class="blank-answer">35</span> <span class="hl-loc">skills</span> and <span class="hl-swap">little money to start</span></div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>And the results of knitting your own clothes can be very rewarding, <span class="hl-conn">even though</span> the <span class="hl-loc">skills</span> you need to <span class="hl-swap">get going</span> are really quite <span class="hl-ans">basic [Q35]</span>, and the <span class="hl-swap">financial outlay</span> is <span class="hl-swap">minimal</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>skills</em> 原词复现，紧跟在 even though 从句主语之后；<br>
+2. <strong>改写对照</strong>：requires only ___ skills ⇄ the skills you need to get going are really quite ___（只需 ___ 技能 ⇄ 你起步所需的技能相当 ___）；little money ⇄ the financial outlay is minimal（很少的钱 ⇄ 资金支出极少）——“little money”被换成“financial outlay is minimal”，是全篇最难的改写之一；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">even though</span>（让步）——很多人以为让步=不重要，其实雅思听力里<strong>让步从句经常正是答案所在</strong>（先扬后抑，或先抑后扬）；<br>
+4. <strong>本题为什么对</strong>：你在 even though 后没有放松，skills 一出现就锁定了空格位置，并且听懂了 basic 与 little money 的并列结构。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> And the results of knitting your own clothes can be very rewarding, <span class="hl-conn">even though</span></div>
+                            <div class="cn-line">而且自己织衣服的成果会很有成就感，尽管【even though 让步：答案常在让步从句里，别放松】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> the <span class="hl-loc">skills</span> you need to <span class="hl-swap">get going</span> are really quite <span class="hl-ans">basic [Q35]</span>,</div>
+                            <div class="cn-line">你起步所需的<strong>技能</strong>其实相当<strong>基础</strong>，【Q35 → basic；requires only ___ skills ⇄ the skills you need to get going are really quite ___（只需 ___ 技能 ⇄ 起步所需技能相当 ___）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> and the <span class="hl-swap">financial outlay</span> is <span class="hl-swap">minimal</span>.</div>
+                            <div class="cn-line">而且资金投入极少。【little money to start ⇄ the financial outlay is minimal（起步钱很少 ⇄ 资金支出极少），全篇最难改写之一】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_36 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q36">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q36 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">rather than 对比前置</span><h3 class="card-title">Q36: 早期编织物是 round 圆形而非平的</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('36_Q36_早期编织物是round圆形而非平的.mp3', 'PQ36: Q36: 早期编织物是 round 圆形而非平的', this)">▶ 播放切片 (14s)</button><button class="record-card-btn" id="rec-btn-q36" onclick="handleRecBtnClick('q36')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q36" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q36"></span><span class="rec-status-text" id="rec-status-q36">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q36">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q36" onclick="playUserRecording('q36')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q36')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q36')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q36')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text"><span class="hl-swap">Findings show</span> <span class="hl-swap">early knitted items</span> to be <span class="blank-answer">36</span> <span class="hl-loc">in shape</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>One of the interesting things about knitting is that the <span class="hl-swap">earliest pieces of clothing</span> that have been found <span class="hl-swap">suggest</span> that most of the items produced were <span class="hl-ans">round [Q36]</span> <span class="hl-conn">rather than</span> <span class="hl-trap">flat</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>in shape</em> → 原文 <em>were round rather than flat</em>（形状描述直接展开）；<br>
+2. <strong>改写对照</strong>：Findings show ⇄ the earliest pieces of clothing that have been found suggest（发现表明 ⇄ 已发现的最早衣物表明）；early knitted items ⇄ the items produced（早期针织品 ⇄ 当时生产的物品）；in shape ⇄ were round rather than flat（在形状上 ⇄ 是圆的而不是平的）；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">rather than</span>（对比）——<strong>答案在 rather than 之前</strong>，后面的 flat 是对比项、不是答案；<br>
+4. <strong>本题为什么对</strong>：你没有等“in shape”三个字，而是听到 were + 形容词结构就准备落笔，round 一出来就写下，没有被 flat 带偏。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One of the interesting things about knitting is that the <span class="hl-swap">earliest pieces of clothing</span> that have been found <span class="hl-swap">suggest</span></div>
+                            <div class="cn-line">关于编织有一件有趣的事：已发现的最早的衣物表明，【Findings show ⇄ the earliest pieces of clothing that have been found suggest（发现表明 ⇄ 已发现的最早衣物表明）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> that most of the items produced were <span class="hl-ans">round [Q36]</span> <span class="hl-conn">rather than</span> <span class="hl-trap">flat</span>.</div>
+                            <div class="cn-line">当时生产的大多数物品是<strong>圆形的</strong>，而不是平的。【Q36 → round；in shape ⇄ were round rather than flat；rather than 之前才是答案，flat 是对比干扰】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_37 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q37">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q37 · 答对 ✓</span><span class="card-tag tag-p1">②生词坑 + P1 原词</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">like 举例引出答案</span><h3 class="card-title">Q37: 最早的针由木头和 bone 骨头制成</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('37_Q37_最早针由木头和bone骨头制成.mp3', 'PQ37: Q37: 最早的针由木头和 bone 骨头制成', this)">▶ 播放切片 (16s)</button><button class="record-card-btn" id="rec-btn-q37" onclick="handleRecBtnClick('q37')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q37" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q37"></span><span class="rec-status-text" id="rec-status-q37">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q37">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q37" onclick="playUserRecording('q37')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q37')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q37')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q37')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text">The <span class="hl-loc">first needles</span> were made of <span class="hl-loc">natural materials</span> such as <span class="hl-loc">wood</span> and <span class="blank-answer">37</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br><span class="hl-conn">What's more</span>, the very <span class="hl-loc">first needles</span> people used were <span class="hl-swap">hand-carved out of</span> <span class="hl-loc">wood</span> and other <span class="hl-loc">natural materials</span>, <span class="hl-conn">like</span> <span class="hl-ans">bone [Q37]</span>, <span class="hl-conn">whereas</span> today's needles are largely made of <span class="hl-trap">steel or plastic</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：needles / natural materials / wood 三个词全部原词复现，是本篇定位最友好的一题；<br>
+2. <strong>改写对照</strong>：were made of ⇄ hand-carved out of（由…制成 ⇄ 手工削制而成）；very first ⇄ The first（最早的 ⇄ 第一批）；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">What’s more</span>（递进，新考点开场）+ <span class="hl-conn">like</span>（举例，雅思里 <em>like / such as</em> 后面几乎必出答案）+ <span class="hl-conn">whereas</span>（对比，之后整段是今天的针，属干扰）；<br>
+4. <strong>本题为什么对</strong>：你抓住了 like 这个举例信号，bone 虽然是生词，但位置在 like 之后、wood and other natural materials 的并列里，靠结构也能推出它是材料名。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">What's more</span>, the very <span class="hl-loc">first needles</span> people used were <span class="hl-swap">hand-carved out of</span> <span class="hl-loc">wood</span> and other <span class="hl-loc">natural materials</span>,</div>
+                            <div class="cn-line">此外，人们使用的最早的针是用木头和其他天然材料手工削成的，【What's more 递进；were made of ⇄ hand-carved out of（由…制成 ⇄ 手工削成）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">like</span> <span class="hl-ans">bone [Q37]</span>,</div>
+                            <div class="cn-line">比如<strong>骨头</strong>，【Q37 → bone；like 举例信号，后面就是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">whereas</span> today's needles are largely made of <span class="hl-trap">steel or plastic</span>.</div>
+                            <div class="cn-line">而今天的针大多由钢或塑料制成。【whereas 对比，后半段是干扰信息】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_38 (Part 4) -->
+        <div class="slice-card" data-category="correct part4" id="card-q38">
+            <div class="card-header"><div><span class="card-tag tag-correct">Q38 · 答对 ✓</span><span class="card-tag tag-p1">⑤改写坑 + P3 改写</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">触感⇄皮肤感觉 改写</span><h3 class="card-title">Q38: 早期纱线手感 rough 粗糙</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('38_Q38_早期纱线手感rough粗糙.mp3', 'PQ38: Q38: 早期纱线手感 rough 粗糙', this)">▶ 播放切片 (11s)</button><button class="record-card-btn" id="rec-btn-q38" onclick="handleRecBtnClick('q38')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q38" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q38"></span><span class="rec-status-text" id="rec-status-q38">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q38">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q38" onclick="playUserRecording('q38')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q38')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q38')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q38')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text"><span class="hl-swap">Early yarns felt</span> <span class="blank-answer">38</span> <span class="hl-loc">to touch</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>Ancient people knitted using <span class="hl-loc">yarns</span> made from linen, hemp, cotton and wool, and these were often very <span class="hl-ans">rough [Q38]</span> <span class="hl-swap">on the skin</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>yarns</em> 原词复现；<em>to touch</em> 是“触感”，原文换成 <em>on the skin</em>（接触皮肤时的感觉）；<br>
+2. <strong>改写对照</strong>：felt ___ to touch ⇄ were very ___ on the skin（摸起来 ___ ⇄ 在皮肤上非常 ___）——同一个触觉，题干说“摸”，原文说“皮肤上”；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">and</span>（并列收束，把话头从句首的材料清单转到评价）；<br>
+4. <strong>本题为什么对</strong>：你在 linen / hemp / cotton / wool 四个材料名连读的轰炸下没有崩，等到 and these were 的结构一转就锁定了形容词位置。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Ancient people knitted using <span class="hl-loc">yarns</span> made from linen, hemp, cotton and wool,</div>
+                            <div class="cn-line">古代人用亚麻、大麻、棉花和羊毛制成的<strong>纱线</strong>编织，【四个材料名连读轰炸，属铺垫，不要在这里落笔】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">and</span> these were often very <span class="hl-ans">rough [Q38]</span> <span class="hl-swap">on the skin</span>.</div>
+                            <div class="cn-line">这些纱线摸起来往往非常<strong>粗糙</strong>。【Q38 → rough；felt ___ to touch ⇄ were very ___ on the skin（摸起来 ___ ⇄ 在皮肤上非常 ___）】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_39 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q39">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q39 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + ⑤改写坑</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">time 后置干扰 + 主谓错切</span><h3 class="card-title">Q39: 各地区有自己 style 风格与 time 后置陷阱</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('39_Q39_各地区有自己style风格与time陷阱.mp3', 'PQ39: Q39: 各地区有自己 style 风格与 time 后置陷阱', this)">▶ 播放切片 (25s)</button><button class="record-card-btn" id="rec-btn-q39" onclick="handleRecBtnClick('q39')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q39" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q39"></span><span class="rec-status-text" id="rec-status-q39">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q39">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q39" onclick="playUserRecording('q39')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q39')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q39')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q39')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text"><span class="hl-swap">Geographical areas</span> had <span class="hl-swap">their own</span> <span class="blank-answer">39</span> <span class="hl-loc">of knitting</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br>Another interesting fact about knitting is that <span class="hl-conn">because</span> it was practised in so many <span class="hl-swap">parts of the world</span> for so many purposes, <span class="hl-swap">regional</span> differences in <span class="hl-ans">style [Q39]</span> developed. This visual identity has allowed researchers to match bits of knitted clothing that have been unearthed <span class="hl-trap">over time</span> to the region from which the wearer came or the job that he or she did.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>Geographical areas</em> → 原文 <em>regional</em> / <em>parts of the world</em>（地理区域 ⇄ 世界的许多地方 / 地域的）——这是名词→形容词的词性转换，认不出就完全定位不到；<br>
+2. <strong>改写对照</strong>：had their own ___ of knitting ⇄ regional differences in ___ developed（有自己的一种编织 ___ ⇄ ___ 上的地域差异逐渐形成）——题干“某地有某种东西”被改写成“某种东西的地域差异形成”，主谓宾全换；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">because</span>（因果，原因部分可略）+ <em>Another interesting fact</em>（新话题开场）；<br>
+4. <strong>你写 time 的原因</strong>：style developed 里 developed 是谓语，style 是主语，必须切对主谓；你听到 differences in … developed 的结构没反应过来，注意力滑到下一句的 <span class="hl-trap">over time</span>（陆续出土），把重读的 time 写进了空格。词性自检同样能救：their own ___ of knitting，空格是名词中心词，time 放进去“自己的一种编织时间”句意不通。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Another interesting fact about knitting is that <span class="hl-conn">because</span> it was practiced in so many <span class="hl-swap">parts of the world</span> for so many purposes,</div>
+                            <div class="cn-line">关于编织另一个有趣的事实是：由于它在世界的许多地方因许多用途被实践，【Geographical areas ⇄ parts of the world（地理区域 ⇄ 世界许多地方）】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-swap">regional</span> differences in <span class="hl-ans">style [Q39]</span> developed.</div>
+                            <div class="cn-line"><strong>风格</strong>上的地域差异逐渐形成。【Q39 → style；had their own ___ of knitting ⇄ regional differences in ___ developed（有自己的一种编织风格 ⇄ 风格上的地域差异形成）；developed 是谓语，style 才是主语】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This visual identity has allowed researchers to match bits of knitted clothing that have been unearthed <span class="hl-trap">over time</span> to the region from which the wearer came or the job that he or she did.</div>
+                            <div class="cn-line">这种视觉特征使研究人员能够把陆续出土的针织衣物与穿着者来自的地区或从事的职业对应起来。【over time 是下一句的后置重读干扰，你把它写成了 time】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD_card_40 (Part 4) -->
+        <div class="slice-card" data-category="wrong part4" id="card-q40">
+            <div class="card-header"><div><span class="card-tag tag-wrong">Q40 · 答错 ✗</span><span class="card-tag tag-p1">③句意坑 + ②生词坑</span><span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">for example 举例藏答案</span><h3 class="card-title">Q40: 看羊 sheep 时顺便编织与听音盲猜</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('40_Q40_看羊sheep时顺便编织.mp3', 'PQ40: Q40: 看羊 sheep 时顺便编织与听音盲猜', this)">▶ 播放切片 (15s)</button><button class="record-card-btn" id="rec-btn-q40" onclick="handleRecBtnClick('q40')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-q40" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q40"></span><span class="rec-status-text" id="rec-status-q40">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q40">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q40" onclick="playUserRecording('q40')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q40')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q40')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q40')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="prompt-box"><div class="prompt-label">卷面题干</div><div class="prompt-text"><span class="hl-loc">Everyday tasks</span> like <span class="hl-swap">looking after</span> <span class="blank-answer">40</span> were <span class="hl-swap">done while knitting</span>.</div></div>
+                <div class="transcript-box"><strong>关键录音原文（答案句切片）：</strong><br><span class="hl-conn">As I've mentioned</span>, knitting offered people from poor communities a way of making extra money while doing other tasks. For many centuries, it seems, men, women and children took every opportunity to knit, <span class="hl-conn">for example</span>, <span class="hl-conn">while</span> <span class="hl-swap">watching over</span> <span class="hl-ans">sheep [Q40]</span>, walking to market or riding in boats.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>1. <strong>定位路径</strong>：卷面 <em>Everyday tasks</em> → 原文 <em>other tasks</em>；<em>looking after</em> → 原文 <em>watching over</em>（照看 ⇄ 看守），这是全篇最隐蔽的一组改写，两个词都是“照看”的口语化变体；<br>
+2. <strong>改写对照</strong>：were done while knitting ⇄ took every opportunity to knit … while（边织边做 ⇄ 抓住每个机会织，在…的时候）——题干是“被做”，原文是“人抓住机会做”，语态与主语全换；<br>
+3. <strong>信号词</strong>：<span class="hl-conn">for example</span>（举例，答案就在第一个例子里）+ <span class="hl-conn">while</span>（同时进行）；<br>
+4. <strong>你写 overdshit 的原因</strong>：定位对了，但 <em>watching over sheep</em> 这组音没听清——over 与 sheep 连读成 /ˈwɒtʃɪŋˈəʊvəʃiːp/，加上 sheep 是生词、句子又长，你选择了“听音盲猜”。这是典型的能力断层而非技巧问题：<strong>应该按“照看+动物”的语义去补</strong>（农场语境下只看羊/牛/马），而不是按声音硬拼。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">As I've mentioned</span>, knitting offered people from poor communities a way of making extra money while doing other tasks.</div>
+                            <div class="cn-line">正如我提到的，编织为贫困社区的人提供了一种在做其他事情的同时赚外快的方式。【other tasks ⇄ Everyday tasks（其他事情 ⇄ 日常事务），定位句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For many centuries, it seems, men, women and children took every opportunity to knit, <span class="hl-conn">for example</span>,</div>
+                            <div class="cn-line">看来在许多世纪里，男人、女人和孩子都抓住每一个机会编织，例如，【were done while knitting ⇄ took every opportunity to knit（边织边做 ⇄ 抓住每个机会织），语态主语全换】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">while</span> <span class="hl-swap">watching over</span> <span class="hl-ans">sheep [Q40]</span>, walking to market or riding in boats.</div>
+                            <div class="cn-line">在<strong>看羊</strong>、去集市或坐船的时候。【Q40 → sheep；looking after ⇄ watching over（照看 ⇄ 看守）；for example 后第一个例子就是答案；watching over sheep 连读 /ˈwɒtʃɪŋˈəʊvəʃiːp/】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD FULL4 -->
+        <div class="slice-card" data-category="full part4" id="card-full4">
+            <div class="card-header"><div><span class="card-tag tag-p1">完整精听 · Part 4 全篇</span><h3 class="card-title">Part 4 完整录音实战盲听（Hand Knitting · Q31–Q40）</h3></div>
+                <div class="card-actions"><button class="play-card-btn" onclick="playAudio('Section_4_Full_Hand_Knitting手工编织讲座.mp3', 'Part 4 完整录音：Hand Knitting 手工编织讲座', this)">▶ 播放完整 Part 4 (7m22s)</button><button class="record-card-btn" id="rec-btn-full4" onclick="handleRecBtnClick('full4')">🎙️ 录音跟读</button></div></div>
+            <div class="user-rec-panel" id="user-rec-panel-full4" style="display:none;">
+<div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-full4"></span><span class="rec-status-text" id="rec-status-full4">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-full4">00:00</span></div>
+<div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-full4" onclick="playUserRecording('full4')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('full4')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('full4')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('full4')">🗑️ 清除</button></div>
+</div>
+            <div class="card-body">
+                <div class="transcript-box"><strong>【完整音频实战目标】</strong>：7 分 22 秒一次听完，不停顿、不回看。四个必查点：① Q31 破折号插入语里的 grandmother 有没有抓住、family 有没有误填；② Q34 的 economic 是否在 money 出现前就写下；③ Q39 是否把 regional differences in <em>style</em> developed 的主谓切对；④ Q40 的 for example 之后是否第一时间锁住 sheep。</div>
+                <div class="diagnosis-box"><strong>整段路线图：</strong>knitting 历史 → 祖母形象（Q31 grandmother）→ 十年前预测消失（Q32 decade）→ However 复兴、器材销量涨（Q33 equipment）→ 经济困难时有用（Q34 economic）→ 技能基础、投入少（Q35 basic）→ 早期是圆形的（Q36 round）→ 最早的针用骨头（Q37 bone）→ 纱线粗糙（Q38 rough）→ 各地风格不同（Q39 style）→ 看羊时也在织（Q40 sheep）。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 Part 4 完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body full-transcript-scroll">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Good morning everyone. So today we're going to look at an important creative activity and that’s hand <span class="hl-loc">knitting</span>.</div>
+                            <div class="cn-line">各位早上好。今天我们要看一项重要的创造性活动——<strong>手工编织</strong>。【开篇定位词：hand knitting，与卷面大标题同词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Ancient knitted garments have been found in many different countries, showing that knitting is a global activity with a long history.</div>
+                            <div class="cn-line">在许多不同国家都发现了古代的针织衣物，说明编织是一项有着悠久历史的全球性活动。【对应卷面 Knitting has a long history around the world】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> When someone says the word <span class="hl-loc">knitting</span>, we <span class="hl-swap">might well picture</span> an <span class="hl-swap">elderly person</span> – a <span class="hl-ans">grandmother [Q31]</span> <span class="hl-conn">perhaps</span> – sitting by the fire knitting garments for themselves or other members of the <span class="hl-trap">family</span>.</div>
+                            <div class="cn-line">当有人说起“编织”这个词时，我们很可能会想到一位年长的人——也许是位<strong>祖母</strong>——坐在炉火边为自己或家里的其他成员织衣服。【Q31 → grandmother；imagine ⇄ might well picture；someone like an elderly person ⇄ a grandmother perhaps；family 是句尾干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's a homely image, <span class="hl-conn">but</span> one that may lead you to feel that knitting is an activity of the past – and, <span class="hl-conn">indeed</span>, <span class="hl-swap">during the previous</span> <span class="hl-ans">decade [Q32]</span>, it was one of the skills that was <span class="hl-swap">predicted to vanish</span> from everyday life.</div>
+                            <div class="cn-line">这是一幅温馨的画面，但它可能让你觉得编织是过去的行当——而事实上，在过去的<strong>十年</strong>里，它曾被预测会从日常生活中消亡。【Q32 → decade；A ___ ago ⇄ during the previous ___；expected to disappear ⇄ predicted to vanish；and indeed 是答案门铃】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For although humans have sewn and knitted their own clothing for a very long time, many of these craft-based skills went into decline when industrial machines took over – mainly <span class="hl-conn">because</span> they were no longer passed down from one generation to another.</div>
+                            <div class="cn-line">因为尽管人类很久以来就自己缝制和编织衣物，但当工业机器接管后，许多这类手工艺技能走向衰落——主要因为它们不再代代相传。【纯铺垫段，无答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, that’s all changing, and interest in <span class="hl-loc">knitting classes</span> in many countries is actually <span class="hl-swap">rising</span>, as more and more people are seeking formal instruction in the skill.</div>
+                            <div class="cn-line">然而，这一切都在改变；许多国家对编织课程的兴趣实际上在上升，因为越来越多的人在寻求正规的技能指导。【However 是本篇方向大转弯；对应卷面 The number of knitting classes is now increasing】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">With that trend</span>, we're <span class="hl-conn">also</span> seeing an <span class="hl-swap">increase in the sales figures</span> for knitting <span class="hl-ans">equipment [Q33]</span>.</div>
+                            <div class="cn-line">随着这一趋势，我们也看到编织<strong>器材</strong>的销量在增长。【Q33 → equipment；buying more ⇄ an increase in the sales figures；nowadays ⇄ With that trend】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So why do people want to be taught to knit at a time when a machine can readily do the job for them? The answer is that knitting, as a handicraft, has numerous benefits for those doing it. Let's consider what some of these might be.</div>
+                            <div class="cn-line">那么，在机器可以轻易完成这项工作的时代，为什么人们还想学编织呢？答案是，编织作为一门手艺，对做它的人有很多好处。我们来想想其中一些是什么。【设问过渡，下一段开始讲 benefits】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">While</span> many people knitted garments in the past <span class="hl-conn">because</span> they couldn’t afford to buy clothes, it’s still true today that knitting can be <span class="hl-swap">helpful</span> if you’re experiencing <span class="hl-ans">economic [Q34]</span> <span class="hl-swap">hardship</span>.</div>
+                            <div class="cn-line">虽然过去很多人编织衣物是因为买不起衣服，但今天依然如此：如果你正经历<strong>经济</strong>困难，编织会有帮助。【Q34 → economic；gives support ⇄ can be helpful；___ difficulty ⇄ ___ hardship；空格修饰 difficulty，只能填形容词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> If you have several children who all need warm winter clothes, knitting may save you a lot of <span class="hl-trap">money</span>.</div>
+                            <div class="cn-line">如果你有几个孩子都需要暖和的冬衣，编织可能会为你省下不少钱。【money 是 Q34 之后的重读干扰词】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> And the results of knitting your own clothes can be very rewarding, <span class="hl-conn">even though</span> the <span class="hl-loc">skills</span> you need to <span class="hl-swap">get going</span> are really quite <span class="hl-ans">basic [Q35]</span>, and the <span class="hl-swap">financial outlay</span> is <span class="hl-swap">minimal</span>.</div>
+                            <div class="cn-line">而且自己织衣服的成果会很有成就感，尽管你起步所需的<strong>技能</strong>其实相当<strong>基础</strong>，资金投入也极少。【Q35 → basic；requires only ___ skills ⇄ the skills you need to get going are quite ___；little money ⇄ the financial outlay is minimal】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">But</span> the more significant benefits in today’s world are to do with well-being. In a world where it’s estimated that we spend up to nine hours a day online, doing something with our hands that is craft-based makes us feel good. It releases us from the stress of a technological, fast-paced life.</div>
+                            <div class="cn-line">但在当今世界，更重要的好处与身心健康有关。在一个估计每天上网长达九小时的世界里，用双手做点手工活会让我们感觉良好，它把我们从科技化、快节奏生活的压力中释放出来。【对应卷面 reduces stress in a busy life，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Now, let’s look back a bit to early knitting activities. <span class="hl-conn">In fact</span>, no one really knows when knitting first began, <span class="hl-conn">but</span> archaeological remains have disclosed plenty of information for us to think about.</div>
+                            <div class="cn-line">现在让我们回顾一下早期的编织活动。事实上，没人真正知道编织最初何时开始，但考古遗迹为我们提供了大量可供思考的信息。【对应卷面 The origins are not known；In fact 是强调信号】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> One of the interesting things about knitting is that the <span class="hl-swap">earliest pieces of clothing</span> that have been found <span class="hl-swap">suggest</span> that most of the items produced were <span class="hl-ans">round [Q36]</span> <span class="hl-conn">rather than</span> <span class="hl-trap">flat</span>.</div>
+                            <div class="cn-line">关于编织有一件有趣的事：已发现的最早的衣物表明，当时生产的大多数物品是<strong>圆形的</strong>，而不是平的。【Q36 → round；Findings show ⇄ suggest；in shape ⇄ were round rather than flat；rather than 之前是答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Discoveries from the 3rd and 4th centuries in Egypt show that things like socks and gloves, that were needed to keep hands and feet warm, were knitted in one piece using four or five needles. That's very different from most knitting patterns today, which only require two.</div>
+                            <div class="cn-line">埃及三、四世纪的发现显示，像袜子和手套这类用来保暖手脚的物品，是用四五根针一体织成的。这与今天大多数只需两根针的编织图样大不相同。【背景细节，无空格】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">What’s more</span>, the very <span class="hl-loc">first needles</span> people used were <span class="hl-swap">hand-carved out of</span> <span class="hl-loc">wood</span> and other <span class="hl-loc">natural materials</span>, <span class="hl-conn">like</span> <span class="hl-ans">bone [Q37]</span>, <span class="hl-conn">whereas</span> today’s needles are largely made of <span class="hl-trap">steel or plastic</span> and make that characteristic clicking sound when someone’s using them.</div>
+                            <div class="cn-line">此外，人们使用的最早的针是用木头和其他天然材料手工削成的，比如<strong>骨头</strong>；而今天的针大多由钢或塑料制成，使用时发出那种特有的咔哒声。【Q37 → bone；were made of ⇄ hand-carved out of；like 举例引出答案；whereas 之后是干扰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Ancient people knitted using <span class="hl-loc">yarns</span> made from linen, hemp, cotton and wool, <span class="hl-conn">and</span> these were often very <span class="hl-ans">rough [Q38]</span> <span class="hl-swap">on the skin</span>.</div>
+                            <div class="cn-line">古代人用亚麻、大麻、棉花和羊毛制成的<strong>纱线</strong>编织，这些纱线摸起来往往非常<strong>粗糙</strong>。【Q38 → rough；felt ___ to touch ⇄ were very ___ on the skin】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The spinning wheel, which allowed people to make finer yarns and produce much greater quantities of them, led to the dominance of wool in the knitting industry – often favoured for its warmth.</div>
+                            <div class="cn-line">纺车使人们能纺出更细的纱线并大幅提高产量，从而带来了羊毛在编织业中的主导地位——羊毛常因保暖而受青睐。【对应卷面 Wool became the most popular yarn for spinning】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Another interesting fact about knitting is that <span class="hl-conn">because</span> it was practiced in so many <span class="hl-swap">parts of the world</span> for so many purposes, <span class="hl-swap">regional</span> differences in <span class="hl-ans">style [Q39]</span> developed.</div>
+                            <div class="cn-line">关于编织另一个有趣的事实是：由于它在世界的许多地方因许多用途被实践，<strong>风格</strong>上的地域差异逐渐形成。【Q39 → style；Geographical areas ⇄ parts of the world / regional；had their own ___ of knitting ⇄ regional differences in ___ developed】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> This visual identity has allowed researchers to match bits of knitted clothing that have been unearthed <span class="hl-trap">over time</span> to the region from which the wearer came or the job that he or she did.</div>
+                            <div class="cn-line">这种视觉特征使研究人员能够把陆续出土的针织衣物与穿着者来自的地区或从事的职业对应起来。【over time 是 Q39 之后的重读干扰词，你把它写成了 time】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">As I’ve mentioned</span>, knitting offered people from poor communities a way of making extra money while doing other tasks.</div>
+                            <div class="cn-line">正如我提到的，编织为贫困社区的人提供了一种在做其他事情的同时赚外快的方式。【other tasks ⇄ Everyday tasks，Q40 定位句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For many centuries, it seems, men, women and children took every opportunity to knit, <span class="hl-conn">for example</span>, <span class="hl-conn">while</span> <span class="hl-swap">watching over</span> <span class="hl-ans">sheep [Q40]</span>, walking to market or riding in boats.</div>
+                            <div class="cn-line">看来在许多世纪里，男人、女人和孩子都抓住每一个机会编织，例如在看<strong>羊</strong>、去集市或坐船的时候。【Q40 → sheep；looking after ⇄ watching over；for example 后第一个例子即答案】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So, let’s move on to take a…</div>
+                            <div class="cn-line">那么，我们接着来看……【讲座在此被截断，Part 4 结束】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+</div><footer><p>剑桥雅思 16 Test 3 Part 1 + Part 4 · 答案句切片与七坑复盘</p></footer></div>
 <script>
 const mainAudio = document.getElementById('main-audio');
 const nowPlayingText = document.getElementById('now-playing-text');
@@ -1120,11 +1622,26 @@ let recordSeconds = 0;
 let userAudioPlayer = null;
 const userRecordings = {};
 
+const _audioBlobCache = {};
 function playAudio(filename, title, button) {
     if (!mainAudio) return;
     if (userAudioPlayer) userAudioPlayer.pause();
-    mainAudio.src = filename;
-    mainAudio.play().catch(err => console.warn('音频播放未启动:', err));
+    if (!window._audioBlobCache) window._audioBlobCache = {};
+    const startPlay = (src) => {
+        mainAudio.src = src;
+        mainAudio.loop = isLooping;
+        mainAudio.play().catch(err => console.warn('音频播放未启动:', err));
+    };
+    if (window._audioBlobCache[filename]) { startPlay(window._audioBlobCache[filename]); }
+    else {
+        fetch(filename).then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.blob();
+        }).then(b => {
+            window._audioBlobCache[filename] = URL.createObjectURL(b);
+            startPlay(window._audioBlobCache[filename]);
+        }).catch(() => startPlay(filename));
+    }
     nowPlayingText.textContent = `▶ 正在播放：${title}`;
     document.querySelectorAll('.slice-card.playing').forEach(card => card.classList.remove('playing'));
     const card = button && button.closest('.slice-card');
@@ -1152,7 +1669,8 @@ function filterCategory(category, btn) {
     document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.slice-card').forEach(card => {
-        card.style.display = category === 'all' || card.dataset.category === category ? 'block' : 'none';
+        const cats = (card.dataset.category || '').split(/\s+/);
+        card.style.display = category === 'all' || cats.includes(category) ? 'block' : 'none';
     });
 }
 function recordingPanel(cardId) { return document.getElementById(`user-rec-panel-${cardId}`); }

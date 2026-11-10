@@ -1,0 +1,46 @@
+{
+  "7.5分标准版": {
+    "00_Master_Story_超级母题45秒全景.mp3": {
+      "question": "Work or study.",
+      "duration": 63.22
+    },
+    "01_Q1_Current_Job_当前职业.mp3": {
+      "question": "What is your current job, or what are you studying?",
+      "duration": 22.61
+    },
+    "02_Q2_Why_Chose_选择原因.mp3": {
+      "question": "Why did you choose this subject or job?",
+      "duration": 25.33
+    },
+    "03_Q3_Enjoy_Doing_热爱与成就感.mp3": {
+      "question": "Do you enjoy what you are currently doing?",
+      "duration": 24.17
+    },
+    "04_Q4_Career_Plans_职业规划.mp3": {
+      "question": "Do you plan to change your job or field in the near future?",
+      "duration": 31.08
+    }
+  },
+  "7分慢速跟读版": {
+    "00_Master_Story_超级母题45秒全景.mp3": {
+      "question": "Work or study.",
+      "duration": 88.9
+    },
+    "01_Q1_Current_Job_当前职业.mp3": {
+      "question": "What is your current job, or what are you studying?",
+      "duration": 31.47
+    },
+    "02_Q2_Why_Chose_选择原因.mp3": {
+      "question": "Why did you choose this subject or job?",
+      "duration": 34.89
+    },
+    "03_Q3_Enjoy_Doing_热爱与成就感.mp3": {
+      "question": "Do you enjoy what you are currently doing?",
+      "duration": 34.64
+    },
+    "04_Q4_Career_Plans_职业规划.mp3": {
+      "question": "Do you plan to change your job or field in the near future?",
+      "duration": 43.02
+    }
+  }
+}

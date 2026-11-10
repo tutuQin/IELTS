@@ -1,4 +1,4 @@
-# 📊 剑桥雅思 15 Test 4 听力 Part 1 复盘表（基于七坑表 + 3+2/9大陷阱体系）
+# 📊 剑桥雅思 15 Test 4 听力 Part 1 + Part 4 复盘表（基于七坑表 + 3+2/9大陷阱体系）
 
 > 🎧 **音频切片点播台直达**：[C15T4_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/C15T4_错题切片点播台.html) ｜ 📂 [切片总目录](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/切片/index.html) ｜ 📊 [剑15 Test 3 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test3_听力Part1_七坑与3+2复盘汇总表.md) ｜ 📊 [剑15 Test 2 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test2_听力Part1_七坑与3+2复盘汇总表.md) ｜ 📊 [剑15 Test 1 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test1_听力Part1_七坑与3+2复盘汇总表.md)
 >
@@ -141,6 +141,93 @@
 3. return (作名词表示往返票)
 4. information (不可数名词，绝无复数)
 ```
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）How the Industrial Revolution affected life in Britain 工业革命如何改变英国生活
+
+*卷面要求：Write **ONE WORD ONLY** for each answer.*  
+*本次战绩：**5 / 10**（答对：Q34, Q35, Q36, Q37, Q38；错题：Q31, Q32, Q33, Q39, Q40）*  
+*🎧 配套切片：[C15T4 点播台 · Part 4 区](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/C15T4_错题切片点播台.html)*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | —（定位错，句意未懂） | wealth | ✗ | **③句意坑** + **⑤改写（强调句打散词序）**<br>【**T2 强调句式 / 长主语埋定位词**】<br>(`P3改写 / A2改写`) | 原文: *"In fact, it was in the 19th century that the quantity and quality of people's possessions was used as an indication of the wealth of the country."*<br>(卷面: *___ : For the first time, people's possessions were used to measure Britain's [ 31 ]*) | **【it was ... that 强调句 + 双词 of 长主语】**：<br>1. **定位词被埋**：定位词 *possessions* 处于 *the quantity and quality of people's possessions*（数量和质量）这个长主语末尾，强调句 *it was in the 19th century that...* 又把时间状语顶到句首，整句语序完全不是「主谓宾」的直觉顺序。<br>2. **句意未贯通**：卷面 *measure Britain's ____*（衡量英国的____）在录音里变成 *used as an indication of the wealth of the country*（被用作国家财富的标志）——*measure ⇄ indication*（衡量 ⇄ 标志），没听出这层同义，就只剩一堆抽象名词。<br>3. **信号词漏接**：*In fact*（事实上）是答案句的预告信号，本该在此处把注意力拉满。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/31_Q31_19世纪possessions衡量国家wealth财富.mp3) |
+| **Q32** | —（误判已到第三板块，弃答） | technology | ✗ | **⑤改写** + **④逻辑（并列结构后置答案）**<br>【**T3 标题原词陷阱 areas**】<br>(`P3改写 / A2改写`) | 原文: *"This was the era from the mid-18th to the late 19th century, when improvements in how goods were made, as well as in technology, triggered massive social changes that transformed life for just about everybody in several key areas."*<br>(卷面: *Developments in production of goods and in [ 32 ] greatly changed lives*) | **【areas 撞大标题 → 误判区域结束 → 整题放弃】**：<br>1. **标题原词诱捕**：句尾 *in several key areas* 里的 *areas* 与卷面大标题 *MAIN AREAS OF CHANGE* 原词重合，你据此判断「已经讲到下一个板块」，果断放弃——而答案 *technology* 就在 *areas* 之前约 2 秒。<br>2. **并列结构失守**：卷面 *production of goods **and** in ____* 的并列，在录音里是 *improvements in how goods were made, **as well as** in technology*——*as well as* 后面第一个名词就是答案，听到并列连词时笔尖没就位。<br>3. **改写链未跟**：*Developments in production of goods* ⇄ *improvements in how goods were made*；*greatly changed lives* ⇄ *triggered massive social changes that transformed life*。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/32_Q32_goods生产与technology技术引发巨变与areas误区.mp3) |
+| **Q33** | source | power | ✗ | **①词音/③句意** + **⑥词性（A of B 取错中心词）**<br>【**T7 定语拦截**】<br>(`P3改写 / A1原词`) | 原文: *"And it's true that the Industrial Revolution couldn't have taken place at all if it weren't for these new sources of power."*<br>(卷面: *The Industrial Revolution would not have happened without the new types of [ 33 ] that were used then*) | **【new sources of power：把「来源」当答案，没理解句意】**：<br>1. **A of B 结构失误**：*sources* 是框架词（来源），*power* 才是「东西本体」。卷面 *new types of ____*（新型的____）要的是新东西，应取 *of* 后的 *power*；你填了先出现的 *sources*（且漏了 s）。<br>2. **双重否定虚拟语气没解码**：*couldn't have taken place at all if it weren't for...*（若非……根本不可能发生）与卷面 *would not have happened without* 完全同义，但句式全换，句意没接上，只能抓住零散名词。<br>3. **修复**：凡遇 *A of B / types of / sources of*，先在草稿记 B 再回看 A；听到 *if it weren't for* 就把注意力放到 for 后面的名词短语。 | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/33_Q33_新能源sources_of_power动力源与source误填.mp3) |
+| **Q34** | textiles | textiles | ✓ | **⑤改写**<br>【**同义替换识别成功**】<br>(`P3改写 / A1原词`) | 原文: *"The most advanced industry for much of the 19th century was textiles."*<br>(卷面: *The leading industry was [ 34 ] (its products became widely available)*) | **同义改写一步到位（✓）**：卷面 *leading*（领先的）⇄ 录音 *most advanced*（最先进的）；卷面括号提示 *products became widely available* ⇄ 下句 *fabrics, lace and ribbons were made available to everyone*。定位词 *industry* 原词重现，听到 *was* 立即落笔 *textiles*，节奏干净。 | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/34_Q34_19世纪最发达行业textiles纺织业.mp3) |
+| **Q35** | machines | machines | ✓ | **④逻辑** + **⑤改写（三连信号词）**<br>【**T2 转折 / 因果**】<br>(`P2逻辑 / A1原词`) | 原文: *"But enormous new machines were now being created that could produce the goods faster and on a larger scale, and these required a lot more space. So large factories were built... In fact, large numbers of people migrated from villages into towns as a result."*<br>(卷面: *New [ 35 ] made factories necessary and so more people moved into towns*) | **三连信号词全部接住（✓）**：① *But*（但是）——前句「在家小作坊生产」一转折，*machines* 立刻出现；② *So*（于是）——机器需要更大空间，于是建工厂，对应卷面 *made factories necessary*；③ *In fact*（事实上）——引出人口迁入城镇，对应 *moved into towns*。改写对：*required a lot more space, so large factories were built* ⇄ *made factories necessary*；*migrated from villages into towns* ⇄ *moved into towns*。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/35_Q35_巨大新machines机器催生大工厂.mp3) |
+| **Q36** | newspapers | newspapers | ✓ | **⑤改写** + **④逻辑（significantly 信号）**<br>(`P3改写 / A1原词`) | 原文: *"And the goods they moved weren't just coal, iron, clothes, and so on – significantly, they included newspapers, which meant that thousands of people could also read about what was available in the shops."*<br>(卷面: *Because of the new transport: greater access to [ 36 ] made people more aware of what they could buy in shops*) | **列举铺垫中的强调词抓得准（✓）**：*weren't just coal, iron, clothes*（不只是煤铁衣服）是铺垫，*significantly*（值得注意的是）一出就锁定 *newspapers*。改写对：*greater access to* ⇄ *included / could read about*；*aware of what they could buy in shops* ⇄ *read about what was available in the shops*。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/36_Q36_铁路运送newspapers报纸刺激购买欲.mp3) |
+| **Q37** | local | local | ✓ | **⑤改写** + **④逻辑（instead of 对比）**<br>(`P2逻辑 / A1原词`) | 原文: *"So faster forms of transport resulted in distribution becoming far more efficient – goods could now be sold all over the country, instead of just in the local market."*<br>(卷面: *when shopping, people were not limited to buying [ 37 ] goods*) | **对比连词锁答案（✓）**：卷面 *not limited to buying ____ goods*（不再只买____商品）⇄ 录音 *sold all over the country, **instead of** just in the local market*。*not limited to* ⇄ *instead of just*，否定↔对比；*instead of* 后面第一个形容词就是答案 *local*，落笔干脆。 | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/37_Q37_不再局限于local本地市场.mp3) |
+| **Q38** | lighting | lighting | ✓ | **⑤改写（词性转换）** + **④逻辑（for instance）**<br>(`P3改写 / A1原词`) | 原文: *"The entrepreneurs who opened these found new ways to stock them with goods, and to attract customers: for instance, improved lighting inside greatly increased the visibility of the goods for sale."*<br>(卷面: *The displays of goods were more visible: inside stores because of better [ 38 ]*) | **举例信号后取词（✓）**：*for instance*（比如）一出现，例子里的中心名词就是答案 *lighting*。改写对：*displays of goods were more visible* ⇄ *greatly increased the visibility of the goods for sale*（形容词 visible ⇄ 名词 visibility）；*better* ⇄ *improved*。卷面 *inside stores* 与录音 *inside* 原词重合，辅助确认。 | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/38_Q38_店内lighting照明提升商品可见度.mp3) |
+| **Q39** | glass | windows | ✗ | **③句意** + **⑥审题（复数 were）**<br>【**T3 材料词原词抢跑 / 后置定语从句**】<br>(`P3改写 / A1原词`) | 原文: *"Another development that made goods more visible from outside resulted from the use of plate glass, which made it possible for windows to be much larger than previously."*<br>(卷面: *outside stores, because [ 39 ] were bigger*) | **【听到 glass 就下笔：材料 ≠ 变大之物，主从关系听反】**：<br>1. **主从关系错位**：句子主干是 *Another development ... resulted from the use of plate glass*（另一项发展源于平板玻璃的使用）——*plate glass* 是实现手段；真正答案在 *which* 定语从句：*made it possible for **windows** to be much larger*（让橱窗可以更大）。你理解成「用于制作 glass 的东西」，把修饰关系整个听反。<br>2. **审题语法可自检**：卷面 *because ____ **were** bigger*，空前是复数动词 *were*，答案必须是复数名词——*glass*（不可数）语法上直接出局，*windows* 才是复数。<br>3. **修复**：听到材料词（glass / wood / metal）先记不写，等 *which / that* 从句里的功能名词；落笔前 1 秒检查空前 be 动词的单复数。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/39_Q39_plate_glass让windows橱窗变大与glass陷阱.mp3) |
+| **Q40** | sugar | advertising | ✗ | **③句意** + **⑤改写（答案前置）**<br>【**T3 结尾举例词抢答 / 后置定语**】<br>(`P3改写 / A1原词`) | 原文: *"Previously, the focus had been on informing potential customers about the availability of goods; now there was an explosion in advertising trying to persuade people to go shopping."*<br>(卷面: *[ 40 ] that was persuasive became much more common*) | **【答案前置 + 讲座结尾 sugar 举例抢答】**：<br>1. **答案先出、定位词后到**：答案 *advertising* 先出现，*trying to persuade people*（试图说服人们）作为后置定语才补上——卷面 *persuasive*（有说服力的）在录音里是动词 *persuade*，词性一换就认不出，听到 *advertising* 时没敢落笔。<br>2. **结尾举例误当答案**：讲座最后 *from **sugar** to cutlery*（从糖到餐具）是「奢侈品→必需品」的举例，出现在 Q40 之后约 12 秒，卷面根本没有对应空格；*sugar* 只是结尾词，属于典型的「最后听到的词最响」错觉。<br>3. **修复**：*Previously ... now ...* 是标准的时间对比框架，*now* 之后的第一句就是答案；讲座收尾的举例串（sugar / cutlery / mobile phones）一律不写。 | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T4_错题音频切片/40_Q40_advertising广告爆炸与sugar干扰.mp3) |
+
+---
+
+### Part 4 五连错题的三条病根（Q31 / Q32 / Q33 / Q39 / Q40）
+
+```text
+               ┌── Q31: it was in the 19th century that... 强调句 ──► possessions 埋在长主语末尾 ──► 【定位错 + 句意断】──► 空
+               │
+Part 4 崩盘链   ├── Q32: 听到 several key areas（撞大标题）──► 误判「讲到第三板块」──► 果断弃答 ──► 【technology 已过】
+               │
+               ├── Q33: 听到 sources of ___ ──► 把「来源」sources 当答案 ──► 【power 才是本体】──► 填 source
+               │
+               ├── Q39: 听到 plate glass ──► 材料词抢跑写 glass ──► 漏掉 which 从句里的 windows ──► 【卷面 were 已提示复数】
+               │
+               └── Q40: 听到 advertising 没敢写 ──► 讲座结尾 sugar 举例抢答 ──► 【答案前置 + 结尾词错觉】
+```
+
+#### 病根 1：长句改写把定位词「藏」起来（Q31 / Q32）
+- **Q31 强调句**：`it was in the 19th century that the quantity and quality of people's possessions was used as an indication of the wealth of the country.`
+  强调句把时间状语顶到句首，定位词 *possessions* 被「数量和质量」这个长主语拖到句子中后段——**等定位词 = 等丢答案**。
+- **Q32 并列结构后置答案**：`improvements in how goods were made, as well as in technology, triggered...`
+  *as well as* 是并列补充，答案在它后面第一个名词；而句尾 *in several key areas* 与卷面大标题 *MAIN AREAS OF CHANGE* 原词重合，制造「区域已结束」的错觉。
+- **铁律**：听到 *it is/was ... that*、*as well as*、*along with*、*and in* —— 笔尖立刻就位，等结构后面第一个名词；**大标题里的原词（areas）出现在句中时，先回看本题是否已落笔，再决定是否翻页**。
+
+#### 病根 2：A of B 与「材料词」的定语拦截（Q33 / Q39）
+- **Q33**：*new sources of **power*** —— *sources* 是框架（来源），*power* 是本体。卷面 *new types of ____* 要「新东西」，取 *of* 后的 *power*；填 *source* 等于把定语当答案。
+- **Q39**：*the use of **plate glass**, which made it possible for **windows** to be much larger* —— *plate glass* 是**手段**，*windows* 才是「变大之物」。卷面 `because ____ **were** bigger` 的复数 be 动词已经把 *glass* 排除。
+- **铁律**：① *A of B* 结构先记 B；② 材料/工具类名词（glass / wood / metal / machine）先记不写，等 *which / that* 从句里的功能名词；③ 落笔前 1 秒做单复数质检。
+
+#### 病根 3：答案前置 + 结尾举例抢答（Q40）
+- **Q40**：*now there was an explosion in **advertising** trying to persuade people to go shopping.*
+  答案 *advertising* 先出，*trying to persuade*（= 卷面 *persuasive*）后置修饰，词性一换就认不出，于是犹豫到句末；紧接着讲座收尾 *from **sugar** to cutlery* 是举例区，被你当成了答案。
+- **铁律**：*Previously ... now ...* 的时间对比里，**now 后第一句就是答案句**；讲座/独白结尾的举例串（sugar, cutlery, mobile phones）一律不写。
+
+---
+
+### Part 4 改写对沉淀（务必背下来）
+
+```text
+【Q31】measure Britain's wealth         <==>  was used as an indication of the wealth of the country
+       For the first time              <==>  In fact, it was in the 19th century that...（强调句 = 首次）
+【Q32】Developments in production of goods <==>  improvements in how goods were made
+       greatly changed lives           <==>  triggered massive social changes that transformed life
+       and in ____                     <==>  as well as in technology（并列补充，答案在后）
+【Q33】would not have happened without  <==>  couldn't have taken place at all if it weren't for
+       new types of ____               <==>  new sources of power（取 of 后本体）
+【Q34】leading industry                 <==>  the most advanced industry
+       products became widely available <==>  fabrics, lace and ribbons were made available to everyone
+【Q35】made factories necessary          <==>  required a lot more space, so large factories were built
+       moved into towns                 <==>  migrated from villages into towns
+【Q36】greater access to                <==>  they included ... / could read about ...
+       aware of what they could buy in shops <==>  read about what was available in the shops
+【Q37】not limited to buying ____ goods  <==>  sold all over the country instead of just in the local market
+【Q38】displays of goods were more visible <==>  greatly increased the visibility of the goods for sale
+       better                           <==>  improved
+【Q39】outside stores                   <==>  visible from outside
+       were bigger                      <==>  to be much larger than previously
+【Q40】persuasive（形容词）              <==>  trying to persuade people（动词，后置定语）
+       became much more common          <==>  there was an explosion in
+```
+
+### Part 4 三句话训练法（配合点播台）
+
+1. **盲听切片**：在点播台切到「🏭 Part 4 工业革命讲座」，只看卷面题干，逐题播放切片，每题听 2 遍内必须落笔——重点练 Q31 的强调句、Q33 的 A of B、Q39 的材料词忍住、Q40 的 *now* 后落笔。
+2. **对照标注精听**：展开每张卡的「完整听力原文与逐句翻译」，对照**蓝色（定位词）→ 琥珀色（替换处）→ 粉色（连词）→ 绿色（答案）**逐句走一遍，把每处改写的中文意思念出来。
+3. **全篇盲做**：最后播放「Part 4 完整录音」，白纸重做一遍，专测 5 个坑位是否不再踩；错题回到对应切片做影子跟读 3 遍。
 
 ---
 

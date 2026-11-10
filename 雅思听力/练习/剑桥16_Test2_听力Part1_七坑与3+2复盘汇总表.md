@@ -1,4 +1,4 @@
-# 📊 剑桥雅思 16 Test 2 听力 Part 1 复盘表（基于七坑表 + 3+2/9大陷阱体系）
+# 📊 剑桥雅思 16 Test 2 听力 Part 1 + Part 4 复盘表（基于七坑表 + 3+2/9大陷阱体系）
 
 > 🎧 **音频切片点播台直达**：[C16T2_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/C16T2_错题切片点播台.html) ｜ 📂 [切片总目录](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/切片/index.html) ｜ 📊 [剑16 Test 1 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥16_Test1_听力Part1_七坑与3+2复盘汇总表.md) ｜ 📊 [剑15 Test 1 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test1_听力Part1_七坑与3+2复盘汇总表.md)
 >
@@ -138,6 +138,91 @@
 3. payment (注意词性是名词，源于动词 pay)
 4. plastic (塑料材质，注意 ic 结尾)
 ```
+
+---
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）Health Benefits of Dance 舞蹈的健康益处
+
+*卷面要求：Write **ONE WORD ONLY** for each answer.*  
+*本次战绩：**4 / 10**（答对：Q32, Q33, Q36, Q37；错题：Q31, Q34, Q35, Q38, Q39, Q40）*  
+*🎧 配套切片：[C16T2 点播台 · Part 4 区](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/C16T2_错题切片点播台.html)*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | task | creativity | ✗ | **⑤改写** + **⑥审题（词性自检缺失）**<br>【**T3 句尾名词吸走注意力**】<br>(`P3改写 / A2改写`) | 原文: *"The result showed that those who chose to dance showed much more creativity when doing problem-solving tasks."*<br>(卷面: *An experiment on university students suggested that dance increases [ 31 ]*) | **答案在句中被两个 task 前后夹击**：<br>1. **改写位没认出**：*increases* ⇄ *showed much more*（增加 ⇄ 表现出明显更多的），题干一个动词被换成「动词+程度副词」。<br>2. **末词错觉**：*cognitive tasks*（实验前）与句尾 *problem-solving tasks* 都是实验材料词，因「最后听到的词最响」写成 task。<br>3. **词性可自检**：increases 后接抽象名词，「跳舞增加任务」句意不通——落笔前 1 秒做词性校验即可拦下。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/31_Q31_实验证明跳舞提升creativity创造力与tasks陷阱.mp3) |
+| **Q32** | therapy | therapy | ✓ | **⑤改写**<br>【**同义短语改写识别成功**】<br>(`P3改写 / A2改写`) | 原文: *"He thinks dance should be prescribed as therapy to help people overcome issues such as depression."*<br>(卷面: *For those with mental illness, dance could be used as a form of [ 32 ]*) | **观点信号 + 双重改写全部接住（✓）**：mental illness ⇄ *mental health problems*（心理疾病 ⇄ 心理健康问题）；a form of ⇄ *prescribed as*（一种形式 ⇄ 被作为处方开出，prescribe 本义开处方）。*He thinks* 观点信号后落笔，*depression* 是 issues such as 的举例，正确排除。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/32_Q32_舞蹈作为therapy疗法治疗心理健康.mp3) |
+| **Q33** | fitness | fitness | ✓ | **⑤改写（定语从句后置）**<br>【**even 让步强调**】<br>(`P3改写 / A1原词`) | 原文: *"Anyone can have a go, even those whose standard of fitness is quite low."*<br>(卷面: *accessible for people with low levels of [ 33 ]*) | **前置定语被拆成后置从句（✓）**：low levels of ⇄ *whose standard of ... is quite low*（低水平的 ⇄ 标准相当低的）；accessible ⇄ *Anyone can have a go*（可参与的 ⇄ 任何人都能试一试）。*even* 让步强调后第一个名词组即答案。 | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/33_Q33_低fitness体能者也可参与的舞蹈.mp3) |
+| **Q34** | —（听到 balance 却错填到 Q35） | balance | ✗ | **⑤改写（下义词具体化）** + **④逻辑（题序错位）**<br>【**T3 accidents ⇄ falls 未识别**】<br>(`P3改写 / A2改写`) | 原文: *"...dancing lowers the risk of falls, which could result in a broken hip, for example, by helping people to improve their balance."*<br>(卷面: *better [ 34 ] reduces the risk of accidents*) | **【定位词改写识别失败 → 题序错位】**：<br>1. **下义词替换**：卷面 *accidents*（事故）在原文变成 *falls*（摔倒）——这是老年人最典型的「事故」，属于具体化改写，你没认出，以为 Q34 还没开始。<br>2. **改写链**：reduces ⇄ *lowers*；better ⇄ *improve*（形容词 ⇄ 动词）。<br>3. **代价**：完整听到 *improve their balance* 却判断成「错过了/还没到」，把 balance 填进 Q35，Q34 空缺——一题错位连累两题。改写本必收：accidents ⇄ falls。 | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/34_Q34_更好balance平衡减少摔倒事故与错位填写.mp3) |
+| **Q35** | balance（占用了 Q34 的答案） | brain | ✗ | **⑤改写（幅度最大）** + **③句意**<br>【**T3 定位词全被换掉**】<br>(`P3改写 / A2改写`) | 原文: *"For older people, this kind of activity is especially important because it forces their brain to process things more quickly and to retain more information."*<br>(卷面: *improves [ 35 ] function by making it work faster*) | **【定位词 function / work faster 一个原词都没出现】**：<br>1. **拟人化改写**：making it work faster ⇄ *process things more quickly*（让它运转更快 ⇄ 更快处理事情）；improves ... function ⇄ *forces ... to*（改善功能 ⇄ 迫使）。<br>2. **定位失效**：题干两个「定位词」都是改写，只能靠 Q34 落笔后的**顺序推进**来锚定。<br>3. **修复**：审题时预判「work faster 这种大白话必然被换」，主动监听 quickly / speed / process 类词，而非死等原词。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/35_Q35_跳舞加速brain大脑运转与work_faster改写.mp3) |
+| **Q36** | motivation | motivation | ✓ | **⑤改写（解释说明）**<br>【**and 并列双果**】<br>(`P3改写 / A1原词`) | 原文: *"Participants report feeling less tired and having greater motivation to be more active and do daily activities such as gardening or walking to the shops or a park."*<br>(卷面: *gives people more [ 36 ] to take exercise*) | **并列信号后取第二分支（✓）**：gives people more ⇄ *having greater*（给予更多 ⇄ 拥有更大的）；take exercise ⇄ *be more active and do daily activities*（锻炼 ⇄ 更活跃、做日常活动，解释说明型改写）。*and* 连接「不疲劳」与「更有动力」双果，答案在第二分支。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/36_Q36_更大motivation动力去锻炼.mp3) |
+| **Q37** | isolation | isolation | ✓ | **⑤改写（程度解释）**<br>【**长铺垫后出答案**】<br>(`P3改写 / A1原词`) | 原文: *"This helps to develop new relationships and can reduce older people's sense of isolation, which is a huge problem in many countries."*<br>(卷面: *can lessen the feeling of [ 37 ], very common in older people*) | **15 秒社交铺垫里没有答案（✓）**：lessen ⇄ *reduce*；the feeling of ⇄ *sense of*；very common ⇄ *a huge problem in many countries*（很常见 ⇄ 许多国家的大问题）。ballroom / country dancing、touching a dance partner 全是铺垫，耐心等到 *and* 后的并列双果。 | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/37_Q37_减少老年人isolation孤独感.mp3) |
+| **Q38** | —（定位到但整句未懂） | calories | ✗ | **⑤改写（核心动词）** + **②生词**<br>【**T3 uses up ⇄ burns**】<br>(`P3改写 / A2改写`) | 原文: *"...found that a class lasting 40 minutes burns about 370 calories. This is similar to moderately intense exercises like step aerobics or kickboxing."*<br>(卷面: *doing Zumba for 40 minutes uses up as many [ 38 ] as other quite intense forms of exercise*) | **【定位成功、理解全失守】**：<br>1. **动词改写**：uses up ⇄ *burns*（消耗 ⇄ 燃烧）——burn calories 是固定搭配，burns 没接住整句就散架。<br>2. **比较结构改写**：as many ... as other quite intense forms ⇄ *similar to moderately intense exercises*（与其他高强度形式一样多 ⇄ 与中等强度运动相似）。<br>3. **数字干扰**：370 只是修饰，空格要 ONE WORD，calories 才是「被消耗的东西」；calories /ˈkæləriz/ 需进生词本。 | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/38_Q38_40分钟Zumba燃烧calories卡路里.mp3) |
+| **Q39** | habit（Q40 的答案被提前写走） | obesity | ✗ | **②生词 + ⑤改写（轻读介词短语）** + **④逻辑（错位连错）**<br>【**T3 with obesity 一闪而过**】<br>(`P3改写 / A2改写`) | 原文: *"A study in the American Journal of Health Behaviour showed that when women with obesity did Zumba three times a week for 16 weeks, they lost an average of 1.2 kilos..."*<br>(卷面: *women suffering from [ 39 ] benefited from doing Zumba*) | **【轻读答案漏抓 → 19 秒后错位】**：<br>1. **介词短语压缩**：suffering from ⇄ *with*（遭受……的 ⇄ 患有……的），obesity 藏在轻读的 with 短语里，一闪而过。<br>2. **干扰密集**：1.2 kilos、body fat、1% 三个研究数据紧接其后，抢占注意力。<br>3. **错位代价**：没抓到 obesity → 举着笔等 → 19 秒后听到重读的 *made it a habit* 便写进 Q39，Q40 随之失守。军规：*women with...* 区域一过立刻跳，预读 Q40 的 became a。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/39_Q39_肥胖obesity女性受益与habit错位.mp3) |
+| **Q40** | —（定位到但改写未懂） | habit | ✗ | **⑤改写（句式转换）** + **③句意**<br>【**T3 became ⇄ made it**】<br>(`P3改写 / A2改写`) | 原文: *"More importantly, the women enjoyed the class so much that they made it a habit and continued to attend classes at least once a week..."*<br>(卷面: *Zumba became a [ 40 ] for the participants*) | **【定位成立、句意没成型】**：<br>1. **句式改写**：became a ⇄ *made it a*（变成一种 ⇄ 使之成为一种），题干系动词被换成 make + 宾语 + 宾补，it 指代「跳尊巴」这件事。<br>2. **指代回照**：participants ⇄ *the women*。<br>3. **信号**：*More importantly*（强调）+ *so ... that*（结果），答案在 that 从句内；结尾 *very unusual* 是评价，不含答案。 | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C16T2_错题音频切片/40_Q40_Zumba成为habit习惯与made_it改写.mp3) |
+
+---
+
+### Part 4 六道错题的两条病根（Q31 / Q34 / Q35 / Q38 / Q39 / Q40）
+
+```text
+               ┌── Q31: showed much more [creativity] when doing problem-solving tasks
+               │        └─► 句尾 tasks 最响 ──► 写 task（末词错觉 + 词性未校验）
+               │
+Part 4 崩盘链   ├── Q34: accidents ⇄ falls 没认出 ──► 以为「还没到」──► balance 错填进 Q35 ──► 【一错连两题】
+               │
+               ├── Q35: function / work faster 全被改写（process things more quickly）
+               │        └─► 零原词可抓 ──► 定位彻底失效 ──► 只能靠顺序推进兜底
+               │
+               ├── Q38: uses up ⇄ burns 未识别 ──► 整句散架 ──► calories 听不懂、370 又抢镜
+               │
+               ├── Q39: with obesity 轻读一闪 ──► 举笔空等 19 秒 ──► 把 Q40 的 habit 写进 Q39
+               │
+               └── Q40: became a ⇄ made it a 句式没成型 ──► 定位对了也不敢落笔
+```
+
+#### 病根 1：定位词本身被改写，导致「以为这题还没到 / 已经过了」（Q34 / Q35）
+
+- **Q34 下义词具体化**：卷面 `accidents` → 原文 `falls`。这不是同义词，而是**把上位概念换成最典型的实例**——老年人摔倒＝事故。同类替换还有 `exercise ⇄ be more active and do daily activities`、`mental illness ⇄ mental health problems`。
+- **Q35 整句换说法**：卷面 `improves ___ function by making it work faster` → 原文 `forces their brain to process things more quickly`。题干用拟人化的大白话（work faster），原文换成学术表达（process quickly）——**一个原词都不留**。
+- **应对**：审题时给每个空格标一个「**改写风险等级**」：名词定位词（Zumba、40 minutes、University of Wisconsin）保留原词概率高；动词、形容词、大白话短语（work faster、uses up、become）几乎必然被改写，必须提前准备近义词监听清单。
+
+#### 病根 2：答案藏在轻读功能词里 + 错位 → 连错（Q31 / Q38 / Q39 / Q40）
+
+- **Q39** 是最贵的一题：`with obesity` 三个音节轻读滑过，之后 19 秒无答案，重读的 `habit` 一出现就被误填——**Part 4 的答案不总是重读，介词短语里的小词常是答案本体**。
+- **Q31** 反过来：`creativity` 在句中，句尾两个 `tasks` 又重读又熟悉，形成「末词错觉」。
+- **Q40** 是句意没成型：听到了 `made it a habit` 但 `became ⇄ made it` 的句式转换没在脑中完成，不敢落笔。
+- **统一军规**：① 每个空格配「词性 + 语义类型」双预判（increases 后接抽象名词、uses up 后接被消耗的物质）；② 定位词过去 2 秒没答案立刻跳，别举着笔等；③ 答案句只盯「空格前的动词/介词」和其后 3 个词。
+
+---
+
+### Part 4 改写对沉淀（本次新增）
+
+| # | 卷面（题干） | 原文（录音） | 改写类型 | 中文对照 |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | increases | showed much more | 动词 → 动词+程度 | 增加 ⇄ 表现出明显更多的 |
+| 2 | be used as a form of | be prescribed as | 短语改写（专业语境） | 被用作一种形式 ⇄ 被作为处方开出 |
+| 3 | low levels of | whose standard of ... is quite low | 前置定语 → 定语从句 | 低水平的 ⇄ 标准相当低的 |
+| 4 | accessible | Anyone can have a go | 形容词 → 口语句 | 可参与的 ⇄ 任何人都能试一试 |
+| 5 | **accidents** | **falls** | **下义词具体化** | 事故 ⇄ 摔倒 |
+| 6 | better | improve | 形容词 → 动词 | 更好的 ⇄ 改善 |
+| 7 | making it work faster | process things more quickly | 拟人化 → 学术表达 | 让它运转更快 ⇄ 更快处理事情 |
+| 8 | take exercise | be more active and do daily activities | 概念 → 行为列举 | 锻炼 ⇄ 更活跃、做日常活动 |
+| 9 | lessen the feeling of | reduce ... sense of | 同义（动词+名词） | 减轻……的感觉 ⇄ 减少……感 |
+| 10 | very common | a huge problem in many countries | 程度 → 解释 | 很常见 ⇄ 许多国家的大问题 |
+| 11 | **uses up** | **burns** | **固定搭配改写** | 消耗 ⇄ 燃烧（calories） |
+| 12 | as many ... as other quite intense forms | similar to moderately intense exercises | 比较结构 → 形容词短语 | 与其他高强度形式一样多 ⇄ 与中等强度运动相似 |
+| 13 | **suffering from** | **with** | **分词 → 介词（轻读）** | 遭受……的 ⇄ 患有……的 |
+| 14 | **became a** | **made it a** | **系动词 → make 复合结构** | 变成一种 ⇄ 使之成为一种 |
+
+---
+
+### 🎯 针对 Part 4 的靶向精练三步法（本套专用）
+
+1. **Step 1 改写风险分级（审题 30 秒）**：每个空格标「原词概率高 / 必然改写」。专有名词、数字、学科名 → 原词；动词、形容词、口语短语 → 必然改写，先想 2 个近义词再去听。
+2. **Step 2 答案句三词窗口（听时）**：定位词一响，注意力只放在「空格前那个动词/介词 + 其后 3 个词」上，不要在整句里平均分配注意力——Part 4 的答案永远是短语级的，不是句意级的。
+3. **Step 3 错位止损（听时）**：任何一题听到答案却没把握，**先写，再跳**，绝不回头改前题。Q34→Q35 的连错就是回头改的代价。
 
 ---
 

@@ -1,4 +1,4 @@
-# 📊 剑桥雅思 15 Test 3 听力 Part 1 复盘表（基于七坑表 + 3+2/9大陷阱体系）
+# 📊 剑桥雅思 15 Test 3 听力 Part 1 + Part 4 复盘表（基于七坑表 + 3+2/9大陷阱体系）
 
 > 🎧 **音频切片点播台直达**：[C15T3_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/C15T3_错题切片点播台.html) ｜ 📂 [切片总目录](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/切片/index.html) ｜ 📊 [剑15 Test 2 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test2_听力Part1_七坑与3+2复盘汇总表.md) ｜ 📊 [剑15 Test 1 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥15_Test1_听力Part1_七坑与3+2复盘汇总表.md)
 >
@@ -135,3 +135,87 @@
 | **C15 T1** | **4 / 10** | 认知过载雪崩（Q4, Q8-10脑白）、时态陷阱犹豫改错（Q5 10改8）、字母音混淆（Q1 Jamieson） | 开启系统复盘体系，建立 1.5 秒断舍离纪律 | 彻底遏制听觉过载解离 |
 | **C15 T2** | **6 / 10** | 先验固化死锁（Q6 poster能不能吃）、生词慌乱抢答（Q7 carpentry）、转折脱敏（Q2 but review） | 彻底没有出现后半段雪崩！前 4 题拿分稳健 | 戒除对生词的过度反应与狭隘脑补 |
 | **C15 T3** | **7 / 10** | 单词拼写手脑脱节（Q6 deliveries）、词汇认知与伪语法（Q7 tidy脑补tided）、状语抢跑（Q8 warehouse抢答） | **基础题（Q1-Q5, Q9, Q10）全部稳准拿分！** 能够准确识破同义改写与排雷 | 攻克高频基础词拼写定式，坚决杜绝状语抢跑提前落笔！ |
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）Early history of keeping clean 清洁的早期历史讲座
+
+*卷面要求：Write **ONE WORD ONLY** for each answer.*  
+*本次模考战绩：**3 / 10**（答对：Q31, Q32, Q39；错题：Q33, Q34, Q35, Q36, Q37, Q38, Q40）*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | mud | mud | ✓ | **⑤改写**<br>(`P3改写` / `A1原词`) | 原文: *"Since water is essential for life, the earliest people lived near water and knew something about its cleansing properties – at least that it rinsed **mud** off their hands."* (卷面: *water was used to wash off [ 31 ]*) | **开场改写一次对齐**：*wash off $\Leftrightarrow$ rinsed ... off* 完成映射；史前临水而居的语境里，清水冲掉的日常脏东西就是泥垢，语义自检顺滑。开门红。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/31_Q31_史前泥垢mud清水冲洗.mp3) |
+| **Q32** | clay | clay | ✓ | **⑤改写**<br>(`P1原词` / `A1原词`) | 原文: *"Archaeologists discovered **cylinders made of clay**, with inscriptions on them saying that fats were boiled with ashes."* (卷面: *soap-like material found in [ 32 ] cylinders*) | **后置定语还原成功**：卷面 *found in ____ cylinders* 反向还原成录音 *cylinders made of clay*；2800 BC 年份锚点 + 紧跟的 made of 结构一步锁定。后文 fats/ashes 配方细节干扰未动摇。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/32_Q32_巴比伦陶土clay圆筒.mp3) |
+| **Q33** | (定位不到) | metal | ✗ | **②定位错位**<br>【**答案前置 + 生词卡壳**】<br>(`P1原词` / `A1原词`) | 原文: *"...they anointed themselves with oil, and scraped off the oil and dirt with a **metal** instrument known as a **strigil**."* (卷面: *used a strigil – scraper made of [ 33 ]*) | **【答案在定位词之前溜走】**：<br>1. **答案前置结构**：录音顺序是 *a **metal** instrument known as a **strigil*** —— 答案 metal 先出现，2 秒后才是卷面定位词 strigil。你竖着耳朵等 strigil，它出现时 metal 已经说完；<br>2. **生词雪上加霜**：strigil（刮身板）谁都不认识，但命题人故意拿它当定位词——陌生名词只是路标，答案往往在它前面的日常词里（metal 初中词汇）；<br>3. **卡壳连锁**：此题解码 strigil 失败后，直接触发后面 Q34-Q38 的连环空窗（详见深度诊断）。<br>**铁律：卷面结构 "A – B made of ____" 且 A 是生词时，答案在录音里 A 出现之前的 3 秒内；刮身板是金属做的，语义常识可兜底。** | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/33_Q33_希腊金属metal刮身板与生词strigil.mp3) |
+| **Q34** | ashes | hair | ✗ | **⑥审题失真**<br>【**T3原词陷阱 / 成分干扰】**<br>(`P3改写` / `A2改写`) | 原文: *"The ancient Germans and Gauls are also credited with discovering how to make a substance called soap, **made of** melted animal fat and **ashes**. They used this mixture to **tint** their **hair** red."* (卷面: *used soap to colour their [ 34 ]*) | **【审题一字之差，整套听音目标全错】**：<br>1. **审题失真**：卷面是 *used soap to **colour their** ____*（染他们的什么），你记忆成了"肥皂**由什么组成**"——一个词之差，听音目标彻底错位；<br>2. **成分句精准埋雷**：带着"组成"的预期去听，原文恰好先说 *made of melted animal fat and **ashes***（肥皂的成分）——ashes 成为完美诱饵；<br>3. **答案句在后**：*They used this mixture to **tint** their **hair** red*（用混合物把头发染红），tint = colour 改写。<br>**铁律：预读时把空格两侧的词划死——"colour their ____" 的坑只能是身体部位/外观词；听到 made of 结构默念"这是配方不是用途"。审题错一道 = 白听一整段。** | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/34_Q34_日耳曼染红头发hair与成分ashes干扰.mp3) |
+| **Q35** | (没听到) | bath(s) | ✗ | **②定位错位**<br>【**答案前置 + 被动主动转换**】<br>(`P3改写` / `A2改写`) | 原文: *"The first of the famous Roman **baths**, supplied with water from their **aqueducts**, was built around 312 BC."* (卷面: *water carried to Roman [ 35 ] by aqueducts*) | **【答案再次跑在定位词前面】**：<br>1. **结构倒置**：卷面 *water carried to Roman ____ by aqueducts*（水被引水渠送到罗马的____），录音反过来说 *Roman **baths**, supplied with water from their **aqueducts***——先说 baths，插入语里才出现定位词 aqueducts，还把被动改成主动；<br>2. **等词=等丢**：你等 aqueducts 出现，baths 在它前面 2 秒就过完了；<br>3. **两条防线全可救**：① 卷面数字 **312 BC** 本身就是第一锚点，它的前后 5 秒就是答案区；② 罗马引水渠送水去哪里——浴场是常识级答案。<br>**铁律：卷面有年份/数字时，把数字当第一定位词；插入语（两个逗号之间的 supplied with...）里藏定位词时，答案在插入语之前的主干里。** | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/35_Q35_罗马浴场baths与引水渠后置.mp3) |
+| **Q36** | (什么都没听到) | disease(s) | ✗ | **⑤三重改写链**<br>+ **生词断崖**<br>(`P3改写` / `A2改写`) | 原文: *"This **lack of personal cleanliness** and related **unsanitary** living conditions were **major factors in the outbreaks of** **disease** in the Middle Ages, and especially the Black Death of the 14th century."* (卷面: *decline in bathing contributed to occurrence of [ 36 ]*) | **【本套最长改写链 + 生词连环卡壳】**：<br>1. **三重改写**：① *decline in bathing $\Leftrightarrow$ lack of personal cleanliness*；② *contributed to occurrence of $\Leftrightarrow$ were major factors in the outbreaks of*；③ 答案 **disease**；<br>2. **断崖点**：前面 *the fall of Rome in 467 AD* 和 *unsanitary*（不卫生的）连环生词卡壳，等解码完，disease 已经说完——这是 Q33 strigil 卡壳的余震延续；<br>3. **语义兜底没用上**：Black Death（黑死病）14 世纪——中世纪不讲卫生爆发什么？瘟疫是历史常识，改写链全断也该凭语境写出 disease。<br>**铁律：unsanitary / filth 这类生词标记后立刻放掉，死守 "outbreaks of ____" 名词坑；Black Death = disease 的免费送分提示。** | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/36_Q36_中世纪瘟疫disease改写链.mp3) |
+| **Q37** | plants | perfume | ✗ | **②定位错位**<br>【**T3原词陷阱 / 定语抢位**】<br>(`P3改写` / `A2改写`) | 原文: *"Vegetable and animal oils were used with **ashes of plants**, along with **perfume**, apparently **for the first time**."* (卷面: *[ 37 ] began to be added to soap*) | **【plants 只是灰烬的定语，答案在 along with 之后】**：<br>1. **干扰词解剖**：plants 出现在 *ashes of plants*（草木灰）短语里，是"灰烬"的定语，不是"新加进肥皂的东西"——你听到 plants 就落笔，后面真正的答案没等；<br>2. **答案后置**：*along with **perfume*** 才对应卷面的 *began to be added*；<br>3. **最隐蔽的锚点**：*apparently **for the first time***（首次）对应卷面 **began**（开始被加入）——时间词改写是本题定位钥匙。<br>**铁律："A of B" 结构里 B 只是 A 的定语，别拿 B 填空；along with / together with / as well as 后面的名词才是"新加入项"；began = for the first time。** | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/37_Q37_肥皂添加香水perfume与plants干扰.mp3) |
+| **Q38** | (直接过了) | salt | ✗ | **⑤介词框架倒置**<br>(`P3改写` / `A1原词`) | 原文: *"A major step toward large-scale commercial soapmaking occurred in 1791, when a French chemist, Nicolas Leblanc, patented a process for **turning salt into soda ash**, or sodium carbonate."* (卷面: *Leblanc invented a way of making soda ash from [ 38 ]*) | **【make Y from X 与 turn X into Y 的位置颠倒】**：<br>1. **介词框架倒置**：卷面 *making soda ash **from** ____*（空格在句尾），录音说 *patented a process for **turning** ____ into soda ash*（答案在句中动词后）——X 的位置完全对调；<br>2. **空窗期撞枪口**：Q36/Q37 连败后正处于"什么都没听到"的空窗状态，答案 salt 又短促，直接滑过；<br>3. **双锚点都在卷面**：1791 年份 + Leblanc 人名，两个锚点的后 5 秒就是答案。<br>**铁律：卷面 "from ____" 的空，在录音里九成变成 "turning ____ into..."——听到 turn/turning 的瞬间笔尖就位，等它后面的第一个名词。勒布朗法=盐制纯碱，化学常识可兜底。** | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/38_Q38_勒布朗食盐salt制碱.mp3) |
+| **Q39** | science | science | ✓ | **⑤改写**<br>(`P3改写` / `A1原词`) | 原文: *"His studies established the basis for both fat and soap chemistry, and soapmaking became a **science**."* (卷面: *Chevreul turned soapmaking into a [ 39 ]*) | **连败中爬出来的关键一分**：Chevreul / glycerine / fatty acids 全是生词轰炸，但你抓住主干 *became a science*——卷面 *turned ... into* $\Leftrightarrow$ 录音 *became*。空窗期没有延续到这题，说明具备"断崖自救"能力，这是本套最值得肯定的一分。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/39_Q39_制皂成为科学science.mp3) |
+| **Q40** | hightext | tax | ✗ | **③句意** + **①词音空耳**<br>【**语法自检缺失**】<br>(`P1原词` / `A1原词`) | 原文: *"Until the nineteenth century, soap was regarded as a luxury item, and was heavily **taxed** in several countries... a development that was reinforced when the **high tax** was removed."* (卷面: *from 1800s, there was no longer a [ 40 ] on soap*) | **【听到了答案却听不懂句意，空耳写飞】**：<br>1. **tax 两次出现**：第一次是动词 *heavily **taxed***（被课重税），第二次才是名词答案 *the high **tax** was removed*（重税被取消）；<br>2. **空耳成因**：tax 不熟 + 前词 high 的 /aɪ/ 带跑，/tæks/ 听成了 text 的音，连写成 hightext；<br>3. **语法自检本可拦截**：卷面 *no longer **a** ____ **on** soap* —— 冠词 a + 介词 on，坑里必须是单数名词；**hightext 根本不是一个英文单词**；<br>4. **语义链**：奢侈品 → 重税 → 买不起 → 税取消 → 日用品（everyday necessity）→ 清洁水平提升。<br>**铁律：落笔前 1 秒语法质检——a ____ on soap 的坑，动词/形容词/不存在的英文词一律出局；tax 不熟就想"奢侈品为什么贵"。** | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C15T3_错题音频切片/40_Q40_重税tax取消与hightext空耳.mp3) |
+
+---
+
+## 💡 Part 4 深度诊断：三大核心缺陷
+
+### 缺陷一：答案前置连环阵（Q33 / Q35 / Q40 三连败同款）
+
+本套 7 道错题里，**3 道是同一个结构**：卷面把某个词当定位词，但录音里答案出现在它**之前**——Q33 的 metal 在 strigil 前、Q35 的 baths 在 aqueducts 前、Q40 的 tax 名词在动词 taxed 后。Part 4 笔记填空约三成题目是"答案前置"，死等定位词 = 亲眼看着答案溜走。对策只有一条：**预读时把空格前后的词都划成锚点**（不止定位词），再叠加卷面给的数字/年份/人名（312 BC、1791、Leblanc 都是命题人送的路标）。听到任何一个锚点，前后 5 秒进入战斗状态。
+
+### 缺陷二：生词卡壳引发"断崖雪崩"（strigil → Q33-Q38 六题空窗）
+
+Q33 的 strigil 是全场的转折点：这个生词解码失败后，Q34 审题错位、Q35/Q36/Q38 整段空窗、Q37 抢填定语 plants——**一道生词卡壳波及六题**，比 C15T2 的"单题余震"严重一个量级。Part 4 是 6 分多钟无对话独白，注意力一旦被生词劫持，没有喘息机会。铁律：**生词只标记、不解码、2 秒放弃**——strigil 不影响你知道"刮身板是金属做的"；unsanitary 不影响你听懂 "outbreaks of disease"。你 Q39 的 science 证明空窗能爬出来，要做的是把"清零动作"从 Q39 提前到 Q34。
+
+### 缺陷三：审题与语法自检双缺失（Q34 ashes / Q40 hightext）
+
+Q34 是**审题失真**：把"染红他们的什么"记成"由什么组成"，一个词之差让 ashes 从干扰词变成"正确答案"；Q40 是**语法自检缺失**：a ____ on soap 的冠词+介词框架明示单数名词，hightext 不是英文词却写上去了。这两题的共同点：**听力环节没有输，输在落笔前后各 1 秒**。对策：① 预读时用笔划死空格两侧的词性和语义角色（身体部位？物资？单数名词？）；② 落笔前问一句"这是个英文单词吗？填进句子通吗？"——这两道防线本套可以拦下 2 题，等于把 3/10 拉回 5/10。
+
+---
+
+## 🎯 Part 4 靶向精练四步法
+
+### Step 1：精读 · 三组关键句结构（5 分钟）
+
+1. **答案前置句**：Q33 *a metal instrument known as a strigil* —— 划出答案词与定位词的先后顺序；
+2. **介词倒置句**：Q38 *turning salt into soda ash* $\Leftrightarrow$ 卷面 *making soda ash from salt* —— 亲手把两句话抄成对列；
+3. **定语干扰句**：Q37 *ashes of plants, along with perfume* —— 圈出 of 前后与 along with 后面的词。
+
+### Step 2：朗读 · 五组表达（5 分钟）
+
+- *it rinsed mud off their hands*
+- *scraped off the oil and dirt with a metal instrument*
+- *used this mixture to tint their hair red*
+- *major factors in the outbreaks of disease*
+- *when the high tax was removed*
+
+### Step 3：盲听（配合点播台 Part 4 切片）· 10 分钟
+
+先单曲循环 **Q33 切片**（练"生词出现前 3 秒是答案区"）和 **Q38 切片**（练"听到 turning 笔尖就位"）；再 AB 循环 Q35 的 *The first of the famous Roman baths* 到 *aqueducts* 那 4 秒；最后整段播放 `Section_4_Full` 做全真模拟，笔记画"时期 → 关键物"两栏，每换一个时期词（Babylon / Greece / Rome / Middle Ages / 1791 / 1800s）强制清零一次。
+
+### Step 4：沉淀改写对 + 烟雾弹黑名单（2 分钟）
+
+```text
+【高频改写沉淀（Part 4）】
+1. wash off                <===>  rinsed ... off
+2. found in ____ cylinders <===>  cylinders made of ____
+3. colour their ____       <===>  tint their ____ red
+4. carried to ____ by      <===>  ____ supplied with water from
+5. decline in bathing      <===>  lack of personal cleanliness
+6. contributed to          <===>  were major factors in
+7. began to be added       <===>  along with ____, for the first time
+8. make Y from X           <===>  turning X into Y
+9. turned ... into         <===>  became
+
+【烟雾弹黑名单】
+strigil（定位词，不是答案）/ ashes（肥皂成分）/ plants（ashes 的定语）/
+fats boiled with ashes（配方细节）/ unsanitary（放掉）/ glycerine（放掉）/
+taxed（动词，名词 tax 才是答案）/ hightext（不存在的词！）
+
+【心智防线铁律】
+1. 答案常在定位词之前：空格前后所有词都是锚点，年份/人名是免费路标。
+2. 生词只标记不解码，2 秒清零——一道生词卡壳不许波及下一题。
+3. "A of B" 里 B 是定语；along with 后面才是新增项。
+4. 落笔前 1 秒语法质检：a ____ on soap 必须是单数名词，先问"这是英文单词吗"。
+```

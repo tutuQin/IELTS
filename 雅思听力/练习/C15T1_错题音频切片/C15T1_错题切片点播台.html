@@ -628,7 +628,7 @@
 <div class="container">
     <div class="nav-back-bar">
         <a href="../切片/index.html" class="nav-link">📂 返回切片总目录 (Index)</a>
-        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 15 · Test 1 Part 1 精听点播台</span>
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 15 · Test 1 Part 1 + Part 4 精听点播台</span>
         <div style="display: flex; gap: 14px;">
             <a href="../剑桥15_Test1_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 题型错因复盘表 ➔</a>
             <a href="../C7T1_错题音频切片/C7T1_错题切片点播台.html" class="nav-link">前往 剑7 T1 切片 ➔</a>
@@ -636,8 +636,8 @@
     </div>
 
     <header>
-        <h1>剑桥雅思 15 Test 1 Part 1 错题切片点播台</h1>
-        <p>🎯 Bankside 求职中介咨询 · 核心考点与陷阱音频靶向切片 (15s~45s) · 原生影子跟读录音对比</p>
+        <h1>剑桥雅思 15 Test 1 Part 1 + Part 4 错题切片点播台</h1>
+        <p>🎯 Part 1 Bankside 求职中介咨询 (Q1-Q10) ｜ Part 4 澳大利亚桉树讲座 The Eucalyptus Tree (Q31-Q40) · 核心考点与陷阱音频靶向切片 · 原生影子跟读录音对比</p>
     </header>
 
     <!-- Sticky Audio Player -->
@@ -688,10 +688,10 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
-        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (7)</button>
-        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (3)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (22)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题与陷阱剖析 (13)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">答对稳固题 (7)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">完整音频 (2)</button>
     </div>
 
     <!-- Slice List -->
@@ -1320,6 +1320,684 @@
             </div>
         </div>
 
+            <!-- ======== PART 4 SECTION DIVIDER ======== -->
+        <div class="tips-panel">
+            <div class="tips-title">🌳 Part 4 · The Eucalyptus Tree in Australia（Q31 - Q40）学术讲座切片 · 战报 10 题对 4 错 6</div>
+            <div style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.9;">
+                讲座三段结构：<strong>① 重要性</strong>（Q31 shelter / Q32 oil）→ <strong>② 两种疾病</strong>（Mundulla Yellows → Q33 roads；Bell-miner Associated Die-back → Q34 insects）→ <strong>③ 林火频率理论</strong>（高频 → Q35 grass；中频 → Q36 water / Q37 soil；低频 → Q38 dry / Q39 simple / Q40 nests）。<br>
+                Part 4 六道错题集中暴露三大病根：<strong>学术词烟雾弹</strong>（Q33 calcium hydroxide 诱捕 oxide）、<strong>正反改写</strong>（Q36 stop consuming water = make water available）、<strong>对比结构读反</strong>（Q39 unlike：rich 属于热带雨林，simple 才是干燥雨林）。另有 <strong>Q31 改答案冲动</strong>（shelter 写对了又改成 biodiversity）与 <strong>Q34 后置干扰</strong>（insects 没抓到、拿 birds 凑数）。<br>
+                <strong>讲座跟读提示：</strong>Part 4 是独白无对话轮次，节奏比 Part 1 快、信息密度高，建议先 0.8x 盲听每张卡片，再 1.0x 跟读。
+            </div>
+        </div>
+
+        <!-- CARD 31: Q31 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q31</span>
+                    <span class="card-tag tag-p1">③句意坑 + T3原词陷阱</span>
+                    <h3 class="card-title">答案已入耳却被总结词改掉 · shelter → biodiversity</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_桉树庇护所shelter与biodiversity总结陷阱.mp3', 'Q31: shelter 庇护所（被 biodiversity 顶替）')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_31" onclick="handleRecBtnClick('card_31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_31" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_31"></span>
+                    <span class="rec-status-text" id="rec-status-card_31">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_31">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_31" onclick="playUserRecording('card_31')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_31')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_31')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_31')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "For example, it gives <span class="ans-highlight">shelter</span> to creatures like birds and bats, and these and other species also depend on it for food, particularly the nectar from its flowers. So it supports <span class="trap-highlight">biodiversity</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + T3 原词陷阱 + 改答案冲动）。卷面 <em>it provides 31 ____ and food for a wide range of species</em>。录音原句 <em>it gives <strong>shelter</strong> to creatures like birds and bats, and these and other species also depend on it for food</em> —— 你先写对了 shelter，但下一句 <em>So it supports <strong>biodiversity</strong></em> 里的 biodiversity 听起来更像"标准术语"，就回头改掉了。<br><strong>两个破绽：</strong>① <em>So</em> 开头是<strong>总结句</strong>，总结句只归纳上文、不提供新答案；② 卷面是 <em>provides ____ and food</em> 的<strong>并列结构</strong>，shelter and food 是动宾搭配，provides biodiversity and food 语法讲不通。<br><strong>防坑口诀：写对的答案，不因为后面出现一个更"高级"的词就改 —— 用并列结构语法检验一次即可。总结句（So / In conclusion / That's why）里的名词 90% 是烟雾弹。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Right, well the eucalyptus tree is an important tree for lots of reasons. For example, it gives <span class="ans-highlight">shelter</span> to creatures like birds and bats, and these and other species also depend on it for food, particularly the nectar from its flowers.</div>
+                            <div class="cn-line">好，桉树很重要的原因有很多。比如它为鸟类和蝙蝠等生物提供<strong>庇护所</strong>，这些物种还依赖它获取食物，尤其是花蜜。【Q31 答案句 → shelter】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So it supports <span class="trap-highlight">biodiversity</span>. It's useful to us humans too, because we can kill germs with a disinfectant made from <span class="ans-highlight">oil</span> extracted from eucalyptus leaves.</div>
+                            <div class="cn-line">所以它维系着<strong>生物多样性</strong>（总结句陷阱，不是 31 题答案）。它对人类也有用：我们可以用从桉叶提取的<strong>油</strong>制成的消毒剂来杀菌。【Q32 答案句 → oil】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 32: Q32 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q32</span>
+                    <span class="card-tag tag-p1">⑤改写识别成功</span>
+                    <h3 class="card-title">桉叶精油 oil · 被动改写一次拿下</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_桉叶精油oil制消毒剂.mp3', 'Q32: oil 桉叶精油')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_32" onclick="handleRecBtnClick('card_32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_32" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_32"></span>
+                    <span class="rec-status-text" id="rec-status-card_32">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_32">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_32" onclick="playUserRecording('card_32')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_32')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_32')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_32')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "It's useful to us humans too, because we can kill germs with a disinfectant made from <span class="ans-highlight">oil</span> extracted from eucalyptus leaves."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 / A2 改写答案）。卷面 <em>its leaves provide 32 ____ which is used to make a disinfectant</em>，录音反着说：<em>a disinfectant <strong>made from oil</strong> <strong>extracted from</strong> eucalyptus leaves</em>（用从桉叶提取的油制成的消毒剂）。<em>leaves provide oil = oil extracted from leaves</em>，主动/被动互换你完成了对齐，答案 <strong>oil</strong> 稳稳拿下。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It's useful to us humans too, because we can kill germs with a disinfectant made from <span class="ans-highlight">oil</span> extracted from eucalyptus leaves.</div>
+                            <div class="cn-line">它对人类也有用：我们可以用从桉叶中提取的<strong>油</strong>制成的消毒剂来杀菌。【Q32 答案句 → oil】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The eucalyptus grows all over Australia and the trees can live for up to 400 years. So it's alarming that all across the country, numbers of eucalyptus are falling because the trees are dying off prematurely.</div>
+                            <div class="cn-line">桉树遍布澳大利亚，树龄可达 400 年。所以令人担忧的是，全国桉树数量正在下降，因为树木在过早死亡。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 33: Q33 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q33</span>
+                    <span class="card-tag tag-p1">①词音坑 + 学术词烟雾弹</span>
+                    <h3 class="card-title">化学名 hydroxide 诱捕 · 修路 roads 才是答案</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_修路石灰roads与hydroxide化学名烟雾弹.mp3', 'Q33: roads 修路用石灰')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_33" onclick="handleRecBtnClick('card_33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_33" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_33"></span>
+                    <span class="rec-status-text" id="rec-status-card_33">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_33">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_33" onclick="playUserRecording('card_33')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_33')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_33')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_33')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "It wasn't until 2004 that they found the cause of the problem was lime, or <span class="trap-highlight">calcium hydroxide</span> to give it its proper chemical name, which was being used in the construction of <span class="ans-highlight">roads</span>."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（①词音 + ③句意 + 学术词烟雾弹）。卷面 <em>lime used for making 33 ____ was absorbed</em>，答案 <strong>roads</strong>。<br>你写的 <strong>oxide</strong> 正是 <em>calcium hydroxide</em>（氢氧化钙）的词尾 —— 化学专名被当成了答案。这句的结构是：<em>the cause was lime, <strong>or calcium hydroxide</strong> to give it its proper chemical name, which was being used in the construction of <strong>roads</strong></em>，其中 <em>or ... to give it its proper chemical name</em> 是<strong>同位语补充</strong>（正式化学名），真正的谓语信息（用来修路）在 which 从句末尾。<br>你复盘说"完全没听到 roads"：因为 <strong>hydroxide 是生词，大脑卡在解码它，后面的 construction of roads 整段滑过</strong>。<br><strong>防坑口诀：听到 "or ... to give it its proper name / in other words" 立刻判定后面是解释性同位语，不是答案，直接跳过等谓语；学术讲座里的化学名/术语八成是烟雾弹，答案往往是它后面那个最普通的词。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> As far back as the 1970s, the trees started getting a disease called Mundulla Yellows. The trees' leaves would gradually turn yellow, then the tree would die.</div>
+                            <div class="cn-line">早在 1970 年代，这些树就开始得一种叫 Mundulla Yellows（芒杜拉黄化病）的病。树叶会逐渐变黄，然后整棵树死亡。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It wasn't until 2004 that they found the cause of the problem was lime, or <span class="trap-highlight">calcium hydroxide</span> to give it its proper chemical name, which was being used in the construction of <span class="ans-highlight">roads</span>.</div>
+                            <div class="cn-line">直到 2004 年他们才发现，病因是石灰——正式化学名称叫<strong>氢氧化钙</strong>（同位语，不是答案）——它被用于<strong>修路</strong>。【Q33 答案句 → roads】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The lime was being washed away into the ground and affecting the roots of the eucalyptus trees nearby. What it was doing was preventing the trees from sucking up the iron they needed for healthy growth.</div>
+                            <div class="cn-line">石灰被雨水冲进土壤，影响了附近桉树的根系。它的作用机制是阻止树木吸收健康生长所需的铁。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 34: Q34 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q34</span>
+                    <span class="card-tag tag-p1">定位雪崩 + T3后置原词干扰</span>
+                    <h3 class="card-title">昆虫 insects 在句首 · 鸟 birds 是后置干扰</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_食叶昆虫insects与铃鸟birds后置干扰.mp3', 'Q34: insects 食叶昆虫')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_34" onclick="handleRecBtnClick('card_34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_34" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_34"></span>
+                    <span class="rec-status-text" id="rec-status-card_34">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_34">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_34" onclick="playUserRecording('card_34')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_34')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_34')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_34')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "What happens is that <span class="ans-highlight">insects</span> settle on the leaves and eat their way around them, destroying them as they go... The <span class="trap-highlight">bell-miner birds</span> really like this solution, and in order to get as much as possible, they keep away other creatures."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（定位丢失 + T3 原词陷阱 + 语义自检缺失）。卷面 <em>34 ____ feed on eucalyptus leaves</em>，答案 <strong>insects</strong>。<br>你的路径：听到"有什么东西在吃叶子"但没抓到 insects 这个词，随后听到 <em>bell-miner birds</em> 就填了 birds。<br><strong>语义自检本可拦住：</strong>卷面整段因果链是"<strong>某物</strong>吃叶子 → 分泌含糖物质 → 鸟被吸引"，birds 在后文是"被糖液吸引来"的<strong>结果</strong>，填进"吃叶子"的空在逻辑上不通。<br><strong>防坑口诀：长段跟丢时不要拿"最后听到的那只鸟"凑答案 —— 先抓每句话的主语名词，再回到卷面用动词（feed on / secrete）反推主语；另外 <strong>insects settle on the leaves</strong> 是句首新话题主语，重读但一闪而过，要练"句首主语必抓"。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The bell-miner is a bird, and the disease seems to be common where there are high populations of bell-miners. Again it's the leaves of the trees that are affected.</div>
+                            <div class="cn-line">铃鸟（bell-miner）是一种鸟，这种病似乎在铃鸟数量多的地方很常见。受影响的又是树叶。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> What happens is that <span class="ans-highlight">insects</span> settle on the leaves and eat their way around them, destroying them as they go, and at the same time they secrete a solution which has sugar in it.</div>
+                            <div class="cn-line">实际发生的情况是：<strong>昆虫</strong>落在叶子上，一路啃食，边吃边毁，同时分泌一种含糖的液体。【Q34 答案句 → insects】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="trap-highlight">bell-miner birds</span> really like this solution, and in order to get as much as possible, they keep away other creatures that might try to get it. So these birds and insects flourish at the expense of other species, and eventually so much damage is done to the leaves that the tree dies.</div>
+                            <div class="cn-line"><strong>铃鸟</strong>（干扰，不是答案）非常喜欢这种液体，为了尽可能多得，它们赶走其他想来的生物。于是这些鸟和昆虫以牺牲其他物种为代价繁衍，最终树叶受损太严重，树就死了。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 35: Q35 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q35</span>
+                    <span class="card-tag tag-p1">④对比结构定位成功</span>
+                    <h3 class="card-title">高频林火养草 grass · while 对比抓得准</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_高频林火养草grass对比结构.mp3', 'Q35: grass 高频林火后的植被')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_35" onclick="handleRecBtnClick('card_35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_35" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_35"></span>
+                    <span class="rec-status-text" id="rec-status-card_35">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_35">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_35" onclick="playUserRecording('card_35')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_35')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_35')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_35')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "If there are <span class="signal-highlight">very frequent</span> bushfires in a region, this encourages <span class="ans-highlight">grass</span> to grow afterwards, while if the bushfires are rather less frequent, this results in the growth of eucalyptus forests."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 + ④对比结构）。卷面 <em>high-frequency bushfires → growth of 35 ____</em>，<strong>high-frequency = very frequent</strong> 改写对齐成功，答案 <strong>grass</strong>。<br>后半句 while 引出对比项（低频 → 桉树林）你没有被带偏。这类"频率三分类"（高频/中频/低频）的讲座结构，你已经在脑中建了三栏表格，继续保持。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A theory proposed over 40 years ago by ecologist William Jackson is that the frequency of bushfires in a particular region affects the type of vegetation that grows there.</div>
+                            <div class="cn-line">生态学家威廉·杰克逊 40 多年前提出的理论是：一个地区林火的<strong>频率</strong>决定了那里生长的植被类型。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> If there are <span class="signal-highlight">very frequent</span> bushfires in a region, this encourages <span class="ans-highlight">grass</span> to grow afterwards, while if the bushfires are rather less frequent, this results in the growth of eucalyptus forests.</div>
+                            <div class="cn-line">如果一个地区<strong>林火非常频繁</strong>，之后会长出<strong>草</strong>；而如果林火没那么频繁，就会长出桉树林。【Q35 答案句 → grass】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 36: Q36 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q36</span>
+                    <span class="card-tag tag-p1">③句意 + ⑤正反改写</span>
+                    <h3 class="card-title">正反改写没跟上 · stop consuming water = make water available</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_林火保水water正反改写长句.mp3', 'Q36: water 桉树可用的水分')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_36" onclick="handleRecBtnClick('card_36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_36" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_36"></span>
+                    <span class="rec-status-text" id="rec-status-card_36">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_36">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_36" onclick="playUserRecording('card_36')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_36')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_36')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_36')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Well, one reason is that the fire <span class="signal-highlight">stops the growth of other species</span> which would <span class="signal-highlight">consume</span> <span class="ans-highlight">water</span> needed by eucalyptus trees."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + ⑤改写 · 正反转换）。卷面 <em>mid-frequency bushfires... make more 36 ____ available to the trees</em>，答案 <strong>water</strong>。<br>这句是本套最难的<strong>正反改写</strong>：卷面说"让更多的 ____ 可供桉树使用"，录音反着说"火<strong>阻止</strong>了其他会<strong>消耗 water</strong> 的物种生长"——竞争对手被烧掉，省下来的就是 water。<br>你复盘说"定位到 36 要到了，但真正的答案句没有听懂"：因为大脑在找 <em>available</em> 方向的词，而耳朵听到的是 <em>stops / consume</em> 反方向的词，两边对不上号。<br><strong>防坑口诀：make more X available = stop others consuming X —— 听到 stop / prevent / avoid + consume / use / take + 名词，答案就是那个名词，方向自动反转。笔记栏里"中频林火"下要预设"抢资源的对手被烧死"这个语义。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So why is this? Why do fairly frequent bushfires actually support the growth of eucalyptus? Well, one reason is that the fire <span class="signal-highlight">stops the growth of other species</span> which would <span class="signal-highlight">consume</span> <span class="ans-highlight">water</span> needed by eucalyptus trees.</div>
+                            <div class="cn-line">那这是为什么？为什么相当频繁的林火反而支持桉树生长？一个原因是：火<strong>阻止了其他物种的生长</strong>，这些物种本会<strong>消耗</strong>桉树所需的<strong>水分</strong>。【Q36 答案句 → water，正反改写】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 37: Q37 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q37</span>
+                    <span class="card-tag tag-p1">③生词卡壳 + 抢填邻词</span>
+                    <h3 class="card-title">生词 proliferate 卡壳 · 灌木改变的是土壤 soil</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_速生灌木改变土壤soil与proliferate生词卡壳.mp3', 'Q37: soil 土壤成分')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_37" onclick="handleRecBtnClick('card_37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_37" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_37"></span>
+                    <span class="rec-status-text" id="rec-status-card_37">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_37">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_37" onclick="playUserRecording('card_37')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_37')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_37')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_37')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "And there's another reason. If these other <span class="signal-highlight">quick-growing</span> species of <span class="trap-highlight">bushes</span> and plants are allowed to <span class="trap-highlight">proliferate</span>, they harm the eucalyptus in another way, by affecting the composition of the <span class="ans-highlight">soil</span>, and removing nutrients from it."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + 生词卡壳 + 抢填邻词）。卷面 <em>maintain the quality of the 37 ____</em>，答案 <strong>soil</strong>。<br>你的路径：听到 <em>species of <strong>bushes</strong> and plants</em> 就抢填了 bush，随后 <em>proliferate</em>（疯长）是生词，整句卡死没跟住。<strong>其实 bushes 是"被火烧掉的干扰对象"，不是答案</strong>；答案在句尾：<em>by affecting the composition of the <strong>soil</strong>, and removing nutrients from it</em>（改变<strong>土壤</strong>成分、夺走养分）。<br>两个信号本可救你：① <em>And there's another reason</em> = 并列新答案信号（就是 C17T4 Q6 的 the same thing 同款）；② 卷面 <em>quality of the ____</em> 后面必然是个"物质/介质"名词（土壤），bushes 语义不通。<br><strong>防坑口诀：生词（proliferate）先放掉，抓句尾 "of the + 名词" 的介词短语；抢填的词先过一遍"它是主角还是被处理的对象"。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> And there's another reason. If these other <span class="signal-highlight">quick-growing</span> species of <span class="trap-highlight">bushes</span> and plants are allowed to <span class="trap-highlight">proliferate</span>, they harm the eucalyptus in another way, by affecting the composition of the <span class="ans-highlight">soil</span>, and removing nutrients from it.</div>
+                            <div class="cn-line">还有另一个原因。如果这些<strong>速生</strong>的<strong>灌木</strong>和植物（干扰对象）被允许<strong>疯长</strong>（proliferate），它们会以另一种方式伤害桉树：改变<strong>土壤</strong>的成分，并夺走其中的养分。【Q37 答案句 → soil】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So some bushfires are actually essential for the eucalyptus to survive as long as they are not too frequent. In fact there's evidence that Australia's indigenous people practised regular burning of bush land for thousands of years before the arrival of the Europeans.</div>
+                            <div class="cn-line">所以只要不太频繁，一些林火实际上对桉树的存活至关重要。事实上有证据表明，澳大利亚原住民在欧洲人到来之前，几千年来一直定期焚烧灌木丛地。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 38: Q38 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q38</span>
+                    <span class="card-tag tag-p1">⑤改写识别成功</span>
+                    <h3 class="card-title">低频林火 → 干燥雨林 dry · 改写一次对齐</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_低频林火形成干燥雨林dry.mp3', 'Q38: dry 干燥雨林（引号内形容词）')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_38" onclick="handleRecBtnClick('card_38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_38" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_38"></span>
+                    <span class="rec-status-text" id="rec-status-card_38">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_38">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_38" onclick="playUserRecording('card_38')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_38')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_38')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_38')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Now scientists believe that this <span class="signal-highlight">reduced frequency of bushfires to low levels</span> has led to what's known as '<span class="ans-highlight">dry</span> rainforest', which seems an odd name as usually we associate tropical rainforest with wet conditions."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 / A2 改写答案）。卷面 <em>low-frequency bushfires result in the growth of 38 '____ rainforest'</em>，录音 <em>this reduced frequency of bushfires <strong>to low levels</strong> has led to what's known as '<strong>dry</strong> rainforest'</em> —— <em>low-frequency = reduced to low levels</em> 改写对齐成功。<br>注意答案写在<strong>引号内</strong>，只填形容词 dry。后面一句"这名字听着怪，因为我们通常把热带雨林和湿润联系在一起"是命题者自带的语义解释，正好帮你确认 dry。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> But since Europeans arrived on the continent, the number of bushfires has been strictly controlled. Now scientists believe that this <span class="signal-highlight">reduced frequency of bushfires to low levels</span> has led to what's known as '<span class="ans-highlight">dry</span> rainforest', which seems an odd name as usually we associate tropical rainforest with wet conditions.</div>
+                            <div class="cn-line">但自从欧洲人来到这片大陆，林火数量受到严格控制。科学家们如今认为，林火频率<strong>被降到低水平</strong>，导致了所谓的'<strong>干燥</strong>雨林'——这名字听着怪，因为我们通常把热带雨林与湿润条件联系在一起。【Q38 答案句 → dry】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 39: Q39 (Part 4) -->
+        <div class="slice-card" data-category="wrong">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-wrong">错题剖析 · Q39</span>
+                    <span class="card-tag tag-p1">③对比结构读反 + 属性张冠李戴</span>
+                    <h3 class="card-title">unlike 对比读反 · rich 属于热带雨林，simple 才是本空</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_单一simple生态系统与rich属性张冠李戴.mp3', 'Q39: simple 单一（物种少）的生态系统')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_39" onclick="handleRecBtnClick('card_39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_39" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_39"></span>
+                    <span class="rec-status-text" id="rec-status-card_39">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_39">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_39" onclick="playUserRecording('card_39')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_39')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_39')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_39')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "Well, <span class="signal-highlight">unlike</span> tropical rainforest which is a <span class="trap-highlight">rich</span> ecosystem, this type of ecosystem is usually a <span class="ans-highlight">simple</span> one. It has very thick, dense vegetation, but not much variety of species."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✗ 错</strong>（③句意 + 对比结构读反）。卷面 <em>low-frequency... 'dry rainforest', which is: a 39 ____ ecosystem</em>，答案 <strong>simple</strong>。<br>你的疑问"为什么不是 rich"：<strong>unlike = 不像</strong>。这句的对比结构是——<em>unlike tropical rainforest（对象 A）which is a <strong>rich</strong> ecosystem（A 的属性），this type of ecosystem（对象 B，即 dry rainforest）is usually a <strong>simple</strong> one（B 的属性）</em>。rich 修饰的是热带雨林，simple 才是"这种"（干燥雨林）的属性。<br><strong>下一句就是语义验证：</strong><em>It has very thick, dense vegetation, but not much variety of species</em>（植被很厚很密，但<strong>物种种类不多</strong>）——"厚 ≠ 富"，厚厚的植被里物种单一，所以是 simple。<br><strong>防坑口诀：unlike / while / in contrast 对比句，先给两个对象贴标签（A=热带雨林，B=干燥雨林），属性各归各；空格填的是"就近对象"的属性，填完用后置解释句（It has... but not much variety）验证一遍。</strong>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> And what's special about this type of rainforest? Well, <span class="signal-highlight">unlike</span> tropical rainforest, which is a <span class="trap-highlight">rich</span> ecosystem, this type of ecosystem is usually a <span class="ans-highlight">simple</span> one.</div>
+                            <div class="cn-line">这种雨林有什么特别之处？嗯，<strong>不像</strong>热带雨林那样是<strong>物种丰富</strong>的生态系统，这种生态系统通常是<strong>单一</strong>的。【Q39 答案句 → simple；rich 是热带雨林的属性，别张冠李戴】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It has very thick, dense vegetation, but not much variety of species.</div>
+                            <div class="cn-line">它植被非常厚密，但物种种类不多。【语义验证：厚 ≠ 富，所以是 simple】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD 40: Q40 (Part 4) -->
+        <div class="slice-card" data-category="correct">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-correct">答对巩固 · Q40</span>
+                    <span class="card-tag tag-p1">⑤动词→名词改写</span>
+                    <h3 class="card-title">筑巢 nests · 动词改名词收官</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_铃鸟林下筑巢nests收官.mp3', 'Q40: nests 铃鸟筑巢')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_40" onclick="handleRecBtnClick('card_40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_40" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_40"></span>
+                    <span class="rec-status-text" id="rec-status-card_40">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_40">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_40" onclick="playUserRecording('card_40')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_40')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_40')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_40')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    "The vegetation provides lots of shade, so one species that does find it ideal is the bell-miner bird, which <span class="signal-highlight">builds its</span> <span class="ans-highlight">nests</span> in the undergrowth there."
+                </div>
+                <div class="analysis-box">
+                    <strong>答案路径：</strong><strong>✓ 正确</strong>（⑤改写 / A2 改写答案）。卷面 <em>an ideal environment for the 40 ____ of the bell-miner</em>，录音 <em>which <strong>builds its nests</strong> in the undergrowth there</em> —— 卷面要名词，录音给了动词 builds its nests，你完成了<strong>动词 → 名词</strong>的转换（官方答案 nest / nests / nesting 均可）。<br><em>finds it ideal = an ideal environment</em> 的反向印证你也跟住了，收官稳。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看本切片完整听力原文与逐句翻译 <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The vegetation provides lots of shade, so one species that does find it ideal is the bell-miner bird, which <span class="signal-highlight">builds its</span> <span class="ans-highlight">nests</span> in the undergrowth there. But again that's not helpful for the eucalyptus tree.</div>
+                            <div class="cn-line">植被提供了大量遮荫，所以有一个物种确实觉得这里理想，那就是铃鸟，它在林下<strong>筑巢</strong>。但这同样对桉树没有帮助。【Q40 答案句 → nests】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD FULL PART 4 -->
+        <div class="slice-card" data-category="full" id="full4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">完整精听 · Part 4 全篇</span>
+                    <h3 class="card-title">Part 4 完整录音实战盲听磨耳朵 (Q31 - Q40) · 桉树讲座 7:39</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_4_Full_桉树讲座全文.mp3', 'Part 4 完整录音: 桉树讲座 The Eucalyptus Tree in Australia')">▶ 播放完整 Part 4</button>
+                    <button class="record-card-btn" id="rec-btn-card_full4" onclick="handleRecBtnClick('card_full4')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_full4" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_full4"></span>
+                    <span class="rec-status-text" id="rec-status-card_full4">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_full4">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_full4" onclick="playUserRecording('card_full4')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_full4')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_full4')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_full4')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box" style="font-size: 1rem; max-height: 260px; overflow-y: auto;">
+                    <strong>【完整音频练习目标】</strong>：分题靶向精听后，合上全部文字，整段播放 Part 4。独白讲座没有对话轮次帮你"换气"，练习<strong>用笔记结构图跟节奏</strong>：左栏画"重要性 / 疾病 / 林火频率"三级标题，右侧每级记 2 个关键词，播完看自己能否重建整场讲座骨架。
+                </div>
+                <div class="analysis-box">
+                    <strong>实战防崩铁律：</strong>1. Q31-Q32 在开头 15 秒内连出，开场即战斗状态；2. Q33 出现化学名 calcium hydroxide 时心里默念"同位语烟雾弹，等 roads"；3. Q36-Q37 是"正反改写 + 生词 proliferate"双重雷区，听不懂先记首字母占位；4. Q38-Q40 收尾三题在最后 55 秒，绝不在 Q38 后提前放松。
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 Part 4 完整官方听力原文与逐句翻译（无删减全文对照） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Today I'm going to talk about the eucalyptus tree. This is a very common tree here in Australia, where it's also sometimes called the gum tree. First I'm going to talk about why it's important, then I'm going to describe some problems it faces at present.</div>
+                            <div class="cn-line">今天我要讲桉树。这是澳大利亚非常常见的树种，有时也被称为橡胶树。我先讲它为什么重要，再讲它目前面临的问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Right, well the eucalyptus tree is an important tree for lots of reasons. For example, it gives <span class="ans-highlight">shelter</span> to creatures like birds and bats, and these and other species also depend on it for food, particularly the nectar from its flowers.</div>
+                            <div class="cn-line">好，桉树很重要的原因有很多。比如它为鸟类和蝙蝠等生物提供<strong>庇护所</strong>，这些物种还依赖它获取食物，尤其是花蜜。【Q31 答案句 → shelter】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So it supports <span class="trap-highlight">biodiversity</span>. It's useful to us humans too, because we can kill germs with a disinfectant made from <span class="ans-highlight">oil</span> extracted from eucalyptus leaves.</div>
+                            <div class="cn-line">所以它维系着<strong>生物多样性</strong>（总结句陷阱，不是 31 题答案）。它对人类也有用：我们可以用从桉叶提取的<strong>油</strong>制成的消毒剂杀菌。【Q32 答案句 → oil】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The eucalyptus grows all over Australia and the trees can live for up to 400 years. So it's alarming that all across the country, numbers of eucalyptus are falling because the trees are dying off prematurely.</div>
+                            <div class="cn-line">桉树遍布澳大利亚，树龄可达 400 年。令人担忧的是，全国桉树数量正在下降，因为树木在过早死亡。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So what are the reasons for this? One possible reason is disease. As far back as the 1970s, the trees started getting a disease called Mundulla Yellows. The trees' leaves would gradually turn yellow, then the tree would die.</div>
+                            <div class="cn-line">原因是什么？一种可能是疾病。早在 1970 年代，这些树就开始得芒杜拉黄化病。树叶逐渐变黄，然后整棵树死亡。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> It wasn't until 2004 that they found the cause of the problem was lime, or <span class="trap-highlight">calcium hydroxide</span> to give it its proper chemical name, which was being used in the construction of <span class="ans-highlight">roads</span>.</div>
+                            <div class="cn-line">直到 2004 年才发现病因是石灰——正式化学名<strong>氢氧化钙</strong>（同位语烟雾弹，不是答案）——它被用于<strong>修路</strong>。【Q33 答案句 → roads】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The lime was being washed away into the ground and affecting the roots of the eucalyptus trees nearby. What it was doing was preventing the trees from sucking up the iron they needed for healthy growth. When this was injected back into the affected trees, they immediately recovered.</div>
+                            <div class="cn-line">石灰被雨水冲进土壤，影响附近桉树的根系，阻止树木吸收健康生长所需的铁。把铁注回受影响的树后，它们立刻恢复了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> But this problem only affected a relatively small number of trees. By 2000, huge numbers of eucalyptus were dying along Australia's East Coast, of a disease known as Bell-miner Associated Die-back.</div>
+                            <div class="cn-line">但这个问题只影响了相对少量的树。到 2000 年，澳大利亚东海岸大量桉树死于一种叫铃鸟相关枯死病的疾病。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The bell-miner is a bird, and the disease seems to be common where there are high populations of bell-miners. Again it's the leaves of the trees that are affected.</div>
+                            <div class="cn-line">铃鸟是一种鸟，这种病似乎在铃鸟数量多的地方很常见。受影响的又是树叶。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> What happens is that <span class="ans-highlight">insects</span> settle on the leaves and eat their way around them, destroying them as they go, and at the same time they secrete a solution which has sugar in it.</div>
+                            <div class="cn-line">实际情况是：<strong>昆虫</strong>落在叶子上一路啃食、边吃边毁，同时分泌一种含糖液体。【Q34 答案句 → insects】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The <span class="trap-highlight">bell-miner birds</span> really like this solution, and in order to get as much as possible, they keep away other creatures that might try to get it. So these birds and insects flourish at the expense of other species, and eventually so much damage is done to the leaves that the tree dies.</div>
+                            <div class="cn-line"><strong>铃鸟</strong>（干扰词）非常喜欢这种液体，为了多得，它们赶走其他想来的生物。于是鸟和昆虫以牺牲其他物种为代价繁衍，最终树叶受损太重，树就死了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> But experts say that trees can start looking sick before any sign of Bell-miner Associated Die-back. So it looks as if the problem might have another explanation. One possibility is that it's to do with the huge bushfires that we have in Australia.</div>
+                            <div class="cn-line">但专家说，树木在出现铃鸟枯死病迹象之前就可能已显病态。所以问题也许另有解释。一种可能与澳大利亚的大型林火有关。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> A theory proposed over 40 years ago by ecologist William Jackson is that the frequency of bushfires in a particular region affects the type of vegetation that grows there. If there are very frequent bushfires in a region, this encourages <span class="ans-highlight">grass</span> to grow afterwards, while if the bushfires are rather less frequent, this results in the growth of eucalyptus forests.</div>
+                            <div class="cn-line">生态学家威廉·杰克逊 40 多年前的理论：一个地区林火的频率决定植被类型。林火<strong>非常频繁</strong>，之后长<strong>草</strong>；没那么频繁，则长桉树林。【Q35 答案句 → grass】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So why is this? Why do fairly frequent bushfires actually support the growth of eucalyptus? Well, one reason is that the fire stops the growth of other species which would consume <span class="ans-highlight">water</span> needed by eucalyptus trees.</div>
+                            <div class="cn-line">为什么相当频繁的林火反而支持桉树生长？一个原因：火阻止了其他会<strong>消耗水分</strong>的物种生长（正反改写：省下来给桉树的正是 water）。【Q36 答案句 → water】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> And there's another reason. If these other quick-growing species of <span class="trap-highlight">bushes</span> and plants are allowed to <span class="trap-highlight">proliferate</span>, they harm the eucalyptus in another way, by affecting the composition of the <span class="ans-highlight">soil</span>, and removing nutrients from it.</div>
+                            <div class="cn-line">还有另一个原因。如果这些速生<strong>灌木</strong>（干扰词）和植物被允许<strong>疯长</strong>（proliferate），它们会以另一种方式伤害桉树：改变<strong>土壤</strong>成分、夺走养分。【Q37 答案句 → soil】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So some bushfires are actually essential for the eucalyptus to survive as long as they are not too frequent. In fact there's evidence that Australia's indigenous people practised regular burning of bush land for thousands of years before the arrival of the Europeans.</div>
+                            <div class="cn-line">所以只要不过于频繁，一些林火其实对桉树存活至关重要。事实上有证据表明，澳大利亚原住民在欧洲人到来前几千年来一直定期焚烧灌木丛地。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> But since Europeans arrived on the continent, the number of bushfires has been strictly controlled. Now scientists believe that this reduced frequency of bushfires to low levels has led to what's known as '<span class="ans-highlight">dry</span> rainforest', which seems an odd name as usually we associate tropical rainforest with wet conditions.</div>
+                            <div class="cn-line">但欧洲人到来后，林火数量受到严格控制。科学家认为，林火频率降到低水平，导致了所谓的'<strong>干燥</strong>雨林'——这名字听着怪，因为我们通常把热带雨林与湿润联系在一起。【Q38 答案句 → dry】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> And what's special about this type of rainforest? Well, unlike tropical rainforest, which is a <span class="trap-highlight">rich</span> ecosystem, this type of ecosystem is usually a <span class="ans-highlight">simple</span> one. It has very thick, dense vegetation, but not much variety of species.</div>
+                            <div class="cn-line">这种雨林特别在哪？<strong>不像</strong>热带雨林是<strong>物种丰富</strong>（rich 是热带雨林的属性，干扰）的生态系统，这种生态系统通常是<strong>单一</strong>的：植被厚密，但物种种类不多。【Q39 答案句 → simple】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The vegetation provides lots of shade, so one species that does find it ideal is the bell-miner bird, which builds its <span class="ans-highlight">nests</span> in the undergrowth there. But again that's not helpful for the eucalyptus tree.</div>
+                            <div class="cn-line">植被提供大量遮荫，所以铃鸟觉得这里理想，在林下<strong>筑巢</strong>。但这同样对桉树没帮助。【Q40 答案句 → nests】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -1331,11 +2009,28 @@
     const nowPlayingText = document.getElementById('now-playing-text');
     let isLooping = false;
 
+    const audioBlobCache = {};
     function playAudio(src, title) {
-        mainAudio.src = src;
-        mainAudio.loop = isLooping;
-        mainAudio.play().catch(e => console.error('Audio play error:', e));
         nowPlayingText.innerHTML = `<span>🎵 正在播放：</span><span style="color: #fff;">${title}</span>`;
+        if (audioBlobCache[src]) {
+            mainAudio.src = audioBlobCache[src];
+            mainAudio.loop = isLooping;
+            mainAudio.play().catch(e => console.error('Audio play error:', e));
+            return;
+        }
+        fetch(src).then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.blob();
+        }).then(b => {
+            audioBlobCache[src] = URL.createObjectURL(b);
+            mainAudio.src = audioBlobCache[src];
+            mainAudio.loop = isLooping;
+            mainAudio.play().catch(e => console.error('Audio play error:', e));
+        }).catch(() => {
+            mainAudio.src = src;
+            mainAudio.loop = isLooping;
+            mainAudio.play().catch(e => console.error('Audio play error:', e));
+        });
     }
 
     function toggleLoop(btn) {
