@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>剑桥雅思 17 Test 3 Part 1 听力答案句切片点播台</title>
+    <title>剑桥雅思 17 Test 3 Part 1 + Part 4 听力答案句切片点播台</title>
     <style>
         :root {
             --bg-color: #0f172a;
@@ -638,6 +638,32 @@
         .seek-input:focus { border-color: var(--accent-blue); }
         .seek-input::placeholder { color: rgba(148, 163, 184, 0.6); }
     </style>
+    <style id="p4-theme">
+        /* ===== Part 4 五色标注体系（与 C16T3 / C17T2 保持一致） ===== */
+        .hl-loc { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); font-weight: 700; padding: 0 2px; }
+        .hl-swap { background: rgba(251, 191, 36, 0.16); color: var(--accent-amber); padding: 1px 5px; border-radius: 4px; border-bottom: 2px dashed var(--accent-amber); font-weight: 600; }
+        .hl-conn { color: #f472b6; font-weight: 700; background: rgba(244, 114, 182, 0.14); padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #f472b6; }
+        .hl-ans { color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .hl-trap { color: #f87171; font-weight: 700; text-decoration: line-through; background: rgba(248, 113, 113, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .divider-card { border-left: 5px solid var(--accent-purple); background: rgba(192, 132, 252, 0.08); }
+        .divider-card h2 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--accent-purple); }
+        .divider-card p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.75; }
+        .legend-card { border-left: 5px solid var(--accent-blue); background: rgba(56, 189, 248, 0.07); }
+        .legend-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .legend-row > span { font-size: .84rem; }
+        .legend-row .hl-trap { text-decoration: none; }
+        .blank-answer { display: inline-block; min-width: 74px; text-align: center; border-bottom: 1.5px solid var(--accent-green); color: var(--accent-green); font-weight: 700; padding: 0 6px; }
+        .prompt-box { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 12px 16px; font-size: 0.98rem; margin-bottom: 12px; }
+        .prompt-label { font-size: 0.78rem; color: var(--accent-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; letter-spacing: .03em; }
+        .prompt-text { color: #cbd5e1; line-height: 1.85; }
+        .diagnosis-box { background: rgba(30, 41, 59, 0.5); border-radius: 10px; padding: 13px 16px; font-size: 0.9rem; color: var(--text-muted); border: 1px solid rgba(255, 255, 255, 0.05); line-height: 1.8; }
+        .diagnosis-box strong { color: #e2e8f0; }
+        .tag-wrong { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); border: 1px solid rgba(248, 113, 113, 0.3); }
+        .tag-correct { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); border: 1px solid rgba(52, 211, 153, 0.3); }
+        .transcript-box strong { color: #e2e8f0; }
+        .slice-card.playing { border-color: var(--accent-blue); box-shadow: 0 0 20px rgba(56, 189, 248, .22); }
+            .p4-full-scroll { padding-right: 4px; }
+    </style>
 </head>
 
 <body>
@@ -653,8 +679,8 @@
     </div>
 
     <header>
-        <h1>剑桥雅思 17 Test 3 Part 1 答案句切片点播台</h1>
-        <p>🏄 冲浪假期建议 Advice on surfing holidays (Q1-Q10) · 答案句词级时间戳精准切片 · 原生影子跟读录音 · <strong>本次战报：10 题对 5 错 5</strong>（Q1 句意 · Q2 定位错位 · Q4 拼写 · Q5 抢跑 · Q6 改写 · Q8 数字）</p>
+        <h1>剑桥雅思 17 Test 3 · Part 1 &amp; Part 4 答案句切片点播台</h1>
+        <p>🏄 Part 1 冲浪假期建议 (Q1-Q10) ＋ 🐦 <strong>Part 4 鸟类迁徙理论 Bird Migration Theory (Q31-Q40)</strong> · 答案句词级时间戳精准切片 · 五色标注（定位 / 改写 / 逻辑 / 答案 / 陷阱）· 原生影子跟读录音<br><strong>Part 1 战报：10 题对 5 错 5</strong>（Q1 句意 · Q2 定位错位 · Q4 拼写 · Q5 抢跑 · Q6 改写 · Q8 数字）｜ <strong>Part 4 战报：10 题对 7 错 3</strong>（Q32 辨音拼写 · Q34 用常识否掉 moon · Q40 生词 atlas + 断档；Q36 为猜对）</p>
     </header>
 
     <!-- Sticky Audio Player -->
@@ -742,9 +768,11 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
-        <button class="tab-btn" onclick="filterCategory('part1', this)">Part 1 冲浪度假建议 (10)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (25)</button>
+        <button class="tab-btn" onclick="filterCategory('part1', this)">Part 1 冲浪度假建议 (11)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)">Part 4 鸟类迁徙理论 (14)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">⚠️ Part 4 错题 (3)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">完整音频 (2)</button>
     </div>
 
     <!-- Slice List -->
@@ -1528,6 +1556,558 @@
                 </details>
             </div>
         </div>
+
+        <!-- ============ PART 4 SECTION DIVIDER ============ -->
+        <div class="slice-card divider-card" data-category="part4" id="card-p4-divider">
+            <h2>🔻 PART 4 · Bird Migration Theory 鸟类迁徙理论 · 学术独白讲座（Q31–Q40）</h2>
+            <p>战报：<strong>10 题对 7 错 3</strong>（对 Q31 / Q33 / Q35 / Q36 / Q37 / Q38 / Q39；错 <strong>Q32 / Q34 / Q40</strong>；其中 <strong>Q36 是猜对的</strong>）。三大病灶：<br>
+            ① <strong>拼写与辨音混用</strong>（Q32 听到 feathers 却写成 fursers —— 鸟类只有 feathers，没有 fur，常识一秒就能拦下）；<br>
+            ② <strong>用常识否掉听力内容</strong>（Q34 明明听到 moon，觉得"鸟飞去月亮"太荒谬就不敢写；可题干写的是 popularised the <em>idea</em>，问的是"他的主张"，不是事实）；<br>
+            ③ <strong>生词卡死 + 注意力断档</strong>（Q40 不认识 atlas，Q39 刚卡了一下，直接跳过 —— P4 的最后一个空是全篇唯一有"结尾兜底"的位置，留白最亏）。</p>
+        </div>
+
+        <!-- ============ PART 4 LEGEND ============ -->
+        <div class="slice-card legend-card" data-category="part4" id="card-p4-legend">
+            <strong>🎨 Part 4 五色标注图例</strong>
+            <div class="legend-row">
+                <span class="hl-loc">■ 定位词（数字 / 专名 / 题干与原文同词锁定）</span>
+                <span class="hl-swap">■ 题干⇄原文替换改写处（中文意思在下方考点拆解里逐对给出）</span>
+                <span class="hl-conn">■ 转折 / 连词 / 强调信号词（but / and / because / In fact / Another…）</span>
+                <span class="hl-ans">■ 官方答案词</span>
+                <span class="hl-trap">■ 干扰陷阱词（听起来最像答案的那一个）</span>
+            </div>
+        </div>
+
+        <!-- ============ CARD q31 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q31">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q31</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q31: 埋在 <strong>mud</strong> 里过冬 —— "or 并列"跨了两句话</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_mud泥里冬眠.mp3', 'Q31: buried themselves in mud 埋进泥里')">▶ 播放切片 (27s)</button>
+                    <button class="record-card-btn" id="rec-btn-q31" onclick="handleRecBtnClick('q31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q31" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q31"></span><span class="rec-status-text" id="rec-status-q31">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q31">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q31" onclick="playUserRecording('q31')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q31')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q31')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q31')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · Hibernation theory</div>
+                    <div class="prompt-text">It was believed that birds <span class="hl-swap">hibernated</span> <span class="hl-swap">underwater</span> <span class="hl-conn">or</span> <span class="hl-swap">buried themselves</span> in <span class="blank-answer">31</span>.<br><span style="color:#94a3b8;">• This theory was later disproved by experiments on caged birds.（下一句）</span></div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                <span class="hl-conn">Take hibernation theory for example.</span> <span class="hl-loc">2000 years ago</span> it was <span class="hl-swap">commonly believed</span> that when birds left an area they went <span class="hl-swap">underwater</span> to <span class="hl-swap">hibernate</span> in the seas and oceans. <span class="hl-conn">Another theory</span> for the regular appearance and disappearance of birds was that they spent winter <span class="hl-swap">hidden in</span> <span class="hl-ans">mud [Q31]</span> <span class="hl-conn">till</span> the weather changed and food became abundant again.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面 <em>hibernated / underwater</em> 原词在第一句（<span class="hl-loc">2000 years ago</span> + <em>hibernate</em>），但答案是<strong>第二句</strong>——因为卷面的 <span class="hl-conn">or</span> 把两个动作并列：<em>hibernated underwater</em>（第一句给了）+ <em>buried themselves in ___</em>（第二句才给）。<strong>"or 并列跨句"是 P4 notes 题的经典藏法：并列的后半截另起一句说。</strong><br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">buried themselves in</span> ⇄ <span class="hl-swap">hidden in</span> —— "把自己埋进……" ⇄ "藏在……里"（动作 ⇄ 状态）；<span class="hl-swap">hibernated underwater</span> ⇄ <span class="hl-swap">went underwater to hibernate</span> —— "在水下冬眠" ⇄ "到水下去冬眠"（动词 ⇄ 动词短语，语序被拉开）；<span class="hl-swap">It was believed</span> ⇄ <span class="hl-swap">it was commonly believed</span> —— "人们认为" ⇄ "当时普遍认为"。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">Take … for example</span>（举例开场，标记"下面全是被推翻的旧理论"）；<span class="hl-conn">Another theory</span>（"另一个理论"——<strong>看到它就知道卷面的 or 到了后半截</strong>）；<span class="hl-conn">till</span>（直到……才，标记这段理论的结尾）。<br>
+                4. <strong>避坑</strong>：只盯第一句会去填 seas / oceans（<span class="hl-trap">seas and oceans</span> 就在 <em>hibernate</em> 后面，听起来最像答案），但卷面已经给了 underwater，空要的是"第二种埋法"。<strong>凡是题干里有 or / and，先把两个并列项在原文各找到一句，别在第一句里硬凑。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-conn">Take</span> hibernation theory <span class="hl-conn">for example</span>.</div><div class="cn-line"><span class="hl-conn">以</span>“冬眠理论”<span class="hl-conn">为例</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-loc">Two thousand years ago</span>, it was <span class="hl-swap">commonly believed</span> that <span class="hl-conn">when</span> birds left an area they went <span class="hl-swap">underwater</span> to <span class="hl-swap">hibernate</span> in the <span class="hl-trap">seas and oceans</span>.</div><div class="cn-line"><span class="hl-loc">两千年前</span>，人们<span class="hl-swap">普遍认为</span>：<span class="hl-conn">当</span>鸟类离开一个地区后，会到<span class="hl-trap">海、洋</span>里去<span class="hl-swap">冬眠</span>（<span class="hl-swap">在水下</span>）。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-conn">Another theory</span> for the <span class="hl-loc">regular appearance and disappearance of birds</span> was that they <span class="hl-loc">spent winter</span> <span class="hl-swap">hidden in</span> <span class="hl-ans">mud</span> till <span class="hl-loc">the weather changed</span> <span class="hl-conn">and</span> food became <span class="hl-swap">abundant</span> again.</div><div class="cn-line">关于鸟类<span class="hl-loc">定期出现与消失</span>的<span class="hl-conn">另一种理论</span>是：它们<span class="hl-loc">整个冬天</span><span class="hl-swap">藏在</span><span class="hl-ans">泥里</span>，<span class="hl-conn">直到</span><span class="hl-loc">天气转暖</span>、食物再次<span class="hl-swap">充足</span>。【Q31 答案句 → mud】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> The theory that some birds <span class="hl-swap">hibernate</span> <span class="hl-conn">persisted</span> <span class="hl-conn">until</span> <span class="hl-loc">experiments were done on caged birds</span> <span class="hl-loc">in the 1940s</span>, <span class="hl-conn">which</span> <span class="hl-swap">demonstrated</span> that birds have <span class="hl-trap">no hibernation instinct</span>.</div><div class="cn-line">“部分鸟类<span class="hl-swap">冬眠</span>”的说法<span class="hl-conn">一直持续到</span><span class="hl-loc">20 世纪 40 年代用笼中鸟做实验</span>，<span class="hl-conn">实验</span><span class="hl-swap">证明</span>鸟类<span class="hl-trap">没有冬眠本能</span>。【对应卷面下一条 bullet：disproved by experiments on caged birds】</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q32 ============ -->
+        <div class="slice-card" data-category="part4 wrong" id="card-q32">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q32</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">辨音 + 拼写</span>
+                    <h3 class="card-title">Q32: 秋天掉的是 <strong>feathers</strong>（你写成 fursers）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_feathers换羽误写fursers.mp3', 'Q32: lose their feathers 换羽')">▶ 播放切片 (26s)</button>
+                    <button class="record-card-btn" id="rec-btn-q32" onclick="handleRecBtnClick('q32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q32" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q32"></span><span class="rec-status-text" id="rec-status-q32">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q32">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q32" onclick="playUserRecording('q32')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q32')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q32')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q32')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · Transmutation theory</div>
+                    <div class="prompt-text">In autumn he <span class="hl-loc">observed</span> that <span class="hl-loc">redstarts</span> <span class="hl-swap">experience the loss of</span> <span class="blank-answer">32</span> <span class="hl-conn">and</span> <span class="hl-swap">thought</span> they then <span class="hl-swap">turned into</span> robins.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                He <span class="hl-loc">observed</span> that <span class="hl-conn">in the autumn</span> small birds called <span class="hl-loc">redstarts</span> began to <span class="hl-swap">lose</span> their <span class="hl-ans">feathers [Q32]</span> <span class="hl-conn">which</span> <span class="hl-swap">convinced Aristotle</span> that they <span class="hl-swap">changed into</span> robins for the winter <span class="hl-conn">and back into</span> redstarts in the summer.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<span class="hl-loc">redstarts</span>（罕见专名，卷面原词照搬）+ <span class="hl-loc">observed</span>（同为原词）+ <span class="hl-conn">in the autumn</span>（时间状语）→ 三个钩子同时命中，全篇只有这一句。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">experience the loss of X</span> ⇄ <span class="hl-swap">lose X</span> —— "经历 X 的脱落" ⇄ "脱落 X"（<strong>动词 ⇄ 名词化短语</strong>，卷面把 lose 拆成了 experience the loss of，所以空里必须填"被失去的那个东西"）；<span class="hl-swap">thought they then turned into</span> ⇄ <span class="hl-swap">which convinced Aristotle that they changed into</span> —— "认为它们随后变成" ⇄ "这使亚里士多德相信它们变成了"（<strong>主语视角反转：卷面以"他"为主语，原文以"换羽这件事"为主语</strong>）；<span class="hl-swap">turned into</span> ⇄ <span class="hl-swap">changed into</span> —— "变成" ⇄ "变成"（同义动词）。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">which</span>（非限定定语从句，指代前面"掉羽毛"整件事，<strong>答案就在 which 之前的名词位置</strong>）；<span class="hl-conn">and back into</span>（"又变回"——回环结构，标记一年一个来回）。<br>
+                4. <strong>避坑（你写 fursers 的原因）</strong>：<span class="hl-trap">feathers</span> 的尾音是 /ðəz/（要咬舌、且轻），在 <em>their</em> 后面连着读特别容易糊；你大概听到了个 /fɜː…z/ 的轮廓，加上前文一直在说 small birds，就联想成了"毛/皮"→ fur。这里有<strong>两道保险</strong>：<br>
+                &nbsp;&nbsp;• <strong>常识保险</strong>：鸟身上只有 <em>feathers</em>，<em>fur</em> 是哺乳动物的毛 —— 听到"鸟 + 毛"直接改写成 feathers，不需要再犹豫；<br>
+                &nbsp;&nbsp;• <strong>拼写保险</strong>：feathers = f-e-a-t-h-e-r-s（ea 发 /e/，th 咬舌），<strong>不存在 fursers 这个单词</strong>，写不出来就说明听的是"轮廓"而不是"词"。<br>
+                5. <strong>练法</strong>：把切片单曲循环，专门跟读 <em>lose their feathers</em> 这 3 个词 10 遍，练到 /ð/ 咬舌音出来为止 —— 这是 P4 里最容易丢分的一类"软音结尾"。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-loc">One of the earliest naturalists and philosophers</span> <span class="hl-loc">from ancient Greece</span> was <span class="hl-loc">Aristotle</span>, <span class="hl-conn">who</span> was <span class="hl-swap">the first writer</span> to <span class="hl-swap">discuss</span> the disappearance and reappearance of some <span class="hl-loc">bird species</span> <span class="hl-loc">at certain times of year</span>.</div><div class="cn-line"><span class="hl-loc">古希腊</span>最早的<span class="hl-loc">自然学者与哲学家</span>之一是<span class="hl-loc">亚里士多德</span>，<span class="hl-conn">他</span><span class="hl-swap">是第一个</span><span class="hl-swap">论述</span>某些<span class="hl-loc">鸟种</span><span class="hl-loc">在一年中特定时期</span>消失与重现的<span class="hl-swap">作家</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> He developed <span class="hl-loc">the theory of transmutation</span>, <span class="hl-swap">the seasonal change of one species into another</span>, <span class="hl-conn">by</span> <span class="hl-loc">observing</span> <span class="hl-loc">redstarts</span> <span class="hl-conn">and</span> <span class="hl-loc">robins</span>.</div><div class="cn-line">他提出了<span class="hl-loc">“物种转化”理论</span>——<span class="hl-swap">即一个物种随季节变成另一个物种</span>——这一结论<span class="hl-conn">是通过</span><span class="hl-loc">观察</span><span class="hl-loc">红尾鸲</span><span class="hl-conn">与</span><span class="hl-loc">知更鸟</span>得出的。【transmutation 的定义句：一个物种随季节变成另一个】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> He <span class="hl-loc">observed</span> that <span class="hl-loc">in the autumn</span>, small birds called <span class="hl-loc">redstarts</span> began to <span class="hl-swap">lose</span> their <span class="hl-ans">feathers</span>, <span class="hl-conn">which</span> <span class="hl-swap">convinced</span> Aristotle that they <span class="hl-swap">changed into</span> robins for the winter <span class="hl-conn">and back into</span> redstarts in the summer.</div><div class="cn-line">他<span class="hl-loc">观察到</span>：<span class="hl-loc">秋天</span>，这种叫<span class="hl-loc">红尾鸲</span>的小鸟开始<span class="hl-swap">掉</span><span class="hl-ans">羽毛</span>，<span class="hl-conn">这</span><span class="hl-swap">使</span>亚里士多德相信它们冬天<span class="hl-swap">变成了</span>知更鸟，<span class="hl-conn">夏天又变回</span>红尾鸲。【Q32 答案句 → feathers；lose their feathers 被卷面名词化成 experience the loss of】</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q33 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q33">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q33</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q33: 两种鸟"外形相似" —— had a similar <strong>shape</strong></h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_shape外形相似.mp3', 'Q33: similar in shape 外形相似')">▶ 播放切片 (13s)</button>
+                    <button class="record-card-btn" id="rec-btn-q33" onclick="handleRecBtnClick('q33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q33" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q33"></span><span class="rec-status-text" id="rec-status-q33">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q33">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q33" onclick="playUserRecording('q33')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q33')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q33')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q33')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · Transmutation theory（第二条破折号）</div>
+                    <div class="prompt-text">Aristotle's <span class="hl-loc">assumptions</span> were <span class="hl-swap">logical</span> because the two species of birds had a <span class="hl-swap">similar</span> <span class="blank-answer">33</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                These <span class="hl-loc">assumptions</span> are <span class="hl-swap">understandable</span> <span class="hl-conn">given that</span> this <span class="hl-swap">pair of species</span> are <span class="hl-swap">similar in</span> <span class="hl-ans">shape [Q33]</span> <span class="hl-conn">but</span> are a classic example of an <span class="hl-swap">incorrect interpretation</span> based on correct observations.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<span class="hl-loc">assumptions</span> 是卷面与原文<strong>同一个词</strong>，且它只在这一句出现；紧跟其后的 <span class="hl-swap">similar</span> 又是原词 → 两个原词锁一句，这条定位几乎零成本。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">were logical</span> ⇄ <span class="hl-swap">are understandable</span> —— "合乎逻辑" ⇄ "可以理解"（<strong>褒义减弱</strong>：卷面承认他推理没问题，原文只是说"情有可原"）；<span class="hl-swap">the two species</span> ⇄ <span class="hl-swap">this pair of species</span> —— "这两个物种" ⇄ "这一对物种"；<span class="hl-swap">had a similar shape</span> ⇄ <span class="hl-swap">are similar in shape</span> —— <strong>"have + a + 形容词 + 名词" ⇄ "be + 形容词 + in + 名词"</strong>，这是本题唯一需要动脑的地方：<strong>卷面要名词，原文把名词放在 in 后面，把 shape 拎出来就行</strong>。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">given that</span>（"考虑到/鉴于"，就是卷面 because 的替身，答案必在其后）；<span class="hl-conn">but</span>（转折——<strong>but 后面是作者的评价（错误解读），不是空格答案</strong>，听到 but 不要以为答案被推翻了）。<br>
+                4. <strong>你答对的动作值得固化</strong>：听到 <em>similar</em> 就立刻等后面的名词，<em>in shape</em> 一出现直接落笔。这类"形容词 + 介词 + 名词"的答案（in shape / in size / in colour / in length）在 P4 反复出现，值得单独记一组。<br>
+                5. <strong>干扰</strong>：<span class="hl-trap">observations</span>（句尾，"基于正确的观察"）就在句末重读位置，很容易被当成答案抄走，但卷面 <em>had a similar ___</em> 要的是"相似的那个方面"，不是"观察"。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> These <span class="hl-swap">assumptions</span> are <span class="hl-swap">understandable</span> <span class="hl-conn">given that</span> this <span class="hl-loc">pair of species</span> <span class="hl-swap">are similar in</span> <span class="hl-ans">shape</span>, <span class="hl-conn">but</span> are a classic example of <span class="hl-swap">an incorrect interpretation</span> based on <span class="hl-trap">correct observations</span>.</div><div class="cn-line">这些<span class="hl-swap">假设</span>是<span class="hl-swap">可以理解的</span>，<span class="hl-conn">因为</span>这两种鸟<span class="hl-swap">外形相似</span>（<span class="hl-ans">shape</span>）；<span class="hl-conn">但</span>它们仍是“<span class="hl-trap">正确观察</span>得出<span class="hl-swap">错误解读</span>”的经典例子。【Q33 答案句 → shape；but 后面是作者评价，不是答案】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-swap">The most bizarre</span> theory was <span class="hl-swap">put forward</span> <span class="hl-conn">by</span> an <span class="hl-loc">English amateur scientist</span>, <span class="hl-loc">Charles Morton</span>, <span class="hl-loc">in the seventeenth century</span>.</div><div class="cn-line"><span class="hl-swap">最离奇</span>的理论是<span class="hl-conn">由</span><span class="hl-loc">英国业余科学家</span><span class="hl-loc">查尔斯·莫顿</span><span class="hl-loc">在 17 世纪</span><span class="hl-swap">提出的</span>。</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q34 ============ -->
+        <div class="slice-card" data-category="part4 wrong" id="card-q34">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q34</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">听到 moon 却不敢写</span>
+                    <h3 class="card-title">Q34: "鸟飞去 <strong>moon</strong>" —— 荒谬内容不等于错误答案</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_moon飞去月亮.mp3', 'Q34: migrate to the moon 飞去月亮')">▶ 播放切片 (25s)</button>
+                    <button class="record-card-btn" id="rec-btn-q34" onclick="handleRecBtnClick('q34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q34" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q34"></span><span class="rec-status-text" id="rec-status-q34">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q34">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q34" onclick="playUserRecording('q34')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q34')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q34')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q34')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · 17th century</div>
+                    <div class="prompt-text"><span class="hl-loc">Charles Morton</span> <span class="hl-swap">popularised</span> the <span class="hl-swap">idea</span> that birds <span class="hl-swap">fly to</span> the <span class="blank-answer">34</span> <span class="hl-swap">in winter</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                The most <span class="hl-swap">bizarre</span> theory was <span class="hl-swap">put forward</span> by an English amateur scientist, <span class="hl-loc">Charles Morton</span>, in <span class="hl-loc">the seventeenth century</span>. He wrote a surprisingly well-regarded <span class="hl-swap">paper</span> <span class="hl-conn">claiming that</span> birds <span class="hl-swap">migrate</span> to the <span class="hl-ans">moon [Q34]</span> <span class="hl-conn">and</span> back every year. He came to this conclusion as the <span class="hl-swap">only logical explanation</span> for the total disappearance of some species.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<span class="hl-loc">Charles Morton</span>（专名）+ <span class="hl-loc">the seventeenth century</span>（卷面 "17th century" 同）→ 一句锁定；空在 <em>to the ___</em>，要一个"地点名词"。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">popularised the idea</span> ⇄ <span class="hl-swap">put forward the theory</span> + <span class="hl-swap">wrote a paper claiming</span> —— "使这个想法流行开来" ⇄ "提出理论并写论文声称"（<strong>一个动词 ⇄ 两个动作</strong>，这是 P4 常见的"压缩/展开"改写）；<span class="hl-swap">idea</span> ⇄ <span class="hl-swap">paper claiming</span> —— "想法" ⇄ "论文声称的内容"；<span class="hl-swap">fly to</span> ⇄ <span class="hl-swap">migrate to</span> —— "飞到" ⇄ "迁徙到"；<span class="hl-swap">in winter</span> ⇄ <span class="hl-swap">every year</span> —— "冬天" ⇄ "每年"（<strong>时间信息被弱化</strong>，别拿"每年"去否定"冬天"）。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">The most bizarre theory</span>（"最离奇的理论"——<strong>态度词，它其实在提前告诉你"后面会很荒唐"，反而该打起精神</strong>）；<span class="hl-conn">claiming that</span>（"声称"——引述标记，说明这是<strong>某人的主张</strong>，不是事实）；<span class="hl-conn">and back</span>（"飞去又飞回"）。<br>
+                4. <strong>避坑（你听到 moon 却没落笔）</strong>：这是典型的<strong>"常识否决听力"</strong>——你觉得鸟不可能飞到月亮，于是判断"moon 不是答案"。但题干写的是 <em>popularised the <strong>idea</strong> that…</em>，问的是<strong>他的主张内容</strong>，不是"鸟到底去哪"；作者用 <em>bizarre</em>、<em>claiming</em> 也明确告诉你这是荒谬主张。<strong>只要题干出现 idea / theory / belief / claim，答案就必须按"文章里那个人怎么说的"来填，哪怕他说的在现实中不可能。</strong><br>
+                5. <strong>听到即落笔的理由</strong>：<em>migrate to the ___</em> 后面 + 每年往返 + 17 世纪 + 一位业余科学家，四个条件同时满足的地点名词，全篇只有 <span class="hl-ans">moon</span>。哪怕不敢确定，也<strong>先写下来再犹豫</strong>——P4 没有倒扣，空着是 0 分，写错也是 0 分，写了才有机会对。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-swap">The most bizarre</span> theory was <span class="hl-swap">put forward</span> <span class="hl-conn">by</span> an <span class="hl-loc">English amateur scientist</span>, <span class="hl-loc">Charles Morton</span>, <span class="hl-loc">in the seventeenth century</span>.</div><div class="cn-line"><span class="hl-swap">最离奇</span>的理论是<span class="hl-conn">由</span><span class="hl-loc">英国业余科学家</span><span class="hl-loc">查尔斯·莫顿</span><span class="hl-loc">在 17 世纪</span><span class="hl-swap">提出的</span>。【Q34 定位句：Charles Morton / 17 世纪 / bizarre 语气词】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> He wrote a <span class="hl-swap">surprisingly well-regarded paper</span> <span class="hl-conn">claiming that</span> birds <span class="hl-swap">migrate to</span> the <span class="hl-ans">moon</span> <span class="hl-conn">and back</span> <span class="hl-swap">every year</span>.</div><div class="cn-line">他写了一篇<span class="hl-swap">评价出奇地高的论文</span>，<span class="hl-conn">声称</span>鸟类<span class="hl-swap">每年迁徙到</span><span class="hl-ans">月亮</span><span class="hl-conn">再飞回来</span>。【Q34 答案句 → moon；claiming that 提示“这是他的主张，不是事实”】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> He came to this conclusion as <span class="hl-swap">the only logical explanation</span> for <span class="hl-loc">the total disappearance of some species</span>.</div><div class="cn-line">他得出这个结论，是因为这是<span class="hl-loc">某些物种彻底消失</span><span class="hl-swap">唯一合乎逻辑的解释</span>。</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q35 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q35">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q35</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q35: 脖子里的非洲矛 —— in its <strong>neck</strong></h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_neck脖子里的非洲矛.mp3', 'Q35: a spear in its neck 脖子中的矛')">▶ 播放切片 (26s)</button>
+                    <button class="record-card-btn" id="rec-btn-q35" onclick="handleRecBtnClick('q35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q35" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q35"></span><span class="rec-status-text" id="rec-status-q35">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q35">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q35" onclick="playUserRecording('q35')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q35')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q35')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q35')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · Scientific developments</div>
+                    <div class="prompt-text">In <span class="hl-loc">1822</span>, a <span class="hl-loc">stork</span> <span class="hl-swap">was killed</span> in <span class="hl-loc">Germany</span> which had <span class="hl-swap">an African spear</span> in its <span class="blank-answer">35</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                One of the key moments in the development of migration theory came in <span class="hl-loc">1822</span> when a white <span class="hl-loc">stork</span> was <span class="hl-swap">shot</span> in <span class="hl-loc">Germany</span>. This particular stork made history <span class="hl-conn">because of</span> the <span class="hl-swap">long spear</span> in its <span class="hl-ans">neck [Q35]</span> <span class="hl-conn">which</span> incredibly <span class="hl-trap">had not killed it</span>. Everyone immediately realised this spear was definitely not European. It turned out to be a spear from a tribe in <span class="hl-swap">Central Africa</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<span class="hl-loc">1822</span>（全篇唯一年份）+ <span class="hl-loc">stork</span> + <span class="hl-loc">Germany</span> 三个定位词全在首句 → 一耳朵就该锁定。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">was killed</span> ⇄ <span class="hl-swap">was shot</span> —— "被杀" ⇄ "被枪击"；<span class="hl-swap">an African spear</span> ⇄ <span class="hl-swap">a spear from a tribe in Central Africa</span> —— <strong>"形容词 + 名词" ⇄ "名词 + 介词短语后置"</strong>（非洲的矛 ⇄ 一支来自中非某部落的矛），这是本篇最典型的一组"后置展开"改写；<span class="hl-swap">in its ___</span> ⇄ <span class="hl-swap">in its neck</span>（原词位置照搬）。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">because of</span>（原因，导向"这支矛的位置"）；<span class="hl-conn">which</span>（定语从句，指 the long spear —— <strong>答案就在 which 前的名词短语里</strong>）；<span class="hl-conn">It turned out to be</span>（结果揭晓，接非洲）。<br>
+                4. <strong>题干与原文有一处不一致，别在那里纠缠</strong>：卷面写 <em>was killed</em>，原文说 <span class="hl-trap">had not killed it</span>（没杀死）。<strong>这是题干自身的粗略改写</strong>，空格问的是"部位"，不受死活影响。<strong>P4 遇到这种小矛盾，一律以"空格要什么"为准，不要因为一处不符就整题放弃。</strong><br>
+                5. <strong>你答对的关键动作</strong>：1822 一响就锁句，听到 <em>in its</em> 立刻等名词 —— 这就是"预判词性 + 等落点"的正确姿势，保持。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> One of <span class="hl-loc">the key moments</span> in the development of migration theory came <span class="hl-loc">in 1822</span> <span class="hl-conn">when</span> a <span class="hl-loc">white stork</span> was <span class="hl-swap">shot</span> <span class="hl-loc">in Germany</span>.</div><div class="cn-line">迁徙理论发展中的<span class="hl-loc">关键时刻</span>之一出现在<span class="hl-loc">1822 年</span>：<span class="hl-conn">当时</span>一只<span class="hl-loc">白鹳</span><span class="hl-loc">在德国</span><span class="hl-swap">被射中</span>。【定位句：1822 / white stork / Germany 三词同句】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This particular <span class="hl-loc">stork</span> <span class="hl-swap">made history</span> <span class="hl-conn">because of</span> <span class="hl-swap">the long spear</span> in its <span class="hl-ans">neck</span>, <span class="hl-conn">which</span> incredibly had <span class="hl-trap">not killed it</span>.</div><div class="cn-line">这只<span class="hl-loc">白鹳</span><span class="hl-swap">载入史册</span>，<span class="hl-conn">是因为</span>它<span class="hl-ans">脖子</span>上插着一支<span class="hl-swap">长矛</span>，<span class="hl-conn">而</span>令人难以置信的是这<span class="hl-trap">并没杀死它</span>。【Q35 答案句 → neck；注意 had not killed it 与卷面 was killed 矛盾，以空格为准】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> Everyone immediately realised this spear was <span class="hl-trap">definitely not European</span>.</div><div class="cn-line">所有人立刻意识到：这支矛<span class="hl-trap">绝不是欧洲的</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> It turned out to be <span class="hl-swap">a spear from a tribe in</span> <span class="hl-loc">Central Africa</span>.</div><div class="cn-line">它最终被确认<span class="hl-swap">来自</span><span class="hl-loc">中非</span><span class="hl-swap">一个部落的矛</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This was a truly <span class="hl-loc">defining moment</span> in the history of ornithology <span class="hl-conn">because</span> it was <span class="hl-swap">the first</span> <span class="hl-ans">evidence</span> <span class="hl-conn">that</span> storks <span class="hl-swap">spend their winters in</span> sub-Saharan <span class="hl-loc">Africa</span>.</div><div class="cn-line">这是鸟类学史上真正<span class="hl-loc">具有决定性的一刻</span>，<span class="hl-conn">因为</span>它是<span class="hl-swap">第一份</span><span class="hl-ans">证据</span>，<span class="hl-conn">证明</span>白鹳<span class="hl-swap">在</span><span class="hl-loc">撒哈拉以南非洲</span><span class="hl-swap">过冬</span>。【过渡到 Q36，注意 the first evidence】</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q36 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q36">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q36</span>
+                    <span class="card-tag tag-correct">✓ 猜对</span>
+                    <span class="card-tag" style="background:rgba(56,189,248,0.2); color:#38bdf8; border:1px solid rgba(56,189,248,0.4);">抽象名词空</span>
+                    <h3 class="card-title">Q36: 第一份 <strong>evidence</strong> —— no ⇄ first 的反义改写</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_evidence首份证据.mp3', 'Q36: the first evidence 第一份证据')">▶ 播放切片 (16s)</button>
+                    <button class="record-card-btn" id="rec-btn-q36" onclick="handleRecBtnClick('q36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q36" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q36"></span><span class="rec-status-text" id="rec-status-q36">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q36">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q36" onclick="playUserRecording('q36')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q36')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q36')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q36')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · Scientific developments（破折号下）</div>
+                    <div class="prompt-text">previously there had been <span class="hl-swap">no</span> <span class="blank-answer">36</span> <span class="hl-conn">that</span> storks <span class="hl-swap">migrate to Africa</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                It turned out to be a spear from a tribe in <span class="hl-swap">Central Africa</span>. This was a truly defining moment in the history of ornithology <span class="hl-conn">because</span> it was the <span class="hl-swap">first</span> <span class="hl-ans">evidence [Q36]</span> <span class="hl-conn">that</span> <span class="hl-loc">storks</span> <span class="hl-swap">spend their winters in</span> <span class="hl-swap">sub-Saharan Africa</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<span class="hl-swap">Africa</span> 在切片里出现两次（Central Africa / sub-Saharan Africa），<strong>答案句是第二句</strong>——由 <span class="hl-conn">because</span> 引导的原因句，也就是"为什么这一刻具有决定性"。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">no ___ that</span> ⇄ <span class="hl-swap">the first ___ that</span> —— <strong>"此前没有任何 ___" ⇄ "这是第一份 ___"</strong>（否定 ⇄ 序数，同一件事的两种说法，本篇最重要的一组）；<span class="hl-swap">migrate to Africa</span> ⇄ <span class="hl-swap">spend their winters in sub-Saharan Africa</span> —— "迁徙到非洲" ⇄ "在撒哈拉以南非洲过冬"（<strong>动作 ⇄ 越冬地点，且非洲被具体化</strong>）；<span class="hl-swap">previously</span> ⇄ <span class="hl-swap">first</span>（时间副词 ⇄ 序数词）。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">because</span>（原因，答案所在）；<span class="hl-conn">This was a truly defining moment</span>（评价句，<strong>P4 里凡出现 "defining moment / turning point / breakthrough"，后面必有"第一/首次"性质的答案</strong>）。<br>
+                4. <strong>你说这题是猜的，但猜对是有道理的</strong>：卷面 <em>no ___ that + 从句</em> 这个结构，空里只能是<strong>抽象名词</strong>（不能是人、不能是具体物），而 P4 的抽象名词空高度集中在这么一小撮词上 —— <span class="hl-ans">evidence</span> / proof / sign / indication / explanation / theory / idea / fact / belief / doubt。<strong>把这一小撮背下来，这类空就从"猜"变成"选"。</strong><br>
+                5. <strong>补一句判据</strong>：如果卷面是 <em>there had been no ___ <strong>that</strong>…</em>（后面跟完整从句），基本可以锁定 evidence / proof / indication；如果是 <em>there had been no ___ <strong>of</strong>…</em>（跟名词），才考虑 record / mention / trace。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> It turned out to be <span class="hl-swap">a spear from a tribe in</span> <span class="hl-loc">Central Africa</span>.</div><div class="cn-line">它最终被确认<span class="hl-swap">来自</span><span class="hl-loc">中非</span><span class="hl-swap">一个部落的矛</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This was a truly <span class="hl-loc">defining moment</span> in the history of ornithology <span class="hl-conn">because</span> it was <span class="hl-swap">the first</span> <span class="hl-ans">evidence</span> <span class="hl-conn">that</span> storks <span class="hl-swap">spend their winters in</span> sub-Saharan <span class="hl-loc">Africa</span>.</div><div class="cn-line">这是鸟类学史上真正<span class="hl-loc">具有决定性的一刻</span>，<span class="hl-conn">因为</span>它是<span class="hl-swap">第一份</span><span class="hl-ans">证据</span>，<span class="hl-conn">证明</span>白鹳<span class="hl-swap">在</span><span class="hl-loc">撒哈拉以南非洲</span><span class="hl-swap">过冬</span>。【Q36 答案句 → evidence；the first ⇄ 卷面的 no】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> You can still see the <span class="hl-swap">“arrow stork”</span> in the Zoological Collection of the <span class="hl-loc">University of Rostock</span> <span class="hl-loc">in Germany</span>.</div><div class="cn-line">今天你仍能在<span class="hl-loc">德国</span><span class="hl-loc">罗斯托克大学</span>的动物学藏品中看到这只<span class="hl-swap">“箭鹳”</span>。【补充细节，不设空】</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q37 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q37">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q37</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q37: 目的地与旅程 —— <strong>destinations</strong> and journeys</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_destinations目的地与旅程.mp3', 'Q37: the actual destinations 真正的目的地')">▶ 播放切片 (25s)</button>
+                    <button class="record-card-btn" id="rec-btn-q37" onclick="handleRecBtnClick('q37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q37" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q37"></span><span class="rec-status-text" id="rec-status-q37">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q37">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q37" onclick="playUserRecording('q37')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q37')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q37')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q37')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干</div>
+                    <div class="prompt-text"><span class="hl-swap">Little was known about</span> the <span class="blank-answer">37</span> <span class="hl-conn">and</span> <span class="hl-swap">journeys</span> of migrating birds <span class="hl-loc">until the practice of ringing was established</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                People gradually became aware that European birds moved south in autumn and north in summer <span class="hl-conn">but</span> didn't know much about it <span class="hl-conn">until</span> the practice of <span class="hl-swap">catching birds and putting rings on their legs</span> became established. <span class="hl-conn">Before this</span> <span class="hl-swap">very little information was available</span> about the actual <span class="hl-ans">destinations [Q37]</span> of particular species <span class="hl-conn">and</span> <span class="hl-swap">how they travelled there</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面 <span class="hl-loc">until the practice of ringing was established</span> ⇄ 原文 <span class="hl-swap">until the practice of catching birds and putting rings on their legs became established</span> —— <strong>本篇最长的一组替换（ringing 被整整解释了 8 个词）</strong>。认出这串，就认出这一段。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">Little was known about</span> ⇄ <span class="hl-swap">very little information was available about</span> —— "所知甚少" ⇄ "几乎找不到信息"；<span class="hl-swap">journeys</span> ⇄ <span class="hl-swap">how they travelled there</span> —— "旅程" ⇄ "它们是怎么到那儿的"（<strong>名词 ⇄ 从句</strong>）；<span class="hl-ans">destinations</span> 原词直取。<strong>关键结构：卷面 "the ___ and journeys" 是两个并列名词，所以空必须是复数名词，与 journeys 同类。</strong><br>
+                3. <strong>信号词</strong>：<span class="hl-conn">but</span>（转折——知道"南迁北归"，<strong>但不知道"去哪儿、怎么去"</strong>，答案就在 but 与 until 之间的空白地带）；<span class="hl-conn">until</span>（直到……才，标记"之前的状态"）；<span class="hl-conn">Before this</span>（回指 until 之前，等于给答案句再加一个时间标签）。<br>
+                4. <strong>你答对的原因</strong>：听到 <em>actual</em> 就知道后面跟的是被强调的名词，<em>destinations</em> 直接落笔。<strong>P4 里凡出现 actual / real / true / genuine 这种强调形容词，后面几乎必是答案。</strong><br>
+                5. <strong>延伸词</strong>：destination（目的地）/ journey（旅程）/ route（路线）/ migration route（迁徙路线）—— 这一组在动物、交通、旅游类 P4 里反复出现。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> People <span class="hl-swap">gradually became aware</span> that <span class="hl-loc">European birds</span> moved south in autumn and north in summer, <span class="hl-conn">but</span> didn't know much about it <span class="hl-conn">until</span> <span class="hl-swap">the practice of catching birds and putting rings on their legs</span> <span class="hl-swap">became established</span>.</div><div class="cn-line">人们<span class="hl-swap">逐渐意识到</span><span class="hl-loc">欧洲的鸟</span>秋天南飞、夏天北归，<span class="hl-conn">但</span>对这件事了解不多，<span class="hl-conn">直到</span><span class="hl-swap">捕鸟并在腿上套环的做法</span><span class="hl-swap">确立起来</span>。【对应卷面 until the practice of ringing was established】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-conn">Before this</span>, <span class="hl-swap">very little information was available</span> about <span class="hl-loc">the actual</span> <span class="hl-ans">destinations</span> of particular species <span class="hl-conn">and</span> <span class="hl-swap">how they travelled there</span>.</div><div class="cn-line"><span class="hl-conn">在此之前</span>，关于特定物种<span class="hl-loc">真正的</span><span class="hl-ans">目的地</span>、<span class="hl-conn">以及</span><span class="hl-swap">它们是如何到那儿的</span>，<span class="hl-swap">几乎没有任何信息</span>。【Q37 答案句 → destinations；and journeys ⇄ how they travelled there】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> People <span class="hl-swap">speculated</span> that larger birds <span class="hl-swap">provided a kind of taxi service</span> for smaller birds <span class="hl-swap">by carrying them on their backs</span>.</div><div class="cn-line">人们<span class="hl-swap">猜测</span>：较大的鸟<span class="hl-swap">提供某种“出租车服务”</span>给小鸟——<span class="hl-swap">用背驮着它们飞</span>。</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q38 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q38">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q38</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q38: 飞不过辽阔的 <strong>oceans</strong> —— huge ⇄ vast</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_oceans飞越辽阔大洋.mp3', 'Q38: fly over vast oceans 飞越辽阔大洋')">▶ 播放切片 (19s)</button>
+                    <button class="record-card-btn" id="rec-btn-q38" onclick="handleRecBtnClick('q38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q38" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q38"></span><span class="rec-status-text" id="rec-status-q38">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q38">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q38" onclick="playUserRecording('q38')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q38')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q38')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q38')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干</div>
+                    <div class="prompt-text"><span class="hl-swap">It was thought</span> <span class="hl-swap">large birds carried small birds</span> on some journeys <span class="hl-conn">because</span> they were considered <span class="hl-swap">incapable of travelling across</span> <span class="hl-swap">huge</span> <span class="blank-answer">38</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                People <span class="hl-swap">speculated</span> that larger birds provided a kind of <span class="hl-swap">taxi service</span> for smaller birds by <span class="hl-swap">carrying them on their backs</span>. This idea came about <span class="hl-conn">because</span> it seemed <span class="hl-swap">impossible</span> that <span class="hl-loc">small birds</span>, weighing only a few grams, <span class="hl-swap">could fly over</span> <span class="hl-swap">vast</span> <span class="hl-ans">oceans [Q38]</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面 <em>large birds carried small birds</em> ⇄ 原文 <em>larger birds … carrying them on their backs</em>（第一个句子的"出租车比喻"），<strong>但答案在第二句 because 之后</strong>——问的是"为什么"，答案永远在原因从句里。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">It was thought</span> ⇄ <span class="hl-swap">People speculated</span> —— "人们认为" ⇄ "人们猜测"（<strong>确定度降低</strong>，作者在给这个旧观点"降级"）；<span class="hl-swap">large birds carried small birds</span> ⇄ <span class="hl-swap">larger birds provided a kind of taxi service … by carrying them on their backs</span> —— "大鸟驮小鸟" ⇄ "大鸟提供出租车服务，用背驮着它们"（<strong>动作 ⇄ 比喻</strong>，这是 P4 里最容易听漏的一类改写）；<span class="hl-swap">incapable of travelling across</span> ⇄ <span class="hl-swap">seemed impossible … could fly over</span> —— "无法穿越" ⇄ "似乎不可能飞越"（<strong>双重否定式对应：incapable = impossible</strong>）；<span class="hl-swap">huge</span> ⇄ <span class="hl-swap">vast</span> —— "巨大的" ⇄ "辽阔的"。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">because</span>（原因从句，答案的门口）；<span class="hl-conn">This idea came about because</span>（"这个想法是怎么产生的"——<strong>典型的原因提示框架</strong>）。<br>
+                4. <strong>干扰</strong>：<span class="hl-trap">weighing only a few grams</span>（只有几克重）就在 ocean 前面，很多人会去抓这个数字；但卷面 <em>travelling across huge ___</em> 要的是"被穿越的那个空间"，不是重量。<strong>答案永远紧贴空格所在的那个介词结构（across ___）。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> People <span class="hl-swap">speculated</span> that larger birds <span class="hl-swap">provided a kind of taxi service</span> for smaller birds <span class="hl-swap">by carrying them on their backs</span>.</div><div class="cn-line">人们<span class="hl-swap">猜测</span>：较大的鸟<span class="hl-swap">提供某种“出租车服务”</span>给小鸟——<span class="hl-swap">用背驮着它们飞</span>。【对应卷面 large birds carried small birds】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This idea <span class="hl-swap">came about</span> <span class="hl-conn">because</span> it <span class="hl-swap">seemed impossible</span> that <span class="hl-loc">small birds</span>, <span class="hl-trap">weighing only a few grams</span>, could <span class="hl-swap">fly over</span> <span class="hl-swap">vast</span> <span class="hl-ans">oceans</span>.</div><div class="cn-line">这个想法<span class="hl-swap">之所以产生</span>，<span class="hl-conn">是因为</span>“<span class="hl-loc">只有几克重</span>的<span class="hl-loc">小鸟</span>能<span class="hl-swap">飞越</span><span class="hl-swap">辽阔</span>的<span class="hl-ans">大洋</span>”<span class="hl-swap">似乎不可能</span>。【Q38 答案句 → oceans；weighing only a few grams 是数字诱饵】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This idea was <span class="hl-swap">supported by</span> observations of bird behaviour, <span class="hl-conn">such as</span> the <span class="hl-swap">harassment of larger birds by smaller birds</span>.</div><div class="cn-line">这个想法还有鸟类行为观察的<span class="hl-swap">支持</span>，<span class="hl-conn">比如</span><span class="hl-swap">小鸟对大鸟的骚扰</span>。</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q39 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q39">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q39</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q39: 术语空 —— the '<strong>recovery</strong>' of dead birds</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_recovery回收记录.mp3', 'Q39: what is known as recovery 所谓的回收')">▶ 播放切片 (23s)</button>
+                    <button class="record-card-btn" id="rec-btn-q39" onclick="handleRecBtnClick('q39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q39" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q39"></span><span class="rec-status-text" id="rec-status-q39">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q39">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q39" onclick="playUserRecording('q39')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q39')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q39')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q39')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干</div>
+                    <div class="prompt-text">Ringing <span class="hl-swap">depended on</span> <span class="hl-loc">what is called</span> the '<span class="blank-answer">39</span>' <span class="hl-swap">of dead birds</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                The development of <span class="hl-loc">bird ringing</span> by a Danish school teacher, <span class="hl-loc">Hans Christian Cornelius Mortensen</span>, made many discoveries possible. This is still common practice today <span class="hl-conn">and</span> <span class="hl-swap">relies upon</span> <span class="hl-loc">what is known as</span> <span class="hl-ans">recovery [Q39]</span>. <span class="hl-conn">This is when</span> ringed birds are <span class="hl-swap">found dead</span> in the place they have migrated to and identified.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<span class="hl-loc">what is called</span> ⇄ <span class="hl-loc">what is known as</span> —— <strong>"所谓的/被称为"是 P4 术语空的固定招牌</strong>，卷面还专门加了引号，等于告诉你"这里要抄一个名词"。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">depended on</span> ⇄ <span class="hl-swap">relies upon</span> —— "依赖/取决于" ⇄ "依靠"（同义动词，正式度几乎一样）；<span class="hl-swap">what is called</span> ⇄ <span class="hl-swap">what is known as</span> —— "被称为" ⇄ "被称作"；<span class="hl-swap">of dead birds</span> ⇄ <span class="hl-swap">ringed birds are found dead</span> —— "死鸟的" ⇄ "带环的鸟被发现死亡"（<strong>名词所有格 ⇄ 完整句子</strong>，这就是后面那句 <em>This is when…</em> 的作用：把术语解释清楚）。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">and</span>（并列，把"至今仍是常用做法"与"依赖 recovery"连在一起）；<span class="hl-conn">This is when</span>（<strong>定义句</strong>——听到它就知道前一句那个名词要被解释了，反向验证你抄的词对不对）。<br>
+                4. <strong>拼写与发音</strong>：recovery = r-e-c-o-v-e-r-y，重音在第二音节 /rɪˈkʌvəri/<strong>（不是 REcovery）</strong>；同族词 recover / recovered。别写成 recovery 的变体 recovary。<br>
+                5. <strong>你答对的路径</strong>：听到 <em>what is known as</em> 立刻进入"抄名词"状态 —— 这是 P4 最省力的一类空，<strong>只要认出这个招牌，答案百分百紧跟在后面 1-2 个词。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-loc">The development of bird ringing</span> <span class="hl-conn">by</span> a <span class="hl-loc">Danish school teacher</span>, <span class="hl-loc">Hans Christian Cornelius Mortensen</span>, <span class="hl-swap">made many discoveries possible</span>.</div><div class="cn-line"><span class="hl-loc">鸟类环志的发展</span>——由<span class="hl-loc">丹麦教师</span><span class="hl-loc">汉斯·克里斯蒂安·科内利乌斯·莫滕森</span>开创——<span class="hl-swap">让许多发现成为可能</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> This is <span class="hl-swap">still common practice today</span> <span class="hl-conn">and</span> <span class="hl-swap">relies upon</span> <span class="hl-conn">what is known as</span> <span class="hl-ans">“recovery”</span>.</div><div class="cn-line">这<span class="hl-swap">至今仍是常用做法</span>，<span class="hl-conn">它依靠的</span>就是<span class="hl-conn">所谓的</span><span class="hl-ans">“回收（recovery）”</span>。【Q39 答案句 → recovery；what is known as 是术语空招牌】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-conn">This is when</span> <span class="hl-swap">ringed birds are found dead</span> in the place they have migrated to <span class="hl-conn">and</span> identified.</div><div class="cn-line"><span class="hl-conn">所谓回收，就是</span><span class="hl-swap">带环的鸟被发现死亡</span>于它们迁徙到的地方，<span class="hl-conn">并</span>被确认身份。【定义句：对应卷面的 of dead birds】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-loc">Huge amounts of data</span> <span class="hl-swap">were gathered</span> <span class="hl-loc">in the early part of the twentieth century</span> <span class="hl-conn">and</span>, <span class="hl-swap">for the first time in history</span>, people understood <span class="hl-loc">where birds actually went to in winter</span>.</div><div class="cn-line"><span class="hl-loc">大量数据</span><span class="hl-loc">在 20 世纪早期</span><span class="hl-swap">被收集起来</span>，<span class="hl-conn">并且</span><span class="hl-swap">有史以来第一次</span>，人们弄清了<span class="hl-loc">鸟类冬天究竟去了哪里</span>。</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ CARD q40 ============ -->
+        <div class="slice-card" data-category="part4 wrong" id="card-q40">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · Q40</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <span class="card-tag" style="background:rgba(251,191,36,0.2); color:#fbbf24; border:1px solid rgba(251,191,36,0.4);">生词 + 注意力断档</span>
+                    <h3 class="card-title">Q40: 1931 年第一本 <strong>atlas</strong> —— 生词怎么兜</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_atlas首本地图册.mp3', 'Q40: an atlas was published 出版了一本图册')">▶ 播放切片 (21s)</button>
+                    <button class="record-card-btn" id="rec-btn-q40" onclick="handleRecBtnClick('q40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q40" style="display:none;">
+                <div class="rec-panel-info"><span class="rec-status-dot" id="rec-dot-q40"></span><span class="rec-status-text" id="rec-status-q40">🎧 我的跟读录音</span><span class="rec-timer-badge" id="rec-time-q40">00:00</span></div>
+                <div class="rec-panel-btns" hidden><button class="rec-btn-pill btn-play-user" id="play-user-btn-q40" onclick="playUserRecording('q40')">▶ 试听跟读</button><button class="rec-btn-pill btn-compare" onclick="compareOfficial('q40')">👂 对比原声</button><button class="rec-btn-pill btn-rerecord" onclick="handleRecBtnClick('q40')">🔄 重新跟读</button><button class="rec-btn-pill btn-del" onclick="deleteRecording('q40')">🗑️ 清除</button></div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干</div>
+                    <div class="prompt-text">In <span class="hl-loc">1931</span>, <span class="hl-swap">the first</span> <span class="blank-answer">40</span> <span class="hl-swap">to show the migration of European birds</span> <span class="hl-swap">was printed</span>.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                Huge amounts of data were gathered in the early part of the twentieth century <span class="hl-conn">and</span> <span class="hl-swap">for the first time in history</span> people understood where birds actually went to in winter. In <span class="hl-loc">1931</span> an <span class="hl-ans">atlas [Q40]</span> was <span class="hl-swap">published</span> <span class="hl-swap">showing where the most common species of European birds migrated to</span>.</div>
+                <div class="diagnosis-box analysis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<span class="hl-loc">1931</span> 是全篇最后一个年份，且只在最后一句出现 → <strong>听到年份就开始等主语</strong>。<br>
+                2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">the first ___</span> ⇄ <span class="hl-swap">for the first time in history</span> —— "第一本" ⇄ "历史上第一次"（<strong>序数词 ⇄ 时间状语</strong>，同一个"首次"的两种说法）；<span class="hl-swap">was printed</span> ⇄ <span class="hl-swap">was published</span> —— "被印刷" ⇄ "被出版"；<span class="hl-swap">to show the migration of European birds</span> ⇄ <span class="hl-swap">showing where the most common species of European birds migrated to</span> —— "显示欧洲鸟类迁徙" ⇄ "标明最常见的欧洲鸟种迁往何处"。<br>
+                3. <strong>信号词</strong>：<span class="hl-conn">and</span>（并列，把"数据大量积累"和"第一次弄懂"连起来，说明下一句还是"成果总结"的语气）；<span class="hl-conn">In 1931</span>（时间锚点，最后的机会窗口）。<br>
+                4. <strong>避坑（你空耳跳过这题）</strong>：两个原因叠加 ——① <span class="hl-trap">atlas</span> 是生词（地图册/图集），一听到不认识就自动"消音"；② 上一题 Q39 刚卡了一下，注意力还没回来。<strong>生词兜底三钩子</strong>：<br>
+                &nbsp;&nbsp;• <strong>语法钩子</strong>：卷面 <em>the first ___ to show … was printed</em> —— 空是 <em>was printed</em> 的主语，必须是<strong>"能被印刷的出版物"</strong>（book / map / atlas / report），绝不可能是人；<br>
+                &nbsp;&nbsp;• <strong>动词钩子</strong>：听到 <em>was published / was printed</em>，<strong>答案就在它前面紧挨着的名词</strong>——这是英语里最稳定的"被动句主语句位"；<br>
+                &nbsp;&nbsp;• <strong>时间钩子</strong>：1931 + <em>an ___ was published</em> + <em>showing where…</em>，三个钩子同时成立，哪怕不认识 atlas，也应该把听到的音记成 a-t-l-a-s 先写上去。<br>
+                5. <strong>最后一空的铁律</strong>：<strong>P4 的 Q40 永远不要留白。</strong>它后面还有 "More recent theories…" 的收尾句和 30 秒检查时间，是全篇唯一有"回看余量"的位置；写完再检查，比空着等"想通"划算得多。<br>
+                6. <strong>词</strong>：atlas 地图册（复数 atlases）；相关：map 地图 / chart 图表 / diagram 示意图 / map out 规划。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-loc">Huge amounts of data</span> <span class="hl-swap">were gathered</span> <span class="hl-loc">in the early part of the twentieth century</span> <span class="hl-conn">and</span>, <span class="hl-swap">for the first time in history</span>, people understood <span class="hl-loc">where birds actually went to in winter</span>.</div><div class="cn-line"><span class="hl-loc">大量数据</span><span class="hl-loc">在 20 世纪早期</span><span class="hl-swap">被收集起来</span>，<span class="hl-conn">并且</span><span class="hl-swap">有史以来第一次</span>，人们弄清了<span class="hl-loc">鸟类冬天究竟去了哪里</span>。【对应卷面 the first（为 Q40 铺路）】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> <span class="hl-loc">In 1931</span> an <span class="hl-ans">atlas</span> <span class="hl-swap">was published</span> showing where <span class="hl-loc">the most common species of European birds</span> <span class="hl-swap">migrated to</span>.</div><div class="cn-line"><span class="hl-loc">1931 年</span>出版了<span class="hl-swap">一本</span><span class="hl-ans">图册</span>，标明<span class="hl-loc">最常见的欧洲鸟种</span><span class="hl-swap">迁往何处</span>。【Q40 答案句 → atlas；was published 前的主语就是答案】</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="speaker-tag spk-speaker">SPEAKER</span> More recent theories about bird migration <span class="hl-swap">vary</span>.</div><div class="cn-line">关于鸟类迁徙，近年来的理论<span class="hl-swap">各不相同</span>。</div></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ PART 4 复盘 ============ -->
+        <div class="slice-card" data-category="part4" id="card-p4-review">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · 复盘</span>
+                    <h3 class="card-title">🩺 三个错 = 三种"非听力问题"：辨音拼写 · 常识否决 · 生词断档</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="diagnosis-box analysis-box"><strong>① Q32｜辨音与拼写混用</strong>：<em>feathers</em>（/ˈfeðəz/，咬舌 + 轻尾音）在 <em>their</em> 后面被连读糊掉，你抓了个 /fɜː…z/ 的轮廓，写成了 <strong>fursers</strong>（这个词不存在）。<br>
+                　<strong>两道保险</strong>：常识上鸟只有 feathers 没有 fur；拼写上 f-e-a-t-h-e-r-s。写不出一个合法单词，就说明听的是"轮廓"不是"词"。<br>
+                <strong>② Q34｜用常识否定了听力内容</strong>：你明确听到了 <em>moon</em>，但觉得"鸟飞去月亮"太荒谬，于是没写。<strong>可题干是 popularised the <em>idea</em> that…</strong>，问的是"他的主张"，不是事实；作者用 <em>bizarre</em>、<em>claiming</em> 也在提示这是荒谬主张。<br>
+                　<strong>判据</strong>：题干出现 idea / theory / belief / claim / view，一律按"文中那个人怎么说"填，荒谬也要填。<br>
+                <strong>③ Q40｜生词 + 注意力断档</strong>：<em>atlas</em> 不认识，Q39 刚卡完，直接跳过。但卷面 <em>the first ___ to show … was printed</em> 已经把答案锁成"出版物"，听到 <em>was published</em> 就该回头找主语。<br>
+                　<strong>判据</strong>：被动句 <em>was published / was printed / was built</em> 前面紧挨着的名词 = 答案；Q40 永远不留白。<br>
+                <strong>④ Q36 虽然是猜的，但猜得有道理</strong>：<em>no ___ that + 从句</em> 只能填抽象名词，而 P4 抽象名词空高度集中在 <span class="hl-ans">evidence / proof / sign / indication / explanation / theory / idea / fact / belief</span> 这一小撮词上。<strong>把这 10 个词背下来，这类空就从"猜"变成"选"。</strong></div>
+                <div class="analysis-box" style="margin-top:12px;"><strong>🔁 本篇必背改写（10 组）</strong><br>
+                1. buried themselves in ⇄ hidden in（埋进 ⇄ 藏在）<br>
+                2. experience the loss of X ⇄ lose X（经历 X 的脱落 ⇄ 掉 X）<br>
+                3. had a similar shape ⇄ are similar in shape（有相似的外形 ⇄ 在外形上相似）<br>
+                4. popularised the idea ⇄ put forward the theory + wrote a paper claiming（使其流行 ⇄ 提出 + 撰文声称）<br>
+                5. fly to ⇄ migrate to；in winter ⇄ every year（时间信息弱化）<br>
+                6. an African spear ⇄ a spear from a tribe in Central Africa（形容词前置 ⇄ 介词短语后置）<br>
+                7. no ___ that ⇄ the first ___ that（否定 ⇄ 序数）<br>
+                8. Little was known about ⇄ very little information was available about<br>
+                9. journeys ⇄ how they travelled there（名词 ⇄ 从句）<br>
+                10. the first ___ ⇄ for the first time in history；was printed ⇄ was published<br>
+                <strong>另加两组"招牌"</strong>：what is called ⇄ what is known as（术语空前必背）；depended on ⇄ relies upon。</div>
+                <div class="analysis-box" style="margin-top:12px;"><strong>🎯 四步精练（20 分钟）</strong><br>
+                <strong>Step 1 盲听定位（5 分钟）</strong>：只听 Q31–Q40 十个切片各一遍，每听一题先写下"定位词 + 空要什么词性"，<strong>不写答案</strong>。<br>
+                <strong>Step 2 逐片精听（8 分钟）</strong>：重点重听 Q32（feathers 咬舌尾音）、Q34（bizarre / claiming 的语气）、Q40（was published 前的主语），每片 3 遍。<br>
+                <strong>Step 3 跟读（5 分钟）</strong>：点每张卡的「🎙️ 录音跟读」，专门读答案句，回放对比 <em>lose their feathers</em> / <em>migrate to the moon</em> / <em>an atlas was published</em> 这三处的连读与重音。<br>
+                <strong>Step 4 遮中文口述（2 分钟）</strong>：把上面 10 组改写遮住右边，口述中文意思，说不出就回卡片看一遍。</div>
+            </div>
+        </div>
+
+        <!-- ============ PART 4 FULL AUDIO ============ -->
+        <div class="slice-card" data-category="part4 full" id="full-p4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p1">Part 4 · 完整音频</span>
+                    <h3 class="card-title">完整 Part 4 全文精听（8 分 05 秒 · 鸟类迁徙理论 Bird Migration Theory）· 附全文原文</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Part4_Full_鸟类迁徙理论.mp3', 'Part 4 完整音频：鸟类迁徙理论')">▶ 播放完整音频</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="transcript-box">
+                    用法：10 个切片全部过关后，用本段做「全真模拟」——只按一遍播放，笔尖跟号法逐题作答（Q31→Q40 顺序推进，中间不回看）。音频从「Part 4. You will hear a zoology student…」开始，含约 50 秒看题停顿，到「That is the end of Part 4」结束。
+                </div>
+                <div class="analysis-box">
+                    <strong>结构提示（相对本音频时间轴）：</strong><br>
+                    00:00 开场 + 看题停顿 ｜ 01:01 Now listen carefully ｜ <strong>01:10 总起</strong>：多数鸟类季节性迁徙（Arctic Tern 每年 25,000 英里）｜
+                    <strong>02:03 早期谬论一</strong>：水下冬眠 → <strong>02:17 Q31 mud</strong>（泥里）→ 02:30 笼鸟实验推翻 ｜
+                    <strong>02:44 亚里士多德 transmutation</strong>：红尾鸲 ⇄ 知更鸟（<strong>03:09 Q32 feathers</strong> / <strong>03:25 Q33 shape</strong>）｜
+                    <strong>03:38 Charles Morton</strong>：<strong>03:48 Q34 moon</strong> ｜
+                    <strong>04:08 1822 白鹳</strong>：<strong>04:19 Q35 neck</strong> → <strong>04:39 Q36 evidence</strong> ｜
+                    <strong>05:00 环志之前</strong>：<strong>05:15 Q37 destinations</strong> → <strong>05:34 Q38 oceans</strong>（大鸟驮小鸟）｜
+                    <strong>06:05 环志与 recovery</strong>：<strong>06:10 Q39 recovery</strong> ｜
+                    <strong>06:29 1931 年</strong>：<strong>06:30 Q40 atlas</strong> ｜ 06:45 end of Part 4。
+                </div>
+                <div class="analysis-box" style="margin-top:10px;">
+                    <strong>笔尖跟号法（本段唯一要求）：</strong>听之前把 Q31–Q40 的十个空按顺序编号写在草稿纸左边缘；<strong>每听到一个答案就划掉一个号</strong>，绝不回头改前面的题。P4 是独白，<strong>一旦回头，后面两题必丢</strong>——本篇 Q40 之所以空着，就是 Q39 卡了之后没有"立刻放弃、继续前进"。
+                </div>
+                <details class="bilingual-details" open>
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 Part 4 全文原文 · 逐句翻译 · 五色标注（无删减 · 8 分 05 秒）<span class="toggle-badge">蓝=定位 ｜ 黄=改写 ｜ 粉=逻辑 ｜ 绿=答案 ｜ 红=陷阱</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body p4-full-scroll">
+                        <div class="dialog-turn"><div class="en-line">Part 4. You will hear a zoology student giving a presentation on bird migration.</div><div class="cn-line">第四部分。你将听到一位动物学学生做关于“鸟类迁徙”的演讲。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">First</span> you have some time to look at <span class="hl-loc">questions 31 to 40</span>.</div><div class="cn-line"><span class="hl-conn">首先</span>，你有一些时间看<span class="hl-loc">第 31 到 40 题</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">Now listen carefully</span> and answer <span class="hl-loc">questions 31 to 40</span>.</div><div class="cn-line"><span class="hl-conn">现在仔细听</span>，回答<span class="hl-loc">第 31 到 40 题</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-loc">Bird migration</span> has been studied over many centuries through <span class="hl-swap">a variety of observations</span>.</div><div class="cn-line"><span class="hl-loc">鸟类迁徙</span>已经通过各种<span class="hl-swap">观察</span>被研究了许多个世纪。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">But</span> <span class="hl-conn">until relatively recently</span>, <span class="hl-loc">where birds went to in the winter</span> was considered <span class="hl-swap">something of a mystery</span>.</div><div class="cn-line"><span class="hl-conn">但</span><span class="hl-conn">直到相对晚近</span>，<span class="hl-loc">鸟类冬天到底去了哪里</span>仍被认为<span class="hl-swap">多少是个谜</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-loc">The lack of modern science and technology</span> <span class="hl-conn">led to</span> many <span class="hl-swap">theories</span> that we now recognise as <span class="hl-swap">erroneous</span>, <span class="hl-conn">and even</span> <span class="hl-swap">somewhat amusing</span>.</div><div class="cn-line"><span class="hl-loc">现代科学与技术的缺乏</span><span class="hl-conn">导致了</span>许多我们今天认为是<span class="hl-swap">错误</span>、<span class="hl-conn">甚至</span>有点<span class="hl-swap">可笑</span>的<span class="hl-swap">理论</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">Take</span> hibernation theory <span class="hl-conn">for example</span>.</div><div class="cn-line"><span class="hl-conn">以</span>“冬眠理论”<span class="hl-conn">为例</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-loc">Two thousand years ago</span>, it was <span class="hl-swap">commonly believed</span> that <span class="hl-conn">when</span> birds left an area they went <span class="hl-swap">underwater</span> to <span class="hl-swap">hibernate</span> in the <span class="hl-trap">seas and oceans</span>.</div><div class="cn-line"><span class="hl-loc">两千年前</span>，人们<span class="hl-swap">普遍认为</span>：<span class="hl-conn">当</span>鸟类离开一个地区后，会到<span class="hl-trap">海、洋</span>里去<span class="hl-swap">冬眠</span>（<span class="hl-swap">在水下</span>）。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">Another theory</span> for the <span class="hl-loc">regular appearance and disappearance of birds</span> was that they <span class="hl-loc">spent winter</span> <span class="hl-swap">hidden in</span> <span class="hl-ans">mud</span> till <span class="hl-loc">the weather changed</span> <span class="hl-conn">and</span> food became <span class="hl-swap">abundant</span> again.</div><div class="cn-line">关于鸟类<span class="hl-loc">定期出现与消失</span>的<span class="hl-conn">另一种理论</span>是：它们<span class="hl-loc">整个冬天</span><span class="hl-swap">藏在</span><span class="hl-ans">泥里</span>，<span class="hl-conn">直到</span><span class="hl-loc">天气转暖</span>、食物再次<span class="hl-swap">充足</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">The theory that some birds <span class="hl-swap">hibernate</span> <span class="hl-conn">persisted</span> <span class="hl-conn">until</span> <span class="hl-loc">experiments were done on caged birds</span> <span class="hl-loc">in the 1940s</span>, <span class="hl-conn">which</span> <span class="hl-swap">demonstrated</span> that birds have <span class="hl-trap">no hibernation instinct</span>.</div><div class="cn-line">“部分鸟类<span class="hl-swap">冬眠</span>”的说法<span class="hl-conn">一直持续到</span><span class="hl-loc">20 世纪 40 年代用笼中鸟做实验</span>，<span class="hl-conn">实验</span><span class="hl-swap">证明</span>鸟类<span class="hl-trap">没有冬眠本能</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-loc">One of the earliest naturalists and philosophers</span> <span class="hl-loc">from ancient Greece</span> was <span class="hl-loc">Aristotle</span>, <span class="hl-conn">who</span> was <span class="hl-swap">the first writer</span> to <span class="hl-swap">discuss</span> the disappearance and reappearance of some <span class="hl-loc">bird species</span> <span class="hl-loc">at certain times of year</span>.</div><div class="cn-line"><span class="hl-loc">古希腊</span>最早的<span class="hl-loc">自然学者与哲学家</span>之一是<span class="hl-loc">亚里士多德</span>，<span class="hl-conn">他</span><span class="hl-swap">是第一个</span><span class="hl-swap">论述</span>某些<span class="hl-loc">鸟种</span><span class="hl-loc">在一年中特定时期</span>消失与重现的<span class="hl-swap">作家</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">He developed <span class="hl-loc">the theory of transmutation</span>, <span class="hl-swap">the seasonal change of one species into another</span>, <span class="hl-conn">by</span> <span class="hl-loc">observing</span> <span class="hl-loc">redstarts</span> <span class="hl-conn">and</span> <span class="hl-loc">robins</span>.</div><div class="cn-line">他提出了<span class="hl-loc">“物种转化”理论</span>——<span class="hl-swap">即一个物种随季节变成另一个物种</span>——这一结论<span class="hl-conn">是通过</span><span class="hl-loc">观察</span><span class="hl-loc">红尾鸲</span><span class="hl-conn">与</span><span class="hl-loc">知更鸟</span>得出的。</div></div>
+                        <div class="dialog-turn"><div class="en-line">He <span class="hl-loc">observed</span> that <span class="hl-loc">in the autumn</span>, small birds called <span class="hl-loc">redstarts</span> began to <span class="hl-swap">lose</span> their <span class="hl-ans">feathers</span>, <span class="hl-conn">which</span> <span class="hl-swap">convinced</span> Aristotle that they <span class="hl-swap">changed into</span> robins for the winter <span class="hl-conn">and back into</span> redstarts in the summer.</div><div class="cn-line">他<span class="hl-loc">观察到</span>：<span class="hl-loc">秋天</span>，这种叫<span class="hl-loc">红尾鸲</span>的小鸟开始<span class="hl-swap">掉</span><span class="hl-ans">羽毛</span>，<span class="hl-conn">这</span><span class="hl-swap">使</span>亚里士多德相信它们冬天<span class="hl-swap">变成了</span>知更鸟，<span class="hl-conn">夏天又变回</span>红尾鸲。</div></div>
+                        <div class="dialog-turn"><div class="en-line">These <span class="hl-swap">assumptions</span> are <span class="hl-swap">understandable</span> <span class="hl-conn">given that</span> this <span class="hl-loc">pair of species</span> <span class="hl-swap">are similar in</span> <span class="hl-ans">shape</span>, <span class="hl-conn">but</span> are a classic example of <span class="hl-swap">an incorrect interpretation</span> based on <span class="hl-trap">correct observations</span>.</div><div class="cn-line">这些<span class="hl-swap">假设</span>是<span class="hl-swap">可以理解的</span>，<span class="hl-conn">因为</span>这两种鸟<span class="hl-swap">外形相似</span>（<span class="hl-ans">shape</span>）；<span class="hl-conn">但</span>它们仍是“<span class="hl-trap">正确观察</span>得出<span class="hl-swap">错误解读</span>”的经典例子。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-swap">The most bizarre</span> theory was <span class="hl-swap">put forward</span> <span class="hl-conn">by</span> an <span class="hl-loc">English amateur scientist</span>, <span class="hl-loc">Charles Morton</span>, <span class="hl-loc">in the seventeenth century</span>.</div><div class="cn-line"><span class="hl-swap">最离奇</span>的理论是<span class="hl-conn">由</span><span class="hl-loc">英国业余科学家</span><span class="hl-loc">查尔斯·莫顿</span><span class="hl-loc">在 17 世纪</span><span class="hl-swap">提出的</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">He wrote a <span class="hl-swap">surprisingly well-regarded paper</span> <span class="hl-conn">claiming that</span> birds <span class="hl-swap">migrate to</span> the <span class="hl-ans">moon</span> <span class="hl-conn">and back</span> <span class="hl-swap">every year</span>.</div><div class="cn-line">他写了一篇<span class="hl-swap">评价出奇地高的论文</span>，<span class="hl-conn">声称</span>鸟类<span class="hl-swap">每年迁徙到</span><span class="hl-ans">月亮</span><span class="hl-conn">再飞回来</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">He came to this conclusion as <span class="hl-swap">the only logical explanation</span> for <span class="hl-loc">the total disappearance of some species</span>.</div><div class="cn-line">他得出这个结论，是因为这是<span class="hl-loc">某些物种彻底消失</span><span class="hl-swap">唯一合乎逻辑的解释</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">One of <span class="hl-loc">the key moments</span> in the development of migration theory came <span class="hl-loc">in 1822</span> <span class="hl-conn">when</span> a <span class="hl-loc">white stork</span> was <span class="hl-swap">shot</span> <span class="hl-loc">in Germany</span>.</div><div class="cn-line">迁徙理论发展中的<span class="hl-loc">关键时刻</span>之一出现在<span class="hl-loc">1822 年</span>：<span class="hl-conn">当时</span>一只<span class="hl-loc">白鹳</span><span class="hl-loc">在德国</span><span class="hl-swap">被射中</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">This particular <span class="hl-loc">stork</span> <span class="hl-swap">made history</span> <span class="hl-conn">because of</span> <span class="hl-swap">the long spear</span> in its <span class="hl-ans">neck</span>, <span class="hl-conn">which</span> incredibly had <span class="hl-trap">not killed it</span>.</div><div class="cn-line">这只<span class="hl-loc">白鹳</span><span class="hl-swap">载入史册</span>，<span class="hl-conn">是因为</span>它<span class="hl-ans">脖子</span>上插着一支<span class="hl-swap">长矛</span>，<span class="hl-conn">而</span>令人难以置信的是这<span class="hl-trap">并没杀死它</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">Everyone immediately realised this spear was <span class="hl-trap">definitely not European</span>.</div><div class="cn-line">所有人立刻意识到：这支矛<span class="hl-trap">绝不是欧洲的</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">It turned out to be <span class="hl-swap">a spear from a tribe in</span> <span class="hl-loc">Central Africa</span>.</div><div class="cn-line">它最终被确认<span class="hl-swap">来自</span><span class="hl-loc">中非</span><span class="hl-swap">一个部落的矛</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">This was a truly <span class="hl-loc">defining moment</span> in the history of ornithology <span class="hl-conn">because</span> it was <span class="hl-swap">the first</span> <span class="hl-ans">evidence</span> <span class="hl-conn">that</span> storks <span class="hl-swap">spend their winters in</span> sub-Saharan <span class="hl-loc">Africa</span>.</div><div class="cn-line">这是鸟类学史上真正<span class="hl-loc">具有决定性的一刻</span>，<span class="hl-conn">因为</span>它是<span class="hl-swap">第一份</span><span class="hl-ans">证据</span>，<span class="hl-conn">证明</span>白鹳<span class="hl-swap">在</span><span class="hl-loc">撒哈拉以南非洲</span><span class="hl-swap">过冬</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">You can still see the <span class="hl-swap">“arrow stork”</span> in the Zoological Collection of the <span class="hl-loc">University of Rostock</span> <span class="hl-loc">in Germany</span>.</div><div class="cn-line">今天你仍能在<span class="hl-loc">德国</span><span class="hl-loc">罗斯托克大学</span>的动物学藏品中看到这只<span class="hl-swap">“箭鹳”</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">People <span class="hl-swap">gradually became aware</span> that <span class="hl-loc">European birds</span> moved south in autumn and north in summer, <span class="hl-conn">but</span> didn't know much about it <span class="hl-conn">until</span> <span class="hl-swap">the practice of catching birds and putting rings on their legs</span> <span class="hl-swap">became established</span>.</div><div class="cn-line">人们<span class="hl-swap">逐渐意识到</span><span class="hl-loc">欧洲的鸟</span>秋天南飞、夏天北归，<span class="hl-conn">但</span>对这件事了解不多，<span class="hl-conn">直到</span><span class="hl-swap">捕鸟并在腿上套环的做法</span><span class="hl-swap">确立起来</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">Before this</span>, <span class="hl-swap">very little information was available</span> about <span class="hl-loc">the actual</span> <span class="hl-ans">destinations</span> of particular species <span class="hl-conn">and</span> <span class="hl-swap">how they travelled there</span>.</div><div class="cn-line"><span class="hl-conn">在此之前</span>，关于特定物种<span class="hl-loc">真正的</span><span class="hl-ans">目的地</span>、<span class="hl-conn">以及</span><span class="hl-swap">它们是如何到那儿的</span>，<span class="hl-swap">几乎没有任何信息</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">People <span class="hl-swap">speculated</span> that larger birds <span class="hl-swap">provided a kind of taxi service</span> for smaller birds <span class="hl-swap">by carrying them on their backs</span>.</div><div class="cn-line">人们<span class="hl-swap">猜测</span>：较大的鸟<span class="hl-swap">提供某种“出租车服务”</span>给小鸟——<span class="hl-swap">用背驮着它们飞</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">This idea <span class="hl-swap">came about</span> <span class="hl-conn">because</span> it <span class="hl-swap">seemed impossible</span> that <span class="hl-loc">small birds</span>, <span class="hl-trap">weighing only a few grams</span>, could <span class="hl-swap">fly over</span> <span class="hl-swap">vast</span> <span class="hl-ans">oceans</span>.</div><div class="cn-line">这个想法<span class="hl-swap">之所以产生</span>，<span class="hl-conn">是因为</span>“<span class="hl-loc">只有几克重</span>的<span class="hl-loc">小鸟</span>能<span class="hl-swap">飞越</span><span class="hl-swap">辽阔</span>的<span class="hl-ans">大洋</span>”<span class="hl-swap">似乎不可能</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">This idea was <span class="hl-swap">supported by</span> observations of bird behaviour, <span class="hl-conn">such as</span> the <span class="hl-swap">harassment of larger birds by smaller birds</span>.</div><div class="cn-line">这个想法还有鸟类行为观察的<span class="hl-swap">支持</span>，<span class="hl-conn">比如</span><span class="hl-swap">小鸟对大鸟的骚扰</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-loc">The development of bird ringing</span> <span class="hl-conn">by</span> a <span class="hl-loc">Danish school teacher</span>, <span class="hl-loc">Hans Christian Cornelius Mortensen</span>, <span class="hl-swap">made many discoveries possible</span>.</div><div class="cn-line"><span class="hl-loc">鸟类环志的发展</span>——由<span class="hl-loc">丹麦教师</span><span class="hl-loc">汉斯·克里斯蒂安·科内利乌斯·莫滕森</span>开创——<span class="hl-swap">让许多发现成为可能</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">This is <span class="hl-swap">still common practice today</span> <span class="hl-conn">and</span> <span class="hl-swap">relies upon</span> <span class="hl-conn">what is known as</span> <span class="hl-ans">“recovery”</span>.</div><div class="cn-line">这<span class="hl-swap">至今仍是常用做法</span>，<span class="hl-conn">它依靠的</span>就是<span class="hl-conn">所谓的</span><span class="hl-ans">“回收（recovery）”</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">This is when</span> <span class="hl-swap">ringed birds are found dead</span> in the place they have migrated to <span class="hl-conn">and</span> identified.</div><div class="cn-line"><span class="hl-conn">所谓回收，就是</span><span class="hl-swap">带环的鸟被发现死亡</span>于它们迁徙到的地方，<span class="hl-conn">并</span>被确认身份。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-loc">Huge amounts of data</span> <span class="hl-swap">were gathered</span> <span class="hl-loc">in the early part of the twentieth century</span> <span class="hl-conn">and</span>, <span class="hl-swap">for the first time in history</span>, people understood <span class="hl-loc">where birds actually went to in winter</span>.</div><div class="cn-line"><span class="hl-loc">大量数据</span><span class="hl-loc">在 20 世纪早期</span><span class="hl-swap">被收集起来</span>，<span class="hl-conn">并且</span><span class="hl-swap">有史以来第一次</span>，人们弄清了<span class="hl-loc">鸟类冬天究竟去了哪里</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-loc">In 1931</span> an <span class="hl-ans">atlas</span> <span class="hl-swap">was published</span> showing where <span class="hl-loc">the most common species of European birds</span> <span class="hl-swap">migrated to</span>.</div><div class="cn-line"><span class="hl-loc">1931 年</span>出版了<span class="hl-swap">一本</span><span class="hl-ans">图册</span>，标明<span class="hl-loc">最常见的欧洲鸟种</span><span class="hl-swap">迁往何处</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line">More recent theories about bird migration <span class="hl-swap">vary</span>.</div><div class="cn-line">关于鸟类迁徙，近年来的理论<span class="hl-swap">各不相同</span>。</div></div>
+                        <div class="dialog-turn"><div class="en-line"><span class="hl-conn">That is the end of Part 4.</span> You now have one minute to check your answers to Part 4.</div><div class="cn-line"><span class="hl-conn">第四部分到此结束。</span>你现在有一分钟检查第四部分的答案。</div></div>
+                    </div>
+                </details>
+                
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -1596,7 +2176,8 @@
 
         const cards = document.querySelectorAll('.slice-card');
         cards.forEach(card => {
-            if (cat === 'all' || card.dataset.category === cat) {
+            const cats = (card.dataset.category || '').split(/\s+/);
+            if (cat === 'all' || cats.includes(cat)) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';

@@ -148,3 +148,111 @@ Q1（否定后 but）、Q5（No → But 真需求）、Q8（生词跳过盯句�
 - 本套 **4/10**，但其中 **3 分是"非听力失分"**（Q2 拼写、Q4 手脑脱节、Q10 走神），修执行纪律即可回血。
 - 真正需要练的只有 **Q7（答案前置）** 和 **Q6（省略倒装）** 两个结构。
 - 明天动作：**背 8 个家电家具词 + Q7 用 AB 循环 10 遍 + 做套题时 Q10 不许提前放松。**
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）Maple Syrup 枫糖浆是怎么做出来的
+
+*卷面要求：Write **ONE WORD ONLY** for each answer（Notes 填空，10 空）。*
+*本次战绩：**4 / 10**（答对：Q31, Q32, Q33, Q36；错题：Q34, Q35, Q37, Q38, Q39, Q40）*
+*🎧 配套切片：[C17T4 点播台 · Part 4 区](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/C17T4_错题切片点播台.html)*
+*📄 点播台末尾「完整 Part 4 精听」卡已附 **8:35 全文原文 + 逐句翻译 + 五色标注**（蓝定位／黄改写／粉逻辑／绿答案／红陷阱）。*
+*录音来源：本地已有整套 `17-4.mp3`（1715.6s），另有独立 `C17-T4-P4.mp3`（514.7s）——切片全部取自独立文件。*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | golden | **golden** | ✓ | **⑤改写（给类别 ⇄ 给具体词）**<br>(`A2改写`) | 原文: *"Maple syrup is a thick, **golden**, sweet-tasting liquid that can be bought in bottles or jars and poured onto food such as waffles and ice cream…"*<br>(卷面: *colour described as [ 31 ]*) | **答对**：卷面问 colour，原文根本不出现 colour 这个词——靠的是三个并列形容词 thick（质地）/ **golden（颜色）**/ sweet-tasting（味道）。干扰是上一句的 clear honey（比喻“看起来像”），它是名词，且 look like ≠ 颜色叫 honey。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/31_Q31_golden金色糖浆.mp3) |
+| **Q32** | healthy | **healthy** | ✓ | **⑤改写（动词短语 ⇄ be + 形容词）**<br>(`A2改写`) | 原文: *"It contains no preservatives or added ingredients, **and** it provides a **healthy alternative to** refined sugar."*<br>(卷面: *very [ 32 ] compared to refined sugar*) | **答对**：`provides a healthy alternative to` ⇄ `is very ___ compared to`——动词短语被压成形容词位，空格只能填 healthy（不能填 alternative）。and 前半是否定（no preservatives），答案在后半。干扰 natural 在前三句（a very natural product），但跟 refined sugar 无可比关系。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/32_Q32_healthy比精制糖健康.mp3) |
+| **Q33** | climate | **climate** | ✓ | **⑤改写（抽象条件 ⇄ 具体气候）**<br>(`A2改写`) | 原文: *"There are only certain parts of the world that provide all these conditions. One is **Canada**… And the other is the **northeastern states of North America**. In these areas, the **climate** **suits the trees perfectly**."*<br>(卷面: *best growing conditions and [ 33 ] are in Canada and North America*) | **答对**：best growing conditions ⇄ the climate suits the trees perfectly；卷面把“条件”拆成两项，原文合并成一句“气候适合”。信号：One is… / And the other is… 并列一结束，答案立刻出现；In fact 后面是数据补充（two-thirds、1964），不是答案。 | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/33_Q33_climate气候适宜.mp3) |
+| **Q34** | sun | **rock** | ✗ | **④句法结构（定语从句）**<br>【**that 前面才是答案**】<br>(`A2改写`/`P3定从`) | 原文: *"They boiled the liquid by placing **pieces of rock** **that** had become scorching hot **from the sun** into the sap."*<br>(卷面: *used hot [ 34 ] to heat the sap*) | **错因（抄了从句里的 sun）**：你听到 *scorching hot **from the sun***，把“太阳”当成了答案。但结构是 `pieces of [rock] + [that had become scorching hot from the sun]`——**that 从句是修饰 rock 的定语**，告诉你“什么样的石头”，答案永远在 that 前面那个名词上。且卷面要“被放进树液里的东西”，太阳不可能 used…to heat the sap。**铁律：形容词 + from/by + 名词时，先问这个形容词在修饰谁。** | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/34_Q34_rock烧热的石头.mp3) |
+| **Q35** | conditions | **diameter** | ✗ | **①定位错句（抄了下一句）**<br>【**答案必须与定位词同句**】<br>(`P1定位`) | 原文: *"…they cannot be used to make syrup **until** the trunks **reach** a **diameter** of around 25 cm. **This can take anything up to 40 years.**"*<br>(卷面: *Tree trunks may not have the correct [ 35 ] until they have been growing for 40 years.*) | **错因（抄了下一句的 conditions）**：你抄的是紧接的 *maple trees need the right conditions to grow*。conditions 和 correct 搭配确实通顺，但**那一句里没有 trunks / 40 years / 25 cm 任何定位词**。判据不是“搭配通不通”，而是“这句带不带定位词”。改写：may not have the correct ⇄ cannot be used until…reach a；until they have been growing for 40 years ⇄ This can take anything up to 40 years（This 回指前一句整件事）。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/35_Q35_diameter树干直径.mp3) |
+| **Q36** | tube | **tube** | ✓ | **⑤改写（名词 ⇄ 动名词）**<br>(`A2改写`) | 原文: *"…this involves **drilling a small hole** into the trunk **and** **inserting a tube** into it **that ends in a bucket**."*<br>(卷面: *A tap is drilled into the trunk and a [ 36 ] carries the sap into a bucket*) | **答对**：A tap is drilled ⇄ drilling a small hole；a ___ carries the sap into a bucket ⇄ inserting a tube … that ends in a bucket。“输送” ⇄ “末端通向”，动作换成位置关系。信号：and 连接 drilling / inserting 两个并列动作，卷面的 and 正好对应。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/36_Q36_tube导管.mp3) |
+| **Q37** | steam | **fire** | ✗ | **④手段 vs 结果**<br>【**by means of 问的是手段**】<br>(`P3逻辑`) | 原文: *"These are basically extremely large pans. The sap is poured into these. **A fire is built**, and the pans are then **heated** until the sap boils."*<br>(卷面: *Large pans of sap called evaporators are heated **by means of** a [ 37 ]*) | **错因（抄了下一句的 steam）**：定位对了，但把 *The evaporation process creates large quantities of **steam*** 抄了上来。方向正好相反：**fire 是加热的手段（在前），steam 是加热的结果（在后）**。by means of 后面只能接“你用来做事的东西”。**判据：手段在前（by / using），结果在后（produces / creates / gives off）。** | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/37_Q37_fire用火烧.mp3) |
+| **Q38** | （空） | **steam** | ✗ | **⑥注意力断档（上一题连环）**<br>【**被动 ⇄ 主动改写**】<br>(`A2改写`) | 原文: *"The **evaporation process** **creates** **large quantities of** **steam**, and the sap becomes thicker and denser."*<br>(卷面: *A lot of [ 38 ] is produced during the evaporation process*) | **错因（空着）**：不是没听到，是 **Q37 想 steam 的那几秒正好是这道题的答案句**。改写：A lot of ___ is produced ⇄ creates large quantities of；during the evaporation process ⇄ The evaporation process（介词短语 ⇄ 主语，**卷面主语和原文主语不一致 = 被动改写**）。**P4 一题卡住最多给 2 秒，立刻把笔移到下一题。** | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/38_Q38_steam产生大量蒸汽.mp3) |
+| **Q39** | （空） | **cloudy** | ✗ | **④词性转换（形容词藏进名词）**<br>【**look ___ ⇄ a ___ appearance**】<br>(`A2改写`) | 原文: *"…something called '**sugar sand**' has to be **filtered out**, **as** this builds up during the boiling and **gives the syrup a cloudy appearance** and a slightly gritty taste."*<br>(卷面: *'Sugar sand' is removed because it makes the syrup **look** [ 39 ] and affects the taste*) | **错因（定位到但没落笔）**：卡在词性转换——原文把 cloudy 塞进了名词短语 *a cloudy appearance*，你在等“look + 形容词”的结构，就觉得“这里没有答案”。**卷面 look ___ 只能填形容词，而原文的形容词可能被包在 a ___ appearance / a ___ colour 这样的壳里。** gritty 属于 taste 那一半，不能填。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/39_Q39_cloudy浑浊发白.mp3) |
+| **Q40** | （空） | **litre** | ✗ | **⑥生词 + 数字陷阱 + 连环崩**<br>【**问的是成品量，不是原料量**】<br>(`A3生词`) | 原文: *"It takes **40 litres of sap** to produce **one litre** of maple syrup, so you can get an idea of how much is needed."*<br>(卷面: *A huge quantity of sap is needed to make a [ 40 ] of maple syrup*) | **错因（三件事叠一起）**：① Q39 没抓住，注意力已断；② 句里两个数字——40 litres（树液，**陷阱**）和 one litre（糖浆，**答案**）；③ litre 是生词。改写：A huge quantity of sap is needed ⇄ It takes 40 litres of sap（**模糊数量 ⇄ 具体数字**）；to make ⇄ to produce；a ___ of maple syrup ⇄ one litre of maple syrup。**P4 的 Q40 永不留白。** | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T4_错题音频切片/40_Q40_litre一升糖浆.mp3) |
+
+### Part 4 六个错 = 三条病根（外加一条链）
+
+```text
+病根一：抄了"从属成分"，没抄"被修饰的名词"
+   Q34 抄 sun（that 从句里的来源）→ 答案是 that 前面的 rock
+   Q35 抄 conditions（下一句的主语）→ 答案是带 40 years 那句里的 diameter
+
+病根二：手段与结果分不清
+   Q37 问 by means of（手段）→ 抄了下一句的 steam（结果）
+   → 手段在前（by / using），结果在后（produces / creates / gives off）
+
+病根三：Q37 卡住 → Q38 空 → Q39 懵 → Q40 空耳
+   P4 的失分不是均匀分布，是一段一段塌的。
+   一题卡住最多 2 秒，然后把笔移到下一题的定位词上。
+```
+
+### Part 4 改写对沉淀（本次新增 22 对）
+
+```text
+【定位与结构】
+1.  colour described as [golden]            <===>  a thick, golden, sweet-tasting liquid（给类别 ⇄ 给词）
+2.  very [healthy] compared to refined sugar <===>  provides a healthy alternative to refined sugar
+3.  best growing conditions and [climate]    <===>  the climate suits the trees perfectly
+4.  used hot [rock] to heat the sap          <===>  boiled the liquid by placing pieces of rock … into the sap
+5.  the correct [diameter]                   <===>  until the trunks reach a diameter of around 25 cm
+6.  until they have been growing for 40 years<===>  This can take anything up to 40 years
+7.  A tap is drilled into the trunk          <===>  drilling a small hole into the trunk
+8.  a [tube] carries the sap into a bucket   <===>  inserting a tube into it that ends in a bucket
+9.  are heated by means of a [fire]          <===>  A fire is built, and the pans are then heated
+10. A lot of [steam] is produced             <===>  creates large quantities of steam
+11. during the evaporation process           <===>  The evaporation process（介词短语 ⇄ 主语）
+12. makes the syrup look [cloudy]            <===>  gives the syrup a cloudy appearance
+13. affects the taste                        <===>  a slightly gritty taste
+14. is removed                               <===>  has to be filtered out
+15. A huge quantity of sap is needed         <===>  It takes 40 litres of sap
+16. to make a [litre] of maple syrup         <===>  to produce one litre of maple syrup
+
+【本篇其余可迁移改写】
+17. made from the sap of the maple tree      <===>  produced from the plant fluid or sap
+18. does not need fertiliser                 <===>  they'll grow without fertilizer
+19. needs sunny days and cool nights         <===>  full or partial sun exposure during the day and very cool nights
+20. has been on the Canadian flag since 1964 <===>  has featured on the flag since 1964
+21. made holes in the tree trunks            <===>  They bored holes in the trunks
+22. used tree bark to make containers        <===>  containers made of tree bark
+
+【高频信号词（听到就该警醒）】
+by placing … into …   → 后面是"工具"，答案紧跟
+that / which          → 定语从句，答案在关系词前面的名词
+by means of           → 手段（在前），不是结果（在后）
+creates / produces    → 结果（在后）
+One is … And the other is … → 并列收尾，答案紧随
+This can take …       → This 回指前一句，答案在前一句里
+```
+
+### Part 4 四步精练（本套专属 · 20 分钟）
+
+```text
+Step 1 盲听定位（5 分钟）
+  只放 Q31-Q40 十个切片各一遍，每题只写「定位词 + 空要什么词性」，不写答案。
+
+Step 2 逐片精听（8 分钟）
+  Q34 循环 pieces of rock that had become scorching hot from the sun（练"that 前面才是答案"）；
+  Q37 循环 A fire is built, and the pans are then heated（练"手段在前、结果在后"）；
+  Q39 循环 gives the syrup a cloudy appearance（练"形容词藏在名词里"）；
+  Q40 循环 40 litres of sap → one litre of maple syrup（练"原料 vs 成品"）。
+
+Step 3 跟读（5 分钟）
+  每张卡点「🎙️ 录音跟读」，回放对比三处连读重音：scorching hot from the sun / a diameter of around 25 cm / one litre of maple syrup。
+
+Step 4 遮中文口述（2 分钟）
+  把上面 22 对改写遮住右边，口述中文意思；说不出就回卡片看一遍。
+
+【本套必背 10 词】
+diameter（直径）/ litre（升）/ evaporator（蒸发器）/ sap（树液）/ trunk（树干）
+scorching（滚烫的）/ gritty（有颗粒感的）/ cloudy（浑浊的）/ refined sugar（精制糖）/ fertiliser（化肥）
+```
+
+---
+
+## 📌 Part 4 一句话行动清单
+
+- 本套 Part 4 **4/10**，六个错里 **5 个是"句法判断"问题**（抄从句、抄下一句、手段当结果），只有 Q40 掺了生词。
+- 最该固化的一条：**答案必须和定位词同句**——Q35 的 conditions、Q37 的 steam 都栽在这条上。
+- 最该防的一条：**Q37 一卡就带崩三题**。P4 每道题只给 2 秒，卡住就往前推。

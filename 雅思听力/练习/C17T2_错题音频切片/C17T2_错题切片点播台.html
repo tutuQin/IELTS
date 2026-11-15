@@ -637,6 +637,29 @@
         .seek-input { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-main); padding: 6px 10px; font-size: 0.85rem; outline: none; }
         .seek-input:focus { border-color: var(--accent-blue); }
         .seek-input::placeholder { color: rgba(148, 163, 184, 0.6); }
+    
+        /* ===== Part 4 五色标注体系 ===== */
+        .hl-loc { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); font-weight: 700; padding: 0 2px; }
+        .hl-swap { background: rgba(251, 191, 36, 0.16); color: var(--accent-amber); padding: 1px 5px; border-radius: 4px; border-bottom: 2px dashed var(--accent-amber); font-weight: 600; }
+        .hl-conn { color: #f472b6; font-weight: 700; background: rgba(244, 114, 182, 0.14); padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #f472b6; }
+        .hl-ans { color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .hl-trap { color: #f87171; font-weight: 700; text-decoration: line-through; background: rgba(248, 113, 113, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .cn-note { display: block; margin: 6px 0 0; font-size: .84rem; line-height: 1.7; color: #fbbf24; background: rgba(251, 191, 36, .08); border-left: 3px solid rgba(251, 191, 36, .55); padding: 4px 9px; border-radius: 4px; }
+
+        /* ===== Part 4 卡片专用块 ===== */
+        .stem-box { background: rgba(56, 189, 248, .07); border: 1px solid rgba(56, 189, 248, .28); border-left: 4px solid var(--accent-blue); border-radius: 8px; padding: 12px 15px; margin: 14px 0 12px; font-size: .95rem; line-height: 1.9; color: var(--text-main); }
+        .stem-label { display: block; font-size: .74rem; letter-spacing: .06em; color: var(--accent-blue); font-weight: 700; margin-bottom: 7px; }
+        .blank-answer { display: inline-block; min-width: 78px; text-align: center; border-bottom: 1.5px solid var(--accent-green); color: var(--accent-green); font-weight: 700; padding: 0 6px; }
+        .path-line { font-size: .9rem; line-height: 1.85; color: var(--text-muted); margin: 10px 0 0; }
+        .path-line b { color: var(--text-main); }
+        .divider-card { border-left: 5px solid var(--accent-purple); background: rgba(192, 132, 252, .08); }
+        .divider-card h2 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--accent-purple); }
+        .divider-card p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.75; }
+        .legend-card { border-left: 5px solid var(--accent-blue); background: rgba(56, 189, 248, .07); }
+        .legend-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .legend-row > span { font-size: .85rem; }
+        .legend-row .hl-trap { text-decoration: none; }
+
     </style>
 </head>
 <body>
@@ -646,14 +669,14 @@
         <a href="../切片/index.html" class="nav-link">📂 返回切片总目录 (Index)</a>
         <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">剑桥雅思 17 · Test 2 精听点播台</span>
         <div style="display: flex; gap: 14px;">
-            <a href="../剑桥17_Test2_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 七坑复盘表</a>
+            <a href="../剑桥17_Test2_听力Part1_七坑与3+2复盘汇总表.md" class="nav-link">📊 Part 1 + Part 4 复盘表</a>
             <a href="../C7T1_错题音频切片/C7T1_错题切片点播台.html" class="nav-link">前往剑7 T1 切片 ➔</a>
         </div>
     </div>
 
     <header>
-        <h1>剑桥雅思 17 Test 2 Part 1 答案句切片点播台</h1>
-        <p>🎯 索苏村志愿工作 (Q1-Q10) · 答案句词级时间戳精准切片 · 原生影子跟读录音 · <strong>本次战报：10 题对 7 错 3</strong>（Q4 词音 · Q7 BUT转折陷阱 · Q8 词尾辨音）</p>
+        <h1>剑桥雅思 17 Test 2 Part 1 + Part 4 答案句切片点播台</h1>
+        <p>🎯 Part 1 索苏村志愿工作 (Q1-Q10) · Part 4 数字技术对冰岛语的影响 (Q31-Q40) · 答案句词级时间戳精准切片 · 五色标注（定位词 / 替换改写 / 逻辑信号 / 答案 / 干扰）· <strong>Part 4 战报：10 题对 5 错 5</strong></p>
     </header>
 
     <!-- Sticky Audio Player -->
@@ -705,12 +728,16 @@
 
     <!-- 4-step Guide -->
     <div class="tips-panel">
-        <div class="tips-title">💡 4 步靶向精听法（防坑肌肉记忆构建）</div>
+        <div class="tips-title">💡 8 步靶向精练指南（Part 1 四步通用 + Part 4 四步专项）</div>
         <ol class="tips-list">
             <li><strong>Step 1 先读看懂</strong>：展开查看本切片听力原文与翻译，画出同义替换词与陷阱词（本套核心：<em>kitchen ⚠️ → but → garden ✅</em>）。</li>
             <li><strong>Step 2 出声朗读</strong>：大声朗读答案句 3 遍，打通发音肌肉记忆，尤其是 <em>transport / quiz</em> 的尾音。</li>
             <li><strong>Step 3 闭眼盲听</strong>：合上原文折叠框，纯靠耳朵单曲循环 2~3 遍，直到听到 <em>but</em> 的瞬间本能地把笔尖移向转折后的内容。</li>
             <li><strong>Step 4 录音跟读</strong>：点击「🎙️ 录音跟读」录制自己的发音，回放试听比对原声，找出自己读不流畅卡壳之处！</li>
+            <li><strong>Step 5 先定词性、再等答案（Part 4 Q31/Q32/Q35/Q38/Q39/Q40）：</strong>笔记填空的空几乎全是名词或形容词。<em>has a ___ that is still growing</em> 要名词（vocabulary）；<em>are becoming ___ very quickly</em> 要形容词（bilingual）；<em>how complicated its ___ is</em> 要名词（grammar）。听到词性不对的候选词，立刻丢掉。</li>
+            <li><strong>Step 6 一个长句两个空，按 while 前后分（Part 4 Q36/Q37）：</strong><em>playground conversations ... in English, <u>while</u> teachers of much younger children ... a picture</em>——while 之前是 36（playground），while 之后是 37（picture）。出现 while / whereas / and 并列，先按「前半句 → 后半句」对应题号顺序。</li>
+            <li><strong>Step 7 编号是按讲义顺序走的，别跳句（Part 4 Q34/Q35）：</strong>Q34 的 <em>smartphones</em> 在 <em>Think about</em> 之后，不在上一句的 <em>English</em>；Q35 的 <em>bilingual</em> 在 <em>promotes their bilingual skills</em>，不在下一句的 <em>troubling</em>。你两次都是「抢到上一句/下一句的一个熟词」，用笔尖跟住句子边界即可。</li>
+            <li><strong>Step 8 高频学术词专练拼写（Part 4 Q38）：</strong><em>grammar</em> 是 -ar 结尾，不是 grammer；同类必背：government、environment、necessary、pronunciation、population。听到≠写对，这一类词单独过一遍手写。</li>
         </ol>
     </div>
 
@@ -722,6 +749,19 @@
             <li><strong>Q7 ✗ T2转折陷阱 + T3原词陷阱</strong>：录音先说 <em>decorate his kitchen</em>（有人管了），你听见 kitchen 就下笔空耳了后面；答案 100% 在 <strong>but</strong> 之后 —— <em>weeding in his garden</em>。</li>
             <li><strong>Q8 ✗ ①词音/②拼写坑</strong>：定位成功，但没理解词义写成了 <em>quits</em>。quiz = /kwɪ<strong>z</strong>/ 浊音收尾，「问答竞赛」，与 dance、New Year's Eve party 并列的活动名。</li>
             <li><strong>Q1/2/3/5/6/9/10 ✓</strong>：全部一次通过，继续保持「原词定位 + 原词答案」的稳定输出。</li>
+        </ol>
+    </div>
+
+    <!-- 本套题 Part 4 战报 -->
+    <div class="tips-panel">
+        <div class="tips-title">📋 本套 Part 4 战报与五大错因（The impact of digital technology on the Icelandic language · 10 题对 5 错 5）</div>
+        <ol class="tips-list">
+            <li><strong>Q34 ✗ 抢了上一句的熟词</strong>：答案 <em>smartphones</em> 在 <em>Think about…</em> 之后；你写了 <em>English</em>，那是上一句末尾 <em>this world is predominantly English</em> 的词。题干 <em>such as</em> 要的是「设备」，不是「语言」。</li>
+            <li><strong>Q35 ✗ 抢了下一句的熟词</strong>：答案 <em>bilingual</em> 在 <em>promotes their bilingual skills</em>；你写了 <em>troubling</em>，它出现在下一句末尾 <em>the outcome is a little troubling</em>。典型的「晚了一句」。</li>
+            <li><strong>Q36 ✗ 一个长句两个空，跨过 while 抓错</strong>：<em>playground</em> 在 while 之前，<em>picture</em> 在 while 之后。你写 <em>classes</em>，是 while 之后那半句里的词——直接把 Q37 的句子当成了 Q36。</li>
+            <li><strong>Q37 ✗ 抓了结论句</strong>：你写的 <em>mother town</em> 实为 <em>mother tongue</em>，出现在下一句 <em>at risk of losing its mother tongue</em>；题干 <em>identify the content of a ___</em> 对应的是 <em>say what is in a picture</em>。</li>
+            <li><strong>Q38 ✗ 听对了、拼错了</strong>：定位与辨音都成功，写成 <em>grammer</em>。grammar 是 -ar 结尾。这是本套唯一一处「纯拼写」失分，最容易补。</li>
+            <li><strong>Q31/32/33/39/40 ✓</strong>：数字题（321,000）、并列清单（web browser and podcast）、主谓换位（the vocabulary … is continually increasing）、抽象名词（identity）、neither ⇄ either（fluent）全部接住，说明你的改写识别已经能扛住中等难度句式。</li>
         </ol>
     </div>
 
@@ -738,15 +778,18 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部 (24)</button>
+        <button class="tab-btn" onclick="filterCategory('wrong', this)">错题 (8)</button>
+        <button class="tab-btn" onclick="filterCategory('correct', this)">答对 (12)</button>
         <button class="tab-btn" onclick="filterCategory('part1', this)">Part 1 志愿工作 (10)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)">🔻 Part 4 讲座 (13)</button>
+        <button class="tab-btn" onclick="filterCategory('full', this)">🎧 完整录音 (2)</button>
     </div>
 
     <!-- Slice List -->
     <div class="slice-list">
         <!-- CARD: card_01 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 correct">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q1</span>
@@ -809,7 +852,7 @@
         </div>
 
         <!-- CARD: card_02 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 correct">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q2</span>
@@ -864,7 +907,7 @@
         </div>
 
         <!-- CARD: card_03 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 correct">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q3</span>
@@ -919,7 +962,7 @@
         </div>
 
         <!-- CARD: card_04 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 wrong">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q4</span>
@@ -982,7 +1025,7 @@
         </div>
 
         <!-- CARD: card_05 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 correct">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q5</span>
@@ -1037,7 +1080,7 @@
         </div>
 
         <!-- CARD: card_06 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 correct">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q6</span>
@@ -1092,7 +1135,7 @@
         </div>
 
         <!-- CARD: card_07 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 wrong">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q7</span>
@@ -1151,7 +1194,7 @@
         </div>
 
         <!-- CARD: card_08 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 wrong">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q8</span>
@@ -1210,7 +1253,7 @@
         </div>
 
         <!-- CARD: card_09 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 correct">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q9</span>
@@ -1269,7 +1312,7 @@
         </div>
 
         <!-- CARD: card_10 -->
-        <div class="slice-card" data-category="part1">
+        <div class="slice-card" data-category="part1 correct">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · Q10</span>
@@ -1566,6 +1609,828 @@
             </div>
         </div>
 
+        <!-- CARD: p4-divider -->
+        <div class="slice-card divider-card" data-category="part4" id="card-p4-divider" style="padding: 22px 24px;">
+            <h2>🔻 Part 4 · The impact of digital technology on the Icelandic language</h2>
+            <p>数字技术对冰岛语的影响（讲座 · Q31-Q40 · <strong>ONE WORD AND/OR A NUMBER</strong>）<br>
+            导语 1321.8s → 正文 1395.4s → 结束 1674.5s｜整段切片 <code>Section_4_Full_Icelandic.mp3</code>（5m53s）<br>
+            <strong>本套战报：10 题对 5 错 5</strong>（对 Q31/Q32/Q33/Q39/Q40；错 Q34/Q35/Q36/Q37/Q38）</p>
+        </div>
+
+        <!-- CARD: p4-legend -->
+        <div class="slice-card legend-card" data-category="part4" id="card-p4-legend" style="padding: 22px 24px;">
+            <h2 style="margin:0 0 6px; font-size:1.12rem; color: var(--accent-blue);">🎨 五色标注怎么读</h2>
+            <p style="margin:0; color: var(--text-muted); font-size:.9rem; line-height:1.75;">
+                题干、答案句、逐句对照三处统一使用同一套颜色；中文行里的【】小注会写出每题对应关系与改写对照。
+            </p>
+            <div class="legend-row">
+                <span class="hl-loc">定位词</span>
+                <span class="hl-swap">题干⇄原文替换改写</span>
+                <span class="hl-conn">but / while / In fact / Then 等逻辑信号</span>
+                <span class="hl-ans">答案</span>
+                <span class="hl-trap">干扰 / 陷阱词</span>
+            </div>
+        </div>
+
+        <!-- CARD: card_q31 -->
+        <div class="slice-card" data-category="part4 correct" id="card_q31">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q31</span>
+                    <h3 class="card-title">✓ 一次通过 · 数字答案直接落笔 (321,000)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_约321000名使用者与Iceland干扰.mp3', 'Q31: 321,000 名使用者')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q31" onclick="handleRecBtnClick('card_q31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q31" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q31"></span>
+                    <span class="rec-status-text" id="rec-status-card_q31">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q31">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q31" onclick="playUserRecording('card_q31')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q31')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q31')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q31')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • The Icelandic language has approximately <span class='blank-answer'>31 ______</span> speakers
+                </div>
+
+                <div class="transcript-box">
+                    <span class="hl-loc">In order to illustrate its effect</span>, I'm going to focus on the <span class="hl-loc">Icelandic language</span>, which is <span class="hl-swap">spoken by around</span> <span class="hl-ans">321,000</span> <span class="hl-swap">people</span>, <span class="hl-trap">most of whom live in Iceland, an island in the North Atlantic Ocean</span>.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>Icelandic language</code>、<code>spoken by</code>（≈ 题干 has … speakers）<br>
+                    🧭 <b>定位路径</b>：导语结束后的第一句（约 1418s）。题干 has approximately ___ speakers ⇄ 原文 spoken by around ___ people，答案在 around 之后、people 之前。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>数字题，听到即落笔。<strong>题干本身印着 AND/OR A NUMBER</strong>，所以写 <code>321,000</code> 完全合规（写 <code>321000</code> 也接受）——数字按“一个 number”计数，不按字母数算词。干扰是紧随其后的两个地点补充：most of whom live in Iceland / North Atlantic Ocean，它们说明“人住哪儿”，不是“有多少人”。
+                    <div class="cn-note">- has approximately ⇄ is spoken by around（拥有大约 ⇄ 由大约……使用）<br>- speakers ⇄ people（使用者 ⇄ 人口）<br>- 数字写法：321,000 / 321000 都算 ONE NUMBER，不必写成英文单词</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Over the past few sessions, we've been considering the reasons why some world languages are in decline, and today I'm going to introduce another factor that affects languages, and the speakers of those languages, and that's technology and, in particular, digital technology.</div>
+                            <div class="cn-line">过去几节课我们一直在讨论世界上一些语言衰落的原因。今天我来讲另一个影响语言、也影响语言使用者的因素——技术，尤其是数字技术。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">In order to illustrate its effect</span>, I'm going to focus on the <span class="hl-loc">Icelandic language</span>, which is <span class="hl-swap">spoken by around</span> <span class="hl-ans">321,000</span> <span class="hl-swap">people</span>, <span class="hl-trap">most of whom live in Iceland, an island in the North Atlantic Ocean</span>.</div>
+                            <div class="cn-line">为了说明它的影响，我把焦点放在<span style="color:#38bdf8;">冰岛语</span>上——大约有【<span style="color:#34d399;">32.1 万</span>】人在使用它，其中大多数人住在冰岛，也就是北大西洋上的一个岛。【Q31 答案句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The problem for this language is not the number of speakers – even though this number is small. Nor is it about losing words to other languages, such as English.</div>
+                            <div class="cn-line">这门语言的问题不在于使用者数量——尽管这个数字确实很小；也不在于它的词汇被英语等其他语言取代。</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q32 -->
+        <div class="slice-card" data-category="part4 correct" id="card_q32">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q32</span>
+                    <h3 class="card-title">✓ 一次通过 · In fact 之后才是实质 (vocabulary)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_词汇vocabulary持续增长与English干扰.mp3', 'Q32: 仍在增长的 vocabulary')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q32" onclick="handleRecBtnClick('card_q32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q32" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q32"></span>
+                    <span class="rec-status-text" id="rec-status-card_q32">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q32">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q32" onclick="playUserRecording('card_q32')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q32')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q32')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q32')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • It has a <span class='blank-answer'>32 ______</span> that is still growing
+                </div>
+
+                <div class="transcript-box">
+                    The problem for this language is not the <span class="hl-trap">number of speakers</span> – even though this number is small. <span class="hl-conn">Nor</span> is it about losing words to other languages, such as <span class="hl-trap">English</span>. <span class="hl-conn">In fact</span>, the <span class="hl-ans">vocabulary</span> of <span class="hl-loc">Icelandic</span> is <span class="hl-swap">continually increasing</span>, because when speakers need a new word for something, they tend to create one, <span class="hl-swap">rather than</span> borrowing from another language.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>The problem for this language</code>、<code>Icelandic</code>、<code>In fact</code><br>
+                    🧭 <b>定位路径</b>：同一段第 2-3 句（约 1444s）。题干 has a ___ that is still growing 的主语是“这门语言（冰岛语）”，答案在 In fact 之后的主语位置：the vocabulary of Icelandic。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>题干 <code>has a ___ that is still growing</code> 是 a + 名词单数，答案必须是可数名词。<strong>In fact 是“换个说法”的信号词</strong>：它前面两句都在“否认”（不是使用者少、不是丢词），后面才是真正的事实。干扰 English 是“借词”的反例，number of speakers 是上一句的话题，两者都不是“还在增长的东西”。
+                    <div class="cn-note">- has a ___ that is still growing ⇄ the ___ of Icelandic is continually increasing（有一个仍在增长的东西 ⇄ 冰岛语的……在持续增加）<br>- still growing ⇄ continually increasing（仍在增长 ⇄ 不断增加）<br>- In fact ⇄ 更正/递进信号：前面是“不是……”，后面才是“其实是……”</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The problem for this language is not the <span class="hl-trap">number of speakers</span> – even though this number is small. <span class="hl-conn">Nor</span> is it about losing words to other languages, such as <span class="hl-trap">English</span>.</div>
+                            <div class="cn-line">这门语言的问题不在于使用者数量——尽管这个数字很小；也不在于词汇被英语等语言取代。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, the <span class="hl-ans">vocabulary</span> of <span class="hl-loc">Icelandic</span> is <span class="hl-swap">continually increasing</span>, because when speakers need a new word for something, they tend to create one, <span class="hl-swap">rather than</span> borrowing from another language.</div>
+                            <div class="cn-line">事实上，冰岛语的【<span style="color:#34d399;">词汇</span>】在<span style="color:#fbbf24;">持续增加</span>：当使用者需要一个新词时，他们倾向于自己造一个，而不是从别的语言借。【Q32 答案句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> All this makes Icelandic quite a special language – it's changed very little in the past millennium, yet it can handle twenty-first-century concepts related to the use of computers and digital technology.</div>
+                            <div class="cn-line">这些都让冰岛语相当特别：过去一千年里它变化很小，却能表达与计算机、数字技术相关的 21 世纪概念。</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q33 -->
+        <div class="slice-card" data-category="part4 correct" id="card_q33">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q33</span>
+                    <h3 class="card-title">✓ 一次通过 · 并列清单的第二项 (podcast)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_播客podcast与web_browser并列.mp3', 'Q33: web browser 与 podcast')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q33" onclick="handleRecBtnClick('card_q33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q33" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q33"></span>
+                    <span class="rec-status-text" id="rec-status-card_q33">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q33">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q33" onclick="playUserRecording('card_q33')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q33')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q33')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q33')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • has its own words for computer-based concepts, such as web browser and <span class='blank-answer'>33 ______</span>
+                </div>
+
+                <div class="transcript-box">
+                    Take, for example, the word for <span class="hl-loc">web browser</span> … this is <span class="hl-trap">vafri</span> in Icelandic, which comes from the verb to wander. I can't think of a more appropriate term because that's exactly what you do mentally when you browse the internet. <span class="hl-conn">Then</span> there's an Icelandic word for <span class="hl-ans">podcast</span> – which is too hard to pronounce! <span class="hl-conn">And so on</span>.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>such as web browser</code>、<code>Then there's an Icelandic word for</code><br>
+                    🧭 <b>定位路径</b>：同一段第 5-7 句（约 1469s）。题干 such as A and B 对应原文“先 web browser、后 podcast”，Then 就是第二项的入口词。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>并列清单题，题干把 two examples 排成 such as A and B，原文用 <em>Take, for example, … Then …</em> 分开给。<strong>vafri 不是答案</strong>：它是 web browser 的冰岛语说法，题干问的是“哪两个英语概念”。听到 Then 要立刻反应“这是并列的第二项”，不要把中间那句 I can't think of a more appropriate term 当成答案。
+                    <div class="cn-note">- computer-based concepts ⇄ word for web browser / word for podcast（计算机相关概念 ⇄ 浏览器、播客的说法）<br>- such as … and … ⇄ Take, for example, … Then …（例如 A 和 B ⇄ 先举例，再“然后是”）<br>- vafri ⇄ web browser（冰岛语说法 ⇄ 英语概念；题干要后者）</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Take, for example, the word for <span class="hl-loc">web browser</span> … this is <span class="hl-trap">vafri</span> in Icelandic, which comes from the verb to wander. I can't think of a more appropriate term because that's exactly what you do mentally when you browse the internet.</div>
+                            <div class="cn-line">比如“网络浏览器”，冰岛语叫 <span style="color:#f87171;text-decoration:line-through;">vafri</span>，来自动词“漫游”。我想不出更贴切的词了，因为你上网浏览时，脑子里做的正是“漫游”。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Then</span> there's an Icelandic word for <span class="hl-ans">podcast</span> – which is too hard to pronounce! <span class="hl-conn">And so on</span>.</div>
+                            <div class="cn-line">然后还有冰岛语版的【<span style="color:#34d399;">播客</span>】——那个词太难念了！诸如此类。【Q33 答案句】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q34 -->
+        <div class="slice-card" data-category="part4 wrong" id="card_q34">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q34</span>
+                    <h3 class="card-title">✗ 本题错 · 抢了上一句的 English，答案在 Think about 之后 (smartphones)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_智能手机smartphones与English错听.mp3', 'Q34: 智能手机 smartphones')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q34" onclick="handleRecBtnClick('card_q34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q34" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q34"></span>
+                    <span class="rec-status-text" id="rec-status-card_q34">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q34">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q34" onclick="playUserRecording('card_q34')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q34')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q34')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q34')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • are big users of digital technology, such as <span class='blank-answer'>34 ______</span>
+                </div>
+
+                <div class="transcript-box">
+                    Icelandic, then, is alive and growing, <span class="hl-conn">but</span> – and it's a big but – young Icelanders spend a great deal of time in the <span class="hl-loc">digital world</span> and this world is <span class="hl-trap">predominantly English</span>. <span class="hl-conn">Think about</span> <span class="hl-ans">smartphones</span>. They didn't even exist until comparatively recently, <span class="hl-conn">but</span> today young people <span class="hl-swap">use them all the time</span> to <span class="hl-trap">read books, watch TV or films, play games, listen to music</span> and so on.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>digital world</code>、<code>big users of digital technology</code>、<code>Think about</code><br>
+                    🧭 <b>定位路径</b>：约 1502s。题干 such as ___ 要的是“数字技术的例子（设备）”，原文用 Think about 另起一句直接给例子：smartphones。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>你写 English，来源是上一句末尾的 <em>this world is predominantly English</em>——那是“数字世界用什么语言”，不是“用什么设备”。<strong>题干 such as 后面举例的是 digital technology</strong>，必须是设备类名词。后面那串 read books / watch TV / play games / listen to music 是“用手机做什么”，是用途清单，进一步确认前面那个才是设备。另外此处 <em>but – and it's a big but –</em> 是口语强调，作用是“把注意力拽回”，不是转折出答案。
+                    <div class="cn-note">- are big users of ⇄ use them all the time（大量使用者 ⇄ 一直在用）<br>- digital technology ⇄ digital world … smartphones（数字技术 ⇄ 数字世界里的手机）<br>- such as ⇄ Think about（例如 ⇄ 想想……）<br>- 干扰：English（上一句末尾，说的是语言）、read books / watch TV / play games（用途，不是设备）</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Icelandic, then, is alive and growing, <span class="hl-conn">but</span> – and it's a big but – young Icelanders spend a great deal of time in the <span class="hl-loc">digital world</span> and this world is <span class="hl-trap">predominantly English</span>.</div>
+                            <div class="cn-line">那么，冰岛语是活的、也在成长，<span style="color:#f472b6;">但是</span>——这个“但是”很关键——冰岛年轻人大量时间花在数字世界里，而这个世界主要是英语的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Think about</span> <span class="hl-ans">smartphones</span>. They didn't even exist until comparatively recently, <span class="hl-conn">but</span> today young people <span class="hl-swap">use them all the time</span> to <span class="hl-trap">read books, watch TV or films, play games, listen to music</span> and so on.</div>
+                            <div class="cn-line">想想【<span style="color:#34d399;">智能手机</span>】。它们直到不久前才出现，但今天年轻人一直在用它们看书、看电视或电影、玩游戏、听音乐等等。【Q34 答案句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Obviously, this is a good thing in many respects because it promotes their bilingual skills, but the extent of the influence of English in the virtual world is staggering and it's all happening really fast.</div>
+                            <div class="cn-line">显然，这在很多方面是好事，因为它促进了他们的双语能力；但英语在虚拟世界里的影响之大令人吃惊，而且这一切发生得非常快。</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q35 -->
+        <div class="slice-card" data-category="part4 wrong" id="card_q35">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q35</span>
+                    <h3 class="card-title">✗ 本题错 · 抓了下一句的 troubling，答案在 promotes … skills (bilingual)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_双语bilingual能力与troubling干扰.mp3', 'Q35: 双语能力 bilingual')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q35" onclick="handleRecBtnClick('card_q35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q35" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q35"></span>
+                    <span class="rec-status-text" id="rec-status-card_q35">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q35">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q35" onclick="playUserRecording('card_q35')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q35')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q35')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q35')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • are becoming <span class='blank-answer'>35 ______</span> very quickly
+                </div>
+
+                <div class="transcript-box">
+                    <span class="hl-loc">Obviously</span>, this is a good thing in many respects because it <span class="hl-swap">promotes</span> their <span class="hl-ans">bilingual</span> <span class="hl-swap">skills</span>, <span class="hl-conn">but</span> the extent of the influence of English in the virtual world is <span class="hl-trap">staggering</span> and it's all <span class="hl-swap">happening really fast</span>. For their parents and grandparents, the change is less concerning because they already have their native-speaker skills in Icelandic. <span class="hl-conn">But</span> for young speakers – well, the outcome is a little <span class="hl-trap">troubling</span>.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>become</code>（题干谓语的词性要求）、<code>good thing</code>、<code>really fast</code><br>
+                    🧭 <b>定位路径</b>：约 1517s。题干 are becoming ___ very quickly 需要形容词；原文把“变成什么”放在 promotes their bilingual skills，把“很快”放在 happening really fast，一句里两头拆开。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>这是一道“一空两处”的题：<strong>becoming ___ ⇄ promotes their ___ skills</strong>，<strong>very quickly ⇄ happening really fast</strong>。你写 troubling，它出现在<strong>下一句末尾</strong>（the outcome is a little troubling），晚了整整一句；staggering 也是近处的形容词干扰，但它形容的是“英语影响之大”，不是“年轻人变成了什么”。become 后面只能跟形容词，而“双语”对应 bilingual skills 的形容词形式 bilingual。
+                    <div class="cn-note">- are becoming ___ very quickly ⇄ promotes their ___ skills + happening really fast（很快变得…… ⇄ 促进了他们的……能力，而且发生得非常快）<br>- a good thing ⇄ 正面评价，提示后面跟的是“能力/好处”类形容词<br>- 干扰：staggering（形容影响之大）、troubling（下一句的结论，不是本题）</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">Obviously</span>, this is a good thing in many respects because it <span class="hl-swap">promotes</span> their <span class="hl-ans">bilingual</span> <span class="hl-swap">skills</span>, <span class="hl-conn">but</span> the extent of the influence of English in the virtual world is <span class="hl-trap">staggering</span> and it's all <span class="hl-swap">happening really fast</span>.</div>
+                            <div class="cn-line">显然，这在很多方面是好事，因为它促进了他们的【<span style="color:#34d399;">双语</span>】<span style="color:#fbbf24;">能力</span>；<span style="color:#f472b6;">但</span>英语在虚拟世界的影响之大令人吃惊，而且这一切<span style="color:#fbbf24;">发生得非常快</span>。【Q35 答案句：bilingual skills + really fast 两处拼成一空】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For their parents and grandparents, the change is less concerning because they already have their native-speaker skills in Icelandic. <span class="hl-conn">But</span> for young speakers – well, the outcome is a little <span class="hl-trap">troubling</span>.</div>
+                            <div class="cn-line">对他们的父母和祖父母来说，这种变化没那么令人担心，因为他们本来就有冰岛语的母语能力。但对年轻使用者来说——结果就有点令人不安了。</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q36 -->
+        <div class="slice-card" data-category="part4 wrong" id="card_q36">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q36</span>
+                    <h3 class="card-title">✗ 本题错 · 长句两个空，while 之前才是 Q36 (playground)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_操场playground全英文对话与classes干扰.mp3', 'Q36: 操场 playground')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q36" onclick="handleRecBtnClick('card_q36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q36" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q36"></span>
+                    <span class="rec-status-text" id="rec-status-card_q36">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q36">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q36" onclick="playUserRecording('card_q36')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q36')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q36')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q36')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • are having discussions using only English while they are in the <span class='blank-answer'>36 ______</span> at school
+                </div>
+
+                <div class="transcript-box">
+                    <span class="hl-conn">For example</span>, teachers have found that <span class="hl-loc">playground conversations</span> in <span class="hl-swap">Icelandic secondary schools</span> can be <span class="hl-swap">conducted entirely in English</span>, <span class="hl-conn">while</span> teachers of much younger children have reported situations where their <span class="hl-trap">classes</span> find it easier to say what is in a <span class="hl-trap">picture</span> using English, rather than Icelandic.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>For example</code>、<code>conversations … in English</code>、<code>at school</code><br>
+                    🧭 <b>定位路径</b>：约 1542s。题干 in the ___ at school ⇄ in Icelandic secondary schools（中学里），而“谈话”的场所就是 playground conversations 的定语。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>这是本套最能提分的一处长句结构：<strong>一个句子塞了两个答案</strong>。while 之前 = Q36（playground），while 之后 = Q37（picture）。你写 classes，是 while 之后那半句里的词（their classes find it easier…），等于把 Q37 的句子当成了 Q36。<strong>军规</strong>：听到 while / whereas / and 并列，先在草稿上画一条竖线，按“前半句 → 后半句”对应题号顺序，绝不跨线抓词。
+                    <div class="cn-note">- are having discussions using only English ⇄ conversations … can be conducted entirely in English（只用英语讨论 ⇄ 对话可以完全用英语进行）<br>- in the ___ at school ⇄ in Icelandic secondary schools（在学校里的…… ⇄ 在冰岛中学里）<br>- while ⇄ 前后对比，正是 Q36 与 Q37 的分界线</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">For example</span>, teachers have found that <span class="hl-loc">playground conversations</span> in <span class="hl-swap">Icelandic secondary schools</span> can be <span class="hl-swap">conducted entirely in English</span>, <span class="hl-conn">while</span> teachers of much younger children have reported situations where their <span class="hl-trap">classes</span> find it easier to say what is in a <span class="hl-trap">picture</span> using English, rather than Icelandic.</div>
+                            <div class="cn-line">例如，老师们发现，冰岛中学里的<span style="color:#38bdf8;">操场（课间）对话</span>可以完全用英语进行；而教更小孩子的老师反映，他们的学生在用英语说出图片里有什么时，比用冰岛语更容易。【Q36 答案句：while 之前；Q37 在 while 之后】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The very real and worrying consequence of all this is that the young generation in Iceland is at risk of losing its mother tongue.</div>
+                            <div class="cn-line">这一切非常真实又令人担忧的后果是：冰岛年轻一代正面临失去母语的风险。</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q37 -->
+        <div class="slice-card" data-category="part4 wrong" id="card_q37">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q37</span>
+                    <h3 class="card-title">✗ 本题错 · 没定位到；写成 mother tongue，那是下一句的结论 (picture)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_识别图片picture内容与mother_tongue干扰.mp3', 'Q37: 图片 picture')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q37" onclick="handleRecBtnClick('card_q37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q37" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q37"></span>
+                    <span class="rec-status-text" id="rec-status-card_q37">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q37">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q37" onclick="playUserRecording('card_q37')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q37')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q37')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q37')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • are better able to identify the content of a <span class='blank-answer'>37 ______</span> in English than Icelandic
+                </div>
+
+                <div class="transcript-box">
+                    <span class="hl-conn">while</span> teachers of much younger children have reported situations where their <span class="hl-trap">classes</span> find it <span class="hl-swap">easier</span> to <span class="hl-swap">say what is in</span> a <span class="hl-ans">picture</span> using English, <span class="hl-swap">rather than</span> Icelandic. The very real and worrying consequence of all this is that the young generation in Iceland is at risk of losing its <span class="hl-trap">mother tongue</span>.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>teachers of much younger children</code>、<code>easier</code>、<code>rather than Icelandic</code><br>
+                    🧭 <b>定位路径</b>：约 1552s，接着 Q36 那半句之后（while 之后）。题干 identify the content of a ___ ⇄ say what is in a ___。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>你写的 mother town 其实是 <em>mother tongue</em>，它出现在<strong>下一句</strong>——那是整段的结论句（losing its mother tongue），不是 37 的答案。<strong>定位失败的原因</strong>：Q36 与 Q37 共用同一个长句，while 之后没有新的“定位词”，只有 <em>teachers of much younger children</em> 这个对比主语。题干 identify the content of ⇄ say what is in（说出里面有什么），are better able to ⇄ find it easier to。
+                    <div class="cn-note">- identify the content of a ___ ⇄ say what is in a ___（辨认……的内容 ⇄ 说出……里有什么）<br>- are better able to ⇄ find it easier to（更擅长 ⇄ 觉得更容易）<br>- in English than Icelandic ⇄ using English, rather than Icelandic<br>- 干扰：mother tongue（下一句的结论）、classes（同一句里的另一个名词）</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">while</span> teachers of much younger children have reported situations where their <span class="hl-trap">classes</span> find it <span class="hl-swap">easier</span> to <span class="hl-swap">say what is in</span> a <span class="hl-ans">picture</span> using English, <span class="hl-swap">rather than</span> Icelandic.</div>
+                            <div class="cn-line">而教更小孩子的老师反映，他们的学生在用英语说出【<span style="color:#34d399;">图片</span>】里有什么时，<span style="color:#fbbf24;">比用冰岛语更容易</span>。【Q37 答案句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The very real and worrying consequence of all this is that the young generation in Iceland is at risk of losing its <span class="hl-trap">mother tongue</span>.</div>
+                            <div class="cn-line">这一切非常真实又令人担忧的后果是：冰岛年轻一代正面临失去<span style="color:#f87171;text-decoration:line-through;">母语</span>的风险。（这是结论句，不是 Q37 的答案）</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q38 -->
+        <div class="slice-card" data-category="part4 wrong" id="card_q38">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q38</span>
+                    <h3 class="card-title">✗ 本题错 · 听对了、拼错了：grammar 不是 grammer</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_语法grammar复杂与population干扰.mp3', 'Q38: 语法 grammar（注意拼写）')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q38" onclick="handleRecBtnClick('card_q38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q38" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q38"></span>
+                    <span class="rec-status-text" id="rec-status-card_q38">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q38">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q38" onclick="playUserRecording('card_q38')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q38')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q38')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q38')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • write very little in Icelandic because of the small number of speakers and because of how complicated its <span class='blank-answer'>38 ______</span> is
+                </div>
+
+                <div class="transcript-box">
+                    Of course, this is happening to other European languages too, <span class="hl-conn">but while</span> internet companies might be willing to offer, say, <span class="hl-trap">French options</span> in their systems, it's much harder for them to justify the expense of doing the same for a language that has a <span class="hl-trap">population</span> the size of a French town, such as Nice. <span class="hl-loc">The other drawback of Icelandic</span> is the <span class="hl-ans">grammar</span>, which is <span class="hl-swap">significantly more complex</span> than in most languages.
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>drawback</code>、<code>Icelandic</code>、<code>complicated</code>（≈ more complex）<br>
+                    🧭 <b>定位路径</b>：约 1592s。题干 how complicated its ___ is ⇄ which is significantly more complex；The other drawback 就是“第二个原因”的入口词。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>这是本套唯一一处<strong>纯拼写失分</strong>：定位、辨音都成功，写成 grammer。<strong>grammar 是 -ar 结尾</strong>（gram-mar），不是 -er；同类高频词还有 government、environment、necessary、population、pronunciation。另外注意前半句的 population 是“第一个原因”（小人口），题干已用 the small number of speakers 表达过，不能重复填。
+                    <div class="cn-note">- how complicated its ___ is ⇄ which is significantly more complex（它有多复杂 ⇄ 它明显更复杂）<br>- The other drawback ⇄ 第二个缺点（前面 population 已对应题干 small number of speakers）<br>- 拼写：grammar（-ar 结尾），不是 grammer</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Of course, this is happening to other European languages too, <span class="hl-conn">but while</span> internet companies might be willing to offer, say, <span class="hl-trap">French options</span> in their systems, it's much harder for them to justify the expense of doing the same for a language that has a <span class="hl-trap">population</span> the size of a French town, such as Nice.</div>
+                            <div class="cn-line">当然，其他欧洲语言也面临同样情况；<span style="color:#f472b6;">但</span>互联网公司也许愿意在系统里提供法语选项，可要为一种人口只相当于法国一个小镇（比如尼斯）的语言花同样的钱，就很难说得过去。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">The other drawback of Icelandic</span> is the <span class="hl-ans">grammar</span>, which is <span class="hl-swap">significantly more complex</span> than in most languages. At the moment, the tech giants are simply not interested in tackling this.</div>
+                            <div class="cn-line">冰岛语的另一个劣势是它的【<span style="color:#34d399;">语法</span>】——<span style="color:#fbbf24;">比大多数语言复杂得多</span>。目前科技巨头根本没兴趣解决这个问题。【Q38 答案句】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q39 -->
+        <div class="slice-card" data-category="part4 correct" id="card_q39">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q39</span>
+                    <h3 class="card-title">✓ 一次通过 · sense of 被删、as Icelanders 补上 (identity)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_失去身份认同identity.mp3', 'Q39: 身份认同 identity')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q39" onclick="handleRecBtnClick('card_q39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q39" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q39"></span>
+                    <span class="rec-status-text" id="rec-status-card_q39">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q39">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q39" onclick="playUserRecording('card_q39')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q39')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q39')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q39')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • is worried that young Icelanders may lose their <span class='blank-answer'>39 ______</span> as Icelanders
+                </div>
+
+                <div class="transcript-box">
+                    <span class="hl-conn">However</span>, there's no doubt that it's becoming an inevitable second choice in young people's lives. <span class="hl-conn">This raises important questions.</span> When you consider <span class="hl-loc">how much of the past is tied up in a language</span>, will young Icelanders <span class="hl-swap">lose their sense of their own</span> <span class="hl-ans">identity</span>?
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>This raises important questions</code>、<code>the past is tied up in a language</code>、<code>lose</code><br>
+                    🧭 <b>定位路径</b>：约 1651s，政府段落最后两个问句的第一句。题干 lose their ___ as Icelanders ⇄ lose their sense of their own identity。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>这一题你接住了本段最隐蔽的一处改写：原文 <em>lose their sense of their own identity</em>，题干把 sense of 删掉、在句尾补上 <strong>as Icelanders</strong>——“作为冰岛人的身份”。<strong>However / This raises important questions 是转折+提问的信号</strong>：前面讲政府乐观，后面才是担忧。听到 will …? 的疑问句，就要准备落笔。
+                    <div class="cn-note">- lose their ___ as Icelanders ⇄ lose their sense of their own identity（失去作为冰岛人的…… ⇄ 失去对自己身份的认同感）<br>- is worried that ⇄ This raises important questions / will …?（担心 ⇄ 提出疑问）<br>- However ⇄ 转折：前面是“乐观”，后面才是“担忧”</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, there's no doubt that it's becoming an inevitable second choice in young people's lives. <span class="hl-conn">This raises important questions.</span></div>
+                            <div class="cn-line"><span style="color:#f472b6;">然而</span>，毫无疑问，它正在成为年轻人生活里不可避免的第二选择。这就带来了重要的问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> When you consider <span class="hl-loc">how much of the past is tied up in a language</span>, will young Icelanders <span class="hl-swap">lose their sense of their own</span> <span class="hl-ans">identity</span>?</div>
+                            <div class="cn-line">想一想，有多少“过去”是绑在一种语言里的——冰岛年轻人会失去对自己【<span style="color:#34d399;">身份</span>】的认同感吗？【Q39 答案句】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Another issue that concerns the government of Iceland is this. If children are learning two languages through different routes, neither of which they are fully fluent in, will they be able to express themselves properly?</div>
+                            <div class="cn-line">另一个让冰岛政府担心的问题是：如果孩子通过不同途径学两种语言，而两种都不完全流利，他们还能准确表达自己吗？</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: card_q40 -->
+        <div class="slice-card" data-category="part4 correct" id="card_q40">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q40</span>
+                    <h3 class="card-title">✓ 一次通过 · neither ⇄ not … either，只填形容词 (fluent)</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_两种语言都不fluent流利.mp3', 'Q40: fluent 流利')">▶ 播放切片</button>
+                    <button class="record-card-btn" id="rec-btn-card_q40" onclick="handleRecBtnClick('card_q40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+
+            <div class="user-rec-panel" id="user-rec-panel-card_q40" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-card_q40"></span>
+                    <span class="rec-status-text" id="rec-status-card_q40">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-card_q40">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-card_q40" onclick="playUserRecording('card_q40')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('card_q40')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('card_q40')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('card_q40')">🗑️ 清除</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="stem-box">
+                    <span class="stem-label">卷面题干（ONE WORD AND/OR A NUMBER）</span>
+                    • is worried about the consequences of children not being <span class='blank-answer'>40 ______</span> in either Icelandic or English
+                </div>
+
+                <div class="transcript-box">
+                    <span class="hl-conn">Another issue</span> that concerns the government of Iceland is this. <span class="hl-conn">If</span> children are <span class="hl-loc">learning two languages through different routes</span>, <span class="hl-swap">neither of which</span> they are <span class="hl-swap">fully</span> <span class="hl-ans">fluent</span> in, will they be able to <span class="hl-trap">express themselves properly</span>?
+                </div>
+
+                <div class="path-line">
+                    🎯 <b>定位词</b>：<code>Another issue</code>、<code>children</code>、<code>neither … in</code><br>
+                    🧭 <b>定位路径</b>：约 1662s，政府段落最后一个问句。题干 not being ___ in either A or B ⇄ neither of which they are fully fluent in。
+                </div>
+
+                <div class="analysis-box">
+                    <strong>考点拆解与定位路径：</strong>本题的关键是<strong>否定结构互换</strong>：原文用 neither（两者都不），题干用 not … either（也不）。空里只填形容词 <strong>fluent</strong>：fully 是副词，题干 not being 已经把“程度”表达掉了，写 fully fluent 会超词数且多余。express themselves properly 是“后果”，不是“能力”，不要被它带走。
+                    <div class="cn-note">- not being ___ in either A or B ⇄ neither of which they are fully ___ in（在 A 或 B 中都不…… ⇄ 两者他们都不完全……）<br>- consequences of ⇄ will they be able to …?（后果 ⇄ 疑问句）<br>- 干扰：express themselves properly（结果，不是能力）；fully 已由题干 not 承担</div>
+                </div>
+
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 查看 本切片 完整官方听力原文与逐句翻译（无删减） <span class="toggle-badge">默认隐藏 · 盲听时收起</span></span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Another issue</span> that concerns the government of Iceland is this. <span class="hl-conn">If</span> children are <span class="hl-loc">learning two languages through different routes</span>, <span class="hl-swap">neither of which</span> they are <span class="hl-swap">fully</span> <span class="hl-ans">fluent</span> in, will they be able to <span class="hl-trap">express themselves properly</span>?</div>
+                            <div class="cn-line">另一个让冰岛政府担心的问题是：如果孩子通过不同途径学两种语言，而这两种语言他们<span style="color:#fbbf24;">都不完全</span>【<span style="color:#34d399;">流利</span>】，他们还能准确表达自己吗？【Q40 答案句】</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- CARD: full4 -->
+        <div class="slice-card" data-category="part4 full" id="card-full4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · 完整录音</span>
+                    <h3 class="card-title">🎧 Part 4 完整录音（5m53s）· 全文五色标注 + 逐句翻译</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Section_4_Full_Icelandic.mp3', 'Part 4 完整录音：The impact of digital technology on the Icelandic language')">▶ 播放整段</button>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="transcript-box">
+                    建议用法：先按 Q31-Q40 顺序盲做一遍，再打开下面的逐句对照，把每一处蓝（定位）、黄（改写）、粉（信号）、绿（答案）、红（干扰）逐一指认；最后关掉中文只看英文，做一次纯听力回放。
+                </div>
+
+                <details class="bilingual-details" open>
+                    <summary class="bilingual-summary">
+                        <span class="summary-tag">📜 Part 4 全篇 32 句 · 英文 + 中文 + 五色标注</span>
+                        <span class="toggle-icon">▼</span>
+                    </summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">NARRATOR</span> Part four. You will hear a lecturer on a languages course talking about the impact of digital technology on Icelandic, the native language of Iceland.</div>
+                            <div class="cn-line">第四部分。你将听到一位语言课程的讲师谈数字技术对冰岛语——冰岛母语——的影响。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Right, everyone, let's make a start. Over the past few sessions, we've been considering the reasons why some world languages are in decline, and today I'm going to introduce another factor that affects languages, and the speakers of those languages, and that's technology and, in particular, digital technology.</div>
+                            <div class="cn-line">好，各位，我们开始。过去几节课我们一直在讨论世界上一些语言衰落的原因；今天我要讲另一个影响语言及其使用者的因素——技术，尤其是数字技术。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">In order to illustrate its effect</span>, I'm going to focus on the <span class="hl-loc">Icelandic language</span>, which is <span class="hl-swap">spoken by around</span> <span class="hl-ans">321,000</span> <span class="hl-swap">people</span>, <span class="hl-trap">most of whom live in Iceland, an island in the North Atlantic Ocean</span>.</div>
+                            <div class="cn-line">为了说明它的影响，我把焦点放在<span style="color:#38bdf8;">冰岛语</span>上：大约【<span style="color:#34d399;">32.1 万</span>】人在使用它，其中大多数住在冰岛——北大西洋上的一个岛。【Q31】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The problem for this language is not the <span class="hl-trap">number of speakers</span> – even though this number is small. <span class="hl-conn">Nor</span> is it about losing words to other languages, such as <span class="hl-trap">English</span>.</div>
+                            <div class="cn-line">这门语言的问题不在于使用者数量（尽管这个数字很小），也不在于词汇被英语等语言取代。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">In fact</span>, the <span class="hl-ans">vocabulary</span> of <span class="hl-loc">Icelandic</span> is <span class="hl-swap">continually increasing</span>, because when speakers need a new word for something, they tend to create one, <span class="hl-swap">rather than</span> borrowing from another language.</div>
+                            <div class="cn-line"><span style="color:#f472b6;">事实上</span>，冰岛语的【<span style="color:#34d399;">词汇</span>】在<span style="color:#fbbf24;">持续增加</span>：使用者遇到新事物时倾向于自己造词，而不是从别的语言借。【Q32】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> All this makes Icelandic quite a special language – it's changed very little in the past millennium, yet it can handle twenty-first-century concepts related to the use of computers and digital technology.</div>
+                            <div class="cn-line">这些都让冰岛语相当特别：过去一千年它变化很小，却能表达与计算机、数字技术相关的 21 世纪概念。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Take, for example, the word for <span class="hl-loc">web browser</span> … this is <span class="hl-trap">vafri</span> in Icelandic, which comes from the verb to wander. I can't think of a more appropriate term because that's exactly what you do mentally when you browse the internet.</div>
+                            <div class="cn-line">比如“网络浏览器”，冰岛语叫 <span style="color:#f87171;text-decoration:line-through;">vafri</span>，来自动词“漫游”——没有比这更贴切的词了，因为你浏览网页时脑子里做的正是漫游。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Then</span> there's an Icelandic word for <span class="hl-ans">podcast</span> – which is too hard to pronounce! <span class="hl-conn">And so on</span>.</div>
+                            <div class="cn-line"><span style="color:#f472b6;">然后</span>还有冰岛语版的【<span style="color:#34d399;">播客</span>】——那个词太难念了！诸如此类。【Q33】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Icelandic, then, is alive and growing, <span class="hl-conn">but</span> – and it's a big but – young Icelanders spend a great deal of time in the <span class="hl-loc">digital world</span> and this world is <span class="hl-trap">predominantly English</span>.</div>
+                            <div class="cn-line">那么冰岛语是活的、在成长；<span style="color:#f472b6;">但是</span>——这个“但是”很关键——冰岛年轻人大量时间都泡在数字世界里，而这个世界主要是英语的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Think about</span> <span class="hl-ans">smartphones</span>. They didn't even exist until comparatively recently, <span class="hl-conn">but</span> today young people <span class="hl-swap">use them all the time</span> to <span class="hl-trap">read books, watch TV or films, play games, listen to music</span> and so on.</div>
+                            <div class="cn-line">想想【<span style="color:#34d399;">智能手机</span>】：它们不久前才出现，但今天年轻人一直在用它们看书、看影视、玩游戏、听音乐等等。【Q34】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">Obviously</span>, this is a good thing in many respects because it <span class="hl-swap">promotes</span> their <span class="hl-ans">bilingual</span> <span class="hl-swap">skills</span>, <span class="hl-conn">but</span> the extent of the influence of English in the virtual world is <span class="hl-trap">staggering</span> and it's all <span class="hl-swap">happening really fast</span>.</div>
+                            <div class="cn-line">显然，这在很多方面是好事，因为它促进了他们的【<span style="color:#34d399;">双语</span>】<span style="color:#fbbf24;">能力</span>；但英语在虚拟世界的影响之大令人吃惊，而且这一切发生得非常快。【Q35】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> For their parents and grandparents, the change is less concerning because they already have their native-speaker skills in Icelandic. <span class="hl-conn">But</span> for young speakers – well, the outcome is a little <span class="hl-trap">troubling</span>.</div>
+                            <div class="cn-line">对他们的父母、祖父母来说这种变化没那么令人担心，因为他们本来就有冰岛语的母语能力。<span style="color:#f472b6;">但</span>对年轻使用者来说——结果就有点令人不安了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">For example</span>, teachers have found that <span class="hl-loc">playground conversations</span> in <span class="hl-swap">Icelandic secondary schools</span> can be <span class="hl-swap">conducted entirely in English</span>, <span class="hl-conn">while</span> teachers of much younger children have reported situations where their <span class="hl-trap">classes</span> find it easier to say what is in a <span class="hl-trap">picture</span> using English, rather than Icelandic.</div>
+                            <div class="cn-line">例如，老师们发现冰岛中学里的<span style="color:#38bdf8;">课间对话</span>可以完全用英语进行；而教更小孩子的老师反映，学生用英语说出图片里有什么，比用冰岛语更容易。【Q36 在 while 前，Q37 在 while 后】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> The very real and worrying consequence of all this is that the young generation in Iceland is at risk of losing its <span class="hl-trap">mother tongue</span>.</div>
+                            <div class="cn-line">这一切非常真实又令人担忧的后果是：冰岛年轻一代正面临失去<span style="color:#f87171;text-decoration:line-through;">母语</span>的风险。（结论句，不是 Q37 的答案）</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> Of course, this is happening to other European languages too, but while internet companies might be willing to offer, say, French options in their systems, it's much harder for them to justify the expense of doing the same for a language that has a population the size of a French town, such as Nice.</div>
+                            <div class="cn-line">当然，其他欧洲语言也一样；但互联网公司也许愿意提供法语等选项，可要为一种人口只相当于法国一个小镇（比如尼斯）的语言花同样的钱，就很难说得过去。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-loc">The other drawback of Icelandic</span> is the <span class="hl-ans">grammar</span>, which is <span class="hl-swap">significantly more complex</span> than in most languages. At the moment, the tech giants are simply not interested in tackling this.</div>
+                            <div class="cn-line">冰岛语的另一个劣势是它的【<span style="color:#34d399;">语法</span>】——<span style="color:#fbbf24;">比大多数语言复杂得多</span>。目前科技巨头根本没兴趣解决这个问题。【Q38】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> So, what is the Icelandic government doing about this? Well, large sums of money are being allocated to a language technology fund that it is hoped will lead to the development of Icelandic sourced apps and other social media and digital systems, but clearly this is going to be an uphill struggle.</div>
+                            <div class="cn-line">那么冰岛政府做了什么？大量资金被拨给一个语言技术基金，希望能开发出冰岛语原生的应用、社交媒体和数字系统；但显然这是一场硬仗。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> On the positive side, they know that Icelandic is still the official language of education and government. It has survived for well over a thousand years and the experts predict that its future in this nation state is sound and will continue to be so.</div>
+                            <div class="cn-line">好的一面是，他们知道冰岛语仍是教育和政府的官方语言；它已经存续了一千多年，专家预测它在这个民族国家里的前景是稳固的，并将继续如此。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">However</span>, there's no doubt that it's becoming an inevitable second choice in young people's lives. <span class="hl-conn">This raises important questions.</span></div>
+                            <div class="cn-line"><span style="color:#f472b6;">然而</span>，毫无疑问它正在成为年轻人生活里不可避免的第二选择。这就带来了重要的问题。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> When you consider <span class="hl-loc">how much of the past is tied up in a language</span>, will young Icelanders <span class="hl-swap">lose their sense of their own</span> <span class="hl-ans">identity</span>?</div>
+                            <div class="cn-line">想一想，有多少“过去”绑在一种语言里——冰岛年轻人会失去对自己【<span style="color:#34d399;">身份</span>】的认同感吗？【Q39】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-man">LECTURER</span> <span class="hl-conn">Another issue</span> that concerns the government of Iceland is this. <span class="hl-conn">If</span> children are <span class="hl-loc">learning two languages through different routes</span>, <span class="hl-swap">neither of which</span> they are <span class="hl-swap">fully</span> <span class="hl-ans">fluent</span> in, will they be able to <span class="hl-trap">express themselves properly</span>?</div>
+                            <div class="cn-line">另一个让政府担心的问题是：如果孩子通过不同途径学两种语言，而两种都<span style="color:#fbbf24;">不</span>【<span style="color:#34d399;">流利</span>】，他们还能准确表达自己吗？【Q40】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="speaker-tag spk-woman">NARRATOR</span> That is the end of part four. You now have one minute to check your answers to part four.</div>
+                            <div class="cn-line">第四部分结束。现在你有一分钟检查第四部分的答案。</div>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+        </div>
+
     </div> <!-- .slice-list -->
 </div> <!-- .container -->
 
@@ -1635,11 +2500,8 @@
 
         const cards = document.querySelectorAll('.slice-card');
         cards.forEach(card => {
-            if (cat === 'all' || card.dataset.category === cat) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            const cats = (card.dataset.category || '').split(/\s+/);
+            card.style.display = (cat === 'all' || cats.includes(cat)) ? 'block' : 'none';
         });
     }
 

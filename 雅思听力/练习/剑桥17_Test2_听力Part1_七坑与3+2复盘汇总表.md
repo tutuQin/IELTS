@@ -1,4 +1,4 @@
-# 📊 剑桥雅思 17 Test 2 听力 Part 1 复盘表（基于七坑表 + 3+2/9大陷阱体系）
+# 📊 剑桥雅思 17 Test 2 听力 Part 1 + Part 4 复盘表（基于七坑表 + 3+2/9大陷阱体系）
 
 > 🎧 **音频切片点播台直达**：[C17T2_错题切片点播台.html](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/C17T2_错题切片点播台.html) ｜ 📂 [切片总目录](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/切片/index.html) ｜ 📊 [剑17 Test 1 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥17_Test1_听力Part1_七坑与3+2复盘汇总表.md) ｜ [剑17 Test 3 复盘表](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/剑桥17_Test3_听力Part1_七坑与3+2复盘汇总表.md)
 >
@@ -11,7 +11,7 @@
 
 ---
 
-## 篇章：Part 1（Q1 - Q10）Southoe village 志愿工作咨询（图书馆 / 午餐俱乐部 / 社交活动）
+## 篇章一：Part 1（Q1 - Q10）Southoe village 志愿工作咨询（图书馆 / 午餐俱乐部 / 社交活动）
 
 *卷面要求：Write **ONE WORD AND/OR A NUMBER** for each answer.*
 *本次战绩：**7 / 10**（答对：Q1, Q2, Q3, Q5, Q6, Q9, Q10；失分：Q4, Q7, Q8）*
@@ -128,3 +128,120 @@ Q1（*one thing you could do is...*）、Q2（*another thing is...*）、Q3（�
 - 本套 **7/10**，三道错题**全部是"定位对了、最后一秒失手"**，属于最容易补的分型。
 - 明天只做一件事：**Q7 用 AB 循环 10 遍**，直到"but"成为条件反射式的停顿信号。
 - 下次模考前默念：**写前语义自检 1 秒，听到原词停半秒等转折。**
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）The impact of digital technology on the Icelandic language 数字技术对冰岛语的影响
+
+*卷面要求：Write **ONE WORD AND/OR A NUMBER** for each answer.*
+*本次战绩：**5 / 10**（答对：Q31, Q32, Q33, Q39, Q40；错题：Q34, Q35, Q36, Q37, Q38）*
+*🎧 配套切片：[C17T2 点播台 · Part 4 区](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/C17T2_错题切片点播台.html)*
+*录音来源：本地已有整套 `Cambridge-17-Listening-Test-2.mp3`（1756.6s）；Part 4 导语 1321.8s → 正文 1395.4s → 结束 1674.5s，整段切片 5m53s。*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | 321,000 | **321,000** | ✓ | **⑥数字写法** + `P1原词` / `A1原词` | 原文: *"In order to illustrate its effect, I'm going to focus on the Icelandic language, which **is spoken by around 321,000 people**, most of whom live in Iceland – an island in the North Atlantic Ocean."*<br>(卷面: *has approximately [ 31 ] speakers*) | **数字题一次过（✓）**：题干 has approximately ___ speakers ⇄ 原文 is spoken by around ___ people。题干印着 **AND/OR A NUMBER**，写 `321,000` 完全合规（`321000` 也接受），数字按“一个 number”计数，不按字母数算词。干扰是后面的 most of whom live in Iceland / North Atlantic Ocean——那是“人住哪儿”，不是“有多少人”。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/31_Q31_约321000名使用者与Iceland干扰.mp3) |
+| **Q32** | vocabulary | **vocabulary** | ✓ | **⑤改写（主谓换位）**<br>【**In fact 之后才是实质**】<br>(`P2逻辑词 / A2改写`) | 原文: *"...Nor is it about losing words to other languages, such as English. **In fact, the vocabulary of Icelandic is continually increasing**, because when speakers need a new word for something, they tend to create one, rather than borrowing from another language."*<br>(卷面: *has a [ 32 ] that is still growing*) | **主谓换位顶住了（✓）**：has a ___ that is still growing ⇄ the ___ of Icelandic is continually increasing——题干用“语言拥有一个 X”，原文用“X（属于冰岛语）在增长”，主语从语言换成了 vocabulary。In fact 是“换个说法”的信号：前面两句都在否认（不是使用者少、不是丢词），后面才是事实。干扰 English 是“借词”的反例。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/32_Q32_词汇vocabulary持续增长与English干扰.mp3) |
+| **Q33** | podcast | **podcast** | ✓ | **⑤改写（并列清单）**<br>【**such as A and B**】<br>(`P2逻辑词 / A1原词`) | 原文: *"Take, for example, the word for web browser … this is vafri in Icelandic ... Then **there's an Icelandic word for podcast** – which is too hard to pronounce!"*<br>(卷面: *such as web browser and [ 33 ]*) | **并列第二项接得准（✓）**：题干 such as A and B 对应原文“先 web browser、后 podcast”，**Then 就是第二项的入口词**。你没有把 vafri 当答案——它是 web browser 的冰岛语说法，题干问的是“哪两个英语概念”。中间那句 I can't think of a more appropriate term 是评价，不是答案。 | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/33_Q33_播客podcast与web_browser并列.mp3) |
+| **Q34** | English | **smartphones** | ✗ | **③句意** + **T9并列**<br>【**抢了上一句的熟词**】<br>(`P3改写 / A1原词`) | 原文: *"...young Icelanders spend a great deal of time in the digital world and this world is predominantly **English**. **Think about smartphones.** They didn't even exist until comparatively recently, but today young people use them all the time to read books, watch TV or films, play games, listen to music, and so on."*<br>(卷面: *are big users of digital technology, such as [ 34 ]*) | **抓了上一句末尾的词**：<br>1. English 来自 this world is predominantly English——那是“数字世界用什么语言”，不是“用什么设备”。题干 such as 要的是 digital technology 的例子，必须是**设备类名词**。<br>2. **Think about 就是给例子的入口词**，等于卷面的 such as；答案在同一句的句首位置。<br>3. 后面 read books / watch TV / play games / listen to music 是“用手机做什么”，是用途清单，反过来确认前面那个词才是设备。<br>4. 此处 *but – and it's a big but –* 是口语强调（把注意力拽回来），不是转折出答案。 | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/34_Q34_智能手机smartphones与English错听.mp3) |
+| **Q35** | troubling | **bilingual** | ✗ | **③句意** + **⑦词性**<br>【**抢了下一句的熟词**】<br>(`P3改写 / A2改写`) | 原文: *"Obviously, this is a good thing in many respects because **it promotes their bilingual skills**, but the extent of the influence of English in the virtual world is staggering and **it's all happening really fast**."*<br>(卷面: *are becoming [ 35 ] very quickly*) | **一空两处、你抓了第三处**：<br>1. **becoming ___ ⇄ promotes their ___ skills**（变成什么 ⇄ 促进了他们的什么能力），**very quickly ⇄ happening really fast**——题干把一句里的两个信息点合并成一个空。<br>2. **troubling 在下一句末尾**（the outcome is a little troubling），晚了整整一句；staggering 也是近处形容词干扰，但它形容“英语影响之大”，不形容“人变成了什么”。<br>3. become 后面只能跟形容词，“双语”的形容词形式就是 bilingual。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/35_Q35_双语bilingual能力与troubling干扰.mp3) |
+| **Q36** | classes | **playground** | ✗ | **③句意** + **T9并列**<br>【**一个长句两个空，跨过 while**】<br>(`P3改写 / A1原词`) | 原文: *"For example, teachers have found that **playground conversations** in Icelandic secondary schools can be **conducted entirely in English**, **while** teachers of much younger children have reported situations where their classes find it easier to say what is in a picture using English, rather than Icelandic."*<br>(卷面: *are having discussions using only English while they are in the [ 36 ] at school*) | **这一句里塞了两个答案，你跨线抓了后一个**：<br>1. **while 之前 = Q36（playground）**，**while 之后 = Q37（picture）**。你写 classes，是 while 之后那半句的词（their classes find it easier…），等于把 Q37 的句子当成了 Q36。<br>2. 改写：are having discussions using only English ⇄ conversations can be conducted entirely in English；in the ___ at school ⇄ in Icelandic secondary schools。<br>3. **军规**：听到 while / whereas / and 并列，先在草稿上画一条竖线，按“前半句 → 后半句”对应题号，绝不跨线抓词。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/36_Q36_操场playground全英文对话与classes干扰.mp3) |
+| **Q37** | mother town | **picture** | ✗ | **③句意** + **T3原词陷阱**<br>【**抓了结论句的 mother tongue**】<br>(`P3改写 / A1原词`) | 原文: *"...**while teachers of much younger children have reported situations where their classes find it easier to say what is in a picture using English**, rather than Icelandic. The very real and worrying consequence of all this is that the young generation in Iceland is at risk of losing its **mother tongue**."*<br>(卷面: *are better able to identify the content of a [ 37 ] in English than Icelandic*) | **定位失败 + 抓到结论句**：<br>1. 你写的 **mother town 其实是 mother tongue**，出现在**下一句**——那是整段的结论（losing its mother tongue），不是 37 的答案。<br>2. **定位难的原因**：Q36 与 Q37 共用同一个长句，while 之后没有新的专有名词，只有对比主语 teachers of much younger children。看到这种“同句双空”，必须靠 while 切分，不能靠新定位词。<br>3. 改写：identify the content of a ___ ⇄ say what is in a ___（辨认……的内容 ⇄ 说出……里有什么）；are better able to ⇄ find it easier to。 | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/37_Q37_识别图片picture内容与mother_tongue干扰.mp3) |
+| **Q38** | grammer | **grammar** | ✗ | **②拼写**<br>【**听对了、写错了**】<br>(`P3改写 / A1原词`) | 原文: *"**The other drawback of Icelandic is the grammar, which is significantly more complex than in most languages.** At the moment, the tech giants are simply not interested in tackling this."*<br>(卷面: *because of how complicated its [ 38 ] is*) | **本套唯一一处纯拼写失分**：<br>1. **grammar 是 -ar 结尾**（gram-mar），不是 grammer。这类词听到≠写对，必须单独过一遍手写。<br>2. 改写很干净：how complicated its ___ is ⇄ which is significantly more complex；The other drawback 就是“第二个原因”的入口词。<br>3. 干扰：前半句的 population 是“第一个原因”（人口少），题干已用 the small number of speakers 表达过，不能重复填。 | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/38_Q38_语法grammar复杂与population干扰.mp3) |
+| **Q39** | identity | **identity** | ✓ | **⑤改写（删词 + 补状语）**<br>【**sense of 被删、as Icelanders 补上**】<br>(`P2逻辑词 / A2改写`) | 原文: *"...When you consider how much of the past is tied up in a language, **will young Icelanders lose their sense of their own identity**?"*<br>(卷面: *is worried that young Icelanders may lose their [ 39 ] as Icelanders*) | **本段最隐蔽的一处改写接住了（✓）**：原文 lose their **sense of their own** identity，题干把 sense of 删掉、在句尾补 **as Icelanders**——“作为冰岛人的身份”。However / This raises important questions 是转折+提问信号：前面讲政府乐观，后面才是担忧；听到 will …? 这种疑问句就要准备落笔。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/39_Q39_失去身份认同identity.mp3) |
+| **Q40** | fluent | **fluent** | ✓ | **⑤改写（否定结构互换）**<br>【**neither ⇄ not … either**】<br>(`P3改写 / A2改写`) | 原文: *"Another issue that concerns the government of Iceland is this. If children are learning two languages through different routes, **neither of which they are fully fluent in**, will they be able to express themselves properly?"*<br>(卷面: *children not being [ 40 ] in either Icelandic or English*) | **否定结构互换顶住了（✓）**：原文 neither（两者都不），题干 not … either（也不）。空里只填形容词 **fluent**——fully 是副词，题干的 not being 已经承担了“程度”，写 fully fluent 会超词数且多余。express themselves properly 是“后果”，不是“能力”。 | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T2_错题音频切片/40_Q40_两种语言都不fluent流利.mp3) |
+
+---
+
+### Part 4 五道错题的三条病根（Q34 / Q35 / Q36 / Q37 / Q38）
+
+```text
+               ┌── Q34: … this world is predominantly [English]. Think about [smartphones].
+               │        └─► 抓了上一句末尾的熟词 ──► 写 English
+               │
+Part 4 崩盘链   ├── Q35: it promotes their [bilingual] skills … happening really fast
+               │        └─► 一空两处没合起来 ──► 抓了下一句末尾的 troubling
+               │
+               ├── Q36: [playground] conversations … in English, while … their [classes] …
+               │        └─► 长句双空，跨过 while 抓了 Q37 那半句 ──► 写 classes
+               │
+               ├── Q37: … a [picture] using English …（下一句）losing its [mother tongue]
+               │        └─► 没定位到 ──► 抓了结论句 mother tongue ──► 写 mother town
+               │
+               └── Q38: the [grammar], which is significantly more complex
+                        └─► 听对了、拼错了 ──► grammer
+```
+
+#### 病根 1：抢“隔壁句”的熟词（Q34 / Q35 / Q37）
+
+三道题的错法完全同源：**答案在自己那一句，你却抓了相邻句子里一个更响、更熟的词**。
+
+| 题 | 正确答案 | 你写的 | 那个词真正的位置 |
+| :--- | :--- | :--- | :--- |
+| Q34 | smartphones | English | **上一句末尾**（this world is predominantly English） |
+| Q35 | bilingual | troubling | **下一句末尾**（the outcome is a little troubling） |
+| Q37 | picture | mother tongue | **下一句**（losing its mother tongue） |
+
+**统一军规**：Part 4 的讲义是一句一个信息点，**题号严格跟着句子走**。听到一个“熟词”时，先问一句“它在题干里占哪个位置”，占不上就不是答案。
+
+#### 病根 2：长句双空不分线（Q36 / Q37）
+
+Q36 与 Q37 共用**同一个 40 词长句**，唯一的边界是 `while`：
+
+```text
+For example, teachers have found that [playground conversations in Icelandic secondary schools
+can be conducted entirely in English],  ← Q36
+while  ← 分界线
+teachers of much younger children … say what is in a [picture] using English  ← Q37
+```
+
+你没看到分界线，于是 **classes（while 之后）被填进了 Q36**，接着 Q37 又跑去下一句抓 mother tongue——一错错两题。
+
+**统一军规**：遇到 40 词以上、含 while / whereas / and 并列的句子，先在草稿上画竖线，再按题号顺序分配左右两半。
+
+#### 病根 3：听对≠写对（Q38）
+
+Q38 的定位、辨音、词义全部成功，只输在 `grammer`。这类失分**与听力水平无关，只与手写熟练度有关**，是最容易补的分。
+
+```text
+【高频拼写 · 必须手写 5 遍】
+grammar（-ar）  government  environment  necessary  population
+pronunciation   bilingual   Icelandic   identity   fluent
+```
+
+---
+
+### Part 4 改写对沉淀（本次新增 20 对）
+
+| # | 卷面（题干） | 原文（录音） | 改写类型 | 中文对照 |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | has approximately 321,000 speakers | is spoken by around 321,000 people | 主宾换位 | 有约 32.1 万使用者 ⇄ 由约 32.1 万人使用 |
+| 2 | speakers | people | 同义名词 | 使用者 ⇄ 人口 |
+| 3 | has a ___ that is still growing | the vocabulary … is continually increasing | 主谓换位 | 有一个仍在增长的东西 ⇄ 词汇在持续增加 |
+| 4 | still growing | continually increasing | 同义动词 | 仍在增长 ⇄ 不断增加 |
+| 5 | computer-based concepts | word for web browser / word for podcast | 上义词 → 具体例 | 计算机相关概念 ⇄ 浏览器、播客的说法 |
+| 6 | such as A and B | Take, for example, … Then … | 列举结构 | 例如 A 和 B ⇄ 先举例，再“然后是” |
+| 7 | are big users of | use them all the time | 名词 → 动词 | 大量使用者 ⇄ 一直在用 |
+| 8 | such as | Think about | 举例入口词 | 例如 ⇄ 想想…… |
+| 9 | are becoming ___ very quickly | promotes their ___ skills + happening really fast | 一句拆两处 | 很快变得…… ⇄ 促进了……能力，而且发生得非常快 |
+| 10 | are having discussions using only English | conversations … conducted entirely in English | 主动 → 被动 | 只用英语讨论 ⇄ 对话完全用英语进行 |
+| 11 | in the ___ at school | in Icelandic secondary schools | 地点具体化 | 在学校里的…… ⇄ 在冰岛中学里 |
+| 12 | identify the content of a ___ | say what is in a ___ | 同义动词短语 | 辨认……的内容 ⇄ 说出……里有什么 |
+| 13 | are better able to | find it easier to | 能力 → 感受 | 更擅长 ⇄ 觉得更容易 |
+| 14 | in English than Icelandic | using English, rather than Icelandic | 比较结构 | 用英语而非冰岛语 ⇄ 用英语，而不是冰岛语 |
+| 15 | how complicated its ___ is | which is significantly more complex | 疑问句 → 定语从句 | 它有多复杂 ⇄ 它明显更复杂 |
+| 16 | because of the small number of speakers | a population the size of a French town | 抽象 → 比喻 | 使用者少 ⇄ 人口只相当于法国一个小镇 |
+| 17 | lose their ___ as Icelanders | lose their sense of their own identity | 删词 + 补状语 | 失去作为冰岛人的…… ⇄ 失去对自己身份的认同感 |
+| 18 | is worried that | This raises important questions / will …? | 陈述 → 疑问 | 担心 ⇄ 提出疑问 |
+| 19 | not being ___ in either A or B | neither of which they are fully ___ in | 否定结构互换 | 在 A 或 B 中都不…… ⇄ 两者都不完全…… |
+| 20 | consequences of | will they be able to …? | 结果 → 反问 | ……的后果 ⇄ 他们还能……吗 |
+
+---
+
+### Part 4 四步精练（本套专属）
+
+1. **盲听做题**：播 `Section_4_Full_Icelandic`（5m53s），一次听到底，只写 Q34/35/36/37/38 五个错题空，写完立刻对照答案。
+2. **分界线专项（Q36/Q37）**：把 `For example, teachers have found … rather than Icelandic.` 这一整句单独循环 8 遍，每遍只做一件事——听到 while 时在纸上点一下。练到 while 一响，手自动分成左右两栏。
+3. **隔壁句专项（Q34/Q35/Q37）**：把三题各自的“正确句 + 相邻句”连起来听（Q34 从 this world is predominantly English 到 read books…；Q35 到 the outcome is a little troubling；Q37 到 losing its mother tongue），训练“听到熟词先看题干位置”的动作。
+4. **拼写默写（Q38 及高频词）**：grammar / government / environment / necessary / population / pronunciation / bilingual / Icelandic / identity / fluent，每个手写 5 遍，第二天再默一遍。
+

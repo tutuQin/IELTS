@@ -149,3 +149,99 @@ Q3（疑问句出答案）、Q7（August 干扰排除）、Q9（per day 筛数�
 - 本套 **5/10**，是全四套里最弱的一套，但**5 道错题全部可修**：3 道结构、2 道辨音。
 - 优先级：**Q6 > Q2 > Q8 > Q5 > Q4 > Q1**（Q6 是"改写 + 从句"综合症，修好它 Q1 也会跟着好）。
 - 每次练习前默念三句：**结构走完再落笔、be 后面只能跟形容词、数字等第二个音节。**
+
+---
+
+## 篇章二：Part 4（Q31 - Q40）Bird Migration Theory 鸟类迁徙理论
+
+*卷面要求：Write **ONE WORD ONLY** for each answer（Notes 填空，10 空）。*
+*本次战绩：**7 / 10**（答对：Q31, Q33, Q35, Q36, Q37, Q38, Q39；错题：Q32, Q34, Q40；其中 **Q36 为猜对**）*
+*🎧 配套切片：[C17T3 点播台 · Part 4 区](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/C17T3_错题切片点播台.html)*
+*📄 点播台末尾「完整 Part 4 全文精听」卡已附 **8:05 全文原文 + 逐句翻译 + 五色标注**（蓝定位／黄改写／粉逻辑／绿答案／红陷阱），可边听边对。*
+*录音来源：本地已有整套 `17-TEST-3-AUDIO.mp3`（1802.9s），另有利器 `C17-T3-P4.mp3`（485.7s 独立 Part 4）——本次切片全部取自独立文件：预告 0:00 → 看题停顿 0:07-1:01 → 正文 1:10 → 结束 6:39。*
+
+| 题号 | 我的答案 | 正确答案 | 结果 | 7坑分类 / 3+2定位 | 答案路径 / 关键录音原文 | 错因分析、认知心理与盲点深度诊断 | 音频切片直达 |
+| :--- | :--- | :--- | :---: | :--- | :--- | :--- | :---: |
+| **Q31** | mud | **mud** | ✓ | **⑤改写（or 并列跨句）**<br>(`A2改写`) | 原文: *"Another theory for the regular appearance and disappearance of birds was that they spent winter **hidden in mud** till the weather changed and food became abundant again."*<br>(卷面: *birds hibernated underwater **or** buried themselves in [ 31 ]*) | **答对**：卷面的 or 把两个动作并列，前半截（hibernated underwater）在第一句、后半截（buried themselves in ___）在第二句——`Another theory` 就是"后半截"的入口词。改写真身：buried themselves in ⇄ hidden in（埋进 ⇄ 藏在）。干扰是紧挨 hibernate 的 seas and oceans，但卷面已给 underwater。 | [▶ Q31 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/31_Q31_mud泥里冬眠.mp3) |
+| **Q32** | fursers | **feathers** | ✗ | **②拼写坑 + ①辨音**<br>(`A3辨音`) | 原文: *"He observed that in the autumn, small birds called 'redstarts' began to **lose their feathers**, which convinced Aristotle that they changed into robins for the winter."*<br>(卷面: *redstarts experience the loss of [ 32 ]*) | **错因（双保险全没上）**：① 辨音——feathers /ˈfeðəz/ 的咬舌 /ð/ 与轻尾音在 *their* 后连读被糊掉，你只抓到 /fɜː…z/ 的轮廓；② 常识——**鸟只有 feathers，没有 fur**，听到"鸟 + 毛"就该自动改写；③ 拼写——fursers 不是任何英文单词，写不出合法词就说明抓的是轮廓不是词。改写：experience the loss of X ⇄ lose X（动词名词化）。 | [▶ Q32 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/32_Q32_feathers换羽误写fursers.mp3) |
+| **Q33** | shape | **shape** | ✓ | **⑤改写（介词化）**<br>(`A2改写`) | 原文: *"These assumptions are understandable given that this pair of species are **similar in shape**, but are a classic example of an incorrect interpretation based on correct observations."*<br>(卷面: *had a similar [ 33 ]*) | **答对**：卷面 `had a similar + 名词` ⇄ 原文 `are similar in + 名词`（have a X ⇄ be X in），把 shape 从介词后拎出来即可。信号：given that = 卷面的 because（答案必在其后）；**but 后面是作者评价（错误解读），不是答案**。干扰 observations 在句末重读位。 | [▶ Q33 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/33_Q33_shape外形相似.mp3) |
+| **Q34** | （未写） | **moon** | ✗ | **⑦内容荒诞不敢写**<br>【**claiming that 是引述，不是事实**】<br>(`P2逻辑词`) | 原文: *"He wrote a surprisingly well-regarded paper **claiming that birds migrate to the moon and back every year**."*<br>(卷面: *Charles Morton popularised the **idea** that birds fly to the [ 34 ] in winter*) | **错因（听到了却没写）**：你明确听到 moon，但用常识否决了它——"鸟不可能飞到月亮"。**可题干是 popularised the *idea* that…，问的是"他的主张"，不是事实**；作者还特意用 bizarre / claiming 标记这是荒谬主张。改写：popularised the idea ⇄ put forward the theory + wrote a paper claiming；fly to ⇄ migrate to；in winter ⇄ every year（时间信息弱化）。**铁律：题干出现 idea / theory / belief / claim，一律按"文中那个人怎么说"填。** | [▶ Q34 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/34_Q34_moon飞去月亮.mp3) |
+| **Q35** | neck | **neck** | ✓ | **⑤改写（形容词后置展开）**<br>(`A1原词`/`A2改写`) | 原文: *"This particular stork made history **because of the long spear in its neck** which incredibly had not killed it… It turned out to be a spear from a tribe in **Central Africa**."*<br>(卷面: *which had an **African spear** in its [ 35 ]*) | **答对**：1822 / stork / Germany 三定位词全在首句。改写真身：an African spear ⇄ a spear from a tribe in Central Africa（形容词前置 ⇄ 介词短语后置）。**题干与原文有一处矛盾**：卷面写 was killed，原文说 had not killed it——这是题干自身粗略，**以"空格要什么"为准**，别因此放弃整题。 | [▶ Q35 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/35_Q35_neck脖子里的非洲矛.mp3) |
+| **Q36** | evidence（猜） | **evidence** | ✓（猜） | **⑤改写（否定⇄序数）**<br>【**抽象名词空**】<br>(`A2改写`) | 原文: *"This was a truly defining moment in the history of ornithology **because it was the first evidence** that storks spend their winters in sub-Saharan Africa."*<br>(卷面: *previously there had been **no** [ 36 ] that storks migrate to Africa*) | **猜对但逻辑成立**：no ___ that + 从句 → 只能填抽象名词，而 P4 抽象名词空高度集中：**evidence / proof / sign / indication / explanation / theory / idea / fact / belief**。改写核心：**no ___ that ⇄ the first ___ that**（否定 ⇄ 序数）；migrate to Africa ⇄ spend winters in sub-Saharan Africa。信号：defining moment / turning point / breakthrough 之后，必有"首次/第一"性质答案。 | [▶ Q36 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/36_Q36_evidence首份证据.mp3) |
+| **Q37** | destinations | **destinations** | ✓ | **⑤改写（名词⇄从句）**<br>(`A2改写`) | 原文: *"…didn't know much about it **until** the practice of catching birds and putting rings on their legs became established. **Before this**, very little information was available about the **actual destinations** of particular species and how they travelled there."*<br>(卷面: *Little was known about the [ 37 ] and journeys* … *until the practice of ringing was established*) | **答对**：until the practice of ringing ⇄ until the practice of catching birds and putting rings on their legs（**本篇最长一组替换**）。改写：journeys ⇄ how they travelled there（名词 ⇄ 从句）；Little was known ⇄ very little information was available。**结构判据：the ___ and journeys 是并列名词，空必须复数**。信号：but 转折（知道南迁北归、**但**不知道去哪）、Before this 回指。 | [▶ Q37 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/37_Q37_destinations目的地与旅程.mp3) |
+| **Q38** | oceans | **oceans** | ✓ | **⑤改写（动作⇄比喻）**<br>(`A2改写`) | 原文: *"People speculated that larger birds provided a kind of **taxi service** for smaller birds by carrying them on their backs. This idea came about **because** it seemed impossible that small birds, weighing only a few grams, could **fly over vast oceans**."*<br>(卷面: *incapable of travelling across **huge** [ 38 ]*) | **答对**：carried small birds ⇄ provided a taxi service … carrying them on their backs（动作 ⇄ 比喻）；incapable of travelling across ⇄ seemed impossible … could fly over（incapable = impossible 双向否定）；huge ⇄ vast。答案在 because 从句尾。干扰是 weighing only a few grams（数字诱饵）。 | [▶ Q38 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/38_Q38_oceans飞越辽阔大洋.mp3) |
+| **Q39** | recovery | **recovery** | ✓ | **⑤改写（术语定义）**<br>【**what is known as**】<br>(`A1原词`) | 原文: *"This is still common practice today and **relies upon what is known as recovery**. **This is when** ringed birds are found dead in the place they have migrated to and identified."*<br>(卷面: *Ringing depended on what is called the ' [ 39 ]' of dead birds*) | **答对**：what is called ⇄ what is known as（**术语空招牌，答案紧跟 1-2 词**）；depended on ⇄ relies upon；of dead birds ⇄ ringed birds are found dead（名词所有格 ⇄ 完整句）。信号：**This is when 是定义句**，反过来验证你抄的名词对不对。拼写 r-e-c-o-v-e-r-y，重音第二音节。 | [▶ Q39 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/39_Q39_recovery回收记录.mp3) |
+| **Q40** | （空） | **atlas** | ✗ | **⑥生词 + 注意力断档**<br>(`A3生词`) | 原文: *"**In 1931 an atlas was published** showing where the most common species of European birds migrated to."*<br>(卷面: *In 1931, **the first** [ 40 ] to show the migration of European birds **was printed***) | **错因（两个叠加）**：① atlas（地图册）是生词，听到不认识就"自动消音"；② Q39 刚卡了一下，注意力没回来，直接跳过。**生词兜底三钩子**：语法——`the first ___ to show … was printed`，空是 was printed 的主语，必须是**能被印刷的出版物**；动词——听到 was published / was printed，**答案就是它前面紧挨的名词**；时间——1931 + an ___ was published + showing where…，三钩齐备就该把音记成 a-t-l-a-s 先写。改写：the first ___ ⇄ for the first time in history；was printed ⇄ was published。**铁律：P4 的 Q40 永不留白。** | [▶ Q40 音频](file:///Users/gtkj/jona/jona-brain/English/雅思/雅思听力/练习/C17T3_错题音频切片/40_Q40_atlas首本地图册.mp3) |
+
+### Part 4 三个错题 = 三种"非听力问题"
+
+```text
+Q32 fursers  →  辨音 + 常识 + 拼写，三道保险全没上（鸟只有 feathers，没有 fur）
+Q34 空着      →  用常识否定了听力内容（题干问的是 idea/theory，不是事实）
+Q40 空着      →  生词（atlas）+ 注意力断档（Q39 卡完没有"立刻放弃、继续前进"）
+
+共同点：三道题你都"听到了"，没有一道是"没听到"。
+   → 这不是听力问题，是"落笔决策"问题：敢不敢写、会不会用结构兜生词。
+```
+
+### Part 4 改写对沉淀（本次新增 20 对）
+
+```text
+【定位与结构】
+1.  hibernated underwater OR buried themselves in [mud]
+        <===>  went underwater to hibernate … / … hidden in mud（or 前后分居两句）
+2.  redstarts / observed / in autumn（三个原词锁一句）
+        <===>  He observed that in the autumn, small birds called 'redstarts' …
+3.  Charles Morton + 17th century
+        <===>  an English amateur scientist, Charles Morton, in the seventeenth century
+4.  1822 + stork + Germany
+        <===>  came in 1822 when a white stork was shot in Germany
+5.  1931（全篇最后一年份，只在末句）
+        <===>  In 1931 an atlas was published …
+
+【改写本体】
+6.  buried themselves in          <===>  hidden in（埋进 ⇄ 藏在）
+7.  experience the loss of X       <===>  lose X（名词化 ⇄ 动词）
+8.  had a similar [shape]          <===>  are similar in shape（have a X ⇄ be X in）
+9.  were logical                   <===>  are understandable（褒义减弱）
+10. popularised the idea           <===>  put forward the theory + wrote a paper claiming
+11. fly to the [moon] in winter    <===>  migrate to the moon and back every year
+12. an African spear               <===>  a spear from a tribe in Central Africa（前置 ⇄ 后置）
+13. was killed                     <===>  was shot（题干与原文"死活"不一致，以空格为准）
+14. there had been no [evidence]   <===>  it was the first evidence（否定 ⇄ 序数）
+15. Little was known about         <===>  very little information was available about
+16. journeys                       <===>  how they travelled there（名词 ⇄ 从句）
+17. incapable of travelling across <===>  seemed impossible … could fly over
+18. huge [oceans]                  <===>  vast oceans
+19. what is called 'recovery'      <===>  what is known as recovery（术语招牌）
+20. the first [atlas] was printed  <===>  an atlas was published / for the first time in history
+
+【高频信号词（听到就该警醒）】
+bizarre / claiming that  → 后面是"某人的荒谬主张"，照抄不误
+because of / because     → 答案在原因里
+but / until / Before this → 转折与时间回指，答案夹在中间
+This is when / This is where → 定义句，术语空的验证器
+Another / Take … for example → 并列结构，别只抓第一项
+```
+
+### Part 4 四步精练（本套专属 · 20 分钟）
+
+```text
+Step 1 盲听定位（5 分钟）
+  只放 Q31-Q40 十个切片各一遍，每题只写「定位词 + 空要什么词性」，不写答案。
+
+Step 2 逐片精听（8 分钟）
+  Q32 循环 lose their feathers（练 /ð/ 咬舌尾音）；
+  Q34 循环 bizarre … claiming that birds migrate to the moon（练"荒谬照抄"的心理许可）；
+  Q40 循环 In 1931 an atlas was published（练"被动句前找主语"）。
+
+Step 3 跟读（5 分钟）
+  每张卡点「🎙️ 录音跟读」，回放对比三处连读重音：lose their feathers / migrate to the moon / an atlas was published。
+
+Step 4 遮中文口述（2 分钟）
+  把上面 20 组改写遮住右边，口述中文意思；说不出就回卡片看一遍。
+
+【本套必背 10 词（抽象名词空 + 生词兜底）】
+evidence / proof / sign / indication / explanation / theory / idea / fact / belief / doubt
+atlas（地图册）/ recovery（回收）/ destination（目的地）/ vast（辽阔的）/ bizarre（离奇的）
+```

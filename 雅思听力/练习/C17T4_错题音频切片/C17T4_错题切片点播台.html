@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>剑桥雅思 17 Test 4 Part 1 听力答案句切片点播台</title>
+    <title>剑桥雅思 17 Test 4 Part 1 + Part 4 听力答案句切片点播台</title>
     <style>
         :root {
             --bg-color: #0f172a;
@@ -638,6 +638,32 @@
         .seek-input:focus { border-color: var(--accent-blue); }
         .seek-input::placeholder { color: rgba(148, 163, 184, 0.6); }
     </style>
+    <style id="p4-theme">
+        /* ===== Part 4 五色标注体系（与 C16T3 / C17T3 保持一致） ===== */
+        .hl-loc { color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); font-weight: 700; padding: 0 2px; }
+        .hl-swap { background: rgba(251, 191, 36, 0.16); color: var(--accent-amber); padding: 1px 5px; border-radius: 4px; border-bottom: 2px dashed var(--accent-amber); font-weight: 600; }
+        .hl-conn { color: #f472b6; font-weight: 700; background: rgba(244, 114, 182, 0.14); padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #f472b6; }
+        .hl-ans { color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .hl-trap { color: #f87171; font-weight: 700; text-decoration: line-through; background: rgba(248, 113, 113, 0.15); padding: 1px 5px; border-radius: 4px; }
+        .divider-card { border-left: 5px solid var(--accent-purple); background: rgba(192, 132, 252, 0.08); }
+        .divider-card h2 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--accent-purple); }
+        .divider-card p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.75; }
+        .legend-card { border-left: 5px solid var(--accent-blue); background: rgba(56, 189, 248, 0.07); }
+        .legend-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .legend-row > span { font-size: .84rem; }
+        .legend-row .hl-trap { text-decoration: none; }
+        .blank-answer { display: inline-block; min-width: 74px; text-align: center; border-bottom: 1.5px solid var(--accent-green); color: var(--accent-green); font-weight: 700; padding: 0 6px; }
+        .prompt-box { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 12px 16px; font-size: 0.98rem; margin-bottom: 12px; }
+        .prompt-label { font-size: 0.78rem; color: var(--accent-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; letter-spacing: .03em; }
+        .prompt-text { color: #cbd5e1; line-height: 1.85; }
+        .diagnosis-box { background: rgba(30, 41, 59, 0.55); border-radius: 10px; padding: 13px 16px; font-size: 0.9rem; color: var(--text-muted); border: 1px solid rgba(255, 255, 255, 0.05); line-height: 1.8; }
+        .diagnosis-box strong { color: #e2e8f0; }
+        .diagnosis-box .hl-loc, .diagnosis-box .hl-swap { padding: 0 3px; }
+        .tag-wrong { background: rgba(248, 113, 113, 0.2); color: var(--accent-red); border: 1px solid rgba(248, 113, 113, 0.3); }
+        .tag-correct { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); border: 1px solid rgba(52, 211, 153, 0.3); }
+        .transcript-box strong { color: #e2e8f0; }
+        .slice-card.playing { border-color: var(--accent-blue); box-shadow: 0 0 20px rgba(56, 189, 248, .22); }
+    </style>
 </head>
 
 <body>
@@ -653,8 +679,9 @@
     </div>
 
     <header>
-        <h1>剑桥雅思 17 Test 4 Part 1 答案句切片点播台</h1>
-        <p>🧽 清洁服务咨询 Easy Life Cleaning Services (Q1-Q10) · 答案句词级时间戳精准切片 · 原生影子跟读录音 · <strong>本次战报：10 题对 4 错 6</strong>（Q2 拼写 · Q3 词音 · Q4 手脑脱节 · Q6 省略倒装 · Q7 答案前置 · Q10 走神）</p>
+        <h1>剑桥雅思 17 Test 4 Part 1 + Part 4 答案句切片点播台</h1>
+        <p>🧽 Part 1 清洁服务咨询 Easy Life Cleaning Services (Q1-Q10) · <strong>战报 4 / 10</strong>（Q2 拼写 · Q3 词音 · Q4 手脑脱节 · Q6 省略倒装 · Q7 答案前置 · Q10 走神）</p>
+        <p style="margin-top:6px;">🍁 Part 4 枫糖浆 Maple Syrup (Q31-Q40) · <strong>战报 4 / 10</strong>（Q34 抄了从句里的 sun · Q35 抄了下一句的 conditions · Q37 抄了下一句的 steam · Q38/39/40 连环崩）</p>
     </header>
 
     <!-- Sticky Audio Player -->
@@ -742,9 +769,11 @@
 
     <!-- Filter Tabs -->
     <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (11)</button>
+        <button class="tab-btn active" onclick="filterCategory('all', this)">全部切片 (25)</button>
         <button class="tab-btn" onclick="filterCategory('part1', this)">Part 1 清洁服务咨询 (10)</button>
-        <button class="tab-btn" onclick="filterCategory('full', this)">Part 1 完整音频 (1)</button>
+        <button class="tab-btn" onclick="filterCategory('part4', this)">Part 4 枫糖浆 (14)</button>
+        <button class="tab-btn" onclick="filterCategory('p4wrong', this)">Part 4 错题 (6)</button>
+        <button class="tab-btn" onclick="filterCategory('allfull', this)">完整音频 (2)</button>
     </div>
 
     <!-- Slice List -->
@@ -1331,7 +1360,7 @@
         </div>
 
         <!-- CARD: card_full -->
-        <div class="slice-card" data-category="full" id="full">
+        <div class="slice-card" data-category="part1 allfull" id="full">
             <div class="card-header">
                 <div>
                     <span class="card-tag tag-p1">Part 1 · 完整音频</span>
@@ -1500,6 +1529,788 @@
                 </details>
             </div>
         </div>
+        <!-- ============ PART 4 SECTION DIVIDER ============ -->
+        <div class="slice-card divider-card" data-category="part4" id="card-p4-divider">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · 分区</span>
+                    <h3 class="card-title">Part 4 · Maple Syrup 枫糖浆是怎么做出来的（Q31-Q40）</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Part4_Full_枫糖浆.mp3', 'Part 4 完整音频：枫糖浆 Maple Syrup')">▶ 播放 Part 4 完整音频</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p style="color:#c4b5fd;font-weight:700;margin-bottom:8px;">本次战报：<strong>4 / 10</strong>（对 31 / 32 / 33 / 36；错 34 / 35 / 37 / 38 / 39 / 40）</p>
+                <p><strong>6 道错题，一条链：</strong>Q34、Q35、Q37 是<strong>抄错了句</strong>（把从属成分、下一句的主语当成答案）；Q37 卡住之后，Q38 空、Q39 懵、Q40 空耳——<strong>P4 的失分从不是均匀的，是一段一段塌。</strong></p>
+                <p style="margin-top:6px;"><strong>这篇的三条主线：</strong>①<strong>定语从句</strong>（pieces of rock <em>that had become scorching hot from the sun</em>）——答案永远在 that / which 前面的名词上；②<strong>手段 vs 结果</strong>（by means of a fire → 产生 steam）——问手段往<em>前</em>找，别往<em>后</em>抄；③<strong>数字题</strong>（40 litres of sap → one litre of syrup）——看清问的是原料还是成品。</p>
+            </div>
+        </div>
+
+        <!-- ============ PART 4 LEGEND ============ -->
+        <div class="slice-card legend-card" data-category="part4" id="card-p4-legend">
+            <div class="card-body">
+                <strong style="color:#e2e8f0;">五色标注说明（与 C16T3 / C17T3 一致）</strong>
+                <div class="legend-row">
+                    <span class="hl-loc">蓝 = 定位词（数字 / 专名 / 原词）</span>
+                    <span class="hl-swap">黄 = 同义替换改写</span>
+                    <span class="hl-conn">粉 = 逻辑连接词</span>
+                    <span class="hl-ans">绿 = 答案</span>
+                    <span class="hl-trap">红 = 陷阱 / 被否定的内容</span>
+                </div>
+                <p style="margin-top:10px;color:var(--text-muted);font-size:.86rem;">提示：题干里带绿色下划线的<span class="blank-answer">__</span>就是空位；卡片底部「📜 查看 本切片 完整原文与逐句翻译」默认收起，盲听时不会剧透。</p>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q31 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q31">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q31</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q31: <strong>golden</strong> —— 问颜色就找形容词，别拿比喻当答案</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('31_Q31_golden金色糖浆.mp3', 'Q31: a thick, golden, sweet-tasting liquid')">▶ 播放切片 (20s)</button>
+                    <button class="record-card-btn" id="rec-btn-q31" onclick="handleRecBtnClick('q31')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q31" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q31"></span>
+                    <span class="rec-status-text" id="rec-status-q31">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q31">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q31" onclick="playUserRecording('q31')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q31')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q31')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q31')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · What is maple syrup?</div>
+                    <div class="prompt-text">• made from the sap of the maple tree<br>• colour described as <span class="blank-answer">31</span><br>• added to food or used in cooking<br>• very <span class="blank-answer">32</span> compared to refined sugar</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                Maple syrup is a thick, <span class="hl-ans">golden</span>, <span class="hl-swap">sweet-tasting liquid</span> that can be <span class="hl-swap">bought in bottles or jars</span> and <span class="hl-swap">poured onto food</span> <span class="hl-loc">such as waffles and ice cream</span> <span class="hl-conn">or</span> <span class="hl-swap">used in the baking of cakes and pastries</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面问 <em>colour described as ___</em>，原文第一段讲“枫糖浆是什么”，第 4 句给定义：<em>Maple syrup is a thick, golden, sweet-tasting liquid</em>。<strong>colour 这个词在原文根本不出现</strong>——它是靠“并列形容词里的颜色词”实现对上的：thick（质地）/ <span class="hl-ans">golden</span>（颜色）/ sweet-tasting（味道），三个形容词刚好对应卷面的三个描述维度。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">colour described as</span> ⇄ <span class="hl-ans">golden</span> ——“颜色被描述为……” ⇄“金色的”（<strong>题干给类别，原文给具体词</strong>，这是 P4 notes 最常见的问法）；<span class="hl-swap">sweet-tasting liquid</span> ⇄ 卷面 <em>added to food or used in cooking</em>（“甜味液体” ⇄ “加进食物或用于烹饪”）。<br>3. <strong>信号词</strong>：<span class="hl-conn">that can be bought … or used …</span> 这个 that 从句一直延伸到句末，<strong>卷面第二条 bullet 的内容全在这个从句里</strong>；<span class="hl-conn">or</span> 把“浇在食物上”和“烤蛋糕”并列。<br>4. <strong>避坑</strong>：<span class="hl-trap">clear honey</span> 是上一句的比喻（<em>looks rather like clear honey</em>）——它是“看起来像”，不是“颜色叫 honey”，而且 honey 是名词；<em>thick</em> 也不是颜色。**听到 colour / colour of 之类，直接在句子里扫颜色形容词（golden / brown / amber / dark），别抄名词。**</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line">It's <span class="hl-swap">produced from</span> the <span class="hl-loc">plant fluid or sap</span> <span class="hl-loc">inside the maple tree</span>.</div>
+                            <div class="cn-line">它是<span class="hl-swap">由</span><span class="hl-loc">枫树内部的</span><span class="hl-loc">植物汁液（树液）</span><span class="hl-swap">制成的</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">And that makes</span> maple syrup a <span class="hl-swap">very natural product</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">这也让</span>枫糖浆成为一种<span class="hl-swap">非常天然的食品</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">Maple syrup is a thick, <span class="hl-ans">golden</span>, <span class="hl-swap">sweet-tasting liquid</span> that can be <span class="hl-swap">bought in bottles or jars</span> and <span class="hl-swap">poured onto food</span> <span class="hl-loc">such as waffles and ice cream</span> <span class="hl-conn">or</span> <span class="hl-swap">used in the baking of cakes and pastries</span>.</div>
+                            <div class="cn-line">枫糖浆是一种浓稠的、<span class="hl-ans">金黄色的</span>、<span class="hl-swap">带甜味的液体</span>，可以<span class="hl-swap">装瓶或装罐出售</span>，<span class="hl-swap">浇在食物上</span>（<span class="hl-loc">比如华夫饼和冰淇淋</span>），<span class="hl-conn">或</span><span class="hl-swap">用于烤蛋糕和点心</span>。【Q31 答案句 → golden；形容颜色的形容词，不是名词】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q32 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q32">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q32</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q32: <strong>healthy</strong> —— 比较对象是 refined sugar，不是 natural</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('32_Q32_healthy比精制糖健康.mp3', 'Q32: a healthy alternative to refined sugar')">▶ 播放切片 (14s)</button>
+                    <button class="record-card-btn" id="rec-btn-q32" onclick="handleRecBtnClick('q32')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q32" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q32"></span>
+                    <span class="rec-status-text" id="rec-status-q32">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q32">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q32" onclick="playUserRecording('q32')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q32')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q32')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q32')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · What is maple syrup?（第二条 bullet）</div>
+                    <div class="prompt-text">• colour described as <span class="blank-answer">31</span><br>• very <span class="blank-answer">32</span> compared to refined sugar</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                It contains <span class="hl-trap">no preservatives or added ingredients</span> <span class="hl-conn">and</span> it <span class="hl-swap">provides</span> a <span class="hl-ans">healthy</span> <span class="hl-swap">alternative to</span> <span class="hl-loc">refined sugar</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：紧接 Q31 同一段的最后一句。<strong>P4 notes 题里，相邻两空常在同一段、甚至同一句</strong>，所以 Q31 落笔后不要换注意力。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">provides a healthy alternative to refined sugar</span> ⇄ <span class="hl-swap">is very ___ compared to refined sugar</span>——“（它）提供了一种可替代精制糖的健康选择” ⇄ “（它）比精制糖更___”（<strong>动词短语 → be + 形容词</strong>，所以空格只填形容词 healthy，不能填 alternative）；<span class="hl-swap">alternative to</span> ⇄ <span class="hl-swap">compared to</span> ——“作为……的替代品” ⇄ “与……相比”。<br>3. <strong>信号词</strong>：<span class="hl-conn">and</span> 连接两个并列谓语（contains / provides），<strong>前半句是否定（no preservatives），后半句才是答案</strong>——听到 no 就要准备往 and 后面走。<br>4. <strong>避坑</strong>：<span class="hl-trap">natural</span> 就在前三句（<em>a very natural product</em>），是最像的“very + 形容词”，但卷面比较对象写的是 <em>compared to refined sugar</em>，natural 跟精制糖没有可比关系；<strong>凡是题干带 compared to，形容词必须能和那个对象构成比较。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line">Maple syrup is a thick, <span class="hl-ans">golden</span>, <span class="hl-swap">sweet-tasting liquid</span> that can be <span class="hl-swap">bought in bottles or jars</span> and <span class="hl-swap">poured onto food</span> <span class="hl-loc">such as waffles and ice cream</span> <span class="hl-conn">or</span> <span class="hl-swap">used in the baking of cakes and pastries</span>.</div>
+                            <div class="cn-line">枫糖浆是一种浓稠的、<span class="hl-ans">金黄色的</span>、<span class="hl-swap">带甜味的液体</span>，可以<span class="hl-swap">装瓶或装罐出售</span>，<span class="hl-swap">浇在食物上</span>（<span class="hl-loc">比如华夫饼和冰淇淋</span>），<span class="hl-conn">或</span><span class="hl-swap">用于烤蛋糕和点心</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">It contains <span class="hl-trap">no preservatives or added ingredients</span> <span class="hl-conn">and</span> it <span class="hl-swap">provides</span> a <span class="hl-ans">healthy</span> <span class="hl-swap">alternative to</span> <span class="hl-loc">refined sugar</span>.</div>
+                            <div class="cn-line">它<span class="hl-trap">不含防腐剂或添加成分</span>，<span class="hl-conn">并且</span><span class="hl-swap">提供了</span>一种<span class="hl-ans">更健康的</span><span class="hl-swap">替代品</span>，<span class="hl-loc">可替代精制糖</span>。【Q32 答案句 → healthy；alternative 是名词，“更健康的替代品”】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q33 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q33">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q33</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q33: <strong>climate</strong> —— best growing conditions ⇄ the climate suits the trees perfectly</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('33_Q33_climate气候适宜.mp3', 'Q33: the climate suits the trees perfectly')">▶ 播放切片 (20s)</button>
+                    <button class="record-card-btn" id="rec-btn-q33" onclick="handleRecBtnClick('q33')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q33" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q33"></span>
+                    <span class="rec-status-text" id="rec-status-q33">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q33">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q33" onclick="playUserRecording('q33')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q33')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q33')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q33')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · The maple tree</div>
+                    <div class="prompt-text">• needs sunny days and cool nights<br>• maple leaf has been on the Canadian flag since 1964<br>• needs moist soil but does not need fertiliser as well<br>• best growing conditions and <span class="blank-answer">33</span> are in Canada and North America</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                There are only certain parts of the world that <span class="hl-swap">provide all these conditions</span>. <span class="hl-loc">One is Canada</span>. And by that, I mean all parts of Canada. <span class="hl-conn">And the other is</span> the <span class="hl-loc">northeastern states of North America</span>. <span class="hl-conn">In these areas</span>, the <span class="hl-ans">climate</span> <span class="hl-swap">suits the trees perfectly</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面的 <em>best growing conditions</em> 在原文里不出现，它是靠地点词对上的——<span class="hl-loc">Canada</span> + <span class="hl-loc">northeastern states of North America</span> 两个地名出现后，紧跟一句 <em>the climate suits the trees perfectly</em>；<strong>卷面把“条件”拆成两项（conditions + 33），原文合并成一句“气候非常适合”</strong>。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">best growing conditions</span> ⇄ <span class="hl-swap">the climate suits the trees perfectly</span> ——“最佳生长条件” ⇄ “气候非常适宜这种树”（<strong>抽象“条件” ⇄ 具体“气候”</strong>）；<span class="hl-conn">In these areas</span> ⇄ <em>in Canada and North America</em>（回指前两句的两个地点）。<br>3. <strong>信号词</strong>：<span class="hl-conn">One is Canada</span> / <span class="hl-conn">And the other is</span> ——“一个是……另一个是……”的并列结构，<strong>听到 And the other is 就知道地点说完了，答案马上来</strong>；后面 <span class="hl-conn">In fact</span> 是补充数据（two-thirds、1964），不是答案。<br>4. <strong>避坑</strong>：conditions 已经写在卷面上（<em>best growing conditions</em>），空要的是<strong>另一个并列项</strong>；moisture / sun exposure / cool nights 是前两句列举的具体条件，<strong>它们都在“Canada”之前</strong>，不在答案句里。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">There are only certain parts of the world</span> that <span class="hl-swap">provide all these conditions</span>. <span class="hl-loc">One is Canada</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">只有世界上某些地区</span>能<span class="hl-swap">提供所有这些条件</span>。<span class="hl-loc">一个是加拿大</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">And by that, I mean</span> <span class="hl-loc">all parts of Canada</span>. <span class="hl-conn">And the other is</span> the <span class="hl-loc">northeastern states of North America</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">我说的</span>是<span class="hl-loc">加拿大全境</span>。<span class="hl-conn">另一个是</span><span class="hl-loc">北美东北部各州</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">In these areas</span>, the <span class="hl-ans">climate</span> <span class="hl-swap">suits the trees perfectly</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">在这些地区</span>，<span class="hl-ans">气候</span><span class="hl-swap">非常适合这种树</span>。【Q33 答案句 → climate；suits the trees perfectly ⇄ best growing conditions】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">In fact</span>, Canada produces <span class="hl-swap">over two-thirds</span> of the world's maple syrup, <span class="hl-conn">which is why</span> the <span class="hl-loc">five-pointed maple leaf</span> is a Canadian symbol <span class="hl-conn">and</span> has <span class="hl-loc">featured on the flag since 1964</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">事实上</span>，加拿大生产了全世界<span class="hl-swap">三分之二以上</span>的枫糖浆，<span class="hl-conn">所以</span><span class="hl-loc">五角枫叶</span>成了加拿大的象征，<span class="hl-conn">并且</span><span class="hl-loc">自 1964 年起</span>就出现在国旗上。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q34 ============ -->
+        <div class="slice-card" data-category="part4 wrong p4wrong" id="card-q34">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q34</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <h3 class="card-title">Q34: <strong>rock</strong> —— 你抄了从句里的 sun，答案在 that 前面的名词</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('34_Q34_rock烧热的石头.mp3', 'Q34: pieces of rock that had become scorching hot')">▶ 播放切片 (18s)</button>
+                    <button class="record-card-btn" id="rec-btn-q34" onclick="handleRecBtnClick('q34')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q34" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q34"></span>
+                    <span class="rec-status-text" id="rec-status-q34">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q34">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q34" onclick="playUserRecording('q34')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q34')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q34')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q34')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · Early maple sugar producers</div>
+                    <div class="prompt-text">• made holes in the tree trunks<br>• used hot <span class="blank-answer">34</span> to heat the sap<br>• used tree bark to make containers for collection<br>• sweetened food and drink with sugar</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                They <span class="hl-swap">boiled the liquid</span> <span class="hl-conn">by</span> <span class="hl-swap">placing</span> <span class="hl-loc">pieces of</span> <span class="hl-ans">rock</span> <span class="hl-conn">that</span> had become <span class="hl-swap">scorching hot</span> <span class="hl-trap">from the sun</span> <span class="hl-swap">into the sap</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面 <em>used hot ___ to heat the sap</em> ⇄ 原文 <em>boiled the liquid by placing pieces of <span class="hl-ans">rock</span> that had become scorching hot from the sun into the sap</em>。<strong>hot ⇄ scorching hot，heat ⇄ boiled，四个词全对上，位置没错。</strong><br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">used hot ___ to heat the sap</span> ⇄ <span class="hl-swap">boiled the liquid by placing pieces of rock … into the sap</span> ——“用热的___来加热树液” ⇄ “把___放进树液里煮沸”（<strong>“用” ⇄ “放进去”，工具变成了动作的对象</strong>）。<br>3. <strong>错因（你的答案：sun）</strong>：你听到的是 <em>scorching hot <strong>from the sun</strong></em>，把“太阳”当成了答案。但这句话的结构是：<strong>pieces of [rock] + [that had become scorching hot from the sun]</strong> —— that 从句是<strong>修饰 rock 的定语</strong>，告诉你是“什么样的石头”（被太阳晒得滚烫的），<strong>答案永远在 that 前面那个名词上</strong>。何况卷面要的是“被放进树液里的东西”，太阳不可能被“used … to heat the sap”。<br>4. <strong>避坑铁律</strong>：<span class="hl-trap">from the sun</span> 是<strong>来源</strong>（热从哪来），不是<strong>工具</strong>（用什么加热）。<strong>看到“形容词 + from / by + 名词”，先问这个形容词在修饰谁——被修饰的名词才是答案。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line">They <span class="hl-swap">bored holes</span> in the <span class="hl-loc">trunks of maple trees</span> <span class="hl-conn">and</span> used <span class="hl-swap">containers made of tree bark</span> to <span class="hl-swap">collect the liquid sap</span> as it poured out.</div>
+                            <div class="cn-line">他们在<span class="hl-loc">枫树树干</span>上<span class="hl-swap">打孔</span>，<span class="hl-conn">并</span>用<span class="hl-swap">树皮做的容器</span>来<span class="hl-swap">接流出来的树液</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">As</span> they were <span class="hl-trap">unable to keep the liquid for any length of time</span> — they didn't have storage facilities in those days — they <span class="hl-swap">boiled the liquid</span> <span class="hl-conn">by</span> <span class="hl-swap">placing</span> <span class="hl-loc">pieces of</span> <span class="hl-ans">rock</span> <span class="hl-conn">that</span> had become <span class="hl-swap">scorching hot</span> <span class="hl-trap">from the sun</span> <span class="hl-swap">into the sap</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">由于</span>他们<span class="hl-trap">没法把液体保存太久</span>（那时没有储存设施），他们就<span class="hl-swap">把液体煮沸</span>：<span class="hl-swap">把</span>被<span class="hl-trap">太阳</span>晒得<span class="hl-swap">滚烫</span>的<span class="hl-loc">一块块</span><span class="hl-ans">石头</span><span class="hl-swap">放进树液里</span>。【Q34 答案句 → rock；of 后面、that 前面才是答案，that 从句全是修饰】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">They did this <span class="hl-conn">until</span> it <span class="hl-swap">turned into</span> sugar, <span class="hl-conn">and</span> they were then able to use this to <span class="hl-swap">sweeten</span> their food and drinks.</div>
+                            <div class="cn-line">他们一直这样做，<span class="hl-conn">直到</span>它<span class="hl-swap">变成</span>糖，<span class="hl-conn">然后</span>就能用它给食物和饮料<span class="hl-swap">增甜</span>。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q35 ============ -->
+        <div class="slice-card" data-category="part4 wrong p4wrong" id="card-q35">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q35</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <h3 class="card-title">Q35: <strong>diameter</strong> —— 40 years 就在这一句，conditions 在下一句</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('35_Q35_diameter树干直径.mp3', 'Q35: the trunks reach a diameter of around 25 cm')">▶ 播放切片 (15s)</button>
+                    <button class="record-card-btn" id="rec-btn-q35" onclick="handleRecBtnClick('q35')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q35" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q35"></span>
+                    <span class="rec-status-text" id="rec-status-q35">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q35">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q35" onclick="playUserRecording('q35')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q35')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q35')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q35')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · Today's maple syrup → The trees</div>
+                    <div class="prompt-text">• Tree trunks may not have the correct <span class="blank-answer">35</span> until they have been growing for 40 years.<br>• The changing temperature and movement of water within the tree produces the sap.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                The trees have to be <span class="hl-swap">well looked after</span>, <span class="hl-conn">and</span> they <span class="hl-swap">cannot be used to make syrup</span> <span class="hl-conn">until</span> the <span class="hl-loc">trunks</span> <span class="hl-swap">reach</span> a <span class="hl-ans">diameter</span> of <span class="hl-loc">around 25 cm</span>. This can <span class="hl-swap">take anything up to</span> <span class="hl-loc">40 years</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<strong>不要从 correct 往回找，要从 40 years 往前找。</strong>卷面写 <em>until they have been growing for 40 years</em>，原文是 <em>…until the trunks reach a diameter of around 25 cm. <strong>This can take anything up to 40 years.</strong></em> —— 40 years 出现在<strong>紧接的下一句</strong>，而 <em>This</em> 回指的就是前一句“长到 25 厘米粗”这件事。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">may not have the correct ___</span> ⇄ <span class="hl-swap">cannot be used to make syrup until the trunks reach a ___ of around 25 cm</span> ——“可能还没有合适的___” ⇄ “树干达到约 25 厘米的___之前不能用它做糖浆”（<strong>“没有” ⇄ “不能用”，否定角度换了，意思一样</strong>）；<span class="hl-swap">until they have been growing for 40 years</span> ⇄ <span class="hl-swap">This can take anything up to 40 years</span> ——“直到长了 40 年” ⇄ “这最多要花 40 年”（<strong>“生长时长” ⇄ “所需时间”</strong>）。<br>3. <strong>错因（你的答案：conditions）</strong>：你抄的是<strong>下一句</strong> <em>maple trees need the right conditions to grow</em>。conditions 和 correct 搭配确实通顺，但判断依据不是“搭配通不通”，而是<strong>这一句里有没有定位词（trunks / 40 years / 25 cm）</strong>——conditions 那句一个都没有。<strong>P4 的定位不是“找到近义句”，而是“找到带定位词的那一句”。</strong><br>4. <strong>避坑</strong>：<span class="hl-loc">25 cm</span> 是数字诱饵（卷面已经给了 40 years，不需要第二个数字）；<strong>trunk 能“有”的、且要 40 年才长成的，只有 diameter。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line">The trees have to be <span class="hl-swap">well looked after</span>, <span class="hl-conn">and</span> they <span class="hl-swap">cannot be used to make syrup</span> <span class="hl-conn">until</span> the <span class="hl-loc">trunks</span> <span class="hl-swap">reach</span> a <span class="hl-ans">diameter</span> of <span class="hl-loc">around 25 cm</span>. This can <span class="hl-swap">take anything up to</span> <span class="hl-loc">40 years</span>.</div>
+                            <div class="cn-line">这些树必须<span class="hl-swap">好好养护</span>，<span class="hl-conn">而且</span><span class="hl-swap">不能用来做糖浆</span>，<span class="hl-conn">直到</span><span class="hl-loc">树干</span><span class="hl-swap">达到</span><span class="hl-ans">约 25 厘米的直径</span>（<span class="hl-loc">25 cm</span>）；这<span class="hl-swap">最多要花</span><span class="hl-loc">40 年</span>。【Q35 答案句 → diameter；40 years 就在同一句末尾】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">As I've already mentioned</span>, maple trees need the <span class="hl-trap">right conditions</span> to grow <span class="hl-conn">and also</span> to produce sap. <span class="hl-conn">Why is this?</span></div>
+                            <div class="cn-line"><span class="hl-conn">正如我已经说过的</span>，枫树需要<span class="hl-trap">合适的条件</span>才能生长，<span class="hl-conn">也</span>才能产树液。<span class="hl-conn">为什么呢？</span>【这句里的 conditions 是下一句的，不是 Q35 的答案】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q36 ============ -->
+        <div class="slice-card" data-category="part4 correct" id="card-q36">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q36</span>
+                    <span class="card-tag tag-correct">✓ 答对</span>
+                    <h3 class="card-title">Q36: <strong>tube</strong> —— A tap is drilled ⇄ drilling a small hole</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('36_Q36_tube导管.mp3', 'Q36: inserting a tube into it that ends in a bucket')">▶ 播放切片 (13s)</button>
+                    <button class="record-card-btn" id="rec-btn-q36" onclick="handleRecBtnClick('q36')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q36" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q36"></span>
+                    <span class="rec-status-text" id="rec-status-q36">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q36">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q36" onclick="playUserRecording('q36')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q36')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q36')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q36')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · The production</div>
+                    <div class="prompt-text">• A tap is drilled into the trunk and a <span class="blank-answer">36</span> carries the sap into a bucket.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                <span class="hl-conn">When</span> the tree is ready, it can be <span class="hl-swap">tapped</span>, <span class="hl-conn">and</span> this involves <span class="hl-swap">drilling a small hole</span> into the <span class="hl-loc">trunk</span> <span class="hl-conn">and</span> <span class="hl-swap">inserting</span> a <span class="hl-ans">tube</span> into it <span class="hl-swap">that ends in</span> a <span class="hl-loc">bucket</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面 <em>A tap is drilled into the trunk</em> ⇄ 原文 <em>this involves drilling a small hole into the trunk</em>；<strong>trunk 是原词，drilled ⇄ drilling 只是词性变了</strong>，所以答案就在 and 后面那个动作上：<em>inserting a <span class="hl-ans">tube</span></em>。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">A tap is drilled into the trunk</span> ⇄ <span class="hl-swap">drilling a small hole into the trunk</span> ——“在树干上钻孔（装龙头）” ⇄ “在树干上钻一个小孔”（<strong>名词 tap ⇄ 动词 drill</strong>）；<span class="hl-swap">a ___ carries the sap into a bucket</span> ⇄ <span class="hl-swap">inserting a tube into it that ends in a bucket</span> ——“一个___把树液送进桶里” ⇄ “插入一根___，末端通向桶”（<strong>“输送” ⇄ “末端通向”，动作换成了位置关系</strong>）。<br>3. <strong>信号词</strong>：<span class="hl-conn">and</span> 连接两个并列动作（drilling / inserting），<strong>卷面的 and 正好对应这两个动作</strong>——第一个动作给了 tap，第二个动作就是空。<br>4. <strong>避坑</strong>：bucket 在句尾，是<strong>容器</strong>不是管子；tap 已经在卷面出现（<em>A tap is drilled</em>），不能再填。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">When</span> the tree is ready, it can be <span class="hl-swap">tapped</span>, <span class="hl-conn">and</span> this involves <span class="hl-swap">drilling a small hole</span> into the <span class="hl-loc">trunk</span> <span class="hl-conn">and</span> <span class="hl-swap">inserting</span> a <span class="hl-ans">tube</span> into it <span class="hl-swap">that ends in</span> a <span class="hl-loc">bucket</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">当</span>树准备好了，就可以<span class="hl-swap">开孔取液</span>，<span class="hl-conn">做法是</span>在<span class="hl-loc">树干</span>上<span class="hl-swap">钻一个小孔</span>，<span class="hl-conn">再</span><span class="hl-swap">插入</span>一根<span class="hl-ans">导管</span>，<span class="hl-swap">末端通向</span><span class="hl-loc">桶</span>里。【Q36 答案句 → tube；that ends in a bucket 修饰 tube】</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The trees can often <span class="hl-swap">take several taps</span>, <span class="hl-conn">though</span> the workers <span class="hl-swap">take care not to cause any damage</span> to the <span class="hl-loc">healthy growth of the tree</span> itself.</div>
+                            <div class="cn-line">这些树常常可以<span class="hl-swap">打几个孔</span>，<span class="hl-conn">不过</span>工人会<span class="hl-swap">小心不造成任何损伤</span>，以免影响<span class="hl-loc">树的健康生长</span>。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q37 ============ -->
+        <div class="slice-card" data-category="part4 wrong p4wrong" id="card-q37">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q37</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <h3 class="card-title">Q37: <strong>fire</strong> —— by means of 问手段，steam 是结果</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('37_Q37_fire用火烧.mp3', 'Q37: A fire is built, and the pans are then heated')">▶ 播放切片 (13s)</button>
+                    <button class="record-card-btn" id="rec-btn-q37" onclick="handleRecBtnClick('q37')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q37" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q37"></span>
+                    <span class="rec-status-text" id="rec-status-q37">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q37">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q37" onclick="playUserRecording('q37')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q37')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q37')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q37')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · The production</div>
+                    <div class="prompt-text">• Large pans of sap called evaporators are heated by means of a <span class="blank-answer">37</span>.<br>• A lot of <span class="blank-answer">38</span> is produced during the evaporation process.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                These are basically <span class="hl-swap">extremely large pans</span>. The sap is <span class="hl-swap">poured into</span> these. <span class="hl-ans">A fire</span> is built, <span class="hl-conn">and</span> the pans are then <span class="hl-swap">heated</span> <span class="hl-conn">until</span> the sap boils.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面 <em>evaporators</em> ⇄ 原文 <em>what are called evaporators. These are basically extremely large pans.</em>（定义句，<strong>large pans 是 evaporators 的解释</strong>）；紧接着 <em>The sap is poured into these. <span class="hl-ans">A fire</span> is built, and the pans are then <span class="hl-swap">heated</span>…</em>。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">are heated by means of a ___</span> ⇄ <span class="hl-swap">A fire is built, and the pans are then heated</span> ——“靠___加热” ⇄ “生起火，然后把锅加热”（<strong>by means of = 手段 = 生火这件事</strong>）。<br>3. <strong>错因（你的答案：steam）</strong>：你定位到了 heated，但把<strong>下一句</strong>的 <em>The evaporation process creates large quantities of <strong>steam</strong></em> 抄了上来。方向正好反了：<strong>fire 是“加热的手段”（在前），steam 是“加热的结果”（在后）</strong>。by means of 后面只能接“你用来做事的东西”。<br>4. <strong>避坑</strong>：<strong>手段在前、结果在后</strong>——听到 heated / boiled / cooked，答案在<strong>前文</strong>；听到 produces / creates / gives off，答案在<strong>后文</strong>。这一条能同时救 Q37 和 Q38。<strong>另外：Q37 一错，Q38 就在下一句，必须立刻收心。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line">It has to be <span class="hl-swap">boiled</span> <span class="hl-conn">so that</span> <span class="hl-swap">much of that water evaporates</span>, <span class="hl-conn">and</span> this process has to <span class="hl-swap">take place immediately</span> <span class="hl-swap">using</span> <span class="hl-conn">what are called</span> <span class="hl-loc">evaporators</span>. These are basically <span class="hl-swap">extremely large pans</span>.</div>
+                            <div class="cn-line">必须<span class="hl-swap">煮</span>，<span class="hl-conn">好让</span><span class="hl-swap">大部分水分蒸发</span>；这个过程要<span class="hl-swap">立刻进行</span>，<span class="hl-swap">用的是</span><span class="hl-conn">所谓的</span><span class="hl-loc">蒸发器</span>——那基本上就是<span class="hl-swap">极大的平底锅</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The sap is <span class="hl-swap">poured into</span> these. <span class="hl-ans">A fire</span> is built, <span class="hl-conn">and</span> the pans are then <span class="hl-swap">heated</span> <span class="hl-conn">until</span> the sap boils. <span class="hl-conn">As it does this</span>, the water evaporates, <span class="hl-conn">and</span> the syrup <span class="hl-swap">begins to form</span>.</div>
+                            <div class="cn-line">树液被<span class="hl-swap">倒进</span>这些锅里。<span class="hl-loc">生起火</span>，<span class="hl-conn">然后</span>把锅<span class="hl-swap">加热</span>，<span class="hl-conn">直到</span>树液沸腾。<span class="hl-conn">在这个过程中</span>，水分蒸发，<span class="hl-conn">糖浆</span><span class="hl-swap">开始形成</span>。【Q37 答案句 → fire；by means of 问的是“手段”】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q38 ============ -->
+        <div class="slice-card" data-category="part4 wrong p4wrong" id="card-q38">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q38</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <h3 class="card-title">Q38: <strong>steam</strong> —— creates ⇄ is produced，主动换被动</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('38_Q38_steam产生大量蒸汽.mp3', 'Q38: The evaporation process creates large quantities of steam')">▶ 播放切片 (13s)</button>
+                    <button class="record-card-btn" id="rec-btn-q38" onclick="handleRecBtnClick('q38')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q38" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q38"></span>
+                    <span class="rec-status-text" id="rec-status-q38">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q38">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q38" onclick="playUserRecording('q38')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q38')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q38')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q38')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · The production</div>
+                    <div class="prompt-text">• Large pans of sap called evaporators are heated by means of a <span class="blank-answer">37</span>.<br>• A lot of <span class="blank-answer">38</span> is produced during the evaporation process.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                The <span class="hl-loc">evaporation process</span> <span class="hl-swap">creates</span> <span class="hl-swap">large quantities of</span> <span class="hl-ans">steam</span>, <span class="hl-conn">and</span> the sap becomes <span class="hl-swap">thicker and denser</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面主语是 <em>A lot of ___</em>，原文主语是 <em>The evaporation process</em>——<strong>主语被换了，这是被动改写</strong>：原文“蒸发过程产生大量蒸汽”，卷面“大量___在蒸发过程中被产生”。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">A lot of ___ is produced</span> ⇄ <span class="hl-swap">creates large quantities of steam</span> ——“大量___被产生” ⇄ “产生大量的___”（<strong>被动 ⇄ 主动，主语从“蒸汽”变成“过程”</strong>）；<span class="hl-swap">during the evaporation process</span> ⇄ <span class="hl-loc">The evaporation process</span>（<strong>介词短语 ⇄ 主语</strong>）。<br>3. <strong>错因（你的情况：空着）</strong>：这题不是没听到，是<strong>上一题（Q37）在纠结时把这句放掉了</strong>。P4 是独白、不停顿，<strong>一题卡住必须立刻扔掉</strong>；你 Q37 想 steam 的那几秒，正好是 Q38 的答案句。<br>4. <strong>避坑</strong>：被动改写要认得——<strong>卷面主语和原文主语不一致时，先找“动词”，再反推主语</strong>；<span class="hl-conn">and</span> 后面 <em>the sap becomes thicker and denser</em> 是并列进展，说明前半句讲的是“产生出来的东西”，不是“变浓”这件事。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line">The sap is <span class="hl-swap">poured into</span> these. <span class="hl-ans">A fire</span> is built, <span class="hl-conn">and</span> the pans are then <span class="hl-swap">heated</span> <span class="hl-conn">until</span> the sap boils. <span class="hl-conn">As it does this</span>, the water evaporates, <span class="hl-conn">and</span> the syrup <span class="hl-swap">begins to form</span>.</div>
+                            <div class="cn-line">树液被<span class="hl-swap">倒进</span>这些锅里。<span class="hl-loc">生起火</span>，<span class="hl-conn">然后</span>把锅<span class="hl-swap">加热</span>，<span class="hl-conn">直到</span>树液沸腾。<span class="hl-conn">在这个过程中</span>，水分蒸发，<span class="hl-conn">糖浆</span><span class="hl-swap">开始形成</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The <span class="hl-loc">evaporation process</span> <span class="hl-swap">creates</span> <span class="hl-swap">large quantities of</span> <span class="hl-ans">steam</span>, <span class="hl-conn">and</span> the sap becomes <span class="hl-swap">thicker and denser</span>.</div>
+                            <div class="cn-line"><span class="hl-loc">蒸发过程</span><span class="hl-swap">会产生</span><span class="hl-swap">大量</span>的<span class="hl-ans">蒸汽</span>，<span class="hl-conn">而</span>树液变得<span class="hl-swap">更浓更稠</span>。【Q38 答案句 → steam；creates ⇄ is produced（主动⇄被动）】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q39 ============ -->
+        <div class="slice-card" data-category="part4 wrong p4wrong" id="card-q39">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q39</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <h3 class="card-title">Q39: <strong>cloudy</strong> —— look + 形容词 ⇄ a ___ appearance</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('39_Q39_cloudy浑浊发白.mp3', 'Q39: gives the syrup a cloudy appearance')">▶ 播放切片 (16s)</button>
+                    <button class="record-card-btn" id="rec-btn-q39" onclick="handleRecBtnClick('q39')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q39" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q39"></span>
+                    <span class="rec-status-text" id="rec-status-q39">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q39">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q39" onclick="playUserRecording('q39')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q39')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q39')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q39')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · The production</div>
+                    <div class="prompt-text">• 'Sugar sand' is removed because it makes the syrup look <span class="blank-answer">39</span> and affects the taste.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                The worker <span class="hl-swap">removes it from the heat</span>. <span class="hl-conn">After this process</span>, something called <span class="hl-loc">'sugar sand'</span> has to be <span class="hl-swap">filtered out</span>, <span class="hl-conn">as</span> this <span class="hl-swap">builds up</span> <span class="hl-loc">during the boiling</span> <span class="hl-conn">and</span> <span class="hl-swap">gives the syrup</span> a <span class="hl-ans">cloudy</span> <span class="hl-swap">appearance</span> <span class="hl-conn">and</span> a <span class="hl-swap">slightly gritty</span> <span class="hl-swap">taste</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：<strong>sugar sand 是原词，直接锁句</strong>（全文只出现这一次）；卷面 <em>is removed</em> ⇄ 原文 <em>has to be filtered out</em>，<em>because</em> ⇄ <em>as</em>，两个后果一一对应：appearance ↔ look ___，taste ↔ affects the taste。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">makes the syrup look ___</span> ⇄ <span class="hl-swap">gives the syrup a ___ appearance</span> ——“让糖浆看起来___” ⇄ “给糖浆一个___的外观”（<strong>look + 形容词 ⇄ a + 形容词 + appearance</strong>，形容词要从名词短语里“拆”出来）；<span class="hl-swap">affects the taste</span> ⇄ <span class="hl-swap">a slightly gritty taste</span> ——“影响味道” ⇄ “略带颗粒感的味道”。<br>3. <strong>错因（你的情况：没抓到）</strong>：定位没跑偏，卡在<strong>词性转换</strong>——原文把 cloudy 放进了名词短语 <em>a cloudy appearance</em>，你如果在等一个“look + 形容词”的结构，就会觉得“这里没有答案”。<strong>卷面 look ___ 只能填形容词，而原文的形容词可能被包在 a ___ appearance / a ___ colour / of a ___ nature 这样的壳里。</strong><br>4. <strong>避坑</strong>：<span class="hl-swap">gritty</span> 是 taste 那一半的修饰（a slightly gritty taste），<strong>不能拿来填 appearance</strong>；<span class="hl-loc">sugar sand</span> 是被滤掉的东西，不是答案。cloudy 拼写 c-l-o-u-d-y。</div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">And</span> <span class="hl-conn">at just the right moment</span>, <span class="hl-conn">when</span> the sap is <span class="hl-swap">thick enough to be called</span> maple syrup, the worker <span class="hl-swap">removes it from the heat</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">而</span><span class="hl-conn">在恰当的时刻</span>，<span class="hl-conn">当</span>树液<span class="hl-swap">浓稠到可以称为</span>枫糖浆时，工人就<span class="hl-swap">把它从火上取下</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">After this process</span>, something called <span class="hl-loc">'sugar sand'</span> has to be <span class="hl-swap">filtered out</span>, <span class="hl-conn">as</span> this <span class="hl-swap">builds up</span> <span class="hl-loc">during the boiling</span> <span class="hl-conn">and</span> <span class="hl-swap">gives the syrup</span> a <span class="hl-ans">cloudy</span> <span class="hl-swap">appearance</span> <span class="hl-conn">and</span> a <span class="hl-swap">slightly gritty</span> <span class="hl-swap">taste</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">这个过程之后</span>，要把一种叫<span class="hl-loc">“糖砂”</span>的东西<span class="hl-swap">滤掉</span>，<span class="hl-conn">因为</span>它在<span class="hl-loc">煮沸过程中</span><span class="hl-swap">积累</span>，<span class="hl-conn">会</span>让糖浆<span class="hl-swap">外观</span><span class="hl-ans">浑浊发白</span>，<span class="hl-conn">并且</span>味道<span class="hl-swap">略带颗粒感</span>。【Q39 答案句 → cloudy；look cloudy ⇄ a cloudy appearance】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+
+        <!-- ============ CARD q40 ============ -->
+        <div class="slice-card" data-category="part4 wrong p4wrong" id="card-q40">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · Q40</span>
+                    <span class="card-tag tag-wrong">✗ 答错</span>
+                    <h3 class="card-title">Q40: <strong>litre</strong> —— 两个数字，问的是成品不是原料</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('40_Q40_litre一升糖浆.mp3', 'Q40: It takes 40 litres of sap to produce one litre of maple syrup')">▶ 播放切片 (14s)</button>
+                    <button class="record-card-btn" id="rec-btn-q40" onclick="handleRecBtnClick('q40')">🎙️ 录音跟读</button>
+                </div>
+            </div>
+            <div class="user-rec-panel" id="user-rec-panel-q40" style="display: none;">
+                <div class="rec-panel-info">
+                    <span class="rec-status-dot" id="rec-dot-q40"></span>
+                    <span class="rec-status-text" id="rec-status-q40">🎧 我的跟读录音</span>
+                    <span class="rec-timer-badge" id="rec-time-q40">00:00</span>
+                </div>
+                <div class="rec-panel-btns" style="display: none;">
+                    <button class="rec-btn-pill btn-play-user" id="play-user-btn-q40" onclick="playUserRecording('q40')">▶ 试听跟读</button>
+                    <button class="rec-btn-pill btn-compare" onclick="compareOfficial('q40')">👂 对比原声</button>
+                    <button class="rec-btn-pill btn-rerecord" onclick="toggleRecording('q40')">🔄 重新跟读</button>
+                    <button class="rec-btn-pill btn-del" onclick="deleteRecording('q40')">🗑️ 清除</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="prompt-box">
+                    <div class="prompt-label">卷面题干 · The production（最后一条）</div>
+                    <div class="prompt-text">• A huge quantity of sap is needed to make a <span class="blank-answer">40</span> of maple syrup.</div>
+                </div>
+                <div class="transcript-box"><strong>答案句切片原文：</strong><br>
+                It <span class="hl-swap">takes</span> <span class="hl-trap">40 litres of sap</span> to <span class="hl-swap">produce</span> <span class="hl-ans">one litre</span> of <span class="hl-loc">maple syrup</span>, <span class="hl-conn">so</span> you can get an idea of <span class="hl-swap">how much is needed</span>.</div>
+                <div class="diagnosis-box"><strong>🎯 考点拆解与定位路径：</strong><br>
+                1. <strong>定位路径</strong>：卷面 <em>A huge quantity of sap is needed</em> ⇄ 原文 <em>It takes 40 litres of sap</em>（“需要大量树液” ⇄ “要 40 升树液”）；<em>to make a ___ of maple syrup</em> ⇄ <em>to produce one litre of maple syrup</em>。<br>2. <strong>改写对照（中文意思）</strong>：<span class="hl-swap">A huge quantity of sap is needed</span> ⇄ <span class="hl-swap">It takes 40 litres of sap</span> ——“需要大量树液” ⇄ “要用 40 升树液”（<strong>数量模糊化 ⇄ 具体数字</strong>，所以 40 是原文给的，不用你填）；<span class="hl-swap">to make</span> ⇄ <span class="hl-swap">to produce</span> ——“做成” ⇄ “产出”。<br>3. <strong>错因（你的情况：空耳 + 上一题连环）</strong>：这句里有<strong>两个数字</strong>——<span class="hl-trap">40 litres（树液）</span> 和 <span class="hl-ans">one litre（糖浆）</span>。卷面问的是“做出一___枫糖浆”，要的是<strong>成品量</strong>，所以填 litre；40 litres 是<strong>原料量</strong>，是这道题专门设的陷阱。你 Q39 没抓住，注意力已经断了，这句只听成一片数字。<br>4. <strong>避坑</strong>：<strong>P4 的 Q40 永远不要留白</strong>——它是全篇最后一个空，后面还有一分钟检查。拼写 <em>litre</em>（英式）/ <em>liter</em>（美式）都算对。<strong>另外：听到“数字 + of + 名词1 … 数字 + of + 名词2”，先确认卷面问的是名词1 还是名词2。</strong></div>
+                <details class="bilingual-details">
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 查看 本切片 完整原文与逐句翻译（无删减）<span class="toggle-badge">默认隐藏 · 盲听时收起</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">Once this has been done</span>, the syrup is <span class="hl-swap">ready to be packaged</span> <span class="hl-conn">so that</span> it can be used for <span class="hl-swap">a whole variety of products</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">这一步做完之后</span>，糖浆就<span class="hl-swap">可以包装</span>了，<span class="hl-conn">以便</span>用于<span class="hl-swap">各种各样的产品</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">It <span class="hl-swap">takes</span> <span class="hl-trap">40 litres of sap</span> to <span class="hl-swap">produce</span> <span class="hl-ans">one litre</span> of <span class="hl-loc">maple syrup</span>, <span class="hl-conn">so</span> you can get an idea of <span class="hl-swap">how much is needed</span>. <span class="hl-conn">So that's the basic process</span>.</div>
+                            <div class="cn-line">要<span class="hl-swap">用</span><span class="hl-trap">40 升树液</span>才能<span class="hl-swap">产出</span><span class="hl-ans">1 升</span>枫糖浆，<span class="hl-conn">所以</span>你能想象<span class="hl-swap">需要多少</span>。<span class="hl-conn">基本流程就是这样</span>。【Q40 答案句 → litre；40 litres 是树液量，1 litre 才是糖浆量】</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <!-- ============ PART 4 REVIEW ============ -->
+        <div class="slice-card" data-category="part4" id="card-p4-review">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · 复盘</span>
+                    <h3 class="card-title">六个错，其实只有三条病根</h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="analysis-box">
+                    <strong style="color:#f87171;">病根一：抄了“从属成分”，没抄“被修饰的那个名词”</strong><br>
+                    • <strong>Q34</strong> 卷面要“加热用的热___”，你填 <em>sun</em>。原句是 <em>pieces of <strong>rock</strong> [that had become scorching hot <strong>from the sun</strong>]</em>——that 从句修饰 rock，sun 只是“热从哪来”。<br>
+                    • <strong>Q35</strong> 卷面要 <em>the correct ___</em>，你填 <em>conditions</em>。conditions 在<strong>下一句</strong>（<em>need the right conditions to grow</em>），不含任何定位词；答案 <em>diameter</em> 才和 <em>trunks / 25 cm / 40 years</em> 同句。<br>
+                    <span style="color:#fbbf24;">→ 一条判据：<strong>答案必须在“带定位词的那一句”里。</strong>搭配通不通顺不算证据。</span>
+                </div>
+                <div class="analysis-box" style="margin-top:10px;">
+                    <strong style="color:#f87171;">病根二：手段和结果分不清</strong><br>
+                    • <strong>Q37</strong> <em>heated by means of a ___</em> → 手段是 <em>A fire is built</em>；你抄了下一句的 <em>steam</em>（那是<strong>结果</strong>）。<br>
+                    <span style="color:#fbbf24;">→ 手段在前（by / by means of / using），结果在后（produces / creates / gives off）。听到 heated 往前找，听到 creates 往后找。</span>
+                </div>
+                <div class="analysis-box" style="margin-top:10px;">
+                    <strong style="color:#f87171;">病根三：Q37 卡住 → Q38/39/40 连崩</strong><br>
+                    • Q37 纠结 steam 的那几秒 = Q38 的答案句（<em>creates large quantities of steam</em>）→ Q38 空；<br>
+                    • Q39 有定位（sugar sand）但卡在词性转换（<em>look ___</em> ⇄ <em>a ___ appearance</em>）→ 没落笔；<br>
+                    • Q40 两个数字（40 litres 树液 / one litre 糖浆）听成一片 → 空。<br>
+                    <span style="color:#fbbf24;">→ P4 的失分不是均匀分布的，是<strong>链式</strong>的。<strong>一题卡住，最多给它 2 秒，然后立刻把笔移到下一题的定位词上。</strong></span>
+                </div>
+                <div class="analysis-box" style="margin-top:10px;">
+                    <strong>你答对的 4 题，靠的是同一种能力</strong><br>
+                    Q31（colour ⇄ golden，找颜色形容词）、Q32（healthy alternative ⇄ very healthy compared to）、Q33（the climate suits the trees perfectly ⇄ best growing conditions）、Q36（drilling a small hole ⇄ A tap is drilled）——<strong>这四题都是“卷面词和原文词一一对上，中间只差词性”</strong>。说明你的辨音和同义识别没问题，问题集中在<strong>“这句话里到底哪个词是答案”</strong>的句法判断上。
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ PART 4 FULL AUDIO ============ -->
+        <div class="slice-card" data-category="part4 allfull" id="full-p4">
+            <div class="card-header">
+                <div>
+                    <span class="card-tag tag-p4">Part 4 · 完整音频</span>
+                    <h3 class="card-title">完整 Part 4 精听（8 分 35 秒 · 枫糖浆 Maple Syrup）· 附全文原文</h3>
+                </div>
+                <div class="card-actions">
+                    <button class="play-card-btn" onclick="playAudio('Part4_Full_枫糖浆.mp3', 'Part 4 完整音频：枫糖浆 Maple Syrup')">▶ 播放完整音频</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="transcript-box">
+                    用法：10 个切片全部过关后，用本段做「全真模拟」——只按一遍播放，笔尖跟号法逐题作答（Q31→Q40 顺序推进，中间不回看）。音频从「Part 4. You will hear a presentation…」开始，含约 50 秒看题停顿，到「That is the end of Part 4」结束。
+                </div>
+                <div class="analysis-box">
+                    <strong>结构提示（按段落顺序，括号内是对应题号）：</strong><br>
+                    开场 → ①<strong>枫糖浆是什么</strong>（Q31 colour / Q32 healthy）→ ②<strong>枫树与产地</strong>（Q33 climate）→ ③<strong>早期制糖：原住民的做法</strong>（Q34 rock）→ ④<strong>今天：树的要求</strong>（Q35 diameter）→ ⑤<strong>今天：取液 → 蒸发 → 过滤 → 产量</strong>（Q36 tube / Q37 fire / Q38 steam / Q39 cloudy / Q40 litre）→ 结束。<br>
+                    <span style="color:#fbbf24;">注意最后一段是<strong>五个空连着走</strong>，一步一句、从不回头——这正是本次 Q37 一卡就带崩 Q38-40 的原因。</span>
+                </div>
+                <div class="analysis-box" style="margin-top:10px;">
+                    <strong>笔尖跟号法（本段唯一要求）：</strong>听之前把 Q31–Q40 的十个空按顺序编号写在草稿纸左边缘；<strong>每听到一个答案就划掉一个号</strong>，绝不回头改前面的题。P4 是独白，<strong>一旦回头，后面两题必丢</strong>。
+                </div>
+                <details class="bilingual-details" open>
+                    <summary class="bilingual-summary"><span class="summary-tag">📜 Part 4 全文原文 · 逐句翻译 · 五色标注（无删减）<span class="toggle-badge">蓝=定位 ｜ 黄=改写 ｜ 粉=逻辑 ｜ 绿=答案 ｜ 红=陷阱</span></span><span class="toggle-icon">▼</span></summary>
+                    <div class="bilingual-body">
+                        <div class="dialog-turn">
+                            <div class="en-line">Part 4. You will hear a presentation by a food science student about the production of maple syrup.</div>
+                            <div class="cn-line">第四部分。你将听到一位食品科学专业的学生讲枫糖浆的生产。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">First</span> you have some time to look at <span class="hl-loc">questions 31 to 40</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">首先</span>，你有一些时间看<span class="hl-loc">第 31 到 40 题</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">Now listen carefully</span> and answer <span class="hl-loc">questions 31 to 40</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">现在仔细听</span>，回答<span class="hl-loc">第 31 到 40 题</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">Hello everyone. Today we're going to look at another <span class="hl-swap">natural food product</span>, <span class="hl-conn">and that's</span> <span class="hl-loc">maple syrup</span>.</div>
+                            <div class="cn-line">大家好。今天我们要看另一种<span class="hl-swap">天然食品</span>——<span class="hl-loc">枫糖浆</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">What is this exactly? <span class="hl-conn">Well</span>, maple syrup <span class="hl-swap">looks rather like</span> <span class="hl-trap">clear honey</span>, <span class="hl-conn">but</span> it's <span class="hl-trap">not made by bees</span>.</div>
+                            <div class="cn-line">这到底是什么？<span class="hl-conn">嗯</span>，枫糖浆<span class="hl-swap">看起来很像</span><span class="hl-trap">清蜂蜜</span>，<span class="hl-conn">但</span>它<span class="hl-trap">不是蜜蜂酿的</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">It's <span class="hl-swap">produced from</span> the <span class="hl-loc">plant fluid or sap</span> <span class="hl-loc">inside the maple tree</span>.</div>
+                            <div class="cn-line">它是<span class="hl-swap">由</span><span class="hl-loc">枫树内部的</span><span class="hl-loc">植物汁液（树液）</span><span class="hl-swap">制成的</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">And that makes</span> maple syrup a <span class="hl-swap">very natural product</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">这也让</span>枫糖浆成为一种<span class="hl-swap">非常天然的食品</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">Maple syrup is a thick, <span class="hl-ans">golden</span>, <span class="hl-swap">sweet-tasting liquid</span> that can be <span class="hl-swap">bought in bottles or jars</span> and <span class="hl-swap">poured onto food</span> <span class="hl-loc">such as waffles and ice cream</span> <span class="hl-conn">or</span> <span class="hl-swap">used in the baking of cakes and pastries</span>.</div>
+                            <div class="cn-line">枫糖浆是一种浓稠的、<span class="hl-ans">金黄色的</span>、<span class="hl-swap">带甜味的液体</span>，可以<span class="hl-swap">装瓶或装罐出售</span>，<span class="hl-swap">浇在食物上</span>（<span class="hl-loc">比如华夫饼和冰淇淋</span>），<span class="hl-conn">或</span><span class="hl-swap">用于烤蛋糕和点心</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">It contains <span class="hl-trap">no preservatives or added ingredients</span> <span class="hl-conn">and</span> it <span class="hl-swap">provides</span> a <span class="hl-ans">healthy</span> <span class="hl-swap">alternative to</span> <span class="hl-loc">refined sugar</span>.</div>
+                            <div class="cn-line">它<span class="hl-trap">不含防腐剂或添加成分</span>，<span class="hl-conn">并且</span><span class="hl-swap">提供了</span>一种<span class="hl-ans">更健康的</span><span class="hl-swap">替代品</span>，<span class="hl-loc">可替代精制糖</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">Let's just talk a bit about <span class="hl-loc">the maple tree</span> itself, <span class="hl-conn">which is</span> where maple syrup comes from.</div>
+                            <div class="cn-line">我们稍微说说<span class="hl-loc">枫树</span>本身——枫糖浆就是从它来的。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">So</span>, there are <span class="hl-loc">many species</span> of maple tree, <span class="hl-conn">and</span> they'll grow <span class="hl-swap">without fertilizer</span> in areas where there's <span class="hl-loc">plenty of moisture in the soil</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">那么</span>，枫树有<span class="hl-loc">很多品种</span>，<span class="hl-conn">而且</span>它们<span class="hl-swap">不需要化肥</span>就能生长，只要土壤里<span class="hl-loc">水分充足</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">However</span>, they'll only do this <span class="hl-conn">if</span> another <span class="hl-loc">important criterion</span> is fulfilled, <span class="hl-conn">which is that</span> they must have <span class="hl-swap">full or partial sun exposure</span> <span class="hl-loc">during the day</span> <span class="hl-conn">and</span> <span class="hl-loc">very cool nights</span>. And I'll talk more about that <span class="hl-conn">in a minute</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">不过</span>，<span class="hl-conn">只有</span>满足另一个<span class="hl-loc">重要条件</span>才行，<span class="hl-conn">那就是</span>白天要有<span class="hl-swap">全日照或半日照</span>，<span class="hl-conn">而且</span><span class="hl-loc">夜里要很凉</span>。这个我<span class="hl-conn">稍后</span>再细说。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">There are only certain parts of the world</span> that <span class="hl-swap">provide all these conditions</span>. <span class="hl-loc">One is Canada</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">只有世界上某些地区</span>能<span class="hl-swap">提供所有这些条件</span>。<span class="hl-loc">一个是加拿大</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">And by that, I mean</span> <span class="hl-loc">all parts of Canada</span>. <span class="hl-conn">And the other is</span> the <span class="hl-loc">northeastern states of North America</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">我说的</span>是<span class="hl-loc">加拿大全境</span>。<span class="hl-conn">另一个是</span><span class="hl-loc">北美东北部各州</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">In these areas</span>, the <span class="hl-ans">climate</span> <span class="hl-swap">suits the trees perfectly</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">在这些地区</span>，<span class="hl-ans">气候</span><span class="hl-swap">非常适合这种树</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">In fact</span>, Canada produces <span class="hl-swap">over two-thirds</span> of the world's maple syrup, <span class="hl-conn">which is why</span> the <span class="hl-loc">five-pointed maple leaf</span> is a Canadian symbol <span class="hl-conn">and</span> has <span class="hl-loc">featured on the flag since 1964</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">事实上</span>，加拿大生产了全世界<span class="hl-swap">三分之二以上</span>的枫糖浆，<span class="hl-conn">所以</span><span class="hl-loc">五角枫叶</span>成了加拿大的象征，<span class="hl-conn">并且</span><span class="hl-loc">自 1964 年起</span>就出现在国旗上。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">So, how did</span> maple syrup production <span class="hl-swap">begin</span>? <span class="hl-conn">Well</span>, <span class="hl-loc">long before Europeans settled</span> in these parts of the world, the <span class="hl-loc">indigenous communities</span> had started <span class="hl-swap">producing maple sugar</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">那么</span>，枫糖浆生产是<span class="hl-swap">怎么开始的</span>？<span class="hl-conn">嗯</span>，<span class="hl-loc">早在欧洲人定居</span>这些地区<span class="hl-loc">之前</span>，<span class="hl-loc">原住民社群</span>就已经开始<span class="hl-swap">制作枫糖</span>了。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">They <span class="hl-swap">bored holes</span> in the <span class="hl-loc">trunks of maple trees</span> <span class="hl-conn">and</span> used <span class="hl-swap">containers made of tree bark</span> to <span class="hl-swap">collect the liquid sap</span> as it poured out.</div>
+                            <div class="cn-line">他们在<span class="hl-loc">枫树树干</span>上<span class="hl-swap">打孔</span>，<span class="hl-conn">并</span>用<span class="hl-swap">树皮做的容器</span>来<span class="hl-swap">接流出来的树液</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">As</span> they were <span class="hl-trap">unable to keep the liquid for any length of time</span> — they didn't have storage facilities in those days — they <span class="hl-swap">boiled the liquid</span> <span class="hl-conn">by</span> <span class="hl-swap">placing</span> <span class="hl-loc">pieces of</span> <span class="hl-ans">rock</span> <span class="hl-conn">that</span> had become <span class="hl-swap">scorching hot</span> <span class="hl-trap">from the sun</span> <span class="hl-swap">into the sap</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">由于</span>他们<span class="hl-trap">没法把液体保存太久</span>（那时没有储存设施），他们就<span class="hl-swap">把液体煮沸</span>：<span class="hl-swap">把</span>被<span class="hl-trap">太阳</span>晒得<span class="hl-swap">滚烫</span>的<span class="hl-loc">一块块</span><span class="hl-ans">石头</span><span class="hl-swap">放进树液里</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">They did this <span class="hl-conn">until</span> it <span class="hl-swap">turned into</span> sugar, <span class="hl-conn">and</span> they were then able to use this to <span class="hl-swap">sweeten</span> their food and drinks.</div>
+                            <div class="cn-line">他们一直这样做，<span class="hl-conn">直到</span>它<span class="hl-swap">变成</span>糖，<span class="hl-conn">然后</span>就能用它给食物和饮料<span class="hl-swap">增甜</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">Since that time</span>, <span class="hl-swap">improvements have been made</span> to the process, <span class="hl-conn">but</span> it has <span class="hl-swap">changed very little overall</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">从那以后</span>，这一工艺<span class="hl-swap">有所改进</span>，<span class="hl-conn">但</span>总体来说<span class="hl-swap">变化很小</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">So, let's look at</span> the production of maple syrup <span class="hl-loc">today</span>. Clearly, the <span class="hl-loc">maple forests</span> are a <span class="hl-swap">valuable resource</span> in many <span class="hl-loc">Canadian and North American communities</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">那么，我们来看看</span><span class="hl-loc">今天</span>的枫糖浆生产。显然，<span class="hl-loc">枫树林</span>在许多<span class="hl-loc">加拿大和北美社区</span>都是<span class="hl-swap">宝贵资源</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The trees have to be <span class="hl-swap">well looked after</span>, <span class="hl-conn">and</span> they <span class="hl-swap">cannot be used to make syrup</span> <span class="hl-conn">until</span> the <span class="hl-loc">trunks</span> <span class="hl-swap">reach</span> a <span class="hl-ans">diameter</span> of <span class="hl-loc">around 25 cm</span>. This can <span class="hl-swap">take anything up to</span> <span class="hl-loc">40 years</span>.</div>
+                            <div class="cn-line">这些树必须<span class="hl-swap">好好养护</span>，<span class="hl-conn">而且</span><span class="hl-swap">不能用来做糖浆</span>，<span class="hl-conn">直到</span><span class="hl-loc">树干</span><span class="hl-swap">达到</span><span class="hl-ans">约 25 厘米的直径</span>（<span class="hl-loc">25 cm</span>）；这<span class="hl-swap">最多要花</span><span class="hl-loc">40 年</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">As I've already mentioned</span>, maple trees need the <span class="hl-trap">right conditions</span> to grow <span class="hl-conn">and also</span> to produce sap. <span class="hl-conn">Why is this?</span></div>
+                            <div class="cn-line"><span class="hl-conn">正如我已经说过的</span>，枫树需要<span class="hl-trap">合适的条件</span>才能生长，<span class="hl-conn">也</span>才能产树液。<span class="hl-conn">为什么呢？</span></div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">Well</span>, <span class="hl-conn">what happens is that</span> <span class="hl-loc">during a cold night</span>, the tree <span class="hl-swap">absorbs water</span> from the soil, <span class="hl-conn">and</span> <span class="hl-swap">that rises</span> through the tree's <span class="hl-loc">vascular system</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">嗯</span>，<span class="hl-conn">情况是这样的</span>：<span class="hl-loc">在寒冷的夜里</span>，树从土壤里<span class="hl-swap">吸收水分</span>，<span class="hl-conn">这些水</span><span class="hl-swap">往上升</span>，经过树的<span class="hl-loc">维管系统</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">But then</span>, in the <span class="hl-loc">warmer daytime</span>, the <span class="hl-loc">change in temperature</span> <span class="hl-swap">causes the water to be pushed back down</span> to the bottom of the tree. This <span class="hl-swap">continual movement up and down</span> <span class="hl-swap">leads to</span> the <span class="hl-swap">formation of the sap</span> needed for maple syrup production.</div>
+                            <div class="cn-line"><span class="hl-conn">但接着</span>，在<span class="hl-loc">白天变暖</span>时，<span class="hl-loc">温度的变化</span><span class="hl-swap">使水分被推回</span>树的底部。这种<span class="hl-swap">上下往复的移动</span><span class="hl-swap">促成了</span>枫糖浆生产所需<span class="hl-swap">树液的形成</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">When</span> the tree is ready, it can be <span class="hl-swap">tapped</span>, <span class="hl-conn">and</span> this involves <span class="hl-swap">drilling a small hole</span> into the <span class="hl-loc">trunk</span> <span class="hl-conn">and</span> <span class="hl-swap">inserting</span> a <span class="hl-ans">tube</span> into it <span class="hl-swap">that ends in</span> a <span class="hl-loc">bucket</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">当</span>树准备好了，就可以<span class="hl-swap">开孔取液</span>，<span class="hl-conn">做法是</span>在<span class="hl-loc">树干</span>上<span class="hl-swap">钻一个小孔</span>，<span class="hl-conn">再</span><span class="hl-swap">插入</span>一根<span class="hl-ans">导管</span>，<span class="hl-swap">末端通向</span><span class="hl-loc">桶</span>里。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The trees can often <span class="hl-swap">take several taps</span>, <span class="hl-conn">though</span> the workers <span class="hl-swap">take care not to cause any damage</span> to the <span class="hl-loc">healthy growth of the tree</span> itself.</div>
+                            <div class="cn-line">这些树常常可以<span class="hl-swap">打几个孔</span>，<span class="hl-conn">不过</span>工人会<span class="hl-swap">小心不造成任何损伤</span>，以免影响<span class="hl-loc">树的健康生长</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The sap that comes out of the trees <span class="hl-swap">consists of</span> <span class="hl-loc">98% water and 2% sugar</span> <span class="hl-conn">and</span> <span class="hl-loc">other nutrients</span>.</div>
+                            <div class="cn-line">从树里流出的树液<span class="hl-swap">由</span><span class="hl-loc">98% 的水和 2% 的糖</span><span class="hl-conn">以及</span><span class="hl-loc">其他养分</span><span class="hl-swap">组成</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">It has to be <span class="hl-swap">boiled</span> <span class="hl-conn">so that</span> <span class="hl-swap">much of that water evaporates</span>, <span class="hl-conn">and</span> this process has to <span class="hl-swap">take place immediately</span> <span class="hl-swap">using</span> <span class="hl-conn">what are called</span> <span class="hl-loc">evaporators</span>. These are basically <span class="hl-swap">extremely large pans</span>.</div>
+                            <div class="cn-line">必须<span class="hl-swap">煮</span>，<span class="hl-conn">好让</span><span class="hl-swap">大部分水分蒸发</span>；这个过程要<span class="hl-swap">立刻进行</span>，<span class="hl-swap">用的是</span><span class="hl-conn">所谓的</span><span class="hl-loc">蒸发器</span>——那基本上就是<span class="hl-swap">极大的平底锅</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The sap is <span class="hl-swap">poured into</span> these. <span class="hl-ans">A fire</span> is built, <span class="hl-conn">and</span> the pans are then <span class="hl-swap">heated</span> <span class="hl-conn">until</span> the sap boils. <span class="hl-conn">As it does this</span>, the water evaporates, <span class="hl-conn">and</span> the syrup <span class="hl-swap">begins to form</span>.</div>
+                            <div class="cn-line">树液被<span class="hl-swap">倒进</span>这些锅里。<span class="hl-loc">生起火</span>，<span class="hl-conn">然后</span>把锅<span class="hl-swap">加热</span>，<span class="hl-conn">直到</span>树液沸腾。<span class="hl-conn">在这个过程中</span>，水分蒸发，<span class="hl-conn">糖浆</span><span class="hl-swap">开始形成</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">The <span class="hl-loc">evaporation process</span> <span class="hl-swap">creates</span> <span class="hl-swap">large quantities of</span> <span class="hl-ans">steam</span>, <span class="hl-conn">and</span> the sap becomes <span class="hl-swap">thicker and denser</span>.</div>
+                            <div class="cn-line"><span class="hl-loc">蒸发过程</span><span class="hl-swap">会产生</span><span class="hl-swap">大量</span>的<span class="hl-ans">蒸汽</span>，<span class="hl-conn">而</span>树液变得<span class="hl-swap">更浓更稠</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">And</span> <span class="hl-conn">at just the right moment</span>, <span class="hl-conn">when</span> the sap is <span class="hl-swap">thick enough to be called</span> maple syrup, the worker <span class="hl-swap">removes it from the heat</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">而</span><span class="hl-conn">在恰当的时刻</span>，<span class="hl-conn">当</span>树液<span class="hl-swap">浓稠到可以称为</span>枫糖浆时，工人就<span class="hl-swap">把它从火上取下</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">After this process</span>, something called <span class="hl-loc">'sugar sand'</span> has to be <span class="hl-swap">filtered out</span>, <span class="hl-conn">as</span> this <span class="hl-swap">builds up</span> <span class="hl-loc">during the boiling</span> <span class="hl-conn">and</span> <span class="hl-swap">gives the syrup</span> a <span class="hl-ans">cloudy</span> <span class="hl-swap">appearance</span> <span class="hl-conn">and</span> a <span class="hl-swap">slightly gritty</span> <span class="hl-swap">taste</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">这个过程之后</span>，要把一种叫<span class="hl-loc">“糖砂”</span>的东西<span class="hl-swap">滤掉</span>，<span class="hl-conn">因为</span>它在<span class="hl-loc">煮沸过程中</span><span class="hl-swap">积累</span>，<span class="hl-conn">会</span>让糖浆<span class="hl-swap">外观</span><span class="hl-ans">浑浊发白</span>，<span class="hl-conn">并且</span>味道<span class="hl-swap">略带颗粒感</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">Once this has been done</span>, the syrup is <span class="hl-swap">ready to be packaged</span> <span class="hl-conn">so that</span> it can be used for <span class="hl-swap">a whole variety of products</span>.</div>
+                            <div class="cn-line"><span class="hl-conn">这一步做完之后</span>，糖浆就<span class="hl-swap">可以包装</span>了，<span class="hl-conn">以便</span>用于<span class="hl-swap">各种各样的产品</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line">It <span class="hl-swap">takes</span> <span class="hl-trap">40 litres of sap</span> to <span class="hl-swap">produce</span> <span class="hl-ans">one litre</span> of <span class="hl-loc">maple syrup</span>, <span class="hl-conn">so</span> you can get an idea of <span class="hl-swap">how much is needed</span>. <span class="hl-conn">So that's the basic process</span>.</div>
+                            <div class="cn-line">要<span class="hl-swap">用</span><span class="hl-trap">40 升树液</span>才能<span class="hl-swap">产出</span><span class="hl-ans">1 升</span>枫糖浆，<span class="hl-conn">所以</span>你能想象<span class="hl-swap">需要多少</span>。<span class="hl-conn">基本流程就是这样</span>。</div>
+                        </div>
+                        <div class="dialog-turn">
+                            <div class="en-line"><span class="hl-conn">That is the end of Part 4.</span> You now have one minute to check your answers to Part 4.</div>
+                            <div class="cn-line"><span class="hl-conn">第四部分到此结束。</span>你现在有一分钟检查第四部分的答案。</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -1568,7 +2379,8 @@
 
         const cards = document.querySelectorAll('.slice-card');
         cards.forEach(card => {
-            if (cat === 'all' || card.dataset.category === cat) {
+            const cats = (card.dataset.category || '').split(/\s+/);
+            if (cat === 'all' || cats.includes(cat)) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';
